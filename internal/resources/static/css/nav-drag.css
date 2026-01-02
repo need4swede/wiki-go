@@ -1,36 +1,9 @@
 /* Navigation Drag & Drop Styles */
 
-/* Reorder button in sidebar footer */
-.reorder-nav-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    padding: 0;
-    border: none;
-    border-radius: 8px;
-    background: transparent;
-    color: var(--text-secondary);
-    cursor: pointer;
-    transition: var(--transition-smooth);
-    opacity: 0.7;
-}
-
-.reorder-nav-btn:hover {
-    background: var(--glass-bg);
-    color: var(--text-color);
-    opacity: 1;
-}
-
+/* Reorder button active state (inherits base styles from .sidebar-footer-btn) */
 .reorder-nav-btn.active {
-    background: var(--primary-color);
-    color: white;
-    opacity: 1;
-}
-
-.reorder-nav-btn i {
-    font-size: 14px;
+    background: var(--primary-color) !important;
+    color: white !important;
 }
 
 /* Reorder mode indicator */
@@ -141,16 +114,6 @@
 
 .reorder-cancel-btn:hover {
     background: var(--glass-bg-strong);
-}
-
-/* Sidebar footer adjustments */
-.sidebar-footer {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 16px;
-    border-top: 1px solid var(--glass-border);
-    margin-top: auto;
 }
 
 /* Dark mode adjustments */

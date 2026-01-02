@@ -32,31 +32,24 @@
      * Add the reorder toggle button to the sidebar
      */
     function addReorderButton() {
-        const sidebar = document.querySelector('.sidebar');
-        if (!sidebar) return;
-
         // Check if button already exists
         if (document.querySelector('.reorder-nav-btn')) return;
 
-        // Find the sidebar footer or create controls container
-        let footer = sidebar.querySelector('.sidebar-footer');
-        if (!footer) {
-            footer = document.createElement('div');
-            footer.className = 'sidebar-footer';
-            sidebar.appendChild(footer);
-        }
+        // Find the sidebar footer buttons container
+        const footerButtons = document.querySelector('.sidebar-footer-buttons');
+        if (!footerButtons) return;
 
-        // Create reorder button
+        // Create reorder button (styled like other footer buttons)
         const reorderBtn = document.createElement('button');
-        reorderBtn.className = 'reorder-nav-btn';
+        reorderBtn.className = 'sidebar-footer-btn reorder-nav-btn';
         reorderBtn.innerHTML = '<i class="fa fa-sort"></i>';
         reorderBtn.title = 'Reorder pages';
         reorderBtn.setAttribute('aria-label', 'Reorder navigation');
 
         reorderBtn.addEventListener('click', toggleReorderMode);
 
-        // Insert at the beginning of footer
-        footer.insertBefore(reorderBtn, footer.firstChild);
+        // Insert at the beginning of the buttons container
+        footerButtons.insertBefore(reorderBtn, footerButtons.firstChild);
     }
 
     /**
