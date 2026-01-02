@@ -31,7 +31,10 @@ go.work
 *.sqlite
 
 # custom
-/data
+# /data
+data/config.yaml
+data/temp
+data/static
 build/*
 !build/
 !build/.gitkeep
