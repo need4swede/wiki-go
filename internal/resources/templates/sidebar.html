@@ -27,9 +27,15 @@
             <button class="sidebar-footer-btn" aria-label="Sitemap" title="Sitemap" onclick="window.open('/sitemap/', '_blank')">
                 <i class="fa fa-sitemap"></i>
             </button>
-            <button class="sidebar-footer-btn" aria-label="Toggle theme">
+            <button class="sidebar-footer-btn theme-toggle-btn" aria-label="Toggle theme" title="{{t "tooltip.toggle_theme"}}">
                 <i class="fa fa-sun-o light-icon"></i>
                 <i class="fa fa-moon-o dark-icon" style="display: none;"></i>
+            </button>
+            <button class="sidebar-footer-btn auth-button login-btn" {{if .IsAuthenticated}}style="display: none"{{end}} aria-label="{{t "common.login"}}" title="{{t "common.login"}}">
+                <i class="fa fa-user"></i>
+            </button>
+            <button class="sidebar-footer-btn auth-button logout-btn" {{if not .IsAuthenticated}}style="display: none"{{end}} aria-label="{{t "common.logout"}}" title="{{t "common.logout"}}">
+                <i class="fa fa-sign-out"></i>
             </button>
         </div>
     </div>

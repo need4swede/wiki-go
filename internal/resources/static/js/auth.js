@@ -29,8 +29,8 @@
             loginForm.addEventListener('submit', handleLoginSubmit);
         }
 
-        // Add click handler for login button
-        const loginButton = document.querySelector('.toolbar-button.auth-button.primary');
+        // Add click handler for login button (sidebar footer)
+        const loginButton = document.querySelector('.login-btn');
         if (loginButton) {
             loginButton.addEventListener('click', function() {
                 // Show the login dialog
@@ -52,8 +52,8 @@
             });
         }
 
-        // Add click handler for logout button
-        const logoutButton = document.querySelector('.logout-button');
+        // Add click handler for logout button (sidebar footer)
+        const logoutButton = document.querySelector('.logout-btn');
         if (logoutButton) {
             logoutButton.addEventListener('click', handleLogout);
         }
@@ -244,8 +244,10 @@
                 });
 
                 // Show login button, hide logout button
-                document.querySelector('.toolbar-button.auth-button.primary').style.cssText = 'display: inline-flex !important';
-                document.querySelector('.logout-button').style.cssText = 'display: none !important';
+                const loginBtn = document.querySelector('.login-btn');
+                const logoutBtn = document.querySelector('.logout-btn');
+                if (loginBtn) loginBtn.style.cssText = 'display: flex !important';
+                if (logoutBtn) logoutBtn.style.cssText = 'display: none !important';
                 return;
             }
 
@@ -294,8 +296,10 @@
             }
 
             // Show logout button, hide login button for all authenticated users
-            document.querySelector('.toolbar-button.auth-button.primary').style.cssText = 'display: none !important';
-            document.querySelector('.logout-button').style.cssText = 'display: inline-flex !important';
+            const loginBtn2 = document.querySelector('.login-btn');
+            const logoutBtn2 = document.querySelector('.logout-btn');
+            if (loginBtn2) loginBtn2.style.cssText = 'display: none !important';
+            if (logoutBtn2) logoutBtn2.style.cssText = 'display: flex !important';
         } catch (error) {
             console.error('Error checking authentication status:', error);
         }

@@ -248,7 +248,7 @@ body {
     left: var(--sidebar-width);
     right: 0;
     padding: 12px 48px;
-    background: var(--glass-bg-strong);
+    background: var(--sidebar-bg);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
     border-bottom: 1px solid var(--glass-border);

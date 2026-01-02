@@ -152,15 +152,7 @@
                             <span class="button-text">{{t "common.print"}}</span>
                         </button>
 
-                        <!-- Authentication buttons -->
-                        <button class="toolbar-button auth-button primary" {{if .IsAuthenticated}}style="display: none !important"{{else}}style="display: inline-flex !important"{{end}} title="{{t "common.login"}}">
-                            <i class="fa fa-user"></i>
-                            <span class="button-text">{{t "common.login"}}</span>
-                        </button>
-                        <button class="toolbar-button auth-button logout-button" {{if .IsAuthenticated}}style="display: inline-flex !important"{{else}}style="display: none !important"{{end}} title="{{t "common.logout"}}">
-                            <i class="fa fa-sign-out"></i>
-                            <span class="button-text">{{t "common.logout"}}</span>
-                        </button>
+                        <!-- Authentication buttons moved to sidebar footer -->
                     </div>
                     <div class="edit-toolbar" style="display: none;">
                         <button class="toolbar-button primary save-changes" title="{{t "common.save"}}">

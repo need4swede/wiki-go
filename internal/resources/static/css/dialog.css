@@ -61,7 +61,7 @@ body:has([class*="-dialog"].active) {
     border-color: var(--border-color);
 }
 
-.settings-form input[disabled] + label,
+.settings-form input[disabled]+label,
 .settings-form label:has(+ input[disabled]) {
     opacity: 0.6;
     cursor: not-allowed;
@@ -221,6 +221,7 @@ body:has([class*="-dialog"].active) {
         opacity: 0;
         transform: translateY(-20px) scale(0.95);
     }
+
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -263,18 +264,18 @@ body:has([class*="-dialog"].active) {
 }
 
 /* Scrollable content areas */
-.dialog-container > form,
-.dialog-container > .tab-content,
-.dialog-container > .dialog-message,
-.dialog-container > .message-content,
-.dialog-container > .confirm-content,
-.dialog-container > .dialog-message,
-.dialog-container > .import-management,
-.dialog-container > .version-list-container,
-.dialog-container > .access-rule-form,
-.dialog-container > .new-document-form,
-.dialog-container > .settings-form,
-.login-container > .login-form {
+.dialog-container>form,
+.dialog-container>.tab-content,
+.dialog-container>.dialog-message,
+.dialog-container>.message-content,
+.dialog-container>.confirm-content,
+.dialog-container>.dialog-message,
+.dialog-container>.import-management,
+.dialog-container>.version-list-container,
+.dialog-container>.access-rule-form,
+.dialog-container>.new-document-form,
+.dialog-container>.settings-form,
+.login-container>.login-form {
     padding: 10px 24px 24px 24px;
     overflow-y: auto;
     flex: 1;
@@ -282,14 +283,14 @@ body:has([class*="-dialog"].active) {
     box-sizing: border-box;
 }
 
-.dialog-container > .dialog-warning {
+.dialog-container>.dialog-warning {
     padding: 0 24px 10px 24px;
     width: 100%;
     box-sizing: border-box;
     flex-shrink: 0;
 }
 
-.dialog-container > .form-actions {
+.dialog-container>.form-actions {
     padding: 0 24px 24px 24px;
     width: 100%;
     box-sizing: border-box;
@@ -315,6 +316,7 @@ body:has([class*="-dialog"].active) {
     color: var(--primary-color);
     background: var(--hover-bg);
     transform: rotate(90deg);
+    border-radius: 25px;
 }
 
 /* Error message styles */
@@ -369,7 +371,8 @@ body:has([class*="-dialog"].active) {
     border: 1px solid rgba(248, 113, 113, 0.2);
 }
 
-.message-dialog, .user-confirmation-dialog {
+.message-dialog,
+.user-confirmation-dialog {
     z-index: 2500;
 }
 
@@ -411,7 +414,8 @@ body:has([class*="-dialog"].active) {
     padding: 24px 24px 16px 24px;
     color: var(--text-color);
     flex-shrink: 0;
-    font-size: 1.5rem; /* Match dialog-title */
+    font-size: 1.5rem;
+    /* Match dialog-title */
 }
 
 .login-form {
@@ -615,6 +619,7 @@ body:has([class*="-dialog"].active) {
 }
 
 @media (max-width: 950px) {
+
     .settings-tabs,
     .file-upload-tabs {
         overflow-x: auto;
@@ -624,18 +629,18 @@ body:has([class*="-dialog"].active) {
         scrollbar-width: thin;
         scrollbar-color: var(--border-color) transparent;
     }
-    
+
     .settings-tabs::-webkit-scrollbar,
     .file-upload-tabs::-webkit-scrollbar {
         height: 4px;
     }
-    
+
     .settings-tabs::-webkit-scrollbar-thumb,
     .file-upload-tabs::-webkit-scrollbar-thumb {
         background: var(--border-color);
         border-radius: 2px;
     }
-    
+
     .tab-button {
         white-space: nowrap;
         flex-shrink: 0;
