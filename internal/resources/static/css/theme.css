@@ -68,7 +68,7 @@
     --hover-bg: rgba(255, 255, 255, 0.08);
     --sidebar-bg: rgba(30, 30, 30, 0.65);
     --breadcrumb-color: #98989f;
-    --bg-color: #1c1c1e;
+    --bg-color: #070a0d;
     --blockquote-bg: rgba(255, 255, 255, 0.04);
     --code-bg: rgba(255, 255, 255, 0.06);
     --theme-toggle-bg: rgba(255, 255, 255, 0.08);
@@ -208,10 +208,10 @@ pre>code {
 /* Apply liquid smooth transitions for theme changes */
 *:not(.hamburger-icon):not(.hamburger-icon:before):not(.hamburger-icon:after) {
     transition: background-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                border-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        border-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* ---------- Password warning banner ---------- */
