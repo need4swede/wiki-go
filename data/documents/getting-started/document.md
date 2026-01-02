@@ -12,8 +12,8 @@ This section covers everything you need to get Neptune up and running on your Ap
 
 | Page | Description |
 |------|-------------|
-| [Setup](setup.md) | Initial setup, connecting to Jellyfin, optional Jellyseerr configuration |
-| [Navigation](navigation.md) | Tab bar, remote controls, navigating the interface |
+| [Setup](/getting-started/setup) | Initial setup, connecting to Jellyfin, optional Jellyseerr configuration |
+| [Navigation](/getting-started/navigation) | Tab bar, remote controls, navigating the interface |
 
 ---
 
@@ -30,7 +30,7 @@ On first launch, Neptune will guide you through connecting to your Jellyfin serv
 - **Auto-discovery**: Neptune scans your local network for Jellyfin servers
 - **Manual entry**: Enter your server URL if not found automatically
 
-[Full setup instructions →](setup.md)
+[Full setup instructions →](/getting-started/setup)
 
 ### 3. Sign In
 
@@ -53,6 +53,6 @@ Select a visual theme to personalize your experience.
 
 Once you're set up:
 
-- [Learn the navigation basics](navigation.md)
-- [Explore your home screen](../browsing/home-screen.md)
-- [Customize your experience](../personalization/themes.md)
+- [Learn the navigation basics](/getting-started/navigation)
+- [Explore your home screen](/browsing/home-screen)
+- [Customize your experience](/personalization/themes)

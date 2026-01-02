@@ -8,9 +8,9 @@ Welcome to the Neptune documentation. Neptune is a native tvOS media client for 
 
 New to Neptune? Start here:
 
-1. **[Setup](getting-started/setup.md)** - Connect to your Jellyfin server
-2. **[Navigation](getting-started/navigation.md)** - Learn the basics of getting around
-3. **[Home Screen](browsing/home-screen.md)** - Customize your viewing experience
+1. **[Setup](/getting-started/setup)** - Connect to your Jellyfin server
+2. **[Navigation](/getting-started/navigation)** - Learn the basics of getting around
+3. **[Home Screen](/browsing/home-screen)** - Customize your viewing experience
 
 ---
 
@@ -22,8 +22,8 @@ First-time setup and basic navigation.
 
 | Page | Description |
 |------|-------------|
-| [Setup](getting-started/setup.md) | Initial setup, server connection, Jellyseerr configuration |
-| [Navigation](getting-started/navigation.md) | Tab bar, remote controls, basic navigation |
+| [Setup](/getting-started/setup) | Initial setup, server connection, Jellyseerr configuration |
+| [Navigation](/getting-started/navigation) | Tab bar, remote controls, basic navigation |
 
 ### Browsing Your Library
 
@@ -31,21 +31,21 @@ Finding and exploring your media content.
 
 | Page | Description |
 |------|-------------|
-| [Home Screen](browsing/home-screen.md) | Hero spotlight, content sections, customization |
-| [Item Details](browsing/item-details.md) | Movie and TV show pages, episodes, extras |
-| [Search](browsing/search.md) | Finding content, natural language search |
+| [Home Screen](/browsing/home-screen) | Hero spotlight, content sections, customization |
+| [Item Details](/browsing/item-details) | Movie and TV show pages, episodes, extras |
+| [Search](/browsing/search) | Finding content, natural language search |
 
 ### Playback
 
 | Page | Description |
 |------|-------------|
-| [Playback](playback.md) | Video player, controls, audio, subtitles |
+| [Playback](/playback) | Video player, controls, audio, subtitles |
 
 ### Discover & Requests
 
 | Page | Description |
 |------|-------------|
-| [Discover](discover.md) | Browse trending content, request movies and shows (requires Jellyseerr) |
+| [Discover](/discover) | Browse trending content, request movies and shows (requires Jellyseerr) |
 
 ### Personalization
 
@@ -53,14 +53,14 @@ Make Neptune your own.
 
 | Page | Description |
 |------|-------------|
-| [Profiles](personalization/profiles.md) | User switching, multi-user support |
-| [Themes](personalization/themes.md) | Visual themes, custom themes |
+| [Profiles](/personalization/profiles) | User switching, multi-user support |
+| [Themes](/personalization/themes) | Visual themes, custom themes |
 
 ### Reference
 
 | Page | Description |
 |------|-------------|
-| [Settings](settings.md) | All configuration options |
+| [Settings](/settings) | All configuration options |
 
 ---
 
@@ -91,5 +91,5 @@ Make Neptune your own.
 If you encounter issues:
 
 1. Check the relevant documentation page
-2. Review the Troubleshooting section in [Playback](playback.md#troubleshooting)
+2. Review the Troubleshooting section in [Playback](/playback#troubleshooting)
 3. Report issues at [GitHub](https://github.com/anthropics/claude-code/issues)

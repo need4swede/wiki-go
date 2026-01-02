@@ -12,9 +12,9 @@ This section covers how to find, explore, and navigate your media content in Nep
 
 | Page | Description |
 |------|-------------|
-| [Home Screen](home-screen.md) | Hero spotlight, content rows, section customization |
-| [Item Details](item-details.md) | Movie and TV show pages, seasons, episodes, extras |
-| [Search](search.md) | Finding content, natural language queries, Jellyseerr results |
+| [Home Screen](/browsing/home-screen) | Hero spotlight, content rows, section customization |
+| [Item Details](/browsing/item-details) | Movie and TV show pages, seasons, episodes, extras |
+| [Search](/browsing/search) | Finding content, natural language queries, Jellyseerr results |
 
 ---
 
@@ -32,7 +32,7 @@ Your personalized landing page featuring:
 - **Recently Added**: New content in your library
 - **Recommendations**: Personalized suggestions
 
-[Learn more about the Home Screen →](home-screen.md)
+[Learn more about the Home Screen →](/browsing/home-screen)
 
 ### Movies & Shows Tabs
 
@@ -51,7 +51,7 @@ When you select any movie or show:
 - Extras and special features
 - Related content and collections
 
-[Learn more about Item Details →](item-details.md)
+[Learn more about Item Details →](/browsing/item-details)
 
 ### Search
 
@@ -61,7 +61,7 @@ Find content across your entire library:
 - Search by title, genre, actor, director, or composer
 - Results from both library and Jellyseerr (if connected)
 
-[Learn more about Search →](search.md)
+[Learn more about Search →](/browsing/search)
 
 ---
 

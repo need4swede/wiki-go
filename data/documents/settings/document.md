@@ -10,7 +10,7 @@ Access Settings by selecting the gear icon in the tab menu bar or navigating to 
 
 ## Profiles
 
-Manage user profiles for your Jellyfin server. See [Profiles](profiles.md) for detailed information.
+Manage user profiles for your Jellyfin server. See [Profiles](/personalization/profiles) for detailed information.
 
 - View all available profiles
 - Switch between users

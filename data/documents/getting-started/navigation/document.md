@@ -63,7 +63,7 @@ The Home tab shows a personalized view of your library with multiple content row
 - New releases and recently added content
 - Personalized recommendations
 
-See [Home Screen](home-screen.md) for detailed information about customizing your home screen.
+See [Home Screen](/browsing/home-screen) for detailed information about customizing your home screen.
 
 ### Movies Tab
 
@@ -93,7 +93,7 @@ Browse trending content and request new movies and TV shows. Requires Jellyseerr
 - Popular TV Shows - top-rated series
 - Coming Soon - upcoming releases
 
-See [Discover](discover.md) for more information.
+See [Discover](/discover) for more information.
 
 ### Search Tab
 
@@ -104,7 +104,7 @@ Search across your library and Jellyseerr for content.
 - Natural language queries (search by genre, actor, director)
 - Jellyseerr integration to find and request new content
 
-See [Search](search.md) for more information.
+See [Search](/browsing/search) for more information.
 
 ---
 

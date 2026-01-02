@@ -12,8 +12,8 @@ Make Neptune your own with multiple user profiles and beautiful visual themes.
 
 | Page | Description |
 |------|-------------|
-| [Profiles](profiles.md) | Multiple users, switching profiles, per-user preferences |
-| [Themes](themes.md) | Built-in themes, animated backgrounds, custom themes |
+| [Profiles](/personalization/profiles) | Multiple users, switching profiles, per-user preferences |
+| [Themes](/personalization/themes) | Built-in themes, animated backgrounds, custom themes |
 
 ---
 
@@ -34,7 +34,7 @@ Each user profile maintains separate:
 
 Switch between profiles instantly from Settings, with saved sessions for quick access.
 
-[Learn more about Profiles →](profiles.md)
+[Learn more about Profiles →](/personalization/profiles)
 
 ### Themes
 
@@ -51,7 +51,7 @@ Neptune includes six beautiful built-in themes:
 
 Themes affect every aspect of the interface, from backgrounds to focus indicators to player controls.
 
-[Learn more about Themes →](themes.md)
+[Learn more about Themes →](/personalization/themes)
 
 ---
 
