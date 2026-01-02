@@ -11,7 +11,7 @@
                 <img src="{{$logoPath}}" alt="" class="sidebar-logo">
             </div>
             {{end}}
-            <div class="title-text">{{.Config.Wiki.Title}}</div>
+            {{if .Config.Wiki.Title}}<div class="title-text">{{.Config.Wiki.Title}}</div>{{end}}
         </a>
         <div class="search-container">
             <input type="text" class="search-box" placeholder='Search...' aria-label="Search documentation">

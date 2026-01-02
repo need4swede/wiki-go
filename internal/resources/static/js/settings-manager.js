@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         // Validate
-        if (!wikiSettings.title || !wikiSettings.owner || !wikiSettings.notice || !wikiSettings.timezone) {
+        if (!wikiSettings.owner || !wikiSettings.notice || !wikiSettings.timezone) {
             return { valid: false, error: 'All fields are required' };
         }
 

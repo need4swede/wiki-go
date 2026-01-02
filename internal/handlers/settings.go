@@ -108,7 +108,7 @@ func UpdateWikiSettingsHandler(w http.ResponseWriter, r *http.Request) {
 	defer r.Body.Close()
 
 	// Validate the request
-	if req.Title == "" || req.Owner == "" || req.Notice == "" || req.Timezone == "" {
+	if req.Owner == "" || req.Notice == "" || req.Timezone == "" {
 		w.Header().Set("Content-Type", "application/json")
 		w.WriteHeader(http.StatusBadRequest)
 		json.NewEncoder(w).Encode(map[string]interface{}{
