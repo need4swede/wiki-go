@@ -48,6 +48,12 @@
     transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
     border-radius: 6px;
     position: relative;
+    user-select: none;
+}
+
+/* Prevent link from capturing drag events */
+.nav-items.reorder-mode > .nav-item a {
+    pointer-events: none;
 }
 
 .nav-items.reorder-mode > .nav-item:hover {

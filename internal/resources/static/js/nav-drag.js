@@ -5,8 +5,8 @@
     'use strict';
 
     let draggedItem = null;
-    let draggedItemParent = null;
     let placeholder = null;
+    let navItemsContainer = null;
     let reorderMode = false;
     let hasChanges = false;
 
@@ -64,28 +64,36 @@
      */
     function toggleReorderMode() {
         reorderMode = !reorderMode;
-        const navItems = document.querySelector('.nav-items');
+        navItemsContainer = document.querySelector('.nav-items');
         const reorderBtn = document.querySelector('.reorder-nav-btn');
 
         if (reorderMode) {
-            enableReorderMode(navItems, reorderBtn);
+            enableReorderMode(reorderBtn);
         } else {
-            disableReorderMode(navItems, reorderBtn);
+            disableReorderMode(reorderBtn);
         }
     }
 
     /**
      * Enable reorder mode
      */
-    function enableReorderMode(navItems, reorderBtn) {
-        if (!navItems) return;
+    function enableReorderMode(reorderBtn) {
+        if (!navItemsContainer) return;
 
-        navItems.classList.add('reorder-mode');
+        navItemsContainer.classList.add('reorder-mode');
         reorderBtn.classList.add('active');
         reorderBtn.title = 'Exit reorder mode';
 
+        // Create placeholder element
+        placeholder = document.createElement('div');
+        placeholder.className = 'nav-item-placeholder';
+
+        // Setup drag events on the container
+        navItemsContainer.addEventListener('dragover', onContainerDragOver);
+        navItemsContainer.addEventListener('drop', onContainerDrop);
+
         // Make top-level nav items draggable
-        const items = navItems.querySelectorAll(':scope > .nav-item');
+        const items = navItemsContainer.querySelectorAll(':scope > .nav-item');
         items.forEach(item => {
             makeItemDraggable(item);
         });
@@ -97,19 +105,29 @@
     /**
      * Disable reorder mode
      */
-    function disableReorderMode(navItems, reorderBtn) {
-        if (!navItems) return;
+    function disableReorderMode(reorderBtn) {
+        if (!navItemsContainer) return;
 
-        navItems.classList.remove('reorder-mode');
+        navItemsContainer.classList.remove('reorder-mode');
         reorderBtn.classList.remove('active');
         reorderBtn.title = 'Reorder pages';
 
-        // Remove draggable from items
-        const items = navItems.querySelectorAll('.nav-item');
+        // Remove container events
+        navItemsContainer.removeEventListener('dragover', onContainerDragOver);
+        navItemsContainer.removeEventListener('drop', onContainerDrop);
+
+        // Remove draggable from items and clean up events
+        const items = navItemsContainer.querySelectorAll('.nav-item');
         items.forEach(item => {
             item.removeAttribute('draggable');
             item.classList.remove('dragging', 'drag-over');
         });
+
+        // Remove placeholder if exists
+        if (placeholder && placeholder.parentNode) {
+            placeholder.parentNode.removeChild(placeholder);
+        }
+        placeholder = null;
 
         // Hide controls
         hideReorderControls();
@@ -121,13 +139,8 @@
      */
     function makeItemDraggable(item) {
         item.setAttribute('draggable', 'true');
-
         item.addEventListener('dragstart', onDragStart);
         item.addEventListener('dragend', onDragEnd);
-        item.addEventListener('dragover', onDragOver);
-        item.addEventListener('dragenter', onDragEnter);
-        item.addEventListener('dragleave', onDragLeave);
-        item.addEventListener('drop', onDrop);
     }
 
     /**
@@ -135,20 +148,15 @@
      */
     function onDragStart(e) {
         draggedItem = this;
-        draggedItemParent = this.parentNode;
 
         // Set drag data
         e.dataTransfer.effectAllowed = 'move';
-        e.dataTransfer.setData('text/plain', this.querySelector('a').getAttribute('href'));
+        e.dataTransfer.setData('text/plain', this.dataset.path || '');
 
-        // Add visual feedback
+        // Add visual feedback after a tick (so the drag image shows correctly)
         setTimeout(() => {
             this.classList.add('dragging');
         }, 0);
-
-        // Create placeholder
-        placeholder = document.createElement('div');
-        placeholder.className = 'nav-item-placeholder';
     }
 
     /**
@@ -157,82 +165,76 @@
     function onDragEnd(e) {
         this.classList.remove('dragging');
 
-        // Remove all drag-over classes
-        document.querySelectorAll('.nav-item.drag-over').forEach(item => {
-            item.classList.remove('drag-over');
-        });
-
-        // Remove placeholder
+        // Remove placeholder from DOM
         if (placeholder && placeholder.parentNode) {
             placeholder.parentNode.removeChild(placeholder);
+        }
+
+        // Remove all drag-over classes
+        if (navItemsContainer) {
+            navItemsContainer.querySelectorAll('.nav-item.drag-over').forEach(item => {
+                item.classList.remove('drag-over');
+            });
         }
 
         draggedItem = null;
-        placeholder = null;
     }
 
     /**
-     * Handle drag over
+     * Handle dragover on the container - determines where to show placeholder
      */
-    function onDragOver(e) {
+    function onContainerDragOver(e) {
         e.preventDefault();
         e.dataTransfer.dropEffect = 'move';
 
-        if (this === draggedItem) return;
+        if (!draggedItem || !navItemsContainer) return;
 
-        // Determine drop position based on mouse position
-        const rect = this.getBoundingClientRect();
-        const midpoint = rect.top + rect.height / 2;
+        const items = Array.from(navItemsContainer.querySelectorAll(':scope > .nav-item:not(.dragging)'));
 
-        // Remove existing placeholder
-        if (placeholder && placeholder.parentNode) {
+        // Find the item we're hovering over and determine if we're in top or bottom half
+        let insertBefore = null;
+
+        for (const item of items) {
+            const rect = item.getBoundingClientRect();
+            const midpoint = rect.top + rect.height / 2;
+
+            if (e.clientY < midpoint) {
+                insertBefore = item;
+                break;
+            }
+        }
+
+        // Remove placeholder if it exists
+        if (placeholder.parentNode) {
             placeholder.parentNode.removeChild(placeholder);
         }
 
-        // Insert placeholder above or below based on mouse position
-        if (e.clientY < midpoint) {
-            this.parentNode.insertBefore(placeholder, this);
+        // Insert placeholder at the right position
+        if (insertBefore) {
+            navItemsContainer.insertBefore(placeholder, insertBefore);
         } else {
-            this.parentNode.insertBefore(placeholder, this.nextSibling);
+            // Append at the end (but before any non-nav-item elements)
+            const lastNavItem = items[items.length - 1];
+            if (lastNavItem) {
+                navItemsContainer.insertBefore(placeholder, lastNavItem.nextSibling);
+            } else {
+                navItemsContainer.appendChild(placeholder);
+            }
         }
     }
 
     /**
-     * Handle drag enter
+     * Handle drop on the container
      */
-    function onDragEnter(e) {
-        e.preventDefault();
-        if (this !== draggedItem) {
-            this.classList.add('drag-over');
-        }
-    }
-
-    /**
-     * Handle drag leave
-     */
-    function onDragLeave(e) {
-        // Only remove if we're actually leaving this element
-        const rect = this.getBoundingClientRect();
-        if (e.clientX < rect.left || e.clientX > rect.right ||
-            e.clientY < rect.top || e.clientY > rect.bottom) {
-            this.classList.remove('drag-over');
-        }
-    }
-
-    /**
-     * Handle drop
-     */
-    function onDrop(e) {
+    function onContainerDrop(e) {
         e.preventDefault();
         e.stopPropagation();
 
-        if (this === draggedItem) return;
-
-        this.classList.remove('drag-over');
+        if (!draggedItem || !placeholder || !navItemsContainer) return;
 
         // Move the dragged item to the placeholder position
-        if (placeholder && placeholder.parentNode) {
-            placeholder.parentNode.insertBefore(draggedItem, placeholder);
+        if (placeholder.parentNode) {
+            navItemsContainer.insertBefore(draggedItem, placeholder);
             placeholder.parentNode.removeChild(placeholder);
             hasChanges = true;
             updateSaveButtonState();
@@ -246,8 +248,7 @@
         // Check if controls already exist
         if (document.querySelector('.reorder-controls')) return;
 
-        const navItems = document.querySelector('.nav-items');
-        if (!navItems) return;
+        if (!navItemsContainer) return;
 
         const controls = document.createElement('div');
         controls.className = 'reorder-controls';
@@ -266,7 +267,7 @@
         controls.appendChild(saveBtn);
         controls.appendChild(cancelBtn);
 
-        navItems.parentNode.insertBefore(controls, navItems.nextSibling);
+        navItemsContainer.parentNode.insertBefore(controls, navItemsContainer.nextSibling);
     }
 
     /**
@@ -293,10 +294,9 @@
      * Save the new order to the server
      */
     async function saveOrder() {
-        const navItems = document.querySelector('.nav-items');
-        if (!navItems) return;
+        if (!navItemsContainer) return;
 
-        const items = navItems.querySelectorAll(':scope > .nav-item');
+        const items = navItemsContainer.querySelectorAll(':scope > .nav-item');
         const orderData = [];
 
         items.forEach((item, index) => {
