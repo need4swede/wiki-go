@@ -89,8 +89,8 @@
 :root[data-theme="dark"] .markdown-content li input[type="checkbox"],
 :root[data-theme="dark"] .editor-preview li input[type="checkbox"],
 :root[data-theme="dark"] .version-content li input[type="checkbox"] {
-    border-color: #888;
-    background-color: #333;
+    border-color: #1e2d3d;
+    background-color: #131c2a;
 }
 
 .task-checkbox:checked,

@@ -7,8 +7,8 @@ mark {
 
 /* Dark theme support for highlighted text */
 :root[data-theme="dark"] mark {
-    background-color: #665500;
-    color: #ffffff;
+    background-color: #2a2010;
+    color: #DB9A00;
 }
 
 /* Collapsible sections */
@@ -290,14 +290,14 @@ mark {
 .markdown-alert-caution .markdown-alert-title { color: #cf222e; }
 
 /* Alert Colors - Dark Theme */
-:root[data-theme="dark"] .markdown-alert-note { border-color: #2f81f7; }
-:root[data-theme="dark"] .markdown-alert-note .markdown-alert-title { color: #2f81f7; }
+:root[data-theme="dark"] .markdown-alert-note { border-color: #58a6ff; }
+:root[data-theme="dark"] .markdown-alert-note .markdown-alert-title { color: #58a6ff; }
 
 :root[data-theme="dark"] .markdown-alert-tip { border-color: #3fb950; }
 :root[data-theme="dark"] .markdown-alert-tip .markdown-alert-title { color: #3fb950; }
 
-:root[data-theme="dark"] .markdown-alert-important { border-color: #a371f7; }
-:root[data-theme="dark"] .markdown-alert-important .markdown-alert-title { color: #a371f7; }
+:root[data-theme="dark"] .markdown-alert-important { border-color: #6563ff; }
+:root[data-theme="dark"] .markdown-alert-important .markdown-alert-title { color: #6563ff; }
 
 :root[data-theme="dark"] .markdown-alert-warning { border-color: #d29922; }
 :root[data-theme="dark"] .markdown-alert-warning .markdown-alert-title { color: #d29922; }

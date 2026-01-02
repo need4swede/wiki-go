@@ -158,8 +158,8 @@ pre[class*="language-"] > code {
 }
 
 :root[data-theme="dark"] .content mark {
-    background-color: #2c2c00;
-    color: #fff3cd;
+    background-color: #2a2010;
+    color: #DB9A00;
 }
 
 .content sup {

@@ -132,8 +132,8 @@
 }
 
 :root[data-theme="dark"] .wiki-stats-error {
-    background-color: #2a2e33;
-    color: #f44336;
+    background-color: #301923;
+    color: #f85149;
 }
 
 /* Responsive adjustments */

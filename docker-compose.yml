@@ -1,11 +1,10 @@
-version: '3'
 services:
   wiki-go:
     # Plain HTTP setup. Container exposes 8080.
     #   • Use directly  (http://localhost:8080)
     #   • Or put Nginx/Traefik/Caddy in front for TLS termination.
     #     Remember to set allow_insecure_cookies: true in config.yaml
-    image: leomoonstudios/wiki-go:latest
+    build: .
     container_name: wiki-go
     ports:
       - "8043:8080"  # host:container

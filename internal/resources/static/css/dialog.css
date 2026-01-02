@@ -163,24 +163,24 @@ body:has([class*="-dialog"].active) {
 /* Dark mode support */
 [data-theme="dark"] .progress-bar-container,
 .dark-mode .progress-bar-container {
-    background-color: #333;
+    background-color: #131c2a;
 }
 
 [data-theme="dark"] .progress-status,
 .dark-mode .progress-status {
-    color: #aaa;
+    color: #94a3b8;
 }
 
 [data-theme="dark"] .import-results,
 .dark-mode .import-results {
-    background-color: #2a2a2a;
-    border-color: #444;
-    color: #e0e0e0;
+    background-color: #131c2a;
+    border-color: #1e2d3d;
+    color: #e2e8f0;
 }
 
 [data-theme="dark"] .import-errors-list li,
 .dark-mode .import-errors-list li {
-    color: #ff6b6b;
+    color: #f85149;
 }
 
 /* [data-theme="dark"] .imported-files-list a,

@@ -295,7 +295,7 @@
 }
 
 :root[data-theme="dark"] .language-selector-wrapper:after {
-    color: #fff; /* White icon for dark mode */
+    color: #e2e8f0; /* Primary text color for dark mode */
 }
 
 :root[data-theme="dark"] .language-selector:hover {

@@ -87,7 +87,7 @@
 }
 
 [data-theme="dark"] .dialog-button.delete-confirm:hover {
-    background-color: #e25c5c !important;
+    background-color: #da3633 !important;
 }
 
 .dialog-button:disabled {

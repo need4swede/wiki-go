@@ -30,30 +30,30 @@
 }
 
 :root[data-theme="dark"] {
-    /* Dark theme variables */
-    --primary-color: #66b3ff;
-    --primary-hover: #4d99e6;
-    --primary-rgb: 102, 179, 255;
-    --text-color: #e0e0e0;
-    --text-muted: #999;
-    --accent-color: #5dade2;
-    --accent-hover-color: #3498db;
-    --border-color: #404040;
-    --hover-bg: #2a2a2a;
-    --sidebar-bg: #1a1a1a;
-    --breadcrumb-color: #999;
-    --bg-color: #121212;
-    --blockquote-bg: #2a2a2a;
-    --code-bg: #2a2a2a;
-    --theme-toggle-bg: #404040;
-    --theme-toggle-color: #e0e0e0;
-    --danger-color: #ff6b6b;
-    --danger-bg: #2c1215;
-    --success-color: #4caf50;
-    --success-bg: #1b2e1f;
-    --warning-color: #ffb74d;
-    --warning-bg: #2e2416;
-    --shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    /* Dark theme variables - OtterWiki Style Guide */
+    --primary-color: #58a6ff;
+    --primary-hover: #79c0ff;
+    --primary-rgb: 88, 166, 255;
+    --text-color: #e2e8f0;
+    --text-muted: #94a3b8;
+    --accent-color: #38b2ac;
+    --accent-hover-color: #58a6ff;
+    --border-color: #1e2d3d;
+    --hover-bg: #131c2a;
+    --sidebar-bg: #0e1520;
+    --breadcrumb-color: #64748b;
+    --bg-color: #090f18;
+    --blockquote-bg: #0e1520;
+    --code-bg: #131c2a;
+    --theme-toggle-bg: #1e2d3d;
+    --theme-toggle-color: #e2e8f0;
+    --danger-color: #f85149;
+    --danger-bg: #301923;
+    --success-color: #3fb950;
+    --success-bg: #17312a;
+    --warning-color: #d29922;
+    --warning-bg: #2a2010;
+    --shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
 }
 
 /* ---------- Base styles ---------- */
@@ -85,7 +85,14 @@ pre,
 code,
 kbd,
 .content-wrapper *,
-h1, h2, h3, h4, p, .markdown-content ul li, .markdown-content ol li, td {
+h1,
+h2,
+h3,
+h4,
+p,
+.markdown-content ul li,
+.markdown-content ol li,
+td {
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
@@ -102,8 +109,17 @@ td {
 }
 
 /* Bidirectional text support */
-h1, h2, h3, h4, h5, h6,
-p, th, td, div, input {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+div,
+input {
     unicode-bidi: plaintext;
 }
 
@@ -124,7 +140,8 @@ input::-webkit-input-placeholder {
 }
 
 /* Bidirectional for code and pre */
-pre, code {
+pre,
+code {
     direction: auto;
     text-align: start;
     white-space: pre-wrap;
@@ -132,7 +149,7 @@ pre, code {
 }
 
 /* Special handling for pre > code structure */
-pre > code {
+pre>code {
     display: block;
 }
 
@@ -153,7 +170,8 @@ pre > code {
     left: 0;
     right: 0;
     z-index: 2000;
-    pointer-events: none; /* Do not block interactions with UI beneath */
+    pointer-events: none;
+    /* Do not block interactions with UI beneath */
 }
 
 /* Global banner for documents */
@@ -221,6 +239,7 @@ body.has-password-warning .hamburger {
 
 /* Mobile touch optimizations */
 @media (hover: none) {
+
     /* Prevent sticky hover on touch devices for editor buttons only */
     /* Using body prefix to ensure higher specificity than editor.css */
     body .editor-button:not(.active):not(.primary):hover,
