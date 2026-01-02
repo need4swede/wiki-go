@@ -168,10 +168,16 @@
     fill: currentColor;
 }
 
-/* Authentication button styles */
-.auth-button {
+/* Authentication button styles (toolbar) */
+.toolbar-button.auth-button {
     width: auto;
     font-weight: normal;
+}
+
+/* Auth buttons in sidebar footer should match other footer buttons */
+.sidebar-footer-btn.auth-button {
+    width: 36px;
+    height: 36px;
 }
 
 /* Admin-only button styles - hidden by default */
