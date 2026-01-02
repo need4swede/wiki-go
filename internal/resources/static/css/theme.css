@@ -1,59 +1,81 @@
 /* Theme variables and base styles */
 
 :root {
-    /* Light theme variables */
-    --primary-color: #0066cc;
-    --primary-hover: #0052a3;
-    --primary-rgb: 0, 102, 204;
-    --text-color: #333;
-    --text-muted: #666;
-    --accent-color: #3498db;
-    --accent-hover-color: #2980b9;
-    --border-color: #e0e0e0;
-    --hover-bg: #f8f9fa;
-    --sidebar-bg: #f5f5f5;
-    --breadcrumb-color: #666;
+    /* Light theme variables - Modern Glassmorphism */
+    --primary-color: #1a5fb4;
+    --primary-hover: #0d4a8c;
+    --primary-rgb: 26, 95, 180;
+    --text-color: #1e3a5f;
+    --text-muted: #5a7a9a;
+    --accent-color: #3584e4;
+    --accent-hover-color: #1c71d8;
+    --border-color: rgba(26, 95, 180, 0.15);
+    --hover-bg: rgba(26, 95, 180, 0.08);
+    --sidebar-bg: rgba(240, 245, 250, 0.85);
+    --breadcrumb-color: #5a7a9a;
     --sidebar-width: 280px;
-    --bg-color: #ffffff;
-    --blockquote-bg: #f8f9fa;
-    --code-bg: #f8f9fa;
-    --theme-toggle-bg: #e0e0e0;
-    --theme-toggle-color: #333;
-    --danger-color: #dc3545;
-    --danger-bg: #f8d7da;
-    --success-color: #28a745;
-    --success-bg: #d4edda;
-    --warning-color: #ffc107;
-    --warning-bg: #fff3cd;
+    --bg-color: #f8fafc;
+    --blockquote-bg: rgba(26, 95, 180, 0.05);
+    --code-bg: rgba(26, 95, 180, 0.06);
+    --theme-toggle-bg: rgba(26, 95, 180, 0.1);
+    --theme-toggle-color: #1e3a5f;
+    --danger-color: #c53030;
+    --danger-bg: rgba(197, 48, 48, 0.1);
+    --success-color: #2f855a;
+    --success-bg: rgba(47, 133, 90, 0.1);
+    --warning-color: #c27803;
+    --warning-bg: rgba(194, 120, 3, 0.1);
     --content-max-width: 900px;
-    --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --shadow: 0 8px 32px rgba(26, 95, 180, 0.12);
+
+    /* Glassmorphism variables */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-bg-strong: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.4);
+    --glass-shadow: 0 8px 32px rgba(26, 95, 180, 0.1);
+    --glass-blur: blur(20px);
+    --glass-blur-light: blur(12px);
+    --border-radius: 16px;
+    --border-radius-sm: 10px;
+    --border-radius-xs: 6px;
 }
 
 :root[data-theme="dark"] {
-    /* Dark theme variables - OtterWiki Style Guide */
-    --primary-color: #58a6ff;
-    --primary-hover: #79c0ff;
-    --primary-rgb: 88, 166, 255;
+    /* Dark theme variables - Deep Blue Glassmorphism */
+    --primary-color: #60a5fa;
+    --primary-hover: #93c5fd;
+    --primary-rgb: 96, 165, 250;
     --text-color: #e2e8f0;
     --text-muted: #94a3b8;
-    --accent-color: #38b2ac;
-    --accent-hover-color: #58a6ff;
-    --border-color: #1e2d3d;
-    --hover-bg: #131c2a;
-    --sidebar-bg: #0e1520;
+    --accent-color: #38bdf8;
+    --accent-hover-color: #7dd3fc;
+    --border-color: rgba(96, 165, 250, 0.15);
+    --hover-bg: rgba(96, 165, 250, 0.1);
+    --sidebar-bg: rgba(15, 23, 42, 0.85);
     --breadcrumb-color: #64748b;
-    --bg-color: #090f18;
-    --blockquote-bg: #0e1520;
-    --code-bg: #131c2a;
-    --theme-toggle-bg: #1e2d3d;
+    --bg-color: #0c1222;
+    --blockquote-bg: rgba(96, 165, 250, 0.08);
+    --code-bg: rgba(96, 165, 250, 0.1);
+    --theme-toggle-bg: rgba(96, 165, 250, 0.15);
     --theme-toggle-color: #e2e8f0;
-    --danger-color: #f85149;
-    --danger-bg: #301923;
-    --success-color: #3fb950;
-    --success-bg: #17312a;
-    --warning-color: #d29922;
-    --warning-bg: #2a2010;
-    --shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    --danger-color: #f87171;
+    --danger-bg: rgba(248, 113, 113, 0.15);
+    --success-color: #4ade80;
+    --success-bg: rgba(74, 222, 128, 0.15);
+    --warning-color: #fbbf24;
+    --warning-bg: rgba(251, 191, 36, 0.15);
+    --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+
+    /* Glassmorphism variables - Dark */
+    --glass-bg: rgba(15, 23, 42, 0.7);
+    --glass-bg-strong: rgba(15, 23, 42, 0.85);
+    --glass-border: rgba(96, 165, 250, 0.2);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --glass-blur: blur(20px);
+    --glass-blur-light: blur(12px);
+    --border-radius: 16px;
+    --border-radius-sm: 10px;
+    --border-radius-xs: 6px;
 }
 
 /* ---------- Base styles ---------- */
@@ -186,7 +208,7 @@ pre>code {
     height: auto;
     max-height: 250px;
     object-fit: cover;
-    border-radius: 4px;
+    border-radius: var(--border-radius-sm);
 }
 
 /* Add padding to body when banner is visible */
@@ -215,20 +237,25 @@ body.has-password-warning .hamburger {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     padding: 0;
-    border: 1px solid var(--border-color);
-    border-radius: 50%;
-    background: var(--theme-toggle-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius-sm);
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur-light);
+    -webkit-backdrop-filter: var(--glass-blur-light);
     color: var(--theme-toggle-color);
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .sidebar-footer-btn:hover {
     background: var(--hover-bg);
     color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar-footer-btn svg {

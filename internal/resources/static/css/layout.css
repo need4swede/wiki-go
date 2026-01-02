@@ -21,8 +21,8 @@
 
 .footer {
     margin-top: auto;
-    padding: 20px 0;
-    border-top: 1px solid var(--border-color);
+    padding: 24px 0;
+    border-top: 1px solid var(--glass-border);
     color: var(--breadcrumb-color);
     font-size: 14px;
     display: flex;
@@ -49,21 +49,25 @@
 
 /* Directory listing */
 .directory-list {
-    margin-top: 8px;
+    margin-top: 12px;
 }
 
 .directory-item {
-    margin: 4px 0;
-    padding: 4px 8px;
-    border-radius: 4px;
-    transition: all 0.2s ease;
+    margin: 6px 0;
+    padding: 10px 14px;
+    border-radius: var(--border-radius-xs);
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     direction: ltr;
+    border: 1px solid transparent;
+    background: var(--glass-bg);
 }
 
 .directory-item:hover {
-    background-color: var(--hover-bg);
+    background: var(--hover-bg);
+    border-color: var(--glass-border);
+    transform: translateX(4px);
 }
 
 .directory-item a {

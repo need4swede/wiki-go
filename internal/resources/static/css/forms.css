@@ -4,29 +4,32 @@
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    margin-bottom: 16px;
+    gap: 6px;
+    margin-bottom: 20px;
 }
 
 .form-group label {
     color: var(--text-color);
     font-size: 14px;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     font-weight: 500;
 }
 
 .form-group input,
 .form-group textarea {
-    padding: 8px 12px;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    background: var(--bg-color);
+    padding: 12px 16px;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius-sm);
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur-light);
+    -webkit-backdrop-filter: var(--glass-blur-light);
     color: var(--text-color);
     font-size: 14px;
     width: 100%;
     box-sizing: border-box;
     font-family: inherit;
+    transition: all 0.3s ease;
 }
 
 .form-group input[type="radio"],
@@ -36,13 +39,19 @@
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: var(--primary-hover);
+    border-color: var(--primary-color);
     outline: none;
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.15);
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+    border-color: var(--primary-color);
 }
 
 .form-group textarea {
     resize: vertical;
-    min-height: 80px;
+    min-height: 100px;
 }
 
 .form-help {
@@ -63,8 +72,8 @@
 .checkbox-group {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 16px;
+    gap: 12px;
+    margin-bottom: 20px;
     position: relative;
 }
 
@@ -78,12 +87,13 @@
 
 .checkbox-group label {
     position: relative;
-    padding-left: 28px;
+    padding-left: 32px;
     cursor: pointer;
     display: block;
     margin-bottom: 0;
     user-select: none;
     font-weight: normal;
+    transition: color 0.2s ease;
 }
 
 .checkbox-group label:before {
@@ -92,22 +102,22 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 18px;
-    height: 18px;
-    border: 2px solid var(--border-color);
-    border-radius: 4px;
-    background-color: var(--bg-color);
-    transition: all 0.2s ease;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--glass-border);
+    border-radius: var(--border-radius-xs);
+    background: var(--glass-bg);
+    transition: all 0.3s ease;
 }
 
 .checkbox-group label:after {
     content: '';
     position: absolute;
-    left: 6px;
+    left: 7px;
     top: 50%;
     transform: translateY(-50%) rotate(45deg) scale(0);
     width: 6px;
-    height: 10px;
+    height: 11px;
     border-right: 2px solid white;
     border-bottom: 2px solid white;
     transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -115,8 +125,9 @@
 }
 
 .checkbox-group input[type="checkbox"]:checked + label:before {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    border-color: transparent;
+    box-shadow: 0 2px 8px rgba(var(--primary-rgb), 0.3);
 }
 
 .checkbox-group input[type="checkbox"]:checked + label:after {
@@ -124,8 +135,12 @@
     opacity: 1;
 }
 
+.checkbox-group input[type="checkbox"]:checked + label {
+    color: var(--primary-color);
+}
+
 .checkbox-group input[type="checkbox"]:focus-visible + label:before {
-    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.3);
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.25);
 }
 
 .checkbox-group input[type="checkbox"]:focus:not(:focus-visible) + label:before {
@@ -139,10 +154,10 @@
 /* ---------- Language selector styles ---------- */
 .language-selector {
     width: 100%;
-    padding: 10px 12px;
-    border-radius: 4px;
-    border: 1px solid var(--border-color);
-    background-color: var(--bg-color);
+    padding: 12px 16px;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
     color: var(--text-color);
     font-size: 14px;
     appearance: none;
@@ -150,8 +165,8 @@
     -moz-appearance: none;
     position: relative;
     cursor: pointer;
-    transition: border-color 0.2s, box-shadow 0.2s;
-    padding-right: 30px; /* Make room for the icon */
+    transition: all 0.3s ease;
+    padding-right: 36px; /* Make room for the icon */
 }
 
 /* Add FontAwesome icon for dropdown arrow */
@@ -172,18 +187,18 @@
 }
 
 .language-selector:hover {
-    border-color: var(--primary-hover);
+    border-color: var(--primary-color);
 }
 
 .language-selector:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.25);
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.15);
 }
 
 .language-selector option {
-    padding: 10px;
-    background-color: var(--bg-color);
+    padding: 12px;
+    background: var(--bg-color);
     color: var(--text-color);
 }
 
@@ -191,15 +206,15 @@
 .radio-group {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 16px;
+    gap: 12px;
+    margin-bottom: 20px;
 }
 
 .radio-option {
     position: relative;
     display: flex;
     align-items: center;
-    min-height: 24px;
+    min-height: 26px;
 }
 
 .radio-option input[type="radio"] {
@@ -212,13 +227,14 @@
 
 .radio-option label {
     position: relative;
-    padding-left: 28px;
+    padding-left: 32px;
     cursor: pointer;
     display: inline-block;
     margin-bottom: 0;
     user-select: none;
     font-weight: normal;
     color: var(--text-color);
+    transition: color 0.2s ease;
 }
 
 /* Radio circle */
@@ -228,12 +244,12 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 18px;
-    height: 18px;
-    border: 2px solid var(--border-color);
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--glass-border);
     border-radius: 50%;
-    background-color: var(--bg-color);
-    transition: all 0.2s ease;
+    background: var(--glass-bg);
+    transition: all 0.3s ease;
     box-sizing: border-box;
 }
 
@@ -241,13 +257,13 @@
 .radio-option label:after {
     content: '';
     position: absolute;
-    left: 5px;
+    left: 6px;
     top: 50%;
     transform: translateY(-50%) scale(0);
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
     transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     opacity: 0;
 }
@@ -255,6 +271,7 @@
 /* Checked state */
 .radio-option input[type="radio"]:checked + label:before {
     border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.15);
 }
 
 .radio-option input[type="radio"]:checked + label:after {
@@ -262,9 +279,13 @@
     opacity: 1;
 }
 
+.radio-option input[type="radio"]:checked + label {
+    color: var(--primary-color);
+}
+
 /* Focus state */
 .radio-option input[type="radio"]:focus-visible + label:before {
-    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.3);
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.25);
 }
 
 /* Hover state */
@@ -275,17 +296,17 @@
 /* Disabled state */
 .radio-option input[type="radio"]:disabled + label {
     cursor: not-allowed;
-    opacity: 0.6;
+    opacity: 0.5;
     color: var(--text-muted);
 }
 
 .radio-option input[type="radio"]:disabled + label:before {
-    background-color: var(--bg-secondary);
+    background: var(--hover-bg);
     border-color: var(--border-color);
 }
 
 .radio-option input[type="radio"]:disabled:checked + label:after {
-    background-color: var(--text-muted);
+    background: var(--text-muted);
 }
 
 /* Dark mode specific styles */

@@ -2,26 +2,32 @@
 
 /* ---------- Search ---------- */
 .search-container {
-    margin: 4px 0 0px 0;
+    margin: 8px 0 0 0;
     padding: 0 4px;
 }
 
 .search-box {
     width: 100%;
-    padding: 6px 5px;
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    background: var(--bg-color);
+    padding: 10px 14px;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius-sm);
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur-light);
+    -webkit-backdrop-filter: var(--glass-blur-light);
     color: var(--text-color);
     font-size: 14px;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     box-sizing: border-box;
 }
 
 .search-box:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.1);
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.15);
+}
+
+.search-box:hover {
+    border-color: var(--primary-color);
 }
 
 .search-results {
@@ -29,14 +35,16 @@
     top: 0;
     left: var(--sidebar-width);
     bottom: 0;
-    background: var(--bg-color);
+    background: var(--glass-bg-strong);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
     z-index: 1000;
     max-width: var(--content-max-width);
     width: calc(100% - var(--sidebar-width));
     padding: 32px 48px;
     overflow-y: auto;
     display: none;
-    animation: slideIn 0.2s ease;
+    animation: slideIn 0.3s ease;
     box-sizing: border-box;
 }
 
@@ -50,7 +58,7 @@
     align-items: center;
     margin-bottom: 24px;
     padding-bottom: 16px;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--glass-border);
     position: relative;
 }
 
@@ -69,13 +77,13 @@
 }
 
 .search-close {
-    padding: 8px;
-    background: none;
-    border: none;
+    padding: 10px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
     cursor: pointer;
     color: var(--text-color);
-    border-radius: 4px;
-    transition: all 0.2s ease;
+    border-radius: var(--border-radius-xs);
+    transition: all 0.3s ease;
 }
 
 /* For RTL languages, position close button on the left */
@@ -94,12 +102,23 @@
 .search-close:hover,
 .return-to-search:hover {
     background: var(--hover-bg);
+    color: var(--primary-color);
+    transform: scale(1.05);
 }
 
 .search-result-item {
     margin-bottom: 24px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid var(--border-color);
+    padding: 20px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius-sm);
+    transition: all 0.3s ease;
+}
+
+.search-result-item:hover {
+    background: var(--hover-bg);
+    transform: translateX(4px);
+    box-shadow: var(--glass-shadow);
 }
 
 .search-result-title {
@@ -131,11 +150,11 @@
 }
 
 .search-result-highlight {
-    background: #DB983E;
-    color: #000000;
-    padding: 1px 4px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: #ffffff;
+    padding: 2px 6px;
     margin: 0 2px;
-    border-radius: 3px;
+    border-radius: var(--border-radius-xs);
     font-weight: 500;
     display: inline-block;
 }
@@ -156,8 +175,11 @@
     .search-results {
         left: 0;
         padding: 16px;
-        padding-top: 60px;
+        padding-top: 70px;
         width: 100%;
+        background: var(--glass-bg-strong);
+        backdrop-filter: var(--glass-blur);
+        -webkit-backdrop-filter: var(--glass-blur);
     }
 
     .search-results-header {
@@ -165,17 +187,20 @@
         top: 0;
         left: 0;
         right: 0;
-        background: var(--bg-color);
+        background: var(--glass-bg-strong);
+        backdrop-filter: var(--glass-blur);
+        -webkit-backdrop-filter: var(--glass-blur);
         padding: 16px;
         z-index: 1001;
         height: 48px;
         box-sizing: border-box;
         margin-bottom: 0;
+        border-bottom: 1px solid var(--glass-border);
     }
 
     .search-result-item {
-        padding-bottom: 16px;
-        margin-bottom: 16px;
+        padding: 16px;
+        margin-bottom: 12px;
     }
 
     .search-result-title {
@@ -188,7 +213,7 @@
     }
 
     .search-result-highlight {
-        padding: 2px 4px;
+        padding: 2px 5px;
         margin: 0 1px;
     }
 }

@@ -20,7 +20,7 @@
     margin-top: 1em;
     margin-bottom: 0.5em;
     padding-bottom: 0.25em;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--glass-border);
 }
 
 .content h3 {
@@ -45,13 +45,16 @@
 }
 
 .content pre {
-    background-color: var(--code-bg);
-    padding: 12px;
-    border-radius: 8px;
+    background: var(--code-bg);
+    backdrop-filter: var(--glass-blur-light);
+    -webkit-backdrop-filter: var(--glass-blur-light);
+    padding: 16px;
+    border-radius: var(--border-radius-sm);
     overflow-x: auto;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--glass-border);
     margin: 0.75em 0;
     position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .content pre > code {
@@ -59,9 +62,9 @@
 }
 
 .content code {
-    background-color: var(--code-bg);
-    padding: 2px 6px;
-    border-radius: 4px;
+    background: var(--code-bg);
+    padding: 3px 8px;
+    border-radius: var(--border-radius-xs);
     font-size: 0.9em;
     font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
@@ -69,20 +72,22 @@
 /* Code copy button */
 .copy-button {
     position: absolute;
-    top: 8px;
-    right: 8px;
-    padding: 4px 8px;
-    background: var(--theme-toggle-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
+    top: 10px;
+    right: 10px;
+    padding: 6px 10px;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur-light);
+    -webkit-backdrop-filter: var(--glass-blur-light);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius-xs);
     color: var(--text-color);
     font-size: 12px;
     cursor: pointer;
     opacity: 0;
-    transition: opacity 0.2s ease, background-color 0.2s ease;
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 5px;
     z-index: 10;
     align-self: flex-end;
 }
@@ -93,6 +98,8 @@
 
 .copy-button:hover {
     background: var(--hover-bg);
+    color: var(--primary-color);
+    transform: translateY(-1px);
 }
 
 .copy-button svg {
@@ -102,9 +109,9 @@
 }
 
 .copy-button.copied {
-    background: var(--primary-color);
-    color: var(--bg-color);
-    border-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: white;
+    border-color: transparent;
 }
 
 /* Override Prism.js styles */
@@ -145,21 +152,22 @@ pre[class*="language-"] > code {
 
 /* Inline code style */
 :not(pre) > code {
-    border: 1px solid var(--border-color);
-    background-color: var(--code-bg) !important;
+    border: 1px solid var(--glass-border);
+    background: var(--code-bg) !important;
     color: var(--text-color) !important;
 }
 
 /* ---------- Content styles ---------- */
 .content mark {
-    background-color: #fff3cd;
-    padding: 2px 4px;
-    border-radius: 3px;
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.3) 0%, rgba(251, 191, 36, 0.15) 100%);
+    padding: 2px 6px;
+    border-radius: var(--border-radius-xs);
+    color: var(--text-color);
 }
 
 :root[data-theme="dark"] .content mark {
-    background-color: #2a2010;
-    color: #DB9A00;
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.25) 0%, rgba(251, 191, 36, 0.1) 100%);
+    color: #fbbf24;
 }
 
 .content sup {
@@ -183,10 +191,13 @@ pre[class*="language-"] > code {
 /* Blockquote style */
 .content blockquote {
     border-left: 4px solid var(--primary-color);
-    margin: 0.75em 0;
-    padding: 0.5em 1em;
-    background-color: var(--blockquote-bg);
-    border-radius: 0 8px 8px 0;
+    margin: 1em 0;
+    padding: 1em 1.25em;
+    background: var(--blockquote-bg);
+    backdrop-filter: var(--glass-blur-light);
+    -webkit-backdrop-filter: var(--glass-blur-light);
+    border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
 /* Markdown content styles */
@@ -205,8 +216,9 @@ pre[class*="language-"] > code {
     height: auto;
     display: block;
     margin: 1.5rem auto;
-    border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--glass-shadow);
+    border: 1px solid var(--glass-border);
 }
 
 /* ---------- Footnotes styles ---------- */
@@ -243,21 +255,39 @@ pre[class*="language-"] > code {
 table {
     width: 100%;
     max-width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     margin: 16px 0;
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
 th, td {
-    padding: 12px;
-    border: 1px solid var(--border-color);
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--glass-border);
+    border-right: 1px solid var(--glass-border);
     text-align: left;
 }
 
+th:last-child, td:last-child {
+    border-right: none;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
 th {
-    background-color: var(--hover-bg);
+    background: var(--hover-bg);
     font-weight: 600;
 }
 
 tr:nth-child(even) {
-    background-color: var(--hover-bg);
+    background: var(--glass-bg);
+}
+
+tr:hover {
+    background: var(--hover-bg);
 }
