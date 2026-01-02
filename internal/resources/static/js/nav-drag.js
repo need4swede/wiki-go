@@ -5,8 +5,8 @@
     'use strict';
 
     let draggedItem = null;
+    let draggedItemParent = null;
     let placeholder = null;
-    let navItemsContainer = null;
     let reorderMode = false;
     let hasChanges = false;
 
@@ -64,20 +64,20 @@
      */
     function toggleReorderMode() {
         reorderMode = !reorderMode;
-        navItemsContainer = document.querySelector('.nav-items');
+        const navItemsContainer = document.querySelector('.nav-items');
         const reorderBtn = document.querySelector('.reorder-nav-btn');
 
         if (reorderMode) {
-            enableReorderMode(reorderBtn);
+            enableReorderMode(navItemsContainer, reorderBtn);
         } else {
-            disableReorderMode(reorderBtn);
+            disableReorderMode(navItemsContainer, reorderBtn);
         }
     }
 
     /**
      * Enable reorder mode
      */
-    function enableReorderMode(reorderBtn) {
+    function enableReorderMode(navItemsContainer, reorderBtn) {
         if (!navItemsContainer) return;
 
         navItemsContainer.classList.add('reorder-mode');
@@ -88,24 +88,44 @@
         placeholder = document.createElement('div');
         placeholder.className = 'nav-item-placeholder';
 
-        // Setup drag events on the container
-        navItemsContainer.addEventListener('dragover', onContainerDragOver);
-        navItemsContainer.addEventListener('drop', onContainerDrop);
-
-        // Make top-level nav items draggable
-        const items = navItemsContainer.querySelectorAll(':scope > .nav-item');
-        items.forEach(item => {
+        // Make ALL nav items draggable (including nested ones)
+        const allItems = navItemsContainer.querySelectorAll('.nav-item');
+        allItems.forEach(item => {
             makeItemDraggable(item);
         });
 
+        // Setup drag events on all containers (main + nested .nav-children)
+        setupContainerEvents(navItemsContainer);
+        navItemsContainer.querySelectorAll('.nav-children').forEach(container => {
+            setupContainerEvents(container);
+        });
+
         // Show save/cancel controls
-        showReorderControls();
+        showReorderControls(navItemsContainer);
+    }
+
+    /**
+     * Setup dragover and drop events on a container
+     */
+    function setupContainerEvents(container) {
+        container.addEventListener('dragover', onContainerDragOver);
+        container.addEventListener('drop', onContainerDrop);
+        container.dataset.dragContainer = 'true';
+    }
+
+    /**
+     * Remove drag events from a container
+     */
+    function removeContainerEvents(container) {
+        container.removeEventListener('dragover', onContainerDragOver);
+        container.removeEventListener('drop', onContainerDrop);
+        delete container.dataset.dragContainer;
     }
 
     /**
      * Disable reorder mode
      */
-    function disableReorderMode(reorderBtn) {
+    function disableReorderMode(navItemsContainer, reorderBtn) {
         if (!navItemsContainer) return;
 
         navItemsContainer.classList.remove('reorder-mode');
@@ -113,14 +133,18 @@
         reorderBtn.title = 'Reorder pages';
 
         // Remove container events
-        navItemsContainer.removeEventListener('dragover', onContainerDragOver);
-        navItemsContainer.removeEventListener('drop', onContainerDrop);
+        removeContainerEvents(navItemsContainer);
+        navItemsContainer.querySelectorAll('.nav-children').forEach(container => {
+            removeContainerEvents(container);
+        });
 
         // Remove draggable from items and clean up events
         const items = navItemsContainer.querySelectorAll('.nav-item');
         items.forEach(item => {
             item.removeAttribute('draggable');
             item.classList.remove('dragging', 'drag-over');
+            item.removeEventListener('dragstart', onDragStart);
+            item.removeEventListener('dragend', onDragEnd);
         });
 
         // Remove placeholder if exists
@@ -147,7 +171,11 @@
      * Handle drag start
      */
     function onDragStart(e) {
+        // Stop propagation to prevent parent items from also starting to drag
+        e.stopPropagation();
+
         draggedItem = this;
+        draggedItemParent = this.parentNode;
 
         // Set drag data
         e.dataTransfer.effectAllowed = 'move';
@@ -163,6 +191,7 @@
      * Handle drag end
      */
     function onDragEnd(e) {
+        e.stopPropagation();
         this.classList.remove('dragging');
 
         // Remove placeholder from DOM
@@ -171,25 +200,40 @@
         }
 
         // Remove all drag-over classes
-        if (navItemsContainer) {
-            navItemsContainer.querySelectorAll('.nav-item.drag-over').forEach(item => {
-                item.classList.remove('drag-over');
-            });
-        }
+        document.querySelectorAll('.nav-item.drag-over').forEach(item => {
+            item.classList.remove('drag-over');
+        });
 
         draggedItem = null;
+        draggedItemParent = null;
     }
 
     /**
-     * Handle dragover on the container - determines where to show placeholder
+     * Get the immediate nav-item children of a container
+     */
+    function getContainerItems(container) {
+        // For .nav-items, get direct children
+        // For .nav-children, get direct children
+        return Array.from(container.querySelectorAll(':scope > .nav-item:not(.dragging)'));
+    }
+
+    /**
+     * Handle dragover on a container - determines where to show placeholder
      */
     function onContainerDragOver(e) {
         e.preventDefault();
+        e.stopPropagation();
         e.dataTransfer.dropEffect = 'move';
 
-        if (!draggedItem || !navItemsContainer) return;
+        if (!draggedItem) return;
 
-        const items = Array.from(navItemsContainer.querySelectorAll(':scope > .nav-item:not(.dragging)'));
+        const container = this;
+
+        // Only allow dropping within the same parent container
+        // (i.e., can't move items between different hierarchy levels)
+        if (container !== draggedItemParent) return;
+
+        const items = getContainerItems(container);
 
         // Find the item we're hovering over and determine if we're in top or bottom half
         let insertBefore = null;
@@ -205,36 +249,41 @@
         }
 
         // Remove placeholder if it exists
-        if (placeholder.parentNode) {
+        if (placeholder && placeholder.parentNode) {
             placeholder.parentNode.removeChild(placeholder);
         }
 
         // Insert placeholder at the right position
         if (insertBefore) {
-            navItemsContainer.insertBefore(placeholder, insertBefore);
+            container.insertBefore(placeholder, insertBefore);
         } else {
-            // Append at the end (but before any non-nav-item elements)
+            // Append at the end
             const lastNavItem = items[items.length - 1];
             if (lastNavItem) {
-                navItemsContainer.insertBefore(placeholder, lastNavItem.nextSibling);
+                container.insertBefore(placeholder, lastNavItem.nextSibling);
             } else {
-                navItemsContainer.appendChild(placeholder);
+                container.appendChild(placeholder);
             }
         }
     }
 
     /**
-     * Handle drop on the container
+     * Handle drop on a container
      */
     function onContainerDrop(e) {
         e.preventDefault();
         e.stopPropagation();
 
-        if (!draggedItem || !placeholder || !navItemsContainer) return;
+        if (!draggedItem || !placeholder) return;
+
+        const container = this;
+
+        // Only allow dropping within the same parent container
+        if (container !== draggedItemParent) return;
 
         // Move the dragged item to the placeholder position
-        if (placeholder.parentNode) {
-            navItemsContainer.insertBefore(draggedItem, placeholder);
+        if (placeholder.parentNode === container) {
+            container.insertBefore(draggedItem, placeholder);
             placeholder.parentNode.removeChild(placeholder);
             hasChanges = true;
             updateSaveButtonState();
@@ -244,7 +293,7 @@
     /**
      * Show reorder controls (save/cancel buttons)
      */
-    function showReorderControls() {
+    function showReorderControls(navItemsContainer) {
         // Check if controls already exist
         if (document.querySelector('.reorder-controls')) return;
 
@@ -291,23 +340,46 @@
     }
 
     /**
+     * Collect order data from all levels of navigation
+     */
+    function collectAllOrderData() {
+        const orderData = [];
+        const navItemsContainer = document.querySelector('.nav-items');
+        if (!navItemsContainer) return orderData;
+
+        // Process items at each level
+        function processContainer(container, depth = 0) {
+            const items = container.querySelectorAll(':scope > .nav-item');
+            items.forEach((item, index) => {
+                const link = item.querySelector(':scope > a');
+                if (link) {
+                    orderData.push({
+                        path: link.getAttribute('href'),
+                        order: (index + 1) * 10
+                    });
+                }
+
+                // Process nested children
+                const childContainer = item.querySelector(':scope > .nav-children');
+                if (childContainer) {
+                    processContainer(childContainer, depth + 1);
+                }
+            });
+        }
+
+        processContainer(navItemsContainer);
+        return orderData;
+    }
+
+    /**
      * Save the new order to the server
      */
     async function saveOrder() {
-        if (!navItemsContainer) return;
+        const orderData = collectAllOrderData();
 
-        const items = navItemsContainer.querySelectorAll(':scope > .nav-item');
-        const orderData = [];
-
-        items.forEach((item, index) => {
-            const link = item.querySelector('a');
-            if (link) {
-                orderData.push({
-                    path: link.getAttribute('href'),
-                    order: (index + 1) * 10 // Use gaps of 10 for easy insertion
-                });
-            }
-        });
+        if (orderData.length === 0) {
+            return;
+        }
 
         try {
             const response = await fetch('/api/navigation/order', {

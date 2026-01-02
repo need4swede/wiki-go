@@ -42,8 +42,8 @@
     margin: -8px;
 }
 
-/* Make nav items look draggable in reorder mode */
-.nav-items.reorder-mode > .nav-item {
+/* Make nav items look draggable in reorder mode (all levels) */
+.nav-items.reorder-mode .nav-item {
     cursor: grab;
     transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
     border-radius: 6px;
@@ -52,15 +52,15 @@
 }
 
 /* Prevent link from capturing drag events */
-.nav-items.reorder-mode > .nav-item a {
+.nav-items.reorder-mode .nav-item > a {
     pointer-events: none;
 }
 
-.nav-items.reorder-mode > .nav-item:hover {
+.nav-items.reorder-mode .nav-item:hover {
     background: var(--glass-bg);
 }
 
-.nav-items.reorder-mode > .nav-item::before {
+.nav-items.reorder-mode .nav-item::before {
     content: '\f0c9'; /* fa-bars / hamburger icon */
     font-family: 'FontAwesome';
     position: absolute;
@@ -73,12 +73,12 @@
     transition: opacity 0.15s ease;
 }
 
-.nav-items.reorder-mode > .nav-item:hover::before {
+.nav-items.reorder-mode .nav-item:hover::before {
     opacity: 0.6;
 }
 
 /* Dragging state */
-.nav-items.reorder-mode > .nav-item.dragging {
+.nav-items.reorder-mode .nav-item.dragging {
     opacity: 0.5;
     transform: scale(1.02);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -86,7 +86,7 @@
 }
 
 /* Drop target indicator */
-.nav-items.reorder-mode > .nav-item.drag-over {
+.nav-items.reorder-mode .nav-item.drag-over {
     background: var(--primary-color-subtle, rgba(0, 122, 255, 0.1));
 }
 
