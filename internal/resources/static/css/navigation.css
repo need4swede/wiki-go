@@ -7,7 +7,7 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
-/* ---------- Hamburger menu ---------- */
+/* ---------- Hamburger menu - Liquid Glass ---------- */
 .hamburger {
     display: none;
     position: fixed;
@@ -24,7 +24,7 @@ body {
     height: 60px;
     border-bottom: 1px solid var(--glass-border);
     border-right: 1px solid var(--glass-border);
-    transition: all 0.3s ease;
+    transition: var(--transition-smooth);
 }
 
 .hamburger-icon {
@@ -76,7 +76,7 @@ body {
     box-shadow: var(--shadow);
 }
 
-/* ---------- Sidebar ---------- */
+/* ---------- Sidebar - Liquid Glass ---------- */
 .sidebar {
     width: var(--sidebar-width);
     height: 100vh;
@@ -88,8 +88,9 @@ body {
     position: fixed;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease;
+    transition: var(--transition-smooth);
     z-index: 1001;
+    box-shadow: var(--glass-shadow);
 }
 
 /* Fixed header section */
@@ -171,25 +172,26 @@ body {
 
 .nav-item {
     margin: 0;
-    border-radius: 1rem;
+    border-radius: var(--border-radius-xs);
 }
 
 .nav-item.directory {
     font-weight: 600;
-    margin-top: 6px;
+    margin-top: 8px;
 }
 
 .nav-item.active>a {
     color: var(--primary-color);
-    background: var(--hover-bg);
+    background: var(--glass-bg);
     border: 1px solid var(--glass-border);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
 .nav-children {
     display: flex;
     flex-direction: column;
     gap: 2px;
-    margin-top: 2px;
+    margin-top: 4px;
     margin-left: 8px;
     padding-left: 12px;
     border-left: 2px solid var(--primary-color);
@@ -202,9 +204,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 12px;
-    border-radius: 0.5rem;
-    transition: all 0.2s ease;
+    padding: 10px 14px;
+    border-radius: var(--border-radius-xs);
+    transition: var(--transition-smooth);
     position: relative;
     gap: 6px;
     unicode-bidi: plaintext;
@@ -213,9 +215,10 @@ body {
 
 .nav-item a:hover {
     color: var(--primary-color);
-    background: var(--hover-bg);
+    background: var(--glass-bg);
     border-color: var(--glass-border);
-    transform: translateX(2px);
+    transform: translateX(3px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 /* Arrow indicator */
@@ -236,14 +239,13 @@ body {
     transform: rotate(45deg);
 }
 
-/* ---------- Breadcrumbs ---------- */
+/* ---------- Breadcrumbs - Liquid Glass ---------- */
 .breadcrumbs {
     margin-bottom: 14px;
     color: var(--breadcrumb-color);
     font-size: 14px;
     position: fixed;
     top: 0;
-    /* Desktop default: stick to very top */
     left: var(--sidebar-width);
     right: 0;
     padding: 12px 48px;
@@ -252,7 +254,7 @@ body {
     -webkit-backdrop-filter: var(--glass-blur);
     border-bottom: 1px solid var(--glass-border);
     z-index: 90;
-    transition: all 0.3s ease;
+    transition: var(--transition-smooth);
 }
 
 /* When the password warning banner is visible, push breadcrumbs below it on desktop */
@@ -298,15 +300,20 @@ body.has-password-warning .breadcrumbs {
 .breadcrumbs a {
     color: var(--primary-color);
     text-decoration: none;
+    transition: var(--transition-smooth);
+    padding: 4px 8px;
+    margin: -4px -8px;
+    border-radius: var(--border-radius-xs);
 }
 
 .breadcrumbs a:hover {
     color: var(--primary-hover);
-    text-decoration: underline;
+    background: rgba(var(--primary-rgb), 0.08);
 }
 
 .breadcrumbs .separator {
     color: var(--breadcrumb-color);
+    opacity: 0.6;
 }
 
 /* Mobile responsive adjustments */

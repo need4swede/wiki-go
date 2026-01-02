@@ -47,53 +47,81 @@
     display: none;
 }
 
-/* Directory listing */
+/* Directory listing - Liquid Glass */
 .directory-list {
-    margin-top: 12px;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .directory-item {
-    margin: 6px 0;
-    padding: 10px 14px;
+    padding: 12px 16px;
     border-radius: var(--border-radius-xs);
-    transition: all 0.3s ease;
+    transition: var(--transition-smooth);
     display: flex;
     align-items: center;
     direction: ltr;
-    border: 1px solid transparent;
+    border: 1px solid var(--glass-border-subtle);
     background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur-subtle);
+    -webkit-backdrop-filter: var(--glass-blur-subtle);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    position: relative;
+    overflow: hidden;
+}
+
+.directory-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: var(--glass-specular);
+    pointer-events: none;
+    opacity: 0.2;
 }
 
 .directory-item:hover {
-    background: var(--hover-bg);
+    background: var(--glass-bg-strong);
     border-color: var(--glass-border);
     transform: translateX(4px);
+    box-shadow: var(--glass-shadow);
 }
 
 .directory-item a {
-    color: var(--primary-color);
+    color: var(--text-color);
     text-decoration: none;
     display: block;
     flex: 1;
     unicode-bidi: plaintext;
     text-align: left;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
 }
 
 .directory-item a:hover {
-    color: var(--primary-hover);
-    text-decoration: underline;
+    color: var(--primary-color);
 }
 
-.directory-item.is-dir:before {
+.directory-item.is-dir::after {
     content: "📁";
-    margin-right: 8px;
-    font-size: 14px;
+    position: relative;
+    z-index: 1;
+    order: -1;
+    margin-right: 10px;
+    font-size: 16px;
 }
 
-.directory-item.is-file:before {
+.directory-item.is-file::after {
     content: "📄";
-    margin-right: 8px;
-    font-size: 14px;
+    position: relative;
+    z-index: 1;
+    order: -1;
+    margin-right: 10px;
+    font-size: 16px;
 }
 
 /* ---------- Responsive styles ---------- */

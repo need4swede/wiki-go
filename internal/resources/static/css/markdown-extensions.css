@@ -1,49 +1,99 @@
-/* Highlighted text */
+/* Highlighted text - Liquid Glass */
 mark {
-    background-color: #ffff66;
-    padding: 0.1em 0.2em;
-    border-radius: 2px;
+    background: linear-gradient(135deg, rgba(255, 214, 0, 0.4) 0%, rgba(255, 214, 0, 0.2) 100%);
+    padding: 0.1em 0.4em;
+    border-radius: var(--border-radius-xs);
+    box-shadow: 0 1px 2px rgba(255, 214, 0, 0.1);
 }
 
 /* Dark theme support for highlighted text */
 :root[data-theme="dark"] mark {
-    background-color: #2a2010;
-    color: #DB9A00;
+    background: linear-gradient(135deg, rgba(255, 214, 0, 0.25) 0%, rgba(255, 214, 0, 0.1) 100%);
+    color: #ffd60a;
 }
 
-/* Collapsible sections */
+/* Collapsible sections - Liquid Glass */
 .markdown-details {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 0.5em;
-    margin: 1em 0;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius-sm);
+    padding: 0;
+    margin: 1.2em 0;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur-subtle);
+    -webkit-backdrop-filter: var(--glass-blur-subtle);
+    box-shadow: var(--glass-shadow);
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.markdown-details[open] {
+    box-shadow: var(--glass-shadow-elevated);
 }
 
 .markdown-details summary {
-    font-weight: bold;
+    font-weight: 600;
     cursor: pointer;
-    padding: 0.5em;
+    padding: 1em 1.2em;
     user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    background: var(--glass-bg-strong);
+    transition: var(--transition-smooth);
+    position: relative;
+}
+
+.markdown-details summary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: var(--glass-specular);
+    pointer-events: none;
+    opacity: 0.3;
 }
 
 .markdown-details summary:hover {
-    background-color: rgba(0, 0, 0, 0.03);
+    background: var(--glass-bg-ultra);
+}
+
+.markdown-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.markdown-details summary::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--text-muted);
+    border-bottom: 2px solid var(--text-muted);
+    transform: rotate(-45deg);
+    transition: var(--transition-smooth);
+    margin-left: auto;
+}
+
+.markdown-details[open] summary::after {
+    transform: rotate(45deg);
 }
 
 .details-content {
-    padding: 0.5em;
-    border-top: 1px solid #eee;
-    margin-top: 0.5em;
+    padding: 1.2em;
+    border-top: 1px solid var(--glass-border-subtle);
 }
 
-/* Video embeds */
+/* Video embeds - Liquid Glass */
 .video-container {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
     height: 0;
     overflow: hidden;
     max-width: 100%;
-    margin: 1.5em 0;
+    margin: 1.8em 0;
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--glass-shadow-elevated);
+    border: 1px solid var(--glass-border);
 }
 
 .video-container iframe {
@@ -52,6 +102,7 @@ mark {
     left: 0;
     width: 100%;
     height: 100%;
+    border-radius: var(--border-radius-sm);
 }
 
 /* Text direction classes */
@@ -69,82 +120,111 @@ mark {
     margin: 0.2em 0 1em 0;
 }
 
-/* Table of Contents styles */
+/* Table of Contents styles - Liquid Glass */
 .wiki-toc {
-    margin: 1.5rem 0;
-    padding: 1rem;
-    background-color: var(--hover-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
+    margin: 1.8rem 0;
+    padding: 0;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur-light);
+    -webkit-backdrop-filter: var(--glass-blur-light);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--glass-shadow);
+    overflow: hidden;
+    position: relative;
+}
+
+.wiki-toc::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: var(--glass-specular);
+    pointer-events: none;
+    opacity: 0.3;
 }
 
 .toc-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 0.75rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--border-color);
-    color: var(--text-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 1rem 1.2rem;
+    border-bottom: 1px solid var(--glass-border-subtle);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: var(--glass-bg-strong);
+    position: relative;
 }
 
 .toc-list {
     margin: 0;
-    padding-left: 1rem;
+    padding: 0.8rem 1.2rem;
     list-style-type: none;
 }
 
 .toc-list ul {
     list-style-type: none;
-    padding-left: 1.5rem;
-    margin: 0.5rem 0;
+    padding-left: 1.2rem;
+    margin: 0.4rem 0;
+    border-left: 1px solid var(--glass-border-subtle);
 }
 
 .toc-list li {
-    margin-bottom: 0.5rem;
-    line-height: 1.4;
+    margin-bottom: 0.4rem;
+    line-height: 1.5;
 }
 
 .toc-list a {
-    color: var(--primary-color);
+    color: var(--text-color);
     text-decoration: none;
-    /* color: var(--text-color); */
     display: inline-block;
-    transition: color 0.2s;
+    transition: var(--transition-smooth);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--border-radius-xs);
+    margin-left: -0.5rem;
 }
 
 .toc-list a:hover {
-    color: var(--primary-hover);
-    text-decoration: underline;
+    color: var(--primary-color);
+    background: rgba(var(--primary-rgb), 0.08);
 }
 
 .toc-empty {
     font-style: italic;
-    color: var(--text-secondary);
+    color: var(--text-muted);
     margin: 0;
+    padding: 1rem 1.2rem;
 }
 
 /* Dark theme adjustments */
 :root[data-theme="dark"] .wiki-toc {
-    background-color: var(--code-bg);
+    background: var(--glass-bg);
 }
 
-/* Mermaid diagrams */
+/* Mermaid diagrams - Liquid Glass */
 .mermaid {
-    margin: 20px 0;
+    margin: 1.5em 0;
     overflow: auto;
     text-align: center;
-    background-color: transparent;
-    border-radius: 4px;
-    padding: 10px 0;
-    transition: opacity 0.2s ease;
-    color: transparent; /* Hide raw text content */
-    font-size: 0; /* Hide text completely */
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur-subtle);
+    -webkit-backdrop-filter: var(--glass-blur-subtle);
+    border-radius: var(--border-radius-sm);
+    padding: 1.5em;
+    transition: var(--transition-smooth);
+    color: transparent;
+    font-size: 0;
     line-height: 0;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
 }
 
 /* Show the SVG once rendered */
 .mermaid svg {
-    transition: opacity 0.15s ease;
+    transition: opacity 0.3s ease;
     color: initial;
     font-size: initial;
     line-height: initial;
@@ -168,7 +248,7 @@ mark {
 .mermaid-rerendering {
     position: relative;
     opacity: 0.6;
-    transition: opacity 0.2s ease;
+    transition: var(--transition-smooth);
 }
 
 .mermaid-rerendering::after {
@@ -177,12 +257,15 @@ mark {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: var(--background-color);
+    background: var(--glass-bg-strong);
+    backdrop-filter: var(--glass-blur-subtle);
+    -webkit-backdrop-filter: var(--glass-blur-subtle);
     color: var(--text-color);
-    padding: 8px 12px;
-    border-radius: 4px;
+    padding: 10px 16px;
+    border-radius: var(--border-radius-xs);
     font-size: 0.85em;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
     z-index: 10;
     pointer-events: none;
 }
@@ -237,13 +320,30 @@ mark {
     opacity: 1;
 }
 
-/* GitHub-flavored Alerts */
+/* GitHub-flavored Alerts - Liquid Glass */
 .markdown-alert {
-    padding: 8px 16px;
-    margin-bottom: 16px;
+    padding: 1em 1.2em;
+    margin: 1.2em 0;
     border-left: 4px solid;
-    border-radius: 0 4px 4px 0;
-    /* background-color: var(--blockquote-bg); */ /* Optional: background color */
+    border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur-subtle);
+    -webkit-backdrop-filter: var(--glass-blur-subtle);
+    box-shadow: var(--glass-shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.markdown-alert::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 4px;
+    right: 0;
+    height: 40%;
+    background: var(--glass-specular);
+    pointer-events: none;
+    opacity: 0.3;
 }
 
 .markdown-alert-title {
@@ -251,18 +351,25 @@ mark {
     align-items: center;
     font-weight: 600;
     margin-top: 0;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     font-size: 14px;
+    position: relative;
+    z-index: 1;
 }
 
 .markdown-alert-title svg,
 .markdown-alert-title i {
-    margin-right: 8px;
+    margin-right: 10px;
     fill: currentColor;
+    width: 18px;
+    height: 18px;
 }
 
 .markdown-alert-content {
     font-size: 14px;
+    position: relative;
+    z-index: 1;
+    line-height: 1.6;
 }
 
 .markdown-alert-content > :first-child {
@@ -273,37 +380,67 @@ mark {
     margin-bottom: 0;
 }
 
-/* Alert Colors - Light Theme */
-.markdown-alert-note { border-color: #0969da; }
-.markdown-alert-note .markdown-alert-title { color: #0969da; }
+/* Alert Colors - Light Theme (Apple colors) */
+.markdown-alert-note {
+    border-color: #007aff;
+    background: linear-gradient(135deg, rgba(0, 122, 255, 0.08) 0%, rgba(0, 122, 255, 0.03) 100%);
+}
+.markdown-alert-note .markdown-alert-title { color: #007aff; }
 
-.markdown-alert-tip { border-color: #1a7f37; }
-.markdown-alert-tip .markdown-alert-title { color: #1a7f37; }
+.markdown-alert-tip {
+    border-color: #34c759;
+    background: linear-gradient(135deg, rgba(52, 199, 89, 0.08) 0%, rgba(52, 199, 89, 0.03) 100%);
+}
+.markdown-alert-tip .markdown-alert-title { color: #34c759; }
 
-.markdown-alert-important { border-color: #8250df; }
-.markdown-alert-important .markdown-alert-title { color: #8250df; }
+.markdown-alert-important {
+    border-color: #af52de;
+    background: linear-gradient(135deg, rgba(175, 82, 222, 0.08) 0%, rgba(175, 82, 222, 0.03) 100%);
+}
+.markdown-alert-important .markdown-alert-title { color: #af52de; }
 
-.markdown-alert-warning { border-color: #9a6700; }
-.markdown-alert-warning .markdown-alert-title { color: #9a6700; }
+.markdown-alert-warning {
+    border-color: #ff9500;
+    background: linear-gradient(135deg, rgba(255, 149, 0, 0.08) 0%, rgba(255, 149, 0, 0.03) 100%);
+}
+.markdown-alert-warning .markdown-alert-title { color: #ff9500; }
 
-.markdown-alert-caution { border-color: #cf222e; }
-.markdown-alert-caution .markdown-alert-title { color: #cf222e; }
+.markdown-alert-caution {
+    border-color: #ff3b30;
+    background: linear-gradient(135deg, rgba(255, 59, 48, 0.08) 0%, rgba(255, 59, 48, 0.03) 100%);
+}
+.markdown-alert-caution .markdown-alert-title { color: #ff3b30; }
 
-/* Alert Colors - Dark Theme */
-:root[data-theme="dark"] .markdown-alert-note { border-color: #58a6ff; }
-:root[data-theme="dark"] .markdown-alert-note .markdown-alert-title { color: #58a6ff; }
+/* Alert Colors - Dark Theme (Apple dark colors) */
+:root[data-theme="dark"] .markdown-alert-note {
+    border-color: #0a84ff;
+    background: linear-gradient(135deg, rgba(10, 132, 255, 0.12) 0%, rgba(10, 132, 255, 0.04) 100%);
+}
+:root[data-theme="dark"] .markdown-alert-note .markdown-alert-title { color: #0a84ff; }
 
-:root[data-theme="dark"] .markdown-alert-tip { border-color: #3fb950; }
-:root[data-theme="dark"] .markdown-alert-tip .markdown-alert-title { color: #3fb950; }
+:root[data-theme="dark"] .markdown-alert-tip {
+    border-color: #30d158;
+    background: linear-gradient(135deg, rgba(48, 209, 88, 0.12) 0%, rgba(48, 209, 88, 0.04) 100%);
+}
+:root[data-theme="dark"] .markdown-alert-tip .markdown-alert-title { color: #30d158; }
 
-:root[data-theme="dark"] .markdown-alert-important { border-color: #6563ff; }
-:root[data-theme="dark"] .markdown-alert-important .markdown-alert-title { color: #6563ff; }
+:root[data-theme="dark"] .markdown-alert-important {
+    border-color: #bf5af2;
+    background: linear-gradient(135deg, rgba(191, 90, 242, 0.12) 0%, rgba(191, 90, 242, 0.04) 100%);
+}
+:root[data-theme="dark"] .markdown-alert-important .markdown-alert-title { color: #bf5af2; }
 
-:root[data-theme="dark"] .markdown-alert-warning { border-color: #d29922; }
-:root[data-theme="dark"] .markdown-alert-warning .markdown-alert-title { color: #d29922; }
+:root[data-theme="dark"] .markdown-alert-warning {
+    border-color: #ff9f0a;
+    background: linear-gradient(135deg, rgba(255, 159, 10, 0.12) 0%, rgba(255, 159, 10, 0.04) 100%);
+}
+:root[data-theme="dark"] .markdown-alert-warning .markdown-alert-title { color: #ff9f0a; }
 
-:root[data-theme="dark"] .markdown-alert-caution { border-color: #f85149; }
-:root[data-theme="dark"] .markdown-alert-caution .markdown-alert-title { color: #f85149; }
+:root[data-theme="dark"] .markdown-alert-caution {
+    border-color: #ff453a;
+    background: linear-gradient(135deg, rgba(255, 69, 58, 0.12) 0%, rgba(255, 69, 58, 0.04) 100%);
+}
+:root[data-theme="dark"] .markdown-alert-caution .markdown-alert-title { color: #ff453a; }
 
 /* Print styles */
 @media print {

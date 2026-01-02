@@ -1,4 +1,4 @@
-/* Typography and content formatting */
+/* Typography and content formatting - macOS 26 Liquid Glass */
 
 /* ---------- Content typography ---------- */
 /* Add scroll margin to prevent headings from being hidden behind the fixed top bar */
@@ -8,88 +8,145 @@
 
 .content h1 {
     margin-top: 0;
-    margin-bottom: 0.5em;
-    font-size: 32px;
-    font-weight: 600;
+    margin-bottom: 0.6em;
+    font-size: 34px;
+    font-weight: 700;
     color: var(--text-color);
+    letter-spacing: -0.022em;
+    line-height: 1.2;
 }
 
 .content h2 {
-    font-size: 24px;
-    font-weight: 600;
-    margin-top: 1em;
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 1.2em;
     margin-bottom: 0.5em;
-    padding-bottom: 0.25em;
-    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 0.4em;
+    letter-spacing: -0.02em;
+    border-bottom: 1px solid var(--glass-border-subtle);
+    position: relative;
+}
+
+.content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color) 0%, transparent 100%);
+    border-radius: 1px;
 }
 
 .content h3 {
-    font-size: 20px;
+    font-size: 21px;
+    font-weight: 600;
+    margin-top: 1.2em;
+    margin-bottom: 0.5em;
+    letter-spacing: -0.017em;
+}
+
+.content h4 {
+    font-size: 18px;
     font-weight: 600;
     margin-top: 1em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.4em;
+    letter-spacing: -0.014em;
+    color: var(--text-muted);
 }
 
 .content p {
-    margin: 0.2em 0 1em 0;
+    margin: 0.2em 0 1.1em 0;
+    line-height: 1.65;
 }
 
 .content ul, .content ol {
-    margin: 0.3em 0;
-    padding-left: 1.5em;
+    margin: 0.4em 0 1em 0;
+    padding-left: 1.6em;
 }
 
 .content li {
-    margin: 0.15em 0;
-    overflow: visible; /* Ensure the copy button is visible */
+    margin: 0.25em 0;
+    overflow: visible;
+    line-height: 1.6;
 }
 
 .content pre {
-    background: var(--code-bg);
-    backdrop-filter: var(--glass-blur-light);
-    -webkit-backdrop-filter: var(--glass-blur-light);
-    padding: 16px;
-    border-radius: var(--border-radius-sm);
-    overflow-x: auto;
-    border: 1px solid var(--glass-border);
-    margin: 0.75em 0;
-    position: relative;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-}
-
-.content pre > code {
-    overflow-x: auto; /* Allow code to scroll */
-}
-
-.content code {
-    background: var(--code-bg);
-    padding: 3px 8px;
-    border-radius: var(--border-radius-xs);
-    font-size: 0.9em;
-    font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-}
-
-/* Code copy button */
-.copy-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 6px 10px;
     background: var(--glass-bg);
     backdrop-filter: var(--glass-blur-light);
     -webkit-backdrop-filter: var(--glass-blur-light);
+    padding: 18px 20px;
+    border-radius: var(--border-radius-sm);
+    overflow-x: auto;
+    border: 1px solid var(--glass-border);
+    margin: 1em 0;
+    position: relative;
+    box-shadow: var(--glass-shadow), var(--glass-inner-glow);
+}
+
+.content pre::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: var(--glass-specular);
+    pointer-events: none;
+    border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0;
+    opacity: 0.5;
+}
+
+.content pre > code {
+    overflow-x: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.content code {
+    background: var(--glass-bg);
+    padding: 3px 8px;
+    border-radius: var(--border-radius-xs);
+    font-size: 0.88em;
+    font-family: 'SF Mono', 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    border: 1px solid var(--glass-border-subtle);
+}
+
+/* Code copy button - Liquid Glass */
+.copy-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 8px 12px;
+    background: var(--glass-bg-strong);
+    backdrop-filter: var(--glass-blur-subtle);
+    -webkit-backdrop-filter: var(--glass-blur-subtle);
     border: 1px solid var(--glass-border);
     border-radius: var(--border-radius-xs);
     color: var(--text-color);
     font-size: 12px;
+    font-weight: 500;
     cursor: pointer;
     opacity: 0;
-    transition: all 0.3s ease;
+    transition: var(--transition-smooth);
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 6px;
     z-index: 10;
-    align-self: flex-end;
+    box-shadow: var(--glass-shadow);
+    overflow: hidden;
+}
+
+.copy-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: var(--glass-specular);
+    pointer-events: none;
+    opacity: 0.8;
 }
 
 .content pre:hover .copy-button {
@@ -97,21 +154,34 @@
 }
 
 .copy-button:hover {
-    background: var(--hover-bg);
+    background: var(--glass-bg-ultra);
     color: var(--primary-color);
-    transform: translateY(-1px);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: var(--glass-shadow-elevated);
+}
+
+.copy-button:active {
+    transform: translateY(0) scale(0.98);
 }
 
 .copy-button svg {
     width: 14px;
     height: 14px;
     fill: currentColor;
+    position: relative;
+    z-index: 1;
+}
+
+.copy-button span {
+    position: relative;
+    z-index: 1;
 }
 
 .copy-button.copied {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
     color: white;
     border-color: transparent;
+    box-shadow: 0 4px 16px rgba(var(--primary-rgb), 0.3);
 }
 
 /* Override Prism.js styles */
@@ -157,17 +227,18 @@ pre[class*="language-"] > code {
     color: var(--text-color) !important;
 }
 
-/* ---------- Content styles ---------- */
+/* ---------- Content styles - Liquid Glass ---------- */
 .content mark {
-    background: linear-gradient(135deg, rgba(251, 191, 36, 0.3) 0%, rgba(251, 191, 36, 0.15) 100%);
-    padding: 2px 6px;
+    background: linear-gradient(135deg, rgba(255, 214, 0, 0.35) 0%, rgba(255, 214, 0, 0.18) 100%);
+    padding: 2px 8px;
     border-radius: var(--border-radius-xs);
     color: var(--text-color);
+    box-shadow: 0 1px 3px rgba(255, 214, 0, 0.15);
 }
 
 :root[data-theme="dark"] .content mark {
-    background: linear-gradient(135deg, rgba(251, 191, 36, 0.25) 0%, rgba(251, 191, 36, 0.1) 100%);
-    color: #fbbf24;
+    background: linear-gradient(135deg, rgba(255, 214, 0, 0.28) 0%, rgba(255, 214, 0, 0.12) 100%);
+    color: #ffd60a;
 }
 
 .content sup {
@@ -184,41 +255,71 @@ pre[class*="language-"] > code {
 
 .content del {
     text-decoration: line-through;
-    color: var(--text-color);
-    opacity: 0.7;
+    color: var(--text-muted);
+    opacity: 0.8;
 }
 
-/* Blockquote style */
+/* Blockquote style - Liquid Glass */
 .content blockquote {
     border-left: 4px solid var(--primary-color);
-    margin: 1em 0;
-    padding: 1em 1.25em;
-    background: var(--blockquote-bg);
+    margin: 1.2em 0;
+    padding: 1.1em 1.5em;
+    background: var(--glass-bg);
     backdrop-filter: var(--glass-blur-light);
     -webkit-backdrop-filter: var(--glass-blur-light);
     border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    box-shadow: var(--glass-shadow), var(--glass-inner-glow);
+    position: relative;
+    overflow: hidden;
 }
 
-/* Markdown content styles */
+.content blockquote::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 4px;
+    right: 0;
+    height: 35%;
+    background: var(--glass-specular);
+    pointer-events: none;
+    border-radius: 0 var(--border-radius-sm) 0 0;
+    opacity: 0.4;
+}
+
+.content blockquote p {
+    position: relative;
+    z-index: 1;
+}
+
+/* Markdown content styles - Links */
 .markdown-content a {
     color: var(--primary-color);
     text-decoration: none;
+    transition: var(--transition-smooth);
+    background: linear-gradient(transparent 60%, rgba(var(--primary-rgb), 0.1) 60%);
+    border-radius: 2px;
 }
 
 .markdown-content a:hover {
     color: var(--primary-hover);
-    text-decoration: underline;
+    background: linear-gradient(transparent 60%, rgba(var(--primary-rgb), 0.2) 60%);
 }
 
+/* Markdown content styles - Images with Liquid Glass */
 .markdown-content img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 1.5rem auto;
+    margin: 1.8rem auto;
     border-radius: var(--border-radius-sm);
-    box-shadow: var(--glass-shadow);
+    box-shadow: var(--glass-shadow-elevated);
     border: 1px solid var(--glass-border);
+    transition: var(--transition-smooth);
+}
+
+.markdown-content img:hover {
+    transform: translateY(-2px) scale(1.005);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 24px 64px rgba(0, 0, 0, 0.08);
 }
 
 /* ---------- Footnotes styles ---------- */
@@ -251,23 +352,26 @@ pre[class*="language-"] > code {
     margin-left: 5px;
 }
 
-/* ---------- Tables ---------- */
+/* ---------- Tables - Liquid Glass ---------- */
 table {
     width: 100%;
     max-width: 100%;
     border-collapse: separate;
     border-spacing: 0;
-    margin: 16px 0;
+    margin: 1.2em 0;
     border-radius: var(--border-radius-sm);
     overflow: hidden;
     border: 1px solid var(--glass-border);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    box-shadow: var(--glass-shadow);
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur-subtle);
+    -webkit-backdrop-filter: var(--glass-blur-subtle);
 }
 
 th, td {
-    padding: 14px 16px;
-    border-bottom: 1px solid var(--glass-border);
-    border-right: 1px solid var(--glass-border);
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--glass-border-subtle);
+    border-right: 1px solid var(--glass-border-subtle);
     text-align: left;
 }
 
@@ -280,14 +384,33 @@ tr:last-child td {
 }
 
 th {
-    background: var(--hover-bg);
+    background: var(--glass-bg-strong);
     font-weight: 600;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--text-muted);
+    position: relative;
+}
+
+th::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--glass-border);
 }
 
 tr:nth-child(even) {
-    background: var(--glass-bg);
+    background: rgba(var(--primary-rgb), 0.02);
+}
+
+tr {
+    transition: var(--transition-smooth);
 }
 
 tr:hover {
-    background: var(--hover-bg);
+    background: rgba(var(--primary-rgb), 0.06);
 }
