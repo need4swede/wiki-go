@@ -43,6 +43,7 @@ cmd
 *.md
 **/*.md
 !demo-site-files/**/*.md
+!data/**/*.md
 # except README and SECURITY
 !README.md
 !SECURITY.md
