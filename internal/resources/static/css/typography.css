@@ -17,25 +17,13 @@
 }
 
 .content h2 {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 700;
-    margin-top: 1.2em;
+    margin-top: 1.5em;
     margin-bottom: 0.5em;
-    padding-bottom: 0.4em;
+    padding-bottom: 0.3em;
     letter-spacing: -0.02em;
-    border-bottom: 1px solid var(--glass-border-subtle);
-    position: relative;
-}
-
-.content h2::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 60px;
-    height: 2px;
-    background: linear-gradient(90deg, var(--primary-color) 0%, transparent 100%);
-    border-radius: 1px;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .content h3 {
@@ -72,58 +60,40 @@
 }
 
 .content pre {
-    background: var(--glass-bg);
-    backdrop-filter: var(--glass-blur-light);
-    -webkit-backdrop-filter: var(--glass-blur-light);
-    padding: 18px 20px;
-    border-radius: var(--border-radius-sm);
+    background: var(--card-bg);
+    backdrop-filter: var(--glass-blur-subtle);
+    -webkit-backdrop-filter: var(--glass-blur-subtle);
+    padding: 16px 18px;
+    border-radius: var(--border-radius);
     overflow-x: auto;
-    border: 1px solid var(--glass-border);
+    border: 1px solid var(--card-border);
     margin: 1em 0;
     position: relative;
-    box-shadow: var(--glass-shadow), var(--glass-inner-glow);
-}
-
-.content pre::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 40%;
-    background: var(--glass-specular);
-    pointer-events: none;
-    border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0;
-    opacity: 0.5;
+    box-shadow: var(--card-shadow);
 }
 
 .content pre > code {
     overflow-x: auto;
-    position: relative;
-    z-index: 1;
 }
 
 .content code {
-    background: var(--glass-bg);
-    padding: 3px 8px;
-    border-radius: var(--border-radius-xs);
+    background: var(--code-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
     font-size: 0.88em;
-    font-family: 'SF Mono', 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    border: 1px solid var(--glass-border-subtle);
+    font-family: 'SF Mono', ui-monospace, Menlo, Monaco, 'Cascadia Code', Consolas, monospace;
 }
 
-/* Code copy button - Liquid Glass */
+/* Code copy button - macOS style */
 .copy-button {
     position: absolute;
-    top: 12px;
-    right: 12px;
-    padding: 8px 12px;
-    background: var(--glass-bg-strong);
-    backdrop-filter: var(--glass-blur-subtle);
-    -webkit-backdrop-filter: var(--glass-blur-subtle);
-    border: 1px solid var(--glass-border);
-    border-radius: var(--border-radius-xs);
-    color: var(--text-color);
+    top: 10px;
+    right: 10px;
+    padding: 6px 10px;
+    background: var(--hover-bg);
+    border: none;
+    border-radius: 6px;
+    color: var(--text-muted);
     font-size: 12px;
     font-weight: 500;
     cursor: pointer;
@@ -131,22 +101,8 @@
     transition: var(--transition-smooth);
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
     z-index: 10;
-    box-shadow: var(--glass-shadow);
-    overflow: hidden;
-}
-
-.copy-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 50%;
-    background: var(--glass-specular);
-    pointer-events: none;
-    opacity: 0.8;
 }
 
 .content pre:hover .copy-button {
@@ -154,34 +110,23 @@
 }
 
 .copy-button:hover {
-    background: var(--glass-bg-ultra);
-    color: var(--primary-color);
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: var(--glass-shadow-elevated);
+    background: var(--glass-bg);
+    color: var(--text-color);
 }
 
 .copy-button:active {
-    transform: translateY(0) scale(0.98);
+    transform: scale(0.96);
 }
 
 .copy-button svg {
     width: 14px;
     height: 14px;
     fill: currentColor;
-    position: relative;
-    z-index: 1;
-}
-
-.copy-button span {
-    position: relative;
-    z-index: 1;
 }
 
 .copy-button.copied {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    background: var(--success-color);
     color: white;
-    border-color: transparent;
-    box-shadow: 0 4px 16px rgba(var(--primary-rgb), 0.3);
 }
 
 /* Override Prism.js styles */
@@ -227,17 +172,16 @@ pre[class*="language-"] > code {
     color: var(--text-color) !important;
 }
 
-/* ---------- Content styles - Liquid Glass ---------- */
+/* ---------- Content styles - macOS Style ---------- */
 .content mark {
-    background: linear-gradient(135deg, rgba(255, 214, 0, 0.35) 0%, rgba(255, 214, 0, 0.18) 100%);
-    padding: 2px 8px;
-    border-radius: var(--border-radius-xs);
+    background: rgba(255, 214, 10, 0.3);
+    padding: 1px 4px;
+    border-radius: 3px;
     color: var(--text-color);
-    box-shadow: 0 1px 3px rgba(255, 214, 0, 0.15);
 }
 
 :root[data-theme="dark"] .content mark {
-    background: linear-gradient(135deg, rgba(255, 214, 0, 0.28) 0%, rgba(255, 214, 0, 0.12) 100%);
+    background: rgba(255, 214, 10, 0.25);
     color: #ffd60a;
 }
 
@@ -256,39 +200,25 @@ pre[class*="language-"] > code {
 .content del {
     text-decoration: line-through;
     color: var(--text-muted);
-    opacity: 0.8;
 }
 
-/* Blockquote style - Liquid Glass */
+/* Blockquote style - macOS card */
 .content blockquote {
-    border-left: 4px solid var(--primary-color);
-    margin: 1.2em 0;
-    padding: 1.1em 1.5em;
-    background: var(--glass-bg);
-    backdrop-filter: var(--glass-blur-light);
-    -webkit-backdrop-filter: var(--glass-blur-light);
-    border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
-    box-shadow: var(--glass-shadow), var(--glass-inner-glow);
-    position: relative;
-    overflow: hidden;
+    border-left: 3px solid var(--primary-color);
+    margin: 1em 0;
+    padding: 12px 16px;
+    background: var(--card-bg);
+    backdrop-filter: var(--glass-blur-subtle);
+    -webkit-backdrop-filter: var(--glass-blur-subtle);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    box-shadow: var(--card-shadow);
+    border-top: 1px solid var(--card-border);
+    border-right: 1px solid var(--card-border);
+    border-bottom: 1px solid var(--card-border);
 }
 
-.content blockquote::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 4px;
-    right: 0;
-    height: 35%;
-    background: var(--glass-specular);
-    pointer-events: none;
-    border-radius: 0 var(--border-radius-sm) 0 0;
-    opacity: 0.4;
-}
-
-.content blockquote p {
-    position: relative;
-    z-index: 1;
+.content blockquote p:last-child {
+    margin-bottom: 0;
 }
 
 /* Markdown content styles - Links */
@@ -296,30 +226,21 @@ pre[class*="language-"] > code {
     color: var(--primary-color);
     text-decoration: none;
     transition: var(--transition-smooth);
-    background: linear-gradient(transparent 60%, rgba(var(--primary-rgb), 0.1) 60%);
-    border-radius: 2px;
 }
 
 .markdown-content a:hover {
-    color: var(--primary-hover);
-    background: linear-gradient(transparent 60%, rgba(var(--primary-rgb), 0.2) 60%);
+    text-decoration: underline;
 }
 
-/* Markdown content styles - Images with Liquid Glass */
+/* Markdown content styles - Images */
 .markdown-content img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 1.8rem auto;
-    border-radius: var(--border-radius-sm);
-    box-shadow: var(--glass-shadow-elevated);
-    border: 1px solid var(--glass-border);
-    transition: var(--transition-smooth);
-}
-
-.markdown-content img:hover {
-    transform: translateY(-2px) scale(1.005);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 24px 64px rgba(0, 0, 0, 0.08);
+    margin: 1.5rem auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--card-border);
 }
 
 /* ---------- Footnotes styles ---------- */
@@ -352,31 +273,27 @@ pre[class*="language-"] > code {
     margin-left: 5px;
 }
 
-/* ---------- Tables - Liquid Glass ---------- */
+/* ---------- Tables - macOS Card Style ---------- */
 table {
     width: 100%;
     max-width: 100%;
     border-collapse: separate;
     border-spacing: 0;
-    margin: 1.2em 0;
-    border-radius: var(--border-radius-sm);
+    margin: 1em 0;
+    border-radius: var(--border-radius);
     overflow: hidden;
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--glass-shadow);
-    background: var(--glass-bg);
+    border: 1px solid var(--card-border);
+    box-shadow: var(--card-shadow);
+    background: var(--card-bg);
     backdrop-filter: var(--glass-blur-subtle);
     -webkit-backdrop-filter: var(--glass-blur-subtle);
 }
 
 th, td {
-    padding: 14px 18px;
-    border-bottom: 1px solid var(--glass-border-subtle);
-    border-right: 1px solid var(--glass-border-subtle);
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-color);
     text-align: left;
-}
-
-th:last-child, td:last-child {
-    border-right: none;
+    font-size: 14px;
 }
 
 tr:last-child td {
@@ -384,33 +301,18 @@ tr:last-child td {
 }
 
 th {
-    background: var(--glass-bg-strong);
+    background: transparent;
     font-weight: 600;
-    font-size: 0.9em;
+    font-size: 12px;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.02em;
     color: var(--text-muted);
-    position: relative;
-}
-
-th::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: var(--glass-border);
-}
-
-tr:nth-child(even) {
-    background: rgba(var(--primary-rgb), 0.02);
 }
 
 tr {
     transition: var(--transition-smooth);
 }
 
-tr:hover {
-    background: rgba(var(--primary-rgb), 0.06);
+tr:hover td {
+    background: var(--hover-bg);
 }

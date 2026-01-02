@@ -47,47 +47,33 @@
     display: none;
 }
 
-/* Directory listing - Liquid Glass */
+/* Directory listing - macOS List Style */
 .directory-list {
-    margin-top: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    margin-top: 12px;
+    background: var(--card-bg);
+    backdrop-filter: var(--glass-blur-subtle);
+    -webkit-backdrop-filter: var(--glass-blur-subtle);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--card-border);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
 }
 
 .directory-item {
-    padding: 12px 16px;
-    border-radius: var(--border-radius-xs);
+    padding: 10px 16px;
     transition: var(--transition-smooth);
     display: flex;
     align-items: center;
     direction: ltr;
-    border: 1px solid var(--glass-border-subtle);
-    background: var(--glass-bg);
-    backdrop-filter: var(--glass-blur-subtle);
-    -webkit-backdrop-filter: var(--glass-blur-subtle);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
-    position: relative;
-    overflow: hidden;
+    border-bottom: 1px solid var(--border-color);
 }
 
-.directory-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 50%;
-    background: var(--glass-specular);
-    pointer-events: none;
-    opacity: 0.2;
+.directory-item:last-child {
+    border-bottom: none;
 }
 
 .directory-item:hover {
-    background: var(--glass-bg-strong);
-    border-color: var(--glass-border);
-    transform: translateX(4px);
-    box-shadow: var(--glass-shadow);
+    background: var(--hover-bg);
 }
 
 .directory-item a {
@@ -97,31 +83,34 @@
     flex: 1;
     unicode-bidi: plaintext;
     text-align: left;
-    font-weight: 500;
-    position: relative;
-    z-index: 1;
+    font-size: 14px;
 }
 
 .directory-item a:hover {
     color: var(--primary-color);
 }
 
-.directory-item.is-dir::after {
+.directory-item.is-dir::before {
     content: "📁";
-    position: relative;
-    z-index: 1;
-    order: -1;
     margin-right: 10px;
-    font-size: 16px;
+    font-size: 15px;
 }
 
-.directory-item.is-file::after {
+.directory-item.is-file::before {
     content: "📄";
-    position: relative;
-    z-index: 1;
-    order: -1;
     margin-right: 10px;
-    font-size: 16px;
+    font-size: 15px;
+}
+
+/* Chevron for directory items */
+.directory-item.is-dir::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-right: 1.5px solid var(--text-muted);
+    border-bottom: 1.5px solid var(--text-muted);
+    transform: rotate(-45deg);
+    margin-left: auto;
 }
 
 /* ---------- Responsive styles ---------- */

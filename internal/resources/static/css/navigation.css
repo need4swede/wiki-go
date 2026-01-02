@@ -76,11 +76,11 @@ body {
     box-shadow: var(--shadow);
 }
 
-/* ---------- Sidebar - Liquid Glass ---------- */
+/* ---------- Sidebar - macOS Style ---------- */
 .sidebar {
     width: var(--sidebar-width);
     height: 100vh;
-    background: var(--glass-bg-strong);
+    background: var(--sidebar-bg);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
     border-right: 1px solid var(--glass-border);
@@ -90,7 +90,6 @@ body {
     flex-direction: column;
     transition: var(--transition-smooth);
     z-index: 1001;
-    box-shadow: var(--glass-shadow);
 }
 
 /* Fixed header section */
@@ -181,21 +180,24 @@ body {
 }
 
 .nav-item.active>a {
-    color: var(--primary-color);
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    color: #ffffff;
+    background: var(--primary-color);
+    border: none;
+}
+
+.nav-item.active>a:hover {
+    background: var(--primary-hover);
+    color: #ffffff;
 }
 
 .nav-children {
     display: flex;
     flex-direction: column;
-    gap: 2px;
-    margin-top: 4px;
-    margin-left: 8px;
+    gap: 1px;
+    margin-top: 2px;
+    margin-left: 12px;
     padding-left: 12px;
-    border-left: 2px solid var(--primary-color);
-    border-radius: 0 0 0 var(--border-radius-xs);
+    border-left: 1px solid var(--border-color);
 }
 
 .nav-item a {
@@ -204,21 +206,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 14px;
+    padding: 8px 12px;
     border-radius: var(--border-radius-xs);
     transition: var(--transition-smooth);
     position: relative;
     gap: 6px;
     unicode-bidi: plaintext;
-    border: 1px solid transparent;
+    border: none;
+    font-size: 14px;
 }
 
 .nav-item a:hover {
-    color: var(--primary-color);
-    background: var(--glass-bg);
-    border-color: var(--glass-border);
-    transform: translateX(3px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    background: var(--hover-bg);
 }
 
 /* Arrow indicator */
@@ -239,11 +238,11 @@ body {
     transform: rotate(45deg);
 }
 
-/* ---------- Breadcrumbs - Liquid Glass ---------- */
+/* ---------- Breadcrumbs - macOS Style ---------- */
 .breadcrumbs {
     margin-bottom: 14px;
     color: var(--breadcrumb-color);
-    font-size: 14px;
+    font-size: 13px;
     position: fixed;
     top: 0;
     left: var(--sidebar-width);
@@ -298,22 +297,19 @@ body.has-password-warning .breadcrumbs {
 }
 
 .breadcrumbs a {
-    color: var(--primary-color);
+    color: var(--text-muted);
     text-decoration: none;
     transition: var(--transition-smooth);
-    padding: 4px 8px;
-    margin: -4px -8px;
-    border-radius: var(--border-radius-xs);
 }
 
 .breadcrumbs a:hover {
-    color: var(--primary-hover);
-    background: rgba(var(--primary-rgb), 0.08);
+    color: var(--text-color);
 }
 
 .breadcrumbs .separator {
-    color: var(--breadcrumb-color);
-    opacity: 0.6;
+    color: var(--text-muted);
+    opacity: 0.5;
+    margin: 0 2px;
 }
 
 /* Mobile responsive adjustments */

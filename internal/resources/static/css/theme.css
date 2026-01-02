@@ -1,99 +1,111 @@
 /* Theme variables and base styles */
 
 :root {
-    /* Light theme variables - macOS 26 Liquid Glass */
+    /* Light theme variables - macOS Liquid Glass */
     --primary-color: #007aff;
-    --primary-hover: #0056b3;
+    --primary-hover: #0a84ff;
     --primary-rgb: 0, 122, 255;
     --text-color: #1d1d1f;
-    --text-muted: #6e6e73;
+    --text-muted: #86868b;
     --accent-color: #5ac8fa;
     --accent-hover-color: #34aadc;
-    --border-color: rgba(0, 0, 0, 0.06);
-    --hover-bg: rgba(0, 122, 255, 0.06);
-    --sidebar-bg: rgba(251, 251, 253, 0.72);
+    --border-color: rgba(0, 0, 0, 0.08);
+    --hover-bg: rgba(0, 122, 255, 0.08);
+    --sidebar-bg: rgba(246, 246, 246, 0.78);
     --breadcrumb-color: #86868b;
     --sidebar-width: 280px;
-    --bg-color: #f5f5f7;
-    --blockquote-bg: rgba(0, 122, 255, 0.04);
-    --code-bg: rgba(0, 0, 0, 0.03);
-    --theme-toggle-bg: rgba(0, 0, 0, 0.05);
+    --bg-color: #ececec;
+    --blockquote-bg: rgba(0, 0, 0, 0.03);
+    --code-bg: rgba(0, 0, 0, 0.04);
+    --theme-toggle-bg: rgba(0, 0, 0, 0.06);
     --theme-toggle-color: #1d1d1f;
     --danger-color: #ff3b30;
-    --danger-bg: rgba(255, 59, 48, 0.1);
+    --danger-bg: rgba(255, 59, 48, 0.12);
     --success-color: #34c759;
-    --success-bg: rgba(52, 199, 89, 0.1);
+    --success-bg: rgba(52, 199, 89, 0.12);
     --warning-color: #ff9500;
-    --warning-bg: rgba(255, 149, 0, 0.1);
+    --warning-bg: rgba(255, 149, 0, 0.12);
     --content-max-width: 900px;
-    --shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.06);
+    --shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.05), 0 2px 8px rgba(0, 0, 0, 0.08);
 
-    /* Liquid Glass variables - macOS 26 style */
-    --glass-bg: rgba(255, 255, 255, 0.65);
-    --glass-bg-strong: rgba(255, 255, 255, 0.82);
-    --glass-bg-ultra: rgba(255, 255, 255, 0.92);
-    --glass-border: rgba(255, 255, 255, 0.5);
+    /* Liquid Glass variables - macOS style */
+    --glass-bg: rgba(255, 255, 255, 0.6);
+    --glass-bg-strong: rgba(255, 255, 255, 0.78);
+    --glass-bg-ultra: rgba(255, 255, 255, 0.88);
+    --glass-border: rgba(0, 0, 0, 0.08);
     --glass-border-subtle: rgba(0, 0, 0, 0.04);
-    --glass-shadow: 0 2px 8px rgba(0, 0, 0, 0.03), 0 8px 32px rgba(0, 0, 0, 0.06);
-    --glass-shadow-elevated: 0 4px 16px rgba(0, 0, 0, 0.06), 0 16px 48px rgba(0, 0, 0, 0.1);
-    --glass-blur: blur(40px) saturate(180%);
-    --glass-blur-light: blur(24px) saturate(160%);
-    --glass-blur-subtle: blur(16px) saturate(140%);
-    --glass-highlight: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0) 100%);
-    --glass-inner-glow: inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
-    --glass-specular: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 50%);
-    --border-radius: 20px;
-    --border-radius-sm: 14px;
+    --glass-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.06);
+    --glass-shadow-elevated: 0 0 0 0.5px rgba(0, 0, 0, 0.06), 0 8px 32px rgba(0, 0, 0, 0.12);
+    --glass-blur: blur(50px) saturate(190%);
+    --glass-blur-light: blur(30px) saturate(170%);
+    --glass-blur-subtle: blur(20px) saturate(150%);
+    --glass-highlight: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    --glass-inner-glow: inset 0 0.5px 0 rgba(255, 255, 255, 0.8);
+    --glass-specular: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 40%);
+
+    /* Card styling */
+    --card-bg: rgba(255, 255, 255, 0.55);
+    --card-border: rgba(0, 0, 0, 0.06);
+    --card-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.03), 0 2px 4px rgba(0, 0, 0, 0.04);
+
+    --border-radius: 12px;
+    --border-radius-sm: 10px;
     --border-radius-xs: 8px;
-    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 :root[data-theme="dark"] {
-    /* Dark theme variables - macOS 26 Liquid Glass Dark */
+    /* Dark theme variables - macOS System Settings style */
     --primary-color: #0a84ff;
     --primary-hover: #409cff;
     --primary-rgb: 10, 132, 255;
-    --text-color: #f5f5f7;
-    --text-muted: #98989d;
+    --text-color: #ffffff;
+    --text-muted: #98989f;
     --accent-color: #64d2ff;
     --accent-hover-color: #70d7ff;
     --border-color: rgba(255, 255, 255, 0.08);
-    --hover-bg: rgba(10, 132, 255, 0.12);
-    --sidebar-bg: rgba(28, 28, 30, 0.72);
-    --breadcrumb-color: #8e8e93;
-    --bg-color: #000000;
-    --blockquote-bg: rgba(10, 132, 255, 0.08);
-    --code-bg: rgba(255, 255, 255, 0.05);
+    --hover-bg: rgba(255, 255, 255, 0.08);
+    --sidebar-bg: rgba(30, 30, 30, 0.65);
+    --breadcrumb-color: #98989f;
+    --bg-color: #1c1c1e;
+    --blockquote-bg: rgba(255, 255, 255, 0.04);
+    --code-bg: rgba(255, 255, 255, 0.06);
     --theme-toggle-bg: rgba(255, 255, 255, 0.08);
-    --theme-toggle-color: #f5f5f7;
+    --theme-toggle-color: #ffffff;
     --danger-color: #ff453a;
-    --danger-bg: rgba(255, 69, 58, 0.15);
+    --danger-bg: rgba(255, 69, 58, 0.2);
     --success-color: #30d158;
-    --success-bg: rgba(48, 209, 88, 0.15);
+    --success-bg: rgba(48, 209, 88, 0.2);
     --warning-color: #ff9f0a;
-    --warning-bg: rgba(255, 159, 10, 0.15);
-    --shadow: 0 2px 8px rgba(0, 0, 0, 0.2), 0 8px 24px rgba(0, 0, 0, 0.3);
+    --warning-bg: rgba(255, 159, 10, 0.2);
+    --shadow: 0 0 0 0.5px rgba(255, 255, 255, 0.05), 0 2px 8px rgba(0, 0, 0, 0.4);
 
-    /* Liquid Glass variables - Dark macOS 26 style */
-    --glass-bg: rgba(44, 44, 46, 0.65);
-    --glass-bg-strong: rgba(44, 44, 46, 0.82);
-    --glass-bg-ultra: rgba(44, 44, 46, 0.92);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --glass-border-subtle: rgba(255, 255, 255, 0.06);
-    --glass-shadow: 0 2px 8px rgba(0, 0, 0, 0.15), 0 8px 32px rgba(0, 0, 0, 0.25);
-    --glass-shadow-elevated: 0 4px 16px rgba(0, 0, 0, 0.2), 0 16px 48px rgba(0, 0, 0, 0.35);
-    --glass-blur: blur(40px) saturate(180%);
-    --glass-blur-light: blur(24px) saturate(160%);
-    --glass-blur-subtle: blur(16px) saturate(140%);
-    --glass-highlight: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 50%, rgba(255, 255, 255, 0) 100%);
-    --glass-inner-glow: inset 0 1px 0 rgba(255, 255, 255, 0.12), inset 0 -1px 0 rgba(255, 255, 255, 0.04);
-    --glass-specular: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 50%);
-    --border-radius: 20px;
-    --border-radius-sm: 14px;
+    /* Liquid Glass variables - macOS dark style */
+    --glass-bg: rgba(38, 38, 40, 0.65);
+    --glass-bg-strong: rgba(38, 38, 40, 0.78);
+    --glass-bg-ultra: rgba(38, 38, 40, 0.88);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-border-subtle: rgba(255, 255, 255, 0.04);
+    --glass-shadow: 0 0 0 0.5px rgba(255, 255, 255, 0.04), 0 2px 8px rgba(0, 0, 0, 0.3);
+    --glass-shadow-elevated: 0 0 0 0.5px rgba(255, 255, 255, 0.06), 0 8px 32px rgba(0, 0, 0, 0.4);
+    --glass-blur: blur(50px) saturate(190%);
+    --glass-blur-light: blur(30px) saturate(170%);
+    --glass-blur-subtle: blur(20px) saturate(150%);
+    --glass-highlight: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 100%);
+    --glass-inner-glow: inset 0 0.5px 0 rgba(255, 255, 255, 0.1);
+    --glass-specular: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 40%);
+
+    /* Card styling - dark mode */
+    --card-bg: rgba(44, 44, 46, 0.6);
+    --card-border: rgba(255, 255, 255, 0.06);
+    --card-shadow: 0 0 0 0.5px rgba(255, 255, 255, 0.04), 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    --border-radius: 12px;
+    --border-radius-sm: 10px;
     --border-radius-xs: 8px;
-    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 /* ---------- Base styles ---------- */
@@ -259,39 +271,20 @@ body.has-password-warning .hamburger {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     padding: 0;
-    border: 1px solid var(--glass-border);
-    border-radius: var(--border-radius-sm);
-    background: var(--glass-bg);
-    backdrop-filter: var(--glass-blur-light);
-    -webkit-backdrop-filter: var(--glass-blur-light);
-    color: var(--theme-toggle-color);
+    border: none;
+    border-radius: var(--border-radius-xs);
+    background: var(--hover-bg);
+    color: var(--text-muted);
     cursor: pointer;
     transition: var(--transition-smooth);
-    box-shadow: var(--glass-shadow), var(--glass-inner-glow);
-    position: relative;
-    overflow: hidden;
-}
-
-.sidebar-footer-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 50%;
-    background: var(--glass-specular);
-    pointer-events: none;
-    border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0;
 }
 
 .sidebar-footer-btn:hover {
-    background: var(--glass-bg-strong);
-    color: var(--primary-color);
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: var(--glass-shadow-elevated), var(--glass-inner-glow);
+    background: var(--glass-bg);
+    color: var(--text-color);
 }
 
 .sidebar-footer-btn svg {
