@@ -17,6 +17,7 @@ type NavItem struct {
 	Children       []*NavItem
 	IsActive       bool
 	DocumentLayout string // Layout type from frontmatter
+	Order          *int   // Order for navigation sorting (nil = unordered)
 }
 
 // BreadcrumbItem represents an item in the breadcrumb trail

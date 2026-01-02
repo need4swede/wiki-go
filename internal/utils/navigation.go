@@ -4,8 +4,10 @@ import (
 	"bufio"
 	"os"
 	"path/filepath"
+	"sort"
 	"strings"
 
+	"wiki-go/internal/frontmatter"
 	"wiki-go/internal/goldext"
 	"wiki-go/internal/types"
 
@@ -20,6 +22,18 @@ type NavItem struct {
 	IsDir    bool
 	Children []*NavItem
 	IsActive bool
+}
+
+// GetDocumentOrder reads the order from document.md frontmatter
+func GetDocumentOrder(dirPath string) *int {
+	docPath := filepath.Join(dirPath, "document.md")
+	content, err := os.ReadFile(docPath)
+	if err != nil {
+		return nil
+	}
+
+	metadata, _, _ := frontmatter.Parse(string(content))
+	return metadata.Order
 }
 
 // GetDocumentTitle extracts the first H1 title from document.md
@@ -111,6 +125,9 @@ func BuildNavigation(rootDir string, documentsDir string) (*types.NavItem, error
 		// Get the title from document.md's H1 or fallback to formatted directory name
 		title := GetDocumentTitle(path)
 
+		// Get the order from frontmatter
+		order := GetDocumentOrder(path)
+
 		// Split the path into components
 		parts := strings.Split(relPath, "/")
 		current := root
@@ -132,8 +149,10 @@ func BuildNavigation(rootDir string, documentsDir string) (*types.NavItem, error
 			if found == nil {
 				// Create new directory item
 				dirTitle := ""
+				itemOrder := (*int)(nil)
 				if i == len(parts)-1 {
 					dirTitle = title // Use document.md title for leaf nodes
+					itemOrder = order
 				} else {
 					dirTitle = FormatDirName(parts[i])
 				}
@@ -143,8 +162,12 @@ func BuildNavigation(rootDir string, documentsDir string) (*types.NavItem, error
 					Path:     urlPath,
 					IsDir:    true,
 					Children: make([]*types.NavItem, 0),
+					Order:    itemOrder,
 				}
 				current.Children = append(current.Children, found)
+			} else if i == len(parts)-1 && order != nil {
+				// Update order if this is the final item and we have an order
+				found.Order = order
 			}
 			current = found
 		}
@@ -152,7 +175,44 @@ func BuildNavigation(rootDir string, documentsDir string) (*types.NavItem, error
 		return nil
 	})
 
+	// Sort navigation items after building the tree
+	sortNavItems(root)
+
 	return root, err
+}
+
+// sortNavItems recursively sorts navigation items
+// Items with Order set are sorted first (by order value ascending),
+// followed by unordered items (alphabetically by title)
+func sortNavItems(item *types.NavItem) {
+	if item == nil || len(item.Children) == 0 {
+		return
+	}
+
+	// Recursively sort children first
+	for _, child := range item.Children {
+		sortNavItems(child)
+	}
+
+	// Sort this level's children
+	sort.SliceStable(item.Children, func(i, j int) bool {
+		a, b := item.Children[i], item.Children[j]
+
+		// Both have order: sort by order value
+		if a.Order != nil && b.Order != nil {
+			return *a.Order < *b.Order
+		}
+		// Only a has order: a comes first
+		if a.Order != nil {
+			return true
+		}
+		// Only b has order: b comes first
+		if b.Order != nil {
+			return false
+		}
+		// Neither has order: sort alphabetically by title (case-insensitive)
+		return strings.ToLower(a.Title) < strings.ToLower(b.Title)
+	})
 }
 
 // FindNavItem finds a navigation item by its path
@@ -219,6 +279,7 @@ func FilterNavigation(node *types.NavItem, allow func(path string) bool) *types.
 		IsDir:          node.IsDir,
 		IsActive:       node.IsActive,
 		DocumentLayout: node.DocumentLayout,
+		Order:          node.Order,
 		Children:       make([]*types.NavItem, 0),
 	}
 

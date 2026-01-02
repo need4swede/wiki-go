@@ -1,0 +1,161 @@
+/* Navigation Drag & Drop Styles */
+
+/* Reorder button in sidebar footer */
+.reorder-nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    opacity: 0.7;
+}
+
+.reorder-nav-btn:hover {
+    background: var(--glass-bg);
+    color: var(--text-color);
+    opacity: 1;
+}
+
+.reorder-nav-btn.active {
+    background: var(--primary-color);
+    color: white;
+    opacity: 1;
+}
+
+.reorder-nav-btn i {
+    font-size: 14px;
+}
+
+/* Reorder mode indicator */
+.nav-items.reorder-mode {
+    background: var(--glass-bg-subtle);
+    border: 1px dashed var(--primary-color-muted, rgba(0, 122, 255, 0.3));
+    border-radius: 8px;
+    padding: 8px;
+    margin: -8px;
+}
+
+/* Make nav items look draggable in reorder mode */
+.nav-items.reorder-mode > .nav-item {
+    cursor: grab;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+    border-radius: 6px;
+    position: relative;
+}
+
+.nav-items.reorder-mode > .nav-item:hover {
+    background: var(--glass-bg);
+}
+
+.nav-items.reorder-mode > .nav-item::before {
+    content: '\f0c9'; /* fa-bars / hamburger icon */
+    font-family: 'FontAwesome';
+    position: absolute;
+    left: -4px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    color: var(--text-tertiary);
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+.nav-items.reorder-mode > .nav-item:hover::before {
+    opacity: 0.6;
+}
+
+/* Dragging state */
+.nav-items.reorder-mode > .nav-item.dragging {
+    opacity: 0.5;
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    cursor: grabbing;
+}
+
+/* Drop target indicator */
+.nav-items.reorder-mode > .nav-item.drag-over {
+    background: var(--primary-color-subtle, rgba(0, 122, 255, 0.1));
+}
+
+/* Placeholder for drop position */
+.nav-item-placeholder {
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+    margin: 4px 0;
+    opacity: 0.8;
+}
+
+/* Reorder controls (save/cancel buttons) */
+.reorder-controls {
+    display: flex;
+    gap: 8px;
+    padding: 12px 8px;
+    margin-top: 8px;
+    border-top: 1px solid var(--glass-border);
+}
+
+.reorder-controls button {
+    flex: 1;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.reorder-save-btn {
+    background: var(--primary-color);
+    color: white;
+}
+
+.reorder-save-btn:hover:not(:disabled) {
+    background: var(--primary-color-hover, #0066d6);
+}
+
+.reorder-save-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.reorder-cancel-btn {
+    background: var(--glass-bg);
+    color: var(--text-color);
+    border: 1px solid var(--glass-border) !important;
+}
+
+.reorder-cancel-btn:hover {
+    background: var(--glass-bg-strong);
+}
+
+/* Sidebar footer adjustments */
+.sidebar-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-top: 1px solid var(--glass-border);
+    margin-top: auto;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .nav-items.reorder-mode {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+[data-theme="dark"] .nav-item-placeholder {
+    background: var(--primary-color);
+}
+
+[data-theme="dark"] .reorder-nav-btn.active {
+    background: var(--primary-color);
+}

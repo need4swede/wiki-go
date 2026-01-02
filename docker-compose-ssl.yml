@@ -1,9 +1,8 @@
-version: '3'
 services:
   wiki-go:
     # Native HTTPS setup. Container listens on 443 using its own TLS.
     # Provide valid certificate + key via volume mounts below.
-    image: leomoonstudios/wiki-go:latest
+    build: .
     container_name: wiki-go-ssl
     ports:
       - "443:443"  # host:container

@@ -11,7 +11,7 @@ import (
 // This can be expanded with additional fields in the future
 type Metadata struct {
 	Layout string `yaml:"layout,omitempty"`
-	// Add additional fields here as needed
+	Order  *int   `yaml:"order,omitempty"` // Order for navigation sorting (lower = first)
 }
 
 // Parse extracts and parses frontmatter from markdown content
@@ -88,5 +88,30 @@ func Add(content string, metadata Metadata) (string, error) {
 	}
 
 	// Construct new content with frontmatter
+	return "---\n" + buf.String() + "---\n\n" + contentWithoutFM, nil
+}
+
+// UpdateOrder updates or adds the order field in frontmatter
+// This preserves existing frontmatter fields while updating only the order
+func UpdateOrder(content string, order int) (string, error) {
+	// Parse existing frontmatter
+	existingMeta, contentWithoutFM, hasFM := Parse(content)
+
+	if !hasFM {
+		contentWithoutFM = content
+	}
+
+	// Update the order field
+	existingMeta.Order = &order
+
+	// Marshal metadata to YAML
+	var buf bytes.Buffer
+	encoder := yaml.NewEncoder(&buf)
+	encoder.SetIndent(2)
+	if err := encoder.Encode(existingMeta); err != nil {
+		return content, err
+	}
+
+	// Construct new content with updated frontmatter
 	return "---\n" + buf.String() + "---\n\n" + contentWithoutFM, nil
 }

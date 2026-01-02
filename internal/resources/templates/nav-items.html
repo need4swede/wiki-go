@@ -1,6 +1,6 @@
 {{define "nav-items"}}
     {{range .Children}}
-        <div class="nav-item {{if .IsDir}}directory{{end}} {{if .IsActive}}active{{end}}">
+        <div class="nav-item {{if .IsDir}}directory{{end}} {{if .IsActive}}active{{end}}" data-path="{{.Path}}"{{if .Order}} data-order="{{.Order}}"{{end}}>
             <a href="{{.Path}}">
                 {{.Title}}
                 {{/* Show arrow if this item is a directory and has children */}}

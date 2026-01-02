@@ -393,6 +393,9 @@ func SetupRoutes(cfg *config.Config) {
 		handlers.MoveDocumentHandler(w, r, cfg)
 	}))
 
+	// Navigation order API - Editor or Admin
+	mux.HandleFunc("/api/navigation/order", editorMiddleware(handlers.SaveNavigationOrderHandler))
+
 	// Markdown rendering API - No auth required
 	mux.HandleFunc("/api/render-markdown", handlers.RenderMarkdownHandler)
 
