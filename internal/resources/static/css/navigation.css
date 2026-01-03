@@ -76,16 +76,20 @@ body {
     box-shadow: var(--shadow);
 }
 
-/* ---------- Sidebar - macOS Style ---------- */
+/* ---------- Sidebar - macOS Floating Pill Style ---------- */
 .sidebar {
-    width: var(--sidebar-width);
-    height: 100vh;
+    width: calc(var(--sidebar-width) - 24px);
+    height: calc(100vh - 24px);
     background: var(--sidebar-bg);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
-    border-right: 1px solid var(--glass-border);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: var(--glass-shadow-elevated);
     box-sizing: border-box;
     position: fixed;
+    top: 12px;
+    left: 12px;
     display: flex;
     flex-direction: column;
     transition: var(--transition-smooth);
@@ -238,31 +242,29 @@ body {
     transform: rotate(45deg);
 }
 
-/* ---------- Breadcrumbs - macOS Style ---------- */
+/* ---------- Breadcrumbs - macOS Floating Pill Style ---------- */
 .breadcrumbs {
     margin-bottom: 14px;
     color: var(--breadcrumb-color);
     font-size: 13px;
     position: fixed;
-    top: 0;
+    top: 12px;
     left: var(--sidebar-width);
-    right: 0;
-    padding: 12px 48px;
+    right: 12px;
+    padding: 12px 24px;
     background: var(--sidebar-bg);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
-    border-bottom: 1px solid var(--glass-border);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: var(--glass-shadow-elevated);
     z-index: 90;
     transition: var(--transition-smooth);
 }
 
 /* When the password warning banner is visible, push breadcrumbs below it on desktop */
 body.has-password-warning .breadcrumbs {
-    top: 40px;
-}
-
-.breadcrumbs.scrolled {
-    box-shadow: var(--shadow);
+    top: 52px;
 }
 
 .breadcrumbs-container {
@@ -315,50 +317,50 @@ body.has-password-warning .breadcrumbs {
 /* Mobile responsive adjustments */
 @media (max-width: 950px) {
 
-    /* Hamburger and sidebar for mobile */
+    /* Hamburger button - floating pill on mobile */
     .hamburger {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 47px;
-        /* Make it a perfect square */
         height: 47px;
         padding: 12px;
         position: fixed;
-        top: 0;
-        left: 0;
+        top: 8px;
+        left: 8px;
         z-index: 1001;
         background: var(--glass-bg-strong);
         backdrop-filter: var(--glass-blur);
         -webkit-backdrop-filter: var(--glass-blur);
-        border-bottom: 1px solid var(--glass-border);
-        border-right: 1px solid var(--glass-border);
+        border: 1px solid var(--glass-border);
+        border-radius: 12px;
+        box-shadow: var(--glass-shadow);
         box-sizing: border-box;
     }
 
     /* Override global styles for password warning on mobile */
     body.has-password-warning .hamburger {
-        height: 48px;
-        top: 40px;
-        left: 0;
+        top: 48px;
+        left: 8px;
     }
 
     /* Ensure hamburger transforms into X when sidebar is active */
     .hamburger.active {
         z-index: 1002;
-        /* Ensure it stays on top */
     }
 
+    /* Sidebar - floating pill on mobile */
     .sidebar {
-        transform: translateX(-100%);
-        width: min(var(--sidebar-width), 85vw);
-        box-shadow: var(--glass-shadow);
+        transform: translateX(calc(-100% - 16px));
+        width: min(calc(var(--sidebar-width) - 16px), 85vw);
+        height: calc(100vh - 16px);
+        box-shadow: var(--glass-shadow-elevated);
         position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
+        top: 8px;
+        left: 8px;
         z-index: 1001;
-        border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        border-radius: 16px;
+        border: 1px solid var(--glass-border);
     }
 
     .sidebar.active {
@@ -391,17 +393,19 @@ body.has-password-warning .breadcrumbs {
         -webkit-backdrop-filter: blur(8px);
     }
 
-    /* Mobile breadcrumbs */
+    /* Mobile breadcrumbs - floating pill */
     .breadcrumbs {
-        top: 0;
-        left: 47px;
-        /* Match hamburger width for perfect square alignment */
-        padding: 0 10px;
+        top: 8px;
+        left: 63px;
+        right: 8px;
+        padding: 0 16px;
         margin: 0;
         height: 47px;
         display: flex;
         align-items: center;
-        border-bottom: 1px solid var(--glass-border);
+        border: 1px solid var(--glass-border);
+        border-radius: 12px;
+        box-shadow: var(--glass-shadow);
         box-sizing: border-box;
         background: var(--glass-bg-strong);
         backdrop-filter: var(--glass-blur);
@@ -450,9 +454,8 @@ body.has-password-warning .breadcrumbs {
     }
 
     body.has-password-warning .breadcrumbs {
-        top: 40px;
+        top: 48px;
         margin-bottom: 35px;
-        /* Increased bottom margin to prevent overlap with h1 on desktop */
     }
 }
 

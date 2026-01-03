@@ -1,16 +1,14 @@
 # Neptune
 
-Welcome to the Neptune documentation. Neptune is a native tvOS media client for Jellyfin servers, designed to provide a beautiful, intuitive experience on your Apple TV.
+A native tvOS media client for Jellyfin servers.
 
 ---
 
 ## Quick Start
 
-New to Neptune? Start here:
-
-1. **[Setup](/getting-started/setup)** - Connect to your Jellyfin server
-2. **[Navigation](/getting-started/navigation)** - Learn the basics of getting around
-3. **[Home Screen](/browsing/home-screen)** - Customize your viewing experience
+1. [Setup](/getting-started/setup) - Connect to your Jellyfin server
+2. [Navigation](/getting-started/navigation) - Learn the basics
+3. [Home Screen](/browsing/home-screen) - Start browsing
 
 ---
 
@@ -18,45 +16,49 @@ New to Neptune? Start here:
 
 ### Getting Started
 
-First-time setup and basic navigation.
+| Page | Description |
+|------|-------------|
+| [Setup](/getting-started/setup) | Server connection, authentication, plugins |
+| [Navigation](/getting-started/navigation) | Tab bar, remote controls |
+
+### Browsing
 
 | Page | Description |
 |------|-------------|
-| [Setup](/getting-started/setup) | Initial setup, server connection, Jellyseerr configuration |
-| [Navigation](/getting-started/navigation) | Tab bar, remote controls, basic navigation |
+| [Home Screen](/browsing/home-screen) | Hero spotlight, content sections |
+| [Item Details](/browsing/item-details) | Movies, TV shows, extras |
 
-### Browsing Your Library
-
-Finding and exploring your media content.
+### Search
 
 | Page | Description |
 |------|-------------|
-| [Home Screen](/browsing/home-screen) | Hero spotlight, content sections, customization |
-| [Item Details](/browsing/item-details) | Movie and TV show pages, episodes, extras |
-| [Search](/browsing/search) | Finding content, natural language search |
+| [Search](/search) | Overview of Neptune's search technologies |
+| [Local Index](/search/local-index) | Offline-capable instant search |
+| [Semantic Search](/search/semantic-search) | Pre-computed thematic analysis |
+| [Prompt Search](/search/prompt-search) | LLM-powered conceptual search |
 
 ### Playback
 
 | Page | Description |
 |------|-------------|
-| [Playback](/playback) | Video player, controls, audio, subtitles |
+| [Player Controls](/playback/player-controls) | Scrubbing, quick actions |
+| [Audio & Subtitles](/playback/audio-subtitles) | Track selection |
+| [Trident Player](/playback/trident-player) | Custom video engine |
 
-### Discover & Requests
+### Discover
 
 | Page | Description |
 |------|-------------|
-| [Discover](/discover) | Browse trending content, request movies and shows (requires Jellyseerr) |
+| [Discover](/discover) | Browse and request content (Jellyseerr) |
 
 ### Personalization
 
-Make Neptune your own.
-
 | Page | Description |
 |------|-------------|
-| [Profiles](/personalization/profiles) | User switching, multi-user support |
-| [Themes](/personalization/themes) | Visual themes, custom themes |
+| [Profiles](/personalization/profiles) | Multi-user support |
+| [Themes](/personalization/themes) | Visual customization |
 
-### Reference
+### Settings
 
 | Page | Description |
 |------|-------------|
@@ -64,32 +66,9 @@ Make Neptune your own.
 
 ---
 
-## Features at a Glance
-
-| Feature | Description |
-|---------|-------------|
-| **Native tvOS** | Built specifically for Apple TV with SwiftUI |
-| **Focus-driven UI** | Designed for Siri Remote navigation |
-| **Jellyseerr Integration** | Browse and request new content |
-| **Multiple Profiles** | Per-user watch history and preferences |
-| **Beautiful Themes** | Six built-in themes plus custom theme support |
-| **Plugin Support** | Home Sections, Theme Songs, and more |
-| **Instant Search** | Local FTS5 index for natural language queries |
-
----
-
 ## Requirements
 
-- **Apple TV**: tvOS 17.0 or later
+- **Apple TV**: tvOS 17.0+
 - **Jellyfin Server**: Any recent version
-- **Optional**: Jellyseerr for content discovery and requests
-
----
-
-## Getting Help
-
-If you encounter issues:
-
-1. Check the relevant documentation page
-2. Review the Troubleshooting section in [Playback](/playback#troubleshooting)
-3. Report issues at [GitHub](https://github.com/anthropics/claude-code/issues)
+- **Optional**: Jellyseerr for content discovery
+- **Optional**: LLM provider for deep learning search features

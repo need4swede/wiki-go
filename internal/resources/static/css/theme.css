@@ -251,10 +251,13 @@ body.has-password-warning {
 }
 
 /* Adjust sidebar when password warning is shown */
-body.has-password-warning .sidebar,
+body.has-password-warning .sidebar {
+    height: calc(100vh - 64px);
+    top: 52px;
+}
+
 body.has-password-warning .hamburger {
-    height: calc(100vh - 40px);
-    top: 40px;
+    top: 52px;
 }
 
 .sidebar-footer-buttons {

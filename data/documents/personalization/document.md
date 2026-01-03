@@ -1,10 +1,10 @@
 ---
-order: 50
+order: 60
 ---
 
 # Personalization
 
-Make Neptune your own with multiple user profiles and beautiful visual themes.
+Make Neptune your own.
 
 ---
 
@@ -12,52 +12,35 @@ Make Neptune your own with multiple user profiles and beautiful visual themes.
 
 | Page | Description |
 |------|-------------|
-| [Profiles](/personalization/profiles) | Multiple users, switching profiles, per-user preferences |
-| [Themes](/personalization/themes) | Built-in themes, animated backgrounds, custom themes |
+| [Profiles](/personalization/profiles) | Multiple users, switching, preferences |
+| [Themes](/personalization/themes) | Built-in and custom themes |
 
 ---
 
-## Overview
+## Profiles
 
-Neptune is designed to be personal. Every member of your household can have their own experience.
+Each user gets separate:
 
-### Profiles
+- Watch history and progress
+- Favorites and recommendations
+- Theme preference
 
-Each user profile maintains separate:
+Switch profiles instantly from Settings.
 
-- **Watch history** - What you've watched and progress
-- **Favorites** - Your favorited content
-- **Continue Watching** - Resume points
-- **Next Up** - Your TV show queue
-- **Recommendations** - Personalized suggestions
-- **Theme preference** - Each user can have their own theme
+---
 
-Switch between profiles instantly from Settings, with saved sessions for quick access.
+## Themes
 
-[Learn more about Profiles →](/personalization/profiles)
+Six built-in themes from calming Ocean to minimal Void.
 
-### Themes
-
-Neptune includes six beautiful built-in themes:
-
-| Theme | Style |
-|-------|-------|
-| **Ocean** | Deep blue with animated underwater effects |
-| **Midnight** | Rich purples and deep blues |
-| **Mint** | Fresh teal and purple tones |
-| **Void** | True black for OLED displays |
-| **Nordic** | Cool grays and icy blues |
-| **Volcano** | Warm reds and oranges |
-
-Themes affect every aspect of the interface, from backgrounds to focus indicators to player controls.
-
-[Learn more about Themes →](/personalization/themes)
+- Live preview as you browse
+- Per-profile preferences
+- Custom theme import via JSON
 
 ---
 
 ## Quick Tips
 
-- **Per-user themes**: Each profile can have a different theme
-- **Quick profile switch**: Previously logged-in profiles switch instantly
-- **Live preview**: Focus on themes to preview before applying
-- **OLED optimization**: Use Void theme for true blacks and power saving
+- **OLED TVs**: Use Void theme for true blacks
+- **Quick switch**: Previously logged-in profiles switch instantly
+- **Preview themes**: Focus on themes to see them live

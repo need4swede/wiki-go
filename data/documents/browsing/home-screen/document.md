@@ -1,155 +1,54 @@
 # Home Screen
 
-The home screen is your personalized media hub, featuring a curated selection of content tailored to your viewing habits.
+Your personalized media hub.
 
 ---
 
 ## Hero Spotlight
 
-At the top of the home screen, the Hero Spotlight carousel showcases content you should watch next. Large backdrop images with logos rotate automatically, highlighting:
+Large carousel at the top showcasing content to watch next:
 
-- **Next episodes** from shows you're actively watching
-- **Recently added content** matching your preferences
-- **Content you've started** but haven't finished
+- Next episodes from active shows
+- Recently added content
+- Content you've started
 
-### Interacting with the Spotlight
-
-- Focus on the carousel and press **Select** to enter gallery mode
-- In gallery mode, browse all spotlight items in a fullscreen horizontal scroll
-- Press **Select** on any item to view its details
-- Press **Menu** to exit gallery mode
+**Interact:** Press Select to enter gallery mode, browse fullscreen, select to view details.
 
 ---
 
 ## Content Sections
 
-The home screen displays content in horizontal scrolling rows. Each section serves a specific purpose:
-
-### Continue Watching
-
-Resume movies and TV episodes you've started but haven't finished. Shows your progress bar indicating how much you've watched.
-
-### Next Up
-
-The next unwatched episode from each TV series you're watching. Neptune prioritizes:
-1. Shows where you're "caught up" (next episode is the latest available)
-2. Shows you've watched most recently
-
-### New Releases
-
-Recently premiered content in your library, including:
-- Movies released within the last few months
-- New episodes from ongoing series
-- New seasons of shows you follow
-
-### Recently Added Movies
-
-The latest movies added to your Jellyfin library, regardless of release date.
-
-### Recently Added Shows
-
-The latest TV shows and series added to your library.
-
-### Recommended
-
-Personalized suggestions based on your viewing history. When Jellyseerr is connected, this includes recommendations from both your library and requestable content.
-
-### Coming Soon
-
-Upcoming releases you've requested through Jellyseerr. Shows estimated release dates and current status.
-
-**Requires:** Jellyseerr connection
-
-### Because You Watched
-
-Movie recommendations based on films you've recently watched. Each row shows similar movies to a specific title.
-
-**Requires:** Home Sections plugin
-
-### Custom Libraries
-
-Any additional libraries you've created in Jellyfin beyond the standard Movies and TV Shows collections.
+| Section | Description |
+|---------|-------------|
+| **Continue Watching** | Resume movies and episodes with progress bars |
+| **Next Up** | Next unwatched episodes from your shows |
+| **New Releases** | Recently premiered content |
+| **Recently Added** | Latest additions to your library |
+| **Recommended** | Personalized suggestions |
+| **Coming Soon** | Upcoming Jellyseerr requests |
 
 ---
 
-## Customizing Your Home Screen
+## Customizing Sections
 
-You can personalize which sections appear and their order.
-
-### Accessing Customization
-
-1. Long-press any tab in the menu bar to open the Home Menu
+1. Long-press any tab to open Home Menu
 2. Select **Customize Home Screen**
-3. Or navigate to **Settings** > **Home Screen**
+3. Show/hide or reorder sections
 
-### Show/Hide Sections
-
-Toggle the visibility of any section. Hidden sections won't appear on your home screen but can be re-enabled at any time.
-
-### Reorder Sections
-
-Drag sections up or down to change their position on the home screen. The Hero Spotlight always remains at the top.
-
-### Section Availability
-
-Some sections only appear on specific tabs:
-
-| Section | Home | Movies | Shows |
-|---------|------|--------|-------|
-| Hero Spotlight | Yes | Yes | Yes |
-| Continue Watching | Yes | Yes | Yes |
-| Next Up | Yes | No | Yes |
-| New Releases | Yes | Yes | Yes |
-| Recently Added Movies | Yes | Yes | No |
-| Recently Added Shows | Yes | No | Yes |
-| Recommended | Yes | Yes | Yes |
-| Coming Soon | Yes | Yes | Yes |
-| Because You Watched | Yes | Yes | No |
-| Custom Libraries | Yes | No | No |
+Hero Spotlight always stays at the top.
 
 ---
 
 ## Content Cards
 
-### Poster Cards
+**Poster cards:** Movies and shows with poster, title, progress bar.
 
-Used for movies and TV shows. Display:
-- Poster image
-- Title (on focus)
-- Progress bar (if partially watched)
+**Wide cards:** Continue Watching and Next Up with thumbnail and episode info.
 
-### Wide Cards
-
-Used for Continue Watching and Next Up. Display:
-- Backdrop/thumbnail image
-- Episode title and number
-- Series name
-- Progress bar
-
-### Focus Behavior
-
-When you focus on a card:
-- Card scales up slightly
-- White border appears
-- Additional details may appear
-- Background may update to show item backdrop (if enabled in settings)
+**Focus behavior:** Cards scale up with white border on focus.
 
 ---
 
 ## Background Refresh
 
-Neptune automatically refreshes content in the background:
-
-- **Polling interval**: Every 10 seconds
-- **Smart updates**: Only UI elements that changed are updated
-- **Playback aware**: Refresh pauses during video playback
-
-New content appears automatically without needing to manually refresh.
-
----
-
-## Tips
-
-- **Quick resume**: Focus on Continue Watching and press Play to immediately resume playback
-- **Explore recommendations**: The Recommended section often surfaces hidden gems in your library
-- **Keep it clean**: Hide sections you don't use for a cleaner home screen
+Content refreshes automatically every 10 seconds. Pauses during video playback.
