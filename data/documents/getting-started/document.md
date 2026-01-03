@@ -12,6 +12,7 @@ Get Neptune running on your Apple TV.
 
 | Page | Description |
 |------|-------------|
+| [Installation](/getting-started/installation) | Install Neptune via App Store or TestFlight |
 | [Setup](/getting-started/setup) | Connect to Jellyfin, sign in, configure |
 | [Navigation](/getting-started/navigation) | Tab bar, remote controls |
 

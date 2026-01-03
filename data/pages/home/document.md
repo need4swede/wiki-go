@@ -8,9 +8,10 @@
 
 New to Neptune? Start here:
 
-1. **[Setup](/getting-started/setup)** - Connect to your Jellyfin server
-2. **[Navigation](/getting-started/navigation)** - Learn the basics of getting around
-3. **[Home Screen](/browsing/home-screen)** - Customize your viewing experience
+1. **[Installation](/getting-started/installation)** - Install Neptune on Apple TV
+2. **[Setup](/getting-started/setup)** - Connect to your Jellyfin server
+3. **[Navigation](/getting-started/navigation)** - Learn the basics of getting around
+4. **[Home Screen](/browsing/home-screen)** - Customize your viewing experience
 
 ---
 
