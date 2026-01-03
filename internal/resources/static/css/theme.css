@@ -256,8 +256,11 @@ body.has-password-warning .sidebar {
     top: 52px;
 }
 
-body.has-password-warning .hamburger {
-    top: 52px;
+@media (max-width: 950px) {
+    body.has-password-warning .sidebar {
+        height: calc(100% - 40px);
+        top: 40px;
+    }
 }
 
 .sidebar-footer-buttons {

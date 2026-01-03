@@ -242,29 +242,25 @@ body {
     transform: rotate(45deg);
 }
 
-/* ---------- Breadcrumbs - macOS Floating Pill Style ---------- */
+/* ---------- Breadcrumbs - Flush Top Bar ---------- */
 .breadcrumbs {
     margin-bottom: 14px;
     color: var(--breadcrumb-color);
     font-size: 13px;
     position: fixed;
-    top: 12px;
+    top: 0;
     left: var(--sidebar-width);
-    right: 12px;
+    right: 0;
     padding: 12px 24px;
-    background: var(--sidebar-bg);
-    backdrop-filter: var(--glass-blur);
-    -webkit-backdrop-filter: var(--glass-blur);
-    border: 1px solid var(--glass-border);
-    border-radius: 16px;
-    box-shadow: var(--glass-shadow-elevated);
+    background: var(--bg-color);
+    border-bottom: 1px solid var(--glass-border);
     z-index: 90;
     transition: var(--transition-smooth);
 }
 
 /* When the password warning banner is visible, push breadcrumbs below it on desktop */
 body.has-password-warning .breadcrumbs {
-    top: 52px;
+    top: 40px;
 }
 
 .breadcrumbs-container {
@@ -317,31 +313,31 @@ body.has-password-warning .breadcrumbs {
 /* Mobile responsive adjustments */
 @media (max-width: 950px) {
 
-    /* Hamburger button - floating pill on mobile */
+    /* Hamburger button - flush with top bar on mobile */
     .hamburger {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 47px;
-        height: 47px;
+        width: 63px;
+        height: 63px;
         padding: 12px;
         position: fixed;
-        top: 8px;
-        left: 8px;
+        top: 0;
+        left: 0;
         z-index: 1001;
-        background: var(--glass-bg-strong);
-        backdrop-filter: var(--glass-blur);
-        -webkit-backdrop-filter: var(--glass-blur);
-        border: 1px solid var(--glass-border);
-        border-radius: 12px;
-        box-shadow: var(--glass-shadow);
+        background: var(--bg-color);
+        border: none;
+        border-right: 1px solid var(--glass-border);
+        border-bottom: 1px solid var(--glass-border);
+        border-radius: 0;
+        box-shadow: none;
         box-sizing: border-box;
     }
 
     /* Override global styles for password warning on mobile */
     body.has-password-warning .hamburger {
-        top: 48px;
-        left: 8px;
+        top: 40px;
+        left: 0;
     }
 
     /* Ensure hamburger transforms into X when sidebar is active */
@@ -349,18 +345,19 @@ body.has-password-warning .breadcrumbs {
         z-index: 1002;
     }
 
-    /* Sidebar - floating pill on mobile */
+    /* Sidebar - slide in on mobile */
     .sidebar {
-        transform: translateX(calc(-100% - 16px));
-        width: min(calc(var(--sidebar-width) - 16px), 85vw);
-        height: calc(100vh - 16px);
+        transform: translateX(-100%);
+        width: min(var(--sidebar-width), 85vw);
+        height: 100%;
         box-shadow: var(--glass-shadow-elevated);
         position: fixed;
-        top: 8px;
-        left: 8px;
+        top: 0;
+        left: 0;
         z-index: 1001;
-        border-radius: 16px;
-        border: 1px solid var(--glass-border);
+        border-radius: 0 16px 16px 0;
+        border: none;
+        border-right: 1px solid var(--glass-border);
     }
 
     .sidebar.active {
@@ -393,23 +390,22 @@ body.has-password-warning .breadcrumbs {
         -webkit-backdrop-filter: blur(8px);
     }
 
-    /* Mobile breadcrumbs - floating pill */
+    /* Mobile breadcrumbs - flush top bar */
     .breadcrumbs {
-        top: 8px;
+        top: 0;
         left: 63px;
-        right: 8px;
+        right: 0;
         padding: 0 16px;
         margin: 0;
-        height: 47px;
+        height: 63px;
         display: flex;
         align-items: center;
-        border: 1px solid var(--glass-border);
-        border-radius: 12px;
-        box-shadow: var(--glass-shadow);
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid var(--glass-border);
+        box-shadow: none;
         box-sizing: border-box;
-        background: var(--glass-bg-strong);
-        backdrop-filter: var(--glass-blur);
-        -webkit-backdrop-filter: var(--glass-blur);
+        background: var(--bg-color);
     }
 
     .breadcrumbs-container {
@@ -420,7 +416,7 @@ body.has-password-warning .breadcrumbs {
         justify-content: space-between;
         gap: 8px;
         margin: 0;
-        height: 47px;
+        height: 63px;
         overflow-x: auto;
         scrollbar-width: none !important;
         /* Firefox */
@@ -454,8 +450,7 @@ body.has-password-warning .breadcrumbs {
     }
 
     body.has-password-warning .breadcrumbs {
-        top: 48px;
-        margin-bottom: 35px;
+        top: 40px;
     }
 }
 
