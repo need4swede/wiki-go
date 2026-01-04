@@ -264,7 +264,7 @@ body.has-password-warning .sidebar {
 }
 
 .sidebar-footer-buttons {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     gap: 10px;

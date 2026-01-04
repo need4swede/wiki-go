@@ -39,8 +39,20 @@ Six built-in themes from calming Ocean to minimal Void.
 
 ---
 
+## Backdrop Settings
+
+Control how backdrops appear throughout Neptune:
+
+- **Show Backdrops on Hover**: Toggle backdrop display when focusing cards
+- **Backdrop Opacity**: Adjust theme overlay transparency (0% = full backdrop, 100% = full theme)
+
+These settings affect both the hero spotlight and hover backdrops on content cards.
+
+---
+
 ## Quick Tips
 
 - **OLED TVs**: Use Void theme for true blacks
 - **Quick switch**: Previously logged-in profiles switch instantly
 - **Preview themes**: Focus on themes to see them live
+- **Backdrop depth**: Spotlight backdrop has parallax scrolling for immersive browsing

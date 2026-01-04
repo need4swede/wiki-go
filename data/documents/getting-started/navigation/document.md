@@ -34,17 +34,40 @@ Neptune uses a pill-shaped menu bar at the top of the screen.
 
 ---
 
+## Hero Spotlight Navigation
+
+The spotlight area at the top of Home, Movies, and Shows has an invisible focus zone:
+
+| Action | Control |
+|--------|---------|
+| Next item | Swipe right |
+| Previous item | Swipe left |
+| View details | Press Select |
+
+When focused, navigation arrows appear on the left and right edges. The spotlight auto-rotates every 8 seconds when not interacting.
+
+---
+
 ## Content Tabs
 
 **Home:** Hero spotlight, Continue Watching, Next Up, recommendations.
 
-**Movies:** Movie-only view with Continue Watching, New Releases, Recently Added.
+**Movies:** Movie-only spotlight and content rows.
 
-**Shows:** TV-only view with Next Up, New Releases, Recently Added.
+**Shows:** TV-only spotlight and content rows.
 
 **Discover:** Trending content, requests (requires Jellyseerr).
 
 **Search:** Instant library search with Jellyseerr results.
+
+---
+
+## Focus Behavior
+
+- **Menu bar:** Swipe up to reach, tabs select on focus
+- **Spotlight zone:** Swipe down from menu to focus, left/right to navigate items
+- **Content cards:** Swipe down to browse rows, focused cards show backdrop
+- **Scrolling:** Spotlight backdrop fades with parallax as you scroll down
 
 ---
 
