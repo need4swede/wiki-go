@@ -1,0 +1,270 @@
+/* Theme variables and base styles */
+
+:root {
+    /* Light theme variables */
+    --primary-color: #0066cc;
+    --primary-hover: #0052a3;
+    --primary-rgb: 0, 102, 204;
+    --text-color: #333;
+    --text-muted: #666;
+    --accent-color: #3498db;
+    --accent-hover-color: #2980b9;
+    --border-color: #e0e0e0;
+    --hover-bg: #f8f9fa;
+    --sidebar-bg: #f5f5f5;
+    --breadcrumb-color: #666;
+    --sidebar-width: 280px;
+    --bg-color: #ffffff;
+    --blockquote-bg: #f8f9fa;
+    --code-bg: #f8f9fa;
+    --theme-toggle-bg: #e0e0e0;
+    --theme-toggle-color: #333;
+    --danger-color: #dc3545;
+    --danger-bg: #f8d7da;
+    --success-color: #28a745;
+    --success-bg: #d4edda;
+    --warning-color: #ffc107;
+    --warning-bg: #fff3cd;
+    --content-max-width: 900px;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+:root[data-theme="dark"] {
+    /* Dark theme variables - OtterWiki Style Guide (Deeper) */
+    --primary-color: #58a6ff;
+    --primary-hover: #79c0ff;
+    --primary-rgb: 88, 166, 255;
+    --text-color: #e2e8f0;
+    --text-muted: #94a3b8;
+    --accent-color: #38b2ac;
+    --accent-hover-color: #58a6ff;
+    --border-color: #0f1824;
+    --hover-bg: #0a1018;
+    --sidebar-bg: #080d13;
+    --breadcrumb-color: #64748b;
+    --bg-color: #070a0d;
+    --blockquote-bg: #060a10;
+    --code-bg: #080c14;
+    --theme-toggle-bg: #0f1824;
+    --theme-toggle-color: #e2e8f0;
+    --danger-color: #f85149;
+    --danger-bg: #1a0810;
+    --success-color: #3fb950;
+    --success-bg: #081410;
+    --warning-color: #d29922;
+    --warning-bg: #141008;
+    --shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* ---------- Base styles ---------- */
+/* custom scrollbars */
+::-webkit-scrollbar-track,
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) var(--theme-toggle-bg);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    display: flex;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+/* Word breaking for content */
+.markdown-content *,
+main *,
+table *,
+pre,
+code,
+kbd,
+.content-wrapper *,
+h1,
+h2,
+h3,
+h4,
+p,
+.markdown-content ul li,
+.markdown-content ol li,
+td {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+/* Force break for extremely long strings */
+.markdown-content code,
+.markdown-content pre,
+.markdown-content .path,
+.markdown-content .filepath,
+td {
+    word-break: break-all;
+}
+
+/* Bidirectional text support */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+div,
+input {
+    unicode-bidi: plaintext;
+}
+
+input:-moz-placeholder,
+input:-ms-input-placeholder,
+input::-webkit-input-placeholder {
+    unicode-bidi: plaintext;
+    text-align: start;
+}
+
+/* Enhanced bidirectional support for markdown content */
+.markdown-content {
+    direction: auto;
+}
+
+.markdown-content * {
+    text-align: start;
+}
+
+/* Bidirectional for code and pre */
+pre,
+code {
+    direction: auto;
+    text-align: start;
+    white-space: pre-wrap;
+    unicode-bidi: plaintext;
+}
+
+/* Special handling for pre > code structure */
+pre>code {
+    display: block;
+}
+
+/* Apply transitions for smoother theme changes */
+*:not(.hamburger-icon):not(.hamburger-icon:before):not(.hamburger-icon:after) {
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* ---------- Password warning banner ---------- */
+.password-warning-banner {
+    background-color: var(--danger-bg);
+    color: var(--danger-color);
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2000;
+    pointer-events: none;
+    /* Do not block interactions with UI beneath */
+}
+
+/* Global banner for documents */
+.global-banner {
+    width: 100%;
+    margin-bottom: 0px;
+    overflow: hidden;
+}
+
+.responsive-banner {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Add padding to body when banner is visible */
+body.has-password-warning {
+    padding-top: 40px;
+}
+
+/* Adjust sidebar when password warning is shown */
+body.has-password-warning .sidebar,
+body.has-password-warning .hamburger {
+    height: calc(100vh - 40px);
+    top: 40px;
+}
+
+.sidebar-footer-buttons {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-color);
+}
+
+.sidebar-footer-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    background: var(--theme-toggle-bg);
+    color: var(--theme-toggle-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sidebar-footer-btn:hover {
+    background: var(--hover-bg);
+    color: var(--primary-color);
+}
+
+.sidebar-footer-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* Mobile touch optimizations */
+@media (hover: none) {
+
+    /* Prevent sticky hover on touch devices for editor buttons only */
+    /* Using body prefix to ensure higher specificity than editor.css */
+    body .editor-button:not(.active):not(.primary):hover,
+    body .custom-toolbar button:not(.active):hover {
+        background-color: transparent !important;
+        border-color: var(--border-color) !important;
+        color: var(--text-color) !important;
+    }
+
+    /* Reset opacity hover effect for primary editor buttons */
+    body .editor-button.primary:hover {
+        opacity: 1 !important;
+    }
+}
+
+/* Disable tap highlight for editor buttons */
+body .editor-button,
+body .custom-toolbar button {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+/* Active state for feedback on tap - move button down slightly */
+body .editor-button:active,
+body .custom-toolbar button:active {
+    transform: translateY(2px) !important;
+    transition: none !important;
+}

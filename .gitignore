@@ -34,7 +34,8 @@ go.work
 # /data
 data/config.yaml
 data/temp
-data/static
+data/static/*
+!data/static/css/
 build/*
 !build/
 !build/.gitkeep
