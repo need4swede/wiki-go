@@ -184,7 +184,7 @@ function createToolbar(container) {
         { icon: 'fa-undo', action: 'undo', title: 'Undo' },
         { icon: 'fa-repeat', action: 'redo', title: 'Redo' },
         { type: 'separator' },
-        { icon: 'fa-eye', action: 'preview', title: `Toggle Preview (${getShortcut('Cmd+Shift+P', 'Ctrl+Shift+P')})`, id: 'toggle-preview' }
+        { icon: 'fa-eye', action: 'preview', title: `Hide Preview (${getShortcut('Cmd+Shift+P', 'Ctrl+Shift+P')})`, id: 'toggle-preview', initialActive: true }
     ];
 
     buttons.forEach(button => {
@@ -200,6 +200,11 @@ function createToolbar(container) {
             btn.className = `toolbar-button ${button.action}-button`;
             btn.dataset.action = button.action;
             btn.title = button.title;
+
+            // Apply initial active state if specified
+            if (button.initialActive) {
+                btn.classList.add('active');
+            }
 
             // Apply inline style if provided
             if (button.style) {
@@ -445,19 +450,7 @@ function setupToolbarActions(toolbar) {
                 }
                 break;
             case 'preview':
-                // Update tooltip based on current state
-                const isPreviewActive = document.querySelector('.editor-preview')?.classList.contains('editor-preview-active');
-                const isMac = /Mac|iPhone|iPad|iPod/.test(navigator.userAgent);
-                const shortcut = isMac ? 'Cmd+Shift+P' : 'Ctrl+Shift+P';
-
-                if (isPreviewActive) {
-                    // Currently in preview, going back to edit
-                    button.title = 'Back to Edit Mode';
-                } else {
-                    // Currently in edit, going to preview
-                    button.title = `Toggle Preview (${shortcut})`;
-                }
-
+                // Toggle preview panel visibility (button state is handled in EditorPreview.togglePreview)
                 window.EditorPreview.togglePreview();
                 break;
             case 'emoji':

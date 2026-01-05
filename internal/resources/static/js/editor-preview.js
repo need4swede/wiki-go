@@ -4,6 +4,8 @@
  */
 
 let previewElement = null;
+let previewUpdateTimeout = null;
+const PREVIEW_DEBOUNCE_MS = 300;
 
 // Function to create preview panel
 function createPreview(container) {
@@ -14,89 +16,77 @@ function createPreview(container) {
     return preview;
 }
 
-// Function to toggle preview
+// Function to toggle preview panel visibility
 async function togglePreview() {
     const editor = window.EditorCore.getEditor();
-    if (!editor || !previewElement) return;
+    if (!editor) return;
 
-    const isPreviewActive = previewElement.classList.contains('editor-preview-active');
-    const editorElement = document.querySelector('.CodeMirror');
+    const previewPanel = document.querySelector('.editor-preview-panel');
+    const editorMainArea = document.querySelector('.editor-main-area');
     const toolbar = document.querySelector('.custom-toolbar');
 
-    if (isPreviewActive) {
-        // Switch back to edit mode
-        previewElement.classList.remove('editor-preview-active');
+    if (!previewPanel) return;
 
-        // CRITICAL: Clear the preview HTML to free memory and prevent slowdowns
-        previewElement.innerHTML = '';
+    const isPreviewHidden = previewPanel.style.display === 'none';
 
-        // Show editor again
-        if (editorElement) {
-            editorElement.style.display = 'block';
-        }
+    if (isPreviewHidden) {
+        // Show preview panel
+        previewPanel.style.display = 'flex';
+        editorMainArea.style.flex = '1';
 
-        // Re-enable all toolbar buttons except preview
-        if (toolbar) {
-            const buttons = toolbar.querySelectorAll('button:not(.preview-button)');
-            buttons.forEach(button => {
-                button.disabled = false;
-                button.classList.remove('disabled');
-            });
-        }
+        // Update preview with current content
+        await updatePreview(editor.getValue());
 
-        // Change preview button icon to indicate function
-        const previewButton = toolbar.querySelector('.preview-button i');
+        // Update button icon
+        const previewButton = toolbar?.querySelector('.preview-button');
         if (previewButton) {
-            previewButton.className = 'fa fa-eye';
+            previewButton.classList.add('active');
+            previewButton.title = 'Hide Preview';
+            const icon = previewButton.querySelector('i');
+            if (icon) icon.className = 'fa fa-eye';
         }
-
-        // Make sure editor gets focus when returning from preview mode
-        // Using a small timeout to ensure DOM is updated first
-        setTimeout(() => {
-            if (editor) {
-                editor.refresh();
-                editor.focus();
-            }
-        }, 50);
     } else {
-        // Show preview
-        const content = editor.getValue();
-        await updatePreview(content);
+        // Hide preview panel
+        previewPanel.style.display = 'none';
+        editorMainArea.style.flex = '1';
 
-        // Hide editor
-        if (editorElement) {
-            editorElement.style.display = 'none';
-        }
-
-        // Show preview
-        previewElement.classList.add('editor-preview-active');
-
-        // Disable all toolbar buttons except preview
-        if (toolbar) {
-            const buttons = toolbar.querySelectorAll('button:not(.preview-button)');
-            buttons.forEach(button => {
-                button.disabled = true;
-                button.classList.add('disabled');
-            });
-        }
-
-        // Change preview button icon to indicate function
-        const previewButton = toolbar.querySelector('.preview-button i');
+        // Update button icon
+        const previewButton = toolbar?.querySelector('.preview-button');
         if (previewButton) {
-            previewButton.className = 'fa fa-edit';
-            previewButton.parentElement.title = 'Back to Edit Mode';
+            previewButton.classList.remove('active');
+            previewButton.title = 'Show Preview';
+            const icon = previewButton.querySelector('i');
+            if (icon) icon.className = 'fa fa-eye-slash';
         }
     }
+
+    // Refresh editor to ensure proper sizing
+    setTimeout(() => {
+        if (editor) {
+            editor.refresh();
+            editor.focus();
+        }
+    }, 50);
 }
 
-// Function to update preview content
-async function updatePreview(content) {
+// Debounced preview update for live editing
+function debouncedUpdatePreview(content) {
+    if (previewUpdateTimeout) {
+        clearTimeout(previewUpdateTimeout);
+    }
+    previewUpdateTimeout = setTimeout(() => {
+        updatePreviewNow(content);
+    }, PREVIEW_DEBOUNCE_MS);
+}
+
+// Function to update preview content (immediate)
+async function updatePreviewNow(content) {
     if (!previewElement) return;
 
-    try {
-        // Show loading indicator
-        previewElement.innerHTML = '<div class="preview-loading">Loading preview...</div>';
+    // Don't show loading message for live preview - it's too distracting
+    // Just keep the current content until the new one is ready
 
+    try {
         // Get current path for handling relative links correctly
         const isHomepage = window.location.pathname === '/';
         const path = isHomepage ? '/' : window.location.pathname;
@@ -190,8 +180,21 @@ async function updatePreview(content) {
     }
 }
 
+// Public updatePreview function - uses debouncing by default
+function updatePreview(content, immediate = false) {
+    if (immediate) {
+        updatePreviewNow(content);
+    } else {
+        debouncedUpdatePreview(content);
+    }
+}
+
 // Cleanup function
 function cleanup() {
+    if (previewUpdateTimeout) {
+        clearTimeout(previewUpdateTimeout);
+        previewUpdateTimeout = null;
+    }
     if (previewElement) {
         previewElement.remove();
         previewElement = null;
@@ -204,7 +207,7 @@ window.EditorPreview = {
     togglePreview,
     updatePreview,
     cleanup,
-    
+
     // Getters
     getPreviewElement: () => previewElement
 };

@@ -186,29 +186,42 @@ async function loadEditor(mainContent, editorContainer, viewToolbar, editToolbar
         // 1. Create toolbar at the top
         const toolbar = window.EditorToolbar.createToolbar(editorLayout);
 
-        // 2. Create an editor area container to hold both editor and preview
+        // 2. Create an editor area container to hold both preview (left) and editor (right)
         const editorArea = document.createElement('div');
         editorArea.className = 'editor-area';
         editorLayout.appendChild(editorArea);
 
-        // 3. Create editor wrapper inside the editor area
+        // 3. Create preview panel on the LEFT side
+        const previewPanel = document.createElement('div');
+        previewPanel.className = 'editor-preview-panel';
+        editorArea.appendChild(previewPanel);
+
+        // Add preview header
+        const previewHeader = document.createElement('div');
+        previewHeader.className = 'preview-header';
+        previewHeader.textContent = 'Preview';
+        previewPanel.appendChild(previewHeader);
+
+        // Create preview element inside the preview panel
+        const previewElement = window.EditorPreview.createPreview(previewPanel);
+
+        // 4. Create main editor area on the RIGHT side
+        const editorMainArea = document.createElement('div');
+        editorMainArea.className = 'editor-main-area';
+        editorArea.appendChild(editorMainArea);
+
+        // 5. Create editor wrapper inside the main editor area
         const editorWrapper = document.createElement('div');
         editorWrapper.className = 'custom-editor-wrapper';
-        editorArea.appendChild(editorWrapper);
+        editorMainArea.appendChild(editorWrapper);
 
-        // 4. Create textarea for CodeMirror
+        // 6. Create textarea for CodeMirror
         const textarea = document.createElement('textarea');
         textarea.id = 'markdown-editor';
         editorWrapper.appendChild(textarea);
 
-        // 5. Create preview element inside the editor area
-        const previewElement = window.EditorPreview.createPreview(editorArea);
-
-        // 6. Create statusbar at the bottom
-        const statusbar = createStatusbar(editorLayout);
-
-        // Reset the preview mode
-        previewElement.classList.remove('editor-preview-active');
+        // 7. Create statusbar at the bottom of the main editor area
+        const statusbar = createStatusbar(editorMainArea);
 
         // Initialize CodeMirror
         if (!editor) {
@@ -250,8 +263,8 @@ async function loadEditor(mainContent, editorContainer, viewToolbar, editToolbar
                 window.EditorThemes.updateCodeMirrorTheme(isDarkMode ? 'dark' : 'light');
             }
 
-            // Set editor height
-            editor.setSize(null, "calc(100vh - 380px)");
+            // Editor height is now controlled by flexbox, no fixed size needed
+            editor.setSize(null, '100%');
 
             // Set up events for toolbar interactions
             window.EditorToolbar.setupToolbarActions(toolbar);
@@ -261,10 +274,8 @@ async function loadEditor(mainContent, editorContainer, viewToolbar, editToolbar
             editor.on('change', () => {
                 updateStatusbar(statusbar);
 
-                // Update preview if active
-                if (previewElement.classList.contains('editor-preview-active')) {
-                    window.EditorPreview.updatePreview(editor.getValue());
-                }
+                // Always update the live preview
+                window.EditorPreview.updatePreview(editor.getValue());
 
                 // Set up beforeunload handler when changes occur
                 setupBeforeUnloadHandler();
@@ -291,11 +302,14 @@ async function loadEditor(mainContent, editorContainer, viewToolbar, editToolbar
             editor.clearHistory();
         }
 
-        // Make sure editor is visible (not in preview mode)
+        // Make sure editor is visible
         document.querySelector('.CodeMirror').style.display = 'block';
 
         // Force a refresh with multiple attempts to ensure editor renders properly
         refreshEditor(statusbar);
+
+        // Load initial preview (immediate, no debounce)
+        window.EditorPreview.updatePreview(markdown, true);
 
     } catch (error) {
         console.error('Error:', error);

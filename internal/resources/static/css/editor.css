@@ -2,7 +2,7 @@
 .editor-layout {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 330px);
+    height: calc(100vh - 120px);
     background: var(--glass-bg);
     backdrop-filter: var(--glass-blur-light);
     -webkit-backdrop-filter: var(--glass-blur-light);
@@ -10,14 +10,39 @@
     overflow: hidden;
     border: 1px solid var(--glass-border);
     margin-top: 0;
-    min-height: 300px; /* Ensure minimum height for very small screens */
+    min-height: 400px;
     box-shadow: var(--glass-shadow);
 }
 
 .editor-area {
     flex: 1;
-    position: relative;
+    display: flex;
+    flex-direction: row;
     overflow: hidden;
+}
+
+/* Preview panel - left side */
+.editor-preview-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--glass-border);
+    min-width: 0;
+}
+
+.editor-preview-panel .editor-preview {
+    position: relative;
+    flex: 1;
+    display: block;
+    overflow: auto;
+}
+
+/* Editor panel - right side */
+.editor-main-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
 }
 
 /* Editor styles */
@@ -268,19 +293,26 @@
 
 /* Preview styles */
 .editor-preview {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     background: var(--bg-color);
     padding: 16px;
-    display: none;
     overflow: auto;
     font-family: var(--text-font);
     line-height: 1.6;
 }
 
+/* Preview header label */
+.preview-header {
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--breadcrumb-color);
+    background: var(--glass-bg);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+/* Legacy class for backwards compatibility */
 .editor-preview-active {
     display: block;
 }
@@ -348,15 +380,18 @@
 /* CodeMirror theme overrides */
 .custom-editor-wrapper {
     background: var(--bg-color);
-    display: block;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
 }
 
 .custom-editor-wrapper .CodeMirror {
     color: var(--text-color);
     background: var(--bg-color);
-    height: 100% !important;
-    max-height: none;
+    flex: 1;
+    height: auto !important;
+    min-height: 0;
     border: none;
     font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
@@ -839,6 +874,24 @@
 
     .editor-layout {
         margin-top: 0;
+        height: calc(100vh - 140px);
+    }
+
+    /* Stack preview and editor vertically on mobile */
+    .editor-area {
+        flex-direction: column;
+    }
+
+    .editor-preview-panel {
+        flex: 0 0 40%;
+        border-right: none;
+        border-bottom: 1px solid var(--glass-border);
+        max-height: 40%;
+    }
+
+    .editor-main-area {
+        flex: 1;
+        min-height: 50%;
     }
 
     /* Replace EasyMDEContainer with custom-editor-wrapper */
