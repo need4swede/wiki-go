@@ -175,15 +175,24 @@ async function loadEditor(mainContent, editorContainer, viewToolbar, editToolbar
         viewToolbar.style.display = 'none';
         editToolbar.style.display = 'flex';
 
+        // Hide the sidebar when entering edit mode
+        const sidebar = document.querySelector('.sidebar');
+        if (sidebar) {
+            sidebar.style.display = 'none';
+        }
+
         // Clear the editor container
         editorContainer.innerHTML = '';
+
+        // 0. Create header bar with title and action buttons
+        const header = createEditorHeader(editorContainer, editToolbar);
 
         // Create a container for our editor components (toolbar, editor, preview, statusbar)
         const editorLayout = document.createElement('div');
         editorLayout.className = 'editor-layout';
         editorContainer.appendChild(editorLayout);
 
-        // 1. Create toolbar at the top
+        // 1. Create formatting toolbar
         const toolbar = window.EditorToolbar.createToolbar(editorLayout);
 
         // 2. Create an editor area container to hold both preview (left) and editor (right)
@@ -357,6 +366,53 @@ function updateStatusbar(statusbar) {
     statusbar.querySelector('.cursor').textContent = `${cursor.line + 1}:${cursor.ch}`;
 }
 
+// Function to create editor header bar
+function createEditorHeader(container, editToolbar) {
+    const header = document.createElement('div');
+    header.className = 'editor-header';
+
+    // Title section
+    const titleSection = document.createElement('div');
+    titleSection.className = 'editor-header-title';
+
+    const icon = document.createElement('i');
+    icon.className = 'fa fa-edit';
+    titleSection.appendChild(icon);
+
+    // Get current page title
+    const pageTitle = document.querySelector('.breadcrumbs a:last-child')?.textContent ||
+                      document.querySelector('h1')?.textContent ||
+                      'Editing';
+    const titleText = document.createElement('span');
+    titleText.textContent = `Editing: ${pageTitle}`;
+    titleSection.appendChild(titleText);
+
+    header.appendChild(titleSection);
+
+    // Actions section - move buttons from the edit toolbar to the header
+    const actionsSection = document.createElement('div');
+    actionsSection.className = 'editor-header-actions';
+
+    // Move the actual buttons from editToolbar (not clones)
+    if (editToolbar) {
+        const buttons = Array.from(editToolbar.querySelectorAll('.editor-button, button'));
+        buttons.forEach(btn => {
+            // Move the button to the header (this preserves event listeners)
+            actionsSection.appendChild(btn);
+        });
+    }
+
+    header.appendChild(actionsSection);
+    container.appendChild(header);
+
+    // Hide the original edit toolbar container (now empty)
+    if (editToolbar) {
+        editToolbar.style.display = 'none';
+    }
+
+    return header;
+}
+
 // Helper function to ensure editor gets properly refreshed
 function refreshEditor(statusbar) {
     if (!editor) return;
@@ -388,6 +444,12 @@ function exitEditMode(mainContent, editorContainer, viewToolbar, editToolbar) {
     // Update toolbar visibility
     if (viewToolbar) viewToolbar.style.display = 'flex';
     if (editToolbar) editToolbar.style.display = 'none';
+
+    // Show the sidebar again when exiting edit mode
+    const sidebar = document.querySelector('.sidebar');
+    if (sidebar) {
+        sidebar.style.display = '';
+    }
 
     // Reset original content
     originalContent = '';

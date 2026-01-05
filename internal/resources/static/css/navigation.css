@@ -364,12 +364,7 @@ body.has-password-warning .breadcrumbs {
         transform: translateX(0);
     }
 
-    /* Ensure content doesn't overlap sidebar when in edit mode */
-    body.sidebar-active .editor-container.active {
-        margin-left: min(var(--sidebar-width), 85vw);
-        width: calc(100% - min(var(--sidebar-width), 85vw));
-        transition: margin-left 0.3s ease, width 0.3s ease;
-    }
+    /* Editor is now full-screen fixed overlay, no sidebar adjustment needed */
 
     body.sidebar-active {
         position: fixed;
