@@ -5,9 +5,31 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"regexp"
 	"strings"
 
 	"wiki-go/internal/config"
+)
+
+// Pre-compiled regex patterns for markdown stripping
+var (
+	frontmatterRegex  = regexp.MustCompile(`(?s)^---\n.*?\n---\n?`)
+	linkRegex         = regexp.MustCompile(`\[([^\]]+)\]\([^)]+\)`)
+	imageRegex        = regexp.MustCompile(`!\[([^\]]*)\]\([^)]+\)`)
+	boldRegex         = regexp.MustCompile(`\*\*([^*]+)\*\*`)
+	boldUnderRegex    = regexp.MustCompile(`__([^_]+)__`)
+	italicRegex       = regexp.MustCompile(`\*([^*]+)\*`)
+	italicUnderRegex  = regexp.MustCompile(`_([^_]+)_`)
+	strikeRegex       = regexp.MustCompile(`~~([^~]+)~~`)
+	inlineCodeRegex   = regexp.MustCompile("`([^`]+)`")
+	codeBlockRegex    = regexp.MustCompile("(?s)```.*?```")
+	headerRegex       = regexp.MustCompile(`(?m)^#{1,6}\s+`)
+	blockquoteRegex   = regexp.MustCompile(`(?m)^>\s*`)
+	hrRegex           = regexp.MustCompile(`(?m)^[-*_]{3,}\s*$`)
+	tableSepRegex     = regexp.MustCompile(`(?m)^\|[-:\s|]+\|\s*$`)
+	listRegex         = regexp.MustCompile(`(?m)^\s*[-*+]\s+`)
+	numberedListRegex = regexp.MustCompile(`(?m)^\s*\d+\.\s+`)
+	whitespaceRegex   = regexp.MustCompile(`\s+`)
 )
 
 type SearchRequest struct {
@@ -179,13 +201,16 @@ func extractTitle(content string) string {
 
 func extractExcerpt(content string, terms SearchTerms) string {
 	const excerptLength = 200
-	content = strings.ToLower(content)
+
+	// Strip markdown before processing
+	cleanContent := stripMarkdown(content)
+	lowerContent := strings.ToLower(cleanContent)
 
 	// First try to find a match with exact phrases
 	var matchIndex int
 	if len(terms.ExactPhrases) > 0 {
 		for _, phrase := range terms.ExactPhrases {
-			if idx := strings.Index(content, phrase); idx != -1 {
+			if idx := strings.Index(lowerContent, phrase); idx != -1 {
 				matchIndex = idx
 				break
 			}
@@ -193,7 +218,7 @@ func extractExcerpt(content string, terms SearchTerms) string {
 	} else if len(terms.IncludeWords) > 0 {
 		// Then try with included words
 		for _, word := range terms.IncludeWords {
-			if idx := strings.Index(content, word); idx != -1 {
+			if idx := strings.Index(lowerContent, word); idx != -1 {
 				matchIndex = idx
 				break
 			}
@@ -206,22 +231,73 @@ func extractExcerpt(content string, terms SearchTerms) string {
 		start = 0
 	}
 	end := start + excerptLength
-	if end > len(content) {
-		end = len(content)
+	if end > len(lowerContent) {
+		end = len(lowerContent)
 	}
 
 	// Trim to word boundaries
-	excerpt := content[start:end]
+	excerpt := lowerContent[start:end]
 	if start > 0 {
 		if idx := strings.Index(excerpt, " "); idx != -1 {
 			excerpt = "..." + excerpt[idx:]
 		}
 	}
-	if end < len(content) {
+	if end < len(lowerContent) {
 		if idx := strings.LastIndex(excerpt, " "); idx != -1 {
 			excerpt = excerpt[:idx] + "..."
 		}
 	}
 
 	return excerpt
+}
+
+// stripMarkdown removes markdown syntax from content for clean display
+func stripMarkdown(content string) string {
+	// Remove YAML frontmatter (content between --- at the start)
+	content = frontmatterRegex.ReplaceAllString(content, "")
+
+	// Remove markdown images ![alt](url) - must be before links
+	content = imageRegex.ReplaceAllString(content, "$1")
+
+	// Remove markdown links [text](url) -> text
+	content = linkRegex.ReplaceAllString(content, "$1")
+
+	// Remove bold/italic markers **text** or *text* or __text__ or _text_
+	content = boldRegex.ReplaceAllString(content, "$1")
+	content = boldUnderRegex.ReplaceAllString(content, "$1")
+	content = italicRegex.ReplaceAllString(content, "$1")
+	content = italicUnderRegex.ReplaceAllString(content, "$1")
+
+	// Remove strikethrough ~~text~~
+	content = strikeRegex.ReplaceAllString(content, "$1")
+
+	// Remove code blocks ```code``` - must be before inline code
+	content = codeBlockRegex.ReplaceAllString(content, " ")
+
+	// Remove inline code `code`
+	content = inlineCodeRegex.ReplaceAllString(content, "$1")
+
+	// Remove headers (# ## ### etc.)
+	content = headerRegex.ReplaceAllString(content, "")
+
+	// Remove blockquotes
+	content = blockquoteRegex.ReplaceAllString(content, "")
+
+	// Remove horizontal rules
+	content = hrRegex.ReplaceAllString(content, " ")
+
+	// Remove table separators (|---|---|)
+	content = tableSepRegex.ReplaceAllString(content, "")
+
+	// Clean up table pipes but preserve content
+	content = strings.ReplaceAll(content, "|", " ")
+
+	// Remove list markers (-, *, +, 1., etc.)
+	content = listRegex.ReplaceAllString(content, "")
+	content = numberedListRegex.ReplaceAllString(content, "")
+
+	// Normalize whitespace: collapse multiple spaces/newlines into single space
+	content = whitespaceRegex.ReplaceAllString(content, " ")
+
+	return strings.TrimSpace(content)
 }
