@@ -6,7 +6,7 @@ order: 10
 
 Connect Neptune to your Jellyfin server.
 
----
+
 
 ## Auto-Discovery
 
@@ -23,7 +23,7 @@ Neptune automatically scans your local network for Jellyfin servers.
 - Apple TV and server on the same network
 - Network discovery enabled on Jellyfin (default)
 
----
+
 
 ## Manual Entry
 
@@ -39,7 +39,7 @@ For remote servers or when auto-discovery doesn't find yours:
 - Local servers: use IP and port (e.g., `192.168.1.100:8096`)
 - Remote servers: use your domain name
 
----
+
 
 ## Troubleshooting
 

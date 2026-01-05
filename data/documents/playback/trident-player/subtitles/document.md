@@ -6,7 +6,7 @@ order: 50
 
 Beautiful subtitle rendering for every format.
 
----
+
 
 ## Supported Formats
 
@@ -26,7 +26,7 @@ Beautiful subtitle rendering for every format.
 | **VobSub** | DVD subtitles |
 | **DVB** | Broadcast subtitles |
 
----
+
 
 ## Styled Subtitles
 
@@ -45,7 +45,7 @@ No more plain white text when the subtitle creator intended something more.
 
 Anime fan-subs with elaborate styling display beautifully. Karaoke effects, signs, and styled dialog all render as intended.
 
----
+
 
 ## Instant Track Switching
 
@@ -57,7 +57,7 @@ Switch subtitle tracks instantly during playback:
 
 Neptune pre-loads all subtitle tracks, so switching is immediate.
 
----
+
 
 ## Multiple Languages
 
@@ -68,7 +68,7 @@ If your file contains multiple subtitle tracks, Neptune shows them all:
 
 Select the track you want from the player controls.
 
----
+
 
 ## External Subtitles
 
@@ -77,7 +77,7 @@ Neptune supports external subtitle files from your Jellyfin server:
 - Displayed alongside embedded tracks
 - Marked as "External" in the track list
 
----
+
 
 ## Default Styling
 
@@ -87,7 +87,7 @@ For subtitles without built-in styling, Neptune provides clean defaults:
 - Positioned at the bottom of the screen
 - Appropriately sized for TV viewing
 
----
+
 
 ## Troubleshooting
 

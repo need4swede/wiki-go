@@ -6,7 +6,7 @@ order: 20
 
 Sign in to your Jellyfin account.
 
----
+
 
 ## Username & Password
 
@@ -16,7 +16,7 @@ The standard sign-in method:
 2. Enter your password (leave blank if none)
 3. Press **Sign In**
 
----
+
 
 ## Quick Connect
 
@@ -33,7 +33,7 @@ Sign in without typing your password on the TV.
 
 **Note:** Quick Connect must be enabled on your server. Contact your administrator if you see an error.
 
----
+
 
 ## Session Storage
 

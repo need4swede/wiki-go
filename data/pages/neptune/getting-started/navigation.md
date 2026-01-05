@@ -2,7 +2,7 @@
 
 Neptune uses a pill-shaped menu bar at the top of the screen for navigation, designed for quick access with the Apple TV remote.
 
----
+
 
 ## Tab Menu Bar
 
@@ -23,7 +23,7 @@ The menu bar appears at the top of every screen and contains the following tabs:
 - **Smooth transitions**: Content updates seamlessly as you move between tabs
 - **Focus memory**: When navigating back up to the menu bar from content below, focus returns to the currently selected tab
 
----
+
 
 ## Remote Controls
 
@@ -44,7 +44,7 @@ The menu bar appears at the top of every screen and contains the following tabs:
 | Play/Pause (during playback) | Play/Pause button |
 | Skip forward/back (during playback) | Swipe left/right on Touch Surface |
 
----
+
 
 ## Content Tabs
 
@@ -102,7 +102,7 @@ Search across your library and Jellyseerr for content.
 
 See [Search](search.md) for more information.
 
----
+
 
 ## Home Menu
 
@@ -112,7 +112,7 @@ Long-pressing any tab opens the Home Menu, which provides quick access to:
 - **Edit Mode** - Enter edit mode for drag-and-drop section ordering
 - **Settings shortcuts** - Quick access to common settings
 
----
+
 
 ## Tips
 

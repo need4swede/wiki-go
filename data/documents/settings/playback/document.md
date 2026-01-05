@@ -6,7 +6,7 @@ order: 10
 
 Configure video playback behavior.
 
----
+
 
 ## Trident Player
 
@@ -21,7 +21,7 @@ Neptune's custom video engine for improved compatibility.
 
 See [Trident Player](/playback/trident-player) for technical details.
 
----
+
 
 ## Developer Tools
 

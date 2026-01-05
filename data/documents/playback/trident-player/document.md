@@ -6,7 +6,7 @@ order: 30
 
 Neptune's powerful video player delivers cinema-quality playback on your Apple TV.
 
----
+
 
 ## Play Anything
 
@@ -21,7 +21,7 @@ Trident plays virtually any video file directly from your Jellyfin server - no t
 
 No more waiting for transcodes. No more quality loss. Just press play.
 
----
+
 
 ## Stunning HDR
 
@@ -38,7 +38,7 @@ Neptune automatically switches your TV to the correct HDR mode when playback beg
 
 [Learn more about HDR →](/playback/trident-player/hdr)
 
----
+
 
 ## Lossless Audio
 
@@ -56,7 +56,7 @@ Multi-channel audio is automatically configured for your sound system - from ste
 
 [Learn more about Audio →](/playback/trident-player/audio)
 
----
+
 
 ## Perfect Sync
 
@@ -71,7 +71,7 @@ You'll never notice - and that's the point.
 
 [Learn more about Playback Quality →](/playback/trident-player/sync)
 
----
+
 
 ## Rich Subtitles
 
@@ -86,7 +86,7 @@ ASS subtitles display with their intended styling - fonts, colors, positioning, 
 
 [Learn more about Subtitles →](/playback/trident-player/subtitles)
 
----
+
 
 ## Instant Track Switching
 
@@ -96,13 +96,13 @@ Switch audio or subtitle tracks instantly during playback. No rebuffering, no wa
 - Switch between commentary and original audio
 - Toggle subtitles instantly
 
----
+
 
 ## Frame-Accurate Seeking
 
 Scrub to exactly where you want. Neptune seeks to the precise frame you're looking for, not just the nearest keyframe.
 
----
+
 
 ## In This Section
 

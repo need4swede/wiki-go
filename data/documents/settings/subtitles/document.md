@@ -6,7 +6,7 @@ order: 40
 
 Customize subtitle appearance during playback.
 
----
+
 
 ## Font Size
 
@@ -17,7 +17,7 @@ Customize subtitle appearance during playback.
 | Large | Easier to read |
 | Extra Large | Maximum readability |
 
----
+
 
 ## Text Color
 
@@ -29,7 +29,7 @@ Choose from:
 - Cyan
 - Blue
 
----
+
 
 ## Background Style
 
@@ -40,13 +40,13 @@ Choose from:
 | Outline | Black text outline |
 | Box | Semi-transparent background |
 
----
+
 
 ## Background Opacity
 
 When using Box style, adjust opacity from 30% to 100%.
 
----
+
 
 ## Accessing Settings
 

@@ -6,7 +6,7 @@ order: 30
 
 Movies and TV shows may include bonus content.
 
----
+
 
 ## Extra Types
 
@@ -20,7 +20,7 @@ Movies and TV shows may include bonus content.
 | **Clip** | Movie/show clips |
 | **Short** | Short films |
 
----
+
 
 ## Viewing Extras
 
@@ -30,7 +30,7 @@ Movies and TV shows may include bonus content.
 
 Extras are organized by type with icons indicating the content category.
 
----
+
 
 ## Collections
 
@@ -40,7 +40,7 @@ When a movie belongs to a collection (e.g., "The Lord of the Rings"):
 2. Select the collection
 3. Browse all movies in the collection
 
----
+
 
 ## Similar Items
 

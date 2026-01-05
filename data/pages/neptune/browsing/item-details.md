@@ -2,7 +2,7 @@
 
 When you select a movie, TV show, or episode, Neptune displays a detailed view with all relevant information and actions.
 
----
+
 
 ## Overview
 
@@ -14,7 +14,7 @@ The detail view displays:
 - **Overview**: Plot summary and description
 - **Action buttons**: Play, menu options
 
----
+
 
 ## Movies
 
@@ -54,7 +54,7 @@ Color-coded badges indicate video and audio quality:
 - **Collections**: Related movie collections (e.g., "Marvel Cinematic Universe")
 - **Similar**: Movies with similar themes or genres
 
----
+
 
 ## TV Shows
 
@@ -101,7 +101,7 @@ When viewing a season:
 - Mark entire season as Watched / Unwatched
 - Refresh metadata
 
----
+
 
 ## Extras / Special Features
 
@@ -119,7 +119,7 @@ Movies and TV shows may include special features:
 
 Select any extra to start playback.
 
----
+
 
 ## Menu Options
 
@@ -136,7 +136,7 @@ Press the **Menu button** on item details to access:
 - **Manage Images**: Change poster, backdrop, or logo images
 - **Advanced Refresh**: Choose refresh mode (metadata only, images, or full)
 
----
+
 
 ## Shuffle Mode (TV Shows)
 
@@ -149,7 +149,7 @@ For TV shows, you can enable shuffle playback:
 
 Shuffle mode persists until you turn it off or leave the series detail page.
 
----
+
 
 ## Collections
 
@@ -159,7 +159,7 @@ When a movie belongs to a collection (e.g., "The Lord of the Rings Collection"):
 2. Select the collection to view all items
 3. Browse and select any movie in the collection
 
----
+
 
 ## Similar Items
 
@@ -170,7 +170,7 @@ The **Similar** section shows related content based on:
 
 Select any similar item to view its details.
 
----
+
 
 ## Cast & Crew
 
@@ -183,7 +183,7 @@ Browse the people involved in the production:
 
 Select a person to see their other work in your library.
 
----
+
 
 ## Theme Songs
 
@@ -200,7 +200,7 @@ For TV series, Neptune can play ambient theme music when viewing the detail page
 
 Configure in **Settings** > **Plugins** > **Theme Songs**.
 
----
+
 
 ## Focus Behavior
 

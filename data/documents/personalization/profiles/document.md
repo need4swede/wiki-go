@@ -6,7 +6,7 @@ order: 20
 
 Multiple user profiles with separate watch history and preferences.
 
----
+
 
 ## Overview
 
@@ -16,7 +16,7 @@ Profiles appear as circular avatar cards in Settings showing:
 - Username
 - Green checkmark on current profile
 
----
+
 
 ## Switching Profiles
 
@@ -26,7 +26,7 @@ Profiles appear as circular avatar cards in Settings showing:
 
 **Passwordless accounts:** Switches automatically.
 
----
+
 
 ## Adding Profiles
 
@@ -34,7 +34,7 @@ Profiles appear as circular avatar cards in Settings showing:
 2. Select **Add Profile**
 3. Sign in with username/password or Quick Connect
 
----
+
 
 ## Per-Profile Features
 
@@ -46,7 +46,7 @@ Profiles appear as circular avatar cards in Settings showing:
 | Next Up | TV show queue |
 | Theme | Visual preference |
 
----
+
 
 ## Session Management
 
@@ -58,7 +58,7 @@ Sessions stored securely in device Keychain:
 
 **Sign out:** Select your profile, choose Sign Out.
 
----
+
 
 ## Troubleshooting
 

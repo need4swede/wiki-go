@@ -2,7 +2,7 @@
 
 This section covers everything you need to get Neptune up and running on your Apple TV.
 
----
+
 
 ## In This Section
 
@@ -11,7 +11,7 @@ This section covers everything you need to get Neptune up and running on your Ap
 | [Setup](setup.md) | Initial setup, connecting to Jellyfin, optional Jellyseerr configuration |
 | [Navigation](navigation.md) | Tab bar, remote controls, navigating the interface |
 
----
+
 
 ## Quick Start Guide
 
@@ -43,7 +43,7 @@ Enable content discovery and requests by connecting to Jellyseerr.
 
 Select a visual theme to personalize your experience.
 
----
+
 
 ## Next Steps
 

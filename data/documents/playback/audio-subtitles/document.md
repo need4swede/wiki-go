@@ -6,7 +6,7 @@ order: 20
 
 Manage tracks during playback.
 
----
+
 
 ## Accessing Track Picker
 
@@ -16,7 +16,7 @@ Manage tracks during playback.
 
 Separate tabs for Audio and Subtitles.
 
----
+
 
 ## Audio Tracks
 
@@ -28,7 +28,7 @@ Each track shows:
 
 Switch instantly without interrupting playback.
 
----
+
 
 ## Subtitle Tracks
 
@@ -40,7 +40,7 @@ Each track shows:
 
 Select "Off" to disable subtitles.
 
----
+
 
 ## Instant Switching
 
@@ -48,7 +48,7 @@ Neptune pre-decodes text subtitles during playback - switching tracks has no del
 
 Image-based subtitles (PGS, VOBSUB) require server burn-in.
 
----
+
 
 ## Customization
 

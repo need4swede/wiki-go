@@ -6,7 +6,7 @@ order: 10
 
 Neptune includes six carefully crafted themes.
 
----
+
 
 ## Ocean (Default)
 
@@ -17,7 +17,7 @@ Deep blue underwater aesthetic with animated effects.
 - **Accent**: Teal/cyan
 - **Best for**: Dark rooms, cinematic feel
 
----
+
 
 ## Midnight
 
@@ -28,7 +28,7 @@ Rich purples and deep blues.
 - **Accent**: Purple/violet
 - **Best for**: Evening viewing
 
----
+
 
 ## Mint
 
@@ -39,7 +39,7 @@ Fresh teal and purple combination.
 - **Accent**: Mint green
 - **Best for**: Bright, energetic interface
 
----
+
 
 ## Void
 
@@ -50,7 +50,7 @@ True black optimized for OLED displays.
 - **Accent**: Subtle gray
 - **Best for**: OLED TVs, power saving
 
----
+
 
 ## Nordic
 
@@ -61,7 +61,7 @@ Cool grays and icy blues.
 - **Accent**: Ice blue
 - **Best for**: Clean, modern aesthetic
 
----
+
 
 ## Volcano
 

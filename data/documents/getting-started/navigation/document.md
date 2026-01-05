@@ -25,7 +25,7 @@ Neptune uses a pill-shaped menu bar at the top of the screen.
 
 **Behavior:** Tabs select on focus - no need to press Select.
 
----
+
 
 ## Remote Controls
 
@@ -36,7 +36,7 @@ Neptune uses a pill-shaped menu bar at the top of the screen.
 | Go back | Menu button |
 | Return to Home | Long-press Menu |
 
----
+
 
 ## Hero Spotlight Navigation
 
@@ -50,7 +50,7 @@ The spotlight area at the top of Home, Movies, and Shows has an invisible focus 
 
 When focused, navigation arrows appear on the left and right edges. The spotlight auto-rotates every 8 seconds when not interacting.
 
----
+
 
 ## Content Tabs
 
@@ -64,7 +64,7 @@ When focused, navigation arrows appear on the left and right edges. The spotligh
 
 **Search:** Instant library search with Jellyseerr results.
 
----
+
 
 ## Focus Behavior
 
@@ -73,7 +73,7 @@ When focused, navigation arrows appear on the left and right edges. The spotligh
 - **Content cards:** Swipe down to browse rows, focused cards show backdrop
 - **Scrolling:** Spotlight backdrop fades with parallax as you scroll down
 
----
+
 
 ## Home Menu
 

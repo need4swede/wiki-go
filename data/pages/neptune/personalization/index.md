@@ -2,7 +2,7 @@
 
 Make Neptune your own with multiple user profiles and beautiful visual themes.
 
----
+
 
 ## In This Section
 
@@ -11,7 +11,7 @@ Make Neptune your own with multiple user profiles and beautiful visual themes.
 | [Profiles](profiles.md) | Multiple users, switching profiles, per-user preferences |
 | [Themes](themes.md) | Built-in themes, animated backgrounds, custom themes |
 
----
+
 
 ## Overview
 
@@ -49,7 +49,7 @@ Themes affect every aspect of the interface, from backgrounds to focus indicator
 
 [Learn more about Themes →](themes.md)
 
----
+
 
 ## Quick Tips
 

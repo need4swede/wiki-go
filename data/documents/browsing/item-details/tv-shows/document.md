@@ -6,7 +6,7 @@ order: 20
 
 Browse series, seasons, and episodes.
 
----
+
 
 ## Show Level
 
@@ -18,7 +18,7 @@ When first opening a series:
 
 Select a season to view its episodes.
 
----
+
 
 ## Season Level
 
@@ -35,7 +35,7 @@ When viewing a season:
 - Runtime and progress bar
 - Checkmark if watched
 
----
+
 
 ## Episode Actions
 
@@ -45,7 +45,7 @@ When viewing a season:
 - Mark as Watched/Unwatched
 - Refresh metadata
 
----
+
 
 ## Shuffle Mode
 
@@ -58,7 +58,7 @@ Watch episodes in random order:
 
 Shuffle persists until disabled or you leave the series page.
 
----
+
 
 ## Theme Songs
 

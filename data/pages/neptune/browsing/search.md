@@ -2,7 +2,7 @@
 
 Neptune's search feature helps you find content quickly using instant local search and natural language queries.
 
----
+
 
 ## Overview
 
@@ -13,7 +13,7 @@ The Search tab provides:
 - **Library + Jellyseerr**: Find content in your library and discover new titles
 - **Smart categorization**: Results grouped by Movies, TV Shows, Episodes, and Collections
 
----
+
 
 ## Using Search
 
@@ -35,7 +35,7 @@ The Search tab provides:
 | `john williams` | Content with John Williams scores |
 | `marvel` | Marvel Studios productions |
 
----
+
 
 ## Search Results
 
@@ -79,7 +79,7 @@ When Jellyseerr is connected, search also shows requestable content not yet in y
 - Includes movies and TV shows from TMDb
 - Shows availability/request status
 
----
+
 
 ## Local Search Index
 
@@ -111,7 +111,7 @@ The search index syncs automatically:
 
 To manually resync: **Settings** > **Search** > **Resync Index**
 
----
+
 
 ## Search Settings
 
@@ -130,7 +130,7 @@ When an LLM is configured, you can enable natural language prompt search:
 - Processes query using AI before searching
 - Shows "Thinking..." while processing
 
----
+
 
 ## Tips
 

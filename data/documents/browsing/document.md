@@ -6,7 +6,7 @@ order: 20
 
 Find and explore your media content.
 
----
+
 
 ## In This Section
 
@@ -15,7 +15,7 @@ Find and explore your media content.
 | [Home Screen](/browsing/home-screen) | Hero spotlight, content rows, customization |
 | [Item Details](/browsing/item-details) | Movie and TV pages, seasons, episodes |
 
----
+
 
 ## Overview
 
@@ -25,7 +25,7 @@ Find and explore your media content.
 
 **Item Details:** Full metadata, cast, extras, and playback options.
 
----
+
 
 ## Tips
 

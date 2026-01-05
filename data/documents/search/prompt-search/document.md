@@ -2,13 +2,13 @@
 
 LLM-powered search for complex and conceptual queries.
 
----
+
 
 ## Overview
 
 Prompt Search uses language models to understand queries that go beyond simple keyword matching. Describe what you want to watch in plain English and Neptune finds matching content in your library.
 
----
+
 
 ## When to Use Prompt Search
 
@@ -21,7 +21,7 @@ Prompt Search uses language models to understand queries that go beyond simple k
 | **Watch history** | "movies I haven't seen" | No filter | Filters watched |
 | **Runtime** | "short episodes under 30 min" | No filter | Runtime filter |
 
----
+
 
 ## Using Prompt Search
 
@@ -31,7 +31,7 @@ Prompt Search uses language models to understand queries that go beyond simple k
 4. "Thinking..." appears while the language model processes
 5. Results display when ready
 
----
+
 
 ## How It Works
 
@@ -55,7 +55,7 @@ Results
 4. **Library searched**: Neptune searches for identified titles in your local index
 5. **Results filtered**: Structured filters narrow down the matches
 
----
+
 
 ## Example Queries
 
@@ -95,7 +95,7 @@ Combine multiple criteria:
 | "short comedy episodes" | Runtime + genre + type filter |
 | "recent horror directed by Ari Aster" | Year + genre + director |
 
----
+
 
 ## Caching
 
@@ -108,7 +108,7 @@ Prompt Search caches LLM responses to improve speed and reduce API costs:
 
 Repeated or similar queries return instantly from cache.
 
----
+
 
 ## Requirements
 
@@ -134,7 +134,7 @@ Benefits: Higher quality, faster, no local hardware needed.
 
 Configure in **Settings** > **Search** > **Deep Learning**.
 
----
+
 
 ## Fallback Behavior
 
@@ -144,7 +144,7 @@ When the language model is unavailable or times out:
 2. Best-effort keyword matching applied
 3. No error shown - degraded gracefully
 
----
+
 
 ## Limitations
 
@@ -157,7 +157,7 @@ When the language model is unavailable or times out:
 
 For content the language model doesn't recognize, use [Semantic Search](/search/semantic-search) which includes bundled tags for 4,000+ items and can analyze additional content.
 
----
+
 
 ## Privacy
 

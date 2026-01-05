@@ -2,7 +2,7 @@
 
 The Discover tab lets you browse trending content and request new movies and TV shows to be added to your library. This feature requires Jellyseerr to be configured.
 
----
+
 
 ## Overview
 
@@ -17,7 +17,7 @@ When connected to Jellyseerr, the Discover tab shows:
 
 Content is sourced from TMDb (The Movie Database) and shows availability status based on your library and existing requests.
 
----
+
 
 ## Browsing Content
 
@@ -38,7 +38,7 @@ Each item displays:
 | **Processing** | Blue | Being downloaded |
 | **Requestable** | Theme accent | Can be requested |
 
----
+
 
 ## Viewing Details
 
@@ -49,7 +49,7 @@ Select any item to view its full details:
 - **Media Info**: Release date, runtime, genres, ratings
 - **Seasons** (TV only): Browse individual seasons and episodes
 
----
+
 
 ## Requesting Content
 
@@ -77,7 +77,7 @@ After requesting, you can track status:
 - **Processing**: Currently being downloaded
 - **Available**: Downloaded and ready to watch
 
----
+
 
 ## Request Management (Admins)
 
@@ -95,7 +95,7 @@ If you're a Jellyseerr administrator, you'll see a **Pending Requests** banner w
 
 Configure auto-approval and user permissions in Jellyseerr's web interface.
 
----
+
 
 ## Setting Up Jellyseerr
 
@@ -127,7 +127,7 @@ Neptune will suggest a URL based on your Jellyfin server address.
 - Password must match your Jellyfin account
 - Check that Jellyfin authentication is enabled in Jellyseerr
 
----
+
 
 ## Tips
 

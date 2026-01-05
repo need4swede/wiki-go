@@ -6,7 +6,7 @@ order: 20
 
 When you select content, Neptune displays detailed information and actions.
 
----
+
 
 ## In This Section
 
@@ -16,7 +16,7 @@ When you select content, Neptune displays detailed information and actions.
 | [TV Shows](/browsing/item-details/tv-shows) | Series, seasons, episodes |
 | [Extras](/browsing/item-details/extras) | Special features, trailers, behind-the-scenes |
 
----
+
 
 ## Common Elements
 
@@ -28,7 +28,7 @@ All detail views display:
 - **Overview**: Plot summary
 - **Play button**: Start or resume playback
 
----
+
 
 ## Menu Options
 

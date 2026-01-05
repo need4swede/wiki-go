@@ -2,7 +2,7 @@
 
 Neptune supports multiple user profiles, allowing different family members or users to have their own personalized experience with separate watch history, favorites, and recommendations.
 
----
+
 
 ## Overview
 
@@ -12,7 +12,7 @@ The Profiles section in Settings displays:
 - **Other profiles**: Available users from your Jellyfin server
 - **Add Profile**: Button to sign in with additional accounts
 
----
+
 
 ## Viewing Profiles
 
@@ -22,7 +22,7 @@ Profiles appear as circular avatar cards showing:
 - **Username**: Display name
 - **Current indicator**: Green checkmark badge on active profile
 
----
+
 
 ## Switching Profiles
 
@@ -51,7 +51,7 @@ For Jellyfin accounts without passwords:
 2. Neptune signs in automatically
 3. No password prompt appears
 
----
+
 
 ## Adding a Profile
 
@@ -72,7 +72,7 @@ To add a new user profile to Neptune:
 5. Enter the code and approve
 6. Neptune adds the profile automatically
 
----
+
 
 ## Current User Settings
 
@@ -82,7 +82,7 @@ Select your own profile (with the checkmark) to access user-specific settings:
 - **Manage preferences**: User-specific app settings
 - **Sign out**: Remove your session from this device
 
----
+
 
 ## Profile Features
 
@@ -97,7 +97,7 @@ Each profile maintains separate:
 | **Next Up** | Your TV show queue |
 | **Theme** | Visual theme preference |
 
----
+
 
 ## Profile Visibility
 
@@ -109,7 +109,7 @@ Neptune shows profiles from multiple sources:
 
 This ensures you can always switch back to accounts you've used before.
 
----
+
 
 ## Admin Features
 
@@ -120,7 +120,7 @@ If your account has administrator privileges, you can:
 - View server diagnostics
 - Access advanced refresh options
 
----
+
 
 ## Session Management
 
@@ -147,7 +147,7 @@ To remove a saved session:
 - No passwords are stored locally
 - Sessions can be revoked from Jellyfin server settings
 
----
+
 
 ## Troubleshooting
 

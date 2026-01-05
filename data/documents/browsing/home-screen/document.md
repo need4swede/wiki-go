@@ -2,7 +2,7 @@
 
 Your personalized media hub.
 
----
+
 
 ## Hero Spotlight
 
@@ -37,7 +37,7 @@ Navigation arrows appear on the left and right edges when the spotlight zone is 
 
 The spotlight backdrop is always visible on Home, Movies, and Shows tabs. When you focus content cards below (like Continue Watching), the focused item's backdrop overlays the spotlight with its own image and metadata.
 
----
+
 
 ## Content Sections
 
@@ -50,7 +50,7 @@ The spotlight backdrop is always visible on Home, Movies, and Shows tabs. When y
 | **Recommended** | Personalized suggestions |
 | **Coming Soon** | Upcoming Jellyseerr requests |
 
----
+
 
 ## Customizing Sections
 
@@ -60,7 +60,7 @@ The spotlight backdrop is always visible on Home, Movies, and Shows tabs. When y
 
 Hero Spotlight always stays at the top.
 
----
+
 
 ## Movies & Shows Tabs
 
@@ -71,7 +71,7 @@ The **Movies** and **Shows** tabs work the same as the Home tab but filter conte
 
 Switching tabs updates both the spotlight and all content sections.
 
----
+
 
 ## Content Cards
 
@@ -81,7 +81,7 @@ Switching tabs updates both the spotlight and all content sections.
 
 **Focus behavior:** Cards scale up with white border on focus. The focused item's backdrop appears behind all content.
 
----
+
 
 ## Background Refresh
 

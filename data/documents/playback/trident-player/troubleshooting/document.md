@@ -6,7 +6,7 @@ order: 60
 
 Solutions for common playback issues.
 
----
+
 
 ## Video Issues
 
@@ -22,7 +22,7 @@ Solutions for common playback issues.
 - Try a different file to isolate the issue
 - Check your server logs for errors
 
----
+
 
 ### Stuttering or Choppy Playback
 
@@ -35,7 +35,7 @@ Solutions for common playback issues.
 - Use the "High Quality" buffer preset
 - Ensure your network can handle the bitrate
 
----
+
 
 ### HDR Looks Washed Out
 
@@ -50,7 +50,7 @@ Settings (Apple TV) > Video and Audio > Match Content > **Match Dynamic Range: O
 
 [More HDR help →](/playback/trident-player/hdr)
 
----
+
 
 ### Video Freezes But Audio Continues
 
@@ -61,7 +61,7 @@ This usually indicates a decode error.
 - Restarting playback
 - Checking if the file is corrupt
 
----
+
 
 ## Audio Issues
 
@@ -77,7 +77,7 @@ This usually indicates a decode error.
 - Verify HDMI-CEC settings
 - Try a different HDMI port
 
----
+
 
 ### Audio Out of Sync
 
@@ -88,7 +88,7 @@ This usually indicates a decode error.
 - Check if it happens with other files
 - Restart playback
 
----
+
 
 ### Audio Cuts Out Briefly
 
@@ -100,7 +100,7 @@ Brief silence (~100-200ms) is normal when seeking in TrueHD or DTS-HD MA content
 - May indicate network buffering
 - Try increasing buffer size in Settings
 
----
+
 
 ## Subtitle Issues
 
@@ -110,7 +110,7 @@ Brief silence (~100-200ms) is normal when seeking in TrueHD or DTS-HD MA content
 2. Make sure subtitles aren't set to "Off"
 3. Try selecting a different subtitle track
 
----
+
 
 ### Wrong Characters or Boxes
 
@@ -120,7 +120,7 @@ Brief silence (~100-200ms) is normal when seeking in TrueHD or DTS-HD MA content
 - A different subtitle file for the same content
 - An SRT version (most compatible format)
 
----
+
 
 ### Subtitles Out of Sync
 
@@ -129,7 +129,7 @@ Brief silence (~100-200ms) is normal when seeking in TrueHD or DTS-HD MA content
 - Adjust the subtitle delay setting
 - Positive values delay subtitles; negative values make them earlier
 
----
+
 
 ## Network Issues
 
@@ -144,7 +144,7 @@ Brief silence (~100-200ms) is normal when seeking in TrueHD or DTS-HD MA content
 - Increase buffer size in Settings
 - For very slow connections, consider requesting a lower-quality transcode
 
----
+
 
 ### Playback Starts Then Stops
 
@@ -158,7 +158,7 @@ Brief silence (~100-200ms) is normal when seeking in TrueHD or DTS-HD MA content
 - Checking your server's resource usage
 - Verifying no firewall is blocking the connection
 
----
+
 
 ## Seeking Issues
 
@@ -174,7 +174,7 @@ Settings > Playback > Accurate Seek: OFF
 
 This seeks to the nearest keyframe instead of the exact frame.
 
----
+
 
 ### Audio Gap After Seeking
 
@@ -186,7 +186,7 @@ Brief silence (~100-200ms) is expected. These lossless formats need to find a sy
 
 Should be minimal. Report if it's excessive.
 
----
+
 
 ## Getting Help
 

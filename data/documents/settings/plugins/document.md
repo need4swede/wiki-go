@@ -6,7 +6,7 @@ order: 20
 
 Manage Jellyfin server plugins.
 
----
+
 
 ## Detected Plugins
 
@@ -19,13 +19,13 @@ Neptune shows compatible plugins from your server:
 
 Plugins show "Detected" or "Not Found" status.
 
----
+
 
 ## Home Sections
 
 When detected, shows upcoming content from your *arr stack calendars in the Coming Soon row.
 
----
+
 
 ## Theme Songs
 

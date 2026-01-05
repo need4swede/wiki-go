@@ -6,7 +6,7 @@ order: 50
 
 Browse trending content and request movies and shows. Requires Jellyseerr.
 
----
+
 
 ## Content Sections
 
@@ -17,7 +17,7 @@ Browse trending content and request movies and shows. Requires Jellyseerr.
 | **Popular TV Shows** | Top-rated series |
 | **Coming Soon** | Upcoming releases |
 
----
+
 
 ## Status Badges
 
@@ -28,7 +28,7 @@ Browse trending content and request movies and shows. Requires Jellyseerr.
 | Processing | Blue | Being downloaded |
 | Requestable | Accent | Can be requested |
 
----
+
 
 ## Requesting Content
 
@@ -36,7 +36,7 @@ Browse trending content and request movies and shows. Requires Jellyseerr.
 
 **TV Shows:** Select item, press Request, choose seasons, sent to Sonarr.
 
----
+
 
 ## Admin Features
 
@@ -45,7 +45,7 @@ Administrators see a **Pending Requests** banner when approvals are needed.
 - Review each request
 - Approve or decline
 
----
+
 
 ## Setup
 

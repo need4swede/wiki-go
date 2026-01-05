@@ -2,13 +2,13 @@
 
 Instant, offline-capable search powered by a local database.
 
----
+
 
 ## Overview
 
 Neptune builds a complete search index on your device, enabling sub-50ms searches without any network calls. Unlike native Jellyfin search which queries the server API, Local Index Search works entirely offline and returns results as you type.
 
----
+
 
 ## Local Index vs Server API
 
@@ -22,7 +22,7 @@ Neptune builds a complete search index on your device, enabling sub-50ms searche
 | **Name variants** | "spiderman" → "Spider-Man" | Limited |
 | **Composer search** | Enriched via TMDb | Often missing |
 
----
+
 
 ## How It Works
 
@@ -54,7 +54,7 @@ Results in < 50ms
 
 No network calls. No server load. Instant results.
 
----
+
 
 ## What Gets Indexed
 
@@ -75,7 +75,7 @@ Every item in your library is indexed with:
 | **Plot** | Full overview/description text |
 | **Tags** | User and server tags |
 
----
+
 
 ## Smart Matching
 
@@ -123,7 +123,7 @@ Diacritics are normalized for easier typing:
 | naive | naïve |
 | resume | résumé |
 
----
+
 
 ## FTS5 Technology
 
@@ -144,7 +144,7 @@ Neptune uses SQLite FTS5 (Full-Text Search 5), the same technology that powers s
 | **Phrase matching** | "john williams" as phrase |
 | **Boolean queries** | AND/OR logic |
 
----
+
 
 ## Composer Enrichment
 
@@ -157,7 +157,7 @@ When Jellyseerr is connected, Neptune enriches the index:
 3. Composer names added to search index
 4. "John Williams" now finds all his scores
 
----
+
 
 ## Sync Behavior
 
@@ -182,7 +182,7 @@ Use when:
 
 During sync, a banner shows progress. Search works during sync but results may be incomplete until finished.
 
----
+
 
 ## Storage
 
@@ -196,7 +196,7 @@ The search index is stored locally on your Apple TV:
 
 The index persists across app updates and restarts.
 
----
+
 
 ## Enabling/Disabling
 
@@ -211,7 +211,7 @@ Disabling is useful if:
 - Storage space is limited
 - You want to test API search behavior
 
----
+
 
 ## Troubleshooting
 

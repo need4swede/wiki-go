@@ -28,7 +28,7 @@ If `ssl: false` (default) the app serves plain HTTP on `port` (8080 by default) 
 
 The Docker image published by GitHub exposes **both** 8080 and 443 so you can choose either scenario at runtime (see below).
 
----
+
 
 ## Native TLS Configuration
 
@@ -48,7 +48,7 @@ If `ssl: false` (default) the app serves plain HTTP on `port` (8080 by default) 
 
 The Docker image published by GitHub exposes **both** 8080 and 443 so you can choose either scenario at runtime.
 
----
+
 
 ## Docker (quick test)
 
@@ -136,7 +136,7 @@ docker-compose -f docker-compose-ssl.yml up -d
 
 `docker-compose-ssl.yml` maps host port 443 → container port 443 and mounts your certificate/key. Enable TLS in the application config.
 
----
+
 
 ### Binary
 

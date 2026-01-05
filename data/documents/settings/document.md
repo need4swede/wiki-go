@@ -6,7 +6,7 @@ order: 70
 
 Access Settings via the gear icon in the tab menu bar.
 
----
+
 
 ## In This Section
 
@@ -17,7 +17,7 @@ Access Settings via the gear icon in the tab menu bar.
 | [Search](/settings/search) | Local index, LLM search features |
 | [Subtitles](/settings/subtitles) | Subtitle appearance customization |
 
----
+
 
 ## Quick Reference
 
@@ -33,13 +33,13 @@ Access Settings via the gear icon in the tab menu bar.
 | **Jellyseerr** | Discovery service connection |
 | **About** | App version, diagnostics |
 
----
+
 
 ## Profiles
 
 Manage user profiles. See [Profiles](/personalization/profiles) for details.
 
----
+
 
 ## Server Info
 
@@ -48,7 +48,7 @@ View your connected Jellyfin server:
 - Server name and URL
 - Server version
 
----
+
 
 ## Jellyseerr
 
@@ -58,7 +58,7 @@ Manage Jellyseerr connection:
 - **Disconnect**: Remove connection
 - **Setup**: Configure (if not connected)
 
----
+
 
 ## About
 

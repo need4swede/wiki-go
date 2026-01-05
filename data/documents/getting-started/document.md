@@ -6,7 +6,7 @@ order: 10
 
 Get Neptune running on your Apple TV.
 
----
+
 
 ## In This Section
 
@@ -16,7 +16,7 @@ Get Neptune running on your Apple TV.
 | [Setup](/getting-started/setup) | Connect to Jellyfin, sign in, configure |
 | [Navigation](/getting-started/navigation) | Tab bar, remote controls |
 
----
+
 
 ## Quick Start
 
@@ -25,7 +25,7 @@ Get Neptune running on your Apple TV.
 3. **Sign in** with username/password or Quick Connect
 4. **Choose theme** to personalize your experience
 
----
+
 
 ## Next Steps
 

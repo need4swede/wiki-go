@@ -2,7 +2,7 @@
 
 Neptune features a guided setup designed to make onboarding as easy as possible. During this process, you will connect to your Jellyfin server, sign in with your account, and optionally configure additional features like Jellyseerr integration.
 
----
+
 
 ## Connecting to Your Jellyfin Server
 
@@ -50,7 +50,7 @@ If auto-discovery doesn't find your server, or if your server is hosted remotely
 - For local servers, use the IP address and port (e.g., `192.168.1.100:8096`)
 - For remote servers, use your domain name (e.g., `jellyfin.mydomain.com`)
 
----
+
 
 ## Signing In
 
@@ -81,7 +81,7 @@ Quick Connect lets you sign in without typing your password on the TV. This is e
 
 **Note:** Quick Connect must be enabled on your Jellyfin server. If you see an error, ask your server administrator to enable it in the server settings.
 
----
+
 
 ## Plugin Discovery
 
@@ -108,7 +108,7 @@ That's perfectly fine! Neptune works great without any plugins. You can install 
 
 All detected plugins can be enabled or disabled at any time in **Settings** > **Plugins**.
 
----
+
 
 ## Connecting to Jellyseerr (Optional)
 
@@ -161,7 +161,7 @@ Your session is saved, so you won't need to sign in again.
 
 If you don't have Jellyseerr or prefer not to set it up now, select **Skip for Now**. You can always configure Jellyseerr later in **Settings**.
 
----
+
 
 ## Choosing Your Theme
 
@@ -188,7 +188,7 @@ The final step of setup lets you personalize Neptune's appearance by choosing a 
 
 Your theme can be changed at any time in **Settings** > **Appearance**.
 
----
+
 
 ## Setup Complete
 

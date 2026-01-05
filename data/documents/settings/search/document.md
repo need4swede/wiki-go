@@ -6,7 +6,7 @@ order: 30
 
 Configure search behavior and LLM-powered features.
 
----
+
 
 ## Local Search Index
 
@@ -23,7 +23,7 @@ Neptune maintains a local FTS5 index for fast, offline-capable search.
 - Search results seem incomplete or incorrect
 - After major library changes (bulk imports, deletions)
 
----
+
 
 ## Semantic Search
 
@@ -53,7 +53,7 @@ For items not in the bundled dataset, Neptune can generate tags using a language
 - Your library includes very recent releases
 - You want complete coverage beyond bundled dataset
 
----
+
 
 ## Deep Learning
 
@@ -75,7 +75,7 @@ When enabled, the sparkle button appears in Search for LLM-powered queries.
 |---------|-------------|
 | **Enable Prompt Search** | Show LLM search option |
 
----
+
 
 ## Supported Providers
 
@@ -104,7 +104,7 @@ Use hosted language model services:
 
 Benefits: Higher quality, no local hardware needed.
 
----
+
 
 ## Adding a Provider
 
@@ -117,7 +117,7 @@ Benefits: Higher quality, no local hardware needed.
 5. **Test Connection** to verify
 6. Save
 
----
+
 
 ## Provider Settings
 
@@ -128,7 +128,7 @@ Benefits: Higher quality, no local hardware needed.
 | **Model** | Which model to use |
 | **Primary** | Set as default provider |
 
----
+
 
 ## Recommended Models
 
@@ -147,7 +147,7 @@ Benefits: Higher quality, no local hardware needed.
 | `gpt-4o-mini` | Fast, cost-effective |
 | `gpt-4o` | Highest quality |
 
----
+
 
 ## Troubleshooting
 

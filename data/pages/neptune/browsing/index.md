@@ -2,7 +2,7 @@
 
 This section covers how to find, explore, and navigate your media content in Neptune.
 
----
+
 
 ## In This Section
 
@@ -12,7 +12,7 @@ This section covers how to find, explore, and navigate your media content in Nep
 | [Item Details](item-details.md) | Movie and TV show pages, seasons, episodes, extras |
 | [Search](search.md) | Finding content, natural language queries, Jellyseerr results |
 
----
+
 
 ## Overview
 
@@ -59,7 +59,7 @@ Find content across your entire library:
 
 [Learn more about Search →](search.md)
 
----
+
 
 ## Tips
 

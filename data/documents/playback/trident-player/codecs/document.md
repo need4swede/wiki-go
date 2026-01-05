@@ -6,7 +6,7 @@ order: 10
 
 Neptune plays virtually any video or audio format directly, without requiring your server to transcode.
 
----
+
 
 ## Video Formats
 
@@ -29,7 +29,7 @@ All support hardware acceleration for smooth playback with minimal battery impac
 | **MPEG-2** | DVDs, broadcast recordings |
 | **VC-1** | Windows Media Video, early Blu-rays |
 
----
+
 
 ## Container Support
 
@@ -45,7 +45,7 @@ Neptune reads all common file formats:
 | **Blu-ray** | .m2ts, .mts |
 | **DVD** | .vob, .mpg |
 
----
+
 
 ## Resolution & Quality
 
@@ -56,7 +56,7 @@ Neptune reads all common file formats:
 | **High Frame Rate** | Up to 60fps |
 | **10-bit Color** | Full HDR support |
 
----
+
 
 ## Audio Formats
 
@@ -89,7 +89,7 @@ Preserve every bit of your premium audio tracks.
 | **MP3** | Universal compatibility |
 | **Vorbis** | Open source compressed |
 
----
+
 
 ## Automatic Channel Matching
 
@@ -103,7 +103,7 @@ Neptune automatically matches audio to your system:
 
 Downmixing preserves dialog clarity and spatial positioning - nothing important gets lost.
 
----
+
 
 ## Dolby Atmos
 
@@ -118,7 +118,7 @@ Dolby Atmos includes both a base surround track and spatial object metadata. Nep
 
 The spatial object metadata requires proprietary decoding not available to third-party apps. This is the same limitation as other premium players like Infuse.
 
----
+
 
 ## Subtitle Formats
 
@@ -138,7 +138,7 @@ The spatial object metadata requires proprietary decoding not available to third
 | **VobSub** | DVD subtitles |
 | **DVB** | Broadcast subtitles |
 
----
+
 
 ## What If a Format Isn't Supported?
 

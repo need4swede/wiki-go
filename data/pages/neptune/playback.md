@@ -2,7 +2,7 @@
 
 Neptune features a custom video player designed specifically for tvOS, with intuitive controls and full support for audio tracks, subtitles, and chapter navigation.
 
----
+
 
 ## Starting Playback
 
@@ -17,7 +17,7 @@ Neptune features a custom video player designed specifically for tvOS, with intu
 - **Episode selection**: Select any episode to play it directly
 - **Extras**: Select trailers, behind-the-scenes content, or other special features
 
----
+
 
 ## Player Controls
 
@@ -52,7 +52,7 @@ While controls are visible:
 2. The timeline shows your target position
 3. Release to seek to that position
 
----
+
 
 ## Audio and Subtitles
 
@@ -86,7 +86,7 @@ The Subtitles tab shows all available subtitle tracks:
 
 Select a track to enable subtitles immediately.
 
----
+
 
 ## Subtitle Customization
 
@@ -116,7 +116,7 @@ Choose from: White, Yellow, Green, Cyan, or Blue
 
 When using Box style, you can also adjust the **Background Opacity** from 30% to 100%.
 
----
+
 
 ## Playback Info
 
@@ -127,7 +127,7 @@ Access additional playback information by selecting the info button in the contr
 - **Subtitles**: Current subtitle track details
 - **Media source**: File name and container format
 
----
+
 
 ## Skip Segments
 
@@ -140,7 +140,7 @@ When enabled on your Jellyfin server (via plugins like Intro Skipper), Neptune s
 
 Press the Skip button to jump past the segment automatically.
 
----
+
 
 ## Playback Speed
 
@@ -155,7 +155,7 @@ Adjust playback speed from the settings overlay:
 | 1.5x | Quick viewing |
 | 2.0x | Fast forward through content |
 
----
+
 
 ## Episode Auto-Play
 
@@ -165,7 +165,7 @@ When watching TV shows:
 - A countdown appears before auto-play begins
 - Press any button to cancel auto-play and stay on the current episode
 
----
+
 
 ## Trident Player (Experimental)
 
@@ -185,7 +185,7 @@ Trident may help with:
 
 **Note**: Trident is experimental and may cause playback issues with some content. If you experience problems, disable it in Settings.
 
----
+
 
 ## Troubleshooting
 

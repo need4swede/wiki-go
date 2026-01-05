@@ -2,7 +2,7 @@
 
 Access Settings by selecting the gear icon in the tab menu bar or navigating to the Settings tab.
 
----
+
 
 ## Profiles
 
@@ -12,7 +12,7 @@ Manage user profiles for your Jellyfin server. See [Profiles](profiles.md) for d
 - Switch between users
 - Add new profiles
 
----
+
 
 ## Playback
 
@@ -29,7 +29,7 @@ Neptune's experimental custom video player for improved compatibility.
 
 **Note**: Trident is experimental. If you experience playback issues, disable this option.
 
----
+
 
 ## Plugins
 
@@ -52,7 +52,7 @@ Select a detected plugin to configure its settings:
 - Enable/disable theme song playback
 - Adjust volume level
 
----
+
 
 ## Deep Learning (Experimental)
 
@@ -82,7 +82,7 @@ Enable natural language features like prompt-based search.
 4. Test connection
 5. Save configuration
 
----
+
 
 ## Search
 
@@ -105,7 +105,7 @@ When language models are enabled:
 |---------|-------------|
 | **Enable Prompt Search** | Use AI for natural language queries |
 
----
+
 
 ## Image Cache
 
@@ -116,7 +116,7 @@ Manage cached images to free up storage space.
 | **Clear Cache** | Remove all cached images |
 | **Cache Size** | View current cache usage |
 
----
+
 
 ## Developer Tools
 
@@ -127,7 +127,7 @@ Advanced options for troubleshooting and debugging.
 | **Debug Logging** | Enable verbose logging |
 | **Show Technical Info** | Display debug overlays |
 
----
+
 
 ## Server
 
@@ -139,7 +139,7 @@ View information about your connected Jellyfin server.
 | **Server URL** | Connection address |
 | **Version** | Jellyfin server version |
 
----
+
 
 ## Jellyseerr
 
@@ -157,7 +157,7 @@ Shows whether Jellyseerr is connected and the server URL.
 | **Disconnect** | Remove Jellyseerr connection |
 | **Setup** | Configure Jellyseerr (if not connected) |
 
----
+
 
 ## About
 
@@ -180,7 +180,7 @@ View app information and access support resources.
 | **Get Help** | Access support resources and documentation |
 | **Diagnostics** | View system diagnostics and logs |
 
----
+
 
 ## Subtitle Preferences
 
@@ -212,7 +212,7 @@ Choose from: White, Yellow, Green, Cyan, Blue
 
 When using Box style, adjust opacity from 30% to 100%.
 
----
+
 
 ## Home Menu
 

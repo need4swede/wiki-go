@@ -2,7 +2,7 @@
 
 Pre-computed thematic analysis for instant conceptual search.
 
----
+
 
 ## Overview
 
@@ -10,7 +10,7 @@ Neptune ships with semantic tags for over 4,000 movies and TV shows. These tags 
 
 For items not in the bundled dataset, Neptune can generate tags using a configured language model.
 
----
+
 
 ## How It Works
 
@@ -48,7 +48,7 @@ Instant FTS5 match on semantic tags
 Results in < 50ms
 ```
 
----
+
 
 ## Bundled Dataset
 
@@ -61,7 +61,7 @@ Neptune includes pre-analyzed semantic tags for:
 
 Most libraries will have significant coverage from the bundled dataset alone.
 
----
+
 
 ## What's in a Semantic Tag
 
@@ -74,7 +74,7 @@ Each item has tags describing:
 | **Setting** | dystopian, space, historical, suburban |
 | **Keywords** | robots, magic, sports, courtroom |
 
----
+
 
 ## Example Searches
 
@@ -91,7 +91,7 @@ Semantic tags enable queries that keyword search can't handle:
 | "slow burn" | There Will Be Blood, The Witch |
 | "claustrophobic" | Buried, 127 Hours, Panic Room |
 
----
+
 
 ## Benefits vs Prompt Search
 
@@ -107,7 +107,7 @@ Use both together for best results:
 - Semantic Search: instant matches from tags
 - Prompt Search: complex queries, filters, and fallback
 
----
+
 
 ## Tag Generation (Optional)
 
@@ -131,7 +131,7 @@ For items not covered by the bundled dataset, Neptune can generate semantic tags
 - Your library includes recent releases not yet in bundled dataset
 - You want complete coverage
 
----
+
 
 ## Enabling Semantic Search
 
@@ -153,7 +153,7 @@ Settings shows:
 - Items needing LLM analysis
 - Analysis progress percentage
 
----
+
 
 ## Storage
 
@@ -163,7 +163,7 @@ Semantic tags are stored in:
 - Survives app updates
 - Bundled tags loaded on first sync
 
----
+
 
 ## Integration with Search
 
@@ -177,7 +177,7 @@ Semantic Search works alongside other search modes:
 
 All sources combine for comprehensive results.
 
----
+
 
 ## Per-Item Refresh
 
@@ -192,7 +192,7 @@ Useful when:
 - Item metadata was updated
 - Bundled tags are outdated
 
----
+
 
 ## Privacy
 

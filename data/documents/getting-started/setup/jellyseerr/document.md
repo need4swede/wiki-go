@@ -6,7 +6,7 @@ order: 40
 
 Connect to Jellyseerr for content discovery and requests.
 
----
+
 
 ## What is Jellyseerr?
 
@@ -16,7 +16,7 @@ Jellyseerr lets you:
 - Request movies and TV shows
 - Track request status
 
----
+
 
 ## Automatic Detection
 
@@ -27,7 +27,7 @@ Neptune tries to find Jellyseerr automatically:
 
 If detected, select **Login to Jellyseerr**.
 
----
+
 
 ## Manual Setup
 
@@ -43,7 +43,7 @@ If detected, select **Login to Jellyseerr**.
 2. Enter your complete Jellyseerr address
 3. Press **Connect**
 
----
+
 
 ## Signing In
 
@@ -55,7 +55,7 @@ Neptune uses your Jellyfin credentials:
 
 Your session is saved for future use.
 
----
+
 
 ## Skipping Setup
 

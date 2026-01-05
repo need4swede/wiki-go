@@ -2,7 +2,7 @@
 
 Welcome to the Neptune documentation. Neptune is a native tvOS media client for Jellyfin servers, designed to provide a beautiful, intuitive experience on your Apple TV.
 
----
+
 
 ## Quick Start
 
@@ -12,7 +12,7 @@ New to Neptune? Start here:
 2. **[Navigation](getting-started/navigation.md)** - Learn the basics of getting around
 3. **[Home Screen](browsing/home-screen.md)** - Customize your viewing experience
 
----
+
 
 ## Documentation
 
@@ -62,7 +62,7 @@ Make Neptune your own.
 |------|-------------|
 | [Settings](settings.md) | All configuration options |
 
----
+
 
 ## Features at a Glance
 
@@ -76,7 +76,7 @@ Make Neptune your own.
 | **Plugin Support** | Home Sections, Theme Songs, and more |
 | **Instant Search** | Local FTS5 index for natural language queries |
 
----
+
 
 ## Requirements
 
@@ -84,7 +84,7 @@ Make Neptune your own.
 - **Jellyfin Server**: Any recent version
 - **Optional**: Jellyseerr for content discovery and requests
 
----
+
 
 ## Getting Help
 

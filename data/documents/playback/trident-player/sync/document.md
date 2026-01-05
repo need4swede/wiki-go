@@ -6,7 +6,7 @@ order: 30
 
 Smooth, perfectly synchronized playback - every time.
 
----
+
 
 ## Perfect Audio-Video Sync
 
@@ -20,7 +20,7 @@ Neptune uses audio as the master timing reference. Video frames are displayed pr
 
 When playback begins, Neptune automatically calibrates audio-video sync for your specific setup. This takes about 1-2 seconds and happens transparently.
 
----
+
 
 ## Smooth Playback
 
@@ -39,7 +39,7 @@ Neptune buffers content intelligently:
 
 If playback needs to pause to buffer more content, Neptune keeps audio and video in sync. When playback resumes, everything is still perfectly aligned.
 
----
+
 
 ## Seeking
 
@@ -55,7 +55,7 @@ After seeking, it takes 1-2 seconds for sync to recalibrate. This is normal - Ne
 
 With lossless audio formats like Dolby TrueHD, there may be a brief moment of silence (~100-200ms) after seeking while the audio decoder resyncs. This is inherent to the format.
 
----
+
 
 ## Network Streaming
 
@@ -73,7 +73,7 @@ Neptune adapts to your network conditions:
 
 If your network slows down during playback, Neptune has buffered content ahead to keep playing. You may see brief buffering only if the slowdown persists.
 
----
+
 
 ## Premium Content
 
@@ -85,7 +85,7 @@ Neptune is optimized for lossless audio formats like Dolby TrueHD. These formats
 
 Complex 4K HDR content plays smoothly thanks to hardware decoding and smart buffer management. Even demanding Dolby Vision content plays without issues.
 
----
+
 
 ## Troubleshooting
 

@@ -6,7 +6,7 @@ order: 40
 
 Premium audio playback for your premium content.
 
----
+
 
 ## Supported Formats
 
@@ -37,7 +37,7 @@ Preserve every bit of your Blu-ray audio tracks:
 | **Opus** | Efficient modern codec |
 | **MP3** | Universal compatibility |
 
----
+
 
 ## Multi-Channel Support
 
@@ -60,7 +60,7 @@ When your system has fewer channels than the source, Neptune creates an intellig
 
 Nothing important gets lost.
 
----
+
 
 ## Dolby Atmos
 
@@ -77,7 +77,7 @@ Dolby Atmos includes both a base surround track and spatial object metadata. Nep
 
 The spatial object metadata in Atmos requires proprietary decoding that isn't available to third-party apps. Neptune delivers the full-quality base audio track - the same limitation applies to other premium players like Infuse.
 
----
+
 
 ## Audio Quality
 
@@ -89,7 +89,7 @@ Neptune decodes lossless audio to preserve maximum quality. Your carefully selec
 
 Unlike transcoding, Neptune plays your audio files directly. What's in the file is what you hear.
 
----
+
 
 ## Instant Track Switching
 
@@ -98,7 +98,7 @@ Switch between audio tracks instantly during playback:
 - Switch to commentary tracks
 - No rebuffering required
 
----
+
 
 ## Troubleshooting
 

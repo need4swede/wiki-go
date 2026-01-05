@@ -6,7 +6,7 @@ order: 10
 
 Movie detail pages show everything about a film.
 
----
+
 
 ## Top Section
 
@@ -14,7 +14,7 @@ Movie detail pages show everything about a film.
 - **Progress bar**: Watch progress indicator
 - **Menu button**: Additional options
 
----
+
 
 ## Media Badges
 
@@ -37,7 +37,7 @@ Color-coded badges show video and audio quality.
 | DTS:X (Red) | DTS:X audio |
 | Lossless (Gold) | TrueHD, DTS-HD MA |
 
----
+
 
 ## Content Sections
 

@@ -6,7 +6,7 @@ order: 20
 
 Import your own themes via JSON.
 
----
+
 
 ## Importing a Theme
 
@@ -16,7 +16,7 @@ Import your own themes via JSON.
 4. Enter the URL
 5. Neptune validates and imports the theme
 
----
+
 
 ## Theme Structure
 
@@ -31,7 +31,7 @@ Required fields:
 | `useAnimatedBackground` | Enable/disable animation |
 | `colors` | Complete color definitions |
 
----
+
 
 ## Color Categories
 
@@ -46,7 +46,7 @@ Required fields:
 | Tab Bar | background, activeBackground, activeText |
 | Playback Controls | All player UI colors |
 
----
+
 
 ## Color Format
 
@@ -61,7 +61,7 @@ RGBA values from 0.0 to 1.0:
 }
 ```
 
----
+
 
 ## Disabling Animation
 

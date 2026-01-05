@@ -6,7 +6,7 @@ order: 20
 
 Neptune guides you through a simple setup process to get started.
 
----
+
 
 ## Setup Steps
 
@@ -17,7 +17,7 @@ Neptune guides you through a simple setup process to get started.
 | [Plugins](/getting-started/setup/plugins) | Optional server plugins |
 | [Jellyseerr](/getting-started/setup/jellyseerr) | Optional content discovery |
 
----
+
 
 ## Quick Overview
 

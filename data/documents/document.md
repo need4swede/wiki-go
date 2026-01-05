@@ -2,7 +2,7 @@
 
 A native tvOS media client for Jellyfin servers.
 
----
+
 
 ## Quick Start
 
@@ -10,7 +10,7 @@ A native tvOS media client for Jellyfin servers.
 2. [Navigation](/getting-started/navigation) - Learn the basics
 3. [Home Screen](/browsing/home-screen) - Start browsing
 
----
+
 
 ## Documentation
 
@@ -64,7 +64,7 @@ A native tvOS media client for Jellyfin servers.
 |------|-------------|
 | [Settings](/settings) | All configuration options |
 
----
+
 
 ## Key Features
 
@@ -74,7 +74,7 @@ A native tvOS media client for Jellyfin servers.
 - **Jellyseerr Integration**: Browse and request new content
 - **Custom Themes**: Six built-in themes plus JSON import for custom designs
 
----
+
 
 ## Requirements
 

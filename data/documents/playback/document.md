@@ -6,7 +6,7 @@ order: 30
 
 Video playback in Neptune.
 
----
+
 
 ## In This Section
 
@@ -16,7 +16,7 @@ Video playback in Neptune.
 | [Audio & Subtitles](/playback/audio-subtitles) | Track selection, customization |
 | [Trident Player](/playback/trident-player) | Custom engine, HDR, codecs |
 
----
+
 
 ## Starting Playback
 
@@ -24,7 +24,7 @@ Video playback in Neptune.
 
 **From Details:** Press Play button or select an episode.
 
----
+
 
 ## During Playback
 
@@ -35,13 +35,13 @@ Tap the touch surface to reveal controls:
 - Track selection
 - Playback info
 
----
+
 
 ## Episode Auto-Play
 
 TV shows automatically advance to the next episode. A countdown appears before auto-play - press any button to cancel.
 
----
+
 
 ## Troubleshooting
 

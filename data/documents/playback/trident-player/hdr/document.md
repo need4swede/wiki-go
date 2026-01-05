@@ -6,7 +6,7 @@ order: 20
 
 Experience your HDR content the way it was meant to be seen.
 
----
+
 
 ## Supported Formats
 
@@ -19,7 +19,7 @@ Neptune supports all major HDR formats:
 | **HLG** | Broadcast HDR standard |
 | **Dolby Vision** | Premium dynamic HDR with the best picture quality |
 
----
+
 
 ## Automatic Detection
 
@@ -31,7 +31,7 @@ Neptune automatically detects HDR content and configures playback appropriately.
 
 No manual configuration required.
 
----
+
 
 ## Display Mode Switching
 
@@ -49,7 +49,7 @@ For automatic HDR switching to work, enable this Apple TV setting:
 
 Without this setting, HDR content will still play but may appear washed out.
 
----
+
 
 ## Dolby Vision
 
@@ -61,7 +61,7 @@ Dolby Vision provides scene-by-scene optimization for the best possible picture.
 
 If your TV doesn't support Dolby Vision, Neptune automatically falls back to HDR10. You get the best quality your TV can display, automatically.
 
----
+
 
 ## Frame Rate Matching
 
@@ -76,7 +76,7 @@ Neptune also matches the display refresh rate to your content:
 
 This eliminates judder for smooth, cinema-like playback.
 
----
+
 
 ## Requirements
 
@@ -97,7 +97,7 @@ For reliable 4K HDR:
 - Use **Premium High Speed** or **Ultra High Speed** HDMI cables
 - Poor cables can cause HDR failures, sparkles, or blackouts
 
----
+
 
 ## Troubleshooting
 

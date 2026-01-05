@@ -6,7 +6,7 @@ order: 10
 
 Navigate playback with the Apple TV remote.
 
----
+
 
 ## Control Bar
 
@@ -18,7 +18,7 @@ Tap the touch surface to show controls:
 
 Auto-hides after 5 seconds.
 
----
+
 
 ## Quick Actions
 
@@ -30,7 +30,7 @@ Auto-hides after 5 seconds.
 | Show controls | Tap touch surface |
 | Exit | Menu button |
 
----
+
 
 ## Scrubbing
 
@@ -42,7 +42,7 @@ With controls visible:
 
 Faster swipes cover more distance.
 
----
+
 
 ## Skip Segments
 
@@ -54,7 +54,7 @@ When Intro Skipper plugin is installed, a Skip button appears during:
 
 Press Skip to jump past the segment.
 
----
+
 
 ## Playback Speed
 
@@ -62,7 +62,7 @@ Speeds available: 0.5x, 0.75x, 1.0x, 1.25x, 1.5x, 2.0x
 
 Resets to normal when starting new content.
 
----
+
 
 ## Playback Info
 

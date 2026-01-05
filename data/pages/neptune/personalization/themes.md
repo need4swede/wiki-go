@@ -2,7 +2,7 @@
 
 Neptune features a comprehensive theming system with beautiful built-in themes and support for custom themes.
 
----
+
 
 ## Overview
 
@@ -15,7 +15,7 @@ Themes control the entire visual appearance of Neptune:
 - Player controls appearance
 - Media quality badges
 
----
+
 
 ## Built-in Themes
 
@@ -75,7 +75,7 @@ Warm reds and oranges for a fiery atmosphere.
 - **Accent**: Orange/red tones
 - **Best for**: Action movies, warm ambiance
 
----
+
 
 ## Changing Themes
 
@@ -95,7 +95,7 @@ When first setting up Neptune or adding a new profile, you'll choose a theme as 
 
 Each user profile can have its own theme preference. When switching profiles, Neptune automatically applies that user's selected theme.
 
----
+
 
 ## Animated Backgrounds
 
@@ -116,7 +116,7 @@ The **Void** theme uses a flat black background without animation, which:
 - Saves power on supported TVs
 - Provides maximum contrast
 
----
+
 
 ## Theme Elements
 
@@ -158,7 +158,7 @@ Playback UI elements follow the theme:
 - Timestamps match text styling
 - Control backgrounds use theme surfaces
 
----
+
 
 ## Custom Themes (Advanced)
 
@@ -214,7 +214,7 @@ Colors use RGBA values from 0.0 to 1.0:
 }
 ```
 
----
+
 
 ## Tips
 

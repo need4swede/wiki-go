@@ -6,7 +6,7 @@ order: 60
 
 Make Neptune your own.
 
----
+
 
 ## In This Section
 
@@ -15,7 +15,7 @@ Make Neptune your own.
 | [Profiles](/personalization/profiles) | Multiple users, switching, preferences |
 | [Themes](/personalization/themes) | Built-in and custom themes |
 
----
+
 
 ## Profiles
 
@@ -27,7 +27,7 @@ Each user gets separate:
 
 Switch profiles instantly from Settings.
 
----
+
 
 ## Themes
 
@@ -37,7 +37,7 @@ Six built-in themes from calming Ocean to minimal Void.
 - Per-profile preferences
 - Custom theme import via JSON
 
----
+
 
 ## Backdrop Settings
 
@@ -48,7 +48,7 @@ Control how backdrops appear throughout Neptune:
 
 These settings affect both the hero spotlight and hover backdrops on content cards.
 
----
+
 
 ## Quick Tips
 

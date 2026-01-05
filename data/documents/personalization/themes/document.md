@@ -6,7 +6,7 @@ order: 10
 
 Customize Neptune's visual appearance.
 
----
+
 
 ## In This Section
 
@@ -15,7 +15,7 @@ Customize Neptune's visual appearance.
 | [Built-in Themes](/personalization/themes/built-in) | Six pre-designed themes |
 | [Custom Themes](/personalization/themes/custom) | Import custom JSON themes |
 
----
+
 
 ## What Themes Control
 
@@ -26,7 +26,7 @@ Customize Neptune's visual appearance.
 - Player controls appearance
 - Media quality badges
 
----
+
 
 ## Changing Themes
 
@@ -39,13 +39,13 @@ Customize Neptune's visual appearance.
 3. Focus on a theme to preview live
 4. Select to apply
 
----
+
 
 ## Per-Profile Themes
 
 Each user profile can have its own theme. Neptune switches themes automatically when you switch profiles.
 
----
+
 
 ## Tips
 

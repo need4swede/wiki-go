@@ -2,7 +2,7 @@
 
 The home screen is your personalized media hub, featuring a curated selection of content tailored to your viewing habits.
 
----
+
 
 ## Hero Spotlight
 
@@ -19,7 +19,7 @@ At the top of the home screen, the Hero Spotlight carousel showcases content you
 - Press **Select** on any item to view its details
 - Press **Menu** to exit gallery mode
 
----
+
 
 ## Content Sections
 
@@ -70,7 +70,7 @@ Movie recommendations based on films you've recently watched. Each row shows sim
 
 Any additional libraries you've created in Jellyfin beyond the standard Movies and TV Shows collections.
 
----
+
 
 ## Customizing Your Home Screen
 
@@ -107,7 +107,7 @@ Some sections only appear on specific tabs:
 | Because You Watched | Yes | Yes | No |
 | Custom Libraries | Yes | No | No |
 
----
+
 
 ## Content Cards
 
@@ -134,7 +134,7 @@ When you focus on a card:
 - Additional details may appear
 - Background may update to show item backdrop (if enabled in settings)
 
----
+
 
 ## Background Refresh
 
@@ -146,7 +146,7 @@ Neptune automatically refreshes content in the background:
 
 New content appears automatically without needing to manually refresh.
 
----
+
 
 ## Tips
 
