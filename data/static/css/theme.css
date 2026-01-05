@@ -202,7 +202,8 @@ body.has-password-warning .hamburger {
 }
 
 .sidebar-footer-buttons {
-    display: none;
+    display: flex;
+    /* flex */
     align-items: center;
     justify-content: center;
     gap: 10px;

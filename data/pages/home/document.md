@@ -1,8 +1,11 @@
-<img src="https://neptuneplayer.b-cdn.net/assets/icons/banner-colored-text.png" alt="Neptune Logo" width="550" align="left">
+<img src="https://neptuneplayer.b-cdn.net/assets/icons/banner-colored-text.png" alt="Neptune Logo" width="550" align="center" style="margin-bottom: 0;">
 <br clear="all">
+<h4 style="text-align:center; margin-top: 0;">Neptune is a Jellyfin client, written in Swift and designed natively for Apple's tvOS</h4>
 
-#### Neptune is a Jellyfin client, written in Swift and designed natively for Apple's tvOS.
----
+
+![home-spotlight.png](home-spotlight.png)
+
+
 
 ## Quick Start
 
