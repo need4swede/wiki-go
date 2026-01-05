@@ -83,7 +83,7 @@ The rendered output looks like this:
 >> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
 
 ### Blockquotes with Other Elements
-Blockquotes can contain other Markdown formatted elements. Not all elements can be used — you'll need to experiment to see which ones work.
+Blockquotes can contain other Markdown formatted elements. Not all elements can be used  -  you'll need to experiment to see which ones work.
 ```text
 > #### The quarterly results look great!
 >

@@ -196,7 +196,7 @@ Useful when:
 
 ## Privacy
 
-- Bundled tags included in app—no network needed
+- Bundled tags included in app - no network needed
 - LLM-generated tags stored locally on device
 - Analysis queries sent to configured provider only
 - No tags or results uploaded anywhere

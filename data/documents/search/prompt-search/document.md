@@ -142,7 +142,7 @@ When the language model is unavailable or times out:
 
 1. Query falls back to regular FTS5 search
 2. Best-effort keyword matching applied
-3. No error shown—degraded gracefully
+3. No error shown - degraded gracefully
 
 ---
 
