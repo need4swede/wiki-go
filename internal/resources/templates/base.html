@@ -224,14 +224,6 @@
             {{if not .Config.Wiki.DisableComments}}
                 {{template "comments" .}}
             {{end}}
-        <footer class="footer">
-            <div class="footer-last-modified">
-                {{t "footer.last_edited"}}: {{formatTime .LastModified .Config.Wiki.Timezone "2006-01-02 15:04:05"}}
-            </div>
-            <div>
-                {{t "footer.powered_by"}} <a href="https://github.com/leomoon-studios/wiki-go" class="footer-powered" target="_blank">LeoMoon Wiki-Go</a> <span class="version" {{if eq .UserRole "admin"}}style="display: inline !important"{{else}}style="display: none !important"{{end}}>{{getVersion}}</span>
-            </div>
-        </footer>
     </div>
 
     <div class="search-results" dir="auto">
