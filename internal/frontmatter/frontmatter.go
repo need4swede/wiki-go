@@ -10,8 +10,9 @@ import (
 // Metadata represents the frontmatter data structure
 // This can be expanded with additional fields in the future
 type Metadata struct {
-	Layout string `yaml:"layout,omitempty"`
-	Order  *int   `yaml:"order,omitempty"` // Order for navigation sorting (lower = first)
+	Layout                  string `yaml:"layout,omitempty"`
+	Order                   *int   `yaml:"order,omitempty"`                     // Order for navigation sorting (lower = first)
+	DisplayImageAttachments *bool  `yaml:"display_image_attachments,omitempty"` // Show images in attachments section (default: false)
 }
 
 // Parse extracts and parses frontmatter from markdown content

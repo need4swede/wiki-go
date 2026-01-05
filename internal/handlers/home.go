@@ -11,11 +11,12 @@ import (
 	"strings"
 	"time"
 
+	"wiki-go/internal/auth"
 	"wiki-go/internal/config"
+	"wiki-go/internal/frontmatter"
 	"wiki-go/internal/i18n"
 	"wiki-go/internal/types"
 	"wiki-go/internal/utils"
-	"wiki-go/internal/auth"
 )
 
 // Default homepage content
@@ -559,6 +560,13 @@ func HomeHandler(w http.ResponseWriter, r *http.Request, cfg *config.Config) {
 		rawContent = string(content)
 	}
 
+	// Parse frontmatter to get display_image_attachments setting
+	var displayImageAttachments bool
+	metadata, _, hasFrontmatter := frontmatter.Parse(string(content))
+	if hasFrontmatter && metadata.DisplayImageAttachments != nil {
+		displayImageAttachments = *metadata.DisplayImageAttachments
+	}
+
 	// Get file information for last modified date
 	docInfo, err := os.Stat(homepagePath)
 	var lastModified time.Time
@@ -588,18 +596,19 @@ func HomeHandler(w http.ResponseWriter, r *http.Request, cfg *config.Config) {
 
 	// Render the page
 	data := &types.PageData{
-		Navigation:         nav,
-		Content:            renderedContent,
-		Breadcrumbs:        []types.BreadcrumbItem{{Title: "Home", Path: "/", IsLast: true}},
-		Config:             cfg,
-		LastModified:       lastModified,
-		CurrentDir:         &types.NavItem{Title: "Home", Path: "/", IsDir: true, IsActive: true},
-		AvailableLanguages: i18n.GetAvailableLanguages(),
-		IsAuthenticated:    isAuthenticated,
-		UserRole:           userRole,
-		DocPath:            "pages/home", // Special path for homepage
-		IsEditMode:         isEditMode,
-		RawContent:         rawContent,
+		Navigation:              nav,
+		Content:                 renderedContent,
+		Breadcrumbs:             []types.BreadcrumbItem{{Title: "Home", Path: "/", IsLast: true}},
+		Config:                  cfg,
+		LastModified:            lastModified,
+		CurrentDir:              &types.NavItem{Title: "Home", Path: "/", IsDir: true, IsActive: true},
+		AvailableLanguages:      i18n.GetAvailableLanguages(),
+		IsAuthenticated:         isAuthenticated,
+		UserRole:                userRole,
+		DocPath:                 "pages/home", // Special path for homepage
+		IsEditMode:              isEditMode,
+		RawContent:              rawContent,
+		DisplayImageAttachments: displayImageAttachments,
 	}
 
 	renderTemplate(w, data)

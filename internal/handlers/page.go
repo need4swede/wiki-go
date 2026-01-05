@@ -118,6 +118,7 @@ func PageHandler(w http.ResponseWriter, r *http.Request, cfg *config.Config) {
 	var lastModified time.Time
 	var dirContent template.HTML
 	var rawContent string // Raw markdown content for edit mode
+	var displayImageAttachments bool // Whether to show images in attachments section
 
 	// Look for document.md in the directory
 	docPath := filepath.Join(fsPath, "document.md")
@@ -135,11 +136,14 @@ func PageHandler(w http.ResponseWriter, r *http.Request, cfg *config.Config) {
 			rawContent = string(mdContent)
 		}
 
-		// Parse frontmatter to get document layout
+		// Parse frontmatter to get document layout and other settings
 		metadata, _, hasFrontmatter := frontmatter.Parse(string(mdContent))
 		documentLayout := ""
 		if hasFrontmatter {
 			documentLayout = metadata.Layout
+			if metadata.DisplayImageAttachments != nil {
+				displayImageAttachments = *metadata.DisplayImageAttachments
+			}
 		}
 
 		// Use the document path for rendering to handle local file references
@@ -244,22 +248,23 @@ func PageHandler(w http.ResponseWriter, r *http.Request, cfg *config.Config) {
 
 	// Prepare template data
 	data := &types.PageData{
-		Navigation:         nav,
-		Content:            content,
-		DirContent:         dirContent,
-		Breadcrumbs:        breadcrumbs,
-		Config:             cfg,
-		LastModified:       lastModified,
-		CurrentDir:         navItem,
-		AvailableLanguages: i18n.GetAvailableLanguages(),
-		Comments:           commentsList,
-		CommentsAllowed:    commentsAllowed,
-		IsAuthenticated:    isAuthenticated,
-		UserRole:           userRole,
-		DocPath:            decodedPath,
-		DocumentLayout:     navItem.DocumentLayout,
-		IsEditMode:         isEditMode,
-		RawContent:         rawContent, // Pass raw markdown content for edit mode
+		Navigation:              nav,
+		Content:                 content,
+		DirContent:              dirContent,
+		Breadcrumbs:             breadcrumbs,
+		Config:                  cfg,
+		LastModified:            lastModified,
+		CurrentDir:              navItem,
+		AvailableLanguages:      i18n.GetAvailableLanguages(),
+		Comments:                commentsList,
+		CommentsAllowed:         commentsAllowed,
+		IsAuthenticated:         isAuthenticated,
+		UserRole:                userRole,
+		DocPath:                 decodedPath,
+		DocumentLayout:          navItem.DocumentLayout,
+		IsEditMode:              isEditMode,
+		RawContent:              rawContent,              // Pass raw markdown content for edit mode
+		DisplayImageAttachments: displayImageAttachments, // Pass image attachments display setting
 	}
 
 	renderTemplate(w, data)

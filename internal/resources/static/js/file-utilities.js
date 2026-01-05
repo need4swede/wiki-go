@@ -423,6 +423,11 @@ async function loadDocumentFiles() {
     }
 }
 
+// Helper function to check if a file is an image based on its type
+function isImageFile(fileType) {
+    return fileType && fileType.startsWith('image/');
+}
+
 // Helper function to update file attachments section
 function updateFileAttachments(files) {
     const fileAttachmentsSection = document.querySelector('.file-attachments-section');
@@ -432,7 +437,27 @@ function updateFileAttachments(files) {
 
     console.log("Updating file attachments section:", files);
 
-    if (!files || files.length === 0) {
+    // Check if images should be displayed (from data attribute, default is false)
+    const displayImageAttachments = fileAttachmentsSection.getAttribute('data-display-image-attachments') === 'true';
+
+    // Filter files based on display_image_attachments setting
+    let filteredFiles = files;
+    if (!displayImageAttachments) {
+        filteredFiles = files.filter(file => {
+            // Get file type
+            let fileType = '';
+            if (typeof file === 'string') {
+                const fileExt = file.split('.').pop().toLowerCase();
+                fileType = FILE_EXTENSION_MIME_TYPES[fileExt] || '';
+            } else {
+                fileType = file.Type || file.type || '';
+            }
+            // Exclude image files
+            return !isImageFile(fileType);
+        });
+    }
+
+    if (!filteredFiles || filteredFiles.length === 0) {
         fileAttachmentsSection.style.display = 'none';
         return;
     }
@@ -440,7 +465,7 @@ function updateFileAttachments(files) {
     // Show the section since we have files
     fileAttachmentsSection.style.display = 'block';
 
-    const html = files.map(file => {
+    const html = filteredFiles.map(file => {
         // Process file similar to the files list
         let safeFile;
         if (typeof file === 'string') {
@@ -700,5 +725,6 @@ window.FileUtilities = {
     renameFile,
     handleFileInsertion,
     updateFileAttachments,
-    extractMentionedFilenamesFromMarkdown
+    extractMentionedFilenamesFromMarkdown,
+    isImageFile
 };
