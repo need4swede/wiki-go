@@ -16,6 +16,8 @@ order: 30
 
 After signing in, Neptune will scan your server for a list of compatible plugins. When a plugin is detected, it will automatically be enabled in Neptune.
 
+![plugin-detection.png](plugin-detection.png)
+
 ## No Plugins?
 
 Neptune works great without plugins. You can install them later on your Jellyfin server - Neptune detects them automatically on your next session.

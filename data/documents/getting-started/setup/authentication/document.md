@@ -6,17 +6,18 @@ order: 20
 
 ## Username & Password
 
+![server-login-auth.png](server-login-auth.png)
+
 1. Enter your Jellyfin username
 2. Enter your password (leave blank if none)
 3. Press **Sign In**
 
 ## Quick Connect
 
-1. Select **Quick Connect** on the sign-in screen
-2. Note the 6-digit code displayed
-3. On another device, open the Jellyfin web interface
-4. Open the menu, and go to **Settings** > **Quick Connect**
-5. Enter the code provided by Neptune and approve the sign-in
+![server-login-quick.png](server-login-quick.png)
+
+Follow the on-screen instructions to enter your Quick Connect auth code.
+You will automatically sign in after the login has been authenticated.
 
 **Note:** Quick Connect must be enabled on your server for this feature to work
 

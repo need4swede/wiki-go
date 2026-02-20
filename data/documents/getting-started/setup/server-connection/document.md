@@ -4,7 +4,9 @@ order: 10
 
 # Server Connection
 
-![server-connection.png](server-connection.png)
+To begin using Neptune, you will first need to connect to a Jellyfin server.
+This server can be hosted locally on the same network, or hosted remotely on a different network.
+Neptune supports both instances and offers multiple different ways to connect to your server.
 
 ## Auto-Discovery
 
