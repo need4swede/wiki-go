@@ -160,41 +160,43 @@ func PageHandler(w http.ResponseWriter, r *http.Request, cfg *config.Config) {
 		navItem.DocumentLayout = documentLayout
 	}
 
-	// List directory contents
-	files, err := os.ReadDir(fsPath)
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-
-	// Build directory listing HTML
-	var dirItems []string
-	for _, f := range files {
-		if !f.IsDir() || strings.HasPrefix(f.Name(), ".") || f.Name() == "document.md" {
-			continue // Skip non-directories, hidden files, and document.md
+	// List directory contents (skip if hidden by config)
+	if !cfg.Wiki.HideDirectoryListing {
+		files, err := os.ReadDir(fsPath)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
 		}
 
-		dirName := f.Name()
-		urlPath := filepath.Join(path, dirName)
+		// Build directory listing HTML
+		var dirItems []string
+		for _, f := range files {
+			if !f.IsDir() || strings.HasPrefix(f.Name(), ".") || f.Name() == "document.md" {
+				continue // Skip non-directories, hidden files, and document.md
+			}
 
-		// Check if subdirectory has a document.md
-		subDocPath := filepath.Join(fsPath, dirName, "document.md")
-		if _, err := os.Stat(subDocPath); err == nil {
-			// Use the GetDocumentTitle function which includes emoji processing
-			dirTitle := utils.GetDocumentTitle(filepath.Join(fsPath, dirName))
+			dirName := f.Name()
+			urlPath := filepath.Join(path, dirName)
+
+			// Check if subdirectory has a document.md
+			subDocPath := filepath.Join(fsPath, dirName, "document.md")
+			if _, err := os.Stat(subDocPath); err == nil {
+				// Use the GetDocumentTitle function which includes emoji processing
+				dirTitle := utils.GetDocumentTitle(filepath.Join(fsPath, dirName))
+				dirItems = append(dirItems, fmt.Sprintf(`<div class="directory-item is-dir"><a href="%s">%s</a></div>`,
+					urlPath, dirTitle))
+				continue
+			}
+
+			// Fallback to formatted directory name if no document.md or no title found
+			dirTitle := utils.FormatDirName(dirName)
 			dirItems = append(dirItems, fmt.Sprintf(`<div class="directory-item is-dir"><a href="%s">%s</a></div>`,
 				urlPath, dirTitle))
-			continue
 		}
 
-		// Fallback to formatted directory name if no document.md or no title found
-		dirTitle := utils.FormatDirName(dirName)
-		dirItems = append(dirItems, fmt.Sprintf(`<div class="directory-item is-dir"><a href="%s">%s</a></div>`,
-			urlPath, dirTitle))
-	}
-
-	if len(dirItems) > 0 {
-		dirContent = template.HTML(strings.Join(dirItems, "\n"))
+		if len(dirItems) > 0 {
+			dirContent = template.HTML(strings.Join(dirItems, "\n"))
+		}
 	}
 
 	// If no document.md exists, show directory title and listing

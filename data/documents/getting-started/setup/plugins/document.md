@@ -4,36 +4,23 @@ order: 30
 
 # Plugin Discovery
 
-Neptune detects compatible Jellyfin server plugins.
-
-
-
 ## Supported Plugins
 
 | Plugin | Feature |
 |--------|---------|
-| **Home Sections** | Shows upcoming content from Radarr/Sonarr calendars |
-| **Theme Songs** | Plays ambient music on TV series detail pages |
+| **Home Sections** | Shows upcoming content and provides 'Because You Watched' recommendations |
+| **Theme Songs** | Downloads theme music for TV series that play on their respective pages |
 | **Intro Skipper** | Skip intros, credits, and recaps during playback |
-
-
 
 ## Detection Process
 
-After signing in:
-
-1. Neptune scans your server for installed plugins
-2. Detected plugins show a green "Detected" badge
-3. Press **Continue** to proceed
-
-
+After signing in, Neptune will scan your server for a list of compatible plugins. When a plugin is detected, it will automatically be enabled in Neptune.
 
 ## No Plugins?
 
-Neptune works great without plugins. You can install them later on your Jellyfin server - Neptune detects them automatically on your next sign-in.
-
+Neptune works great without plugins. You can install them later on your Jellyfin server - Neptune detects them automatically on your next session.
 
 
 ## Managing Plugins
 
-Enable or disable detected plugins anytime in **Settings** > **Plugins**.
+You can manage installed plugins from **Settings** > **Plugins**. Here you can toggle them on or off and adjust various plugin specific options.
