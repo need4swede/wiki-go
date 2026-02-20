@@ -2,7 +2,13 @@
 
 /* ---------- Content typography ---------- */
 /* Add scroll margin to prevent headings from being hidden behind the fixed top bar */
-.content h1, .content h2, .content h3, .content h4, .content h5, .content h6, sup[id^="fnref"] {
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6,
+sup[id^="fnref"] {
     scroll-margin-top: 80px;
 }
 
@@ -48,7 +54,8 @@
     line-height: 1.65;
 }
 
-.content ul, .content ol {
+.content ul,
+.content ol {
     margin: 0.4em 0 1em 0;
     padding-left: 1.6em;
 }
@@ -72,7 +79,7 @@
     box-shadow: var(--card-shadow);
 }
 
-.content pre > code {
+.content pre>code {
     overflow-x: auto;
 }
 
@@ -160,13 +167,13 @@
 }
 
 /* Remove individual line boxes */
-pre[class*="language-"] > code {
+pre[class*="language-"]>code {
     border: none;
     background: none;
 }
 
 /* Inline code style */
-:not(pre) > code {
+:not(pre)>code {
     border: 1px solid var(--glass-border);
     background: var(--code-bg) !important;
     color: var(--text-color) !important;
@@ -234,10 +241,10 @@ pre[class*="language-"] > code {
 
 /* Markdown content styles - Images */
 .markdown-content img {
-    max-width: 100%;
+    max-width: 75%;
     height: auto;
     display: block;
-    margin: 1.5rem auto;
+    margin: 0;
     border-radius: var(--border-radius);
     box-shadow: var(--card-shadow);
     border: 1px solid var(--card-border);
@@ -289,7 +296,8 @@ table {
     -webkit-backdrop-filter: var(--glass-blur-subtle);
 }
 
-th, td {
+th,
+td {
     padding: 12px 16px;
     border-bottom: 1px solid var(--border-color);
     text-align: left;
@@ -315,4 +323,13 @@ tr {
 
 tr:hover td {
     background: var(--hover-bg);
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .markdown-content img {
+        max-width: 100%;
+        margin: 1.5rem auto;
+    }
 }

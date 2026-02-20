@@ -4,7 +4,11 @@ order: 10
 
 # Server Connection
 
+![server-connection.png](server-connection.png)
+
 ## Auto-Discovery
+
+![server-discovery.png](server-discovery.png)
 
 Neptune automatically scans your local network for Jellyfin servers.
 
@@ -14,6 +18,8 @@ Neptune automatically scans your local network for Jellyfin servers.
 - Network discovery needs to be enabled in Jellyfin
 
 ## Manual Setup
+
+![server-manual.png](server-manual.png)
 
 For remote servers or when auto-discovery doesn't find your server:
 
