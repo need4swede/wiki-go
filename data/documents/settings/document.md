@@ -12,10 +12,13 @@ Access Settings via the gear icon in the tab menu bar.
 
 | Page | Description |
 |------|-------------|
-| [Playback](/settings/playback) | Video player options, Trident settings |
+| [Playback](/settings/playback) | Player engine, controls, audio/subtitle preferences, frame rate, caching |
+| [Quality](/settings/quality) | Resolution, HDR, and audio quality preferences for version selection |
 | [Plugins](/settings/plugins) | Jellyfin plugin configuration |
 | [Search](/settings/search) | Local index, LLM search features |
+| [Notifications](/settings/notifications) | In-app notification preferences |
 | [Subtitles](/settings/subtitles) | Subtitle appearance customization |
+| [Image Cache](/settings/images) | Download all images, cache management |
 
 
 
@@ -24,11 +27,13 @@ Access Settings via the gear icon in the tab menu bar.
 | Section | Purpose |
 |---------|---------|
 | **Profiles** | Switch users, add accounts |
-| **Playback** | Player engine settings |
-| **Plugins** | Home Sections, Theme Songs |
-| **Search** | Local index, prompt search |
+| **Playback** | Player engine, controls, audio/subtitle preferences, frame rate matching, video caching |
+| **Quality** | Resolution, dynamic range, audio quality, version auto-selection |
+| **Plugins** | Home Sections, Theme Songs, Intro Skipper |
+| **Notifications** | New content, series updates, request updates, server status |
+| **Search** | Local index, semantic search, prompt search |
 | **Subtitles** | Font, color, background |
-| **Image Cache** | Clear cached images |
+| **Image Cache** | Download and manage cached images |
 | **Server** | Jellyfin connection info |
 | **Jellyseerr** | Discovery service connection |
 | **About** | App version, diagnostics |

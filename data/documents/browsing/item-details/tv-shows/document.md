@@ -37,13 +37,31 @@ When viewing a season:
 
 
 
-## Episode Actions
+## Context Menus
 
-**Select** an episode to start playback.
+Long-press (hold Select button) on episodes and seasons for quick actions.
 
-**Long-press** for context menu:
-- Mark as Watched/Unwatched
-- Refresh metadata
+### Episode Context Menu
+
+Long-press any episode card to open the menu:
+
+| Action | Description |
+|--------|-------------|
+| **Mark as Played** | Mark episode as watched |
+| **Mark as Unplayed** | Reset episode to unwatched |
+| **Change Image** | Select new thumbnail (admin only) |
+
+### Season Context Menu
+
+Long-press any season card in the seasons row:
+
+| Action | Description |
+|--------|-------------|
+| **Mark as Played** | Mark entire season as watched |
+| **Mark as Unplayed** | Reset all episodes in season |
+| **Change Image** | Select new poster (admin only) |
+
+Press **Menu** to close without taking action.
 
 
 
@@ -57,6 +75,29 @@ Watch episodes in random order:
 4. Episodes continue in random order
 
 Shuffle persists until disabled or you leave the series page.
+
+
+
+## Episode Finder
+
+Find a specific episode by describing what happens in it. Requires a language model configured in Settings.
+
+### How to Use
+
+1. Select the **sparkle icon** in the pill menu
+2. Type a description of the episode (e.g., "CPR training goes wrong")
+3. The LLM identifies matching episodes
+4. Select an episode to jump directly to it
+
+### Example Queries
+
+| Description | Found Episode |
+|-------------|---------------|
+| "They're doing a fire drill" | The Office - "Stress Relief" |
+| "The one with the turkey on his head" | Friends - "The One with All the Thanksgivings" |
+| "Dinner party disaster" | The Office - "Dinner Party" |
+
+This feature is especially useful for rewatching memorable scenes when you can't remember which episode they're from.
 
 
 

@@ -20,6 +20,7 @@ Neptune uses a pill-shaped menu bar at the top of the screen.
 | **Home** | Personalized content hub |
 | **Movies** | Movie library |
 | **Shows** | TV show library |
+| **Library** | Browse and filter your full collection |
 | **Discover** | Browse and request (Jellyseerr) |
 | **Search** (magnifying glass) | Find content |
 
@@ -35,6 +36,15 @@ Neptune uses a pill-shaped menu bar at the top of the screen.
 | Select | Press Touch Surface |
 | Go back | Menu button |
 | Return to Home | Long-press Menu |
+| Open Compass | Play/Pause button |
+
+
+
+## Compass
+
+Press **Play/Pause** anywhere to open the [Compass](/getting-started/navigation/compass) - a floating pill for instant tab switching without scrolling to the top.
+
+See [Compass](/getting-started/navigation/compass) for full details.
 
 
 
@@ -59,6 +69,8 @@ When focused, navigation arrows appear on the left and right edges. The spotligh
 **Movies:** Movie-only spotlight and content rows.
 
 **Shows:** TV-only spotlight and content rows.
+
+**Library:** Full collection with filtering sidebar (genres, years, ratings, resolution, semantic tags).
 
 **Discover:** Trending content, requests (requires Jellyseerr).
 

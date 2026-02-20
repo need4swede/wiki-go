@@ -12,11 +12,12 @@ Navigate playback with the Apple TV remote.
 
 Tap the touch surface to show controls:
 
-- Progress bar with buffered content
+- Progress bar with buffered content indicator
 - Current position and duration
-- Now playing title
+- Now playing title (can be hidden in settings)
+- Chapter markers on the seek bar (when available)
 
-Auto-hides after 5 seconds.
+Controls auto-hide after a configurable timeout (3, 5, or 10 seconds). You can also set controls to appear automatically when you pause. These options are in **Settings > Playback > Controls**.
 
 
 
@@ -28,7 +29,24 @@ Auto-hides after 5 seconds.
 | Skip back 10s | Swipe left |
 | Skip forward 10s | Swipe right |
 | Show controls | Tap touch surface |
+| Audio/Subtitles/Chapters | Swipe up or down |
 | Exit | Menu button |
+
+The Menu button behavior is configurable - it can either always exit the player, or dismiss the controls first and exit on the second press.
+
+
+
+## Track Selection (Playback Pill)
+
+Swipe **up** or **down** during playback to open the track selection pill - a slim overlay at the top of the screen.
+
+| Menu | What It Shows |
+|------|---------------|
+| **Audio** | Available audio tracks with language, codec, and channel layout |
+| **Subtitles** | Subtitle tracks with language, format, and badges (Forced, SDH, External) |
+| **Chapters** | Chapter list for quick navigation (when available) |
+
+Swipe **left/right** to cycle between menus. Select a track to switch instantly - no rebuffering required. Press **Menu** or swipe down to dismiss.
 
 
 
@@ -36,23 +54,24 @@ Auto-hides after 5 seconds.
 
 With controls visible:
 
-1. Swipe left/right to scrub
+1. Swipe left/right to scrub through the timeline
 2. Preview timestamp shows target position
-3. Release to seek
+3. Trickplay thumbnails show a visual preview (when available)
+4. Release to seek
 
-Faster swipes cover more distance.
+Faster swipes cover more distance. Seeking behavior can be customized via the Seek Mode Activation setting in **Settings > Playback > Controls**.
 
 
 
 ## Skip Segments
 
-When Intro Skipper plugin is installed, a Skip button appears during:
+When the Intro Skipper plugin is installed on your Jellyfin server, a Skip button appears during:
 
 - Intros
 - Credits
 - Recaps
 
-Press Skip to jump past the segment.
+Press Skip to jump past the segment. With **Auto Skip** enabled in **Settings > Plugins**, segments are skipped automatically without needing to press anything.
 
 
 
@@ -64,9 +83,19 @@ Resets to normal when starting new content.
 
 
 
+## Autoplay
+
+When an episode ends, a countdown appears before the next episode plays automatically. For collections (e.g., a movie franchise), the next movie in the series can also autoplay.
+
+- Countdown duration is configurable (10, 20, or 30 seconds)
+- Cancel during the countdown or skip ahead immediately
+- Configure in **Settings > Playback > Autoplay**
+
+
+
 ## Playback Info
 
-View technical details:
+View technical details about the current stream:
 
 - Resolution and codec
 - HDR format

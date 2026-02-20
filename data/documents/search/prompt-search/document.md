@@ -103,18 +103,25 @@ Prompt Search caches LLM responses to improve speed and reduce API costs:
 
 | Data | Cache Duration |
 |------|----------------|
-| Query enhancements | 24 hours |
-| Title identifications | 7 days |
+| Search enhancements | 24 hours |
 
-Repeated or similar queries return instantly from cache.
+Repeated or similar queries return instantly from cache. The LLM has a 10-second timeout for new queries.
 
 
 
 ## Requirements
 
-Prompt Search requires a configured language model provider.
+Prompt Search requires a language model provider. Neptune includes a built-in provider that works out of the box.
 
-### Local Providers
+### Built-in Provider
+
+| Provider | Description |
+|----------|-------------|
+| **Neptune AI** | Built-in, pre-configured, no setup required |
+
+Neptune AI is enabled by default for new users. LLM search features work immediately without any configuration.
+
+### Alternative Local Providers
 
 | Provider | Description |
 |----------|-------------|
@@ -123,16 +130,19 @@ Prompt Search requires a configured language model provider.
 
 Benefits: Privacy, no API costs, works offline.
 
-### Cloud Providers
+### Alternative Cloud Providers
 
 | Provider | Description |
 |----------|-------------|
 | **OpenAI** | GPT models via API key |
 | **Anthropic** | Claude models via API key |
+| **Google Gemini** | Google's Gemini models via API key |
+| **OpenRouter** | Access many models from different providers via one API key |
+| **Zhipu GLM** | Chinese language models |
 
 Benefits: Higher quality, faster, no local hardware needed.
 
-Configure in **Settings** > **Search** > **Deep Learning**.
+Configure alternative providers in **Settings** > **Search**.
 
 
 
@@ -161,6 +171,7 @@ For content the language model doesn't recognize, use [Semantic Search](/search/
 
 ## Privacy
 
+- **Neptune AI**: Queries sent to Neptune's hosted service
 - **Local providers**: Queries never leave your network
 - **Cloud providers**: Queries sent to provider's API
 - **No library data sent**: Only your search query, not library contents

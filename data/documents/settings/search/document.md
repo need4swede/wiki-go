@@ -32,7 +32,7 @@ Conceptual search using pre-computed thematic tags.
 | Setting | Description |
 |---------|-------------|
 | **Enable Semantic Search** | Search by themes, tone, and concepts |
-| **Tag Generation** | Enable LLM analysis for uncovered items |
+| **Generate New Tags** | Enable LLM analysis for items without tags |
 
 ### Bundled Tags
 
@@ -42,10 +42,10 @@ Neptune ships with semantic tags for **4,000+ movies and TV shows**. These work 
 
 For items not in the bundled dataset, Neptune can generate tags using a language model:
 
-1. Configure a language model provider
-2. Enable tag generation in settings
+1. Enable **Generate New Tags** in settings
+2. Neptune AI (built-in) handles analysis by default
 3. Uncovered items analyzed in background
-4. Progress shown in settings
+4. Progress shown in settings with batch tracking
 
 ### When to Enable LLM Generation
 
@@ -57,7 +57,7 @@ For items not in the bundled dataset, Neptune can generate tags using a language
 
 ## Deep Learning
 
-Configure language model providers for Prompt Search and Semantic Search.
+Configure language model providers for Prompt Search and Semantic Analysis.
 
 ### Enable Language Models
 
@@ -81,10 +81,23 @@ When enabled, the sparkle button appears in Search for LLM-powered queries.
 
 | Provider | Type | Best For |
 |----------|------|----------|
+| **Neptune AI** | Built-in | Zero-config, recommended for most users |
 | **Ollama** | Local | Privacy, no API costs |
 | **LM Studio** | Local | Privacy, no API costs |
 | **OpenAI** | Cloud | Quality, reliability |
 | **Anthropic** | Cloud | Quality, reliability |
+| **Google Gemini** | Cloud | Quality, multilingual |
+| **OpenRouter** | Cloud | Access to many models via one API |
+| **Zhipu GLM** | Cloud | Chinese language support |
+
+### Built-in Provider
+
+Neptune AI is pre-configured and enabled by default:
+
+- **No setup required** - works out of the box
+- **No API key needed** - authentication handled automatically
+- Powers both Prompt Search and Semantic Analysis
+- Recommended for most users
 
 ### Local Providers
 
@@ -101,6 +114,9 @@ Use hosted language model services:
 
 - **OpenAI**: GPT models via API key
 - **Anthropic**: Claude models via API key
+- **Google Gemini**: Google's Gemini models via API key
+- **OpenRouter**: Model aggregator - access hundreds of models from different providers through one API key
+- **Zhipu GLM**: Chinese language models, good for libraries with Chinese-language content
 
 Benefits: Higher quality, no local hardware needed.
 

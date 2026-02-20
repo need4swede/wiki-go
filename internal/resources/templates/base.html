@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{.Config.Wiki.Language}}" data-allow-insecure="{{.Config.Server.AllowInsecureCookies}}">
+
 <head>
-    <title>{{if .CurrentDir.Title}}{{if ne .CurrentDir.Path "/"}}{{.CurrentDir.Title}} - {{end}}{{.Config.Wiki.Title}}{{else}}{{.Config.Wiki.Title}}{{end}}</title>
+    <title>{{if .CurrentDir.Title}}{{if ne .CurrentDir.Path "/"}}{{.CurrentDir.Title}} -
+        {{end}}{{.Config.Wiki.Title}}{{else}}{{.Config.Wiki.Title}}{{end}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="user-role" content="{{.UserRole}}">
     <meta name="doc-path" content="{{.CurrentDir.Path}}">
@@ -11,9 +13,12 @@
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
     <!-- Favicons -->
-    {{if hasFavicon .Config.Wiki.RootDir "ico"}}<link rel="icon" href="/static/favicon.ico" type="image/x-icon">{{end}}
-    {{if hasFavicon .Config.Wiki.RootDir "svg"}}<link rel="icon" href="/static/favicon.svg" type="image/svg+xml">{{end}}
-    {{if hasFavicon .Config.Wiki.RootDir "png"}}<link rel="icon" href="/static/favicon.png" type="image/png">{{end}}
+    {{if hasFavicon .Config.Wiki.RootDir "ico"}}
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">{{end}}
+    {{if hasFavicon .Config.Wiki.RootDir "svg"}}
+    <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">{{end}}
+    {{if hasFavicon .Config.Wiki.RootDir "png"}}
+    <link rel="icon" href="/static/favicon.png" type="image/png">{{end}}
     <link rel="manifest" href="/manifest.json">
     <!-- Resource Hints - Preload critical resources for faster page load -->
     <link rel="preload" href="/static/css/theme.css?={{getVersion}}" as="style">
@@ -76,6 +81,7 @@
     <script src="/static/libs/codemirror-5.65.18/addon/selection/active-line.min.js"></script>
     {{end}}
 </head>
+
 <body>
     <!-- Password warning banner (will be shown if default password is in use) -->
     <div id="password-warning-banner" class="password-warning-banner" style="display: none;">
@@ -131,17 +137,17 @@
                 <div class="page-toolbar" dir="auto">
                     <div class="view-toolbar">
                         <!-- Editor and Admin buttons -->
-                        <button class="toolbar-button editor-only-button new-document" title="{{t "common.new"}}" {{if or (eq .UserRole "admin") (eq .UserRole "editor")}}style="display: inline-flex !important"{{else}}style="display: none !important"{{end}}>
+                        <button class="toolbar-button editor-only-button new-document" title="{{t "common.new"}}" {{if or (eq .UserRole "admin") (eq .UserRole "editor")}}style="display: inline-flex !important" {{else}}style="display: none !important" {{end}}>
                             <i class="fa fa-file-text-o"></i>
                             <span class="button-text">{{t "common.new"}}</span>
                         </button>
-                        <button class="toolbar-button editor-only-button edit-page" title="{{t "common.edit"}}" {{if or (eq .UserRole "admin") (eq .UserRole "editor")}}style="display: inline-flex !important"{{else}}style="display: none !important"{{end}}>
+                        <button class="toolbar-button editor-only-button edit-page" title="{{t "common.edit"}}" {{if or (eq .UserRole "admin") (eq .UserRole "editor")}}style="display: inline-flex !important" {{else}}style="display: none !important" {{end}}>
                             <i class="fa fa-pencil"></i>
                             <span class="button-text">{{t "common.edit"}}</span>
                         </button>
 
                         <!-- Admin-only buttons -->
-                        <button class="toolbar-button admin-only-button settings-button" title="{{t "common.settings"}}" {{if eq .UserRole "admin"}}style="display: inline-flex !important"{{else}}style="display: none !important"{{end}}>
+                        <button class="toolbar-button admin-only-button settings-button" title="{{t "common.settings"}}" {{if eq .UserRole "admin"}}style="display: inline-flex !important" {{else}}style="display: none !important" {{end}}>
                             <i class="fa fa-cog"></i>
                             <span class="button-text">{{t "common.settings"}}</span>
                         </button>
@@ -172,7 +178,7 @@
                             <span class="button-text">{{t "toolbar.attachments"}}</span>
                         </button>
                         {{if ne .CurrentDir.Path "/"}}
-                        <button class="toolbar-button editor-only-button move-document" title="{{t "common.move"}}" {{if or (eq .UserRole "admin") (eq .UserRole "editor")}}style="display: inline-flex !important"{{else}}style="display: none !important"{{end}}>
+                        <button class="toolbar-button editor-only-button move-document" title="{{t "common.move"}}" {{if or (eq .UserRole "admin") (eq .UserRole "editor")}}style="display: inline-flex !important" {{else}}style="display: none !important" {{end}}>
                             <i class="fa fa-arrows"></i>
                             <span class="button-text">{{t "common.move"}}/{{t "common.rename"}}</span>
                         </button>
@@ -187,43 +193,43 @@
             </div>
         </div>
         {{if .Content}}
-            {{if .IsEditMode}}
-            <!-- Edit mode: Show textarea with raw markdown content -->
-            <div class="editor-container">
-                <!-- The textarea will be created dynamically by our editor code -->
-            </div>
-            {{else}}
-            <!-- View mode: Show rendered content -->
-            <div class="markdown-content" dir="auto">
-                {{template "content" .}}
-            </div>
-            {{end}}
+        {{if .IsEditMode}}
+        <!-- Edit mode: Show textarea with raw markdown content -->
+        <div class="editor-container">
+            <!-- The textarea will be created dynamically by our editor code -->
+        </div>
+        {{else}}
+        <!-- View mode: Show rendered content -->
+        <div class="markdown-content" dir="auto">
+            {{template "content" .}}
+        </div>
+        {{end}}
 
-            <!-- Add file attachments section -->
-            {{if not .Config.Wiki.HideAttachments}}
-            <div class="file-attachments-section">
-                <h3>{{t "attachments.title"}}</h3>
-                <div class="file-attachments-list">
-                    <div class="loading-message">{{t "attachments.loading"}}</div>
-                </div>
+        <!-- Add file attachments section -->
+        {{if not .Config.Wiki.HideAttachments}}
+        <div class="file-attachments-section">
+            <h3>{{t "attachments.title"}}</h3>
+            <div class="file-attachments-list">
+                <div class="loading-message">{{t "attachments.loading"}}</div>
             </div>
-            {{end}}
+        </div>
+        {{end}}
 
         {{end}}
         {{if .DirContent}}
-            <div class="directory-list">
-                {{if not .Content}}
-                    <h1>{{.CurrentDir.Title}}</h1>
-                {{end}}
-                {{.DirContent}}
-            </div>
-        {{else if not .Content}}
-            <div class="empty-message">{{t "directory.empty"}}</div>
-        {{end}}
-            <!-- Include comments section ONLY if comments are not disabled system-wide -->
-            {{if not .Config.Wiki.DisableComments}}
-                {{template "comments" .}}
+        <div class="directory-list">
+            {{if not .Content}}
+            <h1>{{.CurrentDir.Title}}</h1>
             {{end}}
+            {{.DirContent}}
+        </div>
+        {{else if not .Content}}
+        <div class="empty-message">{{t "directory.empty"}}</div>
+        {{end}}
+        <!-- Include comments section ONLY if comments are not disabled system-wide -->
+        {{if not .Config.Wiki.DisableComments}}
+        {{template "comments" .}}
+        {{end}}
     </div>
 
     <div class="search-results" dir="auto">
@@ -257,7 +263,7 @@
     <!-- when in edit mode (?mode=edit) to prevent    -->
     <!-- 25+ second freeze on page load in view mode  -->
     <!-- ============================================ -->
-    
+
     <!-- Markdown table editor dependencies (~600KB) -->
     <script src="/static/js/mte-meaw.js?={{getVersion}}"></script>
     <script src="/static/js/mte-kernel-2.1.1.js?={{getVersion}}"></script>
@@ -304,4 +310,5 @@
     <script src="/static/js/links.js?={{getVersion}}" defer></script>
     {{end}}
 </body>
+
 </html>

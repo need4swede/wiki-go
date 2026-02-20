@@ -24,9 +24,23 @@ Neptune features the most advanced search capabilities of any Jellyfin client. T
 |------------|-------|---------|----------|
 | **Local Index** | < 50ms | Offline | Titles, names, genres, keywords |
 | **Semantic Search** | < 50ms | Offline | Themes, tone, conceptual matches |
-| **Prompt Search** | 1-3s | Required | Complex queries, plot descriptions |
+| **Prompt Search** | 1-10s | Required | Complex queries, plot descriptions |
 
 All three work together. Local Index and Semantic Search provide instant results while Prompt Search handles complex LLM queries.
+
+
+
+## Neptune AI
+
+Neptune includes a built-in AI provider called **Neptune AI** that powers Prompt Search and Semantic Analysis with zero configuration required.
+
+| Feature | Benefit |
+|---------|---------|
+| **Pre-configured** | Works out of the box |
+| **No API key needed** | Enabled by default for new users |
+| **No setup** | LLM features work immediately |
+
+For users who prefer self-hosted or alternative providers, Neptune also supports Ollama, LM Studio, OpenAI, Anthropic, Google Gemini, OpenRouter, and Zhipu GLM.
 
 
 
@@ -159,9 +173,11 @@ Configure in **Settings** > **Search**:
 | Setting | Description |
 |---------|-------------|
 | **Local Index** | Enable/disable, manual resync |
-| **Semantic Search** | Enable pre-computed tags |
-| **Prompt Search** | Toggle LLM search button |
-| **LLM Providers** | Configure language model backends |
+| **Semantic Search** | Enable pre-computed semantic tags |
+| **Generate New Tags** | LLM analysis for items without tags |
+| **Prompt Search** | Toggle LLM-powered query interpretation |
+
+LLM features are powered by **Neptune AI** by default (no configuration required). Alternative providers (Ollama, LM Studio, OpenAI, Anthropic, Google Gemini, OpenRouter, Zhipu GLM) can be configured in **Settings** > **Search**.
 
 
 

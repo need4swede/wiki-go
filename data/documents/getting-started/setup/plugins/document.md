@@ -14,6 +14,7 @@ Neptune detects compatible Jellyfin server plugins.
 |--------|---------|
 | **Home Sections** | Shows upcoming content from Radarr/Sonarr calendars |
 | **Theme Songs** | Plays ambient music on TV series detail pages |
+| **Intro Skipper** | Skip intros, credits, and recaps during playback |
 
 
 

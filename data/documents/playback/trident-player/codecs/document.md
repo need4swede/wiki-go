@@ -10,40 +10,46 @@ Neptune plays virtually any video or audio format directly, without requiring yo
 
 ## Video Formats
 
-### Modern Codecs
+### Hardware-Accelerated Codecs
 
-| Codec | What It's Used For |
-|-------|-------------------|
-| **H.265/HEVC** | 4K movies, HDR content, modern Blu-ray rips |
-| **H.264/AVC** | Standard HD content, streaming services |
-| **VP9** | YouTube downloads, WebM files |
-| **AV1** | Next-gen streaming, highly efficient compression |
+These codecs are decoded by the Apple TV's hardware for smooth, efficient playback:
 
-All support hardware acceleration for smooth playback with minimal battery impact.
+| Codec | Max Resolution | HDR Support | Notes |
+|-------|---------------|-------------|-------|
+| **H.265/HEVC** | 4K | HDR10, HDR10+, HLG, Dolby Vision | Modern standard for 4K content |
+| **H.264/AVC** | 4K | No | Universal compatibility |
+| **VP9** | 4K | HDR | YouTube, WebM files |
+| **AV1** | 4K | HDR | Next-gen codec (Apple TV 4K 3rd gen only) |
 
-### Legacy Codecs
+### Software-Decoded Codecs
 
-| Codec | What It's Used For |
-|-------|-------------------|
+These codecs play via software decoding - best at 1080p or lower:
+
+| Codec | Best For |
+|-------|----------|
 | **MPEG-4** | Older DivX/Xvid content |
 | **MPEG-2** | DVDs, broadcast recordings |
-| **VC-1** | Windows Media Video, early Blu-rays |
+| **VP8** | Older WebM files |
+| **ProRes** | Professional video workflows |
 
 
 
 ## Container Support
 
-Neptune reads all common file formats:
+Neptune reads all common video file formats:
 
-| Format | Extensions |
-|--------|------------|
-| **Matroska** | .mkv, .mk3d, .mka |
-| **MP4** | .mp4, .m4v |
-| **WebM** | .webm |
-| **AVI** | .avi |
-| **QuickTime** | .mov |
-| **Blu-ray** | .m2ts, .mts |
-| **DVD** | .vob, .mpg |
+| Format | Extensions | Common Use |
+|--------|------------|------------|
+| **Matroska** | .mkv | Blu-ray rips, anime, movies |
+| **MP4** | .mp4, .m4v | Streaming downloads, iTunes |
+| **WebM** | .webm | YouTube downloads |
+| **AVI** | .avi | Older video files |
+| **QuickTime** | .mov | Apple ecosystem |
+| **Blu-ray** | .m2ts, .mts | Raw Blu-ray rips |
+| **MPEG** | .mpg, .ts | Broadcast recordings, DVDs |
+| **FLV** | .flv | Flash video |
+| **Ogg** | .ogg, .ogv | Open container format |
+| **WAV** | .wav | Uncompressed audio |
 
 
 
@@ -51,10 +57,10 @@ Neptune reads all common file formats:
 
 | Feature | Support |
 |---------|---------|
-| **4K Ultra HD** | Full support |
-| **8K** | Decode supported |
-| **High Frame Rate** | Up to 60fps |
-| **10-bit Color** | Full HDR support |
+| **4K Ultra HD** | Full hardware support |
+| **High Frame Rate** | 24fps to 60fps |
+| **10-bit Color** | Required for HDR |
+| **High Bitrate** | Up to 200 Mbps |
 
 
 
@@ -62,61 +68,71 @@ Neptune reads all common file formats:
 
 ### Lossless Audio
 
-Preserve every bit of your premium audio tracks.
+Premium quality audio decoded bit-perfect:
 
-| Format | Description |
-|--------|-------------|
-| **Dolby TrueHD** | Blu-ray lossless audio, up to 7.1 channels |
-| **DTS-HD Master Audio** | DTS lossless, up to 7.1 channels |
-| **FLAC** | Free lossless audio, up to 8 channels |
-| **ALAC** | Apple lossless |
-| **PCM** | Uncompressed audio |
+| Format | Channels | Description |
+|--------|----------|-------------|
+| **Dolby TrueHD** | Up to 7.1 | Blu-ray lossless standard |
+| **DTS-HD Master Audio** | Up to 7.1 | DTS lossless |
+| **FLAC** | Up to 8 | Free lossless audio |
+| **ALAC** | Up to 8 | Apple lossless |
+| **PCM** | Up to 8 | Uncompressed audio |
 
 ### Surround Sound
 
-| Format | Description |
-|--------|-------------|
-| **Dolby Digital Plus (E-AC3)** | High-quality surround, up to 7.1 |
-| **Dolby Digital (AC3)** | Standard 5.1 surround |
-| **DTS** | DTS 5.1 surround |
+| Format | Channels | Description |
+|--------|----------|-------------|
+| **Dolby Digital Plus** | Up to 7.1 | High-quality streaming audio |
+| **Dolby Digital** | 5.1 | DVD and broadcast standard |
+| **DTS** | 5.1 | DTS surround |
 
 ### Standard Audio
 
 | Format | Description |
 |--------|-------------|
 | **AAC** | Modern compressed audio |
-| **Opus** | Efficient modern codec |
+| **Opus** | Efficient streaming codec |
 | **MP3** | Universal compatibility |
 | **Vorbis** | Open source compressed |
 
 
 
-## Automatic Channel Matching
-
-Neptune automatically matches audio to your system:
-
-| Your Audio | What You Get |
-|------------|--------------|
-| **7.1 Receiver** | Full 7.1 surround |
-| **5.1 Soundbar** | Downmixed to 5.1 |
-| **Stereo TV** | Downmixed to stereo |
-
-Downmixing preserves dialog clarity and spatial positioning - nothing important gets lost.
-
-
-
 ## Dolby Atmos
 
-### How Atmos Works in Neptune
+### E-AC3 Atmos (Dolby Digital Plus with Atmos)
 
-Dolby Atmos includes both a base surround track and spatial object metadata. Neptune fully decodes the base track:
+Neptune can pass through E-AC3 Atmos audio to your receiver for full spatial audio experience. This is the same Atmos format used by streaming services.
 
-| Atmos Format | What You Hear |
-|--------------|---------------|
-| **TrueHD Atmos** | Full lossless 7.1 audio |
-| **DD+ Atmos** | Full 7.1 surround |
+| What You Need | Result |
+|---------------|--------|
+| Atmos-capable receiver | Full Dolby Atmos |
+| Standard surround receiver | 7.1 surround |
+| Stereo system | Stereo downmix |
 
-The spatial object metadata requires proprietary decoding not available to third-party apps. This is the same limitation as other premium players like Infuse.
+### TrueHD Atmos (Blu-ray Atmos)
+
+TrueHD Atmos from Blu-ray discs is decoded to full lossless 7.1 audio:
+
+| What You Hear | Why |
+|---------------|-----|
+| Lossless 7.1 surround | Full quality base audio |
+| No height channels | Spatial metadata requires proprietary decoder |
+
+This is the same limitation as other premium players - the spatial object metadata in TrueHD Atmos requires Dolby's proprietary decoder, which isn't available to third-party apps.
+
+
+
+## Automatic Channel Matching
+
+Neptune automatically matches audio output to your system:
+
+| Your Audio Setup | What You Get |
+|------------------|--------------|
+| **7.1 Receiver** | Full 7.1 surround |
+| **5.1 Soundbar** | Downmixed to 5.1 |
+| **Stereo TV** | Intelligent stereo downmix |
+
+Downmixing preserves dialog clarity and spatial balance - nothing important gets lost.
 
 
 
@@ -126,9 +142,12 @@ The spatial object metadata requires proprietary decoding not available to third
 
 | Format | Features |
 |--------|----------|
-| **SRT** | Simple, universal compatibility |
-| **VTT** | Web standard with basic styling |
-| **ASS/SSA** | Full styling - fonts, colors, positioning |
+| **SRT** | Simple, universal |
+| **VTT** | Web standard with positioning |
+| **ASS/SSA** | Full styling - fonts, colors, effects |
+| **TTML** | Broadcast standard |
+| **SubViewer** | Legacy format support |
+| **SAMI** | Microsoft subtitle format |
 
 ### Image Subtitles
 

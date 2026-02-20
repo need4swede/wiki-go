@@ -73,6 +73,10 @@ Neptune adapts to your network conditions:
 
 If your network slows down during playback, Neptune has buffered content ahead to keep playing. You may see brief buffering only if the slowdown persists.
 
+### Video Caching
+
+With video caching enabled (Settings > Playback > Full Video Caching), Neptune caches content to disk as it streams using 6 parallel connections. Pausing playback continues downloading in the background. This is especially effective on high-latency networks where parallel connections significantly improve throughput.
+
 
 
 ## Premium Content

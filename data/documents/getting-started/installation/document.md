@@ -4,60 +4,38 @@ order: 10
 
 # Installation
 
-Install Neptune on your Apple TV from the App Store.
-
 ## Requirements
 
 | Requirement | Minimum |
 |-------------|---------|
 | **Device** | Apple TV HD or Apple TV 4K |
-| **tvOS** | 18.5 or later |
-| **Jellyfin Server** | Any recent version |
+| **OS** | 18.5 or later |
+| **Jellyfin Server** | 10.10.x or later |
 
-## Beta Access
+## TestFlight Installation
 
-> Neptune is currently in **beta**
-
-### Join the Beta
+Neptune is currently in **beta**. Those who are eligable will receive an invite link to join the TestFlight.
 
 | Step | Action |
 |------|--------|
-| 1 | Install **TestFlight** on your Apple TV from the App Store |
-| 2 | Open the invite link below on your iPhone, iPad, or Mac |
-| 3 | Accept the invitation (use the same Apple ID as your Apple TV) |
-| 4 | Open **TestFlight** on your Apple TV |
+| 1 | Install **TestFlight** onto your device via the App Store |
+| 2 | Open your invite link from your iPhone, iPad, or Mac |
+| 3 | Accept the invitation |
+| 4 | Open **TestFlight** app on your device |
 | 5 | Select **Neptune** and tap **Install** |
-
-> **TestFlight Invite**
->
-> [`testflight.apple.com/join/neptune`](https://testflight.apple.com/join/neptune)
-
-### What to Expect
-
-| Aspect | Details |
-|--------|---------|
-| **Stability** | Beta builds may contain bugs or incomplete features |
-| **Updates** | New versions install automatically via TestFlight |
-| **Expiration** | Builds expire after 90 days - new versions pushed regularly |
-| **Feedback** | Report issues via TestFlight or GitHub Issues |
 
 ## App Store Installation
 
-When Neptune exits beta, it will be available on the tvOS App Store.
+When Neptune exits beta, it will be available to download via the App Store.
 
 ### Steps
 
-1. Open the **App Store** on your Apple TV
+1. Open the **App Store** on your device
 2. Search for **"Neptune"** or **"Neptune Player"**
 3. Select **Get** to download and install
-4. Open Neptune from your home screen
+4. Open Neptune to launch it
 
 ## After Installation
 
-Once installed, Neptune will guide you through initial setup:
-
-1. **Server Connection** - Find or enter your Jellyfin server
-2. **Authentication** - Sign in with your credentials
-3. **Theme Selection** - Choose your visual theme
-
+Once installed, Neptune will guide you through the initial setup.
 See [Setup](/getting-started/setup) for detailed instructions.

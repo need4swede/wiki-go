@@ -22,20 +22,25 @@ Color-coded badges show video and audio quality.
 
 **Video:**
 
-| Badge | Meaning |
-|-------|---------|
-| 4K (Green) | 2160p resolution |
-| 1080p | Full HD |
-| DV (Purple) | Dolby Vision HDR |
-| HDR10 (Orange) | HDR10 format |
+| Badge | Color | Meaning |
+|-------|-------|---------|
+| 4K | Green | 2160p resolution |
+| 1080p | White | Full HD |
+| 720p/SD | Dim | Lower resolution |
+| DV | Purple | Dolby Vision HDR |
+| HDR10 | Orange | HDR10 format |
+| HDR10+ | Yellow | HDR10+ dynamic metadata |
+| HLG | Cyan | Hybrid Log-Gamma |
 
 **Audio:**
 
-| Badge | Meaning |
-|-------|---------|
-| Atmos (Blue) | Dolby Atmos |
-| DTS:X (Red) | DTS:X audio |
-| Lossless (Gold) | TrueHD, DTS-HD MA |
+| Badge | Color | Meaning |
+|-------|-------|---------|
+| Atmos | Blue | Dolby Atmos spatial audio |
+| DTS:X | Red | DTS:X immersive audio |
+| Lossless | Gold | TrueHD, DTS-HD MA, FLAC |
+
+Badges use blended colors when multiple properties combine. For example, 4K + Dolby Vision shows a teal/blue-green badge, and TrueHD + Atmos shows a cyan badge.
 
 
 

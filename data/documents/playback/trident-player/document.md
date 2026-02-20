@@ -14,12 +14,17 @@ Trident plays virtually any video file directly from your Jellyfin server - no t
 
 ### Direct Play Everything
 
-- **MKV, MP4, AVI, MOV** and more container formats
-- **H.264, H.265/HEVC, VP9, AV1** video codecs
-- **4K and 8K** resolutions at full quality
-- **High frame rate** content from 24fps to 60fps
+| Category | Supported |
+|----------|-----------|
+| **Containers** | MKV, MP4, AVI, MOV, WebM, M2TS, and more |
+| **Video** | H.264, H.265/HEVC, VP9, AV1 with hardware acceleration |
+| **Audio** | TrueHD, DTS-HD MA, FLAC, DD+, DTS, AAC, and more |
+| **Resolution** | Up to 4K at 60fps |
+| **Bitrate** | Up to 200 Mbps |
 
 No more waiting for transcodes. No more quality loss. Just press play.
+
+[See all supported formats →](/playback/trident-player/codecs)
 
 
 
@@ -29,12 +34,12 @@ Experience your HDR content the way it was meant to be seen. Neptune automatical
 
 | Format | Description |
 |--------|-------------|
-| **HDR10** | Industry standard HDR |
+| **HDR10** | Industry standard HDR with static metadata |
 | **HDR10+** | Dynamic scene-by-scene optimization |
 | **HLG** | Broadcast HDR |
-| **Dolby Vision** | Premium dynamic HDR |
+| **Dolby Vision** | Premium dynamic HDR (Profiles 5, 7, 8, 9) |
 
-Neptune automatically switches your TV to the correct HDR mode when playback begins - you just enjoy the picture.
+Neptune automatically switches your TV to the correct HDR mode when playback begins. If your TV doesn't support a format, Neptune gracefully falls back to the next best option.
 
 [Learn more about HDR →](/playback/trident-player/hdr)
 
@@ -42,17 +47,22 @@ Neptune automatically switches your TV to the correct HDR mode when playback beg
 
 ## Lossless Audio
 
-Your premium audio tracks deserve premium playback. Neptune decodes lossless audio formats that other apps can't handle.
+Your premium audio tracks deserve premium playback. Neptune decodes lossless audio formats that require transcoding on other apps.
 
 | Format | Quality |
 |--------|---------|
-| **Dolby TrueHD** | Lossless Blu-ray audio |
-| **DTS-HD Master Audio** | Lossless DTS |
+| **Dolby TrueHD** | Lossless Blu-ray audio, up to 7.1 |
+| **DTS-HD Master Audio** | Lossless DTS, up to 7.1 |
 | **FLAC** | Lossless compressed |
-| **Dolby Digital Plus** | High-quality surround |
+| **Dolby Digital Plus** | High-quality surround, up to 7.1 |
 | **DTS** | Standard surround |
 
 Multi-channel audio is automatically configured for your sound system - from stereo TVs to 7.1 receivers.
+
+### Dolby Atmos
+
+- **E-AC3 Atmos:** Full passthrough to Atmos-capable receivers
+- **TrueHD Atmos:** Decoded to lossless 7.1 (height channels require proprietary decoder)
 
 [Learn more about Audio →](/playback/trident-player/audio)
 
@@ -75,12 +85,12 @@ You'll never notice - and that's the point.
 
 ## Rich Subtitles
 
-From simple text to beautifully styled anime subtitles, Neptune renders them all.
+From simple text to beautifully styled anime subtitles, Neptune renders them all natively - no server burn-in required.
 
 | Type | Formats |
 |------|---------|
-| **Text** | SRT, VTT, ASS/SSA |
-| **Bitmap** | PGS (Blu-ray), DVD subtitles |
+| **Text** | SRT, VTT, ASS/SSA with full styling, TTML, SubViewer, SAMI |
+| **Image** | PGS (Blu-ray), VobSub (DVD), DVB (broadcast) |
 
 ASS subtitles display with their intended styling - fonts, colors, positioning, and effects. No more plain white text when the subtitle author intended something more.
 
@@ -98,9 +108,30 @@ Switch audio or subtitle tracks instantly during playback. No rebuffering, no wa
 
 
 
+## Video Caching
+
+Enable video caching in Settings to cache content to disk as it streams. Pausing playback continues downloading in the background ("pause to buffer"), so you can pre-load content before a long flight or unreliable network stretch. Seeking backward to cached portions plays instantly.
+
+
+
 ## Frame-Accurate Seeking
 
 Scrub to exactly where you want. Neptune seeks to the precise frame you're looking for, not just the nearest keyframe.
+
+
+
+## Frame Rate Matching
+
+Neptune matches the display refresh rate to your content:
+
+| Content | Display |
+|---------|---------|
+| Movies (24fps) | 24Hz |
+| PAL content | 25Hz |
+| Standard video | 30Hz |
+| Sports/60fps | 60Hz |
+
+This eliminates judder for smooth, cinema-like playback.
 
 
 

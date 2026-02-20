@@ -14,20 +14,21 @@ Premium audio playback for your premium content.
 
 Preserve every bit of your Blu-ray audio tracks:
 
-| Format | Description |
-|--------|-------------|
-| **Dolby TrueHD** | Lossless Blu-ray audio with up to 7.1 channels |
-| **DTS-HD Master Audio** | Lossless DTS with up to 7.1 channels |
-| **FLAC** | Free Lossless Audio Codec |
-| **ALAC** | Apple Lossless |
+| Format | Max Channels | Description |
+|--------|--------------|-------------|
+| **Dolby TrueHD** | 7.1 | Blu-ray lossless standard |
+| **DTS-HD Master Audio** | 7.1 | DTS lossless |
+| **FLAC** | 8 | Free Lossless Audio Codec |
+| **ALAC** | 8 | Apple Lossless |
+| **PCM** | 8 | Uncompressed audio |
 
 ### Surround Sound
 
-| Format | Description |
-|--------|-------------|
-| **Dolby Digital Plus** | High-quality 7.1 surround |
-| **Dolby Digital** | Standard 5.1 surround |
-| **DTS** | DTS 5.1 surround |
+| Format | Max Channels | Description |
+|--------|--------------|-------------|
+| **Dolby Digital Plus** | 7.1 | High-quality streaming audio |
+| **Dolby Digital** | 5.1 | DVD and broadcast standard |
+| **DTS** | 5.1 | DTS surround |
 
 ### Standard Audio
 
@@ -64,18 +65,31 @@ Nothing important gets lost.
 
 ## Dolby Atmos
 
-### What Neptune Plays
+### E-AC3 Atmos (Streaming Atmos)
 
-Dolby Atmos includes both a base surround track and spatial object metadata. Neptune plays:
+Neptune passes through E-AC3 Atmos (Dolby Digital Plus with Atmos) to compatible receivers for the full spatial audio experience:
 
-| Format | What You Hear |
-|--------|---------------|
-| **TrueHD Atmos** | Full lossless 7.1 surround |
-| **DD+ Atmos** | Full 7.1 surround |
+| Your Equipment | What You Hear |
+|----------------|---------------|
+| Atmos soundbar or receiver | Full Dolby Atmos with height effects |
+| 7.1 receiver | 7.1 surround (Atmos decoded by receiver) |
+| 5.1 system | 5.1 surround |
+| Stereo | Stereo downmix |
 
-### About Spatial Objects
+This is the same Atmos format used by Netflix, Disney+, and other streaming services. If your equipment supports Atmos, Neptune delivers it.
 
-The spatial object metadata in Atmos requires proprietary decoding that isn't available to third-party apps. Neptune delivers the full-quality base audio track - the same limitation applies to other premium players like Infuse.
+### TrueHD Atmos (Blu-ray Atmos)
+
+TrueHD Atmos contains both lossless 7.1 audio and spatial object metadata. Neptune decodes TrueHD to full lossless 7.1:
+
+| What You Hear | Details |
+|---------------|---------|
+| **Lossless 7.1 surround** | Bit-perfect audio quality |
+| **No height/object audio** | Spatial metadata requires proprietary decoder |
+
+**Why?** The spatial object metadata in TrueHD Atmos requires Dolby's proprietary decoder, which isn't licensed to third-party apps. This is the same limitation as Infuse, Plex, and other premium players.
+
+**The good news:** You still get lossless 7.1 audio quality - better than any lossy format. Only the height channels are missing.
 
 
 
@@ -83,20 +97,30 @@ The spatial object metadata in Atmos requires proprietary decoding that isn't av
 
 ### Bit-Perfect Playback
 
-Neptune decodes lossless audio to preserve maximum quality. Your carefully selected TrueHD and DTS-HD MA tracks play with every detail intact.
+Neptune decodes lossless audio formats to preserve maximum quality:
+- No re-encoding or compression
+- Full dynamic range preserved
+- All channels decoded at source quality
 
-### No Quality Loss
+### Output Format
 
-Unlike transcoding, Neptune plays your audio files directly. What's in the file is what you hear.
+All audio is output at:
+- **Sample rate:** 48 kHz
+- **Bit depth:** 32-bit float
+- **Channels:** Up to 8 (7.1)
+
+Your receiver handles final conversion to your speaker configuration.
 
 
 
 ## Instant Track Switching
 
 Switch between audio tracks instantly during playback:
-- Change languages on the fly
+- Change languages without interruption
 - Switch to commentary tracks
 - No rebuffering required
+
+Neptune pre-decodes audio tracks so switching is immediate.
 
 
 
@@ -107,21 +131,36 @@ Switch between audio tracks instantly during playback:
 1. **Check volume** - Apple TV, receiver, and TV volume
 2. **Check audio track** - Ensure a track is selected in player controls
 3. **Check connections** - Verify HDMI is connected properly
+4. **Check receiver input** - Make sure correct input is selected
 
-### Audio Delayed
+### Audio Delayed or Out of Sync
 
-**Wait for calibration** - First 1-2 seconds allow sync to stabilize.
+**At playback start** - Give it 1-2 seconds for sync to calibrate. This is normal.
 
-**Try seeking** - This resets the audio sync system.
+**Persistent sync issues:**
+- Try seeking to reset the sync system
+- Restart playback
+- Check if the issue affects other files
 
-### Audio Cuts Out
+### Audio Cuts Out Briefly
 
-**Network issues** - Try increasing buffer size in Settings.
+**After seeking (TrueHD/DTS-HD MA):**
 
-**After seeking in TrueHD** - Brief silence (~100-200ms) is normal while audio resyncs.
+Brief silence (~100-200ms) after seeking is normal for lossless formats. These formats need to find a sync point before audio can resume.
 
-### Wrong Audio Playing
+**During normal playback:**
+- May indicate network buffering
+- Try increasing buffer size in Settings
 
-**Check track selection** - Open player controls and verify the correct audio track is selected.
+### No Surround Sound
 
-**Default track** - Neptune selects the default track from the file; you can change it any time.
+1. **Check your receiver** - Verify it's set to decode multi-channel audio
+2. **Check Apple TV settings** - Settings > Video and Audio > Audio Output should show your receiver
+3. **Check audio track** - Some files have both stereo and surround tracks
+
+### Atmos Not Working
+
+1. **Check equipment** - Your soundbar/receiver must support Atmos
+2. **Check audio track** - Select the Atmos track in player controls
+3. **Check eARC/ARC** - Some TVs require eARC for Atmos passthrough
+4. **E-AC3 only** - TrueHD Atmos from Blu-rays cannot pass through as Atmos

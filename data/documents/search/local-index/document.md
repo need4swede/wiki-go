@@ -150,12 +150,14 @@ Neptune uses SQLite FTS5 (Full-Text Search 5), the same technology that powers s
 
 Jellyfin often lacks composer data because TMDb returns producers before composers, and the data gets truncated.
 
-When Jellyseerr is connected, Neptune enriches the index:
+Neptune enriches the index with composer data when Jellyseerr is connected:
 
 1. During sync, items are matched to TMDb
 2. Full credits fetched including composers
 3. Composer names added to search index
 4. "John Williams" now finds all his scores
+
+This enrichment happens automatically during search index sync when Jellyseerr is configured.
 
 
 

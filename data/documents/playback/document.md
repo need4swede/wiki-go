@@ -28,18 +28,22 @@ Video playback in Neptune.
 
 ## During Playback
 
-Tap the touch surface to reveal controls:
+Tap the touch surface to reveal the progress bar and controls.
+
+Swipe **up/down** to open the track selection pill for audio, subtitles, and chapters.
 
 - Progress bar with current position
 - Timestamps
-- Track selection
+- Audio and subtitle switching
 - Playback info
 
 
 
-## Episode Auto-Play
+## Auto-Play
 
-TV shows automatically advance to the next episode. A countdown appears before auto-play - press any button to cancel.
+TV shows automatically advance to the next episode when one finishes. Movies in a collection (e.g., a franchise) can also auto-advance to the next movie. A countdown appears before auto-play - you can cancel or skip ahead.
+
+Configure the countdown duration and which types of content auto-play in **Settings > Playback > Autoplay**.
 
 
 

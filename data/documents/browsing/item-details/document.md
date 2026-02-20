@@ -15,6 +15,7 @@ When you select content, Neptune displays detailed information and actions.
 | [Movies](/browsing/item-details/movies) | Movie pages, quality badges, cast |
 | [TV Shows](/browsing/item-details/tv-shows) | Series, seasons, episodes |
 | [Extras](/browsing/item-details/extras) | Special features, trailers, behind-the-scenes |
+| [People](/browsing/item-details/people) | Actor, director, and crew detail pages |
 
 
 

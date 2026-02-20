@@ -115,8 +115,10 @@ For items not covered by the bundled dataset, Neptune can generate semantic tags
 
 ### Requirements
 
-- Language model provider configured (Ollama, LM Studio, OpenAI, or Anthropic)
-- Enable **Semantic Search** in Settings
+- Language model provider available (Neptune AI is built-in and enabled by default)
+- Enable **Generate New Tags** in Settings
+
+Neptune AI works out of the box with no configuration required. Alternative providers (Ollama, LM Studio, OpenAI, Anthropic) can be configured in **Settings** > **Language Models**.
 
 ### How It Works
 
@@ -142,16 +144,19 @@ Semantic Search works immediately using bundled tags. No configuration needed.
 ### With LLM Tag Generation
 
 1. Go to **Settings** > **Search**
-2. Configure a language model provider
-3. Enable **Semantic Search**
+2. Enable **Semantic Search** (if not already enabled)
+3. Enable **Generate New Tags**
 4. Uncovered items will be analyzed in background
+
+Neptune AI is the default provider and requires no configuration. Analysis begins automatically when enabled.
 
 ### Analysis Progress
 
 Settings shows:
-- Items covered by bundled dataset
-- Items needing LLM analysis
-- Analysis progress percentage
+- Items with tags available (complete count)
+- Items pending analysis
+- Progress bar during active analysis
+- Batch progress (e.g., "Batch 3 of 10")
 
 
 
@@ -198,5 +203,6 @@ Useful when:
 
 - Bundled tags included in app - no network needed
 - LLM-generated tags stored locally on device
-- Analysis queries sent to configured provider only
+- Analysis queries sent to configured provider (Neptune AI by default)
+- Only item metadata (title, year, overview) sent for analysis
 - No tags or results uploaded anywhere

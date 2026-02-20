@@ -40,6 +40,7 @@ type SearchResult struct {
 	Title   string `json:"title"`
 	Path    string `json:"path"`
 	Excerpt string `json:"excerpt"`
+	Anchor  string `json:"anchor,omitempty"`
 }
 
 func SearchHandler(w http.ResponseWriter, r *http.Request, cfg *config.Config) {
@@ -81,7 +82,7 @@ func performSearch(query string, rootDir string, documentsDir string) []SearchRe
 
 			if matches := matchContent(string(content), searchTerms); matches {
 				title := extractTitle(string(content))
-				excerpt := extractExcerpt(string(content), searchTerms)
+				excerpt, anchor := extractExcerptAndAnchor(string(content), searchTerms)
 
 				// Clean up the path
 				cleanPath := path
@@ -99,6 +100,7 @@ func performSearch(query string, rootDir string, documentsDir string) []SearchRe
 					Title:   title,
 					Path:    "/" + cleanPath,
 					Excerpt: excerpt,
+					Anchor:  anchor,
 				})
 			}
 		}
@@ -199,14 +201,37 @@ func extractTitle(content string) string {
 	return "Untitled"
 }
 
-func extractExcerpt(content string, terms SearchTerms) string {
-	const excerptLength = 200
+// extractExcerptAndAnchor extracts a text excerpt around the match and finds the nearest heading anchor
+func extractExcerptAndAnchor(content string, terms SearchTerms) (string, string) {
+	const excerptLength = 400
 
-	// Strip markdown before processing
+	// Find match position in original content first (for anchor detection)
+	lowerOriginal := strings.ToLower(content)
+	var matchIndexOriginal int
+	if len(terms.ExactPhrases) > 0 {
+		for _, phrase := range terms.ExactPhrases {
+			if idx := strings.Index(lowerOriginal, phrase); idx != -1 {
+				matchIndexOriginal = idx
+				break
+			}
+		}
+	} else if len(terms.IncludeWords) > 0 {
+		for _, word := range terms.IncludeWords {
+			if idx := strings.Index(lowerOriginal, word); idx != -1 {
+				matchIndexOriginal = idx
+				break
+			}
+		}
+	}
+
+	// Find nearest heading above the match for anchor
+	anchor := findNearestHeading(content, matchIndexOriginal)
+
+	// Strip markdown for clean excerpt display
 	cleanContent := stripMarkdown(content)
 	lowerContent := strings.ToLower(cleanContent)
 
-	// First try to find a match with exact phrases
+	// Find match position in cleaned content
 	var matchIndex int
 	if len(terms.ExactPhrases) > 0 {
 		for _, phrase := range terms.ExactPhrases {
@@ -216,7 +241,6 @@ func extractExcerpt(content string, terms SearchTerms) string {
 			}
 		}
 	} else if len(terms.IncludeWords) > 0 {
-		// Then try with included words
 		for _, word := range terms.IncludeWords {
 			if idx := strings.Index(lowerContent, word); idx != -1 {
 				matchIndex = idx
@@ -248,7 +272,66 @@ func extractExcerpt(content string, terms SearchTerms) string {
 		}
 	}
 
-	return excerpt
+	return excerpt, anchor
+}
+
+// findNearestHeading finds the heading closest to (but before) the given position
+func findNearestHeading(content string, position int) string {
+	lines := strings.Split(content[:min(position+1, len(content))], "\n")
+	headingRegex := regexp.MustCompile(`^#{1,6}\s+(.+?)(?:\s+\{#([a-zA-Z0-9-]+)\})?$`)
+
+	var lastHeading string
+	for _, line := range lines {
+		trimmed := strings.TrimSpace(line)
+		matches := headingRegex.FindStringSubmatch(trimmed)
+		if matches != nil {
+			headingText := matches[1]
+			// If there's already an ID, use it
+			if len(matches) > 2 && matches[2] != "" {
+				lastHeading = matches[2]
+			} else {
+				// Generate slug from heading text
+				lastHeading = makeSearchSlug(headingText)
+			}
+		}
+	}
+
+	return lastHeading
+}
+
+// makeSearchSlug creates a URL-friendly slug from heading text (mirrors toc.go logic)
+func makeSearchSlug(text string) string {
+	// Convert to lowercase
+	text = strings.ToLower(text)
+
+	// Remove inline code and links
+	text = regexp.MustCompile("`[^`]+`").ReplaceAllString(text, "")
+	text = regexp.MustCompile(`\[([^\]]+)\]\([^)]+\)`).ReplaceAllString(text, "$1")
+
+	// Replace common special characters with spaces
+	text = regexp.MustCompile(`[&+_,.()\[\]{}'"!?;:~*]`).ReplaceAllString(text, " ")
+
+	// Normalize spaces
+	text = regexp.MustCompile(`\s+`).ReplaceAllString(text, " ")
+	text = strings.TrimSpace(text)
+
+	// Replace spaces with hyphens
+	text = strings.ReplaceAll(text, " ", "-")
+
+	// Remove non-alphanumeric except hyphens
+	text = regexp.MustCompile(`[^a-z0-9-]`).ReplaceAllString(text, "")
+
+	// Remove consecutive hyphens
+	text = regexp.MustCompile(`-+`).ReplaceAllString(text, "-")
+
+	// Trim hyphens
+	text = strings.Trim(text, "-")
+
+	if text == "" {
+		return "heading"
+	}
+
+	return text
 }
 
 // stripMarkdown removes markdown syntax from content for clean display

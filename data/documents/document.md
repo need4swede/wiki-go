@@ -26,7 +26,9 @@ A native tvOS media client for Jellyfin servers.
 | Page | Description |
 |------|-------------|
 | [Home Screen](/browsing/home-screen) | Hero spotlight, content sections |
+| [Library](/library) | Full library with filtering |
 | [Item Details](/browsing/item-details) | Movies, TV shows, extras |
+| [Collections](/browsing/collections) | Box sets and franchises |
 
 ### Search
 

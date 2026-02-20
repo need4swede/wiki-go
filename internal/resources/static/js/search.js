@@ -126,10 +126,13 @@ const WikiSearch = (function() {
             const highlightedTitle = result.title.replace(pattern, '<span class="search-result-highlight">$1</span>');
             const highlightedExcerpt = result.excerpt.replace(pattern, '<span class="search-result-highlight">$1</span>');
 
+            // Build URL with anchor if available
+            const href = result.anchor ? `${result.path}#${result.anchor}` : result.path;
+
             return `
                 <div class="search-result-item">
-                    <a href="${result.path}" class="search-result-title">${highlightedTitle}</a>
-                    <div class="search-result-path">${result.path}</div>
+                    <a href="${href}" class="search-result-title">${highlightedTitle}</a>
+                    <div class="search-result-path">${result.path}${result.anchor ? ' → #' + result.anchor : ''}</div>
                     <div class="search-result-excerpt">${highlightedExcerpt}</div>
                 </div>
             `;
