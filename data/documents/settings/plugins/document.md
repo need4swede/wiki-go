@@ -4,42 +4,33 @@ order: 20
 
 # Plugin Settings
 
-Manage Jellyfin server plugins.
-
-
-
 ## Detected Plugins
 
 Neptune shows compatible plugins from your server:
 
 | Plugin | Feature |
 |--------|---------|
-| **Home Sections** | Coming Soon from Radarr/Sonarr |
-| **Theme Songs** | Ambient music on series pages |
+| **Home Sections** | Coming Soon and Because You Watched recommendations |
+| **Theme Songs** | Ambient music on movie, collections, and series pages |
 | **Intro Skipper** | Skip intros, credits, and recaps |
-
-Plugins show "Detected" or "Not Found" status.
-
-
 
 ## Home Sections
 
-When detected, shows upcoming content from your *arr stack calendars in the Coming Soon row.
+When enabled, adds two sections to your home screen:
 
-
+- **Coming Soon** - Upcoming content from your \*arr stack calendars. 
+- **Because You Watched** - Personalized suggestions based on your viewing history
 
 ## Theme Songs
 
-When detected, plays ambient theme music on TV series detail pages.
+When enabled, plays ambient theme music on movie, series and collection pages.
 
 **Settings:**
 
 - Enable/disable playback
+- Enable/disable looping
 - Adjust volume level
-
-Music fades in when entering a series and fades out when leaving or starting playback.
-
-
+- Add crossfade
 
 ## Intro Skipper
 

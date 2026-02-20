@@ -25,4 +25,4 @@ Neptune works great without plugins. You can install them later on your Jellyfin
 
 ## Managing Plugins
 
-You can manage installed plugins from **Settings** > **Plugins**. Here you can toggle them on or off and adjust various plugin specific options.
+You can manage installed plugins from **Settings** > **[Plugins](/settings/plugins)**. Here you can toggle them on or off and adjust various plugin specific options.
