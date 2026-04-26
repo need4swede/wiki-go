@@ -27,6 +27,7 @@ A native tvOS media client for Jellyfin servers.
 |------|-------------|
 | [Home Screen](/browsing/home-screen) | Hero spotlight, content sections |
 | [Library](/library) | Full library with filtering |
+| [Library Shortcuts](/library/shortcuts) | Pinned items and timestamp shortcuts |
 | [Item Details](/browsing/item-details) | Movies, TV shows, extras |
 | [Collections](/browsing/collections) | Box sets and franchises |
 
@@ -74,7 +75,9 @@ A native tvOS media client for Jellyfin servers.
 - **Trident Player**: Custom video engine with HDR, Atmos, and codec support
 - **Semantic Search**: AI-powered thematic search across your library
 - **Jellyseerr Integration**: Browse and request new content
-- **Custom Themes**: Six built-in themes plus JSON import for custom designs
+- **Library Shortcuts**: Pin movies, shows, browse views, or even specific moments during playback
+- **Cloud Backup & Sync**: Keep settings, layout, and shortcuts in sync across every device on your account
+- **Custom Themes**: Seven built-in themes with Adaptive and Dynamic modes, plus JSON import for your own designs
 
 
 

@@ -24,6 +24,14 @@ Trident plays virtually any video file directly from your Jellyfin server - no t
 
 No more waiting for transcodes. No more quality loss. Just press play.
 
+### Server Transcoding
+
+When direct play isn't practical — for example, streaming remotely over a slower connection — Neptune also supports server-side transcoding. Your Jellyfin server re-encodes the video on-the-fly to fit within your chosen bitrate limit.
+
+Configure this in **Settings > Playback > Playback Mode**. You can set a maximum streaming bitrate from 1 Mbps to 120 Mbps, letting you balance quality against available bandwidth.
+
+Even in transcode mode, Neptune keeps audio and video perfectly synced and handles the stream smoothly.
+
 [See all supported formats →](/playback/trident-player/codecs)
 
 

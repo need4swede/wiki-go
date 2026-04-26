@@ -74,7 +74,15 @@ Watch episodes in random order:
 3. Press Play to start random episode
 4. Episodes continue in random order
 
-Shuffle persists until disabled or you leave the series page.
+Shuffle is per-show, so your shows that should stay sequential keep their order.
+
+
+
+## Spoiler Protection
+
+Series detail pages can hide thumbnails and overviews for episodes you haven't watched yet. Toggle the **eye** icon in the action pill to enable - episode cards swap their image and synopsis for a placeholder, so you can browse without seeing spoilers from upcoming episodes.
+
+Already-watched episodes stay fully visible. Toggle off any time to see everything again.
 
 
 

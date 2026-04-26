@@ -59,6 +59,10 @@ With lossless audio formats like Dolby TrueHD, there may be a brief moment of si
 
 ## Network Streaming
 
+### Transcoded Streams
+
+When using Transcode mode, audio may start slightly before video as the server begins encoding. Neptune automatically detects and compensates for this offset during calibration. Playback sync works the same as direct play — you won't notice any difference.
+
 ### Adaptive Buffering
 
 Neptune adapts to your network conditions:

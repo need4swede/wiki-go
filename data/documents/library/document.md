@@ -8,9 +8,17 @@ Browse and filter your entire media collection with powerful filtering, stats, a
 
 
 
+## In This Section
+
+| Page | Description |
+|------|-------------|
+| [Shortcuts](/library/shortcuts) | Pinning items, browse pins, and timestamp shortcuts |
+
+
+
 ## Overview
 
-The Library tab provides a complete view of your media collection. Unlike the Home, Movies, and Shows tabs which show curated content rows, the Library gives you stats at a glance, browsable categories, and a full filterable grid of all your content.
+The Library tab provides a complete view of your media collection. Unlike the Home, Movies, and Shows tabs which show curated content rows, the Library gives you stats at a glance, browsable categories, pinned shortcuts, and a full filterable grid of all your content.
 
 
 
@@ -26,6 +34,12 @@ At the top of the Library, a row of stat cards gives you a quick overview:
 | **Collections** | Total box set collections |
 | **In Progress** | Movies and episodes you've started but not finished |
 | **Favorites** | Items you've marked as favorites |
+
+
+
+## Shortcuts
+
+Pinned items appear in a Shortcuts section above the Browse By categories. Pin movies, shows, episodes, collections, or even browse views like a specific genre or actor. See [Shortcuts](/library/shortcuts) for the full breakdown including timestamp pins.
 
 
 

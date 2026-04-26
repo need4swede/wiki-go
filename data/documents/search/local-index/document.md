@@ -42,6 +42,8 @@ Build SQLite FTS5 index
 Store on device
 ```
 
+If the [Neptune companion plugin](/getting-started/setup/plugins) is installed on your server, this sync is dramatically faster - the plugin pre-builds the index server-side and ships the result, so a fresh install can import in seconds instead of running the full client-side sync.
+
 ### Every Search
 
 ```

@@ -19,6 +19,7 @@ Access Settings via the gear icon in the tab menu bar.
 | [Notifications](/settings/notifications) | In-app notification preferences |
 | [Subtitles](/settings/subtitles) | Subtitle appearance customization |
 | [Image Cache](/settings/images) | Download all images, cache management |
+| [Backup & Sync](/settings/backup) | Cloud sync for settings, restore, delete backup |
 
 
 
@@ -34,6 +35,7 @@ Access Settings via the gear icon in the tab menu bar.
 | **Search** | Local index, semantic search, prompt search |
 | **Subtitles** | Font, color, background |
 | **Image Cache** | Download and manage cached images |
+| **Backup & Sync** | Cloud backup of settings via the Neptune plugin |
 | **Server** | Jellyfin connection info |
 | **Jellyseerr** | Discovery service connection |
 | **About** | App version, diagnostics |

@@ -31,10 +31,12 @@ Switch profiles instantly from Settings.
 
 ## Themes
 
-Six built-in themes from calming Ocean to minimal Void.
+Seven built-in themes from calming Ocean to minimal Void, plus the in-app Theme Builder for custom designs.
 
 - Live preview as you browse
 - Per-profile preferences
+- **Theme Mode**: Static, Adaptive (subtle content tinting), or Dynamic (full color extraction from focused content)
+- **Theme Builder**: Build your own theme directly on the Apple TV
 - Custom theme import via JSON
 
 

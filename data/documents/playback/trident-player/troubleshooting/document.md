@@ -131,6 +131,34 @@ Brief silence (~100-200ms) is normal when seeking in TrueHD or DTS-HD MA content
 
 
 
+## Transcoding Issues
+
+### Transcode Won't Start
+
+**Check your server:**
+- Ensure your Jellyfin server has hardware transcoding configured (if available)
+- Check server CPU/GPU usage — transcoding is resource-intensive
+- Verify the server logs for transcode errors
+
+**Check your settings:**
+- Confirm Playback Mode is set to **Transcode** in Settings > Playback
+- Try a lower Max Streaming Bitrate — very high targets may cause the server to skip transcoding
+
+### Poor Quality in Transcode Mode
+
+**Increase the bitrate:**
+- Go to Settings > Playback > Max Streaming Bitrate
+- Try a higher value (40 Mbps or above for 4K, 15 Mbps or above for 1080p)
+
+**Consider Direct Play:**
+- If your network can handle it, Direct Play always gives the best quality since it plays the original file without re-encoding
+
+### Seeking Doesn't Work in Transcode Mode
+
+Transcoded streams are delivered sequentially — you can't seek within them the same way as direct play. To jump to a different position, Neptune requests a new transcode starting from that point. This may take a moment while the server begins encoding from the new position.
+
+
+
 ## Network Issues
 
 ### Constant Buffering

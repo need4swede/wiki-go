@@ -36,6 +36,19 @@ The Menu button behavior is configurable - it can either always exit the player,
 
 
 
+## Action Buttons
+
+When the controls are visible, an action row sits below the timeline:
+
+| Button | What It Does |
+|--------|--------------|
+| **Pin** | Capture the current moment as a [timestamp shortcut](/library/shortcuts#timestamp-shortcuts) - position plus a thumbnail of the current frame. A confirmation pill briefly shows "Pinned at [time]". |
+| **Speed** | Cycle playback speed (0.5x through 2.0x) |
+| **Info** | Open playback info: resolution, codec, HDR format, audio details |
+| **Audio/Subs** | Quick jump to track selection |
+
+
+
 ## Track Selection (Playback Pill)
 
 Swipe **up** or **down** during playback to open the track selection pill - a slim overlay at the top of the screen.

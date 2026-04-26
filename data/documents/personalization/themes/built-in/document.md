@@ -4,7 +4,7 @@ order: 10
 
 # Built-in Themes
 
-Neptune includes six carefully crafted themes.
+Neptune includes seven carefully crafted themes.
 
 
 
@@ -71,3 +71,14 @@ Warm reds and oranges.
 - **Background**: Animated warm gradient
 - **Accent**: Orange/red
 - **Best for**: Action movies, warm ambiance
+
+
+
+## Nebula
+
+Cosmic pinks and oranges with a deep violet base.
+
+- **Style**: Dreamy, vibrant
+- **Background**: Animated nebula gradient
+- **Accent**: Pink/magenta
+- **Best for**: Bold, atmospheric viewing

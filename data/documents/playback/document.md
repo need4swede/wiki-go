@@ -18,6 +18,17 @@ Video playback in Neptune.
 
 
 
+## Playback Modes
+
+Neptune supports two playback modes, configurable in **Settings > Playback**:
+
+- **Direct Play** — Plays the original file from your server with no re-encoding. Best quality, recommended for local networks.
+- **Transcode** — Your server re-encodes the video to a target bitrate. Useful for remote access or limited bandwidth.
+
+See [Playback Settings](/settings/playback) for configuration details.
+
+
+
 ## Starting Playback
 
 **From Home:** Select Continue Watching or Next Up items.

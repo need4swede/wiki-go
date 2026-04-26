@@ -36,6 +36,46 @@ When enabled, Neptune adjusts your TV's display refresh rate to match the video 
 
 Your TV may briefly go black (1-2 seconds) when switching modes. This is normal.
 
+### Playback Mode
+
+Choose how Neptune delivers video from your server:
+
+| Mode | Description |
+|------|-------------|
+| **Direct Play** | Plays the file as-is from your server — no re-encoding, no quality loss (recommended) |
+| **Transcode** | Your server re-encodes the video on-the-fly to fit a target bitrate |
+
+**Direct Play** is best for most setups. Neptune's Trident engine supports virtually all formats natively, so there's no need for the server to convert anything.
+
+**Transcode** is useful when your network can't handle the full file bitrate (e.g., remote access over the internet) or when you want to reduce bandwidth usage.
+
+### Max Streaming Bitrate
+
+When using Transcode mode, this controls the maximum bitrate the server targets:
+
+| Option | Best For |
+|--------|----------|
+| **Auto** | Let the server decide based on the source file |
+| **120 Mbps** | Near-original quality for most content |
+| **80 Mbps** | High quality 4K |
+| **60 Mbps** | Good quality 4K |
+| **40 Mbps** | Standard 4K or high quality 1080p |
+| **20 Mbps** | Good quality 1080p |
+| **15 Mbps** | Standard 1080p |
+| **10 Mbps** | Compressed 1080p |
+| **8 Mbps** | 720p equivalent |
+| **4 Mbps** | Low bandwidth |
+| **2 Mbps** | Very low bandwidth |
+| **1 Mbps** | Minimal bandwidth |
+
+Lower bitrates use less network bandwidth but reduce video quality. This setting only applies in Transcode mode — Direct Play always streams the original file.
+
+### Always Transcode
+
+When enabled (in Transcode mode), the server will always re-encode content even if it could be played directly. This guarantees the bitrate limit is respected regardless of the source format.
+
+When disabled, the server may still direct play files that are already below your bitrate limit and in a compatible format.
+
 
 
 ## Controls
