@@ -1,78 +1,37 @@
 # Home Screen
 
-Your personalized media hub.
+Your personalized media hub. The home screen displays a spotlight carousel at the top followed by horizontal rows of content organized by category. Each row surfaces different aspects of your library — what you're watching, what's new, what you love, and what you might want to discover.
 
 
 
-## Hero Spotlight
+## Sections
 
-A full-bleed backdrop display at the top showcasing content you should watch next.
+The home screen is made up of the following sections, listed in default order:
 
-### What Gets Featured
-
-Neptune intelligently selects what to spotlight based on your viewing activity:
-
-| Type | Badge Color | Criteria |
-|------|-------------|----------|
-| **Continue Watching** | Orange | Movies or episodes you started but didn't finish |
-| **New Episode** | Purple | New episode from a show you're caught up on (last 7 days) |
-| **New Season** | Cyan | New season of a show you've watched (last 14 days) |
-| **New Series** | Teal | Brand new show added to your library (last 14 days) |
-| **New Release** | Blue | Movie that just became available for home viewing (last 14 days) |
-| **Recently Added** | Green | Latest additions to your library |
-
-Items are ranked by a scoring system that prioritizes new episodes and recent activity. Movies use home release dates (streaming/digital availability) rather than theatrical premiere dates, so newly acquired movies rank correctly.
-
-### Separate Queues per Tab
-
-Each tab has its own spotlight queue:
-
-- **Home:** All content types
-- **Movies:** Only movie-related spotlight items
-- **Shows:** Only TV show spotlight items
-
-### Navigation
-
-- **Left/Right swipe:** Browse between spotlight items
-- **Select (click):** Enter fullscreen gallery, then select to view details
-- **Auto-rotation:** Items rotate every 8 seconds
-
-Navigation arrows appear on the left and right edges when the spotlight zone is focused.
-
-### Visual Effects
-
-- **Parallax scrolling:** Backdrop moves at 20% scroll speed for depth
-- **Scroll fade:** Backdrop gradually fades as you scroll down
-- **Crossfade transitions:** Smooth morphing between spotlight items
-
-### Backdrop Behavior
-
-The spotlight backdrop is always visible on Home, Movies, and Shows tabs. When you focus content cards below (like Continue Watching), the focused item's backdrop overlays the spotlight with its own image and metadata.
+| Section | Description |
+|---------|-------------|
+| [Spotlight](spotlight/) | Full-bleed backdrop carousel highlighting content to watch next, scored by category and recency |
+| [Continue Watching](continue-watching/) | Movies and episodes you started but didn't finish, with progress bars |
+| [Next Up](next-up/) | The next unwatched episode from each show you're watching |
+| [New Releases](new-releases/) | Recently premiered movies and new seasons, with smart grouping and TMDB date enrichment |
+| [Recently Added](recently-added/) | Content recently added to your server, with per-library rows on the Home tab |
+| [Favorites](favorites/) | Movies and shows you've marked as favorites |
+| [Recommended](recommended/) | Personalized suggestions blending library content with Jellyseerr requestable items |
+| [Coming Soon](coming-soon/) | Upcoming content from Radarr/Sonarr calendars and Jellyseerr requests |
+| [Because You Watched](because-you-watched/) | Similar titles based on specific movies you've watched (requires plugin) |
+| [Custom Libraries](custom-libraries/) | Recently added items from non-standard libraries like Anime or Documentaries |
 
 
 
-## Content Sections
+## Quick Actions
 
-| Section | Description | Card Style |
-|---------|-------------|------------|
-| **Continue Watching** | Resume movies and episodes with progress bars | Wide cards |
-| **Next Up** | Next unwatched episodes from your shows | Wide cards |
-| **New Releases** | Recently premiered content | Poster cards |
-| **Recently Added Movies** | Latest movie additions to your library | Poster cards |
-| **Recently Added Shows** | Latest show additions to your library | Poster cards |
-| **Recommended** | Personalized suggestions blending your library and requestable content | Poster cards |
-| **Coming Soon** | Upcoming content from Jellyseerr or Radarr/Sonarr calendars | Poster cards |
-| **Because You Watched** | Suggestions based on your viewing history (plugin required) | Poster cards |
-| **Custom Libraries** | Your custom Jellyfin libraries (Home tab only) | Poster cards |
+### Long Press
 
-### Recommended
+Long-press any content card (0.6 seconds) to pin it as a Library Shortcut for quick access from the Library tab. A modal appears confirming the action. Works on movies, shows, seasons, episodes, and collections.
 
-The Recommended section provides personalized suggestions based on your watch history, favorites, and the directors and actors you enjoy. It blends content from your library with requestable items from Jellyseerr (if connected):
+### Focused Backdrop
 
-- Items already in your library show a **green checkmark**
-- Items available to request show a **blue plus icon**
-
-If Jellyseerr isn't connected, recommendations come from your Jellyfin library only.
+When you navigate down and focus a card in any section, its backdrop image replaces the spotlight area at the top of the screen. This gives you a preview of the content before selecting it.
 
 
 
@@ -91,7 +50,9 @@ In editing mode, each section shows as a labeled placeholder card. You can:
 | **Show a section** | Focus a hidden section, press Show |
 | **Save and exit** | Press Back or Done |
 
-Hero Spotlight always stays at the top and cannot be moved or hidden.
+Spotlight always stays at the top and cannot be moved or hidden.
+
+Section order and visibility are saved per user — each Jellyfin profile has its own layout.
 
 
 
@@ -102,20 +63,31 @@ The **Movies** and **Shows** tabs work the same as the Home tab but filter conte
 - **Movies tab:** Spotlight shows only new movie releases, content rows show only movies
 - **Shows tab:** Spotlight shows only new episodes, content rows show only TV shows
 
+Some sections have tab restrictions — for example, Next Up is hidden on the Movies tab since it only contains episodes, and Because You Watched is hidden on the Shows tab since it's movie-based.
+
+If you have multiple movie or show libraries, a library picker appears at the top letting you filter by library or view all.
+
 Switching tabs updates both the spotlight and all content sections.
 
 
 
 ## Content Cards
 
-**Poster cards:** Movies and shows with poster, title, progress bar.
+**Poster cards:** Movies and shows with poster art displayed vertically. Used by New Releases, Recently Added, Favorites, Recommended, Coming Soon, Because You Watched, and Custom Libraries.
 
-**Wide cards:** Continue Watching and Next Up with thumbnail and episode info.
+**Wide cards:** Continue Watching and Next Up with wider thumbnails showing episode screenshots or movie backdrops at a landscape aspect ratio.
 
-**Focus behavior:** Cards scale up with a border on focus. The focused item's backdrop appears behind all content.
+**Focus behavior:** Cards scale up with a white border on focus. The focused item's backdrop appears behind all content at the top of the screen.
 
 
 
 ## Background Refresh
 
-Content refreshes automatically every 10 seconds. Pauses during video playback.
+Content refreshes automatically every 10 seconds. Each refresh fetches all sections in parallel and uses smart diffing to update only what's changed — preventing unnecessary UI flicker.
+
+Refresh pauses during:
+- Video playback
+- Non-content tabs (Search, Settings, Library)
+- Detail view navigation
+
+Refresh resumes when you return to a content tab (Home, Movies, Shows, or Discover).

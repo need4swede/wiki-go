@@ -12,6 +12,8 @@ Seerr (formerly known as Jellyseerr) lets you:
 - Request movies and TV shows
 - Track request status
 
+You can read more about it on <a href="https://seerr.dev/" target="_blank">seerr.dev</a>
+
 ## Automatic Detection
 
 Neptune tries to find Seerr automatically:
@@ -19,7 +21,7 @@ Neptune tries to find Seerr automatically:
 - **IP addresses:** Checks port 5055 (e.g., `192.168.1.100:5055`)
 - **Domains:** Checks for `seerr` subdomain
 
-If detected, select **Login to Seerr**.
+If detected, it will try to login via Jellyfin automatically. If it's unable to, you can always  **login to Seerr** using your own athentication methods. 
 
 ## Manual Setup
 
@@ -36,6 +38,8 @@ If detected, select **Login to Seerr**.
 3. Press **Connect**
 
 ## Signing In
+
+![seerr.png](seerr.png)
 
 Neptune allows you to sign-in to Seerr in various ways:
 
