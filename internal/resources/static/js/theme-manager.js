@@ -31,18 +31,16 @@ document.addEventListener('DOMContentLoaded', function() {
     'use strict';
 
     // DOM elements
-    const themeToggle = document.querySelector('.sidebar-footer-buttons .sidebar-footer-btn[aria-label="Toggle theme"]');
+    const themeToggles = document.querySelectorAll('.theme-toggle-btn');
     const root = document.documentElement;
-    const lightIcon = document.querySelector('.light-icon');
-    const darkIcon = document.querySelector('.dark-icon');
+    const lightIcons = document.querySelectorAll('.light-icon');
+    const darkIcons = document.querySelectorAll('.dark-icon');
 
     // Initialize theme
     initializeTheme();
 
-    // Add theme toggle event listener
-    if (themeToggle) {
-        themeToggle.addEventListener('click', toggleTheme);
-    }
+    // Add theme toggle event listener to every toggle button (sidebar + topbar)
+    themeToggles.forEach(btn => btn.addEventListener('click', toggleTheme));
 
     // Apply system preference changes
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', handleSystemThemeChange);
@@ -99,16 +97,16 @@ document.addEventListener('DOMContentLoaded', function() {
      */
     function updateThemeUI(theme) {
         if (theme === 'dark') {
-            if (lightIcon) lightIcon.style.display = 'none';
-            if (darkIcon) darkIcon.style.display = 'block';
+            lightIcons.forEach(icon => { icon.style.display = 'none'; });
+            darkIcons.forEach(icon => { icon.style.display = ''; });
             // Use dark theme for syntax highlighting
             const prismTheme = document.getElementById('prism-theme');
             if (prismTheme) {
                 prismTheme.href = '/static/libs/prism-1.30.0/prism-tomorrow.min.css';
             }
         } else {
-            if (lightIcon) lightIcon.style.display = 'block';
-            if (darkIcon) darkIcon.style.display = 'none';
+            lightIcons.forEach(icon => { icon.style.display = ''; });
+            darkIcons.forEach(icon => { icon.style.display = 'none'; });
             // Use light theme for syntax highlighting
             const prismTheme = document.getElementById('prism-theme');
             if (prismTheme) {

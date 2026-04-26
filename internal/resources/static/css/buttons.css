@@ -185,6 +185,12 @@
     display: none !important;
 }
 
+/* Toolbar theme toggle - icon-only, square padding so it doesn't stretch */
+.toolbar-button.toolbar-theme-toggle {
+    padding: 10px;
+    gap: 0;
+}
+
 /* ---------- Page toolbar styles ---------- */
 .page-toolbar {
     display: flex;

@@ -179,6 +179,7 @@
   "footer.powered_by": "Powered by",
 
   "tooltip.print": "Print this page",
+  "tooltip.toggle_theme": "Toggle dark / light mode",
 
   "delete_user.title": "Delete User",
   "delete_user.confirm_message": "Are you sure you want to delete user \"{0}\"? This action cannot be undone.",

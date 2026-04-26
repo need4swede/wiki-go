@@ -70,6 +70,7 @@ type Config struct {
 		EnableLinkEmbedding       bool   `yaml:"enable_link_embedding"`         // Enable automatic link embedding from clipboard when true
 		HideAttachments           bool   `yaml:"hide_attachments"`              // Hide attachments section in documents when true
 		HideDirectoryListing      bool   `yaml:"hide_directory_listing"`        // Hide subdirectory folder listing on pages when true
+		HideSidebarFooterButtons  bool   `yaml:"hide_sidebar_footer_buttons"`   // Hide sidebar footer buttons (sitemap, theme toggle, login) when true
 		DisableContentMaxWidth    bool   `yaml:"disable_content_max_width"`     // Disable 900px content width limit when true
 		MaxVersions               int    `yaml:"max_versions"`
 		MaxUploadSize             int    `yaml:"max_upload_size"` // Maximum upload file size in MB
@@ -110,6 +111,7 @@ func LoadConfig(path string) (*Config, error) {
 	config.Wiki.EnableLinkEmbedding = false
 	config.Wiki.HideAttachments = false
 	config.Wiki.HideDirectoryListing = false
+	config.Wiki.HideSidebarFooterButtons = false
 	config.Wiki.DisableContentMaxWidth = false
 	config.Wiki.MaxVersions = 10   // Default value
 	config.Wiki.MaxUploadSize = 10 // Default value
@@ -185,6 +187,7 @@ func LoadConfig(path string) (*Config, error) {
 				config.Wiki.EnableLinkEmbedding,
 				config.Wiki.HideAttachments,
 				config.Wiki.HideDirectoryListing,
+				config.Wiki.HideSidebarFooterButtons,
 				config.Wiki.DisableContentMaxWidth,
 				config.Wiki.MaxVersions,
 				config.Wiki.MaxUploadSize,
@@ -256,6 +259,7 @@ wiki:
     enable_link_embedding: %t
     hide_attachments: %t
     hide_directory_listing: %t
+    hide_sidebar_footer_buttons: %t
     disable_content_max_width: %t
     max_versions: %d
     # Maximum file upload size in MB
@@ -347,6 +351,7 @@ func SaveConfig(cfg *Config, w io.Writer) error {
 		cfg.Wiki.EnableLinkEmbedding,
 		cfg.Wiki.HideAttachments,
 		cfg.Wiki.HideDirectoryListing,
+		cfg.Wiki.HideSidebarFooterButtons,
 		cfg.Wiki.DisableContentMaxWidth,
 		cfg.Wiki.MaxVersions,
 		cfg.Wiki.MaxUploadSize,

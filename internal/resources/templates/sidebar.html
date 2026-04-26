@@ -23,6 +23,7 @@
     <div class="sidebar-footer">
         <div class="owner">{{.Config.Wiki.Owner}}</div>
         <div class="notice">{{.Config.Wiki.Notice}}</div>
+        {{if not .Config.Wiki.HideSidebarFooterButtons}}
         <div class="sidebar-footer-buttons">
             <button class="sidebar-footer-btn" aria-label="Sitemap" title="Sitemap" onclick="window.open('/sitemap/', '_blank')">
                 <i class="fa fa-sitemap"></i>
@@ -38,6 +39,7 @@
                 <i class="fa fa-sign-out"></i>
             </button>
         </div>
+        {{end}}
     </div>
 </div>
 {{end}}
