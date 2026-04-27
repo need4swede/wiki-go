@@ -19,6 +19,10 @@
     --code-bg: rgba(0, 0, 0, 0.04);
     --theme-toggle-bg: rgba(0, 0, 0, 0.06);
     --theme-toggle-color: #1d1d1f;
+    --nav-active-bg: var(--primary-color);
+    --nav-active-bg-hover: var(--primary-hover);
+    --nav-active-color: #ffffff;
+    --nav-hover-bg: rgba(0, 122, 255, 0.08);
     --danger-color: #ff3b30;
     --danger-bg: rgba(255, 59, 48, 0.12);
     --success-color: #34c759;
@@ -73,6 +77,10 @@
     --code-bg: rgba(255, 255, 255, 0.06);
     --theme-toggle-bg: rgba(255, 255, 255, 0.08);
     --theme-toggle-color: #ffffff;
+    --nav-active-bg: #101e2f;
+    --nav-active-bg-hover: #122235;
+    --nav-active-color: #ffffff;
+    --nav-hover-bg: rgba(15, 24, 34, 0.47);
     --danger-color: #ff453a;
     --danger-bg: rgba(255, 69, 58, 0.2);
     --success-color: #30d158;

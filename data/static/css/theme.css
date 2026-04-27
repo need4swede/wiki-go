@@ -19,6 +19,10 @@
     --code-bg: #f8f9fa;
     --theme-toggle-bg: #e0e0e0;
     --theme-toggle-color: #333;
+    --nav-active-bg: var(--primary-color);
+    --nav-active-bg-hover: var(--primary-hover);
+    --nav-active-color: #ffffff;
+    --nav-hover-bg: rgba(0, 102, 204, 0.08);
     --danger-color: #dc3545;
     --danger-bg: #f8d7da;
     --success-color: #28a745;
@@ -47,6 +51,10 @@
     --code-bg: #080c14;
     --theme-toggle-bg: #0f1824;
     --theme-toggle-color: #e2e8f0;
+    --nav-active-bg: #101e2f;
+    --nav-active-bg-hover: #122235;
+    --nav-active-color: #ffffff;
+    --nav-hover-bg: rgba(15, 24, 34, 0.47);
     --danger-color: #f85149;
     --danger-bg: #1a0810;
     --success-color: #3fb950;

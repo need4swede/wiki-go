@@ -184,14 +184,14 @@ body {
 }
 
 .nav-item.active>a {
-    color: #ffffff;
-    background: #101e2f;
+    color: var(--nav-active-color);
+    background: var(--nav-active-bg);
     border: none;
 }
 
 .nav-item.active>a:hover {
-    background: #122235;
-    color: #ffffff;
+    background: var(--nav-active-bg-hover);
+    color: var(--nav-active-color);
 }
 
 .nav-children {
@@ -221,7 +221,7 @@ body {
 }
 
 .nav-item a:hover {
-    background: #0f182278;
+    background: var(--nav-hover-bg);
 }
 
 /* Arrow indicator */
