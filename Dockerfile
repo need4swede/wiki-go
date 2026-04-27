@@ -17,8 +17,8 @@ FROM docker.io/library/alpine:3.22
 
 RUN apk add --no-cache bash ca-certificates curl linux-pam tzdata && rm -rf /var/cache/apk/*
 
-ARG PUID=1000
-ARG PGID=1000
+ARG PUID=8043
+ARG PGID=8043
 
 RUN addgroup -g ${PGID} appgroup && adduser -u ${PUID} -G appgroup -s /bin/bash -D appuser
 
@@ -26,13 +26,13 @@ WORKDIR /wiki
 
 COPY --from=builder /app/wiki-go .
 
-RUN mkdir /wiki/data && chown -R appuser:appgroup /wiki && chmod -R 755 /wiki
+COPY data/ /wiki/data/
+
+RUN chown -R appuser:appgroup /wiki && chmod -R 755 /wiki
 
 USER appuser
 
 EXPOSE 8080 443
-
-VOLUME ["/wiki/data"]
 
 ENTRYPOINT ["./wiki-go"]
 

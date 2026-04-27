@@ -1,0 +1,29 @@
+# VCS / editor cruft
+.git
+.gitignore
+.gitattributes
+.github
+.idea
+.vscode
+.claude
+*.swp
+*.swo
+.DS_Store
+**/.DS_Store
+
+# Build artifacts and binaries
+build/
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Local-only docs/screenshots not needed in the image
+screenshots/
+demo-site-files/
+
+# Runtime state that shouldn't be baked into the image
+data/temp/
+data/versions/
