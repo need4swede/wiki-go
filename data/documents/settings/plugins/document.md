@@ -1,5 +1,5 @@
 ---
-order: 30
+order: 40
 ---
 
 # Plugin Settings

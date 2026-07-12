@@ -14,13 +14,13 @@ Access Settings via the gear icon at the left edge of the tab menu bar.
 |------|-------------|
 | [Home](/settings/home) | Home screen sections, navigation bar, spotlight, libraries |
 | [Playback](/settings/playback) | Engine, controls, autoplay, audio, advanced |
+| [Subtitle Style](/settings/subtitles) | Subtitle appearance |
 | [Plugins](/settings/plugins) | Plugin status and management |
 | [Deep Learning](/settings/deep-learning) | AI features and language model providers |
 | [Images](/settings/images) | Image cache and downloads |
 | [Metadata](/settings/metadata) | Metadata cache and TMDB data |
 | [Backup & Restore](/settings/backup) | Sync preferences across devices |
 | [Administration](/settings/administration) | User management and parental controls (admins) |
-| [Subtitle Style](/settings/subtitles) | Subtitle appearance |
 
 
 

@@ -4,19 +4,28 @@ order: 10
 
 # Installation
 
+Neptune runs on Apple TV, iPhone, iPad, and Mac. Install it on as many devices as you like; your account, preferences, and watch state carry across all of them.
+
 ## Requirements
 
-| Requirement | Minimum |
-|-------------|---------|
-| **Device** | Apple TV 4K (2nd generation or later) |
-| **OS** | tvOS 18.5 or later |
+| Device | Minimum |
+|--------|---------|
+| **Apple TV** | Apple TV 4K, tvOS 18.5 or later |
+| **iPhone / iPad** | iOS or iPadOS 16 or later |
+| **Mac** | TBD |
 | **Jellyfin Server** | 10.10 or later |
 
-Neptune also runs on iPhone as a beta. See [Neptune for iPhone](/getting-started/iphone).
+## Apple TV
 
-## TestFlight Installation
+Neptune for Apple TV is on the App Store:
 
-Neptune is currently in **beta** and available through TestFlight. Access is managed through the Neptune Discord server.
+1. Open the **App Store** on your Apple TV
+2. Search for **"Neptune"** or **"Neptune Player"**
+3. Select **Get** to download and install
+
+## iPhone & iPad (Beta)
+
+Neptune for iPhone and iPad hasn't reached the App Store yet. While a platform is unreleased, its beta is open to everyone through TestFlight, and access is managed through the Neptune Discord server.
 
 ### Getting Access
 
@@ -27,25 +36,27 @@ Neptune is currently in **beta** and available through TestFlight. Access is man
 
 ### Installing
 
-1. Install **TestFlight** onto your Apple TV via the App Store
-2. Open the TestFlight link from your iPhone, iPad, or Mac
-3. Accept the invitation
-4. Open the **TestFlight** app on your Apple TV
-5. Select **Neptune** and tap **Install**
+Accept the TestFlight invitation once, then install Neptune from the TestFlight app on each device. If you don't already have TestFlight installed, you can search for it on the App Store and install it from there.
 
-### Tester Roles
+### Test Purchases
 
-Neptune has two tester tiers within the community:
+Beta builds run on App Store test purchases. Upgrading to Pro inside a beta is free and nothing is ever charged. Test purchases stay in the beta: when a platform reaches the App Store, they don't carry over, and continuing with Pro there means buying it for real.
 
-**Passengers** have access to public TestFlight builds. These releases are less frequent but more stable, intended for general users following along with development. All verified Discord members qualify as Passengers.
+## Mac
 
-**Pilots** have access to the private TestFlight with nightly-style builds featuring more experimental changes. Pilot status is earned through active community participation, constructive discussion, and well-documented bug reports submitted through Aviation School.
+TBD.
 
-## App Store Installation
+## Passengers & Pilots
 
-When Neptune exits beta, it will be available to download via the App Store.
+The beta program has two roles, and they mean different things depending on whether a platform has launched:
+
+**Passengers** test platforms that haven't reached the App Store yet. Anyone can board through the Discord flow above. Right now that's iPhone and iPad. When a platform launches, its public beta ends and testers move to the App Store version.
+
+**Pilots** fly ahead of the App Store: preview builds of released platforms before everyone else gets them. Pilot access is a benefit of Neptune Pro's Lifetime tier. Select **Join Pilot Program** inside Neptune, confirm the email address you use with TestFlight, and your Lifetime purchase is verified automatically. No screenshots, no support tickets. The TestFlight invite lands in your inbox shortly after.
+
+One quirk to know: TestFlight builds can't see App Store purchases, so inside a Pilot build you activate Pro with a free test purchase. Your real Lifetime purchase stays untouched and keeps working in the App Store version.
 
 ## After Installation
 
-Once installed, Neptune will guide you through the initial setup.
-See [Setup](/getting-started/setup) for detailed instructions.
+Once installed, Neptune walks you through setup on every device.
+See [Setup](/getting-started/setup) for detailed instructions, and [Devices](/getting-started/devices) for what to expect on each screen.

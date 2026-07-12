@@ -12,18 +12,18 @@ The video, audio, and subtitle formats Trident plays directly without server-sid
 
 ### Hardware-Accelerated
 
-These codecs decode on the Apple TV's video hardware:
+These codecs decode on the device's video hardware:
 
 | Codec | Max Resolution | HDR Support | Notes |
 |-------|---------------|-------------|-------|
 | **H.265/HEVC** | 4K | HDR10, HDR10+, HLG, Dolby Vision | Standard for 4K content |
 | **H.264/AVC** | 4K | No | Universal compatibility |
 | **VP9** | 4K | HDR | YouTube, WebM files |
-| **AV1** | 4K | HDR | Apple TV 4K 3rd gen only |
+| **AV1** | 4K | HDR | Newer hardware (Apple TV 4K 3rd generation, recent iPhones and iPads) |
 
 ### Software-Decoded
 
-These play through software decoding. They're best at 1080p or lower because software decoding can't sustain 4K real-time on Apple TV hardware:
+These play through software decoding. They're best at 1080p or lower because software decoding can't sustain 4K in real time:
 
 | Codec | Best For |
 |-------|----------|

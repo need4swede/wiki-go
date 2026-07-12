@@ -1,5 +1,5 @@
 ---
-order: 50
+order: 60
 ---
 
 # Images
@@ -38,4 +38,4 @@ On by default. When an item's artwork fails to load or goes missing, Neptune qui
 
 ## System Behavior
 
-The image cache uses standard tvOS cache storage. The system may clear it when device storage runs low; images re-download as needed. The cache is shared across profiles on the device.
+The image cache uses the system's standard cache storage. The device may clear it when storage runs low; images re-download as needed. The cache is shared across profiles on the device.

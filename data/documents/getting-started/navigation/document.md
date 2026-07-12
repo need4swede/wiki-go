@@ -4,7 +4,7 @@ order: 30
 
 # Navigation
 
-Neptune uses a pill-shaped menu bar at the top of the screen.
+Neptune uses a pill-shaped menu bar at the top of the screen. The same tabs exist on every device; this page describes the Apple TV controls, and on iPhone and iPad the equivalents are taps and touch-and-holds (see [Devices](/getting-started/devices)).
 
 
 

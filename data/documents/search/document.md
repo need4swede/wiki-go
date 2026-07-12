@@ -1,5 +1,5 @@
 ---
-order: 50
+order: 40
 ---
 
 # Search
@@ -20,7 +20,7 @@ One search bar, three layers underneath. Neptune searches a local index for inst
 
 ## The Search Experience
 
-Open the Search tab (or search from the [Compass](/getting-started/navigation/compass) anywhere in the app) and start typing on the compact keyboard, or dictate with the Siri Remote.
+Open the Search tab (or, on Apple TV, search from the [Compass](/getting-started/navigation/compass) anywhere in the app) and start typing, or use dictation.
 
 - **Before you type:** your recent searches appear as chips, ready to re-run or clear.
 - **While you type:** results appear instantly, with suggestion chips drawn from your library.

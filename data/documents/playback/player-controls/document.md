@@ -4,7 +4,7 @@ order: 10
 
 # Player Controls
 
-Navigate playback with the Apple TV remote.
+Navigate playback with the Siri Remote. On iPhone and iPad the same controls are touch-first: tap to reveal them, drag the timeline to scrub, and the same action buttons sit in the same places.
 
 
 
@@ -98,4 +98,4 @@ When a series is playing in [shuffle mode](/browsing/item-details/tv-shows), a c
 
 ## Screensaver
 
-Playing video always blocks the screensaver. While paused, tvOS is allowed to start it unless you turn on **Prevent Screensaver on Pause** in **Settings > Playback > Advanced**.
+Playing video always blocks the screensaver. While paused, the system is allowed to start it unless you turn on **Prevent Screensaver on Pause** in **Settings > Playback > Advanced**.

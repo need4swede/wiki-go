@@ -72,14 +72,6 @@ Multi-channel audio is matched to your output, from stereo TVs to 7.1 receivers.
 
 
 
-## Audio/Video Sync
-
-Trident calibrates audio/video sync at playback start and corrects drift during playback. Sync is restored after seeks and after buffering pauses. A live A/V sync adjuster in the Playback Menu handles files with baked-in offsets.
-
-[Learn more about Playback Quality →](/playback/trident-player/sync)
-
-
-
 ## Subtitles
 
 Trident renders text and image subtitles locally, so the server doesn't have to burn them into the video.
@@ -92,6 +84,14 @@ Trident renders text and image subtitles locally, so the server doesn't have to 
 ASS subtitles render through libass with their styling intact (fonts, colors, positioning, effects). Useful for anime fan-subs that rely on styled signs and dialog.
 
 [Learn more about Subtitles →](/playback/trident-player/subtitles)
+
+
+
+## Audio/Video Sync
+
+Trident calibrates audio/video sync at playback start and corrects drift during playback. Sync is restored after seeks and after buffering pauses. A live A/V sync adjuster in the Playback Menu handles files with baked-in offsets.
+
+[Learn more about Playback Quality →](/playback/trident-player/sync)
 
 
 
@@ -140,7 +140,7 @@ Interlaced sources like DVDs and broadcast recordings are de-interlaced automati
 |------|-------------|
 | [Codecs](/playback/trident-player/codecs) | Supported video and audio formats |
 | [HDR](/playback/trident-player/hdr) | HDR and Dolby Vision support |
-| [Playback Quality](/playback/trident-player/sync) | Sync, buffering, seeking |
 | [Audio](/playback/trident-player/audio) | Lossless audio and surround sound |
 | [Subtitles](/playback/trident-player/subtitles) | Text and image subtitle support |
+| [Playback Quality](/playback/trident-player/sync) | Sync, buffering, seeking |
 | [Troubleshooting](/playback/trident-player/troubleshooting) | Common issues and solutions |

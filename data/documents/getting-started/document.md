@@ -8,7 +8,7 @@ order: 10
 
 | Page | Description |
 |------|-------------|
-| [Installation](/getting-started/installation) | Install Neptune on your Apple TV |
+| [Installation](/getting-started/installation) | Install Neptune on your devices |
 | [Setup](/getting-started/setup) | Connect to your Jellyfin server |
 | [Navigation](/getting-started/navigation) | Navigation bar, menus and remote controls |
-| [Neptune for iPhone](/getting-started/iphone) | The iPhone companion beta |
+| [Devices](/getting-started/devices) | Neptune on Apple TV, iPhone, iPad, and Mac |

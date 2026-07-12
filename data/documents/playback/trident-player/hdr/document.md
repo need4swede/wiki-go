@@ -17,7 +17,7 @@ How Trident handles HDR content.
 | **HLG** | Broadcast HDR | None (backwards compatible) |
 | **Dolby Vision** | Dynamic HDR | Dynamic (per-frame) |
 
-All four are decoded with hardware acceleration on supported Apple TV models.
+All four are decoded with hardware acceleration on supported devices. This page focuses on the living-room setup, where your TV and HDMI chain decide what you actually see; on iPhone and iPad, HDR simply plays on the built-in display with no setup.
 
 
 
