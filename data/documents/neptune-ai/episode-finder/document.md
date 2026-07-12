@@ -6,7 +6,7 @@ order: 10
 
 Describe a scene, quote, joke, event, or half-remembered plot point and Neptune finds the episode in your library. Episode Finder is built for the moment when you know exactly what happened but cannot remember the title, season, or episode number.
 
-It works with any configured language-model provider. [Neptune AI](/search/neptune-ai) provides the zero-setup hosted experience with Neptune Pro.
+It works with any configured language-model provider. [Neptune AI](/neptune-ai) provides the zero-setup hosted experience with Neptune Pro.
 
 
 

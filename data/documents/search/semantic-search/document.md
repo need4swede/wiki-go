@@ -59,7 +59,7 @@ The same tags power [Smart Tags](/library/smart-tags) in the Library tab, where 
 
 ## Coverage
 
-The catalog focuses on well-known titles, so mainstream libraries see strong coverage. Niche items, home videos, and very new releases may not have tags yet; they're still found by [Local Index Search](/search/local-index), and [AI Search](/search/prompt-search) can pick up the conceptual slack for uncovered items. [Neptune AI](/search/neptune-ai) is the zero-setup hosted option included with Neptune Pro.
+The catalog focuses on well-known titles, so mainstream libraries see strong coverage. Niche items, home videos, and very new releases may not have tags yet; they're still found by [Local Index Search](/search/local-index), and [AI Search](/search/prompt-search) can pick up the conceptual slack for uncovered items. [Neptune AI](/neptune-ai) is the zero-setup hosted option included with Neptune Pro.
 
 
 

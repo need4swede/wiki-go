@@ -82,7 +82,7 @@ Already-watched episodes stay fully visible. Toggle off any time. You can also b
 
 ## Episode Finder
 
-Find a specific episode by describing what happens in it. Requires a language model; see the dedicated [Episode Finder](/search/neptune-ai/episode-finder) guide for its local matching, AI interpretation, verification, and confidence behavior.
+Find a specific episode by describing what happens in it. Requires a language model; see the dedicated [Episode Finder](/neptune-ai/episode-finder) guide for its local matching, AI interpretation, verification, and confidence behavior.
 
 ### How to Use
 

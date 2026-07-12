@@ -4,14 +4,14 @@ order: 50
 
 # Deep Learning
 
-Language model configuration for Neptune's AI features. None of this is required; Neptune works fully without it. [Neptune AI](/search/neptune-ai) is the built-in, zero-setup hosted provider included with Neptune Pro; supported bring-your-own providers keep the same features available without Pro.
+Language model configuration for Neptune's AI features. None of this is required; Neptune works fully without it. [Neptune AI](/neptune-ai) is the built-in, zero-setup hosted provider included with Neptune Pro; supported bring-your-own providers keep the same features available without Pro.
 
 With a model configured, you unlock:
 
 - [AI Search](/search/prompt-search): conceptual queries in the search bar
-- [Episode Finder](/search/neptune-ai/episode-finder): find an episode by describing it
-- [Title Insights](/search/neptune-ai/title-insights): context, themes, trivia, and watch suggestions
-- [Person Insights](/search/neptune-ai/person-insights): career patterns, collaborators, and library-aware recommendations
+- [Episode Finder](/neptune-ai/episode-finder): find an episode by describing it
+- [Title Insights](/neptune-ai/title-insights): context, themes, trivia, and watch suggestions
+- [Person Insights](/neptune-ai/person-insights): career patterns, collaborators, and library-aware recommendations
 
 
 
@@ -44,4 +44,4 @@ With several providers enabled, **Set Model Priority** controls the fallback ord
 
 ## Privacy
 
-AI requests contain only the prompt and minimal context, and they only happen when an AI feature actually runs. Local providers like Ollama keep everything on your network. See [Neptune AI privacy](/search/neptune-ai#privacy) and the privacy notes on [AI Search](/search/prompt-search).
+AI requests contain only the prompt and minimal context, and they only happen when an AI feature actually runs. Local providers like Ollama keep everything on your network. See [Neptune AI privacy](/neptune-ai#privacy) and the privacy notes on [AI Search](/search/prompt-search).

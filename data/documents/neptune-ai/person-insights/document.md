@@ -6,7 +6,7 @@ order: 30
 
 Person Insights turns a filmography into a story. It looks across a performer's or filmmaker's career, recognizes recurring patterns, and can suggest what to watch next from titles already available to you.
 
-It works with any configured language-model provider. [Neptune AI](/search/neptune-ai) provides the zero-setup hosted experience with Neptune Pro.
+It works with any configured language-model provider. [Neptune AI](/neptune-ai) provides the zero-setup hosted experience with Neptune Pro.
 
 
 

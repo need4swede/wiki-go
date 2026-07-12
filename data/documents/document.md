@@ -59,10 +59,15 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 | [Local Index](/search/local-index) | Offline instant search |
 | [Semantic Search](/search/semantic-search) | Themes, moods, and quotes |
 | [AI Search](/search/prompt-search) | Language model powered queries |
-| [Neptune AI](/search/neptune-ai) | Zero-setup hosted AI with Neptune Pro |
-| [Episode Finder](/search/neptune-ai/episode-finder) | Find an episode by describing what happens |
-| [Title Insights](/search/neptune-ai/title-insights) | AI context, themes, trivia, and watch guidance |
-| [Person Insights](/search/neptune-ai/person-insights) | AI career stories and library-aware recommendations |
+
+### Neptune AI
+
+| Page | Description |
+|------|-------------|
+| [Neptune AI](/neptune-ai) | Neptune's product-wide hosted intelligence layer for Pro |
+| [Episode Finder](/neptune-ai/episode-finder) | Find an episode by describing what happens |
+| [Title Insights](/neptune-ai/title-insights) | Context, themes, trivia, and watch guidance |
+| [Person Insights](/neptune-ai/person-insights) | Career stories and library-aware recommendations |
 
 ### Discover
 
@@ -102,7 +107,7 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 
 | Page | Description |
 |------|-------------|
-| [Neptune Plugin Suite](/plugins) | Optional Jellyfin server-side features |
+| [Neptune Plugin Suite](/plugins) | Optional Jellyfin extensions: Indexers, MDM, and the upcoming Transcoder |
 | [Indexers](/plugins/indexers) | Server-side indexing and music metadata |
 | [MDM](/plugins/mdm) | Settings sync, announcements, remote management |
 
@@ -114,7 +119,7 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 - **Conductor**: Picks the right audio track, subtitles, and version automatically based on your preferences
 - **Hero Spotlight**: Full-bleed carousel showcasing what to watch next
 - **Search that understands**: Instant offline search, semantic theme matching, and local-first AI for hard queries
-- **Neptune AI**: Zero-setup Pro intelligence for natural-language search, Episode Finder, and title and person insights
+- **Neptune AI**: Zero-setup Pro intelligence across Neptune, currently powering natural-language search, Episode Finder, and title and person insights
 - **Seerr Integration**: Browse, request, and approve content without leaving the couch
 - **Library Shortcuts**: Pin movies, shows, people, genres, or even specific moments during playback
 - **Cloud Backup & Sync**: Preferences follow you across every device on your account
@@ -135,5 +140,5 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 Optional, on any device:
 
 - Seerr for content discovery and requests
-- [Neptune Plugin Suite](/plugins) for Jellyfin sync, faster search, and admin tools
+- [Neptune Plugin Suite](/plugins) for Jellyfin sync, faster search, admin tools, and server-managed download quality profiles
 - A language model for AI features

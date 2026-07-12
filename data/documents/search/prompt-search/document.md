@@ -6,7 +6,7 @@ order: 30
 
 When a query needs actual understanding ("farm boy learns magic and fights his dad"), Neptune hands it to a language model. AI Search is built into the same search bar as everything else: no mode to switch, no separate screen.
 
-The easiest provider is [Neptune AI](/search/neptune-ai), the zero-setup hosted service included with Neptune Pro. You can also use a supported bring-your-own provider.
+The easiest provider is [Neptune AI](/neptune-ai), the zero-setup hosted service included with Neptune Pro. You can also use a supported bring-your-own provider.
 
 
 
@@ -31,7 +31,7 @@ You can also trigger it directly: when a search comes up empty, an **Ask AI** ch
 | "cooking rat movie" | Ratatouille |
 | "detective can't remember anything" | Memento |
 
-For finding a specific episode of a show, use [Episode Finder](/search/neptune-ai/episode-finder) on the show's page instead.
+For finding a specific episode of a show, use [Episode Finder](/neptune-ai/episode-finder) on the show's page instead.
 
 
 
@@ -52,7 +52,7 @@ AI Search needs a language model. Configure one in **Settings > Deep Learning**:
 
 Claude, OpenAI, and GLM appear in the provider roadmap but are not active providers yet.
 
-Add several providers and use **Set Model Priority** to control the fallback order. If your primary is unreachable, the next one takes over. The same providers power [Episode Finder](/search/neptune-ai/episode-finder), [Title Insights](/search/neptune-ai/title-insights), [Person Insights](/search/neptune-ai/person-insights), and other AI features.
+Add several providers and use **Set Model Priority** to control the fallback order. If your primary is unreachable, the next one takes over. The same providers power [Episode Finder](/neptune-ai/episode-finder), [Title Insights](/neptune-ai/title-insights), [Person Insights](/neptune-ai/person-insights), and other AI features.
 
 
 

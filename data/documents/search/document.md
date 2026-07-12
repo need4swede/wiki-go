@@ -11,10 +11,6 @@ order: 40
 | [Local Index Search](/search/local-index) | Instant, offline title and metadata search |
 | [Semantic Search](/search/semantic-search) | Themes, moods, settings, concepts, and quotes |
 | [AI Search](/search/prompt-search) | How natural-language searches join the same result grid |
-| [Neptune AI](/search/neptune-ai) | Zero-setup hosted intelligence with Neptune Pro |
-| [Episode Finder](/search/neptune-ai/episode-finder) | Find a remembered TV episode from a scene, quote, or event |
-| [Title Insights](/search/neptune-ai/title-insights) | Context, themes, trivia, comparisons, and watch guidance |
-| [Person Insights](/search/neptune-ai/person-insights) | Career patterns, collaborators, and what to watch next |
 
 
 
@@ -32,7 +28,7 @@ Open the Search tab, or use [Compass](/browsing/navigation/compass) on Apple TV 
 | A plot fragment | `farm boy learns magic and fights his dad` | AI Search when needed |
 | Something outside your library | `new Korean thrillers` | Seerr results |
 
-For a scene you remember from a particular series, use [Episode Finder](/search/neptune-ai/episode-finder) on that show's page.
+For a scene you remember from a particular series, use [Episode Finder](/neptune-ai/episode-finder) on that show's page.
 
 
 ## Results and Scope Tabs
@@ -95,7 +91,7 @@ Open **Settings > User Preferences > Appearance > Layouts > Search**:
 | **Grid Keyboard Layout** | Compact the Apple TV results grid beside the alphabetical keyboard |
 | **Auto-Focus Input** | Open with focus ready for search input |
 
-The **AI Search** master switch and language-model providers live in **Settings > Deep Learning**. See [AI Search](/search/prompt-search) and [Neptune AI](/search/neptune-ai).
+The **AI Search** master switch and language-model providers live in **Settings > Deep Learning**. See [AI Search](/search/prompt-search) and the top-level [Neptune AI](/neptune-ai) section.
 
 
 ## Privacy

@@ -14,12 +14,13 @@ Server plugins are backend-specific. The integrations on this page are for Jelly
 |--------|---------|
 | **[Neptune Indexers](/plugins/indexers)** | Server-side library and search indexing |
 | **[Neptune MDM](/plugins/mdm)** | Settings sync, backup, and remote management |
+| **[Neptune Transcoder](/plugins/transcoder)** | Server-managed download quality profiles (coming soon) |
 
 See [Neptune Plugin Suite](/plugins) for full details on what each plugin does and how to install them.
 
 ## One-Tap Install
 
-If you sign in with an admin account and the Neptune Plugin Suite isn't installed, onboarding offers to install it for you. One tap adds the repository, installs both plugins, and walks you through the server restart.
+If you sign in with an admin account and the Neptune Plugin Suite isn't installed, onboarding offers to install it for you. One tap adds the repository, installs every currently published suite member, and walks you through the server restart. Transcoder will join that same install flow when its public rollout begins.
 
 ### Third-Party Plugins
 

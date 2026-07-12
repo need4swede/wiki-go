@@ -6,7 +6,7 @@ order: 20
 
 Title Insights turns a movie or show's ordinary description into a compact, thoughtful companion: what makes it interesting, what it explores, and why it may be worth your time.
 
-It works with any configured language-model provider. [Neptune AI](/search/neptune-ai) provides the zero-setup hosted experience with Neptune Pro.
+It works with any configured language-model provider. [Neptune AI](/neptune-ai) provides the zero-setup hosted experience with Neptune Pro.
 
 
 
