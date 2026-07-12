@@ -1,5 +1,5 @@
 ---
-order: 50
+order: 80
 ---
 
 # Recently Added
@@ -19,6 +19,8 @@ On the **Home tab**, each library gets its own row:
 If you'd rather see one combined row, turn on **Combine Recently Added** in **Settings > Home > Sections**. With a single library, the row is just called "Recently Added".
 
 On the **Movies** and **Shows** tabs, libraries of the matching type merge into a single row, filterable with the library picker.
+
+The **Music** tab has its own Recently Added row containing music videos from all of your music-video libraries. Its **See All** action opens a music-video browse sorted by date added.
 
 Each row ends with a **See All** card that opens the full library browse sorted by date added.
 

@@ -36,7 +36,9 @@ The tab bar and app navigation behavior:
 | **Navigation Bar Scroll Behavior** | Show, Hide, or Collapse the bar while scrolling |
 | **Exit App on Back Press** | Never, from the Default Tab, or Always |
 
-See [Navigation](/getting-started/navigation) for how these play out.
+See [Navigation](/browsing/navigation) for how these play out.
+
+Movies, Shows, and Music are hidden by default. Movies and Shows reuse the Home sections with type filtering. Music has its own Spotlight, Continue Watching, Recently Added, and Artists layout; long-press the Music tab and choose **Edit Music** to customize it.
 
 
 

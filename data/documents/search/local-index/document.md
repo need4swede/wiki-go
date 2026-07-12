@@ -35,7 +35,7 @@ The Backend Search column describes Jellyfin today. Search behavior may vary whe
 | **Plot** | Full descriptions and overviews |
 | **Ratings and years** | "PG-13", "2024" |
 
-Movies, shows, episodes, collections, and home videos are all covered.
+Movies, shows, episodes, music videos, collections, and home videos are all covered.
 
 
 

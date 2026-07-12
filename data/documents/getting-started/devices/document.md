@@ -4,11 +4,7 @@ order: 40
 
 # Devices
 
-Neptune is one app across tvOS, iOS, iPadOS, and macOS. Not a main app and a remote, not a full version and a lite version: the same Neptune, shaped to each screen.
-
-
-
-## Same Neptune Everywhere
+## One Neptune, to rule them all
 
 Whatever device you pick up, you get the same home screen, the same search, the same Discover, the same [Conductor](/playback/conductor) picking your tracks, and the same [Trident](/playback/trident-player) engine playing your files. Sign in with the same account and your profile is your profile.
 
@@ -33,4 +29,4 @@ The documentation describes shared behavior with the TV controls as the referenc
 
 ## Platform Status
 
-Apple TV is on the App Store. iPhone and iPad are in open beta through TestFlight (see [Installation](/getting-started/installation)). tvOS has been in people's hands the longest, so the newest surfaces sometimes land there first and reach iOS and iPadOS a build or two later; the experience is already near-identical, and the remaining gaps close with every release. If something you rely on hasn't made it to your device yet, the fastest way to flag it is through the Discord.
+Apple TV is on the App Store. iPhone and iPad are in open beta through TestFlight (see [Installation](/getting-started/installation)). If something you rely on hasn't made it to your device yet, the fastest way to flag it is through the <a href="https://discord.gg/HTuf4HPMbP" target="_blank">Neptune Discord</a>.

@@ -1,5 +1,5 @@
 ---
-order: 20
+order: 30
 ---
 
 # Continue Watching
@@ -25,8 +25,9 @@ Continue Watching appears on all content tabs, filtered by type:
 | **Home** | All resume items: movies and episodes together |
 | **Movies** | Only movies you're in the middle of |
 | **Shows** | Only episodes you're in the middle of |
+| **Music** | Only music videos you're in the middle of |
 
-On the Movies and Shows tabs, picking a specific library from the library picker filters the row to that library.
+On the Movies and Shows tabs, picking a specific library from the library picker filters the row to that library. Music combines resume items from your music-video libraries.
 
 
 

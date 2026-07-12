@@ -4,7 +4,7 @@ order: 10
 
 # Spotlight
 
-A full-bleed backdrop carousel at the top of the home screen showing content to watch next. The spotlight ranks items from your library based on viewing activity, release dates, and engagement, so the most relevant items appear first.
+A full-bleed backdrop carousel showing content to watch next. The spotlight ranks items from your library based on viewing activity, release dates, and engagement, so the most relevant items appear first.
 
 
 
@@ -66,6 +66,7 @@ Each content tab builds its own spotlight:
 | **Home** | All categories: movies, episodes, series, continue watching |
 | **Movies** | Movies only |
 | **Shows** | Episodes, seasons, and series only |
+| **Music** | Music videos only |
 
 
 
@@ -78,4 +79,4 @@ Each content tab builds its own spotlight:
 | **Spotlight Limit** | How many items the carousel holds (4 to 12, default 8) |
 | **Direct Navigation** | Skip the gallery and open items directly |
 
-The spotlight always stays at the top of the home screen and cannot be moved or hidden in section customization.
+Spotlight visibility is shared across the content tabs. Hiding Hero Spotlight in Home customization also hides it on Music; Music's own editor can hide it from Music alone.

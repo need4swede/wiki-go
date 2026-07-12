@@ -82,14 +82,17 @@ Already-watched episodes stay fully visible. Toggle off any time. You can also b
 
 ## Episode Finder
 
-Find a specific episode by describing what happens in it. Requires a language model (see [Deep Learning](/settings/deep-learning)).
+Find a specific episode by describing what happens in it. Requires a language model; see the dedicated [Episode Finder](/search/neptune-ai/episode-finder) guide for its local matching, AI interpretation, verification, and confidence behavior.
 
 ### How to Use
 
 1. Select **Find Episode** in the action pill
 2. Describe the episode (e.g., "CPR training goes wrong")
-3. Matches come back labeled **High**, **Likely**, or **Maybe** confidence
-4. Select an episode to jump directly to it
+3. Neptune searches locally, asks AI when needed, and verifies candidates against your library
+4. Matches are labeled **In your library**, **Likely**, **Maybe**, **Corrected match**, **Not in library**, or **Best guess**
+5. Select a playable episode to start it
+
+If Neptune finds one verified library episode with very high confidence, it can start playback immediately.
 
 ### Example Queries
 

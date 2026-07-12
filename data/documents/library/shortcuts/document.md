@@ -2,7 +2,7 @@
 order: 10
 ---
 
-# Library Shortcuts
+# Pins
 
 Bookmark anything in your library (movies, shows, seasons, episodes, collections, genres, studios, networks, people, tags) and surface them as categorized rows on the Library tab and in the Pins row on Home. A second variant, **timestamp shortcuts**, captures a specific moment of playback so you can jump back to it later.
 

@@ -4,64 +4,106 @@ order: 40
 
 # Search
 
-One search bar, three layers underneath. Neptune searches a local index for instant keyword matches, a semantic catalog for themes and moods, and optionally hands off to a language model when a query needs actual understanding. You just type; Neptune decides what runs.
-
-
-
 ## In This Section
 
 | Page | Description |
 |------|-------------|
-| [Local Index Search](/search/local-index) | Offline, instant keyword search |
-| [Semantic Search](/search/semantic-search) | Themes, moods, and famous quotes |
-| [AI Search](/search/prompt-search) | Language model help for hard queries |
+| [Local Index Search](/search/local-index) | Instant, offline title and metadata search |
+| [Semantic Search](/search/semantic-search) | Themes, moods, settings, concepts, and quotes |
+| [AI Search](/search/prompt-search) | How natural-language searches join the same result grid |
+| [Neptune AI](/search/neptune-ai) | Zero-setup hosted intelligence with Neptune Pro |
+| [Episode Finder](/search/neptune-ai/episode-finder) | Find a remembered TV episode from a scene, quote, or event |
+| [Title Insights](/search/neptune-ai/title-insights) | Context, themes, trivia, comparisons, and watch guidance |
+| [Person Insights](/search/neptune-ai/person-insights) | Career patterns, collaborators, and what to watch next |
 
 
 
-## The Search Experience
+## Search Smarter, Not Harder
 
-Open the Search tab (or, on Apple TV, search from the [Compass](/getting-started/navigation/compass) anywhere in the app) and start typing, or use dictation.
+Open the Search tab, or use [Compass](/browsing/navigation/compass) on Apple TV to start a search from anywhere. Type with the keyboard or use dictation.
 
-- **Before you type:** your recent searches appear as chips, ready to re-run or clear.
-- **While you type:** results appear instantly, with suggestion chips drawn from your library.
-- **Typos handled:** close-enough queries are corrected automatically, with a "Showing results for..." note. Dead ends offer a "Did you mean" suggestion and an **Ask AI** chip.
+| What you remember | Example | What Neptune uses |
+|-------------------|---------|-------------------|
+| A title or part of one | `dark kni` | Title prefix matching |
+| A person | `Karl Urban` | Cast and crew index |
+| A genre or studio | `A24 horror` | Indexed metadata |
+| A typo | `intersteller` | Fuzzy correction |
+| A theme or mood | `feel-good time travel` | Semantic catalog |
+| A plot fragment | `farm boy learns magic and fights his dad` | AI Search when needed |
+| Something outside your library | `new Korean thrillers` | Seerr results |
 
-Results land in a poster grid with scope tabs: **Top Results**, **Movies**, **Shows**, **Seerr**, and **People**. Top Results ranks everything by relevance; the other tabs narrow by type. The Seerr tab searches beyond your library so you can request what you find (see [Discover](/discover)).
-
-Focus a result and Neptune tells you why it matched: "About time travel", "Set in space", "Feel-good", "Matched a quote", "Matched in the plot", or "Found by AI".
+For a scene you remember from a particular series, use [Episode Finder](/search/neptune-ai/episode-finder) on that show's page.
 
 
+## Results and Scope Tabs
 
-## The Three Layers
+Results appear in a poster grid with optional scope tabs:
 
-| Layer | Speed | Network | Best For |
-|-------|-------|---------|----------|
-| **Local Index** | Instant | Offline | Titles, names, genres, keywords |
-| **Semantic Search** | Instant | Offline | Themes, tone, quotes, concepts |
-| **AI Search** | A few seconds | Required | Plot descriptions, complex queries |
+| Scope | Contents |
+|-------|----------|
+| **Top Results** | One relevance-ranked view across your library and people, plus Seerr when enabled |
+| **Movies** | Matching movies in your library |
+| **Shows** | Matching series and episodes |
+| **Music** | Matching music content |
+| **Seerr** | Requestable movies and shows beyond your library |
+| **People** | Actors, directors, writers, and other indexed credits |
 
-Local Index and Semantic Search are always on and need no setup. AI Search is optional: enable it in **Settings > Deep Learning** and it steps in automatically when the instant layers come up short. See [AI Search](/search/prompt-search) for providers.
+Top Results is not a simple concatenation. Exact titles and names lead, strong whole-word matches outrank loose prefixes, and owned content receives a small advantage in close calls. If **Include Seerr Results in Top Results** is off, requestable titles remain available in the Seerr scope without mixing into the main grid.
+
+
+
+## Why a Result Matched
+
+Neptune will tell you why an item matched your search, for instances where the match isn't straightforward or obvious.
+
+- **About time travel**
+- **Set in space**
+- **Matched in the plot**
+- **Found by AI**
+
+Straightforward title matches need no explanation. Results introduced by AI also carry a sparkle badge so the source is never hidden.
+
+
+
+## Typo Correction and Dead Ends
+
+Small typing mistakes are corrected against the vocabulary in your own library. A successful correction shows **Showing results for…** and avoids spending an AI request on a typo.
+
+If nothing useful is found:
+
+- **Did you mean…** reruns a likely correction.
+- **Ask AI about…** forces a natural-language pass when a model is available.
+- Seerr can still show requestable titles even when your library has no match.
+
+
+
+## Before You Search
+
+The empty Search screen shows recent searches as reusable chips. Neptune records a query only after you open one of its results, so abandoned typing does not clutter the list. History is profile-specific and can be cleared from the Search screen.
 
 
 
 ## Search Settings
 
-Fine-tune the experience in **Settings > User Preferences > Appearance > Layouts**:
+Open **Settings > User Preferences > Appearance > Layouts > Search**:
 
 | Setting | Description |
 |---------|-------------|
-| **Search Suggestions** | Show suggestion chips while typing |
-| **Filter Tabs** | Show the scope tabs above results |
-| **Include Seerr Results in Top Results** | Blend requestable titles into the main ranking |
-| **Grid Keyboard Layout** | Use a grid keyboard instead of a single row |
-| **Auto-Focus Input** | Focus the keyboard when the tab opens |
+| **Search Suggestions** | Show local-first suggestion chips while typing |
+| **Filter Tabs** | Show or hide the scope tabs above results |
+| **Include Seerr Results in Top Results** | Rank requestable titles alongside owned content |
+| **Grid Keyboard Layout** | Compact the Apple TV results grid beside the alphabetical keyboard |
+| **Auto-Focus Input** | Open with focus ready for search input |
 
+The **AI Search** master switch and language-model providers live in **Settings > Deep Learning**. See [AI Search](/search/prompt-search) and [Neptune AI](/search/neptune-ai).
 
 
 ## Privacy
 
 | Data | Where It Goes |
 |------|---------------|
-| Library index | Stays on your device |
-| Semantic tags | Stays on your device |
-| AI queries | Sent to your configured provider only when AI Search runs |
+| Local library index | Stays on your device |
+| Semantic catalog and matching | Stays on your device |
+| Backend search | Goes only to your connected media server |
+| Seerr search | Goes to your configured Seerr server |
+| AI request | Goes to the selected provider only when the AI gate runs or you explicitly ask it |

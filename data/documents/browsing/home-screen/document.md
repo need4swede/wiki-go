@@ -1,12 +1,8 @@
 ---
-order: 10
+order: 20
 ---
 
 # Home Screen
-
-The home screen shows a spotlight carousel at the top followed by horizontal rows of content. Each row covers a different category: what you're watching, what's new, your favorites, and recommendations.
-
-
 
 ## Sections
 
@@ -15,14 +11,15 @@ The home screen is made up of the following sections, listed in default order:
 | Section | Description |
 |---------|-------------|
 | [Spotlight](spotlight/) | Full-bleed backdrop carousel highlighting what to watch next |
-| Libraries | Your media libraries as artwork cards |
+| [Libraries](libraries/) | Your media libraries as artwork cards |
 | [Continue Watching](continue-watching/) | Movies and episodes you started but didn't finish, with progress bars |
-| Pins | Your pinned movies, shows, people, and genres |
+| [Pins](pins/) | Your pinned items, people, browse filters, and playback moments |
+| [Downloads](downloads/) | Media saved to this device for offline playback (Neptune Pro) |
 | [Next Up](next-up/) | The next unwatched episode from each show you're watching |
 | [New Releases](new-releases/) | Recently premiered movies and new seasons |
 | [Recently Added](recently-added/) | Content recently added to your server, with per-library rows |
 | [Favorites](favorites/) | Movies and shows you've marked as favorites |
-| Collections | Your box sets, with a See All card into the full collections browse |
+| [Collections](collections/) | Your box sets, with a See All card into the full collections browse |
 | [Recommended](recommended/) | Personalized suggestions, optionally blended with Seerr titles |
 | [Coming Soon](coming-soon/) | Upcoming releases you've requested |
 | [Because You Watched](because-you-watched/) | Similar titles based on movies you've watched (requires plugin) |
@@ -38,12 +35,6 @@ Long-press any content card to open the quick actions modal:
 - **Mark as Played** or **Mark as Unplayed**
 - **Reset Progress** (for items in progress)
 - **Pin Shortcut** or **Unpin Shortcut**
-
-### Focused Backdrop
-
-When you navigate down and focus a card in any section, its backdrop image replaces the spotlight area at the top of the screen. This gives you a preview of the content before selecting it.
-
-
 
 ## Customizing Sections
 
@@ -63,16 +54,18 @@ For finer control, **Settings > Home** sets row limits (Continue Watching, Next 
 
 
 
-## Movies & Shows Tabs
+## Movies, Shows & Music Tabs
 
-The optional **Movies** and **Shows** tabs work the same as the Home tab but filter content:
+The optional **Movies** and **Shows** tabs use the same configurable sections as Home but filter their content:
 
 - **Movies tab:** Spotlight shows only movies, content rows show only movies
 - **Shows tab:** Spotlight shows only shows, content rows show only TV content
 
-Some sections are restricted by tab. Next Up is hidden on the Movies tab because it only contains episodes, and Because You Watched is hidden on the Shows tab because it's movie-based. Libraries, Pins, and Collections appear on the Home tab only.
+Some sections are restricted by tab. Next Up is hidden on Movies because it only contains episodes, Because You Watched is hidden on Shows because it is movie-based, and Collections stays on Home because a collection can mix media types. Libraries, Pins, and Downloads appear on Home, Movies, and Shows with content filtered for the current tab.
 
 If you have multiple movie or show libraries, a library picker appears at the top letting you filter by library or view all.
+
+The **Music** tab is a dedicated music-video experience rather than another Home filter. It combines your music-video libraries into its own Spotlight, Continue Watching, Recently Added, and Artists sections. Long-press Music and choose **Edit Music** to reorder or hide those sections. The tab is hidden by default; enable it under **Settings > Home > Navigation**.
 
 
 
