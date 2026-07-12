@@ -1,5 +1,5 @@
 ---
-order: 20
+order: 30
 ---
 
 # Playback Menu
@@ -22,7 +22,7 @@ You can reorder or hide tabs in **Settings > Playback > Controls > Playback Menu
 
 ## Audio
 
-**Track** lists every audio track with its codec and channel layout ("TrueHD Atmos • 7.1"). Switching is instant, with no rebuffering.
+**Track** lists every audio track with its codec and channel layout ("TrueHD Atmos • 7.1"). Switching happens in place without restarting the video stream.
 
 **Preset** applies an EQ profile: **Default**, **Bass** for more low end, or **Voice** for clearer dialogue.
 

@@ -17,7 +17,7 @@ How Trident handles HDR content.
 | **HLG** | Broadcast HDR | None (backwards compatible) |
 | **Dolby Vision** | Dynamic HDR | Dynamic (per-frame) |
 
-All four are decoded with hardware acceleration on supported devices. This page focuses on the living-room setup, where your TV and HDMI chain decide what you actually see; on iPhone and iPad, HDR simply plays on the built-in display with no setup.
+Trident supports all four when the codec, device, and display are compatible. Most living-room HDR is HEVC and uses Apple's hardware decoder. This page focuses on that setup, where your TV and HDMI chain decide what you actually see; on iPhone and iPad, HDR plays on the built-in display with no HDMI setup.
 
 
 
@@ -55,9 +55,10 @@ Trident supports the major Dolby Vision profiles:
 |---------|----------------|--------------|
 | **Profile 5** | Streaming services | Full Dolby Vision |
 | **Profile 7** | Blu-ray rips and remuxes | Converted to Dolby Vision on the fly (see below) |
-| **Profile 8** | Remuxes, streaming | Full Dolby Vision |
+| **Profile 8.2 / 8.4** | Remuxes and streaming | Dolby Vision on compatible displays; HDR base layer otherwise |
+| **Profile 8.6** | HDR10-based Dolby Vision | HDR10 base layer, avoiding the green-output issue on Apple TV |
 
-For Profiles 5 and 8, Trident outputs full Dolby Vision over HDMI. Your TV will report "Dolby Vision" when receiving the stream.
+Profile 5 outputs Dolby Vision directly. Compatible Profile 8 variants output Dolby Vision over HDMI and fall back to their base layer when Dolby Vision is unavailable.
 
 **Profile 7** is the dual-layer format used on Blu-ray discs, and most players can only show its HDR10 base. On a Dolby Vision TV, Trident rewrites single-track Profile 7 into a compatible Dolby Vision stream while it plays, so you get real Dolby Vision from Blu-ray remuxes without any pre-conversion. Files carrying a separate enhancement-layer track play their HDR10 base layer instead.
 
@@ -68,7 +69,6 @@ If your TV doesn't support Dolby Vision, Trident falls through to the next forma
 | If DV Not Supported | Trident Uses |
 |--------------------|--------------|
 | TV supports HDR10 | HDR10 |
-| TV supports HLG only | HLG |
 | SDR-only TV | SDR |
 
 
@@ -87,7 +87,7 @@ Trident also matches the display refresh rate to the content frame rate:
 
 This avoids the judder that happens when frame rates don't divide evenly into the display refresh rate.
 
-Enable in **Settings > Playback > Match Content Frame Rate**. For best results, also enable the tvOS setting at **Settings > Video and Audio > Match Content > Match Frame Rate**.
+Frame-rate matching is always enabled inside Neptune. On Apple TV, enable **Settings > Video and Audio > Match Content > Match Frame Rate** so tvOS can honor the request. This is separate from **Match Dynamic Range**; turn on both for automatic frame-rate and HDR switching.
 
 
 

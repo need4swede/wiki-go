@@ -10,27 +10,28 @@ The video, audio, and subtitle formats Trident plays directly without server-sid
 
 ## Video
 
-### Hardware-Accelerated
+### Hardware-Accelerated on Apple TV
 
-These codecs decode on the device's video hardware:
+These codecs use Apple's video hardware:
 
 | Codec | Max Resolution | HDR Support | Notes |
 |-------|---------------|-------------|-------|
 | **H.265/HEVC** | 4K | HDR10, HDR10+, HLG, Dolby Vision | Standard for 4K content |
 | **H.264/AVC** | 4K | No | Universal compatibility |
-| **VP9** | 4K | HDR | YouTube, WebM files |
-| **AV1** | 4K | HDR | Newer hardware (Apple TV 4K 3rd generation, recent iPhones and iPads) |
 
 ### Software-Decoded
 
-These play through software decoding. They're best at 1080p or lower because software decoding can't sustain 4K in real time:
+Trident uses FFmpeg or dav1d for these codecs:
 
-| Codec | Best For |
-|-------|----------|
+| Codec | Practical Notes |
+|-------|-----------------|
+| **VP9** | Software-decoded on tvOS because VideoToolbox does not expose VP9. Supports files up to 4K, subject to device performance |
+| **AV1** | No current Apple TV exposes hardware AV1. 1080p is the reliable target; 4K/24 at moderate bitrates can be marginal and 4K/60 is not expected to play smoothly |
 | **MPEG-4** | Older DivX/Xvid content |
-| **MPEG-2** | DVDs, broadcast recordings |
-| **VP8** | Older WebM files |
-| **ProRes** | Professional video workflows |
+| **MPEG-2** | DVDs and broadcast recordings |
+| **VC-1 / WMV3** | Older Blu-ray and Windows Media content |
+
+On iPhone and iPad, AV1 hardware acceleration is used when the device exposes it. Unsupported codecs are handed to a compatible backend for transcoding.
 
 Interlaced content (common in DVDs and broadcast recordings) is de-interlaced automatically. Control this with the De-interlacing option in the [Playback Menu](/playback/playback-menu).
 
@@ -59,7 +60,7 @@ Stream link files (.strm) are supported too.
 
 | Feature | Support |
 |---------|---------|
-| **4K Ultra HD** | Hardware decode |
+| **4K Ultra HD** | Supported; the decode path depends on the codec and device |
 | **High Frame Rate** | 24fps to 60fps |
 | **10-bit Color** | Required for HDR |
 | **High Bitrate** | Up to 200 Mbps |
@@ -73,9 +74,7 @@ Stream link files (.strm) are supported too.
 | Format | Channels | Description |
 |--------|----------|-------------|
 | **Dolby TrueHD** | Up to 7.1 | Blu-ray lossless standard |
-| **DTS-HD Master Audio** | Up to 7.1 | DTS lossless |
 | **FLAC** | Up to 8 | Free lossless audio |
-| **ALAC** | Up to 8 | Apple lossless |
 | **PCM** | Up to 8 | Uncompressed audio |
 
 ### Surround
@@ -85,6 +84,7 @@ Stream link files (.strm) are supported too.
 | **Dolby Digital Plus** | Up to 7.1 | Streaming surround |
 | **Dolby Digital** | 5.1 | DVD and broadcast standard |
 | **DTS** | 5.1 | DTS surround |
+| **DTS-HD Master Audio / High Resolution** | 5.1 currently | Plays the embedded full-rate DTS core; full extension decoding is planned for February 26, 2027 |
 
 ### Standard
 
@@ -120,6 +120,10 @@ TrueHD Atmos from Blu-ray discs is decoded to lossless 7.1:
 
 The same limitation applies to other third-party players.
 
+### DTS-HD Today
+
+Until February 26, 2027, DTS-HD MA and HRA tracks decode their compatible full-rate DTS core (lossy 5.1) rather than the HD extension. Full DTS-HD extension decoding is planned as a free update after the final relevant patent expires. This does not affect Dolby TrueHD, which decodes its full lossless 7.1 bed now.
+
 
 
 ## Channel Output
@@ -145,9 +149,7 @@ Downmixes preserve dialog level and front-rear balance.
 | **SRT** | Universal compatibility |
 | **VTT** | Web standard with positioning |
 | **ASS/SSA** | Full styling: fonts, colors, effects |
-| **TTML** | Broadcast standard |
-| **SubViewer** | Older format support |
-| **SAMI** | Microsoft subtitle format |
+| **MOV Text (tx3g)** | Text tracks embedded in MP4 and MOV files |
 
 ### Image
 
@@ -161,4 +163,4 @@ Downmixes preserve dialog level and front-rear balance.
 
 ## Unsupported Formats
 
-For formats Trident can't play directly, your media server transcodes the file to a compatible format. The transcode happens in the background, subject to the connected backend's transcoding support.
+For formats Trident can't play directly, a compatible backend can transcode the file to a supported format. The transcode happens in the background and depends on the connected backend's capabilities.

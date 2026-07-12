@@ -35,6 +35,11 @@ Solutions for common playback issues.
 - Ensure your network can handle the bitrate (check the Info tab in the Playback Menu)
 - Drop the Quality setting in the Playback Menu if it can't
 
+**For AV1 content on Apple TV:**
+- Current Apple TV models decode AV1 in software, not hardware
+- 1080p is the reliable target; high-bitrate 4K and especially 4K/60 may exceed the device's software-decoding capacity
+- If the network is healthy but AV1 still drops frames, choose a transcoded Quality option
+
 
 
 ### HDR Looks Washed Out
@@ -92,13 +97,19 @@ This usually indicates a decode error.
 
 ### Audio Cuts Out Briefly
 
-**After seeking in lossless audio:**
+**After seeking in TrueHD or DTS-family audio:**
 
-Brief silence (~100-200ms) is normal when seeking in TrueHD or DTS-HD MA content. This is inherent to these formats.
+A very brief silence can occur while the decoder finds a new sync point.
 
 **During playback:**
 - May indicate network buffering
 - Try a lower Quality setting or enable Full Video Caching
+
+
+
+### Why Does a DTS-HD Track Play as DTS 5.1?
+
+Neptune currently decodes the embedded full-rate DTS core in DTS-HD Master Audio and High Resolution tracks. Full DTS-HD extension decoding is planned as a free update on or after February 26, 2027. Dolby TrueHD is unaffected and decodes its full lossless bed today.
 
 
 
@@ -169,8 +180,10 @@ Transcoded streams are delivered sequentially. You can't seek within them the sa
 - Move closer to your WiFi router
 
 **Adjust settings:**
-- Increase buffer size in Settings
-- For very slow connections, consider requesting a lower-quality transcode
+- Enable **Full Video Caching** to build a larger disk-backed cushion while playing or paused
+- If the connection cannot sustain the file's bitrate, choose a lower Quality option in the Playback Menu
+
+There is no manual buffer-size control. Buffering can smooth brief slowdowns, but it cannot overcome a connection whose sustained throughput is lower than the source bitrate.
 
 
 
@@ -198,9 +211,9 @@ Large keyframes take time to decode. This is normal for complex 4K HEVC content,
 
 ### Audio Gap After Seeking
 
-**For TrueHD/DTS-HD MA:**
+**For TrueHD/DTS-family tracks:**
 
-Brief silence (~100-200ms) is expected. These lossless formats need to find a sync point before audio can resume.
+A very brief silence can occur while the decoder finds a sync point before audio resumes.
 
 **For other audio:**
 

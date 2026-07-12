@@ -77,7 +77,7 @@ Seeking options: **Scrub Sensitivity** (1 to 10), **Skip Interval** (5, 10, or 1
 | **Audio Preset** | Default, Bass, or Voice |
 | **Night Mode** | Off, On, or Auto with a start and end time (10:00 PM to 7:00 AM by default) |
 | **A/V Sync Offset** | Up to half a second in either direction |
-| **Legacy Sync** | Alternate sync pipeline for troubleshooting |
+| **Experimental Sync** | Use the alternate AudioEngine sync path for troubleshooting |
 
 Track selection behavior (which language and track type get picked) lives in [Conductor](/playback/conductor).
 
@@ -88,5 +88,5 @@ Track selection behavior (which language and track type get picked) lives in [Co
 | Setting | Description |
 |---------|-------------|
 | **Prevent Screensaver on Pause** | Keep the screensaver away while paused (default off) |
-| **Full Video Caching** | Cache the entire video to disk during playback. Enables pause-to-buffer (default off) |
+| **Full Video Caching** | Add bounded disk-backed read-ahead during playback. Enables pause-to-buffer, but is not an offline download (default off) |
 | **De-Interlacing** | Auto, On, or Off. Removes combing artifacts from interlaced content like DVDs and broadcasts (default Auto) |

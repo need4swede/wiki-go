@@ -28,13 +28,7 @@ Trident maintains a buffer ahead of the current position so playback continues t
 
 ### Buffer Strategy
 
-Buffer size adapts to your network:
-
-| Network | Strategy |
-|---------|----------|
-| Fast (>50 Mbps) | Quick startup, small buffer |
-| Medium | Balanced buffer size |
-| Slow (<10 Mbps) | Larger buffer for stability |
+Trident combines bounded packet buffers with network read-ahead. It starts once enough audio and video are ready, raises its buffering target after repeated stalls where appropriate, and keeps the network reader focused near the playhead. A buffer can absorb jitter, but it cannot make a file stream continuously when the connection's sustained throughput is below the file's bitrate.
 
 ### During Buffering
 
@@ -52,7 +46,7 @@ Sync recalibrates over the first 1-2 seconds after a seek. This is when calibrat
 
 ### Lossless Audio
 
-With Dolby TrueHD or DTS-HD MA, expect a brief silence (~100-200ms) after a seek while the audio decoder finds a sync point. This is a property of the format, not Neptune.
+With Dolby TrueHD or a DTS-family track, a very brief silence can occur after a seek while the decoder finds a sync point.
 
 
 
@@ -64,13 +58,13 @@ In Transcode mode, the server may begin sending audio slightly before video. Tri
 
 ## Video Caching
 
-With **Full Video Caching** enabled in **Settings > Playback > Advanced**, Trident caches content to disk as you stream using parallel connections. Pausing continues the download in the background, so you can pre-load ahead of a shaky network stretch. Seeking back into cached portions plays without re-downloading.
+With **Full Video Caching** enabled in **Settings > Playback > Advanced**, Trident adds a bounded disk-backed cache to its read-ahead path. Pausing continues to build a cushion, and seeking within cached portions avoids downloading those bytes again. On Apple TV the default target is 250 MB ahead with a 2 GB per-session cache window; older data is evicted as needed, and low free space triggers earlier eviction. This is not an offline download.
 
 
 
 ## 4K HDR
 
-4K HDR content uses hardware decoding. Dolby Vision content plays through the same path.
+4K HEVC HDR content uses Apple's hardware decoder. Dolby Vision conversion and output ride that same HEVC playback path. AV1 is software-decoded on current Apple TV models, including HDR AV1.
 
 
 
@@ -85,7 +79,7 @@ With **Full Video Caching** enabled in **Settings > Playback > Advanced**, Tride
 
 - Run a speed test against your media server.
 - Use Ethernet rather than Wi-Fi for high-bitrate content.
-- Try **Full Video Caching** for high-latency connections.
+- Try **Full Video Caching** to build more read-ahead on a high-latency or uneven connection.
 
 ### Stuttering
 

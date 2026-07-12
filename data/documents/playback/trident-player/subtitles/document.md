@@ -17,9 +17,7 @@ How Trident handles subtitle tracks.
 | **SRT** | Universal compatibility |
 | **VTT** | Web standard with positioning |
 | **ASS/SSA** | Full styling: fonts, colors, positioning, effects |
-| **TTML** | Broadcast standard |
-| **SubViewer** | Older format support |
-| **SAMI** | Microsoft subtitle format |
+| **MOV Text (tx3g)** | Text tracks embedded in MP4 and MOV files |
 
 ### Image Subtitles
 
@@ -50,7 +48,7 @@ This is what makes anime fan-subs render the way the typesetter intended, with s
 
 ## Track Switching
 
-Switch subtitle tracks during playback. All tracks (including image-based formats like PGS and VobSub) are pre-loaded, so the switch is immediate.
+Switch subtitle tracks during playback without restarting the video stream. Text and image-based tracks such as PGS and VobSub can both be changed in place.
 
 
 

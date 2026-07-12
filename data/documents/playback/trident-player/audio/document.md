@@ -2,7 +2,7 @@
 order: 30
 ---
 
-# Lossless Audio
+# Audio
 
 How Trident decodes and outputs audio.
 
@@ -10,14 +10,12 @@ How Trident decodes and outputs audio.
 
 ## Supported Formats
 
-### Lossless
+### Lossless and Uncompressed
 
 | Format | Max Channels | Description |
 |--------|--------------|-------------|
 | **Dolby TrueHD** | 7.1 | Blu-ray lossless standard |
-| **DTS-HD Master Audio** | 7.1 | DTS lossless |
 | **FLAC** | 8 | Free Lossless Audio Codec |
-| **ALAC** | 8 | Apple Lossless |
 | **PCM** | 8 | Uncompressed audio |
 
 ### Surround
@@ -27,6 +25,7 @@ How Trident decodes and outputs audio.
 | **Dolby Digital Plus** | 7.1 | Streaming surround |
 | **Dolby Digital** | 5.1 | DVD and broadcast standard |
 | **DTS** | 5.1 | DTS surround |
+| **DTS-HD MA / HRA** | 5.1 currently | Plays the embedded full-rate DTS core; see below |
 
 ### Standard
 
@@ -74,8 +73,16 @@ TrueHD Atmos contains lossless 7.1 audio plus spatial object metadata. Trident d
 
 | What You Hear | Details |
 |---------------|---------|
-| **Lossless 7.1 surround** | Bit-perfect base audio |
+| **Lossless 7.1 surround** | The full lossless bed is decoded to multichannel PCM |
 | **No height channels** | Spatial metadata can't be decoded by third-party apps |
+
+
+
+## DTS-HD Today
+
+DTS-HD Master Audio and High Resolution tracks include a compatible DTS core. Neptune currently decodes that full-rate core, giving you lossy 5.1 surround rather than the HD extension.
+
+Full DTS-HD extension decoding is planned as a free update on or after February 26, 2027, when the final relevant patent expires. Dolby TrueHD is unaffected and decodes its full lossless bed today.
 
 
 
@@ -93,7 +100,7 @@ Your receiver handles the final conversion to your speaker configuration.
 
 ## Track Switching
 
-You can switch audio tracks during playback from the [Playback Menu](/playback/playback-menu). Tracks are pre-decoded so the switch is immediate.
+You can switch audio tracks during playback from the [Playback Menu](/playback/playback-menu). The change happens in place without restarting the video stream.
 
 
 
@@ -128,7 +135,7 @@ If the issue persists:
 
 ### Audio Cuts Out Briefly
 
-After seeking in TrueHD or DTS-HD MA, expect ~100-200ms of silence while the decoder finds a sync point. This is the format, not Neptune.
+After seeking in TrueHD or a DTS-family track, a very brief silence can occur while the decoder finds a sync point.
 
 During normal playback, brief cuts usually mean the network can't keep up. Check the buffer readout in the Playback Menu's Info tab, and consider a lower quality setting for that session.
 

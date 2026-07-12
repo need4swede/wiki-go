@@ -4,7 +4,7 @@ order: 60
 
 # Playback
 
-Video playback in Neptune.
+Everything from pressing Play to choosing tracks, scrubbing, and solving playback problems.
 
 
 
@@ -12,19 +12,21 @@ Video playback in Neptune.
 
 | Page | Description |
 |------|-------------|
+| [Trident Player](/playback/trident-player) | Neptune's direct-play engine, supported formats, HDR, audio, subtitles, and troubleshooting |
 | [Player Controls](/playback/player-controls) | Transport bar, scrubbing, skip segments, Up Next |
 | [Playback Menu](/playback/playback-menu) | The in-player menu: audio, subtitles, video, chapters, info |
-| [Conductor](/playback/conductor) | Automatic track and version selection |
-| [Trident Player](/playback/trident-player) | Custom engine, HDR, codecs |
+| [Conductor](/playback/conductor) | Track and version selection, with optional Pro learning |
 
 
 
 ## Playback Modes
 
-Neptune supports two playback modes, configurable in **Settings > Playback**:
+The default engine is [Trident](/playback/trident-player), Neptune's own player. You can choose Apple's native AVPlayer instead in **Settings > Playback > Player**.
 
-- **Direct Play.** Plays the original file from your server with no re-encoding. Best quality, recommended for local networks.
-- **Transcode.** Your server re-encodes the video to a target bitrate. Useful for remote access or limited bandwidth.
+The **Playback Mode** setting is separate from the engine:
+
+- **Direct Play.** Plays the original file from your server with no re-encoding or quality loss.
+- **Transcode.** Asks a compatible backend to re-encode the video to your target bitrate. Useful when the connection cannot sustain the source bitrate.
 
 You can also change quality mid-playback from the [Playback Menu](/playback/playback-menu) without losing your place.
 
@@ -38,7 +40,7 @@ See [Playback Settings](/settings/playback) for configuration details.
 
 **From Details:** Press Play, pick a version if the item has several, or select an episode.
 
-When playback starts, [Conductor](/playback/conductor) picks the audio and subtitle tracks based on your language and format preferences, so you're not fixing tracks every time.
+When playback starts, [Conductor](/playback/conductor) picks the audio track, subtitle track, and preferred version from your preferences. Neptune Pro's Auto mode can also learn from changes you make while watching.
 
 
 

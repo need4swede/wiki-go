@@ -1,10 +1,10 @@
 ---
-order: 40
+order: 10
 ---
 
 # Trident Player
 
-Neptune's video player. Trident handles direct playback of most file formats so your server doesn't have to transcode.
+Neptune's custom playback engine. Trident handles direct playback of most file formats so your backend does not have to transcode them first.
 
 Trident is the default engine. If you ever need Apple's native player instead, switch the **Engine** in **Settings > Playback** (the native player leans on server transcoding for formats it can't handle, like MKV, DTS, and TrueHD).
 
@@ -17,14 +17,16 @@ Trident plays files straight from your media server without conversion.
 | Category | Supported |
 |----------|-----------|
 | **Containers** | MKV, MP4, AVI, MOV, WebM, M2TS, and more |
-| **Video** | H.264, H.265/HEVC, VP9, AV1 with hardware acceleration |
-| **Audio** | TrueHD, DTS-HD MA, FLAC, DD+, DTS, AAC, and more |
+| **Video** | H.264, H.265/HEVC, VP9, AV1, MPEG-2, MPEG-4, VC-1, and WMV3 |
+| **Audio** | TrueHD, FLAC, DD+, DTS, AAC, Opus, PCM, and more |
 | **Resolution** | Up to 4K at 60fps |
 | **Bitrate** | Up to 200 Mbps |
 
+H.264 and HEVC use Apple's hardware decoder. On current Apple TV hardware, VP9 always uses software decoding and AV1 uses Trident's dav1d software decoder; no current Apple TV exposes AV1 hardware decoding. AV1 performance therefore depends on resolution, frame rate, and bitrate.
+
 ### Server Transcoding
 
-When direct play isn't practical (for example, streaming remotely over a slower connection), a compatible backend can transcode instead. Your media server re-encodes the video on-the-fly to fit within your chosen bitrate limit.
+When direct play isn't practical—for example, when a remote connection cannot sustain the source bitrate—a compatible backend can transcode instead. The backend re-encodes the video on the fly to fit your chosen bitrate limit.
 
 Configure this in **Settings > Playback > Playback Mode** with a target bitrate from 1 to 120 Mbps, or change quality mid-playback from the [Playback Menu](/playback/playback-menu). Quality changes restart the stream in place without losing your position.
 
@@ -41,7 +43,7 @@ Trident detects and displays the major HDR formats:
 | **HDR10** | Static HDR metadata |
 | **HDR10+** | Dynamic per-scene metadata |
 | **HLG** | Broadcast HDR |
-| **Dolby Vision** | Profiles 5 and 8 natively, plus on-the-fly conversion for Blu-ray Profile 7 |
+| **Dolby Vision** | Profile 5, compatible Profile 8 variants, and on-the-fly conversion for single-track Profile 7 |
 
 When playback starts, Neptune switches your TV to the matching HDR mode. If your TV doesn't support a format, it falls back to the next one it does.
 
@@ -49,19 +51,21 @@ When playback starts, Neptune switches your TV to the matching HDR mode. If your
 
 
 
-## Lossless Audio
+## Audio
 
-Trident decodes lossless audio formats locally instead of relying on the server to transcode them.
+Trident decodes surround, lossless, and standard audio formats locally instead of relying on the backend to transcode them.
 
 | Format | Quality |
 |--------|---------|
 | **Dolby TrueHD** | Lossless Blu-ray audio, up to 7.1 |
-| **DTS-HD Master Audio** | Lossless DTS, up to 7.1 |
+| **DTS-HD Master Audio / High Resolution** | Currently plays the embedded full-rate DTS core in 5.1 |
 | **FLAC** | Lossless compressed |
 | **Dolby Digital Plus** | Surround, up to 7.1 |
 | **DTS** | Standard surround |
 
 Multi-channel audio is matched to your output, from stereo TVs to 7.1 receivers.
+
+Full DTS-HD extension decoding is intentionally gated until February 26, 2027, when Neptune plans to enable it in a free update. Until then, DTS-HD MA and HRA tracks play their compatible DTS core; Dolby TrueHD still decodes its full lossless bed.
 
 ### Dolby Atmos
 
@@ -78,7 +82,7 @@ Trident renders text and image subtitles locally, so the server doesn't have to 
 
 | Type | Formats |
 |------|---------|
-| **Text** | SRT, VTT, ASS/SSA with full styling, TTML, SubViewer, SAMI |
+| **Text** | SRT, VTT, ASS/SSA with full styling, MOV Text |
 | **Image** | PGS (Blu-ray), VobSub (DVD), DVB (broadcast) |
 
 ASS subtitles render through libass with their styling intact (fonts, colors, positioning, effects). Useful for anime fan-subs that rely on styled signs and dialog.
@@ -97,13 +101,13 @@ Trident calibrates audio/video sync at playback start and corrects drift during 
 
 ## Track Switching
 
-Switch audio or subtitle tracks mid-playback from the [Playback Menu](/playback/playback-menu). There's no rebuffering since all tracks are pre-loaded.
+Switch audio or subtitle tracks mid-playback from the [Playback Menu](/playback/playback-menu). Track changes happen in place without restarting the video stream.
 
 
 
 ## Video Caching
 
-Enable **Full Video Caching** in **Settings > Playback > Advanced** to cache content to disk as it streams. Pausing playback continues downloading in the background ("pause to buffer"), so you can pre-load content before a long flight or unreliable network stretch. Seeking backward to cached portions plays without re-downloading.
+Enable **Full Video Caching** in **Settings > Playback > Advanced** for disk-backed read-ahead. Pausing lets Trident continue building a playback cushion, and seeking within cached portions avoids another download. This is a bounded per-session cache—not an offline download or a promise that the entire file will remain on the device. Use [Downloads](/browsing/home-screen/downloads) for offline viewing.
 
 
 
@@ -115,7 +119,7 @@ Seeking jumps to the exact frame you scrub to, not just the nearest keyframe.
 
 ## Frame Rate Matching
 
-Neptune matches the display refresh rate to your content:
+Trident requests the display refresh rate that matches your content:
 
 | Content | Display |
 |---------|---------|
@@ -124,7 +128,7 @@ Neptune matches the display refresh rate to your content:
 | Standard video | 30Hz |
 | Sports/60fps | 60Hz |
 
-This avoids judder caused by mismatched refresh rates.
+This avoids judder caused by mismatched refresh rates. Frame-rate matching is always enabled inside Neptune; on Apple TV, also enable **Settings > Video and Audio > Match Content > Match Frame Rate** so tvOS honors the request.
 
 
 

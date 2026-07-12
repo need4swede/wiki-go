@@ -78,10 +78,10 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 
 | Page | Description |
 |------|-------------|
-| [Player Controls](/playback/player-controls) | Scrubbing, skip segments, Up Next |
-| [Playback Menu](/playback/playback-menu) | In-player audio, subtitles, video, and info |
-| [Conductor](/playback/conductor) | Automatic track and version selection |
 | [Trident Player](/playback/trident-player) | Custom video engine |
+| [Player Controls](/playback/player-controls) | Scrubbing, skip segments, Up Next |
+| [Playback Menu](/playback/playback-menu) | In-player audio, subtitles, video, chapters, and info |
+| [Conductor](/playback/conductor) | Track and version selection, with optional Pro learning |
 
 ### Personalization
 
@@ -110,7 +110,7 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 
 ## Key Features
 
-- **Trident Player**: Direct plays nearly everything (MKV, TrueHD, DTS-HD MA, ASS subtitles) with HDR10+, Dolby Vision, and on-the-fly conversion for Blu-ray Profile 7
+- **Trident Player**: Direct plays nearly everything (MKV, TrueHD, DTS, ASS subtitles) with HDR10+, Dolby Vision, and on-the-fly conversion for compatible Blu-ray Profile 7 files
 - **Conductor**: Picks the right audio track, subtitles, and version automatically based on your preferences
 - **Hero Spotlight**: Full-bleed carousel showcasing what to watch next
 - **Search that understands**: Instant offline search, semantic theme matching, and local-first AI for hard queries
