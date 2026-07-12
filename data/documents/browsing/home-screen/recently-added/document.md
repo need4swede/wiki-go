@@ -4,7 +4,7 @@ order: 50
 
 # Recently Added
 
-Content recently added to your Jellyfin library. Unlike [New Releases](../new-releases/) which focuses on premiere dates, Recently Added is based on when items landed on your server. A classic movie added yesterday appears here even though it premiered decades ago.
+Content recently added to your media library. Unlike [New Releases](../new-releases/) which focuses on premiere dates, Recently Added is based on when items landed on your server. A classic movie added yesterday appears here even though it premiered decades ago.
 
 
 

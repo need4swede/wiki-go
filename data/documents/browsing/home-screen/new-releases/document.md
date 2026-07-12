@@ -37,7 +37,7 @@ The new release window sets how far back to look. Change it with **New Release T
 
 ## Movie Release Dates
 
-Movies rank by their **home release date** from TMDB (when they became available for streaming or digital purchase), not their theatrical premiere. A movie that was in theaters three months ago but just hit streaming appears as a new release, which is what you actually want. Movies without TMDB data fall back to their Jellyfin premiere date.
+Movies rank by their **home release date** from TMDB (when they became available for streaming or digital purchase), not their theatrical premiere. A movie that was in theaters three months ago but just hit streaming appears as a new release, which is what you actually want. Movies without TMDB data fall back to the premiere date supplied by the connected backend.
 
 
 

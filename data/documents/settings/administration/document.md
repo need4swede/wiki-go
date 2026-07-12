@@ -4,7 +4,7 @@ order: 90
 
 # Administration
 
-Server administration from the couch. Admin accounts get an **Administration** entry under Profiles in Settings, covering the user management basics that normally require the Jellyfin dashboard.
+Server administration from the couch. With today's Jellyfin backend, admin accounts get an **Administration** entry under Profiles in Settings, covering the user-management basics that normally require the Jellyfin dashboard. Administration capabilities are backend-specific and may differ as Plex, Emby, and additional backends become available.
 
 
 
@@ -22,7 +22,7 @@ Select any user on the server to manage their account:
 
 | Action | Description |
 |--------|-------------|
-| **Set Password** | Change the user's Jellyfin password |
+| **Set Password** | Change the user's server password |
 | **Administrator** | Grant or revoke admin rights |
 | **Disable Account** | Block sign-ins without deleting the account |
 

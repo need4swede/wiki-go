@@ -12,13 +12,15 @@ Instant, offline search powered by a database on your device.
 
 Neptune keeps a full-text index of your library on the device, so searches return as you type without a round trip to the server. It's always on and needs no setup.
 
-| Aspect | Local Index | Native Jellyfin API |
+| Aspect | Local Index | Backend Search |
 |--------|-------------|---------------------|
 | **Speed** | Instant | Noticeable delay |
 | **Offline** | Yes | No |
 | **Typo tolerance** | "spidermn" still finds Spider-Man | Exact match |
 | **Genre synonyms** | "sci-fi" finds Science Fiction | Exact only |
 | **People search** | Cast and crew, with credits data | Often incomplete |
+
+The Backend Search column describes Jellyfin today. Search behavior may vary when Plex, Emby, and additional backends become available; Neptune's on-device index provides the consistent experience across them.
 
 
 

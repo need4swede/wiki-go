@@ -4,7 +4,7 @@ order: 40
 
 # Plugin Settings
 
-Check plugin status and manage the Neptune Plugin Suite from inside the app.
+Check plugin status and manage compatible backend extensions from inside the app. The options below describe Jellyfin's Neptune Plugin Suite; future backends may expose different extension options.
 
 
 

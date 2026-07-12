@@ -4,6 +4,8 @@ order: 20
 
 # Neptune MDM
 
+Neptune MDM is the management extension for Jellyfin. Neptune's app and per-device preferences remain usable without it; sync and remote-management support for future backends will depend on their extension capabilities.
+
 Neptune MDM handles settings sync, backup, and remote device management. It keeps your preferences consistent across every Neptune client on your account and gives server administrators tools for managing users, sending announcements, and setting up child accounts.
 
 
@@ -36,7 +38,7 @@ Administrators can define default settings that apply to all new Neptune users o
 |---------|--------------|
 | Default theme | New users launch Neptune with your chosen theme |
 | Transcode settings | Set a default bitrate cap or force transcoding for all users |
-| Pre-filled server URLs | New users skip manual server entry for both Jellyfin and Seerr |
+| Pre-filled server URLs | New users skip manual entry for their Jellyfin and Seerr servers |
 
 Server defaults override Neptune's built-in defaults. Existing users are not affected, only new accounts that sign in after the defaults are configured.
 

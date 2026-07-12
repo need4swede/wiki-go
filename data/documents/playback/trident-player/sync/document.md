@@ -83,7 +83,7 @@ With **Full Video Caching** enabled in **Settings > Playback > Advanced**, Tride
 
 ### Frequent Buffering
 
-- Run a speed test against your Jellyfin server.
+- Run a speed test against your media server.
 - Use Ethernet rather than Wi-Fi for high-bitrate content.
 - Try **Full Video Caching** for high-latency connections.
 

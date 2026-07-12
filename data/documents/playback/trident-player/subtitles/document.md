@@ -68,7 +68,7 @@ Open the [Playback Menu](/playback/playback-menu) (swipe down during playback) t
 
 ## External Subtitles
 
-External subtitle files attached on your Jellyfin server are picked up alongside embedded tracks. They're marked **External** in the track list.
+External subtitle files exposed by your media server are picked up alongside embedded tracks. They're marked **External** in the track list.
 
 
 

@@ -32,7 +32,7 @@ The Settings screen groups everything by scope:
 
 **Neptune.** App behavior: Home, Playback, Plugins, Deep Learning, Images, Metadata.
 
-**Jellyfin.** Your server connection: server info, **Change URL** for managing multiple addresses, and **Servers** for adding a second Jellyfin server and switching between saved servers without re-logging in.
+**Media Server.** Your backend connection: server info, **Change URL** for managing multiple addresses, and **Servers** for adding another server and switching between saved servers without signing in again. This section is labeled **Jellyfin** today and will reflect the connected backend as more are supported.
 
 **Seerr.** Connection status, **Manage URLs**, **Seerr Preferences** (language filters and request quality), and disconnect.
 
@@ -44,4 +44,4 @@ At the bottom: **Resync Library** clears cached content and reloads everything f
 
 ## Per-Profile vs Per-Device
 
-Nearly every preference in Neptune belongs to the signed-in profile, so each family member gets their own setup. Device-wide items (like the image cache) are shared. Server-side items (parental controls, streaming limits) live on Jellyfin itself and apply everywhere that user signs in.
+Nearly every preference in Neptune belongs to the signed-in profile, so each family member gets their own setup. Device-wide items (like the image cache) are shared. Backend-managed items (such as parental controls and streaming limits) live on the media server and apply everywhere that user signs in; exact capabilities vary by backend.

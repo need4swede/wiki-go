@@ -57,7 +57,7 @@ Long-press any tab in the menu bar and select **Edit Home Screen**. The editor s
 | **Start over** | Press Restore Default |
 | **Save and exit** | Press Done or Back |
 
-Section order and visibility are saved per profile. Each Jellyfin user has their own layout.
+Section order and visibility are saved per profile. Each server account has its own layout.
 
 For finer control, **Settings > Home** sets row limits (Continue Watching, Next Up, Recently Added, Recommended), the new-release window, library card options, and more. See [Home Settings](/settings/home).
 

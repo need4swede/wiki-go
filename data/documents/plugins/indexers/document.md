@@ -4,6 +4,8 @@ order: 10
 
 # Neptune Indexers
 
+Neptune Indexers is the indexing extension for Jellyfin. It is not required for Neptune's backend-agnostic, on-device index; equivalent server-side acceleration for future backends will depend on those backends' capabilities.
+
 Neptune clients build a local database of your library that powers instant search, technical filtering, and content categorization. This is what allows search results to appear in under 50ms and lets you filter content by resolution, container format, subtitle type, and more. By default, each client builds this index independently on-device.
 
 The Indexers plugin moves that responsibility from the client to the server. The server indexes your entire library and pushes the results to every connected Neptune client, so no device has to build its own. It also enriches music video libraries with credits, artist info, and artwork.
@@ -18,7 +20,7 @@ The Indexers plugin moves that responsibility from the client to the server. The
 | New devices run a full sync on first launch | New devices import the index in seconds |
 | Index speed limited by client hardware | Thousands of items indexed per second on server |
 | New media indexed on next client launch | New media indexed automatically on the server |
-| Search covers Jellyfin metadata only | Search index includes full cast and crew credits |
+| Search covers backend metadata only | Search index includes full cast and crew credits |
 
 
 

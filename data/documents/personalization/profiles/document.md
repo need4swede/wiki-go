@@ -64,7 +64,7 @@ Sessions are stored securely in the device Keychain:
 
 - Persist across restarts
 - No passwords stored locally
-- Can be revoked from the Jellyfin server
+- Can be revoked from the media server
 
 **Sign out:** open your profile in Settings and choose **Sign Out**. This signs out every profile on the device, so other users will need to sign in again.
 
@@ -72,6 +72,6 @@ Sessions are stored securely in the device Keychain:
 
 ## Troubleshooting
 
-**Profile not appearing:** check whether the account is "public" in Jellyfin settings.
+**Profile not appearing:** check the account visibility settings in your backend. On Jellyfin, verify that the account is marked "public."
 
 **Can't switch:** verify network connectivity; the password may have changed.

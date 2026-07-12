@@ -72,7 +72,7 @@ Scrub speed is adjustable with **Scrub Sensitivity**. Trident generates seek thu
 
 ## Skip Segments
 
-When your server provides segment data (through the Intro Skipper plugin or Jellyfin 10.11 media segments), a skip button appears at the right moment: **Skip Intro**, **Skip Credits**, **Skip Recap**, **Skip Preview**, or **Skip Ad**.
+When your backend provides segment data, a skip button appears at the right moment: **Skip Intro**, **Skip Credits**, **Skip Recap**, **Skip Preview**, or **Skip Ad**. On Jellyfin, segment data can come from the Intro Skipper plugin or Jellyfin 10.11 media segments; availability may differ on future backends.
 
 - With controls hidden, the button appears as a standalone pill. Pressing Select skips even though controls are down. It dismisses itself if ignored.
 - With **Auto Skip** on (**Settings > Playback > Autoplay**), segments skip without a button press.

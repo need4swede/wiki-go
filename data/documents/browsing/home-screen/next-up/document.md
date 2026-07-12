@@ -10,7 +10,7 @@ The next unwatched episode from each show you're currently watching. If you fini
 
 ## How Items Are Selected
 
-For each show where you've watched at least one episode, your server picks the first unwatched episode: either the one after your last completed episode, or the first episode of a newly added season. Shows you've watched most recently come first.
+For each show where you've watched at least one episode, Neptune uses the connected backend's next-up data to find the first unwatched episode: usually the one after your last completed episode, or the first episode of a newly added season. Shows you've watched most recently come first.
 
 Two settings in **Settings > Home > Sections** shape the row:
 
@@ -31,7 +31,7 @@ The cutoff keeps a show you abandoned two years ago from sitting in the row fore
 | **Movies** | No (episodes only) |
 | **Shows** | Yes |
 
-Next Up shows the same episodes regardless of which library is selected in the library picker. This is a Jellyfin server limitation.
+With the current Jellyfin backend, Next Up shows the same episodes regardless of which library is selected in the library picker. This is a Jellyfin limitation and may differ with future backends.
 
 
 

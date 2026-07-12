@@ -12,7 +12,7 @@ Trident is the default engine. If you ever need Apple's native player instead, s
 
 ## Direct Play
 
-Trident plays files straight from your Jellyfin server without conversion.
+Trident plays files straight from your media server without conversion.
 
 | Category | Supported |
 |----------|-----------|
@@ -24,7 +24,7 @@ Trident plays files straight from your Jellyfin server without conversion.
 
 ### Server Transcoding
 
-When direct play isn't practical (for example, streaming remotely over a slower connection), the server can transcode instead. Your Jellyfin server re-encodes the video on-the-fly to fit within your chosen bitrate limit.
+When direct play isn't practical (for example, streaming remotely over a slower connection), a compatible backend can transcode instead. Your media server re-encodes the video on-the-fly to fit within your chosen bitrate limit.
 
 Configure this in **Settings > Playback > Playback Mode** with a target bitrate from 1 to 120 Mbps, or change quality mid-playback from the [Playback Menu](/playback/playback-menu). Quality changes restart the stream in place without losing your position.
 

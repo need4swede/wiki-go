@@ -1,13 +1,24 @@
 # Neptune
 
-A native Jellyfin client for Apple TV, iPhone, iPad, and Mac. One app, one experience, on every screen in the house.
+A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architecture and experience are backend-agnostic, designed to stay familiar as support expands across media-server platforms.
+
+
+
+## Supported Backends
+
+| Backend | Status |
+|---------|--------|
+| **Jellyfin 10.10+** | Supported today |
+| **Plex** | Planned |
+| **Emby** | Planned |
+| **Additional backends** | Planned; to be determined |
 
 
 
 ## Quick Start
 
 1. [Installation](/getting-started/installation): Get Neptune on your devices
-2. [Setup](/getting-started/setup): Connect to your Jellyfin server
+2. [Setup](/getting-started/setup): Connect to your media server
 3. [Navigation](/getting-started/navigation): Learn the basics
 4. [Home Screen](/browsing/home-screen): Start browsing
 
@@ -80,11 +91,11 @@ A native Jellyfin client for Apple TV, iPhone, iPad, and Mac. One app, one exper
 |------|-------------|
 | [Settings](/settings) | Every configuration screen, explained |
 
-### Server Plugins
+### Backend Extensions
 
 | Page | Description |
 |------|-------------|
-| [Neptune Plugin Suite](/plugins) | Optional server-side superpowers |
+| [Neptune Plugin Suite](/plugins) | Optional Jellyfin server-side features |
 | [Indexers](/plugins/indexers) | Server-side indexing and music metadata |
 | [MDM](/plugins/mdm) | Settings sync, announcements, remote management |
 
@@ -111,10 +122,10 @@ A native Jellyfin client for Apple TV, iPhone, iPad, and Mac. One app, one exper
 | **Apple TV** | Apple TV 4K (2nd generation or later), tvOS 18.5+ |
 | **iPhone / iPad** | iOS or iPadOS 16+ |
 | **Mac** | TBD |
-| **Jellyfin Server** | 10.10 or later |
+| **Media server** | Jellyfin 10.10 or later (currently supported) |
 
 Optional, on any device:
 
 - Seerr for content discovery and requests
-- [Neptune Plugin Suite](/plugins) for sync, faster search, and admin tools
+- [Neptune Plugin Suite](/plugins) for Jellyfin sync, faster search, and admin tools
 - A language model for AI features

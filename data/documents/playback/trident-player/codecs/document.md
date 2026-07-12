@@ -161,4 +161,4 @@ Downmixes preserve dialog level and front-rear balance.
 
 ## Unsupported Formats
 
-For formats Trident can't play directly, your Jellyfin server transcodes the file to a compatible format. The transcode happens in the background.
+For formats Trident can't play directly, your media server transcodes the file to a compatible format. The transcode happens in the background, subject to the connected backend's transcoding support.

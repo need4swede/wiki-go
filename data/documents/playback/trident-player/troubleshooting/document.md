@@ -13,8 +13,8 @@ Solutions for common playback issues.
 ### Video Won't Play
 
 **Check these first:**
-- Can you reach your Jellyfin server?
-- Does the content play in the Jellyfin web interface?
+- Can you reach your media server?
+- Does the content play in your media server's web interface or another client?
 - Is this specific to one file or all files?
 
 **Solutions:**
@@ -136,7 +136,7 @@ Brief silence (~100-200ms) is normal when seeking in TrueHD or DTS-HD MA content
 ### Transcode Won't Start
 
 **Check your server:**
-- Ensure your Jellyfin server has hardware transcoding configured (if available)
+- Ensure your media server has hardware transcoding configured (if available)
 - Check server CPU/GPU usage. Transcoding is resource-intensive.
 - Verify the server logs for transcode errors
 

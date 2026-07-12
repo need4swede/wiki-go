@@ -26,7 +26,7 @@ Smart mode is the right choice for almost everyone: it pre-fetches what you're l
 Neptune fills gaps in your server's metadata with TMDB:
 
 - Title logos on detail pages and Seerr items
-- Cast and crew with photos, beyond what Jellyfin has
+- Cast and crew with photos, beyond what the connected backend provides
 - Full filmographies on [people pages](/browsing/item-details/people)
 - Upcoming seasons and air dates for shows you have
 - Home release dates that power [New Releases](/browsing/home-screen/new-releases) and the Spotlight

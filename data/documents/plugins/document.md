@@ -4,7 +4,9 @@ order: 90
 
 # Neptune Plugin Suite
 
-The Neptune Plugin Suite is a set of optional Jellyfin server plugins that extend Neptune with features that need server-side support. The suite currently ships two plugins, **Indexers** and **MDM**, each handling a distinct part of the client-server relationship.
+The Neptune Plugin Suite is the optional server extension for Jellyfin, Neptune's currently supported backend. It adds features that need server-side support and currently ships two plugins, **Indexers** and **MDM**, each handling a distinct part of the client-server relationship.
+
+The app itself is backend-agnostic and does not require these plugins. Plex, Emby, and additional backends are planned; their extension and plugin options will be documented separately when available.
 
 Both plugins are free, configure themselves, and need no API keys.
 

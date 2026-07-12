@@ -37,7 +37,7 @@ Extras stored in your library play in Neptune's player like any other video.
 
 The **Trailer** button in the action pill plays the best available trailer:
 
-1. **Local trailer files.** When your Jellyfin library has trailer files stored as special features (e.g., `MovieName/Trailers/Official Trailer.mp4`), they play right in Neptune.
+1. **Local trailer files.** When your media library exposes trailer files as special features (for example, `MovieName/Trailers/Official Trailer.mp4` on Jellyfin), they play right in Neptune.
 2. **YouTube.** When there's no local trailer, Neptune finds the official trailer through your server's metadata or TMDB and opens it in the YouTube app.
 
 When an item has several trailers, a **Choose Trailer** picker lists the local ones alongside a **Watch on YouTube** option.
