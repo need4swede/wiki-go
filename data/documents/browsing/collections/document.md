@@ -20,59 +20,44 @@ Collections group related movies together. Common examples:
 
 ## Accessing Collections
 
-Collections appear in two places:
+Collections appear in several places:
 
-1. **Item Detail Pages**: Movies that belong to a collection show a "Collections" section below Cast & Crew
-2. **Search Results**: Collections can appear as a separate category in search
+1. **Home screen**: the Collections row, with a See All card into the full browse
+2. **Item detail pages**: movies in a collection show a **Part of Collection** section
+3. **Library tab**: the full library browse has a Collections filter, with content-type pills for movie, show, and mixed collections
+4. **Search results**: collections appear as their own result type
+
+You can also have the Movies tab fold movies into their collections automatically with **Group Movies into Collections** in **Settings > Home**.
 
 
 
 ## Collection Detail Page
 
-Selecting a collection opens a dedicated page showing:
+Selecting a collection opens a dedicated page with:
 
-### Header
+- Collection name, item count, and overview
+- A search field for finding something specific in large collections
+- A **Layout** toggle for row or grid presentation
+- A watched filter: **All**, **Unwatched**, **Watched**
+- Sorting: default order, name, premiere date, community rating, critic rating, date added, or runtime
 
-- Collection name
-- Total number of items
-- Collection overview (if available)
-
-### Items Row
-
-All movies in the collection displayed in **release date order**:
-
-- Chronological viewing order
-- Poster, title, and year for each item
-- Select any item to view its detail page
+Default order follows release date, so franchises play chronologically. Each movie's watch status is tracked individually.
 
 
 
 ## Theme Songs
 
-If the Theme Songs plugin is installed and the collection has theme music, it plays when viewing the collection page - just like individual series.
-
-
-
-## Navigating Within Collections
-
-When viewing a movie from a collection:
-
-- The detail page shows which collection it belongs to
-- "More From This Collection" may appear
-- You can navigate back to the collection page
-
-This makes it easy to watch through a franchise in order.
+If a collection has theme music, it plays when viewing the collection page, just like series pages. Control this in **Settings > User Preferences > Sounds**.
 
 
 
 ## Collection Backdrops
 
-Collections can have their own backdrop image. If available, this displays as the full-screen background when viewing the collection. Otherwise, Neptune uses the first item's backdrop.
+Collections can have their own backdrop image. If available, it displays as the full-screen background. Otherwise, Neptune uses the first item's backdrop.
 
 
 
 ## Tips
 
-- **Marathon mode**: Use collections to watch through franchises in order
-- **Progress tracking**: Each movie's watch status is tracked individually
-- **Missing images**: Neptune automatically attempts to refresh metadata for collections missing artwork
+- **Marathon mode**: Pin a collection as a [shortcut](/library/shortcuts) and work through a franchise in order
+- **Missing images**: Neptune attempts to refresh metadata for collections missing artwork

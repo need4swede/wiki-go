@@ -4,58 +4,46 @@ order: 30
 
 # Plugin Discovery
 
-## Supported Plugins
+## Compatible Plugins
+
+Neptune supports its own plugin suite and several third-party Jellyfin plugins.
+
+### Neptune Plugin Suite
 
 | Plugin | Feature |
 |--------|---------|
-| **Neptune** | Companion plugin: faster startup, cloud sync of settings across devices, server-side search index |
-| **Home Sections** | Shows upcoming content and provides 'Because You Watched' recommendations |
-| **Theme Songs** | Downloads theme music for TV series that play on their respective pages |
+| **[Neptune Indexers](/plugins/indexers)** | Server-side library and search indexing |
+| **[Neptune MDM](/plugins/mdm)** | Settings sync, backup, and remote management |
+
+See [Neptune Plugin Suite](/plugins) for full details on what each plugin does and how to install them.
+
+### Third-Party Plugins
+
+| Plugin | Feature |
+|--------|---------|
+| **Home Screen Sections** | Shows upcoming movies and TV shows from your Radarr and Sonarr calendars |
 | **Intro Skipper** | Skip intros, credits, and recaps during playback |
+
+Theme songs (music that plays on TV series pages) are a built-in Neptune feature and need no plugin. Control them in **Settings** under **Sounds**.
+
+## One-Tap Install
+
+If you sign in with an admin account and the Neptune Plugin Suite isn't installed, onboarding offers to install it for you. One tap adds the repository, installs both plugins, and walks you through the server restart.
 
 ## Detection Process
 
-After signing in, Neptune will scan your server for a list of compatible plugins. When a plugin is detected, it will automatically be enabled in Neptune.
+After signing in, Neptune scans your server for compatible plugins. Server plugins are detected via endpoint probes and plugin listing. When a plugin is detected, it's enabled in Neptune.
 
 ![plugin-detection.png](plugin-detection.png)
 
 
 
-## The Neptune Companion Plugin
-
-Neptune ships an optional Jellyfin server plugin that unlocks features which need server-side help. **It's not required** - everything in Neptune works without it. The plugin just speeds things up and adds cross-device features.
-
-### What it Adds
-
-| Feature | What it does |
-|---------|--------------|
-| **Backup & Sync** | Cloud sync for your settings across every device on the same account |
-| **Library Index Sync** | Server-side library indexing pushed to clients - faster Library tab and Browse views |
-| **Search Index Sync** | Server-side pre-computation of the search index - new devices import in seconds instead of running the full local sync |
-
-### Installing It
-
-If onboarding detects you don't have it, Neptune offers a one-tap install step. You can also install it manually:
-
-1. In Jellyfin Dashboard: **Plugins > Repositories > Add**
-2. Paste this URL:
-
-   ```
-   https://raw.githubusercontent.com/need4swede/neptune-jellyfin/main/manifest.json
-   ```
-
-3. The Neptune plugin appears in the Catalog tab. Install it, restart your Jellyfin server, and Neptune detects it on the next sign-in.
-
-The plugin is open source and lives at [need4swede/neptune-jellyfin](https://github.com/need4swede/neptune-jellyfin).
-
-
-
 ## No Plugins?
 
-Neptune works great without plugins. You can install them later on your Jellyfin server - Neptune detects them automatically on your next session.
+Neptune works without any server plugins. You can install them later on your Jellyfin server. Neptune picks them up on your next session.
 
 
 
 ## Managing Plugins
 
-You can manage installed plugins from **Settings** > **[Plugins](/settings/plugins)**. Here you can toggle them on or off and adjust various plugin specific options.
+You can manage installed plugins from **Settings** > **[Plugins](/settings/plugins)**. Here you can toggle them on or off and adjust various plugin-specific options.

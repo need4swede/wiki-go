@@ -1,84 +1,43 @@
+---
+order: 20
+---
+
 # Semantic Search
 
-Pre-computed thematic analysis for instant conceptual search.
+Search by what something is about, not just what it's called. Semantic Search matches themes, settings, moods, and even famous quotes, instantly and offline.
 
 
 
 ## Overview
 
-Neptune ships with semantic tags for over 4,000 movies and TV shows. These tags enable instant conceptual searches like "time travel" or "feel-good" without any LLM setup required.
+Neptune ships with a curated semantic catalog covering thousands of popular and classic movies and shows, matched to your library items. The catalog updates over the air, so coverage grows without app updates and there's nothing to configure.
 
-For items not in the bundled dataset, Neptune can generate tags using a configured language model.
+When a search matches semantically, the result tells you why. Focus a poster and a reason pill appears:
 
-
-
-## How It Works
-
-### Bundled Tags (No LLM Required)
-
-```
-Your Library Item
-    ↓
-Match against bundled dataset (4,000+ items)
-    ↓
-Tags loaded instantly
-    ↓
-Ready for semantic search
-```
-
-### LLM-Generated Tags (Optional)
-
-```
-Items not in bundled dataset
-    ↓
-Language model analyzes item metadata
-    ↓
-Extracts: themes, tone, setting
-    ↓
-Stores tags locally
-```
-
-### Every Search
-
-```
-Your Query: "time travel"
-    ↓
-Instant FTS5 match on semantic tags
-    ↓
-Results in < 50ms
-```
+| Pill | Example Query |
+|------|---------------|
+| "About time travel" | time travel |
+| "Set in space" | space |
+| "Feel-good" | feel-good |
+| "Matched a quote" | may the force be with you |
 
 
 
-## Bundled Dataset
+## What's in the Catalog
 
-Neptune includes pre-analyzed semantic tags for:
-
-- **4,000+ movies and TV shows**
-- Popular and classic content
-- Matched by TMDb ID for accuracy
-- No LLM or network required
-
-Most libraries will have significant coverage from the bundled dataset alone.
-
-
-
-## What's in a Semantic Tag
-
-Each item has tags describing:
+Each covered title carries tags describing:
 
 | Category | Examples |
 |----------|----------|
 | **Themes** | time travel, heist, revenge, coming of age |
 | **Tone** | dark, feel-good, suspenseful, comedic |
-| **Setting** | dystopian, space, historical, suburban |
+| **Setting** | dystopian, space, historical, small town |
 | **Keywords** | robots, magic, sports, courtroom |
+| **Quotes** | Memorable lines from well-known scenes |
 
 
 
 ## Example Searches
-
-Semantic tags enable queries that keyword search can't handle:
 
 | Query | Matches |
 |-------|---------|
@@ -86,123 +45,24 @@ Semantic tags enable queries that keyword search can't handle:
 | "feel-good" | Forrest Gump, The Pursuit of Happyness |
 | "dystopian" | The Hunger Games, Blade Runner, 1984 |
 | "heist" | Ocean's Eleven, The Italian Job, Heat |
-| "coming of age" | Stand By Me, The Breakfast Club |
 | "fish out of water" | Crocodile Dundee, Elf, Thor |
 | "slow burn" | There Will Be Blood, The Witch |
 | "claustrophobic" | Buried, 127 Hours, Panic Room |
 
 
 
-## Benefits vs Prompt Search
+## Browse Instead of Search
 
-| Aspect | Prompt Search | Semantic Search |
-|--------|---------------|-----------------|
-| **Speed** | 1-3 seconds | < 50ms |
-| **LLM Required** | Every search | Only for uncovered items |
-| **Offline** | No | Yes |
-| **API Costs** | Per search | Only for new analysis |
-| **Coverage** | Model's knowledge | Your actual library |
-
-Use both together for best results:
-- Semantic Search: instant matches from tags
-- Prompt Search: complex queries, filters, and fallback
+The same tags power [Smart Tags](/library/smart-tags) in the Library tab, where you can browse by theme and mood, spin the Surprise Me slot machine, or stack tags with Mix & Match.
 
 
 
-## Tag Generation (Optional)
+## Coverage
 
-For items not covered by the bundled dataset, Neptune can generate semantic tags using a language model.
-
-### Requirements
-
-- Language model provider available (Neptune AI is built-in and enabled by default)
-- Enable **Generate New Tags** in Settings
-
-Neptune AI works out of the box with no configuration required. Alternative providers (Ollama, LM Studio, OpenAI, Anthropic) can be configured in **Settings** > **Language Models**.
-
-### How It Works
-
-1. Items without bundled tags are queued
-2. Processed in batches of 5 (reduces API costs by 80%)
-3. Progress shown in Settings
-4. Runs in background without blocking the app
-
-### When to Use
-
-- You have niche or obscure content
-- Your library includes recent releases not yet in bundled dataset
-- You want complete coverage
-
-
-
-## Enabling Semantic Search
-
-### Without LLM (Bundled Tags Only)
-
-Semantic Search works immediately using bundled tags. No configuration needed.
-
-### With LLM Tag Generation
-
-1. Go to **Settings** > **Search**
-2. Enable **Semantic Search** (if not already enabled)
-3. Enable **Generate New Tags**
-4. Uncovered items will be analyzed in background
-
-Neptune AI is the default provider and requires no configuration. Analysis begins automatically when enabled.
-
-### Analysis Progress
-
-Settings shows:
-- Items with tags available (complete count)
-- Items pending analysis
-- Progress bar during active analysis
-- Batch progress (e.g., "Batch 3 of 10")
-
-
-
-## Storage
-
-Semantic tags are stored in:
-- Local SQLite FTS5 index
-- Same database as regular search index
-- Survives app updates
-- Bundled tags loaded on first sync
-
-
-
-## Integration with Search
-
-Semantic Search works alongside other search modes:
-
-1. **You search**: "dystopian"
-2. **Local Index**: Checks titles, overview, genres (instant)
-3. **Semantic tags**: Checks bundled + generated tags (instant)
-4. **Results merged**: Deduplicated, ranked by relevance
-5. **Prompt Search** (if enabled): Enhances with LLM
-
-All sources combine for comprehensive results.
-
-
-
-## Per-Item Refresh
-
-On any movie or TV show detail page:
-- Access the **More** menu
-- Select **Refresh Semantic Tags**
-- Item re-analyzed with current language model
-
-Useful when:
-- Tags seem incorrect
-- You've changed LLM providers
-- Item metadata was updated
-- Bundled tags are outdated
+The catalog focuses on well-known titles, so mainstream libraries see strong coverage. Niche items, home videos, and very new releases may not have tags yet; they're still found by [Local Index Search](/search/local-index), and [AI Search](/search/prompt-search) can pick up the conceptual slack for uncovered items.
 
 
 
 ## Privacy
 
-- Bundled tags included in app - no network needed
-- LLM-generated tags stored locally on device
-- Analysis queries sent to configured provider (Neptune AI by default)
-- Only item metadata (title, year, overview) sent for analysis
-- No tags or results uploaded anywhere
+Semantic matching happens entirely on-device. Tag data is downloaded to your device; your queries and library are never uploaded.

@@ -2,79 +2,40 @@
 order: 50
 ---
 
-# Image Cache
+# Images
 
-Manage how Neptune stores and preloads images for faster browsing.
+Manage how Neptune stores and preloads artwork for faster browsing.
 
 
 
 ## Download All Images
 
-When enabled, Neptune proactively downloads all library images in the background. This provides:
+When enabled, Neptune downloads your entire library's artwork in the background:
 
-- **Faster navigation**: Images load instantly as you browse
-- **Offline viewing**: Browse your library without network requests
-- **Reduced server load**: Images fetched once, served from local cache
+- **Faster navigation**: images are already there as you browse
+- **Reduced server load**: fetched once, served from the local cache
 
-### Status Indicators
-
-| Status | Meaning |
-|--------|---------|
-| **Disabled** | Images downloaded on-demand as you browse |
-| **Enabled** | All images cached locally |
-| **Syncing** | Currently downloading images |
+Progress shows live while syncing (current phase, item, and count). Sync runs in the background, so you can keep using Neptune. For large libraries, let the first pass run overnight.
 
 
 
-## Sync Progress
+## Cache Breakdown
 
-When downloading all images, you'll see:
+The cache size is broken down by image type (posters, backdrops, logos, thumbnails) with a total, so you can see where the space goes.
 
-| Field | Description |
-|-------|-------------|
-| **Phase** | Current sync phase (movies, shows, etc.) |
-| **Progress** | Percentage complete |
-| **Current Item** | Name of item currently downloading |
-| **Items** | Completed / total count |
-
-Sync runs in the background - you can continue using Neptune normally.
+| Action | Description |
+|--------|-------------|
+| **Clear** | Delete all cached images. They re-download as you browse |
+| **Clean Orphaned Images** | Remove artwork for items no longer in your library |
 
 
 
-## Cache Size
+## Auto-Refresh Missing Images
 
-Shows the current size of cached images on your device.
-
-Navigate right to the **Clear** button (trash icon) to delete all cached images.
-
-
-
-## Clearing the Cache
-
-When you clear the cache:
-
-- All downloaded images are deleted
-- Images will re-download as you browse
-- The "Download All Images" toggle remains unchanged
-- No progress or playback data is affected
-
-### When to Clear
-
-- After major library changes
-- To free up device storage
-- If images appear corrupted or outdated
-- If cache grows unexpectedly large
+On by default. When an item's artwork fails to load or goes missing, Neptune quietly re-fetches it rather than leaving a blank card.
 
 
 
 ## System Behavior
 
-The image cache uses standard tvOS cache storage. The system may automatically clear the cache when device storage is low. This is normal behavior - images will simply re-download as needed.
-
-
-
-## Tips
-
-- **Large libraries**: Enable Download All Images overnight for initial sync
-- **Limited storage**: Keep disabled, let images load on-demand
-- **Multiple users**: Cache is shared across profiles on the device
+The image cache uses standard tvOS cache storage. The system may clear it when device storage runs low; images re-download as needed. The cache is shared across profiles on the device.

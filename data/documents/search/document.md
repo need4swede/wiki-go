@@ -1,10 +1,10 @@
 ---
-order: 40
+order: 50
 ---
 
 # Search
 
-Neptune features the most advanced search capabilities of any Jellyfin client. Three powerful search technologies work together to help you find anything in your library instantly.
+One search bar, three layers underneath. Neptune searches a local index for instant keyword matches, a semantic catalog for themes and moods, and optionally hands off to a language model when a query needs actual understanding. You just type; Neptune decides what runs.
 
 
 
@@ -12,180 +12,56 @@ Neptune features the most advanced search capabilities of any Jellyfin client. T
 
 | Page | Description |
 |------|-------------|
-| [Local Index Search](/search/local-index) | Offline-capable instant search |
-| [Semantic Search](/search/semantic-search) | Pre-computed thematic analysis |
-| [Prompt Search](/search/prompt-search) | LLM-powered conceptual search |
+| [Local Index Search](/search/local-index) | Offline, instant keyword search |
+| [Semantic Search](/search/semantic-search) | Themes, moods, and famous quotes |
+| [AI Search](/search/prompt-search) | Language model help for hard queries |
 
 
 
-## Three Search Technologies
+## The Search Experience
 
-| Technology | Speed | Network | Best For |
-|------------|-------|---------|----------|
-| **Local Index** | < 50ms | Offline | Titles, names, genres, keywords |
-| **Semantic Search** | < 50ms | Offline | Themes, tone, conceptual matches |
-| **Prompt Search** | 1-10s | Required | Complex queries, plot descriptions |
+Open the Search tab (or search from the [Compass](/getting-started/navigation/compass) anywhere in the app) and start typing on the compact keyboard, or dictate with the Siri Remote.
 
-All three work together. Local Index and Semantic Search provide instant results while Prompt Search handles complex LLM queries.
+- **Before you type:** your recent searches appear as chips, ready to re-run or clear.
+- **While you type:** results appear instantly, with suggestion chips drawn from your library.
+- **Typos handled:** close-enough queries are corrected automatically, with a "Showing results for..." note. Dead ends offer a "Did you mean" suggestion and an **Ask AI** chip.
 
+Results land in a poster grid with scope tabs: **Top Results**, **Movies**, **Shows**, **Seerr**, and **People**. Top Results ranks everything by relevance; the other tabs narrow by type. The Seerr tab searches beyond your library so you can request what you find (see [Discover](/discover)).
 
-
-## Neptune AI
-
-Neptune includes a built-in AI provider called **Neptune AI** that powers Prompt Search and Semantic Analysis with zero configuration required.
-
-| Feature | Benefit |
-|---------|---------|
-| **Pre-configured** | Works out of the box |
-| **No API key needed** | Enabled by default for new users |
-| **No setup** | LLM features work immediately |
-
-For users who prefer self-hosted or alternative providers, Neptune also supports Ollama, LM Studio, OpenAI, Anthropic, Google Gemini, OpenRouter, and Zhipu GLM.
+Focus a result and Neptune tells you why it matched: "About time travel", "Set in space", "Feel-good", "Matched a quote", "Matched in the plot", or "Found by AI".
 
 
 
-## Local Index Search
+## The Three Layers
 
-Neptune builds a complete search database on your device. Unlike native Jellyfin search which calls the server API, Local Index Search works entirely offline with instant results.
+| Layer | Speed | Network | Best For |
+|-------|-------|---------|----------|
+| **Local Index** | Instant | Offline | Titles, names, genres, keywords |
+| **Semantic Search** | Instant | Offline | Themes, tone, quotes, concepts |
+| **AI Search** | A few seconds | Required | Plot descriptions, complex queries |
 
-### Why Local Index?
-
-| Feature | Local Index | Jellyfin API |
-|---------|-------------|--------------|
-| **Speed** | < 50ms | 200-500ms+ |
-| **Offline** | Yes | No |
-| **Typo tolerance** | "spi" → Spider-Man | Exact match |
-| **Genre synonyms** | "sci-fi" → Science Fiction | Exact only |
-| **Composer search** | Enriched from TMDb | Often missing |
-
-### What's Indexed
-
-| Category | Examples |
-|----------|----------|
-| **Titles** | "Spider-Man", "spiderman", "spider man" |
-| **Genres** | "sci-fi", "scary", "funny" with synonyms |
-| **People** | Cast, directors, writers, composers |
-| **Studios** | Production companies |
-| **Plot** | Full descriptions and overviews |
-
-[Learn more about Local Index Search →](/search/local-index)
+Local Index and Semantic Search are always on and need no setup. AI Search is optional: enable it in **Settings > Deep Learning** and it steps in automatically when the instant layers come up short. See [AI Search](/search/prompt-search) for providers.
 
 
 
-## Semantic Search
+## Search Settings
 
-Neptune ships bundled with semantic tags for both movies and TV shows.
-
-### Bundled Tags
-
-- **4,000+ items** pre-analyzed and included
-- Matched by TMDb ID for accuracy
-- Works offline, no LLM needed
-- Additional items can be analyzed with language models
-
-### Example Results
-
-| Query | Instant Matches |
-|-------|-----------------|
-| "time travel" | Back to the Future, Interstellar, Tenet |
-| "feel-good" | Forrest Gump, The Pursuit of Happyness |
-| "dystopian" | The Hunger Games, Blade Runner, 1984 |
-| "heist" | Ocean's Eleven, The Italian Job |
-
-[Learn more about Semantic Search →](/search/semantic-search)
-
-
-
-## Prompt Search
-
-Ask for what you want in plain English. The language model understands natural language and translates it into precise search queries.
-
-### Example Queries
-
-| Query | What Happens |
-|-------|--------------|
-| "movie about a killer shark" | LLM identifies "Jaws" |
-| "farm boy learns magic fights dad" | LLM identifies "Star Wars" |
-| "90s action movies" | Filters by year 1990-1999 + genre |
-| "movies I haven't seen" | Filters to unwatched only |
-| "composed by John Williams" | Filters by composer role |
-
-### How It Works
-
-1. Your query goes to configured LLM provider
-2. Language model identifies likely titles and extracts filters
-3. Results searched in your local library
-4. Structured filters applied
-
-[Learn more about Prompt Search →](/search/prompt-search)
-
-
-
-## Using Search
-
-1. Navigate to the **Search** tab
-2. **Search field**: Type for Local Index + Semantic Search (instant)
-3. **Sparkle button**: Prompt Search for LLM-powered queries
-
-Results appear organized by category as you type.
-
-
-
-## Result Categories
-
-| Category | Description |
-|----------|-------------|
-| **Movies** | Films in your library |
-| **TV Shows** | Series in your library |
-| **Episodes** | Individual episodes (grouped by series) |
-| **Collections** | Box sets matching your query |
-| **Jellyseerr** | Requestable content not in library |
-
-
-
-## Result Layouts
-
-Choose your preferred display using the layout button:
-
-| Layout | Description |
-|--------|-------------|
-| **Grouped** | Results organized by category (default) |
-| **Sections** | Horizontal scrolling rows |
-| **Grid** | Unified grid view |
-
-
-
-## Jellyseerr Integration
-
-When Jellyseerr is connected, search includes requestable content:
-
-- Movies and TV shows not in your library
-- Status badges show pending/processing state
-- Select to view details and request
-- Already-available items are excluded
-
-
-
-## Configuration
-
-Configure in **Settings** > **Search**:
+Fine-tune the experience in **Settings > User Preferences > Appearance > Layouts**:
 
 | Setting | Description |
 |---------|-------------|
-| **Local Index** | Enable/disable, manual resync |
-| **Semantic Search** | Enable pre-computed semantic tags |
-| **Generate New Tags** | LLM analysis for items without tags |
-| **Prompt Search** | Toggle LLM-powered query interpretation |
-
-LLM features are powered by **Neptune AI** by default (no configuration required). Alternative providers (Ollama, LM Studio, OpenAI, Anthropic, Google Gemini, OpenRouter, Zhipu GLM) can be configured in **Settings** > **Search**.
+| **Search Suggestions** | Show suggestion chips while typing |
+| **Filter Tabs** | Show the scope tabs above results |
+| **Include Seerr Results in Top Results** | Blend requestable titles into the main ranking |
+| **Grid Keyboard Layout** | Use a grid keyboard instead of a single row |
+| **Auto-Focus Input** | Focus the keyboard when the tab opens |
 
 
 
 ## Privacy
 
-| Feature | Data Location |
-|---------|---------------|
-| **Local Index** | Stored on device |
-| **Semantic Tags** | Stored on device |
-| **Prompt Search** | Queries sent to LLM provider |
-| **Library content** | Never uploaded |
+| Data | Where It Goes |
+|------|---------------|
+| Library index | Stays on your device |
+| Semantic tags | Stays on your device |
+| AI queries | Sent to your configured provider only when AI Search runs |

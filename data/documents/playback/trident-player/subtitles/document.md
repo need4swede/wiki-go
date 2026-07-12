@@ -4,7 +4,7 @@ order: 50
 
 # Subtitles
 
-Beautiful subtitle rendering for every format.
+How Trident handles subtitle tracks.
 
 
 
@@ -14,11 +14,11 @@ Beautiful subtitle rendering for every format.
 
 | Format | Features |
 |--------|----------|
-| **SRT** | Simple, universal compatibility |
+| **SRT** | Universal compatibility |
 | **VTT** | Web standard with positioning |
-| **ASS/SSA** | Full styling - fonts, colors, positioning, effects |
+| **ASS/SSA** | Full styling: fonts, colors, positioning, effects |
 | **TTML** | Broadcast standard |
-| **SubViewer** | Legacy format support |
+| **SubViewer** | Older format support |
 | **SAMI** | Microsoft subtitle format |
 
 ### Image Subtitles
@@ -29,90 +29,80 @@ Beautiful subtitle rendering for every format.
 | **VobSub** | DVD subtitles |
 | **DVB** | Broadcast subtitles |
 
-All subtitle formats are rendered directly by Neptune - no server processing or burn-in required.
+All formats render locally. The server doesn't have to burn subtitles into the video.
 
 
 
 ## Styled Subtitles
 
-### Full ASS/SSA Support
+### ASS/SSA
 
-Neptune renders ASS subtitles with their intended styling:
+Trident renders ASS subtitles with libass, the same renderer desktop players use, so styling comes through intact:
 
-- **Fonts** - Custom typefaces as the creator intended
-- **Colors** - Primary, secondary, outline, and shadow colors
-- **Positioning** - Text anywhere on screen (9-point alignment grid + absolute positioning)
-- **Effects** - Bold, italic, underline, strikethrough, borders, shadows
+- **Fonts**: Custom typefaces if the file embeds them
+- **Colors**: Primary, secondary, outline, and shadow colors
+- **Positioning**: 9-point alignment grid plus absolute positioning
+- **Effects**: Bold, italic, underline, strikethrough, borders, shadows
 
-No more plain white text when the subtitle creator intended something more.
-
-### Perfect for Anime
-
-Anime fan-subs with elaborate styling display beautifully. Signs, styled dialog, and on-screen text all render as intended.
+This is what makes anime fan-subs render the way the typesetter intended, with styled signs and on-screen text.
 
 
 
-## Instant Track Switching
+## Track Switching
 
-Switch subtitle tracks instantly during playback:
-- Change languages on the fly
-- Toggle between full subtitles and signs-only
-- Turn subtitles off instantly
-- No rebuffering required
-
-Neptune pre-loads all subtitle tracks, so switching is immediate - including image-based formats like PGS and VobSub.
+Switch subtitle tracks during playback. All tracks (including image-based formats like PGS and VobSub) are pre-loaded, so the switch is immediate.
 
 
 
 ## Multiple Languages
 
-If your file contains multiple subtitle tracks, Neptune shows them all:
+If a file contains multiple subtitle tracks, Trident lists them all with:
+
 - Language name
 - Track type (Full, Signs, Forced, SDH)
-- Format indicator
+- Format
 
-Select the track you want from the playback pill (swipe up/down during playback).
+Open the [Playback Menu](/playback/playback-menu) (swipe down during playback) to choose a track.
 
 
 
 ## External Subtitles
 
-Neptune supports external subtitle files from your Jellyfin server:
-- Automatically detected
-- Displayed alongside embedded tracks
-- Marked as "External" in the track list
+External subtitle files attached on your Jellyfin server are picked up alongside embedded tracks. They're marked **External** in the track list.
 
 
 
-## Subtitle Delay
+## Timing and Position
 
-Adjust subtitle timing during playback if subtitles are out of sync with the video:
-- **Positive delay** displays subtitles later
-- **Negative delay** displays subtitles earlier
+If subtitles are out of sync with the video, open the Playback Menu's Subtitles tab and use **Timing** to shift them up to 5 seconds either way while you watch. The offset applies to the current file only.
+
+**Position** raises subtitles off the bottom edge, useful for keeping captions clear of letterbox bars or burned-in text. Styled ASS subtitles keep their typesetting anchored when repositioned.
 
 
 
 ## Character Encoding
 
-Neptune handles multiple character encodings automatically:
+Trident handles common encodings:
+
 - UTF-8, UTF-16
 - ISO-8859-1 (Latin)
 - Big5 (Chinese Traditional)
 - GB-18030 (Chinese Simplified)
 
-If characters appear garbled, the subtitle file may use an unsupported encoding. Re-encoding as UTF-8 resolves most issues.
+If characters appear garbled, the file likely uses an unsupported encoding. Re-encoding as UTF-8 fixes most cases.
 
 
 
 ## Default Styling
 
-For subtitles without built-in styling, Neptune provides clean defaults:
-- Clear white text
-- Subtle shadow for readability
-- Positioned at the bottom of the screen
-- Appropriately sized for TV viewing
+For subtitle formats without their own styling, Trident applies a clean default:
 
-Customize default appearance in **Settings** > **Subtitles** (font size, color, background style, opacity).
+- White text
+- Subtle shadow for readability
+- Bottom-of-screen position
+- Sized for TV viewing
+
+Customize the default in **Settings > User Preferences > Subtitle Style** (font size, color, background style, brightness, position), or from the Style drill-in right in the Playback Menu.
 
 
 
@@ -120,27 +110,25 @@ Customize default appearance in **Settings** > **Subtitles** (font size, color, 
 
 ### Subtitles Not Appearing
 
-1. **Check track selection** - Make sure subtitles aren't set to "Off"
-2. **Check timing** - Subtitles may be for a different version of the video
-3. **Try a different track** - If the file has multiple options
+1. Check the track picker. Subtitles may be set to Off.
+2. Subtitles may be timed for a different cut of the video.
+3. Try a different track if the file has multiple options.
 
 ### Strange Characters
 
-**Encoding issue** - Some older subtitle files use non-standard encoding. Try:
+Some older subtitle files use non-standard encodings. Try:
+
 - A different subtitle file
-- SRT format (most compatible)
-- Re-encoding the subtitle as UTF-8
+- An SRT version (most compatible format)
+- Re-encoding the subtitle file as UTF-8
 
 ### Styling Looks Wrong
 
-**Font substitution** - Custom fonts may be replaced with system fonts.
-
-**Complex effects** - Some advanced ASS effects (blur, clipping, animations) may render with approximations.
-
-**SRT limitations** - SRT format doesn't support styling; consider using an ASS version.
+- **Font substitution**: Custom fonts may be replaced with system fonts if the file doesn't embed them.
+- **Complex effects**: Some advanced ASS effects (blur, clipping, animations) render approximately.
+- **SRT limitations**: SRT doesn't support styling. If you want styling, use the ASS version.
 
 ### Timing Off
 
-**Adjust delay** - Use the subtitle delay option in the playback pill.
-
-**Wrong version** - Subtitles may be timed for a different cut of the video.
+- Adjust the offset under Subtitles > Timing in the Playback Menu.
+- The subtitles may be timed for a different cut of the video.

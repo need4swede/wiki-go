@@ -1,6 +1,10 @@
+---
+order: 10
+---
+
 # Home Screen
 
-Your personalized media hub. The home screen displays a spotlight carousel at the top followed by horizontal rows of content organized by category. Each row surfaces different aspects of your library — what you're watching, what's new, what you love, and what you might want to discover.
+The home screen shows a spotlight carousel at the top followed by horizontal rows of content. Each row covers a different category: what you're watching, what's new, your favorites, and recommendations.
 
 
 
@@ -10,24 +14,30 @@ The home screen is made up of the following sections, listed in default order:
 
 | Section | Description |
 |---------|-------------|
-| [Spotlight](spotlight/) | Full-bleed backdrop carousel highlighting content to watch next, scored by category and recency |
+| [Spotlight](spotlight/) | Full-bleed backdrop carousel highlighting what to watch next |
+| Libraries | Your media libraries as artwork cards |
 | [Continue Watching](continue-watching/) | Movies and episodes you started but didn't finish, with progress bars |
+| Pins | Your pinned movies, shows, people, and genres |
 | [Next Up](next-up/) | The next unwatched episode from each show you're watching |
-| [New Releases](new-releases/) | Recently premiered movies and new seasons, with smart grouping and TMDB date enrichment |
-| [Recently Added](recently-added/) | Content recently added to your server, with per-library rows on the Home tab |
+| [New Releases](new-releases/) | Recently premiered movies and new seasons |
+| [Recently Added](recently-added/) | Content recently added to your server, with per-library rows |
 | [Favorites](favorites/) | Movies and shows you've marked as favorites |
-| [Recommended](recommended/) | Personalized suggestions blending library content with Jellyseerr requestable items |
-| [Coming Soon](coming-soon/) | Upcoming content from Radarr/Sonarr calendars and Jellyseerr requests |
-| [Because You Watched](because-you-watched/) | Similar titles based on specific movies you've watched (requires plugin) |
-| [Custom Libraries](custom-libraries/) | Recently added items from non-standard libraries like Anime or Documentaries |
+| Collections | Your box sets, with a See All card into the full collections browse |
+| [Recommended](recommended/) | Personalized suggestions, optionally blended with Seerr titles |
+| [Coming Soon](coming-soon/) | Upcoming releases you've requested |
+| [Because You Watched](because-you-watched/) | Similar titles based on movies you've watched (requires plugin) |
+
+The **Pins** row mirrors your [Library Shortcuts](/library/shortcuts). Pin anything with a long press and it shows up here; long-press a pin to remove it.
 
 
 
 ## Quick Actions
 
-### Long Press
+Long-press any content card to open the quick actions modal:
 
-Long-press any content card (0.6 seconds) to pin it as a Library Shortcut for quick access from the Library tab. A modal appears confirming the action. Works on movies, shows, seasons, episodes, and collections.
+- **Mark as Played** or **Mark as Unplayed**
+- **Reset Progress** (for items in progress)
+- **Pin Shortcut** or **Unpin Shortcut**
 
 ### Focused Backdrop
 
@@ -37,57 +47,45 @@ When you navigate down and focus a card in any section, its backdrop image repla
 
 ## Customizing Sections
 
-Long-press any tab in the menu bar to open the Home Menu, then select **Customize Home Screen**.
-
-### Editing Mode
-
-In editing mode, each section shows as a labeled placeholder card. You can:
+Long-press any tab in the menu bar and select **Edit Home Screen**. The editor shows every section as a labeled card:
 
 | Action | How |
 |--------|-----|
-| **Move a section** | Focus it, press Move, navigate to the new position, press Move Here |
-| **Hide a section** | Focus it, press Hide (section dims to indicate it's hidden) |
-| **Show a section** | Focus a hidden section, press Show |
-| **Save and exit** | Press Back or Done |
+| **Move a section** | Focus it, press Move, pick the new position |
+| **Hide a section** | Focus it, press the eye button |
+| **Show a section** | Focus a hidden section, press the eye button again |
+| **Start over** | Press Restore Default |
+| **Save and exit** | Press Done or Back |
 
-Spotlight always stays at the top and cannot be moved or hidden.
+Section order and visibility are saved per profile. Each Jellyfin user has their own layout.
 
-Section order and visibility are saved per user — each Jellyfin profile has its own layout.
+For finer control, **Settings > Home** sets row limits (Continue Watching, Next Up, Recently Added, Recommended), the new-release window, library card options, and more. See [Home Settings](/settings/home).
 
 
 
 ## Movies & Shows Tabs
 
-The **Movies** and **Shows** tabs work the same as the Home tab but filter content:
+The optional **Movies** and **Shows** tabs work the same as the Home tab but filter content:
 
-- **Movies tab:** Spotlight shows only new movie releases, content rows show only movies
-- **Shows tab:** Spotlight shows only new episodes, content rows show only TV shows
+- **Movies tab:** Spotlight shows only movies, content rows show only movies
+- **Shows tab:** Spotlight shows only shows, content rows show only TV content
 
-Some sections have tab restrictions — for example, Next Up is hidden on the Movies tab since it only contains episodes, and Because You Watched is hidden on the Shows tab since it's movie-based.
+Some sections are restricted by tab. Next Up is hidden on the Movies tab because it only contains episodes, and Because You Watched is hidden on the Shows tab because it's movie-based. Libraries, Pins, and Collections appear on the Home tab only.
 
 If you have multiple movie or show libraries, a library picker appears at the top letting you filter by library or view all.
-
-Switching tabs updates both the spotlight and all content sections.
 
 
 
 ## Content Cards
 
-**Poster cards:** Movies and shows with poster art displayed vertically. Used by New Releases, Recently Added, Favorites, Recommended, Coming Soon, Because You Watched, and Custom Libraries.
+**Poster cards:** Movies and shows with poster art displayed vertically. Used by New Releases, Recently Added, Favorites, Recommended, Coming Soon, and Because You Watched.
 
-**Wide cards:** Continue Watching and Next Up with wider thumbnails showing episode screenshots or movie backdrops at a landscape aspect ratio.
+**Wide cards:** Continue Watching and Next Up use wider thumbnails showing episode screenshots or movie backdrops at a landscape aspect ratio.
 
-**Focus behavior:** Cards scale up with a white border on focus. The focused item's backdrop appears behind all content at the top of the screen.
+**Focus behavior:** Cards scale up with a highlight border on focus. The focused item's backdrop appears behind all content at the top of the screen.
 
 
 
 ## Background Refresh
 
-Content refreshes automatically every 10 seconds. Each refresh fetches all sections in parallel and uses smart diffing to update only what's changed — preventing unnecessary UI flicker.
-
-Refresh pauses during:
-- Video playback
-- Non-content tabs (Search, Settings, Library)
-- Detail view navigation
-
-Refresh resumes when you return to a content tab (Home, Movies, Shows, or Discover).
+Content refreshes automatically while you browse. Each refresh updates only the rows whose content has changed, so the screen never jumps under you. Refresh pauses during playback and on non-content tabs, then resumes when you return.

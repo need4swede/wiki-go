@@ -1,178 +1,76 @@
-# Prompt Search
+---
+order: 30
+---
 
-LLM-powered search for complex and conceptual queries.
+# AI Search
 
-
-
-## Overview
-
-Prompt Search uses language models to understand queries that go beyond simple keyword matching. Describe what you want to watch in plain English and Neptune finds matching content in your library.
-
-
-
-## When to Use Prompt Search
-
-| Query Type | Example | Regular Search | Prompt Search |
-|------------|---------|----------------|---------------|
-| **Conceptual** | "movie about a killer shark" | Partial match | Identifies "Jaws" |
-| **Descriptive** | "farm boy learns magic fights dad" | No match | Identifies "Star Wars" |
-| **Decade** | "90s action movies" | No filter | Year filter applied |
-| **Role-specific** | "movies composed by John Williams" | All mentions | Composer-specific |
-| **Watch history** | "movies I haven't seen" | No filter | Filters watched |
-| **Runtime** | "short episodes under 30 min" | No filter | Runtime filter |
-
-
-
-## Using Prompt Search
-
-1. Navigate to the **Search** tab
-2. Select the **sparkle button** next to the search field
-3. Enter your descriptive query
-4. "Thinking..." appears while the language model processes
-5. Results display when ready
+When a query needs actual understanding ("farm boy learns magic and fights his dad"), Neptune hands it to a language model. AI Search is built into the same search bar as everything else: no mode to switch, no separate screen.
 
 
 
 ## How It Works
 
-```
-Your Query
-    ↓
-Language Model
-    ↓
-Identifies titles + Extracts filters
-    ↓
-Searches local index
-    ↓
-Applies structured filters
-    ↓
-Results
-```
+1. You type a query
+2. The instant layers (local index, semantic tags) return whatever they can
+3. If the results look weak and the query looks conceptual, Neptune sends it to your language model
+4. A "Searching with AI" pill appears while it thinks
+5. AI matches merge into your results, marked with a sparkle badge and a "Found by AI" reason pill
 
-1. **Query sent to LLM**: Your natural language query goes to the configured language model
-2. **Model identifies titles**: The language model uses its knowledge to recognize what you're describing
-3. **Filters extracted**: Year ranges, runtime limits, watch status, and roles are parsed
-4. **Library searched**: Neptune searches for identified titles in your local index
-5. **Results filtered**: Structured filters narrow down the matches
+You can also trigger it directly: when a search comes up empty, an **Ask AI** chip appears under the results.
 
 
 
 ## Example Queries
 
-### Conceptual Searches
+| Query | Finds |
+|-------|-------|
+| "farm boy learns magic fights dad" | Star Wars |
+| "movie where they shrink the scientists" | Fantastic Voyage, Innerspace |
+| "cooking rat movie" | Ratatouille |
+| "detective can't remember anything" | Memento |
 
-The language model recognizes well-known movies and shows from descriptions:
-
-| Query | LLM Identifies |
-|-------|---------------|
-| "boy wizard at magic school" | Harry Potter |
-| "superhero who can't die" | Deadpool, Logan |
-| "robot from the future" | Terminator |
-| "ship sinks on maiden voyage" | Titanic |
-| "dinosaur theme park" | Jurassic Park |
-| "dream within a dream" | Inception |
-
-### Structured Filters
-
-The language model extracts filters from your query:
-
-| Query | Filters Applied |
-|-------|-----------------|
-| "80s horror" | Year: 1980-1989, Genre: Horror |
-| "recent sci-fi" | Year: last 2 years, Genre: Sci-Fi |
-| "movies I haven't watched" | Excludes watched content |
-| "episodes under 30 minutes" | Runtime < 30 min |
-| "directed by Spielberg" | Director filter |
-| "long movies over 3 hours" | Runtime > 180 min |
-
-### Compound Queries
-
-Combine multiple criteria:
-
-| Query | Result |
-|-------|--------|
-| "90s action movies I haven't seen" | Year + genre + watch filter |
-| "short comedy episodes" | Runtime + genre + type filter |
-| "recent horror directed by Ari Aster" | Year + genre + director |
+For finding a specific episode of a show, use [Episode Finder](/browsing/item-details/tv-shows) on the show's page instead.
 
 
 
-## Caching
+## Setup
 
-Prompt Search caches LLM responses to improve speed and reduce API costs:
+AI Search needs a language model. Configure one in **Settings > Deep Learning**:
 
-| Data | Cache Duration |
-|------|----------------|
-| Search enhancements | 24 hours |
+1. Turn on **AI Search**
+2. Add a provider and select a model
+3. **Test Connection**, then set it as primary
 
-Repeated or similar queries return instantly from cache. The LLM has a 10-second timeout for new queries.
+| Provider | Type | Notes |
+|----------|------|-------|
+| **Neptune AI** | Hosted | Built in, no keys to manage |
+| **Ollama** | Local | Runs on your own hardware, fully private |
+| **Claude** | Cloud | Bring your own API key |
+| **OpenAI** | Cloud | Bring your own API key |
+| **Gemini** | Cloud | Bring your own API key |
+| **OpenRouter** | Cloud | One key, many models |
+| **GLM** | Cloud | Bring your own API key |
 
-
-
-## Requirements
-
-Prompt Search requires a language model provider. Neptune includes a built-in provider that works out of the box.
-
-### Built-in Provider
-
-| Provider | Description |
-|----------|-------------|
-| **Neptune AI** | Built-in, pre-configured, no setup required |
-
-Neptune AI is enabled by default for new users. LLM search features work immediately without any configuration.
-
-### Alternative Local Providers
-
-| Provider | Description |
-|----------|-------------|
-| **Ollama** | Self-hosted, runs on your server |
-| **LM Studio** | Desktop app with model management |
-
-Benefits: Privacy, no API costs, works offline.
-
-### Alternative Cloud Providers
-
-| Provider | Description |
-|----------|-------------|
-| **OpenAI** | GPT models via API key |
-| **Anthropic** | Claude models via API key |
-| **Google Gemini** | Google's Gemini models via API key |
-| **OpenRouter** | Access many models from different providers via one API key |
-| **Zhipu GLM** | Chinese language models |
-
-Benefits: Higher quality, faster, no local hardware needed.
-
-Configure alternative providers in **Settings** > **Search**.
+Add several providers and use **Set Model Priority** to control the fallback order. If your primary is unreachable, the next one takes over. The same providers power [Episode Finder](/browsing/item-details/tv-shows), [Insights](/browsing/item-details), and other AI features.
 
 
 
-## Fallback Behavior
+## Speed and Fallback
 
-When the language model is unavailable or times out:
-
-1. Query falls back to regular FTS5 search
-2. Best-effort keyword matching applied
-3. No error shown - degraded gracefully
+AI queries take a few seconds, depending on the provider and model. If the model times out or fails, you still get the instant results; AI Search only ever adds.
 
 
 
 ## Limitations
 
-| Works Well | May Not Work |
-|------------|--------------|
-| Popular/classic films | Obscure indie content |
-| Well-known TV series | Foreign films the model doesn't know |
-| Mainstream content | Your home videos |
-| Recent blockbusters | Very new releases |
-
-For content the language model doesn't recognize, use [Semantic Search](/search/semantic-search) which includes bundled tags for 4,000+ items and can analyze additional content.
+| Limitation | Why |
+|------------|-----|
+| Home videos and niche content | The model can only reason about titles it knows |
+| Very new releases | May post-date the model's knowledge |
+| Non-media queries | It searches your library, it isn't a chatbot |
 
 
 
 ## Privacy
 
-- **Neptune AI**: Queries sent to Neptune's hosted service
-- **Local providers**: Queries never leave your network
-- **Cloud providers**: Queries sent to provider's API
-- **No library data sent**: Only your search query, not library contents
-- **Results cached locally**: Responses stored on device only
+Only the query text and basic library context are sent to the provider, and only when AI Search actually runs. Nothing is uploaded during normal instant searches. With a local provider like Ollama, nothing leaves your network at all.

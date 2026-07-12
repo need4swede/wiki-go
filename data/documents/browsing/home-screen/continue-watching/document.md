@@ -1,3 +1,7 @@
+---
+order: 20
+---
+
 # Continue Watching
 
 Resume movies and episodes you started but didn't finish. Each card shows a wide landscape thumbnail with a progress bar indicating how far you got.
@@ -6,49 +10,23 @@ Resume movies and episodes you started but didn't finish. Each card shows a wide
 
 ## How Items Are Selected
 
-The Jellyfin server's Resume Items endpoint returns media you've partially watched. Items must have between 1% and 95% playback progress — anything below 1% is considered not started, and anything above 95% is considered finished.
+Items appear once you're past the first minute or so of playback and drop off when you're essentially done (past 95%). The list is sorted by most recently watched, so the movie you paused last night appears before the show you watched last week.
 
-Up to **10 items** are fetched, sorted by the most recently watched date (most recent first). This means the movie you paused last night appears before the show you watched last week.
-
-
-
-## Data Source
-
-| Property | Value |
-|----------|-------|
-| Endpoint | `Users/{userId}/Items/Resume` |
-| Limit | 10 items |
-| Sort | Most recently watched first |
-| Media types | Video only (excludes audio, photos) |
-| User data | Enabled (provides progress percentage) |
+The number of items shown is configurable in **Settings > Home > Sections**.
 
 
 
 ## Tab Visibility
 
-Continue Watching appears on **all three tabs** with content filtered by type:
+Continue Watching appears on all content tabs, filtered by type:
 
 | Tab | What's Shown |
 |-----|-------------|
-| **Home** | All resume items — movies and episodes together |
+| **Home** | All resume items: movies and episodes together |
 | **Movies** | Only movies you're in the middle of |
 | **Shows** | Only episodes you're in the middle of |
 
-
-
-## Library Scoping
-
-On the Movies and Shows tabs, when you select a specific library from the library picker, Continue Watching is re-fetched with that library's ID as a filter. This means you'll only see resume items that belong to the selected library.
-
-On the Home tab, all resume items are shown regardless of library.
-
-
-
-## Card Type
-
-**Wide landscape cards** — each card shows an episode screenshot or movie backdrop image at a landscape aspect ratio. A progress bar runs along the bottom edge of the card showing your playback position as a percentage.
-
-For episodes, the card shows the episode thumbnail. For movies, the card shows the movie's backdrop image.
+On the Movies and Shows tabs, picking a specific library from the library picker filters the row to that library.
 
 
 
@@ -57,27 +35,20 @@ For episodes, the card shows the episode thumbnail. For movies, the card shows t
 | What you select | Where it takes you |
 |-----------------|-------------------|
 | A movie | The movie's detail page |
-| An episode | The show's detail page with that episode's season selected and the episode highlighted |
+| An episode | The show's detail page, with that episode's season selected and the episode highlighted |
 
-When selecting an episode, Neptune creates a navigation context that pre-selects the correct season and focuses the specific episode within that season. This means you land exactly where you left off rather than at the top of the show's page.
+You land exactly where you left off rather than at the top of the show's page.
 
 
 
 ## Long Press
 
-Long-pressing any Continue Watching card (0.6 seconds) opens a modal to pin the item as a Library Shortcut for quick access from the Library tab. Works for both movies and episodes (episodes pin the parent series).
+Long-press any card for quick actions: **Mark as Played**, **Mark as Unplayed**, **Reset Progress**, and **Pin Shortcut**. Resetting progress removes the item from Continue Watching without marking it watched.
 
 
 
-## Caching
+## Behavior Notes
 
-Continue Watching uses a cache-first loading strategy. On app launch, the most recent cached data is displayed immediately while a background fetch updates the list. If the fresh data differs from the cache, the row updates with a smooth transition. Empty network responses never overwrite valid cached data — so a temporary network failure won't blank out the row.
-
-
-
-## Edge Cases
-
-- **No resume items**: The section is hidden entirely — no empty state is shown.
-- **Item finished during playback**: On the next refresh cycle (10 seconds), the item disappears from Continue Watching and may appear in the Spotlight as a suggestion for the next episode.
-- **Progress exactly at 95%**: Treated as finished — the item is not shown.
-- **Multiple episodes from the same show**: Each episode appears as its own card. There's no grouping or deduplication within the section.
+- The row is hidden entirely when there's nothing to resume.
+- Cached data displays instantly on launch while a background fetch updates the list. A temporary network failure never blanks out the row.
+- When you finish something, it leaves the row on the next refresh and the next episode may surface in the Spotlight instead.

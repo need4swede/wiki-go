@@ -29,11 +29,11 @@ Solutions for common playback issues.
 **For network streaming:**
 - Check your connection speed to the server
 - Try a wired Ethernet connection
-- Increase buffer size: Settings > Playback
+- Enable **Full Video Caching** (Settings > Playback > Advanced) on high-latency connections
 
 **For 4K/HDR content:**
-- Use the "High Quality" buffer preset
-- Ensure your network can handle the bitrate
+- Ensure your network can handle the bitrate (check the Info tab in the Playback Menu)
+- Drop the Quality setting in the Playback Menu if it can't
 
 
 
@@ -81,7 +81,7 @@ This usually indicates a decode error.
 
 ### Audio Out of Sync
 
-**This is normal at the start** - Give it 1-2 seconds for sync to calibrate.
+**This is normal at the start.** Sync calibration takes 1-2 seconds.
 
 **If it persists:**
 - Try seeking to reset the sync
@@ -98,7 +98,7 @@ Brief silence (~100-200ms) is normal when seeking in TrueHD or DTS-HD MA content
 
 **During playback:**
 - May indicate network buffering
-- Try increasing buffer size in Settings
+- Try a lower Quality setting or enable Full Video Caching
 
 
 
@@ -106,15 +106,15 @@ Brief silence (~100-200ms) is normal when seeking in TrueHD or DTS-HD MA content
 
 ### Subtitles Not Showing
 
-1. Open player controls and check subtitle selection
-2. Make sure subtitles aren't set to "Off"
+1. Open the Playback Menu (swipe down) and check the Subtitles tab
+2. Make sure the track isn't set to "Off"
 3. Try selecting a different subtitle track
 
 
 
 ### Wrong Characters or Boxes
 
-**Encoding issue** - The subtitle file uses a non-standard character encoding.
+**Encoding issue.** The subtitle file uses a non-standard character encoding.
 
 **Try:**
 - A different subtitle file for the same content
@@ -124,10 +124,10 @@ Brief silence (~100-200ms) is normal when seeking in TrueHD or DTS-HD MA content
 
 ### Subtitles Out of Sync
 
-**Use subtitle delay:**
-- Open player controls
-- Adjust the subtitle delay setting
-- Positive values delay subtitles; negative values make them earlier
+**Use the Timing adjuster:**
+- Open the Playback Menu and go to Subtitles > Timing
+- Shift the offset while watching until dialogue lines up
+- The adjustment applies to the current file only
 
 
 
@@ -137,25 +137,25 @@ Brief silence (~100-200ms) is normal when seeking in TrueHD or DTS-HD MA content
 
 **Check your server:**
 - Ensure your Jellyfin server has hardware transcoding configured (if available)
-- Check server CPU/GPU usage — transcoding is resource-intensive
+- Check server CPU/GPU usage. Transcoding is resource-intensive.
 - Verify the server logs for transcode errors
 
 **Check your settings:**
 - Confirm Playback Mode is set to **Transcode** in Settings > Playback
-- Try a lower Max Streaming Bitrate — very high targets may cause the server to skip transcoding
+- Try a lower Target Bitrate. Very high targets may cause the server to skip transcoding.
 
 ### Poor Quality in Transcode Mode
 
 **Increase the bitrate:**
-- Go to Settings > Playback > Max Streaming Bitrate
-- Try a higher value (40 Mbps or above for 4K, 15 Mbps or above for 1080p)
+- Go to Settings > Playback and raise the Target Bitrate
+- Try 40 Mbps or above for 4K, 15 Mbps or above for 1080p
 
 **Consider Direct Play:**
 - If your network can handle it, Direct Play always gives the best quality since it plays the original file without re-encoding
 
 ### Seeking Doesn't Work in Transcode Mode
 
-Transcoded streams are delivered sequentially — you can't seek within them the same way as direct play. To jump to a different position, Neptune requests a new transcode starting from that point. This may take a moment while the server begins encoding from the new position.
+Transcoded streams are delivered sequentially. You can't seek within them the same way as direct play. To jump to a different position, Neptune requests a new transcode starting from that point. This takes a moment while the server begins encoding from the new position.
 
 
 
@@ -192,15 +192,7 @@ Transcoded streams are delivered sequentially — you can't seek within them the
 
 ### Seek Takes a Long Time
 
-**For 4K content:**
-
-Large keyframes take time to decode. This is normal for complex 4K HEVC content.
-
-**For faster seeking:**
-
-Settings > Playback > Accurate Seek: OFF
-
-This seeks to the nearest keyframe instead of the exact frame.
+Large keyframes take time to decode. This is normal for complex 4K HEVC content, and heavier over remote connections. If seeking feels sluggish on a remote stream, try a lower Quality setting for the session.
 
 
 
@@ -233,10 +225,12 @@ When reporting issues, include:
 - Whether it's reproducible
 - Any error messages you saw
 
-### Technical Overlay
+### Technical Details
 
-Hold Play/Pause during playback to see technical details:
-- Video codec and resolution
+The Playback Menu's **Info** tab shows a live readout of the current stream:
+- Video codec, resolution, and dynamic range
 - Audio format and channels
-- Buffer status
-- Frame drops (if any)
+- Whether the server is direct playing or transcoding
+- Buffer status and file details
+
+You can also enable a persistent on-screen card via the **Technical Info** action button (**Settings > Playback > Controls > Action Buttons**).

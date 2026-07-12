@@ -4,97 +4,90 @@ order: 20
 
 # HDR & Dolby Vision
 
-Experience your HDR content the way it was meant to be seen.
+How Trident handles HDR content.
 
 
 
 ## Supported Formats
 
-Neptune supports all major HDR formats with full hardware acceleration:
-
 | Format | Description | Dynamic Metadata |
 |--------|-------------|------------------|
-| **HDR10** | Industry standard for 4K HDR | Static (per-movie) |
+| **HDR10** | 4K HDR standard | Static (per-movie) |
 | **HDR10+** | Samsung's enhanced HDR | Dynamic (per-scene) |
-| **HLG** | Broadcast HDR standard | None (backwards compatible) |
-| **Dolby Vision** | Premium dynamic HDR | Dynamic (per-frame) |
+| **HLG** | Broadcast HDR | None (backwards compatible) |
+| **Dolby Vision** | Dynamic HDR | Dynamic (per-frame) |
+
+All four are decoded with hardware acceleration on supported Apple TV models.
 
 
 
-## Automatic Detection
+## Detection and Switching
 
-Neptune automatically detects HDR content and configures playback appropriately. When you press play on an HDR movie:
+When you press play on HDR content:
 
-1. Neptune identifies the HDR format from the video stream
-2. Your Apple TV tells your TV to switch to the correct HDR mode
-3. Colors and brightness are displayed as the filmmaker intended
+1. Trident reads the HDR format from the video stream.
+2. Your Apple TV switches your TV to the matching HDR mode.
+3. The TV displays at the format's intended brightness and color.
 
-No manual configuration required. Neptune also preserves HDR10 mastering display metadata (SMPTE ST 2086 and CTA-861.3 brightness levels), enabling your TV to tone-map accurately for its peak brightness.
+For HDR10 content, Trident also passes through mastering display metadata (SMPTE ST 2086 and CTA-861.3 brightness levels) so your TV can tone-map for its peak brightness.
 
 
 
 ## Display Mode Switching
 
-Neptune instructs your Apple TV to switch your TV to the correct display mode for each type of content.
+When HDR playback starts, your TV may go black for 1-2 seconds while it switches modes. This is the TV reconfiguring its display pipeline.
 
-### What You'll See
+### Required tvOS Setting
 
-When HDR playback starts, your TV may briefly go black (1-2 seconds) as it switches modes. This is normal - your TV is reconfiguring its display pipeline for HDR.
-
-### Required Setting
-
-For automatic HDR switching to work, enable this Apple TV setting:
+For HDR mode switching to work, enable:
 
 **Settings > Video and Audio > Match Content > Match Dynamic Range**
 
-Without this setting, HDR content will still play but may appear washed out because your TV stays in SDR mode.
+Without this, HDR content still plays but your TV stays in SDR mode and the picture looks washed out.
 
 
 
 ## Dolby Vision
 
-### Premium Picture Quality
+Trident supports the major Dolby Vision profiles:
 
-Dolby Vision provides frame-by-frame optimization for the best possible picture. Neptune fully supports:
+| Profile | Common Sources | How It Plays |
+|---------|----------------|--------------|
+| **Profile 5** | Streaming services | Full Dolby Vision |
+| **Profile 7** | Blu-ray rips and remuxes | Converted to Dolby Vision on the fly (see below) |
+| **Profile 8** | Remuxes, streaming | Full Dolby Vision |
 
-| Profile | Description | Common Sources |
-|---------|-------------|----------------|
-| **Profile 5** | Single-layer HDR10 base | Streaming services |
-| **Profile 7** | Dual-layer with HDR10 base | Some streaming (plays HDR10 base layer) |
-| **Profile 8** | Single-layer, multiple bases | Blu-ray remuxes, streaming |
-| **Profile 9** | AV1 video with DV | Next-gen content |
+For Profiles 5 and 8, Trident outputs full Dolby Vision over HDMI. Your TV will report "Dolby Vision" when receiving the stream.
 
-Neptune outputs full Dolby Vision over HDMI for Profiles 5 and 8. Your TV will display "Dolby Vision" when receiving DV content. Profile 7 files play their HDR10 base layer in full quality.
+**Profile 7** is the dual-layer format used on Blu-ray discs, and most players can only show its HDR10 base. On a Dolby Vision TV, Trident rewrites single-track Profile 7 into a compatible Dolby Vision stream while it plays, so you get real Dolby Vision from Blu-ray remuxes without any pre-conversion. Files carrying a separate enhancement-layer track play their HDR10 base layer instead.
 
-### Automatic Fallback
+### Fallback on Non-DV Displays
 
-If your TV doesn't support Dolby Vision, Neptune automatically provides the best alternative:
+If your TV doesn't support Dolby Vision, Trident falls through to the next format your TV does support:
 
-| If DV Not Supported | Neptune Uses |
+| If DV Not Supported | Trident Uses |
 |--------------------|--------------|
-| TV supports HDR10 | Falls back to HDR10 |
-| TV supports HLG only | Falls back to HLG |
-| SDR only TV | Falls back to SDR |
-
-You get the best quality your TV can display, automatically.
+| TV supports HDR10 | HDR10 |
+| TV supports HLG only | HLG |
+| SDR-only TV | SDR |
 
 
 
 ## Frame Rate Matching
 
-Neptune also matches the display refresh rate to your content for judder-free playback:
+Trident also matches the display refresh rate to the content frame rate:
 
 | Content | Display Refresh | Notes |
 |---------|-----------------|-------|
-| Movies (23.976/24fps) | 24Hz | Cinema-like motion |
+| Movies (23.976/24fps) | 24Hz | Cinema motion |
 | PAL content (25fps) | 25Hz | European TV |
 | NTSC video (29.97/30fps) | 30Hz | US TV standard |
-| Sports/gaming (50fps) | 50Hz | Smooth action |
+| Sports/gaming (50fps) | 50Hz | |
 | High frame rate (59.94/60fps) | 60Hz | Sports, gaming |
 
-This eliminates the judder that occurs when frame rates don't divide evenly into the display refresh rate.
+This avoids the judder that happens when frame rates don't divide evenly into the display refresh rate.
 
-Enable frame rate matching in **Settings > Playback > Match Content Frame Rate**. For best results, also enable the tvOS system setting at **Settings > Video and Audio > Match Content > Match Frame Rate**.
+Enable in **Settings > Playback > Match Content Frame Rate**. For best results, also enable the tvOS setting at **Settings > Video and Audio > Match Content > Match Frame Rate**.
 
 
 
@@ -102,26 +95,17 @@ Enable frame rate matching in **Settings > Playback > Match Content Frame Rate**
 
 ### Apple TV 4K
 
-All Apple TV 4K models support:
-- HDR10
-- HLG
-- Dolby Vision
-
-The original Apple TV HD (4th generation) does not support HDR.
+All Apple TV 4K models support HDR10, HLG, and Dolby Vision. The original Apple TV HD (4th generation) does not support HDR.
 
 ### TV Requirements
 
-For full HDR support, your TV should:
-- Support the HDR format of your content
-- Have HDR enabled on the connected HDMI input
-- Be connected via HDMI 2.0 or later
+- Your TV needs to support the HDR format of the content
+- HDR has to be enabled on the HDMI input your Apple TV is connected to
+- HDMI 2.0 or later
 
 ### HDMI Cable
 
-For reliable 4K HDR and Dolby Vision:
-- Use **Premium High Speed** or **Ultra High Speed** certified HDMI cables
-- Poor or damaged cables can cause HDR failures, sparkles, or blackouts
-- For 4K/60Hz HDR, Ultra High Speed cables are recommended
+For 4K HDR and Dolby Vision, use a Premium High Speed or Ultra High Speed certified HDMI cable. Poor cables cause sparkles, blackouts, or HDR failures. For 4K/60Hz HDR, Ultra High Speed is recommended.
 
 
 
@@ -129,29 +113,31 @@ For reliable 4K HDR and Dolby Vision:
 
 ### Colors Look Washed Out
 
-1. **Check Apple TV settings** - Ensure "Match Dynamic Range" is ON
-2. **Check TV input settings** - Make sure HDR is enabled on the HDMI input your Apple TV uses
-3. **Check your cable** - Try a certified high-speed HDMI cable
-4. **Check TV display mode** - Some TVs show an HDR indicator when receiving HDR signal
+1. Check the Apple TV setting **Match Dynamic Range** is on.
+2. Check HDR is enabled on the HDMI input on your TV.
+3. Try a certified high-speed HDMI cable.
+4. Check your TV's HDR indicator if it has one.
 
 ### Screen Goes Black During Playback
 
-Brief blackouts when starting HDR content are normal - your TV is switching modes. If it persists:
+Brief blackouts at the start of HDR content are mode switching. If they persist mid-playback:
+
 - Try a different HDMI cable
 - Check for TV firmware updates
-- Try a different HDMI port on your TV
-- Temporarily disable "Match Dynamic Range" to test
+- Try a different HDMI port
+- Temporarily disable Match Dynamic Range to isolate the issue
 
 ### HDR Badge Not Showing
 
-If content should be HDR but doesn't show the HDR indicator:
-- The file may have incorrect or missing HDR metadata
+If content should be HDR but the indicator doesn't appear:
+
+- The file may have missing or incorrect HDR metadata
 - Try a different encode of the same content
-- Some TV settings can suppress the HDR indicator
+- Some TVs suppress the HDR indicator under certain settings
 
 ### Dolby Vision Not Activating
 
-1. **Verify your TV supports Dolby Vision** - Check TV specs
-2. **Check Apple TV settings** - Settings > Video and Audio > Format should show Dolby Vision
-3. **Check HDMI port** - Some TVs only support DV on specific HDMI ports
-4. **Check content** - Verify the file actually contains Dolby Vision metadata
+1. Check your TV supports Dolby Vision.
+2. In **Settings > Video and Audio > Format**, verify Dolby Vision is listed as the output format.
+3. Some TVs only support DV on specific HDMI ports.
+4. Verify the file actually contains Dolby Vision metadata.

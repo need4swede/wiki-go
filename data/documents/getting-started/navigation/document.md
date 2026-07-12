@@ -6,10 +6,6 @@ order: 30
 
 Neptune uses a pill-shaped menu bar at the top of the screen.
 
----
-
-![home-spotlight.jpg](home-spotlight.jpg)
-
 
 
 ## Tab Menu Bar
@@ -18,13 +14,29 @@ Neptune uses a pill-shaped menu bar at the top of the screen.
 |-----|-------------|
 | **Settings** (gear) | App settings and profiles |
 | **Home** | Personalized content hub |
-| **Movies** | Movie library |
-| **Shows** | TV show library |
 | **Library** | Browse and filter your full collection |
-| **Discover** | Browse and request (Jellyseerr) |
+| **Discover** | Browse and request (appears when Seerr is connected) |
 | **Search** (magnifying glass) | Find content |
 
-**Behavior:** Tabs select on focus - no need to press Select.
+**Behavior:** Tabs select on focus. No need to press Select.
+
+Two more tabs, **Movies** and **Shows**, are available but hidden by default. They give each library type its own spotlight and content rows. Turn them on in **Settings > Home > Navigation** if you prefer dedicated tabs over the combined Home.
+
+
+
+## Customizing the Bar
+
+Open **Settings > Home > Navigation** to make the bar yours:
+
+| Setting | Description |
+|---------|-------------|
+| **Customize Navigation Bar** | Reorder or hide tabs. Settings and Search stay at the edges |
+| **Movies Tab Label** | Movies, Films, or Cinema |
+| **Shows Tab Label** | Shows, TV, or Series |
+| **Navigation Bar Scroll Behavior** | Show, Hide, or Collapse the bar while you scroll |
+| **Exit App on Back Press** | What the Back button does from the top of a tab |
+
+Collapse mode shrinks the bar down to just the active tab while you browse, then restores it when you focus it again.
 
 
 
@@ -42,55 +54,36 @@ Neptune uses a pill-shaped menu bar at the top of the screen.
 
 ## Compass
 
-Press **Play/Pause** anywhere to open the [Compass](/getting-started/navigation/compass) - a floating pill for instant tab switching without scrolling to the top.
-
-See [Compass](/getting-started/navigation/compass) for full details.
+Press **Play/Pause** anywhere while browsing to open the [Compass](/getting-started/navigation/compass), a floating pill for jumping between tabs without scrolling to the top.
 
 
 
-## Hero Spotlight Navigation
+## Library Picker
 
-The spotlight area at the top of Home, Movies, and Shows has an invisible focus zone:
+On the Movies and Shows tabs, servers with more than one library of that type get a picker row (**All** plus each library). Selecting a library scopes the whole tab to it.
+
+
+
+## Long-Press Menu
+
+Long-press any primary tab to open a quick menu:
+
+- **Edit Home Screen** on Home, Movies, and Shows
+- **Edit Discovery** on Discover
+- **Edit Library** on Library
+
+Each opens the matching customization editor, where you can reorder and hide that screen's sections.
+
+
+
+## Spotlight Navigation
+
+The spotlight carousel at the top of Home, Movies, and Shows has its own focus zone:
 
 | Action | Control |
 |--------|---------|
 | Next item | Swipe right |
 | Previous item | Swipe left |
-| View details | Press Select |
+| Open | Press Select |
 
-When focused, navigation arrows appear on the left and right edges. The spotlight auto-rotates every 8 seconds when not interacting.
-
-
-
-## Content Tabs
-
-**Home:** Hero spotlight, Continue Watching, Next Up, recommendations.
-
-**Movies:** Movie-only spotlight and content rows.
-
-**Shows:** TV-only spotlight and content rows.
-
-**Library:** Full collection with filtering sidebar (genres, years, ratings, resolution, semantic tags).
-
-**Discover:** Trending content, requests (requires Jellyseerr).
-
-**Search:** Instant library search with Jellyseerr results.
-
-
-
-## Focus Behavior
-
-- **Menu bar:** Swipe up to reach, tabs select on focus
-- **Spotlight zone:** Swipe down from menu to focus, left/right to navigate items
-- **Content cards:** Swipe down to browse rows, focused cards show backdrop
-- **Scrolling:** Spotlight backdrop fades with parallax as you scroll down
-
-
-
-## Home Menu
-
-Long-press any tab to access:
-
-- Section customization
-- Edit mode for reordering
-- Quick settings shortcuts
+When focused, navigation arrows appear on the left and right edges. The spotlight rotates on its own when you're not interacting.

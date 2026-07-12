@@ -6,7 +6,7 @@ order: 40
 
 ## What is Seerr?
 
-Seerr (formerly known as Jellyseerr) lets you:
+Seerr lets you:
 
 - Browse trending and popular content
 - Request movies and TV shows
@@ -16,12 +16,12 @@ You can read more about it on <a href="https://seerr.dev/" target="_blank">seerr
 
 ## Automatic Detection
 
-Neptune tries to find Seerr automatically:
+Neptune tries to find Seerr automatically based on your Jellyfin server address:
 
-- **IP addresses:** Checks port 5055 (e.g., `192.168.1.100:5055`)
-- **Domains:** Checks for `seerr` subdomain
+- **IP addresses:** Checks the same IP on port 5055 (e.g., `192.168.1.100:5055`)
+- **Domains:** Checks common subdomains like `seerr.yourdomain.com` and `requests.yourdomain.com`
 
-If detected, it will try to login via Jellyfin automatically. If it's unable to, you can always  **login to Seerr** using your own athentication methods. 
+If detected, Neptune will try to sign in via your Jellyfin credentials automatically. If it's unable to, you can always **sign in to Seerr** using your own authentication method.
 
 ## Manual Setup
 
@@ -41,14 +41,14 @@ If detected, it will try to login via Jellyfin automatically. If it's unable to,
 
 ![seerr.png](seerr.png)
 
-Neptune allows you to sign-in to Seerr in various ways:
+Neptune supports multiple ways to sign in to Seerr:
 
-- Using your Seerr account
-- Using your Jellyfin account
-- Using your Plex account
+- **Jellyfin account.** The usual choice. If your Jellyfin session can be reused, no password is needed.
+- **Plex account.** Sign in with a plex.tv link code.
+- **Local Seerr account.** Username and password created in Seerr itself.
 
-Your session is then saved for future use, so you only have to login once
+Your session is saved for future use, so you only need to sign in once. If it ever expires, Neptune re-authenticates automatically where it can.
 
 ## Skipping Setup
 
-Select **Skip for Now** if you don't have Seerr. You can configure it at any time via **Settings**.
+Select **Skip for Now** if you don't have Seerr. You can configure it at any time via **Settings**, where you can also save multiple Seerr addresses and switch between them.

@@ -12,11 +12,13 @@ Browse series, seasons, and episodes.
 
 When first opening a series:
 
-- **Play button**: Resume or start from beginning
+- **Play button**: Resume or start from the beginning
 - **Seasons row**: Browse all seasons
-- **Show info**: Total seasons, episode count
+- **Latest button**: Jump straight to the newest episode
 
-Select a season to view its episodes.
+Select a season to view its episodes. Shows without season structure get a single "Episodes" list.
+
+If your server is missing a season or upcoming episodes that exist elsewhere, Neptune can show them greyed out with air dates and a "Not available on your server" note, so you know what's coming.
 
 
 
@@ -25,7 +27,6 @@ Select a season to view its episodes.
 When viewing a season:
 
 - **Back button**: Return to show overview
-- **Latest button**: Jump to newest episode
 - **Episodes list**: All episodes in the season
 
 **Episode cards show:**
@@ -39,27 +40,25 @@ When viewing a season:
 
 ## Context Menus
 
-Long-press (hold Select button) on episodes and seasons for quick actions.
+Long-press (hold Select) on episodes and seasons for quick actions.
 
 ### Episode Context Menu
-
-Long-press any episode card to open the menu:
 
 | Action | Description |
 |--------|-------------|
 | **Mark as Played** | Mark episode as watched |
 | **Mark as Unplayed** | Reset episode to unwatched |
-| **Change Image** | Select new thumbnail (admin only) |
+| **Reset Progress** | Clear a partial watch without marking played |
+| **Pin Shortcut** | Pin the episode as a [Library Shortcut](/library/shortcuts) |
+| **Change Image** | Select a new thumbnail (admin only) |
 
 ### Season Context Menu
-
-Long-press any season card in the seasons row:
 
 | Action | Description |
 |--------|-------------|
 | **Mark as Played** | Mark entire season as watched |
-| **Mark as Unplayed** | Reset all episodes in season |
-| **Change Image** | Select new poster (admin only) |
+| **Mark as Unplayed** | Reset all episodes in the season |
+| **Change Image** | Select a new poster (admin only) |
 
 Press **Menu** to close without taking action.
 
@@ -67,34 +66,29 @@ Press **Menu** to close without taking action.
 
 ## Shuffle Mode
 
-Watch episodes in random order:
+Can't decide what to watch? Press **Shuffle** in the action pill and Neptune plays a random episode. A title card announces what you landed on, and a skip prompt in the corner lets you re-roll to a different episode if you're not feeling it. The Next Episode button keeps things random while shuffle is active.
 
-1. Find the **Shuffle** button in the pill menu
-2. Toggle shuffle on
-3. Press Play to start random episode
-4. Episodes continue in random order
-
-Shuffle is per-show, so your shows that should stay sequential keep their order.
+Shuffle is per-show, so series that should stay sequential keep their order.
 
 
 
 ## Spoiler Protection
 
-Series detail pages can hide thumbnails and overviews for episodes you haven't watched yet. Toggle the **eye** icon in the action pill to enable - episode cards swap their image and synopsis for a placeholder, so you can browse without seeing spoilers from upcoming episodes.
+Series detail pages can hide thumbnails and overviews for episodes you haven't watched yet. Toggle **Spoilers** in the action pill. Episode cards swap their image and synopsis for a placeholder, so you can browse without seeing what's ahead.
 
-Already-watched episodes stay fully visible. Toggle off any time to see everything again.
+Already-watched episodes stay fully visible. Toggle off any time. You can also blur unwatched episodes app-wide with **Hide Spoilers** in **Settings > User Preferences > Appearance > Items**.
 
 
 
 ## Episode Finder
 
-Find a specific episode by describing what happens in it. Requires a language model configured in Settings.
+Find a specific episode by describing what happens in it. Requires a language model (see [Deep Learning](/settings/deep-learning)).
 
 ### How to Use
 
-1. Select the **sparkle icon** in the pill menu
-2. Type a description of the episode (e.g., "CPR training goes wrong")
-3. The LLM identifies matching episodes
+1. Select **Find Episode** in the action pill
+2. Describe the episode (e.g., "CPR training goes wrong")
+3. Matches come back labeled **High**, **Likely**, or **Maybe** confidence
 4. Select an episode to jump directly to it
 
 ### Example Queries
@@ -105,14 +99,10 @@ Find a specific episode by describing what happens in it. Requires a language mo
 | "The one with the turkey on his head" | Friends - "The One with All the Thanksgivings" |
 | "Dinner party disaster" | The Office - "Dinner Party" |
 
-This feature is especially useful for rewatching memorable scenes when you can't remember which episode they're from.
+Especially useful for rewatching memorable scenes when you can't remember which episode they're from.
 
 
 
 ## Theme Songs
 
-If the Theme Songs plugin is installed:
-
-- Music starts when viewing series details
-- Fades out when leaving or starting playback
-- Configure in **Settings** > **Plugins**
+Theme music plays when viewing series details and fades out when you leave or start playback. Control volume, looping, and fade behavior in **Settings > User Preferences > Sounds**.

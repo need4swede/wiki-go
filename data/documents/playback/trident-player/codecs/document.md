@@ -4,26 +4,26 @@ order: 10
 
 # Supported Formats
 
-Neptune plays virtually any video or audio format directly, without requiring your server to transcode.
+The video, audio, and subtitle formats Trident plays directly without server-side transcoding.
 
 
 
-## Video Formats
+## Video
 
-### Hardware-Accelerated Codecs
+### Hardware-Accelerated
 
-These codecs are decoded by the Apple TV's hardware for smooth, efficient playback:
+These codecs decode on the Apple TV's video hardware:
 
 | Codec | Max Resolution | HDR Support | Notes |
 |-------|---------------|-------------|-------|
-| **H.265/HEVC** | 4K | HDR10, HDR10+, HLG, Dolby Vision | Modern standard for 4K content |
+| **H.265/HEVC** | 4K | HDR10, HDR10+, HLG, Dolby Vision | Standard for 4K content |
 | **H.264/AVC** | 4K | No | Universal compatibility |
 | **VP9** | 4K | HDR | YouTube, WebM files |
-| **AV1** | 4K | HDR | Next-gen codec (Apple TV 4K 3rd gen only) |
+| **AV1** | 4K | HDR | Apple TV 4K 3rd gen only |
 
-### Software-Decoded Codecs
+### Software-Decoded
 
-These codecs play via software decoding - best at 1080p or lower:
+These play through software decoding. They're best at 1080p or lower because software decoding can't sustain 4K real-time on Apple TV hardware:
 
 | Codec | Best For |
 |-------|----------|
@@ -32,11 +32,11 @@ These codecs play via software decoding - best at 1080p or lower:
 | **VP8** | Older WebM files |
 | **ProRes** | Professional video workflows |
 
+Interlaced content (common in DVDs and broadcast recordings) is de-interlaced automatically. Control this with the De-interlacing option in the [Playback Menu](/playback/playback-menu).
 
 
-## Container Support
 
-Neptune reads all common video file formats:
+## Containers
 
 | Format | Extensions | Common Use |
 |--------|------------|------------|
@@ -51,24 +51,24 @@ Neptune reads all common video file formats:
 | **Ogg** | .ogg, .ogv | Open container format |
 | **WAV** | .wav | Uncompressed audio |
 
+Stream link files (.strm) are supported too.
+
 
 
 ## Resolution & Quality
 
 | Feature | Support |
 |---------|---------|
-| **4K Ultra HD** | Full hardware support |
+| **4K Ultra HD** | Hardware decode |
 | **High Frame Rate** | 24fps to 60fps |
 | **10-bit Color** | Required for HDR |
 | **High Bitrate** | Up to 200 Mbps |
 
 
 
-## Audio Formats
+## Audio
 
-### Lossless Audio
-
-Premium quality audio decoded bit-perfect:
+### Lossless
 
 | Format | Channels | Description |
 |--------|----------|-------------|
@@ -78,21 +78,21 @@ Premium quality audio decoded bit-perfect:
 | **ALAC** | Up to 8 | Apple lossless |
 | **PCM** | Up to 8 | Uncompressed audio |
 
-### Surround Sound
+### Surround
 
 | Format | Channels | Description |
 |--------|----------|-------------|
-| **Dolby Digital Plus** | Up to 7.1 | High-quality streaming audio |
+| **Dolby Digital Plus** | Up to 7.1 | Streaming surround |
 | **Dolby Digital** | 5.1 | DVD and broadcast standard |
 | **DTS** | 5.1 | DTS surround |
 
-### Standard Audio
+### Standard
 
 | Format | Description |
 |--------|-------------|
-| **AAC** | Modern compressed audio |
-| **Opus** | Efficient streaming codec |
-| **MP3** | Universal compatibility |
+| **AAC** | Common compressed audio |
+| **Opus** | Newer streaming codec |
+| **MP3** | Older compressed audio |
 | **Vorbis** | Open source compressed |
 
 
@@ -101,7 +101,7 @@ Premium quality audio decoded bit-perfect:
 
 ### E-AC3 Atmos (Dolby Digital Plus with Atmos)
 
-Neptune can pass through E-AC3 Atmos audio to your receiver for full spatial audio experience. This is the same Atmos format used by streaming services.
+E-AC3 Atmos can be passed through to your receiver untouched. This is the same Atmos format used by streaming services. Enable **EAC3-Atmos Passthrough** in **Settings > Playback > Audio**.
 
 | What You Need | Result |
 |---------------|--------|
@@ -111,45 +111,45 @@ Neptune can pass through E-AC3 Atmos audio to your receiver for full spatial aud
 
 ### TrueHD Atmos (Blu-ray Atmos)
 
-TrueHD Atmos from Blu-ray discs is decoded to full lossless 7.1 audio:
+TrueHD Atmos from Blu-ray discs is decoded to lossless 7.1:
 
 | What You Hear | Why |
 |---------------|-----|
-| Lossless 7.1 surround | Full quality base audio |
-| No height channels | Spatial metadata requires proprietary decoder |
+| Lossless 7.1 surround | The base audio is fully decoded |
+| No height channels | Spatial metadata requires Dolby's proprietary decoder, which isn't licensed to third-party apps |
 
-This is the same limitation as other premium players - the spatial object metadata in TrueHD Atmos requires Dolby's proprietary decoder, which isn't available to third-party apps.
+The same limitation applies to other third-party players.
 
 
 
-## Automatic Channel Matching
+## Channel Output
 
-Neptune automatically matches audio output to your system:
+Trident matches its output to whatever your audio system supports:
 
 | Your Audio Setup | What You Get |
 |------------------|--------------|
-| **7.1 Receiver** | Full 7.1 surround |
+| **7.1 Receiver** | 7.1 surround |
 | **5.1 Soundbar** | Downmixed to 5.1 |
-| **Stereo TV** | Intelligent stereo downmix |
+| **Stereo TV** | Stereo downmix |
 
-Downmixing preserves dialog clarity and spatial balance - nothing important gets lost.
+Downmixes preserve dialog level and front-rear balance.
 
 
 
-## Subtitle Formats
+## Subtitles
 
-### Text Subtitles
+### Text
 
 | Format | Features |
 |--------|----------|
-| **SRT** | Simple, universal |
+| **SRT** | Universal compatibility |
 | **VTT** | Web standard with positioning |
-| **ASS/SSA** | Full styling - fonts, colors, effects |
+| **ASS/SSA** | Full styling: fonts, colors, effects |
 | **TTML** | Broadcast standard |
-| **SubViewer** | Legacy format support |
+| **SubViewer** | Older format support |
 | **SAMI** | Microsoft subtitle format |
 
-### Image Subtitles
+### Image
 
 | Format | Source |
 |--------|--------|
@@ -159,6 +159,6 @@ Downmixing preserves dialog clarity and spatial balance - nothing important gets
 
 
 
-## What If a Format Isn't Supported?
+## Unsupported Formats
 
-For the rare formats Neptune can't play directly, your Jellyfin server will automatically transcode to a compatible format. This happens transparently - you just press play.
+For formats Trident can't play directly, your Jellyfin server transcodes the file to a compatible format. The transcode happens in the background.

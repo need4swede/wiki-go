@@ -1,5 +1,5 @@
 ---
-order: 30
+order: 40
 ---
 
 # Playback
@@ -12,8 +12,9 @@ Video playback in Neptune.
 
 | Page | Description |
 |------|-------------|
-| [Player Controls](/playback/player-controls) | Scrubbing, quick actions, skip segments |
-| [Audio & Subtitles](/playback/audio-subtitles) | Track selection, customization |
+| [Player Controls](/playback/player-controls) | Transport bar, scrubbing, skip segments, Up Next |
+| [Playback Menu](/playback/playback-menu) | The in-player menu: audio, subtitles, video, chapters, info |
+| [Conductor](/playback/conductor) | Automatic track and version selection |
 | [Trident Player](/playback/trident-player) | Custom engine, HDR, codecs |
 
 
@@ -22,8 +23,10 @@ Video playback in Neptune.
 
 Neptune supports two playback modes, configurable in **Settings > Playback**:
 
-- **Direct Play** — Plays the original file from your server with no re-encoding. Best quality, recommended for local networks.
-- **Transcode** — Your server re-encodes the video to a target bitrate. Useful for remote access or limited bandwidth.
+- **Direct Play.** Plays the original file from your server with no re-encoding. Best quality, recommended for local networks.
+- **Transcode.** Your server re-encodes the video to a target bitrate. Useful for remote access or limited bandwidth.
+
+You can also change quality mid-playback from the [Playback Menu](/playback/playback-menu) without losing your place.
 
 See [Playback Settings](/settings/playback) for configuration details.
 
@@ -33,7 +36,9 @@ See [Playback Settings](/settings/playback) for configuration details.
 
 **From Home:** Select Continue Watching or Next Up items.
 
-**From Details:** Press Play button or select an episode.
+**From Details:** Press Play, pick a version if the item has several, or select an episode.
+
+When playback starts, [Conductor](/playback/conductor) picks the audio and subtitle tracks based on your language and format preferences, so you're not fixing tracks every time.
 
 
 
@@ -41,28 +46,16 @@ See [Playback Settings](/settings/playback) for configuration details.
 
 Tap the touch surface to reveal the progress bar and controls.
 
-Swipe **up/down** to open the track selection pill for audio, subtitles, and chapters.
-
-- Progress bar with current position
-- Timestamps
-- Audio and subtitle switching
-- Playback info
+Swipe **down** to open the [Playback Menu](/playback/playback-menu) with audio, subtitles, video options, chapters, and stream info.
 
 
 
 ## Auto-Play
 
-TV shows automatically advance to the next episode when one finishes. Movies in a collection (e.g., a franchise) can also auto-advance to the next movie. A countdown appears before auto-play - you can cancel or skip ahead.
-
-Configure the countdown duration and which types of content auto-play in **Settings > Playback > Autoplay**.
+TV shows advance to the next episode when one finishes, with an Up Next countdown you can cancel. Movies in a collection can also auto-advance. Configure behavior in **Settings > Playback > Autoplay**. See [Player Controls](/playback/player-controls) for details.
 
 
 
 ## Troubleshooting
 
-| Issue | Solution |
-|-------|----------|
-| Video won't play | Check network, try different video |
-| No audio | Check track selection, TV volume |
-| Subtitles missing | Enable in track picker |
-| Stuttering | Check network bandwidth |
+See [Trident Troubleshooting](/playback/trident-player/troubleshooting) for symptom-by-symptom help with video, audio, subtitles, and seeking.

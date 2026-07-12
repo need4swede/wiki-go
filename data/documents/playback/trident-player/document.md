@@ -1,18 +1,18 @@
 ---
-order: 30
+order: 40
 ---
 
 # Trident Player
 
-Neptune's powerful video player delivers cinema-quality playback on your Apple TV.
+Neptune's video player. Trident handles direct playback of most file formats so your server doesn't have to transcode.
+
+Trident is the default engine. If you ever need Apple's native player instead, switch the **Engine** in **Settings > Playback** (the native player leans on server transcoding for formats it can't handle, like MKV, DTS, and TrueHD).
 
 
 
-## Play Anything
+## Direct Play
 
-Trident plays virtually any video file directly from your Jellyfin server - no transcoding required. While other apps force your server to convert files on-the-fly, Neptune plays them natively, preserving every detail of your carefully curated library.
-
-### Direct Play Everything
+Trident plays files straight from your Jellyfin server without conversion.
 
 | Category | Supported |
 |----------|-----------|
@@ -22,32 +22,28 @@ Trident plays virtually any video file directly from your Jellyfin server - no t
 | **Resolution** | Up to 4K at 60fps |
 | **Bitrate** | Up to 200 Mbps |
 
-No more waiting for transcodes. No more quality loss. Just press play.
-
 ### Server Transcoding
 
-When direct play isn't practical — for example, streaming remotely over a slower connection — Neptune also supports server-side transcoding. Your Jellyfin server re-encodes the video on-the-fly to fit within your chosen bitrate limit.
+When direct play isn't practical (for example, streaming remotely over a slower connection), the server can transcode instead. Your Jellyfin server re-encodes the video on-the-fly to fit within your chosen bitrate limit.
 
-Configure this in **Settings > Playback > Playback Mode**. You can set a maximum streaming bitrate from 1 Mbps to 120 Mbps, letting you balance quality against available bandwidth.
-
-Even in transcode mode, Neptune keeps audio and video perfectly synced and handles the stream smoothly.
+Configure this in **Settings > Playback > Playback Mode** with a target bitrate from 1 to 120 Mbps, or change quality mid-playback from the [Playback Menu](/playback/playback-menu). Quality changes restart the stream in place without losing your position.
 
 [See all supported formats →](/playback/trident-player/codecs)
 
 
 
-## Stunning HDR
+## HDR
 
-Experience your HDR content the way it was meant to be seen. Neptune automatically detects and displays all major HDR formats with proper color management.
+Trident detects and displays the major HDR formats:
 
 | Format | Description |
 |--------|-------------|
-| **HDR10** | Industry standard HDR with static metadata |
-| **HDR10+** | Dynamic scene-by-scene optimization |
+| **HDR10** | Static HDR metadata |
+| **HDR10+** | Dynamic per-scene metadata |
 | **HLG** | Broadcast HDR |
-| **Dolby Vision** | Premium dynamic HDR (Profiles 5, 7, 8, 9) |
+| **Dolby Vision** | Profiles 5 and 8 natively, plus on-the-fly conversion for Blu-ray Profile 7 |
 
-Neptune automatically switches your TV to the correct HDR mode when playback begins. If your TV doesn't support a format, Neptune gracefully falls back to the next best option.
+When playback starts, Neptune switches your TV to the matching HDR mode. If your TV doesn't support a format, it falls back to the next one it does.
 
 [Learn more about HDR →](/playback/trident-player/hdr)
 
@@ -55,76 +51,65 @@ Neptune automatically switches your TV to the correct HDR mode when playback beg
 
 ## Lossless Audio
 
-Your premium audio tracks deserve premium playback. Neptune decodes lossless audio formats that require transcoding on other apps.
+Trident decodes lossless audio formats locally instead of relying on the server to transcode them.
 
 | Format | Quality |
 |--------|---------|
 | **Dolby TrueHD** | Lossless Blu-ray audio, up to 7.1 |
 | **DTS-HD Master Audio** | Lossless DTS, up to 7.1 |
 | **FLAC** | Lossless compressed |
-| **Dolby Digital Plus** | High-quality surround, up to 7.1 |
+| **Dolby Digital Plus** | Surround, up to 7.1 |
 | **DTS** | Standard surround |
 
-Multi-channel audio is automatically configured for your sound system - from stereo TVs to 7.1 receivers.
+Multi-channel audio is matched to your output, from stereo TVs to 7.1 receivers.
 
 ### Dolby Atmos
 
-- **E-AC3 Atmos:** Full passthrough to Atmos-capable receivers
-- **TrueHD Atmos:** Decoded to lossless 7.1 (height channels require proprietary decoder)
+- **E-AC3 Atmos**: Passthrough to Atmos-capable receivers with **EAC3-Atmos Passthrough** enabled in **Settings > Playback > Audio**.
+- **TrueHD Atmos**: Decoded to lossless 7.1. Height channels require a proprietary decoder that isn't available to third-party apps.
 
 [Learn more about Audio →](/playback/trident-player/audio)
 
 
 
-## Perfect Sync
+## Audio/Video Sync
 
-Nothing ruins a movie like audio that doesn't match the lips. Neptune keeps audio and video perfectly aligned throughout playback.
-
-- **Automatic calibration** at playback start
-- **Continuous correction** for long movie sessions
-- **Instant recovery** after seeking
-- **Smooth buffering** without losing sync
-
-You'll never notice - and that's the point.
+Trident calibrates audio/video sync at playback start and corrects drift during playback. Sync is restored after seeks and after buffering pauses. A live A/V sync adjuster in the Playback Menu handles files with baked-in offsets.
 
 [Learn more about Playback Quality →](/playback/trident-player/sync)
 
 
 
-## Rich Subtitles
+## Subtitles
 
-From simple text to beautifully styled anime subtitles, Neptune renders them all natively - no server burn-in required.
+Trident renders text and image subtitles locally, so the server doesn't have to burn them into the video.
 
 | Type | Formats |
 |------|---------|
 | **Text** | SRT, VTT, ASS/SSA with full styling, TTML, SubViewer, SAMI |
 | **Image** | PGS (Blu-ray), VobSub (DVD), DVB (broadcast) |
 
-ASS subtitles display with their intended styling - fonts, colors, positioning, and effects. No more plain white text when the subtitle author intended something more.
+ASS subtitles render through libass with their styling intact (fonts, colors, positioning, effects). Useful for anime fan-subs that rely on styled signs and dialog.
 
 [Learn more about Subtitles →](/playback/trident-player/subtitles)
 
 
 
-## Instant Track Switching
+## Track Switching
 
-Switch audio or subtitle tracks instantly during playback. No rebuffering, no waiting - just immediate switching.
-
-- Change languages on the fly
-- Switch between commentary and original audio
-- Toggle subtitles instantly
+Switch audio or subtitle tracks mid-playback from the [Playback Menu](/playback/playback-menu). There's no rebuffering since all tracks are pre-loaded.
 
 
 
 ## Video Caching
 
-Enable video caching in Settings to cache content to disk as it streams. Pausing playback continues downloading in the background ("pause to buffer"), so you can pre-load content before a long flight or unreliable network stretch. Seeking backward to cached portions plays instantly.
+Enable **Full Video Caching** in **Settings > Playback > Advanced** to cache content to disk as it streams. Pausing playback continues downloading in the background ("pause to buffer"), so you can pre-load content before a long flight or unreliable network stretch. Seeking backward to cached portions plays without re-downloading.
 
 
 
 ## Frame-Accurate Seeking
 
-Scrub to exactly where you want. Neptune seeks to the precise frame you're looking for, not just the nearest keyframe.
+Seeking jumps to the exact frame you scrub to, not just the nearest keyframe.
 
 
 
@@ -139,7 +124,13 @@ Neptune matches the display refresh rate to your content:
 | Standard video | 30Hz |
 | Sports/60fps | 60Hz |
 
-This eliminates judder for smooth, cinema-like playback.
+This avoids judder caused by mismatched refresh rates.
+
+
+
+## De-interlacing
+
+Interlaced sources like DVDs and broadcast recordings are de-interlaced automatically. Set **Auto**, **On**, or **Off** in **Settings > Playback > Advanced**, or per-session from the Playback Menu's Video tab.
 
 
 
@@ -149,7 +140,7 @@ This eliminates judder for smooth, cinema-like playback.
 |------|-------------|
 | [Codecs](/playback/trident-player/codecs) | Supported video and audio formats |
 | [HDR](/playback/trident-player/hdr) | HDR and Dolby Vision support |
+| [Playback Quality](/playback/trident-player/sync) | Sync, buffering, seeking |
 | [Audio](/playback/trident-player/audio) | Lossless audio and surround sound |
 | [Subtitles](/playback/trident-player/subtitles) | Text and image subtitle support |
-| [Playback Quality](/playback/trident-player/sync) | Smooth, synchronized playback |
 | [Troubleshooting](/playback/trident-player/troubleshooting) | Common issues and solutions |

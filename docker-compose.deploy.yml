@@ -16,3 +16,22 @@ services:
 networks:
   caddy_network:
     external: true
+
+
+
+
+
+
+
+# Domain-Specific Branding (sherlock.njesdit.net)
+BRANDING_sherlock_njesdit_net_TITLE=Sherlock
+BRANDING_sherlock_njesdit_net_LOGIN_TITLE=Sherlock
+BRANDING_sherlock_njesdit_net_LOGIN_SUBTITLE="To a great mind, nothing is little"
+BRANDING_sherlock_njesdit_net_LOGO=https://njesd.b-cdn.net/photos/apps/sherlock/sherlock_icon_clean.png
+BRANDING_sherlock_njesdit_net_BACKGROUND=https://njesd.b-cdn.net/photos/apps/heimdall-sso/heimdall-sso_bg_3.png
+BRANDING_sherlock_njesdit_net_USERNAME_TITLE=Email Address
+BRANDING_sherlock_njesdit_net_PASSWORD_TITLE=Password
+BRANDING_sherlock_njesdit_net_USERNAME_PLACEHOLDER=name@njes.org
+BRANDING_sherlock_njesdit_net_PASSWORD_PLACEHOLDER=Enter your password
+BRANDING_sherlock_njesdit_net_MICROSOFT_BUTTON_TEXT_COLOR="#fff"
+BRANDING_sherlock_njesdit_net_MICROSOFT_BUTTON_BACKGROUND_COLOR="#2094f3"

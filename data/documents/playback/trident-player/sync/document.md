@@ -4,68 +4,31 @@ order: 30
 
 # Playback Quality
 
-Smooth, perfectly synchronized playback - every time.
+How Trident keeps audio and video in sync, manages buffers, and handles seeks.
 
 
 
-## Perfect Audio-Video Sync
+## Audio/Video Sync
 
-Nothing ruins a movie like audio that doesn't match the lips. Neptune keeps audio and video perfectly aligned throughout your entire movie.
+Trident uses audio as the master timing reference. Video frames are displayed at the position they should appear relative to the audio.
 
-### How It Works
+### Calibration
 
-Neptune uses audio as the master timing reference. Video frames are displayed precisely when they should appear relative to the audio. The result is perfect lip sync from start to finish.
+When playback begins, Trident calibrates sync for your specific output. Calibration takes 1-2 seconds and runs in the background.
 
-### Automatic Calibration
+### Drift Correction
 
-When playback begins, Neptune automatically calibrates audio-video sync for your specific setup. This takes about 1-2 seconds and happens transparently.
-
-
-
-## Smooth Playback
-
-### No Stuttering
-
-Neptune maintains healthy buffers to ensure smooth playback even with network variability. Complex 4K content plays without stuttering or frame drops.
-
-### Smart Buffering
-
-Neptune buffers content intelligently:
-- Quick startup for fast networks
-- Larger buffers for unreliable connections
-- Continuous buffering during playback to stay ahead
-
-### During Buffering
-
-If playback needs to pause to buffer more content, Neptune keeps audio and video in sync. When playback resumes, everything is still perfectly aligned.
+Over the course of a long movie, audio and video can drift apart. Trident measures the offset continuously and corrects it as you watch.
 
 
 
-## Seeking
+## Buffering
 
-### Instant Response
+Trident maintains a buffer ahead of the current position so playback continues through brief network slowdowns.
 
-Seek to any point in your movie and playback resumes quickly. Neptune seeks to the exact frame you requested, not just the nearest keyframe.
+### Buffer Strategy
 
-### After Seeking
-
-After seeking, it takes 1-2 seconds for sync to recalibrate. This is normal - Neptune is ensuring everything is perfectly aligned before resuming.
-
-### Lossless Audio Note
-
-With lossless audio formats like Dolby TrueHD, there may be a brief moment of silence (~100-200ms) after seeking while the audio decoder resyncs. This is inherent to the format.
-
-
-
-## Network Streaming
-
-### Transcoded Streams
-
-When using Transcode mode, audio may start slightly before video as the server begins encoding. Neptune automatically detects and compensates for this offset during calibration. Playback sync works the same as direct play — you won't notice any difference.
-
-### Adaptive Buffering
-
-Neptune adapts to your network conditions:
+Buffer size adapts to your network:
 
 | Network | Strategy |
 |---------|----------|
@@ -73,25 +36,41 @@ Neptune adapts to your network conditions:
 | Medium | Balanced buffer size |
 | Slow (<10 Mbps) | Larger buffer for stability |
 
-### Handling Slowdowns
+### During Buffering
 
-If your network slows down during playback, Neptune has buffered content ahead to keep playing. You may see brief buffering only if the slowdown persists.
-
-### Video Caching
-
-With video caching enabled (Settings > Playback > Full Video Caching), Neptune caches content to disk as it streams using 6 parallel connections. Pausing playback continues downloading in the background. This is especially effective on high-latency networks where parallel connections significantly improve throughput.
+If playback has to pause to fill the buffer, sync stays intact. When playback resumes, audio and video are still aligned.
 
 
 
-## Premium Content
+## Seeking
+
+Trident seeks to the exact frame you requested, not just the nearest keyframe.
+
+### Sync After a Seek
+
+Sync recalibrates over the first 1-2 seconds after a seek. This is when calibration is happening rather than a problem.
 
 ### Lossless Audio
 
-Neptune is optimized for lossless audio formats like Dolby TrueHD. These formats require special handling, and Neptune ensures they play smoothly without stuttering.
+With Dolby TrueHD or DTS-HD MA, expect a brief silence (~100-200ms) after a seek while the audio decoder finds a sync point. This is a property of the format, not Neptune.
 
-### 4K HDR
 
-Complex 4K HDR content plays smoothly thanks to hardware decoding and smart buffer management. Even demanding Dolby Vision content plays without issues.
+
+## Transcoded Streams
+
+In Transcode mode, the server may begin sending audio slightly before video. Trident detects and compensates for the offset during calibration.
+
+
+
+## Video Caching
+
+With **Full Video Caching** enabled in **Settings > Playback > Advanced**, Trident caches content to disk as you stream using parallel connections. Pausing continues the download in the background, so you can pre-load ahead of a shaky network stretch. Seeking back into cached portions plays without re-downloading.
+
+
+
+## 4K HDR
+
+4K HDR content uses hardware decoding. Dolby Vision content plays through the same path.
 
 
 
@@ -99,22 +78,16 @@ Complex 4K HDR content plays smoothly thanks to hardware decoding and smart buff
 
 ### Audio Seems Out of Sync
 
-**Wait a moment** - Sync calibration takes 1-2 seconds at the start of playback.
-
-**Try seeking** - Seeking resets the sync system and often resolves any issues.
+- Wait 1-2 seconds. Calibration runs at the start of every playback session.
+- Try seeking. A seek triggers a fresh calibration.
 
 ### Frequent Buffering
 
-**Check your network** - Run a speed test to your Jellyfin server.
+- Run a speed test against your Jellyfin server.
+- Use Ethernet rather than Wi-Fi for high-bitrate content.
+- Try **Full Video Caching** for high-latency connections.
 
-**Try wired connection** - Ethernet is more reliable than WiFi for high-bitrate content.
+### Stuttering
 
-**Increase buffer size** - Settings > Playback > Buffer Size
-
-### Stuttering Playback
-
-**For 4K content** - Use the "High Quality" buffer preset in Settings.
-
-**Check network speed** - 4K content requires consistent bandwidth.
-
-**Try lower quality** - If your network can't keep up, request a lower resolution transcode.
+- Check your network can sustain the bitrate (the Playback Menu's Info tab shows the file's bitrate and buffer health).
+- If the network can't keep up, drop the Quality setting in the Playback Menu. The stream restarts in place at the lower bitrate.

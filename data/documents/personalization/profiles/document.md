@@ -1,5 +1,5 @@
 ---
-order: 20
+order: 10
 ---
 
 # Profiles
@@ -8,31 +8,31 @@ Multiple user profiles with separate watch history and preferences.
 
 
 
-## Overview
+## Who's Watching
 
-Profiles appear as circular avatar cards in Settings showing:
+At launch, Neptune shows a profile picker with everyone who has signed in on the device. Each avatar previews that person's own theme behind it. Pick a profile and the whole app follows: watch history, favorites, theme, layouts, home screen, everything.
 
-- Profile picture or initials
-- Username
-- Green checkmark on current profile
+Profiles also appear as avatar cards at the top of Settings, with a checkmark on the current one.
 
 
 
 ## Switching Profiles
 
-**Saved session:** Select profile, switches instantly.
+**Saved session:** select the profile. Switches without re-entering credentials.
 
-**No session:** Enter password when prompted.
+**No session:** enter the password when prompted.
 
-**Passwordless accounts:** Switches automatically.
+**Passwordless accounts:** switch without prompting.
 
 
 
 ## Adding Profiles
 
-1. Scroll to end of profiles row
-2. Select **Add Profile**
-3. Sign in with username/password or Quick Connect
+1. Select the **Add** card in the profiles row
+2. Sign in with username and password, or Quick Connect
+3. Optionally copy preferences from an existing profile as a starting point
+
+The **Copy Preferences From** step is handy when setting up a family member who wants your layout without your watch history.
 
 
 
@@ -40,28 +40,38 @@ Profiles appear as circular avatar cards in Settings showing:
 
 | Feature | Description |
 |---------|-------------|
-| Watch History | What you've watched |
+| Watch history | What you've watched, Continue Watching, Next Up |
 | Favorites | Your favorited content |
-| Continue Watching | Resume points |
-| Next Up | TV show queue |
-| Theme | Visual preference |
+| Theme and appearance | Theme, mode, card styles, layouts |
+| Home screen | Section order, visibility, and limits |
+| Navigation bar | Tab order and visibility |
+| Conductor | Language and track preferences |
+| Shortcuts | Your pins |
+
+With the [Neptune MDM](/plugins/mdm) plugin, all of it syncs to every device you sign in on. See [Backup & Restore](/settings/backup).
+
+
+
+## Child Accounts
+
+Server admins can mark a profile as a child account: Discover and requests disappear, and only content within the account's age rating shows, on every device. Admins set this up in [Administration](/settings/administration), or through the MDM plugin dashboard.
 
 
 
 ## Session Management
 
-Sessions stored securely in device Keychain:
+Sessions are stored securely in the device Keychain:
 
 - Persist across restarts
 - No passwords stored locally
-- Can be revoked from Jellyfin server
+- Can be revoked from the Jellyfin server
 
-**Sign out:** Select your profile, choose Sign Out.
+**Sign out:** open your profile in Settings and choose **Sign Out**. This signs out every profile on the device, so other users will need to sign in again.
 
 
 
 ## Troubleshooting
 
-**Profile not appearing:** Check if account is "public" in Jellyfin settings.
+**Profile not appearing:** check whether the account is "public" in Jellyfin settings.
 
-**Can't switch:** Verify network connectivity, password may have changed.
+**Can't switch:** verify network connectivity; the password may have changed.

@@ -1,152 +1,87 @@
 ---
-order: 50
+order: 60
 ---
 
 # Discover
 
-Browse trending content, explore by genre, decade, language, and more - then request movies and shows for your library. Requires Jellyseerr.
+Browse trending content, explore by genre, decade, language, and more, then request movies and shows for your library. Requires Seerr; the tab appears once it's connected (see [Seerr Setup](/getting-started/setup/seerr)).
+
+
+
+## In This Section
+
+| Page | Description |
+|------|-------------|
+| [Requests](/discover/requests) | Requesting content, tracking status, approvals |
 
 
 
 ## Content Sections
 
-The Discover tab shows a customizable set of horizontal content rows:
+The Discover tab shows a customizable set of rows, in default order:
 
 | Section | Description |
 |---------|-------------|
-| **Trending Now** | Currently popular content across movies and TV |
-| **Popular Movies** | Top-rated films |
-| **Popular TV Shows** | Top-rated series |
-| **Upcoming Movies** | Movies coming soon to theaters |
-| **Upcoming TV** | Upcoming TV show premieres |
-| **Now Playing** | Movies currently in theaters |
-| **Airing This Week** | TV shows with new episodes this week |
-| **Anime** | Popular anime movies and series |
-| **Movie Genres** | Browse by movie genre |
-| **TV Genres** | Browse by TV show genre |
-| **Studios** | Browse by major film studio |
-| **Networks** | Browse by TV network |
-| **Browse by Era** | Explore content by decade |
-| **World Stage** | Discover content by language |
-| **Themed Collections** | Curated thematic collections |
 | **Release Calendar** | Upcoming releases grouped by date |
+| **Browse by Era** | Explore by decade |
+| **Trending Now** | Currently popular across movies and TV |
+| **Studios** | Browse by film studio |
+| **Upcoming Movies** | Coming soon to theaters |
+| **Networks** | Browse by TV network |
+| **Upcoming TV** | Upcoming premieres |
+| **Now Playing** | Movies currently in theaters |
+| **Airing This Week** | Shows with new episodes this week |
+| **Anime** | Popular anime movies and series |
+| **World Stage** | Browse by language |
+| **Themed Collections** | Keyword collections you can customize |
+| **Movie Genres** | Browse by movie genre |
+| **Popular Movies** | Top-rated films |
+| **TV Genres** | Browse by TV genre |
+| **Popular TV Shows** | Top-rated series |
 
-### Section Customization
+Administrators also see a **Manage Requests** banner at the top when requests are waiting (see [Requests](/discover/requests)).
 
-All sections can be reordered and toggled on or off. Long-press to enter edit mode, then drag sections to reorder or toggle their visibility.
+### Customizing
 
-
-
-## Genre Browsing
-
-The Movie Genres and TV Genres rows show genre cards you can select to browse a full grid of content in that genre. Each browse page includes:
-
-- Paginated grid with infinite scroll
-- Movies and TV Shows tabs
-- Select any item to view details and request it
-
-
-
-## Studios & Networks
-
-Browse content from major studios and TV networks.
-
-**Studios** include Disney, 20th Century, Sony Pictures, Warner Bros., Universal, Paramount, Pixar, DreamWorks, Marvel Studios, DC Studios, and A24.
-
-**Networks** include Netflix, Disney+, Amazon, Apple TV+, HBO, Hulu, Paramount+, Peacock, NBC, ABC, FOX, CBS, The CW, BBC One, AMC, Starz, and Showtime.
-
-Select any studio or network card to browse its catalog.
+Long-press the Discover tab and select **Edit Discovery** to reorder and hide sections, the same editor as the Home screen. **Restore Default** puts everything back.
 
 
 
-## Browse by Era
+## Browse Pages
 
-Explore content by decade - from the 1960s through the 2020s. Each decade card opens a full-screen browse page with:
+Genre, studio, network, era, anime, language, and keyword cards all open full browse pages with a Movies/TV toggle and an infinite-scroll grid. Select anything to view details and request it.
 
-- All content from that era
-- Movies and TV Shows tabs
-- Paginated grid with infinite scroll
-
-
-
-## World Stage
-
-Discover content from around the world. Browse by language with 24 options including Arabic, Chinese, French, German, Hindi, Italian, Japanese, Korean, Spanish, Swedish, and more.
-
-Select a language card to browse movies and TV shows in that language.
+**Studios** include Disney, Warner Bros., Universal, Paramount, Pixar, Marvel Studios, A24, and more. **Networks** cover Netflix, HBO, Apple TV+, Disney+, and the major broadcasters.
 
 
 
 ## Themed Collections
 
-Curated collections organized by theme or concept:
-
-- Based on a True Story
-- Superhero
-- Time Travel
-- Dystopia
-- Heist
-- Based on a Novel
-- Female Protagonist
-- Road Trip
-- Coming of Age
-- Survival
-
-Each collection opens a browse page with matching movies and TV shows.
+Keyword-based collections like Superhero, Time Travel, and Heist. This row is yours to build: the **Add** card searches TMDB keywords, so you can create collections for anything from "found footage" to "talking animals". **Reset to Defaults** restores the ten starter collections.
 
 
 
-## Anime
+## World Stage
 
-A dedicated anime section showing popular anime movies and series. Select the row to open a full anime browse page with Movies and TV Shows tabs.
+Browse by original language, with two dozen options from Japanese and Korean to French and Hindi. Results respect your **Language Preferences** in Seerr settings, which can also filter Discover globally.
 
 
 
 ## Release Calendar
 
-A full-screen calendar view showing upcoming movie and TV releases, grouped by time period:
-
-- **This Week** - releasing in the next 7 days
-- **Next Week** - releasing in 7-14 days
-- **Later This Month** - releasing later in the current month
-- **Future months** - grouped by month, in chronological order
+A full-screen calendar of upcoming releases grouped by **This Week**, **Next Week**, **Later This Month**, then month by month.
 
 
 
 ## Status Badges
 
-| Badge | Color | Meaning |
-|-------|-------|---------|
-| Available | Green | Already in your library |
-| Requested | Yellow | Pending approval |
-| Processing | Blue | Being downloaded |
-| Requestable | Accent | Can be requested |
+Items across Discover carry status badges so you always know what's already yours:
 
+| Badge | Meaning |
+|-------|---------|
+| **Available in Library** | Already on your server. Selecting it can play it |
+| **Partially Available** | Some seasons are on your server |
+| **Requested** | Waiting on approval or download |
+| Release date | Not out yet |
 
-
-## Requesting Content
-
-**Movies:** Select an item, press Request, and it's sent to Radarr for download.
-
-**TV Shows:** Select an item, press Request, choose which seasons you want, and it's sent to Sonarr.
-
-
-
-## Admin Features
-
-Administrators see a **Pending Requests** banner when approvals are needed.
-
-- Review each request
-- Approve or decline
-
-
-
-## Setup
-
-If Jellyseerr isn't connected:
-
-1. Select **Connect to Jellyseerr**
-2. Enter server URL
-3. Sign in with Jellyfin credentials
-
-Your session is saved for future use.
+The same badges appear on Seerr results in [Search](/search) and on Home screen recommendations.

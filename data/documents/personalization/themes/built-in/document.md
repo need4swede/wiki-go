@@ -4,11 +4,11 @@ order: 10
 
 # Built-in Themes
 
-Neptune includes seven carefully crafted themes.
+Neptune includes eight built-in themes. All of them are dark; the difference is in color, warmth, and motion.
 
 
 
-## Ocean (Default)
+## Ocean
 
 Deep blue underwater aesthetic with animated effects.
 
@@ -23,7 +23,7 @@ Deep blue underwater aesthetic with animated effects.
 
 Rich purples and deep blues.
 
-- **Style**: Elegant, sophisticated
+- **Style**: Dark, evening
 - **Background**: Animated purple gradient
 - **Accent**: Purple/violet
 - **Best for**: Evening viewing
@@ -43,12 +43,12 @@ Fresh teal and purple combination.
 
 ## Void
 
-True black optimized for OLED displays.
+True black optimized for OLED displays. The default.
 
 - **Style**: Minimal, high-contrast
 - **Background**: Flat black (no animation)
 - **Accent**: Subtle gray
-- **Best for**: OLED TVs, power saving
+- **Best for**: OLED TVs, letting the content carry the color
 
 
 
@@ -82,3 +82,14 @@ Cosmic pinks and oranges with a deep violet base.
 - **Background**: Animated nebula gradient
 - **Accent**: Pink/magenta
 - **Best for**: Bold, atmospheric viewing
+
+
+
+## Ember
+
+Warm gold on deep charcoal.
+
+- **Style**: Cozy, familiar
+- **Background**: Subtle warm gradient
+- **Accent**: Amber/gold
+- **Best for**: A warm living-room feel, fans of the classic media-center look

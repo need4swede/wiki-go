@@ -29,6 +29,10 @@ For remote servers or when auto-discovery doesn't find your server:
 2. Enter server address (e.g., `jellyfin.example.com` or `192.168.1.100:8096`)
 3. Press **Connect**
 
+## Multiple Addresses
+
+A server can have more than one saved address (for example, a local address for home and a domain for remote access). Manage them later in **Settings > Jellyfin > Change URL**, where you can add addresses, reorder them, and switch between them without signing in again.
+
 ## Troubleshooting
 
 **No servers found:**

@@ -12,54 +12,40 @@ Navigate playback with the Apple TV remote.
 
 Tap the touch surface to show controls:
 
-- Progress bar with buffered content indicator
-- Current position and duration
-- Now playing title (can be hidden in settings)
-- Chapter markers on the seek bar (when available)
+- Title, with the show and episode context line (hideable in settings)
+- Progress bar with buffered content indicator and chapter markers
+- Elapsed time on the left; the clock time your video ends and time remaining on the right
+- An action button row on the right side of the title
 
-Controls auto-hide after a configurable timeout (3, 5, or 10 seconds). You can also set controls to appear automatically when you pause. These options are in **Settings > Playback > Controls**.
+Controls auto-hide after a configurable timeout (3, 5, or 10 seconds). By default they also appear whenever you pause and stay up until you resume. Both behaviors live in **Settings > Playback > Controls**.
 
 
 
-## Quick Actions
+## Remote Gestures
 
 | Action | Control |
 |--------|---------|
 | Play/Pause | Play/Pause button |
-| Skip back 10s | Swipe left |
-| Skip forward 10s | Swipe right |
-| Show controls | Tap touch surface |
-| Audio/Subtitles/Chapters | Swipe up or down |
+| Skip back / forward | Press left / right on the D-pad |
+| Show controls | Tap the touch surface |
+| Open the Playback Menu | Swipe down |
 | Exit | Menu button |
 
-The Menu button behavior is configurable - it can either always exit the player, or dismiss the controls first and exit on the second press.
+The skip interval is configurable (5, 10, or 15 seconds). The Menu button behavior is configurable too: **Always Exit** leaves playback immediately, **Dismiss First** hides the controls on the first press and exits on the second.
 
 
 
 ## Action Buttons
 
-When the controls are visible, an action row sits below the timeline:
+An action row sits beside the title when controls are visible. Three buttons show by default:
 
 | Button | What It Does |
 |--------|--------------|
-| **Pin** | Capture the current moment as a [timestamp shortcut](/library/shortcuts#timestamp-shortcuts) - position plus a thumbnail of the current frame. A confirmation pill briefly shows "Pinned at [time]". |
-| **Speed** | Cycle playback speed (0.5x through 2.0x) |
-| **Info** | Open playback info: resolution, codec, HDR format, audio details |
-| **Audio/Subs** | Quick jump to track selection |
+| **Playback Menu** | Opens the [Playback Menu](/playback/playback-menu). Always available |
+| **Pin** | Captures the current moment as a [timestamp shortcut](/library/shortcuts): position plus a thumbnail of the frame. A pill confirms "Pinned at [time]" |
+| **Next Episode** | Jumps to the next episode (or re-rolls during shuffle) |
 
-
-
-## Track Selection (Playback Pill)
-
-Swipe **up** or **down** during playback to open the track selection pill - a slim overlay at the top of the screen.
-
-| Menu | What It Shows |
-|------|---------------|
-| **Audio** | Available audio tracks with language, codec, and channel layout |
-| **Subtitles** | Subtitle tracks with language, format, and badges (Forced, SDH, External) |
-| **Chapters** | Chapter list for quick navigation (when available) |
-
-Swipe **left/right** to cycle between menus. Select a track to switch instantly - no rebuffering required. Press **Menu** or swipe down to dismiss.
+Four more can be enabled in **Settings > Playback > Controls > Action Buttons**: **Bitrate**, **Technical Info**, **Autoplay** (toggles autoplay for the session), and **Play / Pause**. Reorder or hide everything except the Playback Menu.
 
 
 
@@ -68,49 +54,48 @@ Swipe **left/right** to cycle between menus. Select a track to switch instantly 
 With controls visible:
 
 1. Swipe left/right to scrub through the timeline
-2. Preview timestamp shows target position
-3. Trickplay thumbnails show a visual preview (when available)
+2. A floating thumbnail with a time pill follows the playhead
+3. The current chapter name appears under the timestamps
 4. Release to seek
 
-Faster swipes cover more distance. Seeking behavior can be customized via the Seek Mode Activation setting in **Settings > Playback > Controls**.
+**Seek Mode** in **Settings > Playback > Controls** decides how seeking engages:
+
+| Mode | Behavior |
+|------|----------|
+| **Locked** | Click the progress bar to enter seek mode first |
+| **Limited** | D-pad skips instantly; touch scrubbing requires a click |
+| **Unlocked** | Both D-pad and touch work immediately (default) |
+
+Scrub speed is adjustable with **Scrub Sensitivity**. Trident generates seek thumbnails from the actual video, so previews work even on servers without trickplay images.
 
 
 
 ## Skip Segments
 
-When the Intro Skipper plugin is installed on your Jellyfin server, a Skip button appears during:
+When your server provides segment data (through the Intro Skipper plugin or Jellyfin 10.11 media segments), a skip button appears at the right moment: **Skip Intro**, **Skip Credits**, **Skip Recap**, **Skip Preview**, or **Skip Ad**.
 
-- Intros
-- Credits
-- Recaps
-
-Press Skip to jump past the segment. With **Auto Skip** enabled in **Settings > Plugins**, segments are skipped automatically without needing to press anything.
+- With controls hidden, the button appears as a standalone pill. Pressing Select skips even though controls are down. It dismisses itself if ignored.
+- With **Auto Skip** on (**Settings > Playback > Autoplay**), segments skip without a button press.
 
 
 
-## Playback Speed
+## Up Next
 
-Speeds available: 0.5x, 0.75x, 1.0x, 1.25x, 1.5x, 2.0x
+When an episode ends, Up Next counts down to the next one:
 
-Resets to normal when starting new content.
+- **Auto countdown (default):** the countdown runs the length of the end credits as an ambient ring, then expands for the final seconds. Long credits don't mean a long wait; short credits don't cut you off.
+- **Fixed countdown:** a set 10, 20, or 30 seconds with a **Play Now** button.
 
-
-
-## Autoplay
-
-When an episode ends, a countdown appears before the next episode plays automatically. For collections (e.g., a movie franchise), the next movie in the series can also autoplay.
-
-- Countdown duration is configurable (10, 20, or 30 seconds)
-- Cancel during the countdown or skip ahead immediately
-- Configure in **Settings > Playback > Autoplay**
+Press Menu to cancel and let the credits roll. Autoplay can also carry across seasons, and through movie collections if you enable **Autoplay Collections**. All of it lives in **Settings > Playback > Autoplay**.
 
 
 
-## Playback Info
+## Shuffle
 
-View technical details about the current stream:
+When a series is playing in [shuffle mode](/browsing/item-details/tv-shows), a corner prompt offers **Skip Episode** to re-roll, and each episode opens with a title card telling you what you landed on.
 
-- Resolution and codec
-- HDR format
-- Audio channels and codec
-- File size and container
+
+
+## Screensaver
+
+Playing video always blocks the screensaver. While paused, tvOS is allowed to start it unless you turn on **Prevent Screensaver on Pause** in **Settings > Playback > Advanced**.

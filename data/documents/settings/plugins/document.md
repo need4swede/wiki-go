@@ -1,70 +1,45 @@
 ---
-order: 20
+order: 30
 ---
 
 # Plugin Settings
 
-## Detected Plugins
+Check plugin status and manage the Neptune Plugin Suite from inside the app.
 
-Neptune shows compatible plugins from your server:
 
-| Plugin | Feature |
+
+## Neptune Plugin Suite
+
+The suite row shows a live status badge:
+
+| Status | Meaning |
 |--------|---------|
-| **Neptune** | Companion plugin - cloud sync, library indexing, search index sync |
-| **Home Sections** | Coming Soon and Because You Watched recommendations |
-| **Theme Songs** | Ambient music on movie, collections, and series pages |
-| **Intro Skipper** | Skip intros, credits, and recaps |
+| **Active** | Installed and reachable |
+| **Pending Restart** | Installed, waiting on a Jellyfin server restart |
+| **Setup Incomplete** | Partially installed |
+| **Partially Disabled** | One of the plugins is turned off in Jellyfin |
+| **Build Incompatible** | The installed version doesn't match your Jellyfin version |
+| **Not Installed** | Missing from the server |
+
+Selecting the row shows version details (installed, latest available, release date) and, for admin accounts, management actions:
+
+| Action | Description |
+|--------|-------------|
+| **Install Plugin / Update Plugin** | Install or update the suite from inside Neptune |
+| **Install Specific Version** | Roll back to an earlier release |
+| **Restart Server** | Reboot Jellyfin to finish an install. Active streams will be disconnected |
+
+When the suite is active, [Backup & Restore](/settings/backup) becomes available and Neptune uses server-side [indexes](/plugins/indexers) for faster startup and richer search.
 
 
 
-## Neptune Companion
+## Home Screen Sections
 
-The Neptune plugin runs on your Jellyfin server and powers features that need server-side help. Status appears in Settings as one of:
-
-- **Active** - installed and reachable
-- **Restart needed** - installed, waiting on a Jellyfin server restart
-- **Disabled** - installed but turned off in Jellyfin
-- **Not installed** - missing from the server
-
-When the plugin is active, [Backup & Sync](/settings/backup) becomes available, and Neptune uses the server-side search and library indexes for faster startup.
-
-See [Plugin Discovery](/getting-started/setup/plugins) for installation details.
+The third-party plugin powering [Coming Soon](/browsing/home-screen/coming-soon) and [Because You Watched](/browsing/home-screen/because-you-watched). When detected, it appears here with an enable toggle.
 
 
 
-## Home Sections
+## Where Other Plugin Options Went
 
-When enabled, adds two sections to your home screen:
-
-- **Coming Soon** - Upcoming content from your \*arr stack calendars
-- **Because You Watched** - Personalized suggestions based on your viewing history
-
-
-
-## Theme Songs
-
-When enabled, plays ambient theme music on movie, series, and collection pages.
-
-**Settings:**
-
-| Setting | Description |
-|---------|-------------|
-| **Enable** | Master toggle for theme song playback |
-| **Volume** | Output level on a 1-10 scale |
-| **Loop** | Repeat the theme while you stay on the page |
-| **Fade** | Fade theme songs in and out smoothly when entering or leaving a page |
-
-Theme songs stop automatically when you start playback or leave the page.
-
-
-
-## Intro Skipper
-
-When detected, shows skip buttons during playback for intros, credits, and recaps.
-
-**Settings:**
-
-- **Enable Intro Skipper** - Master toggle for the feature
-- **Auto Skip** - When enabled, automatically skips detected segments without needing to press a button
-
-When Auto Skip is off, a Skip button appears on screen during detected segments and you press it manually to jump ahead.
+- **Intro Skipper** behavior (Skip button and Auto Skip) lives in **Settings > Playback > Autoplay**
+- **Theme songs** are a built-in feature, controlled in **Settings > User Preferences > Sounds** (enable, volume, loop, fade)

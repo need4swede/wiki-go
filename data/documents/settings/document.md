@@ -1,10 +1,10 @@
 ---
-order: 70
+order: 80
 ---
 
 # Settings
 
-Access Settings via the gear icon in the tab menu bar.
+Access Settings via the gear icon at the left edge of the tab menu bar.
 
 
 
@@ -12,64 +12,36 @@ Access Settings via the gear icon in the tab menu bar.
 
 | Page | Description |
 |------|-------------|
-| [Playback](/settings/playback) | Player engine, controls, audio/subtitle preferences, frame rate, caching |
-| [Quality](/settings/quality) | Resolution, HDR, and audio quality preferences for version selection |
-| [Plugins](/settings/plugins) | Jellyfin plugin configuration |
-| [Search](/settings/search) | Local index, LLM search features |
-| [Notifications](/settings/notifications) | In-app notification preferences |
-| [Subtitles](/settings/subtitles) | Subtitle appearance customization |
-| [Image Cache](/settings/images) | Download all images, cache management |
-| [Backup & Sync](/settings/backup) | Cloud sync for settings, restore, delete backup |
+| [Home](/settings/home) | Home screen sections, navigation bar, spotlight, libraries |
+| [Playback](/settings/playback) | Engine, controls, autoplay, audio, advanced |
+| [Plugins](/settings/plugins) | Plugin status and management |
+| [Deep Learning](/settings/deep-learning) | AI features and language model providers |
+| [Images](/settings/images) | Image cache and downloads |
+| [Metadata](/settings/metadata) | Metadata cache and TMDB data |
+| [Backup & Restore](/settings/backup) | Sync preferences across devices |
+| [Administration](/settings/administration) | User management and parental controls (admins) |
+| [Subtitle Style](/settings/subtitles) | Subtitle appearance |
 
 
 
-## Quick Reference
+## How Settings Is Organized
 
-| Section | Purpose |
-|---------|---------|
-| **Profiles** | Switch users, add accounts |
-| **Playback** | Player engine, controls, audio/subtitle preferences, frame rate matching, video caching |
-| **Quality** | Resolution, dynamic range, audio quality, version auto-selection |
-| **Plugins** | Home Sections, Theme Songs, Intro Skipper |
-| **Notifications** | New content, series updates, request updates, server status |
-| **Search** | Local index, semantic search, prompt search |
-| **Subtitles** | Font, color, background |
-| **Image Cache** | Download and manage cached images |
-| **Backup & Sync** | Cloud backup of settings via the Neptune plugin |
-| **Server** | Jellyfin connection info |
-| **Jellyseerr** | Discovery service connection |
-| **About** | App version, diagnostics |
+The Settings screen groups everything by scope:
 
+**Profiles.** Avatar cards for switching users, plus **User Preferences**: your personal appearance, [Conductor](/playback/conductor), subtitle style, sounds, and backup settings. Admins also get an **Administration** entry here.
 
+**Neptune.** App behavior: Home, Playback, Plugins, Deep Learning, Images, Metadata.
 
-## Profiles
+**Jellyfin.** Your server connection: server info, **Change URL** for managing multiple addresses, and **Servers** for adding a second Jellyfin server and switching between saved servers without re-logging in.
 
-Manage user profiles. See [Profiles](/personalization/profiles) for details.
+**Seerr.** Connection status, **Manage URLs**, **Seerr Preferences** (language filters and request quality), and disconnect.
+
+**About.** Version and build info, connected services, **Get Help** (QR codes for the Discord, website, and support email), **Diagnostics**, and legal.
+
+At the bottom: **Resync Library** clears cached content and reloads everything from your server, and **Reset Neptune** erases all app data.
 
 
 
-## Server Info
+## Per-Profile vs Per-Device
 
-View your connected Jellyfin server:
-
-- Server name and URL
-- Server version
-
-
-
-## Jellyseerr
-
-Manage Jellyseerr connection:
-
-- **Reconnect**: Re-authenticate
-- **Disconnect**: Remove connection
-- **Setup**: Configure (if not connected)
-
-
-
-## About
-
-- App version and build number
-- tvOS version
-- Connected servers
-- Support resources
+Nearly every preference in Neptune belongs to the signed-in profile, so each family member gets their own setup. Device-wide items (like the image cache) are shared. Server-side items (parental controls, streaming limits) live on Jellyfin itself and apply everywhere that user signs in.

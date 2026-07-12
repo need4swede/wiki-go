@@ -1,10 +1,10 @@
 ---
-order: 25
+order: 30
 ---
 
 # Library
 
-Browse and filter your entire media collection with powerful filtering, stats, and category-based exploration.
+Browse your entire media collection with filtering, stats, and category-based browsing.
 
 
 
@@ -13,212 +13,76 @@ Browse and filter your entire media collection with powerful filtering, stats, a
 | Page | Description |
 |------|-------------|
 | [Shortcuts](/library/shortcuts) | Pinning items, browse pins, and timestamp shortcuts |
+| [Smart Tags](/library/smart-tags) | Theme and mood browsing, Surprise Me, Mix & Match |
 
 
 
 ## Overview
 
-The Library tab provides a complete view of your media collection. Unlike the Home, Movies, and Shows tabs which show curated content rows, the Library gives you stats at a glance, browsable categories, pinned shortcuts, and a full filterable grid of all your content.
+The Library tab is the map of everything you have. Unlike the Home tab's curated rows, the Library gives you your libraries, pinned shortcuts, browsable categories, stats, and a full filterable grid of all your content.
 
+Sections on the Library landing page, in default order:
 
+| Section | Description |
+|---------|-------------|
+| **Your Libraries** | Each media library as an artwork card |
+| **Shortcuts** | Everything you've pinned, grouped by type |
+| **Browse All** | The full library grid with filters and sorting |
+| **Browse by Era** | A decade slider from the classics to now |
+| **Browse by** | Format, Genre, Network, Person, Tags, Specs, and Studio |
+| **Library Stats** | Counts for movies, shows, episodes, collections, in progress, favorites |
 
-## Library Stats
-
-At the top of the Library, a row of stat cards gives you a quick overview:
-
-| Stat | Description |
-|------|-------------|
-| **Movies** | Total movies in your library |
-| **Shows** | Total TV series |
-| **Episodes** | Total episodes across all shows |
-| **Collections** | Total box set collections |
-| **In Progress** | Movies and episodes you've started but not finished |
-| **Favorites** | Items you've marked as favorites |
-
-
-
-## Shortcuts
-
-Pinned items appear in a Shortcuts section above the Browse By categories. Pin movies, shows, episodes, collections, or even browse views like a specific genre or actor. See [Shortcuts](/library/shortcuts) for the full breakdown including timestamp pins.
+Long-press the Library tab and select **Edit Library** to reorder or hide these sections. Long-press cards within Your Libraries or Browse by to rearrange them in place.
 
 
 
 ## Browse By
 
-Below the stats, explore your library through different lenses. Each category opens a browsable grid filtered to that selection.
+Each category opens a browsable view filtered to that selection:
 
 | Category | What You Browse |
 |----------|----------------|
-| **Actor** | Browse by actor - see all movies and shows featuring a specific person |
-| **Director** | Browse by director |
-| **Genre** | Browse by genre (Action, Comedy, Drama, etc.) |
-| **Studio** | Browse by production studio |
-| **Network** | Browse by TV network |
-| **Format** | Browse by container format (MKV, MP4, etc.) |
-| **Specs** | Browse by technical specs - video codec, audio codec, HDR type, or resolution |
+| **Person** | Everyone across your library in an A to Z grid: actors, directors, writers |
+| **Genre** | Action, Comedy, Drama, and the rest |
+| **Studio** | Production studios, A to Z |
+| **Network** | TV networks, A to Z |
+| **Format** | Containers and video codecs |
+| **Specs** | Audio, dynamic range, resolution, and subtitles |
+| **Tags** | [Smart Tags](/library/smart-tags): themes, settings, and moods |
 
-Categories can be reordered by long-pressing to enter edit mode.
-
-### Specs Browsing
-
-The Specs category lets you filter your library by technical properties:
-
-- **Video Codec** - H.264, HEVC, VP9, AV1
-- **Audio Codec** - AAC, AC3, E-AC3, DTS, TrueHD, FLAC, and more
-- **HDR Type** - SDR, HDR10, HDR10+, Dolby Vision
-- **Resolution** - 1080p, 4K
-
-
-
-## Browse by Era
-
-A decade slider lets you jump to content from specific eras - from classic films to recent releases.
-
-
-
-## Browse All
-
-Select "Browse All" to open the full library grid with the complete set of filters and sorting options.
+The Specs browser includes **Refresh** and **Full Rescan** actions if your technical data looks out of date. Installing the [Neptune Indexers](/plugins/indexers) plugin makes these views instant.
 
 
 
 ## Full Library Grid
 
-The full grid view uses a two-panel layout:
+**Browse All** opens the full grid: a collapsible filter sidebar on the left, a poster grid on the right, with infinite scroll. The sidebar expands when you navigate to it and collapses to icons while you browse.
 
-| Panel | Description |
-|-------|-------------|
-| **Sidebar** | Filter options (left side, auto-expands on focus) |
-| **Grid** | Media items matching current filters |
+### Media Types
 
-**Sidebar behavior:** The sidebar auto-expands when you navigate to it, showing full filter labels. When you navigate to the grid, it collapses to icons only.
+Pills at the top switch content type: **All**, **Movies**, **Shows**, **Collections**, **Favorites**. The Collections view adds its own pills for movie, show, and mixed collections.
 
-
-
-## Media Type Filter
-
-Switch between different content types using the pill bar at the top:
-
-| Filter | Shows |
-|--------|-------|
-| **All** | Movies and TV shows |
-| **Movies** | Movies only |
-| **Shows** | TV series only |
-
-
-
-## Filtering Options
-
-### Genres
-
-Filter by one or more genres. Open the genre modal to select from all available genres in your library.
-
-| Setting | Description |
-|---------|-------------|
-| **Match All** | Content must have ALL selected genres |
-| **Match Any** | Content with ANY selected genre matches |
-
-Example: Selecting "Action" and "Comedy" with Match All shows only action comedies. With Match Any, it shows all action OR comedy content.
-
-### Year Range
-
-Filter by release year:
-
-- Set a start year, end year, or both
-- Use the decade buttons for quick selection
-- Useful for finding "80s movies" or "recent releases"
-
-### Minimum Rating
-
-Filter by community rating:
-
-- Drag slider to set minimum rating (0-10)
-- Only shows content rated at or above your threshold
-- Great for finding highly-rated content you haven't seen
-
-### Watched Status
-
-| Filter | Shows |
-|--------|-------|
-| **All** | Everything |
-| **Unwatched** | Content you haven't started |
-| **Watched** | Content marked as played |
-| **In Progress** | Content you've partially watched |
-
-### Resolution
-
-Filter by video quality:
+### Filters
 
 | Filter | Description |
 |--------|-------------|
-| **Any** | All resolutions |
-| **4K** | 2160p content only |
-| **1080p** | Full HD content |
-| **720p** | HD content |
-| **SD** | Standard definition |
+| **Watched** | All, Unwatched, Watched, or In Progress |
+| **Libraries** | Limit results to specific libraries |
+| **Genres** | Multi-select, with an Exact Match toggle for items that must have every selected genre |
+| **Year** | Presets like Last 5 Years, each decade back to the 1920s, Classics, or a custom range |
+| **Rating** | Minimum community rating (4+ up to 9+) |
 
-### Favorites Only
+**Reset All Filters** clears everything; a badge shows how many filters are active.
 
-Toggle to show only your favorited items.
+### Sorting
 
-
-
-## Semantic Filters
-
-If Semantic Search is enabled, additional filters appear:
-
-### Keywords
-
-Filter by thematic keywords like:
-- "time travel"
-- "dystopian"
-- "based on true story"
-- "heist"
-
-### Tone/Mood
-
-Filter by emotional tone:
-- Dark
-- Intense
-- Feel-good
-- Suspenseful
-
-
-
-## Sorting Options
-
-| Sort By | Description |
-|---------|-------------|
-| **Name** | Alphabetical order |
-| **Date Added** | When added to library |
-| **Release Date** | Original release date |
-| **Community Rating** | Highest rated first |
-| **Runtime** | By duration |
-
-Each sort option can be ascending or descending.
-
-
-
-## Sidebar Actions
-
-### Jump to Top
-
-Returns focus to the tab menu bar. Useful when deep in the grid.
-
-### Reset Filters
-
-Appears when filters are active. Clears all filters back to defaults.
-
-### Refresh
-
-Manually refresh the library data from your server.
+Sort by **Name**, **Date Added**, **Release Date**, **Community Rating**, **Critic Rating**, **Runtime**, or **Random**, ascending or descending. Random is a good way to settle a "what do we watch" argument.
 
 
 
 ## Navigation Tips
 
-- **Swipe left** from grid to access sidebar
-- **Swipe right** from sidebar to return to grid
-- Sidebar **collapses automatically** when browsing the grid
-- **Filter badge** shows count of active filters
-- Grid uses **lazy loading** for smooth scrolling through large libraries
+- **Swipe left** from the grid to reach the sidebar, **swipe right** to return
+- **Jump to Top** returns focus to the menu bar from deep in the grid
+- **Refresh** re-syncs library data from your server
+- The grid lazy-loads, so even very large libraries scroll smoothly

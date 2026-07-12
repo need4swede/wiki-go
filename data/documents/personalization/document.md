@@ -1,10 +1,10 @@
 ---
-order: 60
+order: 70
 ---
 
 # Personalization
 
-Make Neptune your own.
+Customize how Neptune looks and who uses it.
 
 
 
@@ -14,47 +14,32 @@ Make Neptune your own.
 |------|-------------|
 | [Profiles](/personalization/profiles) | Multiple users, switching, preferences |
 | [Themes](/personalization/themes) | Built-in and custom themes |
+| [Item Detail Layouts](/personalization/item-detail-layouts) | Detailed, Immersive, and Minimal detail pages |
+| [Cards & Backdrops](/personalization/cards-and-backdrops) | Card styles, spoiler blurring, backdrop behavior |
 
 
 
-## Profiles
+## How It Fits Together
 
-Each user gets separate:
+Everything personal in Neptune is per-profile: theme, layouts, home screen sections, navigation bar, card styles, sounds. Switch profiles and the whole app follows.
 
-- Watch history and progress
-- Favorites and recommendations
-- Theme preference
+Most of it lives under **Settings > User Preferences**:
 
-Switch profiles instantly from Settings.
+| Screen | What's There |
+|--------|--------------|
+| **Appearance** | Themes, backdrops, card styles, layouts |
+| **Conductor** | Language and track preferences (see [Conductor](/playback/conductor)) |
+| **Subtitle Style** | Font, color, position |
+| **Sounds** | Theme songs, volume, fade |
+| **Backup and Restore** | Sync preferences across devices |
 
-
-
-## Themes
-
-Seven built-in themes from calming Ocean to minimal Void, plus the in-app Theme Builder for custom designs.
-
-- Live preview as you browse
-- Per-profile preferences
-- **Theme Mode**: Static, Adaptive (subtle content tinting), or Dynamic (full color extraction from focused content)
-- **Theme Builder**: Build your own theme directly on the Apple TV
-- Custom theme import via JSON
-
-
-
-## Backdrop Settings
-
-Control how backdrops appear throughout Neptune:
-
-- **Show Backdrops on Hover**: Toggle backdrop display when focusing cards
-- **Backdrop Opacity**: Adjust theme overlay transparency (0% = full backdrop, 100% = full theme)
-
-These settings affect both the hero spotlight and hover backdrops on content cards.
+The Home screen, navigation bar, Library, and Discover each have their own editors too. Long-press their tab and pick the edit option.
 
 
 
 ## Quick Tips
 
-- **OLED TVs**: Use Void theme for true blacks
-- **Quick switch**: Previously logged-in profiles switch instantly
-- **Preview themes**: Focus on themes to see them live
-- **Backdrop depth**: Spotlight backdrop has parallax scrolling for immersive browsing
+- **OLED TVs**: Use the Void theme for true blacks
+- **Preview themes**: Focus a theme to see it live before applying
+- **New family member?** Adding a profile offers to copy an existing profile's preferences as a starting point
+- **Sync it**: With the [Neptune MDM](/plugins/mdm) plugin, preferences follow you to every device

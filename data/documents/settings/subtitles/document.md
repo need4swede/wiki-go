@@ -1,56 +1,26 @@
 ---
-order: 40
+order: 90
 ---
 
-# Subtitle Settings
+# Subtitle Style
 
-Customize subtitle appearance during playback.
+Customize subtitle appearance. A live preview shows your changes as you make them.
 
-
-
-## Font Size
-
-| Size | Description |
-|------|-------------|
-| Small | Compact, minimal coverage |
-| Medium | Balanced default |
-| Large | Easier to read |
-| Extra Large | Maximum readability |
+Find it in **Settings > User Preferences > Subtitle Style**, or adjust the same options mid-playback from the [Playback Menu](/playback/playback-menu)'s Subtitles tab.
 
 
 
-## Text Color
+## Options
 
-Choose from:
+| Setting | Choices |
+|---------|---------|
+| **Font Size** | Small, Medium (default), Large, Extra Large |
+| **Text Color** | White (default), Yellow, Cyan, Green, Magenta |
+| **Background Style** | None, Drop Shadow (default), Outline, Background Box |
+| **Brightness** | Dim the text for dark-room viewing |
+| **Background Opacity** | How solid the box is (Background Box only) |
+| **Position** | Raise subtitles higher from the bottom of the screen |
 
-- White
-- Yellow
-- Green
-- Cyan
-- Blue
+Position is useful for keeping captions clear of letterbox bars or burned-in text. Styled ASS subtitles keep their typesetting when repositioned.
 
-
-
-## Background Style
-
-| Style | Description |
-|-------|-------------|
-| None | Text only |
-| Shadow | Drop shadow effect |
-| Outline | Black text outline |
-| Box | Semi-transparent background |
-
-
-
-## Background Opacity
-
-When using Box style, adjust opacity from 30% to 100%.
-
-
-
-## Accessing Settings
-
-Configure subtitles from:
-
-- **Settings** tab in the main menu
-- During playback in the track picker
+Which subtitle track gets selected (language, forced, SDH) is [Conductor](/playback/conductor)'s job; this page is purely about looks.
