@@ -1,5 +1,5 @@
 ---
-order: 100
+order: 110
 ---
 
 # Neptune Plugin Suite
@@ -44,6 +44,8 @@ If onboarding detects that the suite is not installed, Neptune offers a one-tap 
    ```
 
 3. The currently published suite members appear in the Catalog tab. Install them, restart your Jellyfin server, and Neptune detects them on the next sign-in.
+
+Transcoder does not appear in the public catalog yet. When it is released, the same suite installer and repository will pick it up; no separate repository is required.
 
 The repository supports Jellyfin 10.10 and 10.11 and serves the correct build for your server version automatically.
 

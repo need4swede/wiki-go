@@ -4,7 +4,7 @@ order: 70
 
 # Metadata
 
-Neptune keeps a local metadata cache so the app opens to a fully drawn home screen instead of spinners, and enriches your library with TMDB data your server doesn't have.
+Neptune keeps a local metadata cache so the app opens to a fully drawn home screen instead of spinners. With Neptune Pro, it also enriches your library with connected TMDB data your backend does not have.
 
 
 
@@ -23,7 +23,7 @@ Smart mode is the right choice for almost everyone: it pre-fetches what you're l
 
 ## TMDB Data
 
-Neptune fills gaps in your server's metadata with TMDB:
+[Neptune Pro's TMDB Integration](/neptune-pro/tmdb-integration) fills gaps in your backend's metadata with:
 
 - Title logos on detail pages and Seerr items
 - Cast and crew with photos, beyond what the connected backend provides
@@ -31,4 +31,4 @@ Neptune fills gaps in your server's metadata with TMDB:
 - Upcoming seasons and air dates for shows you have
 - Home release dates that power [New Releases](/browsing/home-screen/new-releases) and the Spotlight
 
-This works out of the box. Cached TMDB data can be cleared here separately if something looks stale; already-rendered pages keep working and new lookups re-fetch on demand.
+There is no personal API key to configure. Without Pro, backend-native metadata and Neptune's free local catalogs continue normally. Cached TMDB data can be cleared here separately if something looks stale; new lookups re-fetch on demand while Pro is active.

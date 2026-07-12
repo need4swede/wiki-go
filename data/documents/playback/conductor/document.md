@@ -21,6 +21,14 @@ In Auto mode, a track or version change that you keep watching becomes a learnin
 
 If Pro is no longer active, Conductor returns to Manual behavior without deleting the learning profile.
 
+### Conductor Pro
+
+Auto mode resolves playback through three levels: an exact memory for the current file, a learned fingerprint for the series, then your fixed Conductor rules as the dependable fallback. Meaningful track and version changes can update that memory after you keep watching; accidental taps do not become permanent global rules.
+
+This lets Conductor retain exceptions without flattening your taste into one preference. One anime can stay subbed while another uses its dub, a specific file can remember commentary, and new episodes can inherit a reliable language or subtitle pattern from the series.
+
+See [Conductor Pro](/neptune-pro/conductor-pro) for the complete learning model, examples, profile controls, and Free comparison.
+
 
 
 ## Languages

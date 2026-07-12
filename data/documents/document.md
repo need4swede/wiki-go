@@ -103,6 +103,17 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 |------|-------------|
 | [Settings](/settings) | Every configuration screen, explained |
 
+### Neptune Pro
+
+| Page | Description |
+|------|-------------|
+| [Neptune Pro](/neptune-pro) | Plans, feature comparison, and purchase behavior |
+| [Conductor Pro](/neptune-pro/conductor-pro) | Playback preferences that learn as you watch |
+| [Neptune AI](/neptune-pro/neptune-ai) | Bespoke first-party intelligence with no setup |
+| [TMDB Integration](/neptune-pro/tmdb-integration) | Richer metadata, people, trailers, studios, and release dates |
+| [Downloads](/neptune-pro/downloads) | Original or space-saving offline media |
+| [Top Shelf Customization](/neptune-pro/top-shelf-customization) | Cinematic Apple TV Home Screen presentation |
+
 ### Backend Extensions
 
 | Page | Description |
@@ -110,6 +121,7 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 | [Neptune Plugin Suite](/plugins) | Optional Jellyfin extensions: Indexers, MDM, and the upcoming Transcoder |
 | [Indexers](/plugins/indexers) | Server-side indexing and music metadata |
 | [MDM](/plugins/mdm) | Settings sync, announcements, remote management |
+| [Transcoder](/plugins/transcoder) | Server-managed download quality profiles (coming soon) |
 
 
 

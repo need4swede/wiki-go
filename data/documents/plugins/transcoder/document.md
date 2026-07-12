@@ -74,4 +74,4 @@ If Transcoder is unavailable, Neptune falls back automatically to its built-in H
 
 HDR and Dolby Vision sources are converted according to the Jellyfin server's tone-mapping configuration when transcoded. Choose Original quality when retaining the source's full quality and track set matters more than storage use.
 
-Downloads are a [Neptune Pro feature](/browsing/home-screen/downloads). The Transcoder plugin itself is part of the free server-side Plugin Suite; it controls the available profiles but does not unlock Downloads for a client account.
+Downloads are a [Neptune Pro feature](/neptune-pro/downloads). The Transcoder plugin itself is part of the free server-side Plugin Suite; it controls the available profiles but does not unlock Downloads for a client account.

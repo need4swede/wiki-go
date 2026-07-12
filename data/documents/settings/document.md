@@ -30,7 +30,7 @@ The Settings screen groups everything by scope:
 
 **Profiles.** Avatar cards for switching users, plus **User Preferences**: your personal appearance, [Conductor](/playback/conductor), subtitle style, sounds, and backup settings. Admins also get an **Administration** entry here.
 
-**Neptune.** App behavior: Home, Playback, Plugins, Deep Learning, Images, Metadata.
+**Neptune.** The [Neptune Pro](/neptune-pro) status and upgrade row, followed by app behavior: Home, Playback, Plugins, Deep Learning, Images, Metadata.
 
 **Media Server.** Your backend connection: server info, **Change URL** for managing multiple addresses, and **Servers** for adding another server and switching between saved servers without signing in again. This section is labeled **Jellyfin** today and will reflect the connected backend as more are supported.
 

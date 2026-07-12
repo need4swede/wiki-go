@@ -6,7 +6,7 @@ order: 50
 
 Movies and episodes saved to this device for offline playback. The section shows completed downloads and active transfers together, so you can watch what is ready and monitor what is still arriving.
 
-Downloads are a Neptune Pro feature. The row appears only when downloads are available to the current profile and at least one visible download exists.
+Downloads are a [Neptune Pro feature](/neptune-pro/downloads). The row appears only when downloads are available to the current profile and at least one visible download exists.
 
 
 

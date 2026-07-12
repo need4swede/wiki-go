@@ -6,7 +6,7 @@ order: 50
 
 Neptune AI is Neptune's built-in, hosted intelligence layer. It is a product-wide capability rather than a Search feature: today it helps understand natural-language queries, recover half-remembered episodes, and add useful context to titles and people; over time, the same layer can support intelligent experiences elsewhere in Neptune.
 
-Neptune AI is included with Neptune Pro. There are no API keys, model names, endpoints, or local servers to manage.
+Neptune AI is included with [Neptune Pro](/neptune-pro/neptune-ai). There are no API keys, model names, endpoints, or local servers to manage.
 
 ## In This Section
 

@@ -54,7 +54,7 @@ The beta program has two roles, and they mean different things depending on whet
 
 **Passengers** test platforms that haven't reached the App Store yet. Anyone can board through the Discord flow above. Right now that's iPhone and iPad. When a platform launches, its public beta ends and testers move to the App Store version.
 
-**Pilots** fly ahead of the App Store: preview builds of released platforms before everyone else gets them. Pilot access is a benefit of Neptune Pro's Lifetime tier. Select **Join Pilot Program** inside Neptune, confirm the email address you use with TestFlight, and your Lifetime purchase is verified automatically. No screenshots, no support tickets. The TestFlight invite lands in your inbox shortly after.
+**Pilots** fly ahead of the App Store: preview builds of released platforms before everyone else gets them. Pilot access is a benefit of [Neptune Pro's Lifetime tier](/neptune-pro). Select **Join Pilot Program** inside Neptune, confirm the email address you use with TestFlight, and your Lifetime purchase is verified automatically. No screenshots, no support tickets. The TestFlight invite lands in your inbox shortly after.
 
 One quirk to know: TestFlight builds can't see App Store purchases, so inside a Pilot build you activate Pro with a free test purchase. Your real Lifetime purchase stays untouched and keeps working in the App Store version.
 
