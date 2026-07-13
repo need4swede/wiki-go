@@ -22,29 +22,10 @@ You can describe a scene naturally or enter a direct reference:
 
 | Description | Likely Result |
 |-------------|---------------|
-| `CPR training goes wrong` | The Office — “Stress Relief” |
-| `the one with the turkey on his head` | Friends — “The One with All the Thanksgivings” |
-| `dinner party disaster` | The Office — “Dinner Party” |
-| `they do a fire drill` | The episode containing that event |
-| `season 5 finale` | The final episode in season 5 |
-| `S05E14` | That exact numbered episode |
-
-
-
-## The Search Pipeline
-
-Episode Finder does more than ask a model for an episode number:
-
-1. **Inventory:** Neptune loads the episodes actually available in your library.
-2. **Local matching:** It checks direct references, episode titles, and overview text first.
-3. **Grounded interpretation:** If local evidence is not decisive, the model receives the show's identity and your episode inventory alongside the description.
-4. **Verification:** Proposed answers are resolved back to your library. Neptune checks that the title and numbering identify a real episode.
-5. **Correction:** If external numbering disagrees with your server, Neptune translates the answer to the library's numbering.
-6. **Review and ranking:** Ambiguous candidates are compared again before Neptune presents the strongest matches.
-
-Your library is the source of truth. The model proposes; Neptune verifies.
-
-
+| `CPR training goes wrong` | The Office - “Stress Relief” |
+| `the one with the turkey on his head` | Friends - “The One with All the Thanksgivings” |
+| `Home starts a biker gang` | The Simpsons - "Take My Wife, Sleaze” |
+| `The lads go to America and James drives an old Cadillac` | Top Gear - USA Special |
 
 ## Result Labels
 
@@ -58,46 +39,3 @@ Your library is the source of truth. The model proposes; Neptune verifies.
 | **Best guess** | A possible answer that could not be fully verified |
 
 Neptune can show up to four candidates. Focus a card to see its season, episode, title, overview, and confidence status.
-
-
-
-## Starting Playback
-
-When there is exactly one verified, playable result with very high confidence and supporting evidence, Neptune starts it immediately. Otherwise, you choose the episode yourself.
-
-Selecting a candidate confirms that mapping. Neptune remembers confirmed choices, so repeating the same description can skip the AI step while still resolving against the current library before playback.
-
-An episode labeled **Not in library** cannot be selected for playback.
-
-
-
-## Local-Only Shortcuts
-
-Some searches need no AI request at all:
-
-- Exact references such as `S02E06`
-- Season finales and premieres when the season is clear
-- Strong episode-title matches
-- Descriptions whose distinctive words match one episode overview
-
-If no model is available, these local matches still work. Only descriptions that need broader interpretation require AI.
-
-
-
-## Accuracy and Privacy
-
-Episode memories are often vague, show numbering differs between databases, and language models can be confidently wrong. Neptune counters that by grounding the request with your episode list, independently reviewing uncertain answers, capping unsupported confidence, and refusing to auto-play an unverified result.
-
-When AI is needed, the selected provider receives your description, the show's identity, and relevant episode information. It does not receive your entire library. Use Ollama if you want inference to remain on your network.
-
-
-
-## Troubleshooting
-
-| Problem | What to Try |
-|---------|-------------|
-| No matches | Add a distinctive action, quote, character, or setting |
-| Too many possibilities | Include another detail or approximate season |
-| AI unavailable | Configure a provider in **Settings > Deep Learning** |
-| Wrong numbering | Choose the corrected library match rather than an unverified guess |
-| Match is not playable | The episode may not exist in the connected library |

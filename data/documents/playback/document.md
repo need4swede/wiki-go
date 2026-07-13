@@ -4,7 +4,7 @@ order: 70
 
 # Playback
 
-Everything from pressing Play to choosing tracks, scrubbing, and solving playback problems.
+Everything from pressing Play to choosing tracks and scrubbing.
 
 
 
@@ -12,7 +12,7 @@ Everything from pressing Play to choosing tracks, scrubbing, and solving playbac
 
 | Page | Description |
 |------|-------------|
-| [Trident Player](/playback/trident-player) | Neptune's direct-play engine, supported formats, HDR, audio, subtitles, and troubleshooting |
+| [Trident Player](/playback/trident-player) | Neptune's direct-play engine, supported formats, HDR, audio, and subtitles |
 | [Player Controls](/playback/player-controls) | Transport bar, scrubbing, skip segments, Up Next |
 | [Playback Menu](/playback/playback-menu) | The in-player menu: audio, subtitles, video, chapters, info |
 | [Conductor](/playback/conductor) | Track and version selection, with optional Pro learning |
@@ -55,9 +55,3 @@ Swipe **down** to open the [Playback Menu](/playback/playback-menu) with audio, 
 ## Auto-Play
 
 TV shows advance to the next episode when one finishes, with an Up Next countdown you can cancel. Movies in a collection can also auto-advance. Configure behavior in **Settings > Playback > Autoplay**. See [Player Controls](/playback/player-controls) for details.
-
-
-
-## Troubleshooting
-
-See [Trident Troubleshooting](/playback/trident-player/troubleshooting) for symptom-by-symptom help with video, audio, subtitles, and seeking.

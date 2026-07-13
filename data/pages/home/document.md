@@ -5,8 +5,8 @@
 ## Quick Start
 
 1. **[Installation](/getting-started/installation)** - Install Neptune on your device
-2. **[Setup](/getting-started/setup)** - Connect to your Jellyfin server
-3. **[Navigation](/getting-started/navigation)** - Learn the basics of getting around
+2. **[Setup](/getting-started/setup)** - Connect to your media server
+3. **[Navigation](/browsing/navigation)** - Learn the basics of getting around
 
 ## Getting Help
 

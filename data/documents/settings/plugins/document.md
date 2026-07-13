@@ -29,7 +29,7 @@ Selecting the row shows version details (installed, latest available, release da
 | **Install Specific Version** | Roll back to an earlier release |
 | **Restart Server** | Reboot Jellyfin to finish an install. Active streams will be disconnected |
 
-When the suite is active, [Backup & Restore](/settings/backup) becomes available and Neptune uses server-side [indexes](/plugins/indexers) for faster startup and richer search. The upcoming [Transcoder](/plugins/transcoder) member will also let server administrators define the download quality options used by their Neptune clients.
+When the suite is active, [Backup & Restore](/settings/backup) becomes available and Neptune uses server-side [indexes](/plugins/indexers) for faster startup and richer search. The upcoming [Transcoder](/plugins/transcoder) member will define download quality options, while [Studio](/plugins/studio) will provide server-backed UI customization, beginning with Top Shelf artwork.
 
 
 

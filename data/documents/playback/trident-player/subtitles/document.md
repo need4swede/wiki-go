@@ -35,7 +35,7 @@ All formats render locally. The server doesn't have to burn subtitles into the v
 
 ### ASS/SSA
 
-Trident renders ASS subtitles with libass, the same renderer desktop players use, so styling comes through intact:
+Trident supports rendering ASS subtitles, so styling comes through intact:
 
 - **Fonts**: Custom typefaces if the file embeds them
 - **Colors**: Primary, secondary, outline, and shadow colors
@@ -101,32 +101,3 @@ For subtitle formats without their own styling, Trident applies a clean default:
 - Sized for TV viewing
 
 Customize the default in **Settings > User Preferences > Subtitle Style** (font size, color, background style, brightness, position), or from the Style drill-in right in the Playback Menu.
-
-
-
-## Troubleshooting
-
-### Subtitles Not Appearing
-
-1. Check the track picker. Subtitles may be set to Off.
-2. Subtitles may be timed for a different cut of the video.
-3. Try a different track if the file has multiple options.
-
-### Strange Characters
-
-Some older subtitle files use non-standard encodings. Try:
-
-- A different subtitle file
-- An SRT version (most compatible format)
-- Re-encoding the subtitle file as UTF-8
-
-### Styling Looks Wrong
-
-- **Font substitution**: Custom fonts may be replaced with system fonts if the file doesn't embed them.
-- **Complex effects**: Some advanced ASS effects (blur, clipping, animations) render approximately.
-- **SRT limitations**: SRT doesn't support styling. If you want styling, use the ASS version.
-
-### Timing Off
-
-- Adjust the offset under Subtitles > Timing in the Playback Menu.
-- The subtitles may be timed for a different cut of the video.

@@ -15,7 +15,7 @@ This feature applies to Apple TV. iPhone and iPad do not have the tvOS Top Shelf
 | Feature | What It Changes |
 |---------|-----------------|
 | **Cinematic style** | A full-bleed carousel with rich title presentation |
-| **Neptune Studio designs** | Uses server-rendered artwork designs for Banners or Cinematic surfaces when a compatible Studio plugin is available |
+| **[Neptune Studio designs](/plugins/studio)** | Uses server-rendered artwork designs for Banners or Cinematic surfaces when the Studio plugin is available |
 | **Media badges** | Adds 4K, HDR, Dolby Vision, and Atmos flags to Cinematic details |
 | **Cast credits** | Adds starring and director lines to Cinematic details |
 

@@ -118,16 +118,17 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 
 | Page | Description |
 |------|-------------|
-| [Neptune Plugin Suite](/plugins) | Optional Jellyfin extensions: Indexers, MDM, and the upcoming Transcoder |
+| [Neptune Plugin Suite](/plugins) | Optional Jellyfin extensions: Indexers, MDM, Transcoder, and Studio |
 | [Indexers](/plugins/indexers) | Server-side indexing and music metadata |
 | [MDM](/plugins/mdm) | Settings sync, announcements, remote management |
 | [Transcoder](/plugins/transcoder) | Server-managed download quality profiles (coming soon) |
+| [Studio](/plugins/studio) | UI customization, beginning with Top Shelf design (coming soon) |
 
 
 
 ## Key Features
 
-- **Trident Player**: Direct plays nearly everything (MKV, TrueHD, DTS, ASS subtitles) with HDR10+, Dolby Vision, and on-the-fly conversion for compatible Blu-ray Profile 7 files
+- **Trident Player**: Direct plays nearly everything (MKV, TrueHD, DTS-HD MA, ASS subtitles) with HDR10+, Dolby Vision, and on-the-fly conversion for compatible Blu-ray Profile 7 files
 - **Conductor**: Picks the right audio track, subtitles, and version automatically based on your preferences
 - **Hero Spotlight**: Full-bleed carousel showcasing what to watch next
 - **Search that understands**: Instant offline search, semantic theme matching, and local-first AI for hard queries

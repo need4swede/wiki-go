@@ -72,25 +72,6 @@ If your TV doesn't support Dolby Vision, Trident falls through to the next forma
 | SDR-only TV | SDR |
 
 
-
-## Frame Rate Matching
-
-Trident also matches the display refresh rate to the content frame rate:
-
-| Content | Display Refresh | Notes |
-|---------|-----------------|-------|
-| Movies (23.976/24fps) | 24Hz | Cinema motion |
-| PAL content (25fps) | 25Hz | European TV |
-| NTSC video (29.97/30fps) | 30Hz | US TV standard |
-| Sports/gaming (50fps) | 50Hz | |
-| High frame rate (59.94/60fps) | 60Hz | Sports, gaming |
-
-This avoids the judder that happens when frame rates don't divide evenly into the display refresh rate.
-
-Frame-rate matching is always enabled inside Neptune. On Apple TV, enable **Settings > Video and Audio > Match Content > Match Frame Rate** so tvOS can honor the request. This is separate from **Match Dynamic Range**; turn on both for automatic frame-rate and HDR switching.
-
-
-
 ## Requirements
 
 ### Apple TV 4K
@@ -106,38 +87,3 @@ All Apple TV 4K models support HDR10, HLG, and Dolby Vision. The original Apple 
 ### HDMI Cable
 
 For 4K HDR and Dolby Vision, use a Premium High Speed or Ultra High Speed certified HDMI cable. Poor cables cause sparkles, blackouts, or HDR failures. For 4K/60Hz HDR, Ultra High Speed is recommended.
-
-
-
-## Troubleshooting
-
-### Colors Look Washed Out
-
-1. Check the Apple TV setting **Match Dynamic Range** is on.
-2. Check HDR is enabled on the HDMI input on your TV.
-3. Try a certified high-speed HDMI cable.
-4. Check your TV's HDR indicator if it has one.
-
-### Screen Goes Black During Playback
-
-Brief blackouts at the start of HDR content are mode switching. If they persist mid-playback:
-
-- Try a different HDMI cable
-- Check for TV firmware updates
-- Try a different HDMI port
-- Temporarily disable Match Dynamic Range to isolate the issue
-
-### HDR Badge Not Showing
-
-If content should be HDR but the indicator doesn't appear:
-
-- The file may have missing or incorrect HDR metadata
-- Try a different encode of the same content
-- Some TVs suppress the HDR indicator under certain settings
-
-### Dolby Vision Not Activating
-
-1. Check your TV supports Dolby Vision.
-2. In **Settings > Video and Audio > Format**, verify Dolby Vision is listed as the output format.
-3. Some TVs only support DV on specific HDMI ports.
-4. Verify the file actually contains Dolby Vision metadata.

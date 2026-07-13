@@ -4,13 +4,9 @@ order: 110
 
 # Neptune Plugin Suite
 
-The Neptune Plugin Suite is the optional server extension for Jellyfin, Neptune's currently supported backend. Each member handles a distinct part of the client-server relationship: **Indexers** builds shared indexes, **MDM** manages settings and devices, and the upcoming **Transcoder** gives server administrators control over download quality profiles.
+The Neptune Plugin Suite is the optional server extension for Jellyfin, Neptune's currently supported backend. Each member handles a distinct part of the client-server relationship: **Indexers** builds shared indexes, **MDM** manages settings and devices, **Transcoder** controls download quality policy, and **Studio** provides server-backed UI customization—starting with Top Shelf artwork.
 
 The app itself is backend-agnostic and does not require these plugins. Plex, Emby, and additional backends are planned; their extension and plugin options will be documented separately when available.
-
-Suite plugins are free, include useful defaults, and need no API keys. Indexers and MDM are available today; Transcoder is implemented but held from the public plugin catalog until its client rollout is ready.
-
-
 
 ## In This Section
 
@@ -19,6 +15,7 @@ Suite plugins are free, include useful defaults, and need no API keys. Indexers 
 | [Indexers](/plugins/indexers) | Server-side indexing, richer search data, music metadata |
 | [MDM](/plugins/mdm) | Settings sync, backup, announcements, and remote management |
 | [Transcoder](/plugins/transcoder) | Server-managed download quality profiles and original-quality policy (coming soon) |
+| [Studio](/plugins/studio) | Neptune UI and artwork customization |
 
 
 
@@ -29,6 +26,7 @@ Suite plugins are free, include useful defaults, and need no API keys. Indexers 
 | **Neptune Indexers** | Builds library and search indexes on the server so clients don't have to, and enriches music video libraries with credits, artist info, and artwork |
 | **Neptune MDM** | Syncs settings across devices, backs them up, and gives server admins remote management, announcements, and child accounts |
 | **Neptune Transcoder** | Replaces Neptune's built-in download quality presets with a server-managed ladder and lets admins disable original-quality downloads |
+| **Neptune Studio** | Provides a server-backed UI customization system for Neptune, including a visual editor and renderer for Top Shelf designs |
 
 
 
@@ -45,8 +43,6 @@ If onboarding detects that the suite is not installed, Neptune offers a one-tap 
 
 3. The currently published suite members appear in the Catalog tab. Install them, restart your Jellyfin server, and Neptune detects them on the next sign-in.
 
-Transcoder does not appear in the public catalog yet. When it is released, the same suite installer and repository will pick it up; no separate repository is required.
-
 The repository supports Jellyfin 10.10 and 10.11 and serves the correct build for your server version automatically.
 
 Non-admin users can ask their server administrator to install the suite. The plugins appear in the Jellyfin Plugin Catalog after adding the repository.
@@ -58,6 +54,8 @@ Non-admin users can ask their server administrator to install the suite. The plu
 ## Updates
 
 Published suite members update through Jellyfin's normal plugin update flow and share the same version number.
+
+That being said, the easiest way to update is through Neptune. Navigate to **Settings > Plugins > Neptune Plugin Suite** and update the suite from there whenever a new version is released.
 
 
 

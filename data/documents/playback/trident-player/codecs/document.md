@@ -2,9 +2,9 @@
 order: 10
 ---
 
-# Supported Formats
+# Video Codecs & Containers
 
-The video, audio, and subtitle formats Trident plays directly without server-side transcoding.
+The video formats and containers Trident plays directly without backend transcoding. Audio formats live in [Audio](/playback/trident-player/audio), HDR behavior in [HDR & Dolby Vision](/playback/trident-player/hdr), and subtitle formats in [Subtitles](/playback/trident-player/subtitles).
 
 
 
@@ -12,16 +12,12 @@ The video, audio, and subtitle formats Trident plays directly without server-sid
 
 ### Hardware-Accelerated on Apple TV
 
-These codecs use Apple's video hardware:
-
-| Codec | Max Resolution | HDR Support | Notes |
-|-------|---------------|-------------|-------|
-| **H.265/HEVC** | 4K | HDR10, HDR10+, HLG, Dolby Vision | Standard for 4K content |
-| **H.264/AVC** | 4K | No | Universal compatibility |
+| Codec | Max Resolution | Notes |
+|-------|----------------|-------|
+| **H.265/HEVC** | 4K | Standard for 4K and the primary path for [HDR and Dolby Vision](/playback/trident-player/hdr) |
+| **H.264/AVC** | 4K | Universal SDR compatibility |
 
 ### Software-Decoded
-
-Trident uses FFmpeg or dav1d for these codecs:
 
 | Codec | Practical Notes |
 |-------|-----------------|
@@ -37,130 +33,35 @@ Interlaced content (common in DVDs and broadcast recordings) is de-interlaced au
 
 
 
+## Video Limits
+
+| Feature | Support |
+|---------|---------|
+| **Resolution** | Up to 4K |
+| **Frame rate** | Up to 60 fps |
+| **Bitrate** | Up to 200 Mbps |
+
+Hardware-decoded HEVC and H.264 are the reliable path at the upper limits. Practical VP9 and AV1 performance depends on the device, resolution, frame rate, and bitrate.
+
+
+
 ## Containers
 
 | Format | Extensions | Common Use |
 |--------|------------|------------|
-| **Matroska** | .mkv | Blu-ray rips, anime, movies |
+| **Matroska** | .mkv | Blu-ray rips, anime |
 | **MP4** | .mp4, .m4v | Streaming downloads, iTunes |
-| **WebM** | .webm | YouTube downloads |
+| **WebM** | .webm | Web downloads |
 | **AVI** | .avi | Older video files |
 | **QuickTime** | .mov | Apple ecosystem |
 | **Blu-ray** | .m2ts, .mts | Raw Blu-ray rips |
 | **MPEG** | .mpg, .ts | Broadcast recordings, DVDs |
 | **FLV** | .flv | Flash video |
-| **Ogg** | .ogg, .ogv | Open container format |
-| **WAV** | .wav | Uncompressed audio |
 
-Stream link files (.strm) are supported too.
-
-
-
-## Resolution & Quality
-
-| Feature | Support |
-|---------|---------|
-| **4K Ultra HD** | Supported; the decode path depends on the codec and device |
-| **High Frame Rate** | 24fps to 60fps |
-| **10-bit Color** | Required for HDR |
-| **High Bitrate** | Up to 200 Mbps |
-
-
-
-## Audio
-
-### Lossless
-
-| Format | Channels | Description |
-|--------|----------|-------------|
-| **Dolby TrueHD** | Up to 7.1 | Blu-ray lossless standard |
-| **FLAC** | Up to 8 | Free lossless audio |
-| **PCM** | Up to 8 | Uncompressed audio |
-
-### Surround
-
-| Format | Channels | Description |
-|--------|----------|-------------|
-| **Dolby Digital Plus** | Up to 7.1 | Streaming surround |
-| **Dolby Digital** | 5.1 | DVD and broadcast standard |
-| **DTS** | 5.1 | DTS surround |
-| **DTS-HD Master Audio / High Resolution** | 5.1 currently | Plays the embedded full-rate DTS core; full extension decoding is planned for February 26, 2027 |
-
-### Standard
-
-| Format | Description |
-|--------|-------------|
-| **AAC** | Common compressed audio |
-| **Opus** | Newer streaming codec |
-| **MP3** | Older compressed audio |
-| **Vorbis** | Open source compressed |
-
-
-
-## Dolby Atmos
-
-### E-AC3 Atmos (Dolby Digital Plus with Atmos)
-
-E-AC3 Atmos can be passed through to your receiver untouched. This is the same Atmos format used by streaming services. Enable **EAC3-Atmos Passthrough** in **Settings > Playback > Audio**.
-
-| What You Need | Result |
-|---------------|--------|
-| Atmos-capable receiver | Full Dolby Atmos |
-| Standard surround receiver | 7.1 surround |
-| Stereo system | Stereo downmix |
-
-### TrueHD Atmos (Blu-ray Atmos)
-
-TrueHD Atmos from Blu-ray discs is decoded to lossless 7.1:
-
-| What You Hear | Why |
-|---------------|-----|
-| Lossless 7.1 surround | The base audio is fully decoded |
-| No height channels | Spatial metadata requires Dolby's proprietary decoder, which isn't licensed to third-party apps |
-
-The same limitation applies to other third-party players.
-
-### DTS-HD Today
-
-Until February 26, 2027, DTS-HD MA and HRA tracks decode their compatible full-rate DTS core (lossy 5.1) rather than the HD extension. Full DTS-HD extension decoding is planned as a free update after the final relevant patent expires. This does not affect Dolby TrueHD, which decodes its full lossless 7.1 bed now.
-
-
-
-## Channel Output
-
-Trident matches its output to whatever your audio system supports:
-
-| Your Audio Setup | What You Get |
-|------------------|--------------|
-| **7.1 Receiver** | 7.1 surround |
-| **5.1 Soundbar** | Downmixed to 5.1 |
-| **Stereo TV** | Stereo downmix |
-
-Downmixes preserve dialog level and front-rear balance.
-
-
-
-## Subtitles
-
-### Text
-
-| Format | Features |
-|--------|----------|
-| **SRT** | Universal compatibility |
-| **VTT** | Web standard with positioning |
-| **ASS/SSA** | Full styling: fonts, colors, effects |
-| **MOV Text (tx3g)** | Text tracks embedded in MP4 and MOV files |
-
-### Image
-
-| Format | Source |
-|--------|--------|
-| **PGS** | Blu-ray subtitles |
-| **VobSub** | DVD subtitles |
-| **DVB** | Broadcast subtitles |
+Stream-link files (`.strm`) are supported as well.
 
 
 
 ## Unsupported Formats
 
-For formats Trident can't play directly, a compatible backend can transcode the file to a supported format. The transcode happens in the background and depends on the connected backend's capabilities.
+For a video codec or container Trident cannot play directly, a compatible backend can transcode the file to a supported format. The transcode happens in the background and depends on the connected backend's capabilities.

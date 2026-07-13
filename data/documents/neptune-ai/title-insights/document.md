@@ -52,21 +52,3 @@ Neptune asks for a structured, concise response rather than an open-ended review
 Title Insights follows an accuracy-over-completeness rule. Context and Themes can be derived from the supplied metadata, but trivia and similar-title recommendations are omitted when the model is not confident.
 
 Very new, obscure, or home-video items may therefore show fewer sections. That is intentional: a shorter grounded answer is better than invented production history.
-
-
-
-## Availability and Privacy
-
-Configure language models under **Settings > Deep Learning**. Neptune AI is built in with Neptune Pro; Ollama, Gemini, and OpenRouter can power the same feature with your own configuration.
-
-An Insights request sends only the selected title's relevant metadata to the active provider. Browsing the detail page by itself does not send an AI request; generation begins when you open Insights.
-
-
-
-## If Insights Do Not Appear
-
-- Confirm that language models are enabled.
-- Check that at least one active provider passes **Test Connection**.
-- For Neptune AI, confirm that Neptune Pro is active.
-- Try again if the provider timed out.
-- Some uncertain sections may be intentionally omitted even when generation succeeds.

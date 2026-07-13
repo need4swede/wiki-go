@@ -67,11 +67,3 @@ A separate switch on the same Layouts tab. **Big Picture Mode** turns detail sec
 ## Cross-Platform Sync
 
 Layout selection is a per-profile preference. Sign in on a second device and the same layout applies automatically. Server administrators using the [Neptune MDM](/plugins/mdm) plugin can set a default layout for all users.
-
-
-
-## Tips
-
-- **Bright backdrops:** Immersive is built for them; the glass card and drop shadows handle light content cleanly.
-- **Spoiler-conscious viewing:** Turn off **Episode Description** for the cleanest episode browsing.
-- **Stick with Detailed** if you like scanning quality badges, codec info, and progress at a glance. It has the most information density per screen.
