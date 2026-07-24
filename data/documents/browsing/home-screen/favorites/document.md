@@ -30,7 +30,7 @@ On the Movies and Shows tabs, the library picker filters favorites to the select
 
 ## Navigation
 
-Selecting a card opens the item's detail page. Long-press to pin it as a [Library Shortcut](/library/shortcuts) or mark it played.
+Selecting a card opens the item's detail page. Long-press to add it to [Library Pins](/library/shortcuts) or mark it played.
 
 
 

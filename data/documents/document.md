@@ -48,7 +48,7 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 | Page | Description |
 |------|-------------|
 | [Library](/library) | Full library browsing with filters and stats |
-| [Shortcuts](/library/shortcuts) | Pin items, people, genres, and timestamps |
+| [Pins](/library/shortcuts) | Pin items, people, genres, and timestamps |
 | [Smart Tags](/library/smart-tags) | Browse by theme and mood |
 
 ### Search
@@ -134,7 +134,7 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 - **Search that understands**: Instant offline search, semantic theme matching, and local-first AI for hard queries
 - **Neptune AI**: Zero-setup Pro intelligence across Neptune, currently powering natural-language search, Episode Finder, and title and person insights
 - **Seerr Integration**: Browse, request, and approve content without leaving the couch
-- **Library Shortcuts**: Pin movies, shows, people, genres, or even specific moments during playback
+- **Pins**: Pin movies, shows, people, genres, or even specific moments during playback
 - **Cloud Backup & Sync**: Preferences follow you across every device on your account
 - **Custom Themes**: Eight built-in themes with Adaptive and Dynamic modes, plus JSON import for your own designs
 - **Family Ready**: Per-profile everything, child accounts, and PIN-protected admin tools

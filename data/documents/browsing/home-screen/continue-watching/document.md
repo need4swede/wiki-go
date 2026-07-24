@@ -44,7 +44,7 @@ You land exactly where you left off rather than at the top of the show's page.
 
 ## Long Press
 
-Long-press any card for quick actions: **Mark as Played**, **Mark as Unplayed**, **Reset Progress**, and **Pin Shortcut**. Resetting progress removes the item from Continue Watching without marking it watched.
+Long-press any card for quick actions: **Mark as Played**, **Mark as Unplayed**, **Reset Progress**, and **Pin**. Resetting progress removes the item from Continue Watching without marking it watched.
 
 
 

@@ -42,7 +42,7 @@ An action row sits beside the title when controls are visible. Three buttons sho
 | Button | What It Does |
 |--------|--------------|
 | **Playback Menu** | Opens the [Playback Menu](/playback/playback-menu). Always available |
-| **Pin** | Captures the current moment as a [timestamp shortcut](/library/shortcuts): position plus a thumbnail of the frame. A pill confirms "Pinned at [time]" |
+| **Pin** | Captures the current moment as a [timestamp pin](/library/shortcuts): position plus a thumbnail of the frame. A pill confirms "Pinned at [time]" |
 | **Next Episode** | Jumps to the next episode (or re-rolls during shuffle) |
 
 Four more can be enabled in **Settings > Playback > Controls > Action Buttons**: **Bitrate**, **Technical Info**, **Autoplay** (toggles autoplay for the session), and **Play / Pause**. Reorder or hide everything except the Playback Menu.

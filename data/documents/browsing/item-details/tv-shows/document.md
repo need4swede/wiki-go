@@ -49,7 +49,7 @@ Long-press (hold Select) on episodes and seasons for quick actions.
 | **Mark as Played** | Mark episode as watched |
 | **Mark as Unplayed** | Reset episode to unwatched |
 | **Reset Progress** | Clear a partial watch without marking played |
-| **Pin Shortcut** | Pin the episode as a [Library Shortcut](/library/shortcuts) |
+| **Pin** | Add the episode to [Library Pins](/library/shortcuts) |
 | **Change Image** | Select a new thumbnail (admin only) |
 
 ### Season Context Menu

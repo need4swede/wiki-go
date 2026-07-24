@@ -49,7 +49,7 @@ Selecting a Next Up episode takes you to the show's detail page with the season 
 
 ## Long Press
 
-Long-press any card to pin the show as a [Library Shortcut](/library/shortcuts) or mark the episode played.
+Long-press any card to add the show to [Library Pins](/library/shortcuts) or mark the episode played.
 
 
 

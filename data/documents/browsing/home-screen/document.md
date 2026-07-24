@@ -10,21 +10,21 @@ The home screen is made up of the following sections, listed in default order:
 
 | Section | Description |
 |---------|-------------|
-| [Spotlight](spotlight/) | Full-bleed backdrop carousel highlighting what to watch next |
-| [Libraries](libraries/) | Your media libraries as artwork cards |
-| [Continue Watching](continue-watching/) | Movies and episodes you started but didn't finish, with progress bars |
-| [Pins](pins/) | Your pinned items, people, browse filters, and playback moments |
-| [Downloads](downloads/) | Media saved to this device for offline playback (Neptune Pro) |
-| [Next Up](next-up/) | The next unwatched episode from each show you're watching |
-| [New Releases](new-releases/) | Recently premiered movies and new seasons |
-| [Recently Added](recently-added/) | Content recently added to your server, with per-library rows |
-| [Favorites](favorites/) | Movies and shows you've marked as favorites |
-| [Collections](collections/) | Your box sets, with a See All card into the full collections browse |
-| [Recommended](recommended/) | Personalized suggestions, optionally blended with Seerr titles |
-| [Coming Soon](coming-soon/) | Upcoming releases you've requested |
-| [Because You Watched](because-you-watched/) | Similar titles based on movies you've watched (requires plugin) |
+| [Spotlight](/browsing/home-screen/spotlight) | Full-bleed backdrop carousel highlighting what to watch next |
+| [Libraries](/browsing/home-screen/libraries) | Your media libraries as artwork cards |
+| [Continue Watching](/browsing/home-screen/continue-watching) | Movies and episodes you started but didn't finish, with progress bars |
+| [Pins](/browsing/home-screen/pins) | Your pinned items, people, browse filters, and playback moments |
+| [Downloads](/browsing/home-screen/downloads) | Media saved to this device for offline playback (Neptune Pro) |
+| [Next Up](/browsing/home-screen/next-up) | The next unwatched episode from each show you're watching |
+| [New Releases](/browsing/home-screen/new-releases) | Recently premiered movies and new seasons |
+| [Recently Added](/browsing/home-screen/recently-added) | Content recently added to your server, with per-library rows |
+| [Favorites](/browsing/home-screen/favorites) | Movies and shows you've marked as favorites |
+| [Collections](/browsing/home-screen/collections) | Your box sets, with a See All card into the full collections browse |
+| [Recommended](/browsing/home-screen/recommended) | Personalized suggestions, optionally blended with Seerr titles |
+| [Coming Soon](/browsing/home-screen/coming-soon) | Upcoming releases you've requested |
+| [Because You Watched](/browsing/home-screen/because-you-watched) | Similar titles based on movies you've watched (requires plugin) |
 
-The **Pins** row mirrors your [Library Shortcuts](/library/shortcuts). Pin anything with a long press and it shows up here; long-press a pin to remove it.
+The **Pins** row mirrors your [Library Pins](/library/shortcuts). Pin anything with a long press and it shows up here; long-press a pin to remove it.
 
 
 
@@ -34,7 +34,7 @@ Long-press any content card to open the quick actions modal:
 
 - **Mark as Played** or **Mark as Unplayed**
 - **Reset Progress** (for items in progress)
-- **Pin Shortcut** or **Unpin Shortcut**
+- **Pin** or **Unpin**
 
 ## Customizing Sections
 

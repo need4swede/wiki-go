@@ -4,7 +4,7 @@ order: 40
 
 # Pins
 
-Quick access to the movies, shows, episodes, collections, people, genres, studios, networks, tags, and playback moments you've saved as [Library Shortcuts](/library/shortcuts).
+Quick access to the movies, shows, episodes, collections, people, genres, studios, networks, tags, and playback moments you've saved as [Library Pins](/library/shortcuts).
 
 
 
@@ -24,9 +24,9 @@ The Music tab uses its own sections and does not include the Pins row.
 
 Select a pin to open its item or browse destination. Long-press a card to remove it.
 
-Pins are read-only on the Home, Movies, and Shows tabs. To reorder pins or move their category rows, use the **Shortcuts** section on the [Library](/library) tab.
+Pins are read-only on the Home, Movies, and Shows tabs. To reorder pins or move their category rows, use the **Pins** section on the [Library](/library) tab.
 
-When several timestamp shortcuts point to the same item, the Pins row combines them into one card. Selecting it lets you choose the saved moment.
+When several timestamp pins point to the same item, the Pins row combines them into one card. Selecting it lets you choose the saved moment.
 
 
 

@@ -12,21 +12,21 @@ Browse your entire media collection with filtering, stats, and category-based br
 
 | Page | Description |
 |------|-------------|
-| [Shortcuts](/library/shortcuts) | Pinning items, browse pins, and timestamp shortcuts |
+| [Pins](/library/shortcuts) | Pinning items, browse pins, and timestamp pins |
 | [Smart Tags](/library/smart-tags) | Theme and mood browsing, Surprise Me, Mix & Match |
 
 
 
 ## Overview
 
-The Library tab is the map of everything you have. Unlike the Home tab's curated rows, the Library gives you your libraries, pinned shortcuts, browsable categories, stats, and a full filterable grid of all your content.
+The Library tab is the map of everything you have. Unlike the Home tab's curated rows, the Library gives you your libraries, pins, browsable categories, stats, and a full filterable grid of all your content.
 
 Sections on the Library landing page, in default order:
 
 | Section | Description |
 |---------|-------------|
 | **Your Libraries** | Each media library as an artwork card |
-| **Shortcuts** | Everything you've pinned, grouped by type |
+| **Pins** | Everything you've pinned, grouped by type |
 | **Browse All** | The full library grid with filters and sorting |
 | **Browse by Era** | A decade slider from the classics to now |
 | **Browse by** | Format, Genre, Network, Person, Tags, Specs, and Studio |

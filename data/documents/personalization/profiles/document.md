@@ -46,7 +46,7 @@ The **Copy Preferences From** step is handy when setting up a family member who 
 | Home screen | Section order, visibility, and limits |
 | Navigation bar | Tab order and visibility |
 | Conductor | Language and track preferences |
-| Shortcuts | Your pins |
+| Pins | Your pinned items and browse filters |
 
 With the [Neptune MDM](/plugins/mdm) plugin, all of it syncs to every device you sign in on. See [Backup & Restore](/settings/backup).
 

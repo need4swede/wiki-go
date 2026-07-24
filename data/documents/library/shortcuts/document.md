@@ -4,7 +4,7 @@ order: 10
 
 # Pins
 
-Bookmark anything in your library (movies, shows, seasons, episodes, collections, genres, studios, networks, people, tags) and surface them as categorized rows on the Library tab and in the Pins row on Home. A second variant, **timestamp shortcuts**, captures a specific moment of playback so you can jump back to it later.
+Bookmark anything in your library (movies, shows, seasons, episodes, collections, genres, studios, networks, people, tags) and surface them as categorized rows on the Library tab and in the Pins row on Home. A second variant, **timestamp pins**, captures a specific moment of playback so you can jump back to it later.
 
 
 
@@ -34,7 +34,7 @@ The first action button on any movie, series, season, or episode page is a **Pin
 
 ### Long-Press on Any Card
 
-Hold Select on any content card across Home, Library, or Browse. A modal appears with **Pin Shortcut** or **Unpin Shortcut** alongside the played-status actions.
+Hold Select on any content card across Home, Library, or Browse. A modal appears with **Pin** or **Unpin** alongside the played-status actions.
 
 ### From the Episode Menu
 
@@ -46,13 +46,13 @@ Person pages have a **Pin** button next to the portrait. Pinning a person gives 
 
 ### From a Browse Picker
 
-When browsing by genre, studio, network, or person, long-press any of the picker cards to pin that browse view as a shortcut. For studios and networks, Neptune normalizes the name so the pin matches its TMDB equivalent when possible.
+When browsing by genre, studio, network, or person, long-press any of the picker cards to pin that browse view. For studios and networks, Neptune normalizes the name so the pin matches its TMDB equivalent when possible.
 
 
 
-## Timestamp Shortcuts
+## Timestamp Pins
 
-A timestamp shortcut captures the exact moment you're watching: position plus a thumbnail of the current frame.
+A timestamp pin captures the exact moment you're watching: position plus a thumbnail of the current frame.
 
 ### Creating One
 
@@ -65,15 +65,15 @@ The thumbnail comes from the live frame on screen. If a live frame isn't availab
 
 ### Resuming from One
 
-Tap a timestamp shortcut card on the Library tab to open a small modal with three choices:
+Tap a timestamp pin card on the Library tab to open a small modal with three choices:
 
 - **Play from [timestamp].** Jumps to the exact moment.
 - **Go to Item.** Opens the item's detail page without auto-playing.
-- **Remove Pin.** Deletes the shortcut and its thumbnail.
+- **Remove Pin.** Deletes the pin and its thumbnail.
 
 ### Multiple Timestamps on One Item
 
-If you create several timestamp shortcuts on the same movie or episode, they collapse into a single card with a small badge showing the count. Tapping it opens a horizontal carousel where each thumbnail shows its own moment, sorted chronologically. Pick the one you want to resume from.
+If you create several timestamp pins on the same movie or episode, they collapse into a single card with a small badge showing the count. Tapping it opens a horizontal carousel where each thumbnail shows its own moment, sorted chronologically. Pick the one you want to resume from.
 
 
 
@@ -81,7 +81,7 @@ If you create several timestamp shortcuts on the same movie or episode, they col
 
 Pinned items appear in two places:
 
-- The **Shortcuts** section on the Library tab, organized into rows by category (Movies, Shows, Episodes, Collections, Actors, Directors, Genres, Studios, Networks, Tags)
+- The **Pins** section on the Library tab, organized into rows by category (Movies, Shows, Episodes, Collections, Actors, Directors, Genres, Studios, Networks, Tags)
 - The **Pins** row on the Home screen, a flat row of everything you've pinned
 
 | Card Style | Used For |
@@ -89,15 +89,15 @@ Pinned items appear in two places:
 | Gradient with watermark icon | Genre, Studio, Network, Tag |
 | Person poster | Actors, directors, writers |
 | Item poster | Movie, Series, Season, Collection |
-| Landscape thumbnail | Episode, Timestamp shortcut |
+| Landscape thumbnail | Episode, Timestamp pin |
 
-The Shortcuts section can be reordered or hidden via Library section customization, and the Pins row via Home customization.
+The Pins section can be reordered or hidden via Library section customization, and the Pins row via Home customization.
 
 
 
 ## Edit Mode
 
-Long-press any card in a shortcuts row to enter edit mode. Cards begin a gentle jiggle animation.
+Long-press any card in a Pins row to enter edit mode. Cards begin a gentle jiggle animation.
 
 | Action | How |
 |--------|-----|
@@ -110,9 +110,9 @@ Long-press any card in a shortcuts row to enter edit mode. Cards begin a gentle 
 
 ## Sync Across Devices
 
-If [Backup & Sync](/settings/backup) is enabled with the Neptune plugin, your shortcuts ride along with the rest of your settings. Pin something on one device and it shows up on every other device signed in to the same account within seconds.
+If [Backup & Sync](/settings/backup) is enabled with the Neptune plugin, your pins ride along with the rest of your settings. Pin something on one device and it shows up on every other device signed in to the same account within seconds.
 
-> Timestamp thumbnails themselves aren't synced. Only the position is. A device that wasn't the original capturer falls back to the regular episode image when displaying a synced timestamp shortcut.
+> Timestamp thumbnails themselves aren't synced. Only the position is. A device that wasn't the original capturer falls back to the regular episode image when displaying a synced timestamp pin.
 
 
 

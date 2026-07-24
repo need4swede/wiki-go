@@ -20,7 +20,7 @@ Three gateways organize the catalog:
 | **Settings** | Space, dystopia, small town, high seas |
 | **Moods** | Feel-good, dark, suspenseful, slow burn |
 
-Select any tag to see everything in your library that matches. Tags can be pinned as [Library Shortcuts](/library/shortcuts) for one-tap access later.
+Select any tag to see everything in your library that matches. Tags can be added to [Library Pins](/library/shortcuts) for one-tap access later.
 
 
 

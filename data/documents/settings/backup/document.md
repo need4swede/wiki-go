@@ -4,7 +4,7 @@ order: 80
 
 # Backup & Restore
 
-Keep your Neptune preferences in sync across every device signed into the same server account. Settings, layout choices, theme picks, library shortcuts, and your customized home rows all stay aligned.
+Keep your Neptune preferences in sync across every device signed into the same server account. Settings, layout choices, theme picks, library pins, and your customized home rows all stay aligned.
 
 Backup & Restore is currently powered by the Jellyfin-specific [Neptune MDM](/plugins/mdm) plugin. Without a compatible backend extension, Neptune still works; your settings just stay device-local. Sync support for future backends will be documented as it becomes available.
 
@@ -20,7 +20,7 @@ Backup & Restore is currently powered by the Jellyfin-specific [Neptune MDM](/pl
 | Conductor | Languages, track rules, quality preferences |
 | Search & AI | Search options and language model configuration |
 | Sounds | Theme song volume and behavior |
-| Library Shortcuts | Pinned items, browse pins, timestamp pins |
+| Library Pins | Pinned items, browse pins, timestamp pins |
 
 What stays device-local: diagnostics toggles, the sync switch itself, and anything tied to the specific hardware.
 

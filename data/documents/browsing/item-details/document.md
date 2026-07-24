@@ -45,7 +45,7 @@ A row of secondary actions sits below the Play button. Available actions vary by
 
 | Action | What It Does |
 |--------|--------------|
-| **Pin Shortcut** | Pin the item as a [shortcut](/library/shortcuts) on the Library tab |
+| **Pin** | Add the item to [Pins](/library/shortcuts) on the Library tab |
 | **Trailer** | Play a trailer when available. Prefers local trailer files, otherwise opens YouTube (see [Extras](/browsing/item-details/extras)) |
 | **Mark Played** | Toggle played status |
 | **Add Favorite** | Toggle favorite status |

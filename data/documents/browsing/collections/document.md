@@ -59,5 +59,5 @@ Collections can have their own backdrop image. If available, it displays as the 
 
 ## Tips
 
-- **Marathon mode**: Pin a collection as a [shortcut](/library/shortcuts) and work through a franchise in order
+- **Marathon mode**: Add a collection to [Pins](/library/shortcuts) and work through a franchise in order
 - **Missing images**: Neptune attempts to refresh metadata for collections missing artwork

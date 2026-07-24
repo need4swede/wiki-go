@@ -23,7 +23,7 @@ The row shows a window of your collections. When more are available, a trailing 
 | A collection | Its collection detail page |
 | **See All** | The full collections browse in Library |
 
-Long-press a collection card for quick actions, including pinning it as a [Library Shortcut](/library/shortcuts).
+Long-press a collection card for quick actions, including adding it to [Library Pins](/library/shortcuts).
 
 
 

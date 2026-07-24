@@ -50,7 +50,7 @@ You can also change quality per-session from the [Playback Menu](/playback/playb
 
 Timeline options: **Buffer Indicator**, **Chapter Markers**, and **Seek Thumbnails** (all on by default).
 
-Seeking options: **Scrub Sensitivity** (1 to 10), **Skip Interval** (5, 10, or 15 seconds), **Resume on Seek**, and **Seek Mode** (Locked, Limited, or Unlocked) with an on-screen demo of each mode.
+Seeking options: **Scrub Sensitivity** (1 to 10; default 7), **Skip Interval** (5, 10, or 15 seconds), **Resume on Seek**, and **Seek Mode** (Locked, Limited, or Unlocked) with an on-screen demo of each mode.
 
 
 
@@ -77,7 +77,6 @@ Seeking options: **Scrub Sensitivity** (1 to 10), **Skip Interval** (5, 10, or 1
 | **Audio Preset** | Default, Bass, or Voice |
 | **Night Mode** | Off, On, or Auto with a start and end time (10:00 PM to 7:00 AM by default) |
 | **A/V Sync Offset** | Up to half a second in either direction |
-| **Experimental Sync** | Use the alternate AudioEngine sync path for troubleshooting |
 
 Track selection behavior (which language and track type get picked) lives in [Conductor](/playback/conductor).
 

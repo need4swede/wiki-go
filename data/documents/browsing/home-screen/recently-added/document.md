@@ -41,7 +41,7 @@ Each row ends with a **See All** card that opens the full library browse sorted 
 | A show | The show's detail page |
 | An episode | The show's detail page with that episode's season selected |
 
-Long-press any card to pin it as a [Library Shortcut](/library/shortcuts) or mark it played.
+Long-press any card to add it to [Library Pins](/library/shortcuts) or mark it played.
 
 
 

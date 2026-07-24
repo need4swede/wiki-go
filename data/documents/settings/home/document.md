@@ -17,7 +17,6 @@ How library content presents itself on Home:
 | **Libraries** | Reorder or hide libraries on the home screen |
 | **Group Movies into Collections** | Fold movies into their collections on the Movies tab: Off, Auto, or On |
 | **Keep Sorting Preference** | Remember your last sort in browse views |
-| **Auto-Select Single Library** | Skip the library picker when there's only one |
 | **Display Titles / Display Year / Display Card Labels** | What text appears under library cards |
 
 

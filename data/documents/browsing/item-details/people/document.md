@@ -23,7 +23,7 @@ View detailed information about actors, directors, writers, and other crew membe
 - Portrait photo
 - Birth (and where applicable, death) dates
 - Full biography
-- A **Pin** button to add them to your [Library Shortcuts](/library/shortcuts)
+- A **Pin** button to add them to your [Library Pins](/library/shortcuts)
 
 ### Career Timeline
 
