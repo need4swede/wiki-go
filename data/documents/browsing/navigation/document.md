@@ -54,7 +54,18 @@ Collapse mode shrinks the bar down to just the active tab while you browse, then
 
 ## Compass
 
-Press **Play/Pause** anywhere while browsing to open the [Compass](/browsing/navigation/compass), a floating pill for jumping between tabs without scrolling to the top.
+Compass provides quick navigation without returning to the tab bar:
+
+| Device | How to Open It |
+|--------|----------------|
+| **Apple TV** | Press **Play/Pause** while browsing |
+| **iPhone** | Hold exactly two fingers for 0.6 seconds, open it from Settings, or use the optional Compass Live Activity |
+| **iPad** | Compass is not available; use the normal touch navigation |
+
+The Apple TV surface is a floating tab pill. iPhone uses a configurable
+one-to-eight-shortcut palette and can project the same shortcuts into Dynamic
+Island and onto the Lock Screen. See [Compass](/browsing/navigation/compass)
+and [Compass Live Activity](/ios/live-activity).
 
 
 

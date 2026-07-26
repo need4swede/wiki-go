@@ -24,7 +24,9 @@ The home screen is made up of the following sections, listed in default order:
 | [Coming Soon](/browsing/home-screen/coming-soon) | Upcoming releases you've requested |
 | [Because You Watched](/browsing/home-screen/because-you-watched) | Similar titles based on movies you've watched (requires plugin) |
 
-The **Pins** row mirrors your [Library Pins](/library/shortcuts). Pin anything with a long press and it shows up here; long-press a pin to remove it.
+The **Pins** row mirrors your [Library Pins](/library/shortcuts). Pin an item
+from its detail page or with a long press or touch-and-hold and it shows up
+here. The same gesture on an existing Pin offers removal.
 
 
 
@@ -65,7 +67,12 @@ Some sections are restricted by tab. Next Up is hidden on Movies because it only
 
 If you have multiple movie or show libraries, a library picker appears at the top letting you filter by library or view all.
 
-The **Music** tab is a dedicated music-video experience rather than another Home filter. It combines your music-video libraries into its own Spotlight, Continue Watching, Recently Added, and Artists sections. Long-press Music and choose **Edit Music** to reorder or hide those sections. The tab is hidden by default; enable it under **Settings > Home > Navigation**.
+The **Music** tab is a dedicated music-video experience rather than another
+Home filter. It combines your music-video libraries into its own Spotlight,
+Continue Watching, Recently Added, Artists, and music-video Pins content.
+Long-press Music and choose **Edit Music** to reorder or hide its configurable
+sections. The tab is hidden by default; enable it under **Settings > Home >
+Navigation**.
 
 
 

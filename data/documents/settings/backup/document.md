@@ -16,13 +16,24 @@ Backup & Restore is currently powered by the Jellyfin-specific [Neptune MDM](/pl
 |----------|----------|
 | Appearance | Theme, theme mode, card styles, layouts, custom theme imports |
 | Home & Library layout | Section order and visibility, navigation bar, row limits |
-| Playback | Engine choice, autoplay behavior, audio settings |
+| Playback | Engine choice, autoplay behavior, audio settings, and iOS [Picture in Picture and Background Playback](/ios/playback) toggles |
 | Conductor | Languages, track rules, quality preferences |
 | Search & AI | Search options and language model configuration |
 | Sounds | Theme song volume and behavior |
-| Library Pins | Pinned items, browse pins, timestamp pins |
+| [Library Pins](/library/shortcuts) | Pinned items, browse Pins, timestamp Pins |
+| [iPhone Compass](/ios/live-activity) | Ordered Compass Shortcuts, custom labels and symbols |
+| [Live Activity](/ios/live-activity) | Enabled state and selected activity type |
 
-What stays device-local: diagnostics toggles, the sync switch itself, and anything tied to the specific hardware.
+What stays device-local: diagnostics toggles, the sync switch itself, and
+anything tied to the specific hardware. Home Screen and Lock Screen widget
+placement, size, and per-widget Page/Section/Pin selection are managed by iOS
+on that device; they are not one synchronized Neptune preference. The
+underlying native Pins and the content Neptune publishes to an existing widget
+do follow the active profile.
+
+Picture in Picture and Background Playback are synchronized preferences even
+though their behavior is iPhone/iPad-only. A changed value is used when the
+next playback session starts; it has no effect on Apple TV.
 
 
 

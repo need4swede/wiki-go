@@ -4,13 +4,19 @@ order: 20
 
 # Playback Settings
 
-Configure video playback behavior, controls, and audio. Settings are organized into tabs: **Player**, **Controls**, **Autoplay**, **Audio**, and **Advanced**.
+Configure video playback behavior, controls, and audio. Apple TV organizes the
+screen into **Player**, **Controls**, **Autoplay**, **Audio**, and **Advanced**
+tabs. iPhone and iPad present their supported controls as sections and add
+**Background & Picture in Picture**.
 
 
 
 ## Player
 
 ### Engine
+
+Apple TV lets you choose the playback engine. iPhone and iPad use Trident for
+all playback, so they do not show an engine picker.
 
 | Engine | Description |
 |--------|-------------|
@@ -79,6 +85,26 @@ Seeking options: **Scrub Sensitivity** (1 to 10; default 7), **Skip Interval** (
 | **A/V Sync Offset** | Up to half a second in either direction |
 
 Track selection behavior (which language and track type get picked) lives in [Conductor](/playback/conductor).
+
+
+
+## Background & Picture in Picture (iPhone & iPad)
+
+These two settings are independent and on by default:
+
+| Setting | Description |
+|---------|-------------|
+| **Picture in Picture** | Automatically continues video in a floating system window when you go Home or switch apps |
+| **Background Playback** | Continues audio when Neptune is behind another app or the screen is locked |
+
+Locking the screen does not start Picture in Picture; Background Playback
+controls that path. With both settings off, playback pauses when Neptune
+leaves the foreground.
+
+Changes apply to the next playback session. See
+[Picture in Picture & Background Playback](/ios/playback) for the complete
+four-state behavior, Lock Screen and Control Center actions, subtitle and
+transcode limits, and troubleshooting.
 
 
 

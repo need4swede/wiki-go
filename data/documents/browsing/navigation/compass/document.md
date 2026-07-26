@@ -4,11 +4,16 @@ order: 10
 
 # Compass
 
-The Compass is a floating navigation pill that lets you switch tabs from anywhere in the app, without scrolling back up to the top menu bar.
+Compass is Neptune’s quick-navigation surface. On Apple TV it is a floating
+pill opened by the Siri Remote. On iPhone it is a configurable palette that
+can also appear as a [Live Activity](/ios/live-activity) in Dynamic Island and
+on the Lock Screen.
+
+Compass is unavailable on iPad. iPhone and Apple TV use platform-specific
+controls and do not share the same Compass layout.
 
 
-
-## How to Use
+## Apple TV Compass
 
 Press the **Play/Pause** button on your Siri Remote to open the Compass. A pill-shaped overlay appears in the center of the screen showing your tabs as icons.
 
@@ -23,13 +28,13 @@ Your current tab is highlighted with the accent color. When the Compass opens, f
 
 
 
-## Search from Anywhere
+### Search from Anywhere
 
 The Compass includes a search shortcut. Selecting it opens a full-screen keyboard where you can type or dictate, and Neptune jumps to the Search tab with your results.
 
 
 
-## When to Use It
+### When to Use It
 
 The Compass is especially useful when you're:
 
@@ -41,8 +46,48 @@ Instead of pressing Menu multiple times or scrolling up to the tab bar, one pres
 
 
 
+## iPhone Compass
+
+Hold exactly two fingers for 0.6 seconds anywhere in the authenticated iPhone
+app to open the adaptive Compass palette. The gesture works in portrait,
+landscape, and drill-down screens.
+
+You can also open a labelled preview from **Settings > User Preferences >
+Compass**. Enabling the separate Compass Live Activity adds system-owned entry
+points:
+
+| Entry Point | What It Does |
+|-------------|--------------|
+| Compact or minimal Dynamic Island | Opens the full in-app palette |
+| Expanded Dynamic Island | Shows the configured shortcuts as direct actions |
+| Lock Screen Live Activity | Shows the shortcut strip plus a palette launcher |
+
+See [Compass Live Activity](/ios/live-activity) for setup, lifecycle, and
+troubleshooting.
+
+
+
+## Compass Shortcuts on iPhone
+
+The iPhone palette and Live Activity use the same ordered set of one to eight
+Compass Shortcuts. Configure them under **Settings > User Preferences >
+Compass > Compass Shortcuts**.
+
+The exact defaults are **Settings, Home, Library, Search**. A shortcut can
+open another Neptune Page, one library, a saved search, media details, or
+supported direct playback. Labels, symbols, and order are customizable.
+
+Compass Shortcuts are not [native Pins](/ios/pins). Native Pins bookmark
+library content and appear in Neptune’s content rows; Compass Shortcuts are
+quick actions used only by the iPhone Compass surfaces.
+
+
+
 ## Video Playback
 
-The Compass is disabled during video playback so the Play/Pause button controls your video.
+Compass does not open during video playback:
 
-To access the Compass while a video is playing, first exit the player by pressing Menu.
+- On Apple TV, Play/Pause remains a player control.
+- On iPhone, the two-finger Compass hold is suppressed.
+
+Exit the player before opening Compass.

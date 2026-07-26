@@ -16,7 +16,9 @@ order: 40
 
 ## Search Smarter, Not Harder
 
-Open the Search tab, or use [Compass](/browsing/navigation/compass) on Apple TV to start a search from anywhere. Type with the keyboard or use dictation.
+Open the Search tab, or use [Compass](/browsing/navigation/compass) on Apple TV
+or iPhone to start a search from anywhere. Type with the keyboard or use
+dictation.
 
 | What you remember | Example | What Neptune uses |
 |-------------------|---------|-------------------|

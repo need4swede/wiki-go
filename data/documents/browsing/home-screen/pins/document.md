@@ -15,23 +15,40 @@ Quick access to the movies, shows, episodes, collections, people, genres, studio
 | **Home** | Every pin type |
 | **Movies** | Pinned movies |
 | **Shows** | Pinned series, seasons, and episodes |
-
-The Music tab uses its own sections and does not include the Pins row.
+| **Music** | Pinned music videos when the Music surface is enabled |
 
 
 
 ## Using Pins
 
-Select a pin to open its item or browse destination. Long-press a card to remove it.
+Select a Pin to open its item, person, or current browse destination.
 
-Pins are read-only on the Home, Movies, and Shows tabs. To reorder pins or move their category rows, use the **Pins** section on the [Library](/library) tab.
+- On Apple TV, long-press a Pin card for its actions.
+- On iPhone or iPad, touch and hold a Pin card and choose **Remove Pin**.
 
-When several timestamp pins point to the same item, the Pins row combines them into one card. Selecting it lets you choose the saved moment.
+Pins are read-only on the content tabs. To reorder Pins or move their category
+rows, use the **Pins** section on the [Library](/library) tab.
+
+Apple TV provides the Library Pins reorder mode. iPhone and iPad preserve that
+shared order but do not have a separate Pins editor.
+
+When several timestamp Pins point to the same item, the Pins row combines them
+into one card. On Apple TV, selecting it lets you choose the saved moment. On
+iPhone and iPad, the combined card displays the saved time and opens the
+current media destination. Creating and choosing exact timestamp playback
+remain Apple TV actions.
 
 
 
 ## Adding and Syncing Pins
 
-Pin an item from its detail page or by long-pressing a content card. You can also pin people and browse filters such as genres or studios.
+Pin an item from its detail page or by long-pressing or touching and holding a
+content card. You can also Pin people. Apple TV additionally creates browse
+Pins such as genres or studios and timestamp Pins during playback; those
+synced Pins remain usable on iPhone and iPad.
 
-Pins follow the signed-in profile. With [Backup & Restore](/settings/backup) enabled, they sync across devices; timestamp images remain local to the device that captured them.
+Pins follow the signed-in server account. With
+[Backup & Restore](/settings/backup) enabled, they sync across devices;
+timestamp images remain local to the Apple TV that captured them.
+
+For the touch-specific behavior, see [Pins on iPhone & iPad](/ios/pins).

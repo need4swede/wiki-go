@@ -87,6 +87,7 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 | [Player Controls](/playback/player-controls) | Scrubbing, skip segments, Up Next |
 | [Playback Menu](/playback/playback-menu) | In-player audio, subtitles, video, chapters, and info |
 | [Conductor](/playback/conductor) | Track and version selection, with optional Pro learning |
+| [Picture in Picture & Background Playback](/ios/playback) | Continue video or audio outside Neptune on iPhone and iPad |
 
 ### Personalization
 
@@ -96,6 +97,16 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 | [Themes](/personalization/themes) | Eight built-in themes plus custom imports |
 | [Item Detail Layouts](/personalization/item-detail-layouts) | Detailed, Immersive, or Minimal |
 | [Cards & Backdrops](/personalization/cards-and-backdrops) | Card styles and artwork behavior |
+
+### iPhone & iPad
+
+| Page | Description |
+|------|-------------|
+| [iPhone & iPad](/ios) | Touch features and iOS system integrations |
+| [Pins](/ios/pins) | Native library bookmarks on iPhone and iPad |
+| [Widgets](/ios/widgets) | Per-widget Pages, dynamic Sections, and native Pins |
+| [Live Activity](/ios/live-activity) | The iPhone Compass in Dynamic Island and on the Lock Screen |
+| [Picture in Picture & Background Playback](/ios/playback) | Floating video, Lock Screen audio, and system transport controls |
 
 ### Settings
 
@@ -113,6 +124,8 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 | [TMDB Integration](/neptune-pro/tmdb-integration) | Richer metadata, people, trailers, studios, and release dates |
 | [Downloads](/neptune-pro/downloads) | Original or space-saving offline media |
 | [Top Shelf Customization](/neptune-pro/top-shelf-customization) | Cinematic Apple TV Home Screen presentation |
+| [Pin Widgets](/ios/widgets#pin-widgets-neptune-pro) | Put native Pins on the iPhone or iPad Home Screen and Lock Screen |
+| [Section Widgets](/ios/widgets#section-widgets-neptune-pro) | Rotate current media from supported Home and Discover sections in iOS widgets |
 
 ### Backend Extensions
 
@@ -134,7 +147,10 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 - **Search that understands**: Instant offline search, semantic theme matching, and local-first AI for hard queries
 - **Neptune AI**: Zero-setup Pro intelligence across Neptune, currently powering natural-language search, Episode Finder, and title and person insights
 - **Seerr Integration**: Browse, request, and approve content without leaving the couch
-- **Pins**: Pin movies, shows, people, genres, or even specific moments during playback
+- **Pins**: Pin movies, shows, people, genres, or even specific moments during playback, then use the same bookmarks across devices
+- **iOS Widgets**: Put a Neptune Page, dynamic Section, or native Pin on the iPhone or iPad Home Screen and Lock Screen
+- **Compass Live Activity**: Reach one to eight configurable shortcuts from Dynamic Island, the iPhone Lock Screen, or Neptune's in-app palette
+- **Picture in Picture & Background Playback**: Keep video floating over other apps or continue audio with Lock Screen and Control Center controls
 - **Cloud Backup & Sync**: Preferences follow you across every device on your account
 - **Custom Themes**: Eight built-in themes with Adaptive and Dynamic modes, plus JSON import for your own designs
 - **Family Ready**: Per-profile everything, child accounts, and PIN-protected admin tools

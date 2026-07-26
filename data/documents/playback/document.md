@@ -16,6 +16,7 @@ Everything from pressing Play to choosing tracks and scrubbing.
 | [Player Controls](/playback/player-controls) | Transport bar, scrubbing, skip segments, Up Next |
 | [Playback Menu](/playback/playback-menu) | The in-player menu: audio, subtitles, video, chapters, info |
 | [Conductor](/playback/conductor) | Track and version selection, with optional Pro learning |
+| [Picture in Picture & Background Playback](/ios/playback) | Continue video or audio outside the iPhone and iPad app |
 
 
 
@@ -46,9 +47,28 @@ When playback starts, [Conductor](/playback/conductor) picks the audio track, su
 
 ## During Playback
 
-Tap the touch surface to reveal the progress bar and controls.
+Tap the Siri Remote touch surface on Apple TV, or tap the video on iPhone and
+iPad, to reveal the progress bar and controls.
 
-Swipe **down** to open the [Playback Menu](/playback/playback-menu) with audio, subtitles, video options, chapters, and stream info.
+On Apple TV, swipe **down** to open the
+[Playback Menu](/playback/playback-menu). On iPhone and iPad, use the onscreen
+menu action. It contains audio, subtitles, video options, chapters, and stream
+info.
+
+
+
+## Leaving Neptune on iPhone or iPad
+
+**Picture in Picture** can move the video into a floating system window when
+you go Home or switch apps. **Background Playback** can instead keep the audio
+playing when Neptune is behind another app or the screen locks. The two
+settings are independent and on by default under **Settings > Playback**.
+
+Lock Screen and Control Center controls provide Play/Pause, 15-second skips,
+and scrubbing. Up Next deliberately stops at the end of the current item while
+Neptune is backgrounded. See
+[Picture in Picture & Background Playback](/ios/playback) for setup and the
+complete behavior matrix.
 
 
 

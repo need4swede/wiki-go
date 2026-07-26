@@ -6,7 +6,9 @@ order: 10
 
 Neptune's custom playback engine. Trident handles direct playback of most file formats so your backend does not have to transcode them first.
 
-Trident is the default engine. If you ever need Apple's native player instead, switch the **Engine** in **Settings > Playback**
+Trident is the default engine on Apple TV and the only engine on iPhone and
+iPad. On Apple TV, you can switch to Apple's native player with **Engine** in
+**Settings > Playback**.
 
 
 ## In This Section
@@ -34,3 +36,8 @@ Configure this in **Settings > Playback > Playback Mode** with a target bitrate 
 Switch audio or subtitle tracks mid-playback from the [Playback Menu](/playback/playback-menu). Track changes happen in place without restarting the video stream.
 
 Enable **Full Video Caching** in **Settings > Playback > Advanced** for disk-backed read-ahead. Pausing lets Trident continue building a playback cushion, and seeking within cached portions avoids another download. This is a bounded per-session cache—not an offline download or a promise that the entire file will remain on the device. Use [Downloads](/browsing/home-screen/downloads) for offline viewing.
+
+On iPhone and iPad, Trident also powers
+[Picture in Picture and Background Playback](/ios/playback). Picture in
+Picture uses the system video window, while background-only sessions continue
+audio and rejoin the video when Neptune returns to the foreground.

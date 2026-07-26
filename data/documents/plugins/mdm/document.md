@@ -18,6 +18,12 @@ Each device can opt out of sync individually if you want to keep its settings se
 
 All settings changes are backed up to the server. When you sign in on a new device, Neptune restores your full configuration from the backup. Themes, layout, playback preferences, and everything else carry over without manual setup.
 
+That synchronized profile includes native [Library Pins](/library/shortcuts),
+the iPhone’s ordered Compass Shortcuts, and its Live Activity enabled/type
+preferences. iOS Home Screen and Lock Screen widget placement, size, and
+per-widget Page/Section/Pin selection remain system-owned configuration on the
+individual device; they are not a single Neptune setting for MDM to replace.
+
 
 
 ## Remote Management
@@ -27,6 +33,11 @@ Server administrators can manage any user's Neptune settings through the plugin'
 Changes push to the user's devices immediately if they're online, or apply the next time they sign in. Only the settings you actually change are sent, so you never accidentally overwrite a user's other preferences.
 
 The settings form is built from a schema that Neptune itself uploads, so new app releases add their new settings to the dashboard automatically. No plugin update required.
+
+On iPhone and iPad, this includes the independent
+[Picture in Picture and Background Playback](/ios/playback) switches under
+Playback. Both default on. A pushed change applies when the user starts the
+next playback session and has no playback effect on Apple TV.
 
 
 

@@ -13,7 +13,7 @@ Access Settings via the gear icon at the left edge of the tab menu bar.
 | Page | Description |
 |------|-------------|
 | [Home](/settings/home) | Home screen sections, navigation bar, spotlight, libraries |
-| [Playback](/settings/playback) | Engine, controls, autoplay, audio, advanced |
+| [Playback](/settings/playback) | Engine, controls, autoplay, audio, background continuation, advanced |
 | [Subtitle Style](/settings/subtitles) | Subtitle appearance |
 | [Plugins](/settings/plugins) | Plugin status and management |
 | [Deep Learning](/settings/deep-learning) | AI features and language model providers |
@@ -21,6 +21,9 @@ Access Settings via the gear icon at the left edge of the tab menu bar.
 | [Metadata](/settings/metadata) | Metadata cache and TMDB data |
 | [Backup & Restore](/settings/backup) | Sync preferences across devices |
 | [Administration](/settings/administration) | User management and parental controls (admins) |
+| [iOS Widgets](/ios/widgets) | Home Screen and Lock Screen Pages, Sections, and Pins |
+| [iPhone Live Activity](/ios/live-activity) | Compass in Dynamic Island and on the Lock Screen |
+| [iOS Playback Outside the App](/ios/playback) | Picture in Picture, background audio, and system controls |
 
 
 
@@ -28,9 +31,12 @@ Access Settings via the gear icon at the left edge of the tab menu bar.
 
 The Settings screen groups everything by scope:
 
-**Profiles.** Avatar cards for switching users, plus **User Preferences**: your personal appearance, [Conductor](/playback/conductor), subtitle style, sounds, and backup settings. Admins also get an **Administration** entry here.
+**Profiles.** Avatar cards for switching users, plus **User Preferences**: your personal appearance, [Conductor](/playback/conductor), subtitle style, sounds, and backup settings. On iPhone, this also contains separate **Live Activity**, **Widgets**, and **Compass** destinations; iPad shows **Widgets** but not the iPhone-only Compass surfaces. Admins also get an **Administration** entry here.
 
-**Neptune.** The [Neptune Pro](/neptune-pro) status and upgrade row, followed by app behavior: Home, Playback, Plugins, Deep Learning, Images, Metadata.
+**Neptune.** The [Neptune Pro](/neptune-pro) status and upgrade row, followed
+by app behavior: Home, Playback, Plugins, Deep Learning, Images, Metadata. On
+iPhone and iPad, Playback also owns the independent Picture in Picture and
+Background Playback toggles.
 
 **Media Server.** Your backend connection: server info, **Change URL** for managing multiple addresses, and **Servers** for adding another server and switching between saved servers without signing in again. This section is labeled **Jellyfin** today and will reflect the connected backend as more are supported.
 

@@ -4,7 +4,13 @@ order: 10
 
 # Pins
 
-Bookmark anything in your library (movies, shows, seasons, episodes, collections, genres, studios, networks, people, tags) and surface them as categorized rows on the Library tab and in the Pins row on Home. A second variant, **timestamp pins**, captures a specific moment of playback so you can jump back to it later.
+Bookmark media, people, and library browse contexts, then reach them from
+categorized Library rows or the Pins row on Home. Native Pins use the same
+ordered, account-scoped settings format on Apple TV, iPhone, and iPad; Backup
+& Restore can synchronize that list between them.
+
+A second variant, **timestamp Pins**, captures a specific Apple TV playback
+moment so you can return to it later.
 
 
 
@@ -17,6 +23,7 @@ Bookmark anything in your library (movies, shows, seasons, episodes, collections
 | Season | One season of a show |
 | Episode | One episode |
 | Collection | A box set or franchise |
+| Music Video | One music video |
 | Person | An actor, director, or writer's filmography |
 | Genre | All content in a genre |
 | Studio | All content from a studio |
@@ -28,97 +35,165 @@ Bookmark anything in your library (movies, shows, seasons, episodes, collections
 
 ## Pinning Items
 
-### From a Detail Page
+### On iPhone and iPad
 
-The first action button on any movie, series, season, or episode page is a **Pin** toggle. Press it once to pin the item, again to unpin. No confirmation dialog.
+- Tap **Pin** on a media or person detail page.
+- Touch and hold a movie, show, season, episode, collection, music video, or
+  person card and choose **Pin** or **Unpin**.
+- Touch and hold an existing Pin card and choose **Remove Pin**.
 
-### Long-Press on Any Card
+iOS does not have a separate Pins settings editor. It preserves the shared
+order while adding and removing Pins where their targets already appear.
+Browse-context and timestamp Pins created on Apple TV remain usable on iPhone
+and iPad.
 
-Hold Select on any content card across Home, Library, or Browse. A modal appears with **Pin** or **Unpin** alongside the played-status actions.
+See [Pins on iPhone & iPad](/ios/pins) for the touch-specific guide.
 
-### From the Episode Menu
+### On Apple TV
 
-Long-press an episode card to open the episode menu. The Pin / Unpin action appears alongside Mark as Played and other quick actions.
+#### From a Detail Page
 
-### From a Person Page
+The first action button on any movie, series, season, or episode page is a
+**Pin** toggle. Press it once to pin the item, again to unpin. No confirmation
+dialog.
 
-Person pages have a **Pin** button next to the portrait. Pinning a person gives you one-tap access to their filmography.
+#### Long-Press on Any Card
 
-### From a Browse Picker
+Hold Select on any content card across Home, Library, or Browse. A modal
+appears with **Pin** or **Unpin** alongside the played-status actions.
 
-When browsing by genre, studio, network, or person, long-press any of the picker cards to pin that browse view. For studios and networks, Neptune normalizes the name so the pin matches its TMDB equivalent when possible.
+#### From the Episode Menu
+
+Long-press an episode card to open the episode menu. The Pin / Unpin action
+appears alongside Mark as Played and other quick actions.
+
+#### From a Person Page
+
+Person pages have a **Pin** button next to the portrait. Pinning a person gives
+you one-tap access to their filmography.
+
+#### From a Browse Picker
+
+When browsing by genre, studio, network, or person, long-press any picker card
+to pin that browse view. For studios and networks, Neptune normalizes the name
+so the Pin matches its TMDB equivalent when possible.
 
 
 
 ## Timestamp Pins
 
-A timestamp pin captures the exact moment you're watching: position plus a thumbnail of the current frame.
+A timestamp Pin captures the exact moment you're watching: position plus a
+thumbnail of the current frame.
 
 ### Creating One
 
-1. Start playing any movie or episode
-2. Tap the touch surface to reveal player controls
-3. Press the **Pin** button on the action row
-4. A confirmation pill shows "Pinned at 1:23:45" for a couple of seconds
+Timestamp Pin creation currently uses the Apple TV player:
 
-The thumbnail comes from the live frame on screen. If a live frame isn't available for any reason (rare), Neptune falls back to the corresponding trickplay tile.
+1. Start playing any movie or episode on Apple TV.
+2. Tap the touch surface to reveal player controls.
+3. Press the **Pin** button on the action row.
+4. A confirmation pill shows “Pinned at 1:23:45” for a couple of seconds.
+
+The thumbnail comes from the live frame on screen. If a live frame is not
+available, Neptune falls back to the corresponding trickplay tile.
 
 ### Resuming from One
 
-Tap a timestamp pin card on the Library tab to open a small modal with three choices:
+On Apple TV, select a timestamp Pin card on the Library tab to open three
+choices:
 
 - **Play from [timestamp].** Jumps to the exact moment.
 - **Go to Item.** Opens the item's detail page without auto-playing.
-- **Remove Pin.** Deletes the pin and its thumbnail.
+- **Remove Pin.** Deletes the Pin and its thumbnail.
+
+On iPhone and iPad, synchronized timestamp Pins appear with their saved time
+and open the current media destination. Creating a new saved moment and
+choosing exact timestamp playback remain Apple TV actions.
 
 ### Multiple Timestamps on One Item
 
-If you create several timestamp pins on the same movie or episode, they collapse into a single card with a small badge showing the count. Tapping it opens a horizontal carousel where each thumbnail shows its own moment, sorted chronologically. Pick the one you want to resume from.
+On Apple TV, several timestamp Pins for the same movie or episode collapse
+into one card with a count badge. Selecting it opens a chronological carousel
+of saved moments.
+
+On iPhone and iPad, the moments also collapse into one card. Removing that
+card removes every timestamp Pin for the item.
 
 
 
 ## Where Pins Appear
 
-Pinned items appear in two places:
-
-- The **Pins** section on the Library tab, organized into rows by category (Movies, Shows, Episodes, Collections, Actors, Directors, Genres, Studios, Networks, Tags)
-- The **Pins** row on the Home screen, a flat row of everything you've pinned
+| Area | What It Shows |
+|------|---------------|
+| **Home** | Every native Pin |
+| **Movies** | Movie Pins |
+| **Shows** | Series, season, and episode Pins |
+| **Music** | Music-video Pins when the Music surface is enabled |
+| **Library** | Pins grouped into ordered category rows |
 
 | Card Style | Used For |
 |------------|----------|
 | Gradient with watermark icon | Genre, Studio, Network, Tag |
 | Person poster | Actors, directors, writers |
-| Item poster | Movie, Series, Season, Collection |
-| Landscape thumbnail | Episode, Timestamp pin |
+| Item poster | Movie, Series, Season, Collection, Music Video |
+| Landscape thumbnail | Episode, Timestamp Pin |
 
-The Pins section can be reordered or hidden via Library section customization, and the Pins row via Home customization.
+The Pins section can be reordered or hidden through Library customization, and
+the Pins row through Home customization.
 
 
 
 ## Edit Mode
 
-Long-press any card in a Pins row to enter edit mode. Cards begin a gentle jiggle animation.
+Apple TV provides an edit mode for reordering the shared Pins list. Long-press
+any card in a Library Pins row to enter it; cards begin a gentle jiggle
+animation.
 
 | Action | How |
 |--------|-----|
-| Move within a row | Tap to pick up, then navigate left/right to swap with neighbors |
-| Move between rows | Pick up, navigate up/down to swap entire category groups |
+| Move within a row | Select a card, then navigate left or right to swap with its neighbors |
+| Move between rows | Select a card, then navigate up or down to swap category groups |
 | Remove | Press Select on a card to open its menu, then choose Unpin |
 | Exit edit mode | Press Menu/Back, or focus away from the row |
+
+iPhone and iPad preserve this synchronized order but do not provide a
+separate reorder screen.
 
 
 
 ## Sync Across Devices
 
-If [Backup & Sync](/settings/backup) is enabled with the Neptune plugin, your pins ride along with the rest of your settings. Pin something on one device and it shows up on every other device signed in to the same account within seconds.
+If [Backup & Restore](/settings/backup) is enabled with the Neptune plugin,
+your Pins travel with the rest of the profile's settings. Pin something on one
+device and it appears on the others signed into the same server account.
 
-> Timestamp thumbnails themselves aren't synced. Only the position is. A device that wasn't the original capturer falls back to the regular episode image when displaying a synced timestamp pin.
+> Timestamp thumbnails themselves are not synced. Only the position is. A
+> device that did not capture the frame falls back to the item's normal
+> artwork.
+
+
+
+## Pins, Widgets, and Compass
+
+These related features do not share one configuration:
+
+| Feature | Uses Native Pins? | Configuration |
+|---------|-------------------|---------------|
+| Neptune’s Home and Library rows | Yes | Pin or unpin items where they appear |
+| [Conventional iOS widgets](/ios/widgets) | May select one native Pin; every widget has its own choice | iOS **Edit Widget** sheet |
+| [iPhone Compass Live Activity](/ios/live-activity) | No; it uses a separate one-to-eight Compass Shortcuts deck | **Settings > User Preferences > Compass** |
+
+Pins inside Neptune are Free. Standard Page widgets are also Free; targeting a
+native Pin or dynamic Section from a conventional widget requires Neptune Pro.
 
 
 
 ## Tips
 
-- **Quick rewatch lists.** Pin a few favorite movies or shows for one-tap access from the Library tab.
-- **Remember a moment.** Pin a memorable scene during playback so you don't have to scrub for it later.
-- **Browse pins are filters.** Pinning "Sci-Fi" creates a one-tap path back to the full sci-fi browse view, including all your usual filtering.
-- **Studios match TMDB.** Pinning a studio like "A24" maps to its TMDB ID where possible, so the browse view uses the same metadata as Discover.
+- **Quick rewatch lists.** Pin favorite movies or shows for one-tap access.
+- **Remember a moment.** Pin a memorable Apple TV playback scene instead of
+  scrubbing for it later.
+- **Browse Pins are filters.** Pinning “Sci-Fi” creates a one-tap path back to
+  the current sci-fi browse view, including the usual filtering.
+- **Studios match TMDB.** Pinning a studio such as “A24” maps to its TMDB ID
+  where possible, so the browse view uses the same metadata as Discover.

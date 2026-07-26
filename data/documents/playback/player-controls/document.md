@@ -4,7 +4,9 @@ order: 20
 
 # Player Controls
 
-Navigate playback with the Siri Remote. On iPhone and iPad the same controls are touch-first: tap to reveal them, drag the timeline to scrub, and the same action buttons sit in the same places.
+Navigate playback with the Siri Remote. On iPhone and iPad the equivalent
+controls are touch-first: tap to reveal them and drag the timeline to scrub.
+Platform-only actions are called out below.
 
 
 
@@ -35,9 +37,26 @@ The skip interval is configurable (5, 10, or 15 seconds). The Menu button behavi
 
 
 
-## Action Buttons
+## iPhone & iPad Outside-App Controls
 
-An action row sits beside the title when controls are visible. Three buttons show by default:
+With [Picture in Picture](/ios/playback#using-picture-in-picture) enabled,
+leaving Neptune during playback opens a system floating window automatically.
+Tap it for Play/Pause and skip controls, or return to Neptune with its
+full-screen control. Neptune does not add a separate Picture in Picture button
+to the in-app player.
+
+With [Background Playback](/ios/playback#background-playback-and-system-controls)
+enabled, the Lock Screen and Control Center show Now Playing information with
+Play/Pause, 15-second skips, and position scrubbing. Seeking a transcode from
+outside Neptune may be unavailable; return to the full-screen player for that
+seek.
+
+
+
+## Apple TV Action Buttons
+
+On Apple TV, an action row sits beside the title when controls are visible.
+Three buttons show by default:
 
 | Button | What It Does |
 |--------|--------------|
@@ -46,6 +65,11 @@ An action row sits beside the title when controls are visible. Three buttons sho
 | **Next Episode** | Jumps to the next episode (or re-rolls during shuffle) |
 
 Four more can be enabled in **Settings > Playback > Controls > Action Buttons**: **Bitrate**, **Technical Info**, **Autoplay** (toggles autoplay for the session), and **Play / Pause**. Reorder or hide everything except the Playback Menu.
+
+The timestamp Pin action is currently Apple TV-only. On iPhone and iPad, use
+the Pin action on a media detail page or touch and hold a media card to create
+a normal native Pin. Synchronized timestamp Pins remain visible there; see
+[Pins on iPhone & iPad](/ios/pins).
 
 
 
@@ -87,6 +111,10 @@ When an episode ends, Up Next counts down to the next one:
 - **Fixed countdown:** a set 10, 20, or 30 seconds with a **Play Now** button.
 
 Press Menu to cancel and let the credits roll. Autoplay can also carry across seasons, and through movie collections if you enable **Autoplay Collections**. All of it lives in **Settings > Playback > Autoplay**.
+
+On iPhone and iPad, Up Next does not start a fresh playback session while
+Neptune remains backgrounded. The finished session stops and can be continued
+from Continue Watching after you return.
 
 
 

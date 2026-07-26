@@ -4,7 +4,9 @@ order: 100
 
 # Neptune Pro
 
-Pro expands Neptune's capabilities with some additional Pro features: intelligence built specifically for Neptune, richer connected metadata, adaptive playback preferences, offline media, and deeper Apple TV presentation controls to name a few
+Pro expands Neptune with intelligence built specifically for the app, richer
+connected metadata, adaptive playback preferences, offline media, and deeper
+Apple-platform integrations.
 
 ## What Pro Includes
 
@@ -15,6 +17,8 @@ Pro expands Neptune's capabilities with some additional Pro features: intelligen
 | [TMDB Integration](/neptune-pro/tmdb-integration) | Richer artwork, trailers, credits, release dates, people, studios, and networks |
 | [Downloads](/neptune-pro/downloads) | Original-quality or space-saving offline movies and episodes |
 | [Top Shelf Customization](/neptune-pro/top-shelf-customization) | Cinematic presentation, Studio designs, section ordering, and direct Play actions on Apple TV |
+| [Pin Widgets](/ios/widgets#pin-widgets-neptune-pro) | Put a native Pin on the iPhone or iPad Home Screen or Lock Screen, with direct Play for movie and episode Pins |
+| [Section Widgets](/ios/widgets#section-widgets-neptune-pro) | Rotate current media from 16 supported Home and Discover sections in a widget |
 
 
 
@@ -22,12 +26,13 @@ Pro expands Neptune's capabilities with some additional Pro features: intelligen
 
 | Feature | Free | Neptune Pro |
 |------------|------|-------------|
-| **Playback** | Every supported codec, format, HDR profile, and subtitle type | The same complete playback engine |
+| **Playback** | Every supported codec, format, HDR profile, and subtitle type, plus iOS [Picture in Picture and Background Playback](/ios/playback) | The same complete playback engine |
 | **Conductor** | Manual rules automatically select tracks and versions | Auto mode adapts and learns from your choices over time |
 | **AI / LLM** | Use third-party provider with your own compute or API key | Use the integrated, official first-party Neptune AI service |
 | **Metadata** | Everything supplied by your media backend | Commercial API access across detail, people, home surfaces and more |
-| **Offline** | Requires a network conenction to your media backend | Download and play media without a network connection |
+| **Offline** | Requires a network connection to your media backend | Download and play media without a network connection |
 | **Top Shelf** | Core Top Shelf presentation and content controls | Cinematic mode, Studio artwork, ordering, item limits, rich details, and Play actions |
+| **iOS Widgets** | Every size can open a standard Neptune Page; native Pins and in-app Home and Discover sections remain available | Adds native Pin Widgets and dynamic Section Widgets to the per-widget picker |
 
 ## Plans and Devices
 
@@ -48,5 +53,9 @@ Neptune checks Pro access live without deleting your preferences:
 - TMDB-only enrichment is hidden; backend-native metadata continues normally and cached enrichment is retained for later reactivation.
 - Downloads and their management surfaces become unavailable. Existing files and progress remain on the device.
 - Top Shelf falls back to its Free presentation and limits while keeping saved Pro choices for later.
+- Standard iOS Page widgets continue working. Configured Pin and Section
+  widgets retain their selections but show the matching locked state; restoring
+  Pro republishes their current content without deleting the native Pin or
+  in-app Home or Discover section.
 
 Use **Restore Purchases** if an active subscription or Lifetime purchase is not recognized on a device.
