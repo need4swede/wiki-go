@@ -241,6 +241,15 @@
     max-width: 100%;
 }
 
+/* Tables are wrapped in a scroll container - let it scroll rather than
+   squeezing columns inside the narrow version dialog */
+.version-content .table-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
 .version-content blockquote,
 .markdown-body blockquote {
     border-left: 4px solid var(--primary-color);

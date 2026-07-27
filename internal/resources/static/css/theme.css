@@ -163,8 +163,7 @@ td {
 .markdown-content code,
 .markdown-content pre,
 .markdown-content .path,
-.markdown-content .filepath,
-td {
+.markdown-content .filepath {
     word-break: break-all;
 }
 

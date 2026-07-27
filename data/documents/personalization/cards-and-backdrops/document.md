@@ -17,6 +17,10 @@ The **Backdrops** tab controls the artwork behind everything:
 | **Show Backdrops on Hover** | Focus a card anywhere and its backdrop takes over the top of the screen. Turn off for a calmer browse |
 | **Theme Opacity** | How strongly your theme tints backdrops. Low values let artwork shine through; high values keep the theme's color dominant |
 
+On iPhone and iPad there is a third setting, **Framing**, because a widescreen
+backdrop and an upright screen are opposite shapes. It also unlocks placing an
+individual backdrop by hand. See [Backdrops on iPhone & iPad](/ios/backdrops).
+
 
 
 ## Cards

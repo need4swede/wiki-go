@@ -297,6 +297,35 @@
         page-break-inside: avoid;
     }
 
+    /* Never clip a table's scroll container on paper - there is nothing to
+       scroll on printed output */
+    .table-container {
+        overflow: visible !important;
+        border: none !important;
+        box-shadow: none !important;
+        background: none !important;
+        page-break-inside: avoid;
+    }
+
+    .table-container > table {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Wide tables can't fit the page at their natural widths - force even
+       columns and let long values wrap so nothing runs off the paper */
+    .table-container > table:has(th:nth-child(5)),
+    .table-container > table:has(td:nth-child(5)) {
+        table-layout: fixed !important;
+    }
+
+    .table-container > table:has(th:nth-child(5)) th,
+    .table-container > table:has(th:nth-child(5)) td,
+    .table-container > table:has(td:nth-child(5)) th,
+    .table-container > table:has(td:nth-child(5)) td {
+        overflow-wrap: anywhere !important;
+    }
+
     /* Link styling */
     a {
         text-decoration: underline !important;

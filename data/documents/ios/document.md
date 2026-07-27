@@ -19,6 +19,7 @@ Activities, and it can continue video or audio after you leave the app.
 | [Widgets](/ios/widgets) | Configure a Page, dynamic Section, or native Pin for each Home Screen or Lock Screen widget |
 | [Live Activity](/ios/live-activity) | Put the iPhone Compass in Dynamic Island and on the Lock Screen |
 | [Picture in Picture & Background Playback](/ios/playback) | Keep video floating or audio playing when Neptune leaves the foreground |
+| [Backdrops](/ios/backdrops) | Choose how widescreen artwork is fitted to an upright screen, or place an image by hand |
 
 
 
@@ -49,5 +50,8 @@ also does not mirror the Compass: every widget instance has its own selection.
 - Picture in Picture and Background Playback work on iPhone and iPad. Both are
   on by default, can be controlled independently under **Settings >
   Playback**, and apply to the next playback session.
+- Backdrop framing and hold-to-reposition are iPhone and iPad features. Apple TV
+  keeps filling the screen, because a television is already the shape backdrop
+  artwork is made for.
 - Neptune for iPhone and iPad is currently distributed through TestFlight.
   See [Installation](/getting-started/installation).

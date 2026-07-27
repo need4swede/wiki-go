@@ -141,6 +141,10 @@ func RenderMarkdownWithPath(md string, docPath string) []byte {
 	// This ensures RTL/LTR content is properly rendered with Markdown formatting
 	htmlResult = goldext.RestoreDirectionBlocks(htmlResult)
 
+	// Post-process: Wrap tables so wide tables scroll instead of squeezing
+	// columns on narrow viewports
+	htmlResult = goldext.WrapTables(htmlResult)
+
 	// Return the post-processed HTML
 	return []byte(htmlResult)
 }
