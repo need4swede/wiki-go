@@ -20,6 +20,7 @@ Access Settings via the gear icon at the left edge of the tab menu bar.
 | [Images](/settings/images) | Image cache and downloads |
 | [Metadata](/settings/metadata) | Metadata cache and TMDB data |
 | [Backup & Restore](/settings/backup) | Sync preferences across devices |
+| [Device Overrides](/settings/device-overrides) | Keep individual settings different on one device |
 | [Administration](/settings/administration) | User management and parental controls (admins) |
 | [iOS Widgets](/ios/widgets) | Home Screen and Lock Screen Pages, Sections, and Pins |
 | [iPhone Live Activity](/ios/live-activity) | Compass in Dynamic Island and on the Lock Screen |
@@ -31,7 +32,14 @@ Access Settings via the gear icon at the left edge of the tab menu bar.
 
 The Settings screen groups everything by scope:
 
-**Profiles.** Avatar cards for switching users, plus **User Preferences**: your personal appearance, [Conductor](/playback/conductor), subtitle style, sounds, and backup settings. On iPhone, this also contains separate **Live Activity**, **Widgets**, and **Compass** destinations; iPad shows **Widgets** but not the iPhone-only Compass surfaces. Admins also get an **Administration** entry here.
+**Profiles.** Avatar cards for switching users, plus **User Preferences**: your
+personal appearance, [Conductor](/playback/conductor), subtitle style, sounds,
+and [Backup & Restore](/settings/backup). Backup & Restore also contains
+[Device Overrides](/settings/device-overrides), which can keep one otherwise
+synchronized setting different on the current device. On iPhone, User
+Preferences also contains separate **Live Activity**, **Widgets**, and
+**Compass** destinations; iPad shows **Widgets** but not the iPhone-only
+Compass surfaces. Admins also get an **Administration** entry here.
 
 **Neptune.** The [Neptune Pro](/neptune-pro) status and upgrade row, followed
 by app behavior: Home, Playback, Plugins, Deep Learning, Images, Metadata. On
@@ -50,4 +58,12 @@ At the bottom: **Resync Library** clears cached content and reloads everything f
 
 ## Per-Profile vs Per-Device
 
-Nearly every preference in Neptune belongs to the signed-in profile, so each family member gets their own setup. Device-wide items (like the image cache) are shared. Backend-managed items (such as parental controls and streaming limits) live on the media server and apply everywhere that user signs in; exact capabilities vary by backend.
+Nearly every preference in Neptune belongs to the signed-in profile, so each
+family member gets their own setup. With Settings Sync, those profile
+preferences normally follow the same user to every device. A Device Override
+keeps one eligible setting local to a particular server, user, and physical
+device without turning off the rest of sync.
+
+Device-wide items such as the image cache are shared locally. Backend-managed
+items such as parental controls and streaming limits live on the media server
+and apply everywhere that user signs in; exact capabilities vary by backend.

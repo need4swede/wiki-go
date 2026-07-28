@@ -113,6 +113,7 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 | Page | Description |
 |------|-------------|
 | [Settings](/settings) | Every configuration screen, explained |
+| [Device Overrides](/settings/device-overrides) | Keep one synchronized setting different on one device |
 
 ### Neptune Pro
 
@@ -151,7 +152,7 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 - **iOS Widgets**: Put a Neptune Page, dynamic Section, or native Pin on the iPhone or iPad Home Screen and Lock Screen
 - **Compass Live Activity**: Reach one to eight configurable shortcuts from Dynamic Island, the iPhone Lock Screen, or Neptune's in-app palette
 - **Picture in Picture & Background Playback**: Keep video floating over other apps or continue audio with Lock Screen and Control Center controls
-- **Cloud Backup & Sync**: Preferences follow you across every device on your account
+- **Cloud Backup & Sync**: Preferences follow you across every device, with Device Overrides for settings that should stay different on one device
 - **Custom Themes**: Eight built-in themes with Adaptive and Dynamic modes, plus JSON import for your own designs
 - **Family Ready**: Per-profile everything, child accounts, and PIN-protected admin tools
 

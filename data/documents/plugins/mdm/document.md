@@ -12,11 +12,23 @@ Neptune MDM handles settings sync, backup, and remote device management. It keep
 
 ## Settings Sync
 
-Every change you make on one device syncs to all your other Neptune clients. Change your theme on your iPhone and your Apple TV updates in real time. Adjust playback settings on one device and every other device picks up the change automatically.
+Every supported preference you change on one device syncs to your other
+Neptune clients. Change your theme on your iPhone and your Apple TV updates in
+real time. Adjust playback settings on one device and every other device picks
+up the change automatically.
 
-Each device can opt out of sync individually if you want to keep its settings separate. See [Backup & Restore](/settings/backup) for the client-side controls.
+You can turn Settings Sync off for a device or use
+[Device Overrides](/settings/device-overrides) to keep only selected settings
+different there. Applying an override leaves the setting's current value on
+that device and does not change the server or another device. Removing it
+publishes the current local value the next time sync runs. See
+[Backup & Restore](/settings/backup) for the client-side controls.
 
-All settings changes are backed up to the server. When you sign in on a new device, Neptune restores your full configuration from the backup. Themes, layout, playback preferences, and everything else carry over without manual setup.
+Supported synchronized changes are backed up to the server. When you sign in
+on a new device, Neptune restores that synchronized configuration. Themes,
+layout, playback preferences, and other profile settings carry over without
+manual setup. Device Overrides stay on the device where they were created and
+are not included in the backup.
 
 That synchronized profile includes native [Library Pins](/library/shortcuts),
 the iPhone’s ordered Compass Shortcuts, and its Live Activity enabled/type
@@ -28,7 +40,10 @@ individual device; they are not a single Neptune setting for MDM to replace.
 
 ## Remote Management
 
-Server administrators can manage any user's Neptune settings through the plugin's dashboard in Jellyfin. Every setting available in Neptune (appearance, playback, search, layout, and more) can be configured remotely.
+Server administrators can manage a user's supported synchronized Neptune
+settings through the plugin's dashboard in Jellyfin. The schema covers
+appearance, playback, search, layout, and other profile preferences while
+excluding device-local and runtime-only values.
 
 Changes push to the user's devices immediately if they're online, or apply the next time they sign in. Only the settings you actually change are sent, so you never accidentally overwrite a user's other preferences.
 
@@ -38,6 +53,17 @@ On iPhone and iPad, this includes the independent
 [Picture in Picture and Background Playback](/ios/playback) switches under
 Playback. Both default on. A pushed change applies when the user starts the
 next playback session and has no playback effect on Apple TV.
+
+With the current plugin protocol, an administrator's explicit change to a
+setting also clears a Device Override for that setting. Only settings included
+in the administrator's change are affected; unrelated overrides remain. The
+forced value is retained by the server so a device that was offline still
+applies it after reconnecting, even when ordinary sync is off.
+
+Older Neptune MDM releases still allow normal Device Override filtering but
+cannot guarantee administrator override clearing or preserve every Server
+Default when creating a user's first partial backup. Neptune displays a
+compatibility warning until the plugin is updated.
 
 
 
