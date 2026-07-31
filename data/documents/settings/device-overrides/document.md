@@ -7,6 +7,11 @@ order: 85
 Device Overrides lets one setting stay different on one device while the rest
 of your Neptune preferences continue to sync normally.
 
+Unlike [Profile Presets](/personalization/profile-presets), the Neptune Pro
+loadout feature that applies a reusable group of selected settings manually or
+by device type, a Device Override pins one setting to one physical device and
+remains Free.
+
 For example, you can keep the **Immersive** item-detail layout on an Apple TV
 and use **Minimal** on an iPhone without separating every other preference.
 Device Overrides is a free feature. Creating a new override requires
@@ -54,6 +59,9 @@ is.
 Overrides belong to one server account, profile, and physical device. They do
 not travel inside the cloud backup. Switching profiles or servers uses that
 profile's own override list.
+
+If the active Profile Preset also contains an overridden setting, the Device
+Override wins. Other settings in the preset continue to apply.
 
 
 
@@ -104,6 +112,18 @@ setting:
 This still works if the device was offline during the change. The forced value
 is applied when Neptune reconnects, even if ordinary device-to-device sync is
 off.
+
+The complete order for one setting is: individual administrator push, explicit
+Device Override, active Profile Preset, then the synchronized base value.
+An administrator push suppresses only the conflicting member of an active
+preset until **Reapply Preset**, an active selection change, or a preset edit.
+Server Defaults are a starting template used only when there is no personal
+backup; they are not an administrator push. They bootstrap configured,
+untouched synchronized settings once even when Settings Sync is off. A Device
+Override wins over the corresponding default, omitted template values have no
+opinion, and later default changes are not retroactive. The additional
+empty-document guard applies specifically to adopting the template's Profile
+Presets.
 
 Older plugin versions still support the normal forward-only filtering, but
 cannot provide the durable proof Neptune needs to clear an override after an

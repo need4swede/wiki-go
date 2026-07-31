@@ -9,8 +9,8 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 | Backend | Status |
 |---------|--------|
 | **Jellyfin 10.10+** | Supported today |
+| **Emby 4.9.5+** | Beta; core client available while capability coverage expands |
 | **Plex** | Planned |
-| **Emby** | Planned |
 | **Additional backends** | Planned; to be determined |
 
 
@@ -32,6 +32,8 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 |------|-------------|
 | [Installation](/getting-started/installation) | App Store, betas, and requirements |
 | [Setup](/getting-started/setup) | Server connection, sign-in, plugins, Seerr |
+| [Supported Media Servers](/getting-started/backends) | Jellyfin, Emby beta, Plex status, and capability differences |
+| [One Neptune](/getting-started/backends/one-neptune) | One familiar page and navigation system across every backend |
 | [Devices](/getting-started/devices) | Neptune on Apple TV, iPhone, iPad, and Mac |
 
 ### Browsing
@@ -94,7 +96,8 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 | Page | Description |
 |------|-------------|
 | [Profiles](/personalization/profiles) | Multi-user support |
-| [Themes](/personalization/themes) | Eight built-in themes plus custom imports |
+| [Profile Presets](/personalization/profile-presets) | Reusable settings loadouts with manual or automatic device-type selection |
+| [Themes](/personalization/themes) | Nine built-in themes plus custom imports |
 | [Item Detail Layouts](/personalization/item-detail-layouts) | Detailed, Immersive, or Minimal |
 | [Cards & Backdrops](/personalization/cards-and-backdrops) | Card styles and artwork behavior |
 
@@ -113,6 +116,7 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 | Page | Description |
 |------|-------------|
 | [Settings](/settings) | Every configuration screen, explained |
+| [Profile Presets](/personalization/profile-presets) | Reusable per-profile loadouts with one optional automatic preset per device type |
 | [Device Overrides](/settings/device-overrides) | Keep one synchronized setting different on one device |
 
 ### Neptune Pro
@@ -134,7 +138,7 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 |------|-------------|
 | [Neptune Plugin Suite](/plugins) | Optional Jellyfin extensions: Indexers, MDM, Transcoder, and Studio |
 | [Indexers](/plugins/indexers) | Server-side indexing and music metadata |
-| [MDM](/plugins/mdm) | Settings sync, announcements, remote management |
+| [MDM](/plugins/mdm) | Settings sync, Profile Presets, Server Defaults, announcements, remote management |
 | [Transcoder](/plugins/transcoder) | Server-managed download quality profiles (coming soon) |
 | [Studio](/plugins/studio) | UI customization, beginning with Top Shelf design (coming soon) |
 
@@ -152,8 +156,8 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 - **iOS Widgets**: Put a Neptune Page, dynamic Section, or native Pin on the iPhone or iPad Home Screen and Lock Screen
 - **Compass Live Activity**: Reach one to eight configurable shortcuts from Dynamic Island, the iPhone Lock Screen, or Neptune's in-app palette
 - **Picture in Picture & Background Playback**: Keep video floating over other apps or continue audio with Lock Screen and Control Center controls
-- **Cloud Backup & Sync**: Preferences follow you across every device, with Device Overrides for settings that should stay different on one device
-- **Custom Themes**: Eight built-in themes with Adaptive and Dynamic modes, plus JSON import for your own designs
+- **Cloud Backup & Sync**: Preferences, preset definitions, and device-type assignments follow you across devices, with Device Overrides for settings that should stay different on one physical device
+- **Custom Themes**: Nine built-in themes with Adaptive and Dynamic modes, plus JSON import for your own designs
 - **Family Ready**: Per-profile everything, child accounts, and PIN-protected admin tools
 
 

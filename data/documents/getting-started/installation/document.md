@@ -13,9 +13,11 @@ Neptune runs on Apple TV, iPhone, iPad, and Mac. Install it on as many devices a
 | **Apple TV** | Apple TV 4K, tvOS 18.5 or later |
 | **iPhone / iPad** | iOS or iPadOS 16 or later |
 | **Mac** | TBD |
-| **Media server** | Jellyfin 10.10 or later (currently supported) |
+| **Media server** | Jellyfin 10.10+ or Emby 4.9.5+ (beta) |
 
-Neptune's app experience is backend-agnostic. Jellyfin is the available backend today; Plex and Emby are planned, with additional backends to be determined.
+Neptune's app experience is backend-agnostic. Jellyfin is the primary backend,
+and Emby support is available while its capability coverage continues to
+expand. Plex and additional backends remain planned.
 
 ## Apple TV
 

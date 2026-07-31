@@ -20,6 +20,13 @@ Open the Search tab, or use [Compass](/browsing/navigation/compass) on Apple TV
 or iPhone to start a search from anywhere. Type with the keyboard or use
 dictation.
 
+The Search page and result geometry stay the same for every backend. The
+available search collaborators are capability-based: Jellyfin currently
+supports Neptune's full local catalog synchronization, while the Emby beta
+uses server search until its full local-index synchronization is connected.
+Semantic and AI features that require that local catalog remain unavailable
+for that Emby session rather than replacing the Search page.
+
 | What you remember | Example | What Neptune uses |
 |-------------------|---------|-------------------|
 | A title or part of one | `dark kni` | Title prefix matching |
@@ -78,6 +85,23 @@ If nothing useful is found:
 ## Before You Search
 
 The empty Search screen shows recent searches as reusable chips. Neptune records a query only after you open one of its results, so abandoned typing does not clutter the list. History is profile-specific and can be cleared from the Search screen.
+
+
+## Find a Setting
+
+Settings has its own search, separate from media search:
+
+- On iPhone and iPad, open **Settings** and pull down from the very top to
+  reveal **Search Settings**.
+- On Apple TV, select the active **Settings** tab again to open the Settings
+  search keyboard.
+
+You do not need to know Neptune's exact label. Every setting also carries
+localized, invisible aliases for the words people are likely to remember. For
+example, searching for `blur` finds **Hide Spoilers on Unstarted Episodes**,
+while `lip sync` finds the audio-delay control. These aliases affect matching
+only—they are not displayed, and they never reveal settings that are
+unavailable for the current device, account, or server.
 
 
 

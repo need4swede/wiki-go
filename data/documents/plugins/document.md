@@ -4,16 +4,25 @@ order: 110
 
 # Neptune Plugin Suite
 
-The Neptune Plugin Suite is the optional server extension for Jellyfin, Neptune's currently supported backend. Each member handles a distinct part of the client-server relationship: **Indexers** builds shared indexes, **MDM** manages settings and devices, **Transcoder** controls download quality policy, and **Studio** provides server-backed UI customization—starting with Top Shelf artwork.
+The Neptune Plugin Suite is the optional server extension for Jellyfin,
+Neptune's primary backend. Each member handles a distinct part of the
+client-server relationship: **Indexers** builds shared indexes, **MDM** manages
+settings and devices, **Transcoder** controls download quality policy, and
+**Studio** provides server-backed UI customization—starting with Top Shelf
+artwork.
 
-The app itself is backend-agnostic and does not require these plugins. Plex, Emby, and additional backends are planned; their extension and plugin options will be documented separately when available.
+The app itself is backend-agnostic and does not require these plugins.
+These plugins currently extend Jellyfin. Neptune does not yet have an Emby
+companion, so companion-backed capabilities such as Settings Sync, Server
+Defaults, announcements, and Neptune MDM are unavailable on an Emby
+connection. Plex and additional backends remain planned.
 
 ## In This Section
 
 | Page | Description |
 |------|-------------|
 | [Indexers](/plugins/indexers) | Server-side indexing, richer search data, music metadata |
-| [MDM](/plugins/mdm) | Settings sync, backup, announcements, and remote management |
+| [MDM](/plugins/mdm) | Settings sync, Profile Presets, Server Defaults, announcements, and remote management |
 | [Transcoder](/plugins/transcoder) | Server-managed download quality profiles and original-quality policy (coming soon) |
 | [Studio](/plugins/studio) | Neptune UI and artwork customization |
 
@@ -24,7 +33,7 @@ The app itself is backend-agnostic and does not require these plugins. Plex, Emb
 | Plugin | Purpose |
 |--------|---------|
 | **Neptune Indexers** | Builds library and search indexes on the server so clients don't have to, and enriches music video libraries with credits, artist info, and artwork |
-| **Neptune MDM** | Syncs settings across devices, backs them up, and gives server admins remote management, announcements, and child accounts |
+| **Neptune MDM** | Syncs settings and Profile Presets, seeds Server Defaults, and gives server admins remote management, announcements, and child accounts |
 | **Neptune Transcoder** | Replaces Neptune's built-in download quality presets with a server-managed ladder and lets admins disable original-quality downloads |
 | **Neptune Studio** | Provides a server-backed UI customization system for Neptune, including a visual editor and renderer for Top Shelf designs |
 

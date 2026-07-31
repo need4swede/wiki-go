@@ -20,7 +20,11 @@ Neptune keeps a full-text index of your library on the device, so searches retur
 | **Genre synonyms** | "sci-fi" finds Science Fiction | Exact only |
 | **People search** | Cast and crew, with credits data | Often incomplete |
 
-The Backend Search column describes Jellyfin today. Search behavior may vary when Plex, Emby, and additional backends become available; Neptune's on-device index provides the consistent experience across them.
+Backend Search behavior can vary by server capability, while Neptune keeps the
+same Search page and interaction design. The richer on-device index is used
+only when the active backend can synchronize the required catalog safely.
+Jellyfin supports that path today; the current Emby beta uses server search
+while its full local-index synchronization remains in development.
 
 
 

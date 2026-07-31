@@ -6,7 +6,85 @@ order: 20
 
 Neptune MDM is the management extension for Jellyfin. Neptune's app and per-device preferences remain usable without it; sync and remote-management support for future backends will depend on their extension capabilities.
 
-Neptune MDM handles settings sync, backup, and remote device management. It keeps your preferences consistent across every Neptune client on your account and gives server administrators tools for managing users, sending announcements, and setting up child accounts.
+Neptune does not currently have an Emby companion plugin, so an Emby connection
+does not expose MDM, Settings Sync, Server Defaults, announcements, or this
+native administration console. Neptune never sends Jellyfin MDM routes to an
+Emby server.
+
+Neptune MDM handles settings sync, backup, Profile Presets, Server Defaults,
+remote configuration, and device inventory. It keeps your preferences
+consistent across every Neptune client on your account and gives server
+administrators tools for managing users, sending announcements, and setting
+up child accounts.
+
+The complete Jellyfin plugin dashboard is Free. Administering Neptune MDM
+directly from an iPhone, iPad, Apple TV, or future Mac requires
+[Neptune Pro](/neptune-pro). Receiving managed settings and using Settings
+Sync do not require Pro.
+
+## Administer from Neptune (Neptune Pro)
+
+Jellyfin administrators with Neptune Pro can operate Neptune MDM without
+opening the Jellyfin dashboard. On iPhone, iPad, or Apple TV, open Neptune's existing
+**Administration** area, complete its passcode challenge if one is configured,
+and choose **Neptune MDM**.
+
+The native console provides:
+
+- plugin and connection status;
+- Server Defaults and individual users' settings backups;
+- **Copy from User**, which stages another user's effective settings as an
+  unsaved starting point before the administrator confirms Save;
+- exact settings changes that leave unrelated and future settings untouched;
+- read-only device inventory;
+- child-account policy;
+- announcement authoring and targeting;
+- schema-driven setting controls, native editors for structured settings, and
+  Advanced JSON; and
+- a confirmation-protected wipe of all Neptune MDM data.
+
+When you choose Server Defaults or a user, the native editor follows the same
+Settings hierarchy you already use in Neptune—User Preferences, Neptune,
+Server, Seerr, and Backup & Sync—instead of presenting one long server form.
+A subtle reminder stays on nested pages so it remains clear whose remote
+settings you are changing. The familiar layout still edits a server-managed
+draft; it does not sign you in as that user or change the administrator's own
+local settings.
+
+Only fields in Neptune's remote-management schema appear in this mirror.
+Local-only actions such as launching Compass, clearing learned state, or
+rebuilding caches are intentionally omitted. Forward-compatible schema
+sections remain editable under **Additional Managed Settings**.
+
+Only Jellyfin administrator accounts see this entry. Neptune checks the active
+account before every operation, and the plugin separately requires elevated
+server authorization. The optional Neptune passcode protects the menu from
+other people using the same device; it does not replace server authorization.
+Pro unlocks the native interface only—it does not make an account an
+administrator.
+
+Neptune MDM `1.2.6.101` is supported by this console and does not need to be
+upgraded first. Neptune detects that release's older settings-sync capability
+and safely materializes inherited Server Defaults when an administrator makes
+a user's first partial change. Newer plugin capabilities are adopted
+automatically.
+
+The console manages Neptune MDM only. Neptune Indexers remains a separate
+plugin and has no status, configuration, or rebuild controls here. The shared
+administration foundation is also ready for a future Neptune macOS interface.
+
+Profile Presets stay editable from the Free Jellyfin plugin dashboard. A Pro
+administrator can edit them from the native console too. The dashboard shows
+**Requires Neptune Pro** because it cannot inspect App Store ownership. The
+native editor is contextual: your own Pro account says **Available with Your
+Neptune Pro**, another account says **Managed User Needs Neptune Pro**, and
+Server Defaults say **Recipients Need Neptune Pro**. MDM can distribute a
+preset, but it cannot grant anyone's App Store entitlement.
+
+If the administrator's Pro access ends while the native console is open,
+Neptune closes or locks it and blocks further native actions. Existing MDM
+data and delivered policies are unchanged, and dashboard management remains
+available.
 
 
 
@@ -30,6 +108,16 @@ layout, playback preferences, and other profile settings carry over without
 manual setup. Device Overrides stay on the device where they were created and
 are not included in the backup.
 
+The synchronized profile also carries [Profile
+Presets](/personalization/profile-presets): their names, sparse included
+settings, order, and iPhone, iPad, Apple TV, and Mac assignments. The
+active choice remains local to each physical device, so a manual switch does
+not force every device to use the same preset.
+
+The preset document can sync to a Free account, but remains dormant there.
+Device Overrides remain Free. If that account later gains Pro, Neptune
+automatically reconciles the retained local selection.
+
 That synchronized profile includes native [Library Pins](/library/shortcuts),
 the iPhone’s ordered Compass Shortcuts, and its Live Activity enabled/type
 preferences. iOS Home Screen and Lock Screen widget placement, size, and
@@ -41,9 +129,12 @@ individual device; they are not a single Neptune setting for MDM to replace.
 ## Remote Management
 
 Server administrators can manage a user's supported synchronized Neptune
-settings through the plugin's dashboard in Jellyfin. The schema covers
-appearance, playback, search, layout, and other profile preferences while
-excluding device-local and runtime-only values.
+settings through Neptune's native console or the plugin's dashboard in
+Jellyfin. The schema covers appearance, playback, search, layout, and other
+profile preferences while excluding device-local and runtime-only values.
+The iPhone, iPad, and Apple TV consoles use stable schema destinations to
+mirror Neptune's native Settings navigation while preserving one exact remote
+draft across those pages.
 
 Changes push to the user's devices immediately if they're online, or apply the next time they sign in. Only the settings you actually change are sent, so you never accidentally overwrite a user's other preferences.
 
@@ -60,24 +151,78 @@ in the administrator's change are affected; unrelated overrides remain. The
 forced value is retained by the server so a device that was offline still
 applies it after reconnecting, even when ordinary sync is off.
 
-Older Neptune MDM releases still allow normal Device Override filtering but
-cannot guarantee administrator override clearing or preserve every Server
-Default when creating a user's first partial backup. Neptune displays a
-compatibility warning until the plugin is updated.
+For a setting included in several layers, an individual administrator push
+wins first, followed by a Device Override, the active Profile Preset, and the
+ordinary synchronized value. The push suppresses only the conflicting member
+of the active preset; unrelated members continue applying. **Reapply Preset**,
+changing the active selection, or editing the preset explicitly clears that
+suppression.
+
+Neptune MDM `1.2.6.101` predates the newer administrator force ledger. The
+native console remains compatible: when a user has no personal backup, it
+materializes inherited Server Defaults before sending that user's first
+partial administrator change. Existing users continue to receive only the
+exact settings that changed. An upgrade is not required to use the console;
+newer plugin versions add their server-side force-ledger behavior
+automatically.
 
 
 
 ## Server Defaults
 
-Administrators can define default settings that apply to all new Neptune users on the server:
+Administrators can define a starting configuration for Neptune users who have
+no personal settings backup. Configured synchronized settings seed once when
+Neptune first creates that user's settings, even when Settings Sync is off.
+This does not turn Settings Sync on or upload a personal backup by itself. It
+is a starting point, not a permanent policy. Neptune finishes this first-use
+setup before trying an automatic Seerr sign-in, whether the Jellyfin user signs
+in with a password or Quick Connect.
+
+For Profile Presets, the template can provide:
 
 | Example | What it does |
 |---------|--------------|
-| Default theme | New users launch Neptune with your chosen theme |
-| Transcode settings | Set a default bitrate cap or force transcoding for all users |
-| Pre-filled server URLs | New users skip manual entry for their Jellyfin and Seerr servers |
+| Starting preset library | Gives every new user the same reusable loadouts |
+| iPhone assignment | Makes one preset automatic on every iPhone signed in to the new profile |
+| iPad or Apple TV assignment | Uses a different automatic loadout on those device types |
+| Mac assignment | Reserves an automatic loadout for future macOS support |
 
-Server defaults override Neptune's built-in defaults. Existing users are not affected, only new accounts that sign in after the defaults are configured.
+Only configured values participate. A setting omitted from the template keeps
+its local value, and an explicit local non-default, unsent local change, or
+Device Override wins. Saved URL lists merge with URLs already recorded by the
+device: administrator entries appear first and duplicates are removed. If the
+user explicitly cleared a list before bootstrap, it remains empty.
+
+Profile Presets add one more protection: Neptune adopts the template's library
+and assignments only when its local Profile Presets document is empty. This
+preserves loadouts created locally before the first server read. Each device
+type can have zero or one automatic assignment.
+
+Selecting a user with no personal Neptune backup in Remote Management shows
+their effective Server Defaults and labels the document as inherited; it does
+not create a personal backup merely by viewing it. The delete action remains
+unavailable until that user has personal state.
+
+The Seerr saved-URL list is for manual switching; the active/preconfigured
+Seerr endpoint is a separate setting. In the settings document,
+`seerrServerURL` is active and `seerrURLs` is the saved list. Neptune still
+reads the older MDM 1.2.6-era `jellyseerrURLs` saved-list name and writes both
+list formats during the compatibility window. If MDM 1.2.6.101 Server Defaults
+contain exactly one valid saved address and no active-address field at all,
+Neptune uses that one address as active during the first setup. It does not
+guess when there are multiple addresses, alter a personal backup, or override
+an explicit clear.
+
+Preset inheritance does not bypass Neptune Pro. A new Free user may receive
+the starting preset library and assignments, but Neptune does not apply them
+until that signed-in user has Pro. Ordinary configured Server Defaults do not
+require Pro.
+
+Defaults are not retroactive. After the one-time bootstrap completes—or once a
+personal backup exists—the user keeps that configuration even if the
+administrator later changes Server Defaults. To update an existing user, the
+administrator must open that user in Remote Management and send an individual
+settings push.
 
 
 
@@ -107,6 +252,22 @@ Child accounts pair with Neptune's in-app parental controls, where admins set th
 
 
 
+## Wipe All Neptune MDM Data
+
+The native console requires the administrator to type `WIPE` before this
+irreversible action. It deletes Server Defaults, users' Neptune settings
+backups, device records, child-account policies, announcements, and the
+uploaded settings schema.
+
+It does not delete Jellyfin users or media. It also does not delete Neptune
+Indexers data, because Indexers is a separate plugin.
+
+
+
 ## Devices
 
-The dashboard lists the devices each user has signed in on, so you can see where Neptune is installed across your server. Devices register automatically. No setup needed.
+The dashboard and native console list the devices each user has signed in on,
+including available app, hardware, OS, settings-schema, and recent-activity
+details. Devices register automatically. This inventory is read-only: Neptune
+MDM does not send device commands, remotely lock or erase a device, or manage
+the operating system.
