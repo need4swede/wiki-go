@@ -41,6 +41,20 @@ Choosing Transcode reveals:
 
 You can also change quality per-session from the [Playback Menu](/playback/playback-menu)'s Video tab.
 
+### Orientation (iPhone & iPad)
+
+The **Orientation** picker appears directly below **Video Zoom**:
+
+| Setting | Description |
+|---------|-------------|
+| **Auto** | Opens playback in the current orientation and follows normal device rotation (default) |
+| **Landscape** | Always opens playback 90 degrees clockwise from portrait |
+
+The orientation button in the player switches the current session between
+portrait and that clockwise landscape direction. It works even when system
+Rotation Lock is enabled and does not change the saved setting. When playback
+ends, Neptune returns to the orientation used before the player opened.
+
 
 
 ## Controls

@@ -37,6 +37,22 @@ The skip interval is configurable (5, 10, or 15 seconds). The Menu button behavi
 
 
 
+## iPhone & iPad In-Player Controls
+
+The touch player includes an orientation button beside the Playback Menu and
+Video Zoom buttons. It switches between portrait and one landscape direction:
+
+- From portrait, it rotates 90 degrees clockwise into landscape.
+- From either landscape direction, it returns to portrait.
+
+It does not rotate endlessly through every screen direction. The choice lasts
+only for the current playback session, so it is useful when system Rotation
+Lock is enabled without changing **Settings > Playback > Player >
+Orientation**. See [Playback Settings](/settings/playback)
+for the Auto and Landscape startup options.
+
+
+
 ## iPhone & iPad Outside-App Controls
 
 With [Picture in Picture](/ios/playback#using-picture-in-picture) enabled,

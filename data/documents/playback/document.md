@@ -24,6 +24,11 @@ Everything from pressing Play to choosing tracks and scrubbing.
 
 The default engine is [Trident](/playback/trident-player), Neptune's own player. You can choose Apple's native AVPlayer instead in **Settings > Playback > Player**.
 
+On iPhone and iPad, **Settings > Playback > Player > Orientation** can leave
+playback on Auto or always start it in clockwise Landscape. The in-player
+orientation button switches the current session between portrait and
+landscape, including while system Rotation Lock is enabled.
+
 The **Playback Mode** setting is separate from the engine:
 
 - **Direct Play.** Plays the original file from your server with no re-encoding or quality loss.
