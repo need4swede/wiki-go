@@ -74,9 +74,22 @@ Shuffle is per-show, so series that should stay sequential keep their order.
 
 ## Spoiler Protection
 
-Series detail pages can hide thumbnails and overviews for episodes you haven't watched yet. Toggle **Spoilers** in the action pill. Episode cards swap their image and synopsis for a placeholder, so you can browse without seeing what's ahead.
+Neptune can obscure thumbnails, titles, and descriptions for episodes that are
+both unwatched and completely unstarted. Once you begin an episode or mark it
+as watched, its details become visible.
 
-Already-watched episodes stay fully visible. Toggle off any time. You can also blur unwatched episodes app-wide with **Hide Spoilers** in **Settings > User Preferences > Appearance > Items**.
+On Apple TV, select the eye button in the action pill to change protection for
+the current show. This per-show choice takes priority over the app-wide
+setting, so you can protect an otherwise episodic show or reveal a serialized
+show.
+
+For app-wide protection, go to **Settings > User Preferences > Appearance**,
+open the **Items** tab, then turn on **Hide Spoilers on Unstarted Episodes**.
+Its **Auto** scope protects serialized, hybrid, and unclassified shows while
+leaving episodic and anthology shows visible. **All** protects every show.
+
+See [Cards & Backdrops](/personalization/cards-and-backdrops) for the full
+guide to Auto, All, show classifications, and per-show choices.
 
 
 

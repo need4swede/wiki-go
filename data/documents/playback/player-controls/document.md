@@ -106,7 +106,42 @@ With controls visible:
 | **Limited** | D-pad skips instantly; touch scrubbing requires a click |
 | **Unlocked** | Both D-pad and touch work immediately (default) |
 
-Scrub speed is adjustable with **Scrub Sensitivity**. Trident generates seek thumbnails from the actual video, so previews work even on servers without trickplay images.
+Scrub speed is adjustable with **Scrub Sensitivity**.
+
+### Where Seek Previews Come From
+
+Neptune has two sources and uses whichever fits the item:
+
+| Source | When It Is Used |
+|--------|-----------------|
+| **Backend preview images** | Your backend provides native preview images for the item. Neptune downloads the available sprite sheets and reads tiles out of them |
+| **Live extraction** | Everything else. Trident decodes frames from the video itself while you scrub |
+
+Trickplay is faster on remote connections, since one downloaded sheet covers
+roughly a hundred scrub positions instead of a fresh seek per preview. HDR and
+Dolby Vision sheets are not assumed to have correct color: some servers
+already tone-map them to SDR, while others can place HDR values in an
+SDR-labelled image. Neptune checks the sheet once, leaves correctly converted
+images alone, and sends affected tiles through the same HDR-to-SDR color path
+used for live extraction. This avoids both washed-out previews and double tone
+mapping.
+
+Live extraction generates a preview directly from the video when native
+images are missing, incomplete, disabled, or cannot be loaded. It needs no
+pre-generated artwork from the backend, which is why it remains the fallback.
+
+Neptune switches between them per item, and per position within an item. A
+partly generated trickplay set covers the beginning of a movie with tiles and
+the rest with live frames.
+
+**Settings > Playback > Controls > Timeline > Trickplay** controls this and is
+on by default. Turn it off to always extract live frames. Nothing changes for
+items where your backend provides no native preview images.
+
+Neptune uses this same source order for every backend that exposes native
+preview images. On Jellyfin, enable trickplay in the server's library settings
+and let it process your library. Neptune picks the images up on the next
+playback with no further setup.
 
 
 

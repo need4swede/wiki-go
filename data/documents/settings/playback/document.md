@@ -68,7 +68,21 @@ ends, Neptune returns to the orientation used before the player opened.
 | **Playback Menu** | Choose which tabs appear in the in-player menu, and their order |
 | **Back / Menu Button** | Always Exit, or Dismiss First |
 
-Timeline options: **Buffer Indicator**, **Chapter Markers**, and **Seek Thumbnails** (all on by default).
+Timeline options: **Buffer Indicator**, **Chapter Markers**, **Seek Thumbnails**, and **Trickplay** (all on by default).
+
+**Trickplay** decides where seek previews come from. Leave it on and Neptune
+uses native preview images exposed by your backend, falling back to
+extracting frames from the video itself for anything those images do not cover.
+Turn it off and Neptune always extracts its own frames. It only appears while
+**Seek Thumbnails** is on, since that setting decides whether previews show at
+all. HDR and Dolby Vision previews use the same color-normalization path on
+either source, without reprocessing server images that are already correct.
+See [Player Controls](/playback/player-controls#scrubbing) for how the two
+sources differ.
+
+iPhone and iPad show the Timeline group as its own section with these four
+settings. The rest of the Controls tab is Apple TV only, since it covers Siri
+Remote behavior.
 
 Seeking options: **Scrub Sensitivity** (1 to 10; default 7), **Skip Interval** (5, 10, or 15 seconds), **Resume on Seek**, and **Seek Mode** (Locked, Limited, or Unlocked) with an on-screen demo of each mode.
 

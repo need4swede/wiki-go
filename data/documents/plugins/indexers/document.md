@@ -28,7 +28,7 @@ The Indexers plugin moves that responsibility from the client to the server. The
 
 **Library Index.** Powers the Library tab's technical filters (resolution, codec, container, HDR format, subtitle language) and browse views. The server pre-computes filter facets so clients can render the filter sidebar without scanning their local database.
 
-**Search Index.** Pre-builds the search database that Local Index Search queries against. Includes titles, genre synonyms, people, studios, and plot text. The server also fetches full cast and crew credits from TMDB, so you can search by actors, directors, and writers that Jellyfin's own metadata doesn't include. No API key needed.
+**Search Index.** Pre-builds the search database that Local Index Search queries against. Includes titles, genre synonyms, people, studios, and plot text. If you add your own TMDB API key, the server also fetches full cast and crew credits from TMDB, so you can search by actors, directors, and writers that Jellyfin's own metadata doesn't include.
 
 **Music Index.** Enriches music video libraries and their artists. See below.
 
@@ -48,7 +48,7 @@ If your server has music video libraries, the plugin fills in the metadata that 
 | **Albums** | Empty album tags filled in automatically (existing tags are never overwritten) |
 | **Album art** | Cover images for albums |
 
-All data sources are built in and need no accounts or API keys. Remote images fetched by the plugin are labeled with their source in Jellyfin's image picker, so you can tell where each option came from.
+MusicBrainz, Wikipedia, Deezer, TheAudioDB, and Cover Art Archive work without user-supplied API keys. IMVDb metadata and fanart.tv backgrounds require your own keys. Remote images fetched by the plugin are labeled with their source in Jellyfin's image picker, so you can tell where each option came from.
 
 **After installing:** run **Build Music Index** once (Dashboard > Scheduled Tasks > Neptune) to backfill your existing items. New items are enriched automatically as they're added. Re-runs are fast because results are cached.
 
@@ -65,7 +65,24 @@ Find the plugin at **Dashboard > Plugins > Neptune Indexers**. The page shows st
 | **Debounce window** | How long to wait after library changes before rebuilding |
 | **Excluded libraries** | Leave specific libraries out of the indexes |
 | **Music metadata toggles** | Turn individual enrichment features (credits, artist info, albums, album art) on or off |
+| **Optional API keys** | Add or replace your TMDB, fanart.tv, and IMVDb keys |
 | **Wipe Indexer Data** | Clear all built indexes |
+
+
+
+## API Keys
+
+Open **Dashboard > Plugins > Neptune Indexers**, enter the keys you want to use under **Optional API keys**, and select **Save**. The fields are intentionally blank when you return to the page; the status below each field tells you whether a key is already saved. Leaving a blank field alone keeps its saved value. To delete a key, select its **Remove saved key** button and then select **Save**. You can undo a pending removal before saving.
+
+| Provider | How to obtain a key | What it enables |
+|----------|---------------------|-----------------|
+| **TMDB** | [Create or sign in to a TMDB account and open API settings](https://www.themoviedb.org/settings/api). Request an API key, then copy the **API Key** from the API settings page. Use the v3 API Key, not the API Read Access Token. | Full movie and series cast and crew in the Search Index |
+| **fanart.tv** | [Create or sign in to fanart.tv and request an API key](https://fanart.tv/get-an-api-key/). Generate a **Personal API Key** and copy it into the plugin page. | HD artist and music-video backgrounds |
+| **IMVDb** | [Sign in to IMVDb and register a new application](https://imvdb.com/developers/apps/new). Copy the application's **App Key** into the plugin page. | IMVDb music-video metadata, credits, and images |
+
+The keys are stored in Neptune Indexers' configuration on your Jellyfin server. They are not embedded in the plugin source code or binaries and are not sent to Neptune clients. A Jellyfin administrator or someone with access to the server's plugin configuration files may still be able to retrieve them.
+
+Each key is optional. Without a key, only that provider's enrichment is skipped: normal Library and Search Index builds and the other music metadata providers continue to work. After adding a TMDB key, rebuild the Search Index. After adding fanart.tv or IMVDb keys, run **Build Music Index** or refresh the affected music-video metadata.
 
 
 

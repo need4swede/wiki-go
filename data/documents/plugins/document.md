@@ -52,7 +52,7 @@ If onboarding detects that the suite is not installed, Neptune offers a one-tap 
 
 3. The currently published suite members appear in the Catalog tab. Install them, restart your Jellyfin server, and Neptune detects them on the next sign-in.
 
-The repository supports Jellyfin 10.10 and 10.11 and serves the correct build for your server version automatically.
+The repository supports Jellyfin 10.10, 10.11, and 12.0 and serves the correct build for your server version automatically.
 
 Non-admin users can ask their server administrator to install the suite. The plugins appear in the Jellyfin Plugin Catalog after adding the repository.
 

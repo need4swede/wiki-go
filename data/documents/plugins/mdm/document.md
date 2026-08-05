@@ -236,6 +236,19 @@ Announcements support:
 - Targeting specific users, or everyone on the server
 - Targeting specific platforms and app versions
 - Delivery immediately to live devices, or on next app launch
+- Resending an existing announcement to devices that have already seen it
+
+Immediate delivery uses Neptune's live server event stream. If iOS or tvOS was
+suspended before it could receive the event, Neptune catches up when the app
+returns to the foreground; an app that was fully closed catches up at its next
+launch. Targeting and once-per-device dismissal rules are identical on every
+delivery path.
+
+**Resend Now** keeps the announcement's content and targeting, gives it a new
+delivery ID, activates immediate delivery, and sends it through the same live
+event stream. Neptune therefore treats it as a new announcement on every
+matching device without creating a second card for the administrator to
+maintain.
 
 Useful for planned maintenance windows, new library additions, or house rules.
 
