@@ -218,6 +218,10 @@ and assignments only when its local Settings Profiles document is empty. This
 preserves profiles created locally before the first server read. Each device
 type can have zero or one automatic assignment.
 
+When an administrator assigns a device type from one profile card to another,
+the dashboard names both profiles and asks for confirmation before replacing
+the existing assignment.
+
 Selecting a user with no personal Neptune backup in Remote Management shows
 their effective Server Defaults and labels the document as inherited; it does
 not create a personal backup merely by viewing it. The delete action remains

@@ -211,6 +211,10 @@ Deleting a profile also removes its automatic assignments. A device that had
 selected it returns to Auto. Other profiles and regular settings are not
 deleted.
 
+Each device type can have only one automatic profile. If you assign a device
+type to another profile, Neptune names the current and replacement profiles
+and asks for confirmation first.
+
 
 
 ## Server Defaults
