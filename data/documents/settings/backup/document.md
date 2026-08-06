@@ -77,11 +77,11 @@ Go to **Settings > User Preferences > Backup and Restore**:
 | **Device Overrides** | Keeps selected settings local to this device while everything else syncs |
 | **Delete Cloud Backup** | Removes the backup from the server. Devices keep their local settings and overrides |
 
-[Settings Profiles](/personalization/profile-presets) is also available from
-the active-profile row in User Preferences. Its definitions and one optional
-automatic assignment per device type use the same Settings Sync connection.
-Definitions and the local choice remain stored if Pro access ends, but no named
-profile applies until Pro returns. Device Overrides remain Free.
+[Settings Profiles](/personalization/profile-presets) lives inside Backup and
+Restore. Its definitions and one optional automatic assignment per device type
+use the same Settings Sync connection. Definitions and the local choice remain
+stored if Pro access ends, but no named profile applies until Pro returns.
+Device Overrides remain Free.
 
 
 

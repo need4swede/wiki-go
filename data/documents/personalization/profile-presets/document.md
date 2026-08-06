@@ -9,10 +9,10 @@ Settings Profiles let you keep named setups such as **Blue**, **Kids**, or
 
 Find them at:
 
-**Settings > User Preferences > Settings Profiles**
+**Settings > User Preferences > Backup and Restore > Settings Profiles**
 
-The active-profile row shows what you are editing. When Backup and Restore is
-available, it also links to the same Settings Profiles screen.
+If the active backend does not provide Backup and Restore, Settings Profiles
+appears directly in **User Preferences** and stays on that device.
 
 Settings Profiles require [Neptune Pro](/neptune-pro). Individual
 [Device Overrides](/settings/device-overrides) remain Free.
@@ -28,10 +28,6 @@ The normal Settings screens edit whichever settings profile is active.
 | **My Settings** | The change syncs to devices using My Settings |
 | **Blue** | Blue itself is updated, and devices using Blue receive the change |
 | **Device Override** on that setting | The change stays only on this device |
-
-Neptune shows **Editing Blue · Synced** when Blue is active and Settings Sync
-is available and enabled. Otherwise it shows **Editing Blue · On This
-Device**.
 
 There is no Reapply button. A setting change takes effect immediately and is
 saved to the active profile automatically.
