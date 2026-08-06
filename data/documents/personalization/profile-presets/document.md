@@ -2,130 +2,91 @@
 order: 15
 ---
 
-# Profile Presets
+# Settings Profiles
 
-Profile Presets are reusable settings loadouts. Switch between them whenever
-you want, or assign one preset automatically to each device type so the same
-profile can use different settings on iPhone, iPad, and Apple TV. Mac is
-available for assigning future macOS devices.
+Settings Profiles let you keep named setups such as **Blue**, **Kids**, or
+**Travel**. **My Settings** is your normal default profile.
 
-Presets belong to the signed-in profile. Find them at:
+Find them at:
 
-**Settings > User Preferences > Backup and Restore > Profile Presets**
+**Settings > User Preferences > Settings Profiles**
 
-If the active backend does not provide Backup and Restore, Profile Presets
-appears directly under **User Preferences** and remains local to that device.
+The active-profile row shows what you are editing. When Backup and Restore is
+available, it also links to the same Settings Profiles screen.
 
-Profile Presets require [Neptune Pro](/neptune-pro). This includes creating,
-editing, deleting, manually switching, reapplying, and automatic
-device-type assignments. [Device Overrides](/settings/device-overrides) remain
-Free when you only need one setting to stay local to one device.
+Settings Profiles require [Neptune Pro](/neptune-pro). Individual
+[Device Overrides](/settings/device-overrides) remain Free.
 
 
 
-## Create a Preset
+## The Main Rule
 
-1. Choose **Create Preset**
+The normal Settings screens edit whichever settings profile is active.
+
+| Active Profile | What Happens When You Change a Setting |
+|----------------|-----------------------------------------|
+| **My Settings** | The change syncs to devices using My Settings |
+| **Blue** | Blue itself is updated, and devices using Blue receive the change |
+| **Device Override** on that setting | The change stays only on this device |
+
+Neptune shows **Editing Blue · Synced** when Blue is active and Settings Sync
+is available and enabled. Otherwise it shows **Editing Blue · On This
+Device**.
+
+There is no Reapply button. A setting change takes effect immediately and is
+saved to the active profile automatically.
+
+
+
+## Create a Profile
+
+1. Choose **Create Profile**
 2. Choose a starting point
-3. Edit the loadout through Neptune's familiar settings categories
-4. Choose **Save**, then name the preset
+3. Edit the settings through Neptune's familiar menus
+4. Choose **Save**, then name the profile
 
 The starting points are:
 
 | Starting Point | What It Copies |
 |----------------|----------------|
 | **Copy My Current Settings** | The settings currently in use on this device |
-| **Copy Server Defaults** | The settings supplied by your server administrator |
+| **Copy Server Defaults** | Your administrator's settings, completed with Neptune defaults |
 | **Start with Neptune Defaults** | Neptune's original settings |
 
-A starting point is only a snapshot. Changing your regular settings or Server
-Defaults later does not silently rewrite the preset. **Copy Server Defaults**
-is unavailable when the current server or account does not provide them.
+The starting point is a one-time copy. It is not a permanent parent, so later
+changes to Server Defaults do not silently rewrite your profile.
 
-While managing the loadout, change a setting to save that value in the preset,
-or choose **Follow My Settings** to leave it out. Saving opens the name screen.
-If the name is blank, Neptune chooses the first available name: **Preset**,
-**Preset 2**, **Preset 3**, and so on. You then land on the new preset's edit
-page.
+New profiles save a complete eligible settings snapshot across Neptune's Apple
+platforms. You only see controls supported by the device you are using; values
+for the other platforms are preserved.
 
-If you try to leave after changing a draft, Neptune asks whether to save it,
-discard it, or continue editing. Theme changes preview across the entire
-editor, including its background, and your normal theme returns when you
-leave.
+If the name is blank, Neptune chooses **Profile**, **Profile 2**, **Profile 3**,
+and so on. Leaving changed work asks whether to save or discard it. Theme
+changes preview across the entire editor, and your regular theme returns when
+you leave.
 
 
 
-## Presets Are Sparse
+## Switch Profiles
 
-A preset stores only the settings you choose. It is an overlay, not a second
-complete copy of your profile.
+Open Settings Profiles and choose:
 
-For example, an **iPhone** preset could include:
+- **Automatic** to use the profile assigned to this device type
+- **My Settings** to use your ordinary settings
+- A named profile such as **Blue**
 
-- Minimal item-detail layout
-- Smaller cards
-- Picture in Picture enabled
+The choice is local to the physical device. Selecting Blue on Apple TV does
+not select Blue on iPhone.
 
-If it does not include subtitle language, theme, or Home row order, those
-settings continue using the profile's current synchronized values. Switching
-presets never resets settings that are not included.
-
-Only eligible synchronized profile settings can be captured. Device-local and
-temporary values, such as diagnostic logging, are not available. See
-[Device Overrides](/settings/device-overrides#which-settings-can-be-overridden)
-for the kinds of settings that can participate.
+The Blue definition can still sync. If both devices use Blue, changing an
+eligible setting on either device updates Blue for both. If the iPhone uses My
+Settings, it does not receive Blue's effective values.
 
 
 
-## Switch Manually
+## Automatic Profiles by Device Type
 
-Open Profile Presets and choose a named preset. It takes effect immediately on
-the current device; **Reapply Preset** is not a second required step.
-
-Use **Reapply Preset** after a local tweak or
-administrator push has temporarily suppressed one of its included settings.
-This restores the preset's captured values without changing which preset is
-selected.
-
-Manual selection is local to that physical device:
-
-- Applying a preset on an iPhone does not manually select it on an iPad or
-  Apple TV
-- **No Preset** uses the profile's regular settings on this device
-- **Automatic** returns this device to its device-type assignment
-
-The preset itself still syncs. If you edit its included values on one device,
-the updated definition reaches the profile's other devices through
-[Settings Sync](/settings/backup).
-
-
-
-## Device Overrides
-
-By default, a [Device Override](/settings/device-overrides) remains in control
-when it conflicts with a preset. The preset still applies all of its other
-settings.
-
-Each preset has a **Clear Conflicting Device Overrides** switch on its edit
-page:
-
-- **Off:** conflicting Device Overrides stay in place, so the preset does not
-  change those settings
-- **On:** applying the preset removes only Device Overrides for settings saved
-  in that preset, then applies the preset values
-
-Unrelated Device Overrides are never removed. Turning the switch on does not
-immediately change anything; its policy runs when the preset is applied.
-
-When a manual selection or **Reapply Preset** would clear overrides, Neptune
-shows how many are affected and asks you to choose **Clear & Apply** or cancel.
-Automatic application follows the saved switch without another prompt.
-
-
-
-## Make a Preset Automatic by Device Type
-
-Each device type can have zero or one automatic preset:
+Each device type can have zero or one automatic profile:
 
 | Device Type | Used By |
 |-------------|---------|
@@ -134,151 +95,109 @@ Each device type can have zero or one automatic preset:
 | **Apple TV** | Apple TV |
 | **Mac** | Reserved for future macOS support |
 
-Assignments sync with the profile. A **Travel** preset assigned to iPhone
-therefore becomes the automatic choice on every iPhone signed in to that
-profile, while a **Living Room** preset assigned to Apple TV becomes the
-automatic choice on all of its Apple TVs. Assigning another preset to the same
-device type replaces the previous assignment.
+Assignments sync with your account. Every matching device in Automatic mode
+uses that assignment. A manual profile choice affects only that device until
+you choose Automatic again.
 
-A newly signed-in device starts in **Automatic** mode. If its type has no
-valid assignment, no preset overlay is applied and its regular profile
-settings remain unchanged. The selection stays Automatic; Neptune does not
-switch it to No Preset. A manual preset or No Preset choice stays on that
-physical device until you select Automatic again.
+If no automatic profile is assigned, Automatic uses My Settings.
 
 
 
-## How Presets and Sync Work Together
+## Device Overrides
+
+A [Device Override](/settings/device-overrides) keeps one setting local and
+normally wins over the active Settings Profile.
+
+Each named profile has a **Replace Device Overrides** option:
+
+- **Off:** conflicting Device Overrides stay in control
+- **On:** activating the profile removes only its conflicting Device Overrides
+
+When a manual switch would remove overrides, Neptune tells you how many are
+affected and asks before continuing. Unrelated overrides are never removed.
+Automatic activation follows the saved option without another prompt.
+
+
+
+## How Sync Works
 
 Settings Sync carries:
 
-- Preset names and order
-- The selected settings and captured values inside each preset
-- Each preset's **Clear Conflicting Device Overrides** choice
-- iPhone, iPad, Apple TV, and Mac assignments
+- Profile names, order, and saved values
+- The **Replace Device Overrides** choice
+- Automatic iPhone, iPad, Apple TV, and Mac assignments
 
-The active choice on each physical device—Automatic, No Preset, or a
-specific preset—stays local. Neptune also keeps the preset's applied values
-from being uploaded as ordinary setting changes, so a phone preset cannot
-overwrite an Apple TV preset through sync.
+It does not carry the profile currently selected on a physical device.
 
-Without Settings Sync, Pro users can still use presets and assignments on the
-device where they were created, but they do not travel to the profile's other
-devices.
+When Blue is active, ordinary eligible changes update Blue's definition. They
+are not also uploaded as My Settings changes. This prevents an Apple TV using
+Blue from overwriting an iPhone using My Settings.
 
-When a preset stops controlling a setting, Neptune restores the latest
-synchronized value from the server. If the server has never supplied one, it
-restores the value that was present before the preset took control.
+Neptune still tracks newer My Settings values underneath an active named
+profile. Switching back to My Settings restores the latest synchronized value,
+not an old value from when Blue was selected.
+
+Without Settings Sync, profiles still work on the device where they were
+created, but their definitions and assignments do not reach other devices.
 
 
 
 ## Which Value Wins?
 
-When more than one feature affects the same setting, Neptune applies this
-order:
+For the same eligible setting, Neptune uses this order:
 
-| Priority | Source | Result |
-|----------|--------|--------|
-| 1 | **Individual administrator push** | The pushed value wins when delivered and suppresses the conflicting preset member |
-| 2 | **Device Override** | A **This device only** value wins unless the applied preset is allowed to clear that conflict |
-| 3 | **Active Profile Preset** | The preset wins only for settings it includes |
-| 4 | **Current synchronized settings** | The profile's ordinary base value is used |
+1. An individual administrator push
+2. A Device Override
+3. The active named Settings Profile
+4. My Settings
 
-When **Clear Conflicting Device Overrides** is enabled, the matching overrides
-are removed before the preset applies. They are no longer a competing layer;
-unrelated overrides keep their normal priority.
-
-An administrator push is different from a Server Default. A push is an
-explicit change sent to an individual user. The Profile Presets supplied by
-Server Defaults are only a starting library: Neptune adopts them when the user
-has no personal backup and its local Profile Presets document is empty. Other
-configured synchronized defaults can seed untouched values at the same
-one-time bootstrap, while explicit local changes and Device Overrides win.
-
-If an administrator pushes a setting that also has a Device Override, Neptune
-applies the pushed value and removes that matching override. If the setting is
-also in the active preset, Neptune suppresses only that conflicting preset
-member; every unrelated member keeps applying. The suppression lasts until
-you use **Reapply Preset** or change the active selection. Either action
-explicitly reapplies the preset's saved value.
+An administrator push may temporarily replace a matching profile value. Change
+that setting again while the profile is active, or switch away and back, to
+establish the profile value again.
 
 
 
-## Edit or Delete a Preset
+## Edit or Delete a Profile
 
-Choose a preset under **Your Presets** to open its edit page:
+Choose a profile under **Your Profiles** to open:
 
-- **Preset Name** renames it
-- **Manage Preset** opens the settings saved in the loadout
-- **Use Automatically On** assigns it to device types
-- **Clear Conflicting Device Overrides** controls how it handles matching
-  device-local choices
-- **Delete Preset** removes it
+- **Profile Name**
+- **Manage Profile**
+- **Use Automatically On**
+- **Replace Device Overrides**
+- **Delete Profile**
 
-Saving edits updates the preset definition; it does not select or reapply the
-preset on the current device. Return to the main Profile Presets page to select
-it, or use **Reapply Preset** if it is already active. Backing out with unsaved
-changes shows the save-or-discard confirmation.
+Saving profile values updates its definition. If it is active on this device,
+the new values apply immediately. Renaming a profile or changing its automatic
+assignments does not switch the current device.
 
-Deleting a preset also removes every automatic device-type assignment that
-points to it. A device that selected the deleted preset manually returns to
-Automatic and uses the remaining assignment for its device type, if one
-exists. Otherwise the released settings return to their latest synchronized
-values, or to their pre-preset values when no server value has been observed.
-An Automatic device remains in Automatic mode; Neptune does not silently
-change its selection to No Preset. Other presets and the profile's
-synchronized base settings are not deleted.
+Deleting a profile also removes its automatic assignments. A device that had
+selected it returns to Automatic. Other profiles and My Settings are not
+deleted.
 
 
 
 ## Server Defaults
 
-With [Neptune MDM](/plugins/mdm), an administrator can prepare a shared
-starting library of Profile Presets and choose zero or one automatic preset
-for each device type. Every new user inherits that library and those
-assignments when Neptune creates their settings, provided they have no
-personal settings backup and Neptune's local Profile Presets document is
-empty. Bootstrap also runs when ordinary Settings Sync is off; a Free user
-retains the document without applying it until Pro becomes available.
+With [Neptune MDM](/plugins/mdm), an administrator can provide a starting
+Settings Profiles library and automatic assignments. Neptune copies that
+library only when a new user's personal library is empty.
 
-The administrator can also save **Clear Conflicting Device Overrides** inside
-each starting preset. If an inherited preset later applies automatically, it
-uses that saved policy without a prompt and removes only matching overrides.
+Server Defaults are not retroactive. After the first copy, the profiles belong
+to the user and can be edited or deleted normally. Changing Server Defaults
+later does not rewrite existing users.
 
-Server Defaults are not retroactive:
-
-- They seed only when there is no personal backup and Neptune's local Profile
-  Presets document is empty
-- They do not replace presets or assignments in an existing personal backup
-- After seeding, they are the user's starting personal configuration
-- Explicit local non-default or dirty settings and Device Overrides remain
-  local during the broader Server Defaults bootstrap
-- To change an existing user, the administrator must send that user an
-  individual settings push through Neptune MDM
-
-This keeps organization-wide starting points useful without unexpectedly
-rewriting configurations that existing users have already personalized.
+Administrators can prepare Settings Profiles from the Free Jellyfin dashboard,
+but each signed-in user still needs Neptune Pro before a named profile becomes
+active. MDM configuration does not grant App Store entitlement.
 
 
 
 ## If Pro Access Ends
 
-Neptune keeps your preset definitions, assignments, and the current physical
-device's Automatic, No Preset, or named-preset choice. It does not delete or
-rewrite them.
+Neptune keeps profile definitions, automatic assignments, and each device's
+local selection. Named-profile values stop applying immediately and My
+Settings becomes active. Device Overrides continue working.
 
-Preset values stop applying immediately, and the affected settings return to
-their synchronized values—or the values they had before the preset took
-control when no synchronized value exists. Device Overrides continue working.
-When Pro access returns, Neptune automatically reconciles the saved selection;
-you do not need to recreate or reselect the loadout.
-
-An administrator can still prepare and distribute presets from Neptune MDM's
-Free Jellyfin dashboard while a target user is Free. Native client
-administration requires the administrator's own Pro access. In either case,
-the presets remain dormant until the signed-in target user has Pro; MDM
-configuration does not unlock that user's feature. The dashboard therefore
-uses a general **Requires Neptune Pro** notice. The native console can be more
-specific: it confirms the active account's own Pro, identifies another managed
-user as needing Pro, or explains that each recipient of Server Defaults needs
-Pro.
+When Pro returns, Neptune automatically restores the retained selection. You
+do not need to recreate the profile.

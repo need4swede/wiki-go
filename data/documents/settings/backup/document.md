@@ -8,9 +8,9 @@ Keep your Neptune preferences in sync across every device signed into the same
 server account. Settings, layout choices, theme picks, library pins, and your
 customized home rows all stay aligned. When one setting genuinely needs to be
 different on one device, [Device Overrides](/settings/device-overrides) can
-keep that setting local without disabling the rest of sync. [Profile
-Presets](/personalization/profile-presets) can instead save selected settings
-as reusable configurations and assign them by device type with Neptune Pro.
+keep that setting local without disabling the rest of sync. [Settings
+Profiles](/personalization/profile-presets) provide named settings environments
+that can be selected locally or assigned by device type with Neptune Pro.
 
 Backup & Restore is currently powered by the Jellyfin-specific [Neptune
 MDM](/plugins/mdm) plugin. Without a compatible backend extension, Neptune
@@ -35,13 +35,13 @@ it becomes available.
 | [Library Pins](/library/shortcuts) | Pinned items, browse Pins, timestamp Pins |
 | [iPhone Compass](/ios/live-activity) | Ordered Compass Shortcuts, custom labels and symbols |
 | [Live Activity](/ios/live-activity) | Enabled state and selected activity type |
-| [Profile Presets](/personalization/profile-presets) | Preset definitions, included values, override-clearing choices, order, and device-type assignments |
+| [Settings Profiles](/personalization/profile-presets) | Profile definitions, saved values, override-replacement choices, order, and device-type assignments |
 
 What stays device-local: diagnostics toggles, the sync switch itself, and
-anything tied to the specific hardware. The active Profile Preset choice is
-local too: Automatic, No Preset, or a manually selected preset can be
+anything tied to the specific hardware. The active Settings Profile choice is
+local too: Automatic, My Settings, or a manually selected named profile can be
 different on each physical device. A Device Override is also local, but it
-applies to one otherwise synchronized setting. The active preset selection and
+applies to one otherwise synchronized setting. The active profile selection and
 the Device Override list never travel inside the backup.
 
 Home Screen and Lock Screen widget placement, size, and per-widget
@@ -72,16 +72,16 @@ Go to **Settings > User Preferences > Backup and Restore**:
 | Action | Result |
 |--------|--------|
 | **Sync across devices** | The master switch. First save uploads a fresh backup |
-| **Profile Presets** | With Neptune Pro, creates reusable settings loadouts and optionally makes one automatic for each device type |
-| **Restore from Backup** | Applies the latest synchronized values; the active preset choice and Device Overrides stay local |
+| **Settings Profiles** | With Neptune Pro, creates named settings profiles and optionally makes one automatic for each device type |
+| **Restore from Backup** | Applies the latest synchronized values; the active Settings Profile choice and Device Overrides stay local |
 | **Device Overrides** | Keeps selected settings local to this device while everything else syncs |
 | **Delete Cloud Backup** | Removes the backup from the server. Devices keep their local settings and overrides |
 
-[Profile Presets](/personalization/profile-presets) lives inside Backup and
-Restore. Its definitions and one optional automatic assignment per device type
-use the same Settings Sync connection. Definitions and the local choice remain
-stored if Pro access ends, but no preset applies until Pro returns. Device
-Overrides remain Free.
+[Settings Profiles](/personalization/profile-presets) is also available from
+the active-profile row in User Preferences. Its definitions and one optional
+automatic assignment per device type use the same Settings Sync connection.
+Definitions and the local choice remain stored if Pro access ends, but no named
+profile applies until Pro returns. Device Overrides remain Free.
 
 
 
@@ -102,20 +102,20 @@ automatic Seerr sign-in, even when Settings Sync is off. The onboarding page
 labels this as server setup instead of offering to restore it as a personal
 “Welcome Back” backup.
 
-Preset definitions and iPhone, iPad, Apple TV, and Mac assignments sync as one
-profile document. The values materialized by the active preset are not uploaded
-as ordinary setting edits, preventing an iPhone's preset from overwriting an
-Apple TV's configuration. Settings omitted from a sparse preset continue using
-the synchronized base value. A preset's **Clear Conflicting Device Overrides**
-choice also syncs with its definition. Mac is reserved for future macOS
-support.
+Settings Profile definitions and iPhone, iPad, Apple TV, and Mac assignments
+sync as one document. Ordinary eligible changes update the active target: My
+Settings if it is active, or the named profile definition if one is active.
+The named profile's effective member values are not uploaded as separate My
+Settings changes, preventing an iPhone profile from overwriting an Apple TV's
+configuration. A profile's **Replace Device Overrides** choice also syncs.
+Mac is reserved for future macOS support.
 
 An active [Device Override](/settings/device-overrides) removes its setting
 from ordinary uploads and downloads on that device. Removing the override
-normally queues this device's current value to sync again. An applied preset
-with **Clear Conflicting Device Overrides** enabled can instead remove only
-its matching overrides and take control locally. Manual selection and reapply
-ask before clearing; automatic application uses the saved policy.
+normally queues this device's current value to sync again. A profile with
+**Replace Device Overrides** enabled can instead remove only its matching
+overrides when activated. Manual selection asks before clearing; automatic
+activation uses the saved policy.
 
 
 
@@ -158,8 +158,8 @@ The screen shows when the backup was last saved and which device saved it. If sy
 | Data | Where It Lives |
 |------|----------------|
 | Synchronized settings | On each device, with a backup on your Jellyfin server |
-| Profile Preset definitions, override-clearing choices, and device-type assignments | In the synchronized profile backup |
-| Active Profile Preset choice | On that physical device only |
+| Settings Profile definitions, override-replacement choices, and device-type assignments | In the synchronized profile backup |
+| Active Settings Profile choice | On that physical device only |
 | Device Override list | On that physical device only; never in the cloud backup |
 | Authentication | Standard Jellyfin auth tokens |
 | Library metadata | Never uploaded as part of sync |

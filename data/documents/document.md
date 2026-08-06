@@ -96,7 +96,7 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 | Page | Description |
 |------|-------------|
 | [Profiles](/personalization/profiles) | Multi-user support |
-| [Profile Presets](/personalization/profile-presets) | Reusable settings loadouts with manual or automatic device-type selection |
+| [Settings Profiles](/personalization/profile-presets) | Named settings environments with local or automatic device-type selection |
 | [Themes](/personalization/themes) | Nine built-in themes plus custom imports |
 | [Item Detail Layouts](/personalization/item-detail-layouts) | Detailed, Immersive, or Minimal |
 | [Cards & Backdrops](/personalization/cards-and-backdrops) | Card styles and artwork behavior |
@@ -116,7 +116,7 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 | Page | Description |
 |------|-------------|
 | [Settings](/settings) | Every configuration screen, explained |
-| [Profile Presets](/personalization/profile-presets) | Reusable per-profile loadouts with one optional automatic preset per device type |
+| [Settings Profiles](/personalization/profile-presets) | Named profiles with one optional automatic choice per device type |
 | [Device Overrides](/settings/device-overrides) | Keep one synchronized setting different on one device |
 
 ### Neptune Pro
@@ -138,7 +138,7 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 |------|-------------|
 | [Neptune Plugin Suite](/plugins) | Optional Jellyfin extensions: Indexers, MDM, Transcoder, and Studio |
 | [Indexers](/plugins/indexers) | Server-side indexing and music metadata |
-| [MDM](/plugins/mdm) | Settings sync, Profile Presets, Server Defaults, announcements, remote management |
+| [MDM](/plugins/mdm) | Settings sync, Settings Profiles, Server Defaults, announcements, remote management |
 | [Transcoder](/plugins/transcoder) | Server-managed download quality profiles (coming soon) |
 | [Studio](/plugins/studio) | UI customization, beginning with Top Shelf design (coming soon) |
 

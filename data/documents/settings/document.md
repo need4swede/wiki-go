@@ -20,7 +20,7 @@ Access Settings via the gear icon at the left edge of the tab menu bar.
 | [Images](/settings/images) | Image cache and downloads |
 | [Metadata](/settings/metadata) | Metadata cache and TMDB data |
 | [Backup & Restore](/settings/backup) | Sync preferences across devices |
-| [Profile Presets](/personalization/profile-presets) | Neptune Pro settings loadouts inside Backup & Restore |
+| [Settings Profiles](/personalization/profile-presets) | Neptune Pro configurations that you can switch between |
 | [Device Overrides](/settings/device-overrides) | Keep individual settings different on one device |
 | [Administration](/settings/administration) | User management and parental controls (admins) |
 | [iOS Widgets](/ios/widgets) | Home Screen and Lock Screen Pages, Sections, and Pins |
@@ -36,8 +36,8 @@ The Settings screen groups everything by scope:
 **Profiles.** Avatar cards for switching users, plus **User Preferences**: your
 personal appearance, [Conductor](/playback/conductor), subtitle style, sounds,
 and [Backup & Restore](/settings/backup). Backup & Restore contains both
-[Profile Presets](/personalization/profile-presets), for reusable settings
-loadouts with Neptune Pro, and [Device Overrides](/settings/device-overrides),
+[Settings Profiles](/personalization/profile-presets), for reusable synced
+configurations with Neptune Pro, and [Device Overrides](/settings/device-overrides),
 the Free way to keep one otherwise synchronized setting different on the
 current device. On iPhone, User
 Preferences also contains separate **Live Activity**, **Widgets**, and
@@ -67,20 +67,23 @@ At the bottom: **Resync Library** clears cached content and reloads everything f
 
 Nearly every preference in Neptune belongs to the signed-in profile, so each
 family member gets their own setup. With Settings Sync, those profile
-preferences normally follow the same user to every device. Profile Presets
-sync named settings loadouts and the single optional automatic assignment for
+preferences normally follow the same user to every device. Settings Profiles
+sync named configurations and the single optional automatic assignment for
 each of iPhone, iPad, Apple TV, and Mac; Mac is reserved for future macOS
-support. The manually active choice remains local. A Device Override keeps one
+support. The manually selected profile remains local. While a named profile is
+active, ordinary eligible settings changes update that profile and sync to
+other devices using it. **My Settings** returns to the normal synchronized
+preferences. A Device Override keeps one
 eligible setting local to a particular server, user, and physical device
 without turning off the rest of sync.
 
 For the same setting, an individual administrator push has highest priority,
-then an explicit Device Override, then the active Profile Preset, then the
-ordinary synchronized value. A preset's optional **Clear Conflicting Device
-Overrides** policy removes only its matching overrides when it is applied;
-manual selection or reapply asks for confirmation first. A push suppresses
-only the conflicting member of the active preset until the user explicitly
-reapplies or changes selection.
+then an explicit Device Override, then the active Settings Profile, then the
+ordinary synchronized value. A profile's optional **Replace Device
+Overrides** policy removes only its matching overrides when activated; a
+manual switch asks for confirmation. There is no separate Reapply action. A
+push suppresses only the conflicting member of the active profile until the
+profile changes again.
 
 Device-wide items such as the image cache are shared locally. Backend-managed
 items such as parental controls and streaming limits live on the media server

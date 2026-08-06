@@ -7,10 +7,9 @@ order: 85
 Device Overrides lets one setting stay different on one device while the rest
 of your Neptune preferences continue to sync normally.
 
-Unlike [Profile Presets](/personalization/profile-presets), the Neptune Pro
-loadout feature that applies a reusable group of selected settings manually or
-by device type, a Device Override pins one setting to one physical device and
-remains Free.
+Unlike [Settings Profiles](/personalization/profile-presets), the Neptune Pro
+feature for named settings environments, a Device Override keeps one setting
+on one physical device and remains Free.
 
 For example, you can keep the **Immersive** item-detail layout on an Apple TV
 and use **Minimal** on an iPhone without separating every other preference.
@@ -60,15 +59,15 @@ Overrides belong to one server account, profile, and physical device. They do
 not travel inside the cloud backup. Switching profiles or servers uses that
 profile's own override list.
 
-If the active Profile Preset also contains an overridden setting, the Device
-Override wins by default. Other settings in the preset continue to apply.
+If the active Settings Profile also contains an overridden setting, the Device
+Override wins by default. Other settings in the profile continue to apply.
 
-A preset can instead save **Clear Conflicting Device Overrides** as part of
-its definition. When that preset is applied, Neptune removes only the
-overrides for settings included in the preset, then applies its saved values.
-Unrelated overrides remain. Manual selection and **Reapply Preset** show a
-confirmation with the number of affected overrides before anything is
-removed; automatic application follows the preset's saved choice without
+A profile can instead save **Replace Device Overrides** as part of its
+definition. When that profile becomes active, Neptune removes only the
+overrides for settings included in it, then uses its saved values. Unrelated
+overrides remain. Manual selection shows a confirmation with the number of
+affected overrides before anything is removed; automatic activation follows
+the profile's saved choice without
 another prompt.
 
 
@@ -83,13 +82,13 @@ To remove one override:
 
 When the override is removed, this device's current value is normally queued
 for sync. It will be sent the next time Neptune can reach the server, even if
-the device is offline when you remove it. If the active Profile Preset owns
+the device is offline when you remove it. If the active Settings Profile owns
 that setting, its value takes over locally instead and is not uploaded as an
 ordinary settings change.
 
 Choose **Sync Everything Again** to remove every override at once. Settings
-not controlled by the active preset are queued using their current values;
-preset-owned settings remain local under that preset.
+not controlled by the active named profile are queued using their current
+values; profile-owned settings remain under that profile.
 
 
 
@@ -124,18 +123,18 @@ is applied when Neptune reconnects, even if ordinary device-to-device sync is
 off.
 
 The complete order for one setting is: individual administrator push, explicit
-Device Override, active Profile Preset, then the synchronized base value. A
-preset allowed to clear a conflict removes that matching Device Override
+Device Override, active named Settings Profile, then My Settings. A profile
+allowed to replace a conflict removes that matching Device Override
 before this order is evaluated.
 An administrator push suppresses only the conflicting member of an active
-preset until **Reapply Preset** or an active selection change.
+profile until that profile field is edited or the active selection changes.
 Server Defaults are a starting template used only when there is no personal
 backup; they are not an administrator push. They bootstrap configured,
 untouched synchronized settings once even when Settings Sync is off. A Device
 Override wins over the corresponding default, omitted template values have no
 opinion, and later default changes are not retroactive. The additional
-empty-document guard applies specifically to adopting the template's Profile
-Presets.
+empty-document guard applies specifically to adopting the template's Settings
+Profiles library.
 
 Older plugin versions still support the normal forward-only filtering, but
 cannot provide the durable proof Neptune needs to clear an override after an
@@ -186,6 +185,6 @@ choice is separate from Device Overrides and normally appears only once.
 | **Keep Here is disabled** | Turn on **Sync across devices**. If that switch is unavailable, confirm Neptune MDM is active |
 | **A setting has no row shortcut** | Open the Device Overrides browser; sliders and reorder editors are managed there |
 | **The setting is absent from the browser** | It may be device-local, unavailable on this platform, or unsupported by the current app version |
-| **A preset did not change an overridden setting** | Edit the preset and enable **Clear Conflicting Device Overrides**, then select or reapply it and confirm **Clear & Apply** |
+| **A profile did not change an overridden setting** | Edit the profile and enable **Replace Device Overrides**, then select it and confirm **Clear Overrides & Switch** |
 | **An administrator change did not clear an override** | Update Neptune MDM and reconnect |
 | **Uploads are paused to protect saved choices** | Neptune could not safely recover its local override record; leave sync paused and use Get Help before resetting app data |

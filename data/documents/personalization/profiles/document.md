@@ -36,14 +36,14 @@ The **Copy Preferences From** step is handy when setting up a family member who 
 
 
 
-## Profile Presets
+## Settings Profiles
 
-[Profile Presets](/personalization/profile-presets) let one profile keep
-several named settings loadouts. Switch presets manually on one device, or
-assign at most one automatic preset to each of iPhone, iPad, and Apple TV.
-Every matching device signed in to that profile starts with its assignment.
-The Desktop class is reserved for future Mac support. Preset loadouts require
-Neptune Pro; individual Device Overrides remain Free.
+[Settings Profiles](/personalization/profile-presets) let one account keep
+several named settings environments. Normal Settings controls update whichever
+profile is active. Select one on a physical device, or assign at most one
+automatic profile to iPhone, iPad, and Apple TV. The Desktop class is reserved
+for future Mac support. Settings Profiles require Neptune Pro; individual
+Device Overrides remain Free.
 
 Preset definitions and device-type assignments sync with the profile. The
 active manual choice stays on the physical device where it was selected, so
@@ -67,11 +67,11 @@ with its saved settings; manual application asks before doing so.
 | Navigation bar | Tab order and visibility |
 | Conductor | Language and track preferences |
 | Pins | Your pinned items and browse filters |
-| Profile Presets | Reusable settings loadouts and one optional automatic assignment per device type |
+| Settings Profiles | Named settings environments and one optional automatic assignment per device type |
 
 With the [Neptune MDM](/plugins/mdm) plugin, synchronized profile data follows
 you to every device you sign in on. Device-local choices—including which
-preset was applied manually—stay on that physical device. See
+named profile was selected manually—stay on that physical device. See
 [Backup & Restore](/settings/backup).
 
 

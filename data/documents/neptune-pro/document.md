@@ -6,7 +6,7 @@ order: 100
 
 Pro expands Neptune with intelligence built specifically for the app, richer
 connected metadata, adaptive playback preferences, offline media, and deeper
-Apple-platform integrations, including reusable settings loadouts.
+Apple-platform integrations, including named Settings Profiles.
 
 ## What Pro Includes
 
@@ -19,7 +19,7 @@ Apple-platform integrations, including reusable settings loadouts.
 | [Top Shelf Customization](/neptune-pro/top-shelf-customization) | Cinematic presentation, Studio designs, section ordering, and direct Play actions on Apple TV |
 | [Pin Widgets](/ios/widgets#pin-widgets-neptune-pro) | Put a native Pin on the iPhone or iPad Home Screen or Lock Screen, with direct Play for movie and episode Pins |
 | [Section Widgets](/ios/widgets#section-widgets-neptune-pro) | Rotate current media from 16 supported Home and Discover sections in a widget |
-| [Profile Presets](/personalization/profile-presets) | Build guided settings loadouts, switch manually, or assign one automatically per device type |
+| [Settings Profiles](/personalization/profile-presets) | Build named settings environments, edit the active one in place, or assign one automatically per device type |
 | [Native MDM Administration](/plugins/mdm#administer-from-neptune-neptune-pro) | Operate the complete Neptune MDM admin suite directly from iPhone, iPad, Apple TV, and future Mac |
 
 
@@ -35,7 +35,7 @@ Apple-platform integrations, including reusable settings loadouts.
 | **Offline** | Requires a network connection to your media backend | Download and play media without a network connection |
 | **Top Shelf** | Core Top Shelf presentation and content controls | Cinematic mode, Studio artwork, ordering, item limits, rich details, and Play actions |
 | **iOS Widgets** | Every size can open a standard Neptune Page; native Pins and in-app Home and Discover sections remain available | Adds native Pin Widgets and dynamic Section Widgets to the per-widget picker |
-| **Device personalization** | Device Overrides keep individual settings local to one physical device | Profile Presets add named reusable loadouts, manual switching, and automatic Phone, Tablet, Television, and Desktop assignments |
+| **Device personalization** | Device Overrides keep individual settings local to one physical device | Settings Profiles add named environments, device-local selection, in-place editing, and automatic Phone, Tablet, Television, and Desktop assignments |
 | **Neptune MDM administration** | Use the complete Jellyfin plugin dashboard; every client still receives managed policy | Adds the native administrator console inside Neptune; Jellyfin admin authorization is still required |
 
 ## Plans and Devices
@@ -61,9 +61,9 @@ Neptune checks Pro access live without deleting your preferences:
   widgets retain their selections but show the matching locked state; restoring
   Pro republishes their current content without deleting the native Pin or
   in-app Home or Discover section.
-- Profile Presets stop applying immediately, while definitions, automatic
+- Settings Profiles stop applying immediately, while definitions, automatic
   assignments, and the device-local selection remain stored. Device Overrides
-  keep working. Restoring Pro automatically reconciles the retained preset.
+  keep working. Restoring Pro automatically reconciles the retained profile.
 - The native Neptune MDM console closes or locks and blocks further client-side
   admin actions. Server data, delivered policies, Settings Sync, and the Free
   Jellyfin plugin dashboard are unchanged.

@@ -36,7 +36,7 @@ From the native console, an administrator can:
 - inspect a user's read-only device inventory;
 - set child-account policy;
 - create and target announcements;
-- use schema-driven controls, Profile Presets and other structured editors, or
+- use schema-driven controls, Settings Profiles and other structured editors, or
   Advanced JSON; and
 - permanently wipe Neptune MDM data after typing the required confirmation.
 
@@ -57,14 +57,14 @@ effective Server Defaults as inherited without creating personal state.
 Configured synchronized defaults seed untouched settings once on the user's
 first Neptune setup, even when Settings Sync is off. Explicit local changes
 and Device Overrides win, and later changes to Server Defaults are not
-retroactive. A Profile Preset may separately opt into clearing only its
-conflicting Device Overrides when that preset is later applied.
+retroactive. A Settings Profile may separately opt into replacing only its
+conflicting Device Overrides when that profile is selected.
 
 Device inventory does not provide remote commands, locking, or erasure. The
 console also does not include Neptune Indexers controls. Neptune MDM
 `1.2.6.101` is supported without requiring an upgrade.
 
-Profile Presets remain editable for administrators. The Free dashboard uses
+Settings Profiles remain editable for administrators. The Free dashboard uses
 **Requires Neptune Pro**. In the native editor, your own entitled account says
 **Available with Your Neptune Pro**, another account says **Managed User Needs
 Neptune Pro**, and Server Defaults say **Recipients Need Neptune Pro**. The
@@ -75,7 +75,7 @@ requires the administrator's Pro access.
 This MDM entry is a Jellyfin companion capability. It is not shown for the
 Emby backend because no Neptune Emby companion currently exists.
 
-See [Neptune MDM](/plugins/mdm) for Server Defaults, Profile Presets,
+See [Neptune MDM](/plugins/mdm) for Server Defaults, Settings Profiles,
 compatibility details, and the full data-wipe scope.
 
 

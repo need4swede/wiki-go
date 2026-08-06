@@ -11,7 +11,7 @@ does not expose MDM, Settings Sync, Server Defaults, announcements, or this
 native administration console. Neptune never sends Jellyfin MDM routes to an
 Emby server.
 
-Neptune MDM handles settings sync, backup, Profile Presets, Server Defaults,
+Neptune MDM handles settings sync, backup, Settings Profiles, Server Defaults,
 remote configuration, and device inventory. It keeps your preferences
 consistent across every Neptune client on your account and gives server
 administrators tools for managing users, sending announcements, and setting
@@ -73,19 +73,19 @@ The console manages Neptune MDM only. Neptune Indexers remains a separate
 plugin and has no status, configuration, or rebuild controls here. The shared
 administration foundation is also ready for a future Neptune macOS interface.
 
-Profile Presets stay editable from the Free Jellyfin plugin dashboard. A Pro
+Settings Profiles stay editable from the Free Jellyfin plugin dashboard. A Pro
 administrator can edit them from the native console too. The dashboard shows
 **Requires Neptune Pro** because it cannot inspect App Store ownership. The
 native editor is contextual: your own Pro account says **Available with Your
 Neptune Pro**, another account says **Managed User Needs Neptune Pro**, and
 Server Defaults say **Recipients Need Neptune Pro**. MDM can distribute a
-preset, but it cannot grant anyone's App Store entitlement.
+settings profile, but it cannot grant anyone's App Store entitlement.
 
-Both editors mirror the preset's settings and can save **Clear Conflicting
-Device Overrides**. If enabled, applying that preset removes only Device
-Overrides for settings contained in it. The client asks before a manual
-selection or reapply clears anything; automatic application follows the saved
-policy without another prompt.
+Both editors mirror the profile's settings and can save **Replace Device
+Overrides**. If enabled, activating that profile removes only Device Overrides
+for settings contained in it. The client asks before a manual selection clears
+anything; automatic activation follows the saved policy without another
+prompt.
 
 If the administrator's Pro access ends while the native console is open,
 Neptune closes or locks it and blocks further native actions. Existing MDM
@@ -158,12 +158,11 @@ forced value is retained by the server so a device that was offline still
 applies it after reconnecting, even when ordinary sync is off.
 
 For a setting included in several layers, an individual administrator push
-wins first, followed by a Device Override, the active Profile Preset, and the
-ordinary synchronized value. An applied preset with **Clear Conflicting Device
-Overrides** enabled first removes only its matching overrides. The push
-suppresses only the conflicting member of the active preset; unrelated members
-continue applying. **Reapply Preset** or changing the active selection clears
-that suppression.
+wins first, followed by a Device Override, the active named Settings Profile,
+and My Settings. A profile with **Replace Device Overrides** enabled first
+removes only its matching overrides. The push suppresses only the conflicting
+member of the active profile; unrelated members continue applying. Editing
+that field or changing the active selection clears the suppression.
 
 Neptune MDM `1.2.6.101` predates the newer administrator force ledger. The
 native console remains compatible: when a user has no personal backup, it
@@ -185,12 +184,12 @@ is a starting point, not a permanent policy. Neptune finishes this first-use
 setup before trying an automatic Seerr sign-in, whether the Jellyfin user signs
 in with a password or Quick Connect.
 
-For Profile Presets, the template can provide:
+For Settings Profiles, the template can provide:
 
 | Example | What it does |
 |---------|--------------|
-| Starting preset library | Gives every new user the same reusable loadouts |
-| iPhone assignment | Makes one preset automatic on every iPhone signed in to the new profile |
+| Starting profile library | Gives every new user the same named settings environments |
+| iPhone assignment | Makes one profile automatic on every iPhone signed in to the new account |
 | iPad or Apple TV assignment | Uses a different automatic loadout on those device types |
 | Mac assignment | Reserves an automatic loadout for future macOS support |
 | Override-clearing choice | Lets an applied preset replace only the Device Overrides that conflict with its included settings |
@@ -202,13 +201,13 @@ device: administrator entries appear first and duplicates are removed. If the
 user explicitly cleared a list before bootstrap, it remains empty.
 
 That general bootstrap priority does not cancel a preset's own saved policy.
-If an inherited preset applies automatically with **Clear Conflicting Device
-Overrides** enabled, it removes only the overrides that conflict with its
+If a copied profile activates automatically with **Replace Device Overrides**
+enabled, it removes only the overrides that conflict with its
 included settings.
 
-Profile Presets add one more protection: Neptune adopts the template's library
-and assignments only when its local Profile Presets document is empty. This
-preserves loadouts created locally before the first server read. Each device
+Settings Profiles add one more protection: Neptune copies the template library
+and assignments only when its local Settings Profiles document is empty. This
+preserves profiles created locally before the first server read. Each device
 type can have zero or one automatic assignment.
 
 Selecting a user with no personal Neptune backup in Remote Management shows
