@@ -72,8 +72,10 @@ sync named configurations and the single optional automatic assignment for
 each of iPhone, iPad, Apple TV, and Mac; Mac is reserved for future macOS
 support. The manually selected profile remains local. While a named profile is
 active, ordinary eligible settings changes update that profile and sync to
-other devices using it. **My Settings** returns to the normal synchronized
-preferences. A Device Override keeps one
+other devices using it. Stopping a named profile returns to the normal
+synchronized preferences: the newest values already observed through Settings
+Sync, or the captured pre-profile local values when none were received. It does
+not perform a new backup restore. A Device Override keeps one
 eligible setting local to a particular server, user, and physical device
 without turning off the rest of sync.
 
@@ -81,9 +83,9 @@ For the same setting, an individual administrator push has highest priority,
 then an explicit Device Override, then the active Settings Profile, then the
 ordinary synchronized value. A profile's optional **Replace Device
 Overrides** policy removes only its matching overrides when activated; a
-manual switch asks for confirmation. There is no separate Reapply action. A
-push suppresses only the conflicting member of the active profile until the
-profile changes again.
+user-initiated switch asks for confirmation. There is no separate Reapply
+action. A push suppresses only the conflicting member of the active profile
+until the profile changes again.
 
 Device-wide items such as the image cache are shared locally. Backend-managed
 items such as parental controls and streaming limits live on the media server

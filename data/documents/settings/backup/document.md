@@ -39,10 +39,10 @@ it becomes available.
 
 What stays device-local: diagnostics toggles, the sync switch itself, and
 anything tied to the specific hardware. The active Settings Profile choice is
-local too: Automatic, My Settings, or a manually selected named profile can be
-different on each physical device. A Device Override is also local, but it
-applies to one otherwise synchronized setting. The active profile selection and
-the Device Override list never travel inside the backup.
+local too: Auto, Manual with no profile selected, or a manually selected named
+profile can be different on each physical device. A Device Override is also
+local, but it applies to one otherwise synchronized setting. The active profile
+selection and the Device Override list never travel inside the backup.
 
 Home Screen and Lock Screen widget placement, size, and per-widget
 Page/Section/Pin selection are managed by iOS on that device; they are not one
@@ -103,19 +103,26 @@ labels this as server setup instead of offering to restore it as a personal
 “Welcome Back” backup.
 
 Settings Profile definitions and iPhone, iPad, Apple TV, and Mac assignments
-sync as one document. Ordinary eligible changes update the active target: My
-Settings if it is active, or the named profile definition if one is active.
-The named profile's effective member values are not uploaded as separate My
-Settings changes, preventing an iPhone profile from overwriting an Apple TV's
-configuration. A profile's **Replace Device Overrides** choice also syncs.
-Mac is reserved for future macOS support.
+sync as one document. Ordinary eligible changes update the active target: the
+regular synchronized setting when no named profile is active, or the named
+profile definition when one is active. The named profile's effective member
+values are not uploaded as separate regular-setting changes, preventing an
+iPhone profile from overwriting an Apple TV's configuration. A profile's
+**Replace Device Overrides** choice also syncs. Mac is reserved for future
+macOS support.
+
+Leaving a named profile does not request a fresh cloud restore. Neptune reveals
+the newest regular synchronized values it has already observed, falling back
+to the local values captured before the profile became active. Auto with no
+assigned profile uses that same baseline and does not reapply Server Defaults.
 
 An active [Device Override](/settings/device-overrides) removes its setting
 from ordinary uploads and downloads on that device. Removing the override
 normally queues this device's current value to sync again. A profile with
 **Replace Device Overrides** enabled can instead remove only its matching
-overrides when activated. Manual selection asks before clearing; automatic
-activation uses the saved policy.
+overrides when activated. A user-initiated selection asks before clearing,
+including a switch to Auto. A later background automatic activation uses the
+saved policy.
 
 
 

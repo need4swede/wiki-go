@@ -39,20 +39,27 @@ The **Copy Preferences From** step is handy when setting up a family member who 
 ## Settings Profiles
 
 [Settings Profiles](/personalization/profile-presets) let one account keep
-several named settings environments. Normal Settings controls update whichever
-profile is active. Select one on a physical device, or assign at most one
+several named settings environments. Normal Settings controls update the named
+profile when one is active, or regular synchronized settings when none is
+active. Select one on a physical device, or assign at most one
 automatic profile to iPhone, iPad, and Apple TV. The Desktop class is reserved
 for future Mac support. Settings Profiles require Neptune Pro; individual
 Device Overrides remain Free.
 
-Preset definitions and device-type assignments sync with the profile. The
+Profile definitions and device-type assignments sync with the account. The
 active manual choice stays on the physical device where it was selected, so
 changing kits on an iPhone does not force the Apple TV to switch.
+
+A named profile is a reversible layer over the regular synchronized settings.
+When it stops applying, Neptune reveals the newest synchronized baseline, or
+the pre-profile local values when no server value was observed. Auto with no
+assigned profile uses this baseline; it does not restore a backup or reapply
+Server Defaults.
 
 Creating one starts from the current device, Server Defaults, or Neptune
 Defaults, then opens Neptune's familiar settings editor. Each preset can also
 choose whether applying it may clear only the Device Overrides that conflict
-with its saved settings; manual application asks before doing so.
+with its saved settings; a user-initiated switch asks before doing so.
 
 
 

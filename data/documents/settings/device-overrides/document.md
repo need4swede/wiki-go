@@ -65,10 +65,10 @@ Override wins by default. Other settings in the profile continue to apply.
 A profile can instead save **Replace Device Overrides** as part of its
 definition. When that profile becomes active, Neptune removes only the
 overrides for settings included in it, then uses its saved values. Unrelated
-overrides remain. Manual selection shows a confirmation with the number of
-affected overrides before anything is removed; automatic activation follows
-the profile's saved choice without
-another prompt.
+overrides remain. A user-initiated selection—including switching to Auto—shows
+a confirmation with the number of affected overrides before anything is
+removed. A later background automatic activation follows the profile's saved
+choice without another prompt.
 
 
 
@@ -123,9 +123,9 @@ is applied when Neptune reconnects, even if ordinary device-to-device sync is
 off.
 
 The complete order for one setting is: individual administrator push, explicit
-Device Override, active named Settings Profile, then My Settings. A profile
-allowed to replace a conflict removes that matching Device Override
-before this order is evaluated.
+Device Override, active named Settings Profile, then regular synchronized
+settings. A profile allowed to replace a conflict removes that matching Device
+Override before this order is evaluated.
 An administrator push suppresses only the conflicting member of an active
 profile until that profile field is edited or the active selection changes.
 Server Defaults are a starting template used only when there is no personal

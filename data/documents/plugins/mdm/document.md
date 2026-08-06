@@ -56,6 +56,12 @@ Local-only actions such as launching Compass, clearing learned state, or
 rebuilding caches are intentionally omitted. Forward-compatible schema
 sections remain editable under **Additional Managed Settings**.
 
+Navigation Bar management includes Home, Movies, Shows, Music, Library, and
+Discover, and Music can be selected as the startup tab. Settings and Search
+stay pinned to the edges. Both the plugin dashboard and Neptune's native MDM
+editor preserve tabs introduced by newer clients when an administrator edits
+the tabs they recognize.
+
 Only Jellyfin administrator accounts see this entry. Neptune checks the active
 account before every operation, and the plugin separately requires elevated
 server authorization. The optional Neptune passcode protects the menu from
@@ -83,8 +89,9 @@ settings profile, but it cannot grant anyone's App Store entitlement.
 
 Both editors mirror the profile's settings and can save **Replace Device
 Overrides**. If enabled, activating that profile removes only Device Overrides
-for settings contained in it. The client asks before a manual selection clears
-anything; automatic activation follows the saved policy without another
+for settings contained in it. Before clearing anything for a user-initiated
+selection—including switching to Auto—the client asks first. A later
+background automatic activation follows the saved policy without another
 prompt.
 
 If the administrator's Pro access ends while the native console is open,
@@ -159,7 +166,8 @@ applies it after reconnecting, even when ordinary sync is off.
 
 For a setting included in several layers, an individual administrator push
 wins first, followed by a Device Override, the active named Settings Profile,
-and My Settings. A profile with **Replace Device Overrides** enabled first
+and regular synchronized settings. A profile with **Replace Device
+Overrides** enabled first
 removes only its matching overrides. The push suppresses only the conflicting
 member of the active profile; unrelated members continue applying. Editing
 that field or changing the active selection clears the suppression.
@@ -234,7 +242,8 @@ Defaults are not retroactive. After the one-time bootstrap completes—or once a
 personal backup exists—the user keeps that configuration even if the
 administrator later changes Server Defaults. To update an existing user, the
 administrator must open that user in Remote Management and send an individual
-settings push.
+settings push. Switching a device to Auto when no profile is assigned does not
+run this bootstrap again or reapply Server Defaults.
 
 
 

@@ -5,7 +5,8 @@ order: 15
 # Settings Profiles
 
 Settings Profiles let you keep named setups such as **Blue**, **Kids**, or
-**Travel**. **My Settings** is your normal default profile.
+**Travel**. Without a named profile, Neptune uses your regular synchronized
+settings.
 
 Find them at:
 
@@ -21,16 +22,16 @@ Settings Profiles require [Neptune Pro](/neptune-pro). Individual
 
 ## The Main Rule
 
-The normal Settings screens edit whichever settings profile is active.
+The normal Settings screens edit whichever settings target is active.
 
-| Active Profile | What Happens When You Change a Setting |
-|----------------|-----------------------------------------|
-| **My Settings** | The change syncs to devices using My Settings |
+| Active Target | What Happens When You Change a Setting |
+|---------------|-----------------------------------------|
+| **No named profile** | The change syncs to devices without a named profile |
 | **Blue** | Blue itself is updated, and devices using Blue receive the change |
 | **Device Override** on that setting | The change stays only on this device |
 
 There is no Reapply button. A setting change takes effect immediately and is
-saved to the active profile automatically.
+saved to the active target automatically.
 
 
 
@@ -65,22 +66,56 @@ you leave.
 
 ## Switch Profiles
 
-Open Settings Profiles and choose:
+Open Settings Profiles and use **Device Preset**:
 
-- **Automatic** to use the profile assigned to this device type
-- **My Settings** to use your ordinary settings
-- A named profile such as **Blue**
+- **Auto** uses the profile assigned to this device type. If there is no
+  assignment, the device runs without a named profile.
+- **Manual** immediately stops following Auto, uses your regular settings, and
+  reveals your named profiles and Create Profile.
+
+Switching back to Auto always asks first. If a profile is assigned, the alert
+names it and confirms that your regular settings will be kept. If no profile is
+assigned, the alert says that none is currently assigned and that if one is
+assigned later, it will be applied automatically.
+
+Choose a named profile such as Blue, then choose **Use on This Device**. The
+same menu also offers **Edit Profile**, which opens the editor without
+activating it. Choosing the active named profile offers **Stop Using on This
+Device** instead.
 
 The choice is local to the physical device. Selecting Blue on Apple TV does
 not select Blue on iPhone.
 
 The Blue definition can still sync. If both devices use Blue, changing an
-eligible setting on either device updates Blue for both. If the iPhone uses My
-Settings, it does not receive Blue's effective values.
+eligible setting on either device updates Blue for both. If the iPhone has no
+named profile, it does not receive Blue's effective values.
 
 
 
-## Automatic Profiles by Device Type
+## What Returns When You Leave a Profile
+
+A named profile sits over your regular settings; it does not turn its values
+into your regular synchronized settings. Neptune keeps the regular values
+underneath it.
+
+For example:
+
+1. Your regular Theme is **Ocean**.
+2. You select a profile whose Theme is **Midnight**.
+3. You switch to Auto, and no automatic profile is assigned.
+4. The profile is removed and Theme returns to **Ocean**.
+
+If another device changed your regular synchronized Theme to **Volcano** while
+Midnight was active, Neptune returns to **Volcano** instead. If Neptune has
+never received a synchronized value for a setting, it uses the local value
+captured before the named profile took over.
+
+Switching profiles does not restore your cloud backup on demand, create a
+special backup, or reapply Server Defaults.
+
+
+
+## Auto Profiles by Device Type
 
 Each device type can have zero or one automatic profile:
 
@@ -91,11 +126,12 @@ Each device type can have zero or one automatic profile:
 | **Apple TV** | Apple TV |
 | **Mac** | Reserved for future macOS support |
 
-Assignments sync with your account. Every matching device in Automatic mode
-uses that assignment. A manual profile choice affects only that device until
-you choose Automatic again.
+Assignments sync with your account. Every matching device in **Auto** follows
+that assignment. A manual profile choice affects only that device until you
+choose Auto again.
 
-If no automatic profile is assigned, Automatic uses My Settings.
+If no profile is assigned for that device type, Auto uses regular settings
+without a named profile.
 
 
 
@@ -109,9 +145,10 @@ Each named profile has a **Replace Device Overrides** option:
 - **Off:** conflicting Device Overrides stay in control
 - **On:** activating the profile removes only its conflicting Device Overrides
 
-When a manual switch would remove overrides, Neptune tells you how many are
-affected and asks before continuing. Unrelated overrides are never removed.
-Automatic activation follows the saved option without another prompt.
+When a user-initiated switch would remove overrides, Neptune tells you how many
+are affected and asks before continuing. This includes switching back to Auto
+when its assigned profile replaces overrides. Unrelated overrides are never
+removed. A later background automatic assignment follows the saved option.
 
 
 
@@ -126,12 +163,14 @@ Settings Sync carries:
 It does not carry the profile currently selected on a physical device.
 
 When Blue is active, ordinary eligible changes update Blue's definition. They
-are not also uploaded as My Settings changes. This prevents an Apple TV using
-Blue from overwriting an iPhone using My Settings.
+are not also uploaded as regular-setting changes. This prevents an Apple TV
+using Blue from overwriting an iPhone that has no named profile.
 
-Neptune still tracks newer My Settings values underneath an active named
-profile. Switching back to My Settings restores the latest synchronized value,
-not an old value from when Blue was selected.
+Neptune still tracks newer regular settings underneath an active named profile.
+Stopping the named profile restores the latest synchronized value. If no
+synchronized value has ever been received, Neptune restores the local value it
+captured before the profile became active. This happens locally; it is not a
+new Restore from Backup operation.
 
 Without Settings Sync, profiles still work on the device where they were
 created, but their definitions and assignments do not reach other devices.
@@ -145,7 +184,7 @@ For the same eligible setting, Neptune uses this order:
 1. An individual administrator push
 2. A Device Override
 3. The active named Settings Profile
-4. My Settings
+4. Regular synchronized settings
 
 An administrator push may temporarily replace a matching profile value. Change
 that setting again while the profile is active, or switch away and back, to
@@ -155,7 +194,8 @@ establish the profile value again.
 
 ## Edit or Delete a Profile
 
-Choose a profile under **Your Profiles** to open:
+Set **Device Preset** to Manual and choose a named profile. The action menu
+offers **Use on This Device** or **Edit Profile**. Edit Profile opens:
 
 - **Profile Name**
 - **Manage Profile**
@@ -168,7 +208,7 @@ the new values apply immediately. Renaming a profile or changing its automatic
 assignments does not switch the current device.
 
 Deleting a profile also removes its automatic assignments. A device that had
-selected it returns to Automatic. Other profiles and My Settings are not
+selected it returns to Auto. Other profiles and regular settings are not
 deleted.
 
 
@@ -181,7 +221,8 @@ library only when a new user's personal library is empty.
 
 Server Defaults are not retroactive. After the first copy, the profiles belong
 to the user and can be edited or deleted normally. Changing Server Defaults
-later does not rewrite existing users.
+later does not rewrite existing users. Switching to Auto with no assigned
+profile does not reapply Server Defaults.
 
 Administrators can prepare Settings Profiles from the Free Jellyfin dashboard,
 but each signed-in user still needs Neptune Pro before a named profile becomes
@@ -192,8 +233,8 @@ active. MDM configuration does not grant App Store entitlement.
 ## If Pro Access Ends
 
 Neptune keeps profile definitions, automatic assignments, and each device's
-local selection. Named-profile values stop applying immediately and My
-Settings becomes active. Device Overrides continue working.
+local selection. Named-profile values stop applying immediately and regular
+settings become active. Device Overrides continue working.
 
 When Pro returns, Neptune automatically restores the retained selection. You
 do not need to recreate the profile.
