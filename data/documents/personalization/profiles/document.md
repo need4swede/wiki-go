@@ -49,6 +49,11 @@ Preset definitions and device-type assignments sync with the profile. The
 active manual choice stays on the physical device where it was selected, so
 changing kits on an iPhone does not force the Apple TV to switch.
 
+Creating one starts from the current device, Server Defaults, or Neptune
+Defaults, then opens Neptune's familiar settings editor. Each preset can also
+choose whether applying it may clear only the Device Overrides that conflict
+with its saved settings; manual application asks before doing so.
+
 
 
 ## Per-Profile Features

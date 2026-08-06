@@ -57,7 +57,8 @@ effective Server Defaults as inherited without creating personal state.
 Configured synchronized defaults seed untouched settings once on the user's
 first Neptune setup, even when Settings Sync is off. Explicit local changes
 and Device Overrides win, and later changes to Server Defaults are not
-retroactive.
+retroactive. A Profile Preset may separately opt into clearing only its
+conflicting Device Overrides when that preset is later applied.
 
 Device inventory does not provide remote commands, locking, or erasure. The
 console also does not include Neptune Indexers controls. Neptune MDM

@@ -61,7 +61,15 @@ not travel inside the cloud backup. Switching profiles or servers uses that
 profile's own override list.
 
 If the active Profile Preset also contains an overridden setting, the Device
-Override wins. Other settings in the preset continue to apply.
+Override wins by default. Other settings in the preset continue to apply.
+
+A preset can instead save **Clear Conflicting Device Overrides** as part of
+its definition. When that preset is applied, Neptune removes only the
+overrides for settings included in the preset, then applies its saved values.
+Unrelated overrides remain. Manual selection and **Reapply Preset** show a
+confirmation with the number of affected overrides before anything is
+removed; automatic application follows the preset's saved choice without
+another prompt.
 
 
 
@@ -73,13 +81,15 @@ To remove one override:
 - Use **Sync With Other Devices** from its Apple TV context menu
 - Or remove it from the **Kept on this device** list in Device Overrides
 
-When the override is removed, this device's current value is queued for sync.
-It will be sent the next time Neptune can reach the server, even if the device
-is offline when you remove it. That value can then update your other devices.
-Neptune does not first replace it with another device's current value.
+When the override is removed, this device's current value is normally queued
+for sync. It will be sent the next time Neptune can reach the server, even if
+the device is offline when you remove it. If the active Profile Preset owns
+that setting, its value takes over locally instead and is not uploaded as an
+ordinary settings change.
 
-Choose **Sync Everything Again** to remove every override at once. Each
-formerly local setting is queued using its current value on this device.
+Choose **Sync Everything Again** to remove every override at once. Settings
+not controlled by the active preset are queued using their current values;
+preset-owned settings remain local under that preset.
 
 
 
@@ -114,9 +124,11 @@ is applied when Neptune reconnects, even if ordinary device-to-device sync is
 off.
 
 The complete order for one setting is: individual administrator push, explicit
-Device Override, active Profile Preset, then the synchronized base value.
+Device Override, active Profile Preset, then the synchronized base value. A
+preset allowed to clear a conflict removes that matching Device Override
+before this order is evaluated.
 An administrator push suppresses only the conflicting member of an active
-preset until **Reapply Preset**, an active selection change, or a preset edit.
+preset until **Reapply Preset** or an active selection change.
 Server Defaults are a starting template used only when there is no personal
 backup; they are not an administrator push. They bootstrap configured,
 untouched synchronized settings once even when Settings Sync is off. A Device
@@ -174,5 +186,6 @@ choice is separate from Device Overrides and normally appears only once.
 | **Keep Here is disabled** | Turn on **Sync across devices**. If that switch is unavailable, confirm Neptune MDM is active |
 | **A setting has no row shortcut** | Open the Device Overrides browser; sliders and reorder editors are managed there |
 | **The setting is absent from the browser** | It may be device-local, unavailable on this platform, or unsupported by the current app version |
+| **A preset did not change an overridden setting** | Edit the preset and enable **Clear Conflicting Device Overrides**, then select or reapply it and confirm **Clear & Apply** |
 | **An administrator change did not clear an override** | Update Neptune MDM and reconnect |
 | **Uploads are paused to protect saved choices** | Neptune could not safely recover its local override record; leave sync paused and use Get Help before resetting app data |

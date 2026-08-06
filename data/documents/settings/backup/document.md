@@ -35,7 +35,7 @@ it becomes available.
 | [Library Pins](/library/shortcuts) | Pinned items, browse Pins, timestamp Pins |
 | [iPhone Compass](/ios/live-activity) | Ordered Compass Shortcuts, custom labels and symbols |
 | [Live Activity](/ios/live-activity) | Enabled state and selected activity type |
-| [Profile Presets](/personalization/profile-presets) | Preset definitions, included values, order, and device-type assignments |
+| [Profile Presets](/personalization/profile-presets) | Preset definitions, included values, override-clearing choices, order, and device-type assignments |
 
 What stays device-local: diagnostics toggles, the sync switch itself, and
 anything tied to the specific hardware. The active Profile Preset choice is
@@ -106,11 +106,16 @@ Preset definitions and iPhone, iPad, Apple TV, and Mac assignments sync as one
 profile document. The values materialized by the active preset are not uploaded
 as ordinary setting edits, preventing an iPhone's preset from overwriting an
 Apple TV's configuration. Settings omitted from a sparse preset continue using
-the synchronized base value. Mac is reserved for future macOS support.
+the synchronized base value. A preset's **Clear Conflicting Device Overrides**
+choice also syncs with its definition. Mac is reserved for future macOS
+support.
 
 An active [Device Override](/settings/device-overrides) removes its setting
 from ordinary uploads and downloads on that device. Removing the override
-queues this device's current value to sync again.
+normally queues this device's current value to sync again. An applied preset
+with **Clear Conflicting Device Overrides** enabled can instead remove only
+its matching overrides and take control locally. Manual selection and reapply
+ask before clearing; automatic application uses the saved policy.
 
 
 
@@ -153,7 +158,7 @@ The screen shows when the backup was last saved and which device saved it. If sy
 | Data | Where It Lives |
 |------|----------------|
 | Synchronized settings | On each device, with a backup on your Jellyfin server |
-| Profile Preset definitions and device-type assignments | In the synchronized profile backup |
+| Profile Preset definitions, override-clearing choices, and device-type assignments | In the synchronized profile backup |
 | Active Profile Preset choice | On that physical device only |
 | Device Override list | On that physical device only; never in the cloud backup |
 | Authentication | Standard Jellyfin auth tokens |

@@ -13,8 +13,11 @@ Presets belong to the signed-in profile. Find them at:
 
 **Settings > User Preferences > Backup and Restore > Profile Presets**
 
+If the active backend does not provide Backup and Restore, Profile Presets
+appears directly under **User Preferences** and remains local to that device.
+
 Profile Presets require [Neptune Pro](/neptune-pro). This includes creating,
-editing, duplicating, deleting, manually switching, reapplying, and automatic
+editing, deleting, manually switching, reapplying, and automatic
 device-type assignments. [Device Overrides](/settings/device-overrides) remain
 Free when you only need one setting to stay local to one device.
 
@@ -23,18 +26,32 @@ Free when you only need one setting to stay local to one device.
 ## Create a Preset
 
 1. Choose **Create Preset**
-2. Give the preset a name
-3. Select the settings to include
-4. Save the preset
+2. Choose a starting point
+3. Edit the loadout through Neptune's familiar settings categories
+4. Choose **Save**, then name the preset
 
-Neptune captures the current, visible value of each selected setting. This
-includes an option that is currently off or not set: the preset remembers that
-choice rather than silently omitting it.
+The starting points are:
 
-Use **Update Values from This Device** later to recapture the included
-settings after adjusting Neptune. It updates only settings available on that
-platform, so editing an iPhone loadout cannot erase Apple TV-only values in
-the same preset.
+| Starting Point | What It Copies |
+|----------------|----------------|
+| **Copy My Current Settings** | The settings currently in use on this device |
+| **Copy Server Defaults** | The settings supplied by your server administrator |
+| **Start with Neptune Defaults** | Neptune's original settings |
+
+A starting point is only a snapshot. Changing your regular settings or Server
+Defaults later does not silently rewrite the preset. **Copy Server Defaults**
+is unavailable when the current server or account does not provide them.
+
+While managing the loadout, change a setting to save that value in the preset,
+or choose **Follow My Settings** to leave it out. Saving opens the name screen.
+If the name is blank, Neptune chooses the first available name: **Preset**,
+**Preset 2**, **Preset 3**, and so on. You then land on the new preset's edit
+page.
+
+If you try to leave after changing a draft, Neptune asks whether to save it,
+discard it, or continue editing. Theme changes preview across the entire
+editor, including its background, and your normal theme returns when you
+leave.
 
 
 
@@ -83,6 +100,29 @@ the updated definition reaches the profile's other devices through
 
 
 
+## Device Overrides
+
+By default, a [Device Override](/settings/device-overrides) remains in control
+when it conflicts with a preset. The preset still applies all of its other
+settings.
+
+Each preset has a **Clear Conflicting Device Overrides** switch on its edit
+page:
+
+- **Off:** conflicting Device Overrides stay in place, so the preset does not
+  change those settings
+- **On:** applying the preset removes only Device Overrides for settings saved
+  in that preset, then applies the preset values
+
+Unrelated Device Overrides are never removed. Turning the switch on does not
+immediately change anything; its policy runs when the preset is applied.
+
+When a manual selection or **Reapply Preset** would clear overrides, Neptune
+shows how many are affected and asks you to choose **Clear & Apply** or cancel.
+Automatic application follows the saved switch without another prompt.
+
+
+
 ## Make a Preset Automatic by Device Type
 
 Each device type can have zero or one automatic preset:
@@ -114,6 +154,7 @@ Settings Sync carries:
 
 - Preset names and order
 - The selected settings and captured values inside each preset
+- Each preset's **Clear Conflicting Device Overrides** choice
 - iPhone, iPad, Apple TV, and Mac assignments
 
 The active choice on each physical device—Automatic, No Preset, or a
@@ -139,9 +180,13 @@ order:
 | Priority | Source | Result |
 |----------|--------|--------|
 | 1 | **Individual administrator push** | The pushed value wins when delivered and suppresses the conflicting preset member |
-| 2 | **Device Override** | A **This device only** value wins on that physical device |
+| 2 | **Device Override** | A **This device only** value wins unless the applied preset is allowed to clear that conflict |
 | 3 | **Active Profile Preset** | The preset wins only for settings it includes |
 | 4 | **Current synchronized settings** | The profile's ordinary base value is used |
+
+When **Clear Conflicting Device Overrides** is enabled, the matching overrides
+are removed before the preset applies. They are no longer a competing layer;
+unrelated overrides keep their normal priority.
 
 An administrator push is different from a Server Default. A push is an
 explicit change sent to an individual user. The Profile Presets supplied by
@@ -154,19 +199,26 @@ If an administrator pushes a setting that also has a Device Override, Neptune
 applies the pushed value and removes that matching override. If the setting is
 also in the active preset, Neptune suppresses only that conflicting preset
 member; every unrelated member keeps applying. The suppression lasts until
-you use **Reapply Preset**, change the active selection, or edit the preset.
-Any of those actions explicitly reapplies the preset's captured value.
+you use **Reapply Preset** or change the active selection. Either action
+explicitly reapplies the preset's saved value.
 
 
 
 ## Edit or Delete a Preset
 
-Editing a preset updates its synchronized definition. Devices currently using
-it receive the new included values when Settings Sync delivers the change.
+Choose a preset under **Your Presets** to open its edit page:
 
-Choose **Duplicate Preset** to create a separate copy of a loadout before
-experimenting. Its name is made unique, and later edits do not change the
-original.
+- **Preset Name** renames it
+- **Manage Preset** opens the settings saved in the loadout
+- **Use Automatically On** assigns it to device types
+- **Clear Conflicting Device Overrides** controls how it handles matching
+  device-local choices
+- **Delete Preset** removes it
+
+Saving edits updates the preset definition; it does not select or reapply the
+preset on the current device. Return to the main Profile Presets page to select
+it, or use **Reapply Preset** if it is already active. Backing out with unsaved
+changes shows the save-or-discard confirmation.
 
 Deleting a preset also removes every automatic device-type assignment that
 points to it. A device that selected the deleted preset manually returns to
@@ -188,6 +240,10 @@ assignments when Neptune creates their settings, provided they have no
 personal settings backup and Neptune's local Profile Presets document is
 empty. Bootstrap also runs when ordinary Settings Sync is off; a Free user
 retains the document without applying it until Pro becomes available.
+
+The administrator can also save **Clear Conflicting Device Overrides** inside
+each starting preset. If an inherited preset later applies automatically, it
+uses that saved policy without a prompt and removes only matching overrides.
 
 Server Defaults are not retroactive:
 

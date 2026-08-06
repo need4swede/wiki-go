@@ -19,7 +19,7 @@ Apple-platform integrations, including reusable settings loadouts.
 | [Top Shelf Customization](/neptune-pro/top-shelf-customization) | Cinematic presentation, Studio designs, section ordering, and direct Play actions on Apple TV |
 | [Pin Widgets](/ios/widgets#pin-widgets-neptune-pro) | Put a native Pin on the iPhone or iPad Home Screen or Lock Screen, with direct Play for movie and episode Pins |
 | [Section Widgets](/ios/widgets#section-widgets-neptune-pro) | Rotate current media from 16 supported Home and Discover sections in a widget |
-| [Profile Presets](/personalization/profile-presets) | Create RPG-style settings loadouts, switch manually, or assign one automatically per device type |
+| [Profile Presets](/personalization/profile-presets) | Build guided settings loadouts, switch manually, or assign one automatically per device type |
 | [Native MDM Administration](/plugins/mdm#administer-from-neptune-neptune-pro) | Operate the complete Neptune MDM admin suite directly from iPhone, iPad, Apple TV, and future Mac |
 
 

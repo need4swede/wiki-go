@@ -81,6 +81,12 @@ Neptune Pro**, another account says **Managed User Needs Neptune Pro**, and
 Server Defaults say **Recipients Need Neptune Pro**. MDM can distribute a
 preset, but it cannot grant anyone's App Store entitlement.
 
+Both editors mirror the preset's settings and can save **Clear Conflicting
+Device Overrides**. If enabled, applying that preset removes only Device
+Overrides for settings contained in it. The client asks before a manual
+selection or reapply clears anything; automatic application follows the saved
+policy without another prompt.
+
 If the administrator's Pro access ends while the native console is open,
 Neptune closes or locks it and blocks further native actions. Existing MDM
 data and delivered policies are unchanged, and dashboard management remains
@@ -110,9 +116,9 @@ are not included in the backup.
 
 The synchronized profile also carries [Profile
 Presets](/personalization/profile-presets): their names, sparse included
-settings, order, and iPhone, iPad, Apple TV, and Mac assignments. The
-active choice remains local to each physical device, so a manual switch does
-not force every device to use the same preset.
+settings, override-clearing choices, order, and iPhone, iPad, Apple TV, and Mac
+assignments. The active choice remains local to each physical device, so a
+manual switch does not force every device to use the same preset.
 
 The preset document can sync to a Free account, but remains dormant there.
 Device Overrides remain Free. If that account later gains Pro, Neptune
@@ -153,10 +159,11 @@ applies it after reconnecting, even when ordinary sync is off.
 
 For a setting included in several layers, an individual administrator push
 wins first, followed by a Device Override, the active Profile Preset, and the
-ordinary synchronized value. The push suppresses only the conflicting member
-of the active preset; unrelated members continue applying. **Reapply Preset**,
-changing the active selection, or editing the preset explicitly clears that
-suppression.
+ordinary synchronized value. An applied preset with **Clear Conflicting Device
+Overrides** enabled first removes only its matching overrides. The push
+suppresses only the conflicting member of the active preset; unrelated members
+continue applying. **Reapply Preset** or changing the active selection clears
+that suppression.
 
 Neptune MDM `1.2.6.101` predates the newer administrator force ledger. The
 native console remains compatible: when a user has no personal backup, it
@@ -186,12 +193,18 @@ For Profile Presets, the template can provide:
 | iPhone assignment | Makes one preset automatic on every iPhone signed in to the new profile |
 | iPad or Apple TV assignment | Uses a different automatic loadout on those device types |
 | Mac assignment | Reserves an automatic loadout for future macOS support |
+| Override-clearing choice | Lets an applied preset replace only the Device Overrides that conflict with its included settings |
 
 Only configured values participate. A setting omitted from the template keeps
 its local value, and an explicit local non-default, unsent local change, or
 Device Override wins. Saved URL lists merge with URLs already recorded by the
 device: administrator entries appear first and duplicates are removed. If the
 user explicitly cleared a list before bootstrap, it remains empty.
+
+That general bootstrap priority does not cancel a preset's own saved policy.
+If an inherited preset applies automatically with **Clear Conflicting Device
+Overrides** enabled, it removes only the overrides that conflict with its
+included settings.
 
 Profile Presets add one more protection: Neptune adopts the template's library
 and assignments only when its local Profile Presets document is empty. This

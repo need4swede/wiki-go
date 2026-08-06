@@ -76,9 +76,11 @@ without turning off the rest of sync.
 
 For the same setting, an individual administrator push has highest priority,
 then an explicit Device Override, then the active Profile Preset, then the
-ordinary synchronized value. A push suppresses only the conflicting member of
-the active preset until the user explicitly reapplies, changes selection, or
-edits that preset.
+ordinary synchronized value. A preset's optional **Clear Conflicting Device
+Overrides** policy removes only its matching overrides when it is applied;
+manual selection or reapply asks for confirmation first. A push suppresses
+only the conflicting member of the active preset until the user explicitly
+reapplies or changes selection.
 
 Device-wide items such as the image cache are shared locally. Backend-managed
 items such as parental controls and streaming limits live on the media server
