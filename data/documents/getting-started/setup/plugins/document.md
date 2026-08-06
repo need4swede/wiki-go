@@ -2,7 +2,7 @@
 order: 30
 ---
 
-# Plugin Discovery
+# Plugins
 
 Server plugins are backend-specific. The integrations on this page are for Jellyfin. Neptune itself works without them, and plugin support for future backends will be documented separately.
 

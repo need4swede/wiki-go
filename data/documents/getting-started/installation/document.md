@@ -4,8 +4,6 @@ order: 10
 
 # Installation
 
-Neptune runs on Apple TV, iPhone, iPad, and Mac. Install it on as many devices as you like; your account, preferences, and watch state carry across all of them.
-
 ## Requirements
 
 | Device | Minimum |
@@ -14,10 +12,6 @@ Neptune runs on Apple TV, iPhone, iPad, and Mac. Install it on as many devices a
 | **iPhone / iPad** | iOS or iPadOS 16 or later |
 | **Mac** | TBD |
 | **Media server** | Jellyfin 10.10+ or Emby 4.9.5+ (beta) |
-
-Neptune's app experience is backend-agnostic. Jellyfin is the primary backend,
-and Emby support is available while its capability coverage continues to
-expand. Plex and additional backends remain planned.
 
 ## Apple TV
 
@@ -35,16 +29,15 @@ Neptune for iPhone and iPad hasn't reached the App Store yet. While a platform i
 
 1. Join the <a href="https://discord.gg/HTuf4HPMbP" target="_blank">Neptune Discord</a> server
 2. Complete verification on the landing page
-3. Head to the **TestFlight** channel and press **Board the TestFlight** to receive your Passenger role
-4. Open the **Aviation School** channel and follow the instructions to access the TestFlight link
+3. Head to the **TestFlight** channel and use the appropriate link to receive your invite.
 
 ### Installing
 
 Accept the TestFlight invitation once, then install Neptune from the TestFlight app on each device. If you don't already have TestFlight installed, you can search for it on the App Store and install it from there.
 
-### Test Purchases
+### Purchases in TestFlight
 
-Beta builds run on App Store test purchases. Upgrading to Pro inside a beta is free and nothing is ever charged. Test purchases stay in the beta: when a platform reaches the App Store, they don't carry over, and continuing with Pro there means buying it for real.
+TestFlight releases do not allow real purchases. Upgrading to Neptune Pro inside a TestFlight build is entirely free and nothing is ever charged. Purchases occur in a sandbox and do not sync across your devices. If you wish to upgrade to Neptune Pro, make sure you do so using an App Store release version and not through TestFlight.
 
 ## Mac
 
@@ -54,13 +47,14 @@ TBD.
 
 The beta program has two roles, and they mean different things depending on whether a platform has launched:
 
-**Passengers** test platforms that haven't reached the App Store yet. Anyone can board through the Discord flow above. Right now that's iPhone and iPad. When a platform launches, its public beta ends and testers move to the App Store version.
+**Passengers** test platforms that haven't reached the App Store yet. Anyone can board through the Discord flow above.
+When a platform launches on the App Store, its public beta ends and testers move to the App Store version.
 
-**Pilots** fly ahead of the App Store: preview builds of released platforms before everyone else gets them. Pilot access is a benefit of [Neptune Pro's Lifetime tier](/neptune-pro). Select **Join Pilot Program** inside Neptune, confirm the email address you use with TestFlight, and your Lifetime purchase is verified automatically. This feature is still pending some backend updates from Apple before being made available.
+**Pilots** fly ahead of the App Store: preview builds of released platforms before everyone else gets them. Pilot access is a benefit of [Neptune Pro's Lifetime tier](/neptune-pro). If you've purchased Neptune Pro Lifetime, please send a message to the [Discord](https://discord.gg/HTuf4HPMbP) admin and they will instruct you on how to receive your Pilot wings.
 
-One quirk to know: TestFlight builds can't see App Store purchases, so inside a Pilot build you activate Pro with a free test purchase. Your real Lifetime purchase stays untouched and keeps working in the App Store version.
+> TestFlight builds can't see App Store purchases, so inside a Pilot build you activate Pro with a free test purchase. Your real Lifetime purchase stays untouched and keeps working in the App Store version.
 
 ## After Installation
 
 Once installed, Neptune walks you through setup on every device.
-See [Setup](/getting-started/setup) for detailed instructions, and [Devices](/getting-started/devices) for what to expect on each screen.
+See [Setup](/getting-started/setup) for instructions on how to setup your Neptune client.

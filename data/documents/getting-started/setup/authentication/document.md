@@ -4,10 +4,6 @@ order: 20
 
 # Authentication
 
-Authentication follows the connected backend. Jellyfin is the primary backend;
-Emby uses its own documented authentication API and independently scoped
-session.
-
 ## Jellyfin
 
 ### Username & Password
@@ -33,19 +29,7 @@ Neptune securely saves your session:
 
 ### Multiple Users
 
-Everyone in your household can sign in with their own server account. Neptune shows a profile picker at launch, and each profile keeps its own watch history, theme, and preferences.
+Everyone in your household can sign in with their own server account.
+Neptune shows a profile picker at launch, and each profile keeps its own watch history, theme, and preferences.
 
 See [Profiles](/personalization/profiles) for managing multiple accounts.
-
-## Emby
-
-Neptune verifies the server as Emby before presenting its public-user list.
-Choose a listed account or enter the exact username, then enter its local Emby
-password. Passwordless accounts use the same flow with an empty password.
-
-The resulting token is stored in the Keychain under its Emby server and
-account identity. It is not converted to a Jellyfin session or reused against
-Jellyfin plugin routes.
-
-Emby Connect and television PIN authentication are not implemented. The
-Emby flow does not expose Jellyfin Quick Connect as a fallback.
