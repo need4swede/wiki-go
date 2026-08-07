@@ -11,6 +11,7 @@ different on one device, [Device Overrides](/settings/device-overrides) can
 keep that setting local without disabling the rest of sync. [Settings
 Profiles](/personalization/profile-presets) provide named settings environments
 that can be selected locally or assigned by device type with Neptune Pro.
+Administrators can separately publish live Server Profiles by device class.
 
 Backup & Restore is currently powered by the Jellyfin-specific [Neptune
 MDM](/plugins/mdm) plugin. Without a compatible backend extension, Neptune
@@ -83,6 +84,16 @@ use the same Settings Sync connection. Definitions and the local choice remain
 stored if Pro access ends, but no named profile applies until Pro returns.
 Device Overrides remain Free.
 
+Administrator-managed policy is stored separately from your cloud backup. A
+directly enforced setting or required Settings Profile still applies when
+**Sync across devices** is off, and deleting the personal backup does not
+silently remove that policy. The administrator must choose **Allow User
+Changes** or remove the profile requirement.
+
+Server Profiles are also stored separately. Their definitions and global
+iPhone, iPad, Apple TV, and Mac assignments refresh even when ordinary Settings
+Sync is off. They do not become editable personal profiles in the backup.
+
 
 
 ## How It Works
@@ -110,6 +121,13 @@ values are not uploaded as separate regular-setting changes, preventing an
 iPhone profile from overwriting an Apple TV's configuration. A profile's
 **Replace Device Overrides** choice also syncs. Mac is reserved for future
 macOS support.
+
+A server-wide automatic assignment is a live managed layer rather than a sync
+change. A personal automatic assignment wins over an optional global one. A
+per-user required assignment wins over a global required assignment. If no
+profile is assigned for this device class, Neptune uses ordinary settings;
+Server Defaults only seed those settings during first setup and are not
+reapplied when Auto is selected.
 
 Leaving a named profile does not request a fresh cloud restore. Neptune reveals
 the newest regular synchronized values it has already observed, falling back
@@ -166,6 +184,7 @@ The screen shows when the backup was last saved and which device saved it. If sy
 |------|----------------|
 | Synchronized settings | On each device, with a backup on your Jellyfin server |
 | Settings Profile definitions, override-replacement choices, and device-type assignments | In the synchronized profile backup |
+| Server Profile definitions, assignments, and enforcement | Separately on the Jellyfin server; delivered as managed policy, not copied into personal backups |
 | Active Settings Profile choice | On that physical device only |
 | Device Override list | On that physical device only; never in the cloud backup |
 | Authentication | Standard Jellyfin auth tokens |

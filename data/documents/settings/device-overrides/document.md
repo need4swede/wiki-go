@@ -110,9 +110,18 @@ can create a new backup if Settings Sync is still enabled.
 
 ## Administrator Changes
 
+A current Neptune MDM plugin supports both one-time administrator changes and
+persistent enforcement.
+
+When a setting is marked **Enforce for User**, the server value stays locked
+and wins over a Device Override. An enforced member of the active Settings
+Profile does the same. Neptune does not delete the Device Override in either
+case—it preserves it underneath and restores it when enforcement is removed.
+A Server Profile definition is always read-only, but an unenforced member can
+still be changed locally by explicitly enabling a Device Override for it.
+
 With a current [Neptune MDM](/plugins/mdm) plugin, a server administrator's
-explicit change to a setting takes priority over an override for that same
-setting:
+ordinary one-time change takes priority over an override for that same setting:
 
 - The administrator's value is applied.
 - The matching Device Override is removed.
@@ -122,10 +131,11 @@ This still works if the device was offline during the change. The forced value
 is applied when Neptune reconnects, even if ordinary device-to-device sync is
 off.
 
-The complete order for one setting is: individual administrator push, explicit
-Device Override, active named Settings Profile, then regular synchronized
-settings. A profile allowed to replace a conflict removes that matching Device
-Override before this order is evaluated.
+The complete order for one setting is: directly enforced server value,
+enforced member of the active profile, unseen one-time administrator push,
+explicit Device Override, active named Settings Profile, then regular
+synchronized settings. A profile allowed to replace a conflict removes that
+matching Device Override before this order is evaluated.
 An administrator push suppresses only the conflicting member of an active
 profile until that profile field is edited or the active selection changes.
 Server Defaults are a starting template used only when there is no personal

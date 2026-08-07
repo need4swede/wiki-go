@@ -11,8 +11,10 @@ does not expose MDM, Settings Sync, Server Defaults, announcements, or this
 native administration console. Neptune never sends Jellyfin MDM routes to an
 Emby server.
 
-Neptune MDM handles settings sync, backup, Settings Profiles, Server Defaults,
-remote configuration, and device inventory. It keeps your preferences
+Neptune MDM handles settings sync, backup, personal and server-wide Settings
+Profiles, Server Defaults, remote configuration, persistent enforcement, and
+device inventory.
+It keeps your preferences
 consistent across every Neptune client on your account and gives server
 administrators tools for managing users, sending announcements, and setting
 up child accounts.
@@ -32,10 +34,12 @@ and choose **Neptune MDM**.
 The native console provides:
 
 - plugin and connection status;
+- a live Server Profiles library with automatic device-class assignments;
 - Server Defaults and individual users' settings backups;
 - **Copy from User**, which stages another user's effective settings as an
   unsaved starting point before the administrator confirms Save;
 - exact settings changes that leave unrelated and future settings untouched;
+- persistent per-user setting locks and required Settings Profiles;
 - read-only device inventory;
 - child-account policy;
 - announcement authoring and targeting;
@@ -84,7 +88,7 @@ administrator can edit them from the native console too. The dashboard shows
 **Requires Neptune Pro** because it cannot inspect App Store ownership. The
 native editor is contextual: your own Pro account says **Available with Your
 Neptune Pro**, another account says **Managed User Needs Neptune Pro**, and
-Server Defaults say **Recipients Need Neptune Pro**. MDM can distribute a
+Server Profiles and Server Defaults say **Recipients Need Neptune Pro**. MDM can distribute a
 settings profile, but it cannot grant anyone's App Store entitlement.
 
 Both editors mirror the profile's settings and can save **Replace Device
@@ -93,6 +97,20 @@ for settings contained in it. Before clearing anything for a user-initiated
 selection—including switching to Auto—the client asks first. A later
 background automatic activation follows the saved policy without another
 prompt.
+
+On a current plugin, a per-user target can configure durable management:
+
+- Use **Lock for User** on any eligible setting to keep that value locked.
+- Assign a Settings Profile automatically to a device type, then enable
+  **Require This Profile** so the user cannot switch it off or replace it.
+- Open settings inside that profile and lock only the members that must be
+  read-only. Other profile settings remain editable.
+
+The target device labels locked controls **Managed by Your Server**. Choosing
+**Allow User Changes** removes the policy and restores the user's preserved
+value. Required profiles still need the target user's Neptune Pro; direct
+setting enforcement does not. Older plugin versions keep their compatible
+admin tools but hide these policy controls.
 
 If the administrator's Pro access ends while the native console is open,
 Neptune closes or locks it and blocks further native actions. Existing MDM
@@ -131,6 +149,13 @@ The preset document can sync to a Free account, but remains dormant there.
 Device Overrides remain Free. If that account later gains Pro, Neptune
 automatically reconciles the retained local selection.
 
+Managed policy is separate from that synchronized document. It is delivered
+even when ordinary Settings Sync is off, and device uploads cannot replace the
+personal value underneath a managed setting or delete a required profile.
+The live Server Profiles library and its global device assignments use this
+same managed path, so existing and future users receive updates without
+copying those definitions into their personal backups.
+
 That synchronized profile includes native [Library Pins](/library/shortcuts),
 the iPhone’s ordered Compass Shortcuts, and its Live Activity enabled/type
 preferences. iOS Home Screen and Lock Screen widget placement, size, and
@@ -164,10 +189,9 @@ in the administrator's change are affected; unrelated overrides remain. The
 forced value is retained by the server so a device that was offline still
 applies it after reconnecting, even when ordinary sync is off.
 
-For a setting included in several layers, an individual administrator push
-wins first, followed by a Device Override, the active named Settings Profile,
-and regular synchronized settings. A profile with **Replace Device
-Overrides** enabled first
+When no persistent policy controls a setting, an unseen administrator push
+wins over a Device Override, the active named Settings Profile, and regular
+synchronized settings. A profile with **Replace Device Overrides** enabled first
 removes only its matching overrides. The push suppresses only the conflicting
 member of the active profile; unrelated members continue applying. Editing
 that field or changing the active selection clears the suppression.
@@ -179,6 +203,58 @@ partial administrator change. Existing users continue to receive only the
 exact settings that changed. An upgrade is not required to use the console;
 newer plugin versions add their server-side force-ledger behavior
 automatically.
+
+### Persistent Locks
+
+An ordinary administrator Save is a one-time push. **Lock for User** is a
+durable policy that remains in control until an administrator removes it. It
+can be used directly on one setting without creating a Settings Profile.
+
+For a setting present in several layers, Neptune uses this order:
+
+1. Directly enforced server value
+2. Enforced member of the active Settings Profile
+3. Unseen one-time administrator push
+4. Device Override
+5. Active Settings Profile
+6. Regular synchronized setting
+
+A required profile is configured per user and device type: iPhone, iPad,
+Apple TV, or Mac. Matching devices stay on Auto. Only marked members are
+read-only, so a Kids profile can lock parental and playback choices while
+still allowing the user to change its theme. If enforcement is removed,
+Neptune reveals the personal setting or Device Override it preserved
+underneath instead of retaining the managed value.
+
+
+
+## Server Profiles
+
+**Server Profiles** is the live, server-wide profile library. An administrator
+creates a profile once, then can assign it automatically to every iPhone,
+iPad, Apple TV, or future Mac used with that server. It applies to existing
+users and future users; it is not copied into each user's personal backup.
+
+For example, assign an **iPhone** Server Profile to iPhone while leaving the
+other device classes unassigned. Every iPhone in Auto uses that profile.
+Unassigned devices use their ordinary settings, initially seeded from Server
+Defaults when the administrator has configured them.
+
+Each device class has at most one global assignment. Reassigning it names the
+current and replacement profiles and asks for confirmation. An assignment can
+also be **Required**, which keeps matching devices on Auto. Selected profile
+members can be enforced so they remain read-only and outrank Device Overrides;
+unenforced members permit an explicit Device Override on that device.
+
+Users see Server Profiles beside their personal profiles, but cannot rename,
+edit, reorder, or delete the server-owned definitions. A personal automatic
+assignment is more specific than an optional global assignment. A per-user
+required assignment is more specific than a global required assignment.
+
+The Free plugin dashboard can author Server Profiles. Native administration
+requires the administrator's Neptune Pro access and Jellyfin administrator
+authorization. Every recipient still needs Neptune Pro before a named Server
+Profile can become active.
 
 
 
@@ -249,6 +325,10 @@ administrator must open that user in Remote Management and send an individual
 settings push. Switching a device to Auto when no profile is assigned does not
 run this bootstrap again or reapply Server Defaults.
 
+Server Defaults are not persistent policy. For live server-wide behavior, use
+a Server Profile. To prevent changes for only one person, target that user and
+enable direct enforcement or require one of their automatic Settings Profiles.
+
 
 
 ## Announcements
@@ -293,9 +373,12 @@ Child accounts pair with Neptune's in-app parental controls, where admins set th
 ## Wipe All Neptune MDM Data
 
 The native console requires the administrator to type `WIPE` before this
-irreversible action. It deletes Server Defaults, users' Neptune settings
-backups, device records, child-account policies, announcements, and the
-uploaded settings schema.
+irreversible action. It deletes Server Defaults, the Server Profiles library
+and global policy, users' Neptune settings backups, device records,
+child-account policies, announcements, and the uploaded settings schema.
+
+It also deletes per-user managed-settings policies, including required-profile
+assignments and enforced values.
 
 It does not delete Jellyfin users or media. It also does not delete Neptune
 Indexers data, because Indexers is a separate plugin.

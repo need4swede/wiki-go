@@ -96,7 +96,7 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 | Page | Description |
 |------|-------------|
 | [Profiles](/personalization/profiles) | Multi-user support |
-| [Settings Profiles](/personalization/profile-presets) | Named settings environments with local or automatic device-type selection |
+| [Settings Profiles](/personalization/profile-presets) | Personal and server-published settings environments with device-type selection |
 | [Themes](/personalization/themes) | Nine built-in themes plus custom imports |
 | [Item Detail Layouts](/personalization/item-detail-layouts) | Detailed, Immersive, or Minimal |
 | [Cards & Backdrops](/personalization/cards-and-backdrops) | Card styles and artwork behavior |
@@ -116,7 +116,7 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 | Page | Description |
 |------|-------------|
 | [Settings](/settings) | Every configuration screen, explained |
-| [Settings Profiles](/personalization/profile-presets) | Named profiles with one optional automatic choice per device type |
+| [Settings Profiles](/personalization/profile-presets) | Named personal or server-published profiles with device-type assignments |
 | [Device Overrides](/settings/device-overrides) | Keep one synchronized setting different on one device |
 
 ### Neptune Pro
@@ -138,7 +138,7 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 |------|-------------|
 | [Neptune Plugin Suite](/plugins) | Optional Jellyfin extensions: Indexers, MDM, Transcoder, and Studio |
 | [Indexers](/plugins/indexers) | Server-side indexing and music metadata |
-| [MDM](/plugins/mdm) | Settings sync, Settings Profiles, Server Defaults, announcements, remote management |
+| [MDM](/plugins/mdm) | Settings sync, live Server Profiles, Server Defaults, announcements, remote management |
 | [Transcoder](/plugins/transcoder) | Server-managed download quality profiles (coming soon) |
 | [Studio](/plugins/studio) | UI customization, beginning with Top Shelf design (coming soon) |
 

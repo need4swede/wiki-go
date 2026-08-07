@@ -46,6 +46,12 @@ automatic profile to iPhone, iPad, and Apple TV. The Desktop class is reserved
 for future Mac support. Settings Profiles require Neptune Pro; individual
 Device Overrides remain Free.
 
+A server administrator can also publish read-only **Server Profiles** and set
+one as the automatic choice for every device in a class—for example, one
+**iPhone** profile for all current and future users. A user's own automatic
+assignment is more specific. Administrators can require the server choice or
+enforce only selected settings inside it.
+
 Profile definitions and device-type assignments sync with the account. The
 active manual choice stays on the physical device where it was selected, so
 changing kits on an iPhone does not force the Apple TV to switch.
@@ -74,7 +80,7 @@ with its saved settings; a user-initiated switch asks before doing so.
 | Navigation bar | Tab order and visibility |
 | Conductor | Language and track preferences |
 | Pins | Your pinned items and browse filters |
-| Settings Profiles | Named settings environments and one optional automatic assignment per device type |
+| Settings Profiles | Personal or server-published settings environments with automatic device-type assignments |
 
 With the [Neptune MDM](/plugins/mdm) plugin, synchronized profile data follows
 you to every device you sign in on. Device-local choices—including which

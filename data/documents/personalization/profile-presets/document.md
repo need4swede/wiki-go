@@ -18,16 +18,25 @@ appears directly in **User Preferences** and stays on that device.
 Settings Profiles require [Neptune Pro](/neptune-pro). Individual
 [Device Overrides](/settings/device-overrides) remain Free.
 
+A Jellyfin administrator using a current [Neptune MDM](/plugins/mdm) plugin can
+create a live **Server Profile** once and assign it to every iPhone, iPad,
+Apple TV, or future Mac. Per-user profiles and assignments remain the more
+specific layer. Administrators can require an assignment and lock only the
+settings that must also override Device Overrides.
+
 
 
 ## The Main Rule
 
-The normal Settings screens edit whichever settings target is active.
+The normal Settings screens edit whichever personal settings target is active.
+Server-owned profiles are read-only unless a setting has an explicit Device
+Override.
 
 | Active Target | What Happens When You Change a Setting |
 |---------------|-----------------------------------------|
 | **No named profile** | The change syncs to devices without a named profile |
-| **Blue** | Blue itself is updated, and devices using Blue receive the change |
+| Personal **Blue** | Blue itself is updated, and devices using Blue receive the change |
+| **Server Profile** | It stays server-owned; use a Device Override for an allowed local difference |
 | **Device Override** on that setting | The change stays only on this device |
 
 There is no Reapply button. A setting change takes effect immediately and is
@@ -86,6 +95,11 @@ Device** instead.
 The choice is local to the physical device. Selecting Blue on Apple TV does
 not select Blue on iPhone.
 
+If your administrator requires a personal or Server Profile for this device type, Neptune keeps
+Device Preset on locked Auto. You cannot switch to Manual, select another
+profile, or delete the required profile. Your earlier local selection is kept
+underneath and returns if the requirement is removed.
+
 The Blue definition can still sync. If both devices use Blue, changing an
 eligible setting on either device updates Blue for both. If the iPhone has no
 named profile, it does not receive Blue's effective values.
@@ -133,12 +147,31 @@ choose Auto again.
 If no profile is assigned for that device type, Auto uses regular settings
 without a named profile.
 
+An administrator can require the automatic assignment for a specific user.
+That requirement applies to every device of the matching type signed in as
+that user. It does not force the same profile onto other device types.
+
+A current Neptune MDM server can also provide a global automatic assignment
+for every user. A personal automatic assignment wins over an optional global
+one. A per-user required assignment wins over a global required assignment.
+Required assignments lock Auto; optional assignments can still be replaced by
+Manual on that physical device.
+
 
 
 ## Device Overrides
 
 A [Device Override](/settings/device-overrides) keeps one setting local and
 normally wins over the active Settings Profile.
+
+An administrator-enforced value is the exception. A directly managed setting,
+or a locked member of the active profile, temporarily wins over a matching
+Device Override. Neptune keeps the override underneath and restores it if the
+administrator removes enforcement.
+
+A Server Profile definition is always read-only. For one of its unenforced
+settings, explicitly enabling a Device Override permits a local value. If that
+member is enforced, the server value also outranks the override.
 
 Each named profile has a **Replace Device Overrides** option:
 
@@ -162,6 +195,16 @@ Settings Sync carries:
 
 It does not carry the profile currently selected on a physical device.
 
+Server requirements are delivered separately from your synchronized profile
+document. They still arrive when ordinary Settings Sync is off. Device uploads
+cannot delete a profile referenced by policy or replace one of its enforced
+values.
+
+Server Profiles use that same managed delivery path. They are not copied into
+your personal backup. Changes and removals reach current users, future users,
+and devices with ordinary Settings Sync off while personal profiles remain
+stored underneath.
+
 When Blue is active, ordinary eligible changes update Blue's definition. They
 are not also uploaded as regular-setting changes. This prevents an Apple TV
 using Blue from overwriting an iPhone that has no named profile.
@@ -181,14 +224,20 @@ created, but their definitions and assignments do not reach other devices.
 
 For the same eligible setting, Neptune uses this order:
 
-1. An individual administrator push
-2. A Device Override
-3. The active named Settings Profile
-4. Regular synchronized settings
+1. A directly enforced server value
+2. An enforced setting in the active profile
+3. A one-time administrator push that has not yet been applied
+4. A Device Override
+5. The active named Settings Profile
+6. Regular synchronized settings
 
 An administrator push may temporarily replace a matching profile value. Change
 that setting again while the profile is active, or switch away and back, to
 establish the profile value again.
+
+Persistent enforcement is different: the control stays locked until the
+administrator chooses **Allow User Changes**. Removing it reveals your saved
+personal value instead of copying the managed value into your settings.
 
 
 
@@ -211,9 +260,48 @@ Deleting a profile also removes its automatic assignments. A device that had
 selected it returns to Auto. Other profiles and regular settings are not
 deleted.
 
+A personal profile referenced by server policy cannot be deleted. A Server
+Profile cannot be renamed, edited, reordered, or deleted by a user. Settings marked
+**Managed by Your Server** cannot be changed; all other settings in that
+personal profile remain editable and continue to update it normally.
+
+The requirement controls which profile must be active. Enforcement belongs to
+the profile itself, so its locked members remain protected if that same profile
+is active manually on another device type.
+
 Each device type can have only one automatic profile. If you assign a device
 type to another profile, Neptune names the current and replacement profiles
 and asks for confirmation first.
+
+
+
+## Server Profiles
+
+On a current [Neptune MDM](/plugins/mdm) server, administrators have a separate
+**Server Profiles** library in both the Jellyfin dashboard and Neptune's native
+admin console.
+
+A server profile can be:
+
+- assigned automatically to every iPhone, iPad, Apple TV, or future Mac;
+- required so matching users cannot switch it off; and
+- configured with selected enforced members that also outrank Device
+  Overrides.
+
+For example, an administrator can assign **iPhone** to all phones. A new user's
+other devices use their ordinary settings, seeded by Server Defaults when
+configured, while the iPhone profile remains a live managed layer. Existing
+users receive it too.
+
+Server-owned profiles are shown alongside personal profiles but cannot be
+edited or deleted by users. An optional personal assignment is more specific
+than an optional global assignment. Per-user required policy is more specific
+than global required policy.
+
+Administrators can author Server Profiles from the Free plugin dashboard or,
+with Neptune Pro and a Jellyfin administrator account, from iPhone, iPad, or
+Apple TV. Every signed-in recipient still needs Neptune Pro before a named
+profile becomes active.
 
 
 
@@ -231,6 +319,12 @@ profile does not reapply Server Defaults.
 Administrators can prepare Settings Profiles from the Free Jellyfin dashboard,
 but each signed-in user still needs Neptune Pro before a named profile becomes
 active. MDM configuration does not grant App Store entitlement.
+
+Server Defaults are not enforcement. To lock a profile or one setting, the
+administrator can use a required/enforced Server Profile or target a specific
+user in Neptune MDM. Direct per-user enforcement works without a Settings
+Profile and does not require that user to have Pro. A required named profile
+still does.
 
 
 

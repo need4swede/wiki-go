@@ -79,13 +79,20 @@ not perform a new backup restore. A Device Override keeps one
 eligible setting local to a particular server, user, and physical device
 without turning off the rest of sync.
 
-For the same setting, an individual administrator push has highest priority,
-then an explicit Device Override, then the active Settings Profile, then the
-ordinary synchronized value. A profile's optional **Replace Device
+For the same setting, a directly enforced server value has highest priority,
+then an enforced member of the active Settings Profile, an unseen one-time
+administrator push, an explicit Device Override, the active Settings Profile,
+and the ordinary synchronized value. A profile's optional **Replace Device
 Overrides** policy removes only its matching overrides when activated; a
 user-initiated switch asks for confirmation. There is no separate Reapply
 action. A push suppresses only the conflicting member of the active profile
 until the profile changes again.
+
+Persistent enforcement can target one user or an enforced member of a live
+Server Profile. Matching controls are disabled and marked **Managed by Your
+Server**, including when ordinary Settings Sync is off. Removing the policy
+restores the user's personal setting or preserved Device Override underneath
+it.
 
 Device-wide items such as the image cache are shared locally. Backend-managed
 items such as parental controls and streaming limits live on the media server
