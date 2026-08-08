@@ -111,14 +111,21 @@ can create a new backup if Settings Sync is still enabled.
 ## Administrator Changes
 
 A current Neptune MDM plugin supports both one-time administrator changes and
-persistent enforcement.
+persistent locks.
 
-When a setting is marked **Enforce for User**, the server value stays locked
-and wins over a Device Override. An enforced member of the active Settings
-Profile does the same. Neptune does not delete the Device Override in either
-case—it preserves it underneath and restores it when enforcement is removed.
-A Server Profile definition is always read-only, but an unenforced member can
-still be changed locally by explicitly enabling a Device Override for it.
+When a setting is marked **Lock for User**, the server value stays locked and
+wins over a Device Override. Every member of an active Required Settings
+Profile does the same, as does a separately locked member of another active
+profile. Neptune does not delete the Device Override in any of these cases—it
+preserves it underneath and restores it when the policy is removed. A Server
+Profile definition is always read-only, but an unlocked member of a
+non-required Server Profile can still be changed locally by explicitly
+enabling a Device Override for it.
+
+These MDM operations are not Pro-gated for the recipient. A Jellyfin
+administrator can make or lock an ordinary per-setting change from the Free
+plugin dashboard, including for a Free user. Native MDM administration is the
+separate Pro convenience for the administrator.
 
 With a current [Neptune MDM](/plugins/mdm) plugin, a server administrator's
 ordinary one-time change takes priority over an override for that same setting:
@@ -131,11 +138,13 @@ This still works if the device was offline during the change. The forced value
 is applied when Neptune reconnects, even if ordinary device-to-device sync is
 off.
 
-The complete order for one setting is: directly enforced server value,
-enforced member of the active profile, unseen one-time administrator push,
-explicit Device Override, active named Settings Profile, then regular
-synchronized settings. A profile allowed to replace a conflict removes that
-matching Device Override before this order is evaluated.
+The complete order for one setting is: directly locked server value, member of
+the active Required profile or separately locked member of another active
+profile, unseen one-time administrator push, explicit Device Override, active
+named Settings Profile, then regular synchronized settings. A profile allowed
+to replace a conflict removes that matching Device Override before this order
+is evaluated. Required enforcement instead preserves the matching override as
+an underlay and suppresses it only while the requirement matches.
 An administrator push suppresses only the conflicting member of an active
 profile until that profile field is edited or the active selection changes.
 Server Defaults are a starting template used only when there is no personal

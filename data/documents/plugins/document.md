@@ -22,7 +22,7 @@ connection. Plex and additional backends remain planned.
 | Page | Description |
 |------|-------------|
 | [Indexers](/plugins/indexers) | Server-side indexing, richer search data, music metadata |
-| [MDM](/plugins/mdm) | Settings sync, live Server Profiles, Server Defaults, announcements, and remote management |
+| [MDM](/plugins/mdm) | Settings sync, reusable Server Profiles, Server Defaults, announcements, and remote management |
 | [Transcoder](/plugins/transcoder) | Server-managed download quality profiles and original-quality policy (coming soon) |
 | [Studio](/plugins/studio) | Neptune UI and artwork customization |
 
@@ -33,7 +33,7 @@ connection. Plex and additional backends remain planned.
 | Plugin | Purpose |
 |--------|---------|
 | **Neptune Indexers** | Builds library and search indexes on the server so clients don't have to, and enriches music video libraries with credits, artist info, and artwork |
-| **Neptune MDM** | Syncs settings, publishes live Server Profiles, seeds Server Defaults, and gives admins remote management, announcements, and child accounts |
+| **Neptune MDM** | Syncs settings, publishes reusable Server Profiles globally or to selected users, seeds Server Defaults, and gives admins remote management, announcements, and child accounts |
 | **Neptune Transcoder** | Replaces Neptune's built-in download quality presets with a server-managed ladder and lets admins disable original-quality downloads |
 | **Neptune Studio** | Provides a server-backed UI customization system for Neptune, including a visual editor and renderer for Top Shelf designs |
 

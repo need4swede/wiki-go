@@ -42,15 +42,19 @@ The **Copy Preferences From** step is handy when setting up a family member who 
 several named settings environments. Normal Settings controls update the named
 profile when one is active, or regular synchronized settings when none is
 active. Select one on a physical device, or assign at most one
-automatic profile to iPhone, iPad, and Apple TV. The Desktop class is reserved
-for future Mac support. Settings Profiles require Neptune Pro; individual
-Device Overrides remain Free.
+automatic profile to iPhone, iPad, Apple TV, and future Mac. Settings Profiles
+require Neptune Pro for personal creation, editing, selection, and automatic
+use; individual Device Overrides remain Free.
 
-A server administrator can also publish read-only **Server Profiles** and set
-one as the automatic choice for every device in a class—for example, one
-**iPhone** profile for all current and future users. A user's own automatic
-assignment is more specific. Administrators can require the server choice or
-enforce only selected settings inside it.
+A server administrator can also publish read-only **Server Profiles**. A
+profile can be the automatic choice for every device in a class—for example,
+one **iPhone** profile for all current and future users—or be added only to
+selected users. A user's own automatic assignment is more specific.
+Publishing or ordinarily assigning one still requires the recipient's Pro
+entitlement before it applies. Administrators can instead mark an assignment
+Required: it applies to matching Free and Pro recipients, cannot be overridden,
+and makes every included setting read-only. Selected member locks remain
+available separately for non-required use.
 
 Profile definitions and device-type assignments sync with the account. The
 active manual choice stays on the physical device where it was selected, so

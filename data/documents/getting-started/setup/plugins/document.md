@@ -13,7 +13,7 @@ Server plugins are backend-specific. The integrations on this page are for Jelly
 | Plugin | Feature |
 |--------|---------|
 | **[Neptune Indexers](/plugins/indexers)** | Server-side library and search indexing |
-| **[Neptune MDM](/plugins/mdm)** | Settings sync, backup, and remote management |
+| **[Neptune MDM](/plugins/mdm)** | Settings sync, reusable Server Profiles, Server Defaults, and remote management |
 | **[Neptune Transcoder](/plugins/transcoder)** | Server-managed download quality profiles (coming soon) |
 | **[Neptune Studio](/plugins/studio)** | Neptune UI and artwork customization |
 
