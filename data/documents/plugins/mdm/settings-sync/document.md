@@ -18,7 +18,7 @@ Device Overrides remain on the device where they were created and are not includ
 
 The synchronized document includes [Settings Profiles](/personalization/profile-presets), including their names, sparse included settings, override-clearing choices, order, and iPhone, iPad, Apple TV, and Mac assignments. The active choice remains local to each physical device, so manually switching profiles on one device does not force every device to use the same profile.
 
-The Settings Profiles document can sync to a Free account, but personal selection and ordinary automatic assignments remain dormant until that account has Pro. Device Overrides remain Free. A matching Required assignment is managed policy and still applies. If the account later gains Pro, Neptune automatically reconciles the retained personal selection underneath any active requirement.
+The Settings Profiles document can sync to a Free account, but personal selection and ordinary automatic assignments remain dormant until that account has Pro. Device Overrides remain Free. A matching Required assignment is managed policy and still keeps the assigned profile active. Its unlocked members remain customizable; only separate member locks are read-only. If the account later gains Pro, Neptune automatically reconciles the retained personal selection underneath any active requirement.
 
 ## Managed Policy
 

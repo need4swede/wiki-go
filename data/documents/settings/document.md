@@ -20,7 +20,7 @@ Access Settings via the gear icon at the left edge of the tab menu bar.
 | [Images](/settings/images) | Image cache and downloads |
 | [Metadata](/settings/metadata) | Metadata cache and TMDB data |
 | [Backup & Restore](/settings/backup) | Sync preferences across devices |
-| [Settings Profiles](/personalization/profile-presets) | Personal Pro configurations and read-only Required server profiles |
+| [Settings Profiles](/personalization/profile-presets) | Personal Pro configurations and optional or Required Server Profiles |
 | [Device Overrides](/settings/device-overrides) | Keep individual settings different on one device |
 | [Administration](/settings/administration) | User management and parental controls (admins) |
 | [iOS Widgets](/ios/widgets) | Home Screen and Lock Screen Pages, Sections, and Pins |
@@ -80,14 +80,14 @@ eligible setting local to a particular server, user, and physical device
 without turning off the rest of sync.
 
 For the same setting, a directly locked server value has highest priority,
-then a member of the active Required Settings Profile or a separately locked
-member of another active profile, an unseen one-time administrator push, an
-explicit Device Override, the active Settings Profile, and the ordinary
-synchronized value. A profile's optional **Replace Device Overrides** policy
-removes only its matching overrides when activated; a user-initiated switch
-asks for confirmation. Required enforcement instead preserves the override
-underneath. There is no separate Reapply action. A push suppresses only the
-conflicting member of the active profile until the profile changes again.
+then an explicitly locked member of the active profile, an unseen one-time
+administrator push, an explicit Device Override, the active Settings Profile,
+and the ordinary synchronized value. A profile's optional **Replace Device
+Overrides** policy removes only its matching overrides when activated; a
+user-initiated switch asks for confirmation. Marking a profile Required does
+not change this value order. There is no separate Reapply action. A push
+suppresses only the conflicting member of the active profile until the profile
+changes again.
 
 Persistent locks can target one user or a locked member of a live Server
 Profile. Matching controls are read-only and marked **Managed by Your

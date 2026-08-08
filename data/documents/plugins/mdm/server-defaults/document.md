@@ -1,5 +1,5 @@
 ---
-order: 40
+order: 20
 ---
 
 # Server Defaults
@@ -34,10 +34,10 @@ The Seerr saved-URL list is for manual switching, while the active or preconfigu
 
 If MDM 1.2.6.101 Server Defaults contain exactly one valid saved address and no active-address field, Neptune uses that address as active during first-time setup. It does not guess when there are multiple addresses, alter a personal backup, or override an explicit clear.
 
-Server Defaults profile inheritance is not Required policy and does not bypass Neptune Pro. A new Free user may receive the starting profile library and assignments, but Neptune does not apply them until that signed-in user has Pro. A live Required assignment delivered as managed policy is separate and does apply. Ordinary configured Server Defaults do not require Pro.
+Server Defaults profile inheritance is not Required policy and does not bypass Neptune Pro. A new Free user may receive the starting profile library and assignments, but Neptune does not apply them until that signed-in user has Pro. A live Required assignment delivered as managed policy is separate and does keep the matching profile active. It does not lock profile members unless the administrator separately locks them. Ordinary configured Server Defaults do not require Pro.
 
 ## When Defaults Apply
 
 Defaults are not retroactive. After the one-time bootstrap completes—or once a personal backup exists—the user keeps that configuration even if the administrator later changes Server Defaults. To update an existing user, open that user in Remote Management and send an individual settings push. Switching a device to Auto when no profile is assigned does not run bootstrap again or reapply Server Defaults.
 
-Server Defaults are not persistent policy. For reusable live policy, use a [Server Profile](/plugins/mdm/server-profiles) and assign it globally by device type or add it only to selected users. To prevent changes for one person, target that user and enable direct locking or require one of their automatic Settings Profiles.
+Server Defaults are not persistent policy. For reusable live configuration, use a [Server Profile](/plugins/mdm/server-profiles) and assign it globally by device type or add it only to selected users. Mark an automatic assignment Required when the user must stay on that profile. To prevent changes to individual settings, Lock those members separately or use direct per-user locking in [Remote Management](/plugins/mdm/remote-management).

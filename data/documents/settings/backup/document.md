@@ -84,16 +84,17 @@ Restore. Its definitions and one optional automatic assignment per device type
 use the same Settings Sync connection. Definitions and the local choice remain
 stored if Pro access ends, but personal selection and ordinary automatic use
 remain dormant until Pro returns. Device Overrides remain Free. An explicit
-Required assignment is managed policy and remains effective for a matching
-Free or Pro recipient.
+Required assignment is managed policy and keeps the assigned profile active for
+a matching Free or Pro recipient.
 
 Administrator-managed policy is stored separately from your cloud backup. A
-directly locked setting or required Settings Profile still applies when
+directly locked setting or Required Settings Profile still applies when
 **Sync across devices** is off, and deleting the personal backup does not
 silently remove that policy. The administrator must choose **Allow User
-Changes** or remove the profile requirement. Every member included in a
-Required profile is read-only; the user's personal values and Device Overrides
-remain stored underneath.
+Changes** to remove a direct or member lock, or remove the profile requirement
+to let the user select a different profile. Required controls selection only;
+unlocked members remain customizable. Personal values and Device Overrides
+under a locked member remain stored underneath.
 
 Server Profiles are also stored separately. Globally assigned profiles and
 profiles explicitly added to this user refresh even when ordinary Settings

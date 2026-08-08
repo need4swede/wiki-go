@@ -20,7 +20,7 @@ Apple-platform integrations, including named Settings Profiles.
 | [Pin Widgets](/ios/widgets#pin-widgets-neptune-pro) | Put a native Pin on the iPhone or iPad Home Screen or Lock Screen, with direct Play for movie and episode Pins |
 | [Section Widgets](/ios/widgets#section-widgets-neptune-pro) | Rotate current media from 16 supported Home and Discover sections in a widget |
 | [Settings Profiles](/personalization/profile-presets) | Build and manage personal named settings environments, select one manually, or assign one automatically per device type |
-| [Native MDM Administration](/plugins/mdm#administer-from-neptune-neptune-pro) | Operate the complete Neptune MDM admin suite directly from iPhone, iPad, Apple TV, and future Mac |
+| [Native MDM Administration](/plugins/mdm#where-to-manage-it) | Operate the complete Neptune MDM admin suite directly from iPhone, iPad, Apple TV, and future Mac |
 
 
 
@@ -64,8 +64,9 @@ Neptune checks Pro access live without deleting your preferences:
 - Personal and ordinarily assigned Settings Profiles stop applying immediately,
   while definitions, automatic assignments, and the device-local selection
   remain stored. Device Overrides keep working, and an explicitly Required
-  Server Profile remains enforced. Restoring Pro automatically reconciles the
-  retained personal profile underneath any active requirement.
+  Server Profile remains active. Its unlocked settings remain customizable;
+  only explicitly locked members remain read-only. Restoring Pro automatically
+  reconciles the retained personal profile underneath any active requirement.
 - The native Neptune MDM console closes or locks and blocks further client-side
   admin actions. Server data, delivered policies, Settings Sync, and the Free
   Jellyfin plugin dashboard are unchanged.

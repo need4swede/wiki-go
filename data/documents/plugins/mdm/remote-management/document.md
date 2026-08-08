@@ -1,10 +1,12 @@
 ---
-order: 20
+order: 40
 ---
 
 # Remote Management
 
 Server administrators can manage a user's supported synchronized Neptune settings through the plugin dashboard in Jellyfin or Neptune's native console. The schema covers appearance, playback, search, layout, and other profile preferences while excluding device-local and runtime-only values.
+
+Use Remote Management for exact changes or locks that apply to one user. When the same reusable configuration should reach several users or device classes, use [Server Profiles](/plugins/mdm/server-profiles) instead.
 
 The plugin dashboard requires Jellyfin administrator authorization but no Neptune Pro entitlement. The native console requires both Jellyfin administrator authorization and the administrator's Neptune Pro entitlement. The receiving user does not need Pro for an ordinary administrator change or a persistent direct lock.
 
@@ -19,7 +21,7 @@ The native console provides:
 - Server Defaults and individual users' settings backups
 - **Copy from User**, which stages another user's effective settings as an unsaved starting point before the administrator confirms Save
 - Exact settings changes that leave unrelated and future settings untouched
-- Persistent per-user setting locks and Required Settings Profiles
+- Persistent per-user setting locks and independently Required Settings Profiles
 - Read-only device inventory
 - Child-account policy
 - Announcement authoring and targeting
@@ -55,17 +57,19 @@ An ordinary administrator Save is a one-time push. **Lock for User** is a durabl
 For a setting present in several layers, Neptune uses this priority:
 
 1. Directly locked server value
-2. Member of the active Required Settings Profile, or a separately locked member of another active profile
+2. Explicitly locked member of the active Settings Profile, whether that profile is optional or Required
 3. Unseen one-time administrator push
 4. Device Override
 5. Active Settings Profile
 6. Regular synchronized setting
 
-A required profile is configured per user and device type: iPhone, iPad, Apple TV, or Mac. Matching devices stay on Auto and every setting included in the profile is read-only. A separate member lock can protect selected settings while a non-required profile is active. Removing the requirement or member lock reveals the personal setting or Device Override preserved underneath instead of retaining the managed value.
+A Required profile is configured per user and device type: iPhone, iPad, Apple TV, or Mac. Matching devices stay on Auto and cannot select or disable that profile, including for Free recipients. Its included settings remain customizable unless they have their own Lock. Member locks work the same way in optional profiles. Removing a requirement restores the user's earlier profile selection; removing a lock reveals the personal setting or Device Override preserved underneath.
+
+See [Required Profiles and Locked Settings](/plugins/mdm/server-profiles#required-profiles-and-locked-settings) for the four optional/Required and locked/unlocked combinations.
 
 Required targeting resolves by user and device class. It cannot select one physical iPhone independently from another iPhone signed in as the same user; every matching device in that class receives the requirement.
 
-An offline device continues enforcing the last Required policy and matching definition successfully reconciled for that server, user, and device class. Neptune never treats a merely published or ordinarily assigned profile as Required, and it does not invent values if it has never verified the matching definition. Reconnecting reconciles changes or removal. Switching servers, accounts, backend generations, or device classes tears down the old session's managed overlay.
+An offline device continues using the last Required policy and matching definition successfully reconciled for that server, user, and device class. Neptune never treats a merely published or ordinarily assigned profile as Required, and it does not invent values if it has never verified the matching definition. Reconnecting reconciles changes or removal. Switching servers, accounts, backend generations, or device classes tears down the old session's managed overlay.
 
 On Apple TV, locked rows remain focusable so Siri Remote navigation can move through the page, but pressing Select cannot change them. Target devices label locked controls **Managed by Your Server**. Choosing **Allow User Changes** removes the policy and restores the preserved value.
 

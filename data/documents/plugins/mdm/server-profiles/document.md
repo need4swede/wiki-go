@@ -8,41 +8,74 @@ Server Profiles are a live, reusable settings-profile library. An administrator 
 
 The library can hold up to 12 Server Profiles, and a user's effective list can also include up to 12 personal profiles.
 
-## Global Assignments
+## What a Server Profile Controls
+
+A Server Profile combines several independent choices:
+
+| Part | What it controls |
+|------|------------------|
+| **Definition** | The settings and values stored once on the server |
+| **Scope** | Whether the profile is available to everyone through a global assignment or only to selected users |
+| **Automatic assignment** | Which device classes use the profile while set to Auto |
+| **Required** | Whether matching devices must remain on that profile |
+| **Lock** | Which individual settings, if any, the recipient cannot change |
+
+The definition is shared, but assignment and policy can be global or specific to one user. Changing the shared definition updates every recipient in its scope without copying the profile into each personal backup.
+
+## Required Profiles and Locked Settings
+
+> **Required** and **Lock** do different jobs. Required keeps a matching device on a profile; Lock makes an individual setting read-only. Either can be used without the other, so an optional profile may contain locked settings and a Required profile may leave every setting customizable.
+
+| Profile assignment | Individual setting | Recipient experience |
+|--------------------|--------------------|----------------------|
+| Optional | Unlocked | A Pro recipient may choose the profile and customize the setting |
+| Optional | Locked | A Pro recipient may choose the profile, but the setting is read-only while that profile is active |
+| Required | Unlocked | A Free or Pro recipient must use the profile but may customize the setting |
+| Required | Locked | A Free or Pro recipient must use the profile, and that setting is read-only |
+
+Locks are evaluated per setting. The same profile can contain both locked and unlocked members. An explicit Lock outranks a conflicting Device Override while preserving that override underneath; requirement alone does not change a setting's value priority.
+
+## Assigning Profiles
+
+### Globally by Device Class
 
 Use **Apply Automatically to All Users On** to assign a profile globally by device class. For example, assign an **iPhone** Server Profile to iPhone while leaving iPad, Apple TV, and Mac unassigned. Every matching iPhone in Auto uses that profile, while unassigned devices use their ordinary settings, initially seeded from [Server Defaults](/plugins/mdm/server-defaults) when configured.
 
 Each device class has at most one global assignment. Reassigning it names the current and replacement profiles and asks for confirmation.
 
-Enable **Require This Profile** to keep matching devices on Auto and enforce every included member. For an optional profile, selected members can still be locked so they remain read-only and outrank Device Overrides; unlocked members continue following normal profile and Device Override rules.
-
-## Per-User Scope
+### For One User
 
 Users see only the Server Profiles in their scope: profiles with a global device assignment and profiles explicitly added to them. They cannot rename, edit, reorder, or delete server-owned definitions. A personal automatic assignment is more specific than an optional global assignment, and a per-user required assignment is more specific than a global required assignment.
 
-To assign a shared profile to one user, select that user under **Managing**, open **Settings Profiles**, and choose **Add Profile**. Select a reusable Server Profile or create a new personal one. A reusable profile keeps its read-only server name, values, and inherited locks.
+To assign a shared profile to one user, select that user under **Managing**, open **Settings Profiles**, and choose **Add Profile**. Select a reusable Server Profile or create a new personal one. Its server-owned definition—name and stored values—remains read-only in the per-user scope, and inherited locks cannot be removed there. A recipient can still customize unlocked values through Device Overrides without changing that shared definition.
 
 With no device selected, an added Server Profile is manual-only. **Apply Automatically for This User On** activates it for selected device classes. **Require This Profile** and additional per-user locks are optional. Only the user's scope, assignments, and extra policy are saved; the definition continues to live once in the Server Profiles library.
 
 **Remove from User** removes an explicitly added profile and that user's assignments without deleting the reusable definition. A globally assigned profile must instead be changed from the Server Profiles target.
 
-| Administrator action | Result |
-|----------------------|--------|
-| Select a device under **Apply Automatically to All Users On** | Applies the profile automatically to every matching user in Auto |
-| Choose **Add Profile** for one user | Makes the shared profile available only to that user; it remains manual-only until a device type is selected |
-| Select a device under **Apply Automatically for This User On** | Applies the profile automatically only for that user and device type |
-| Enable **Require This Profile** | Keeps matching devices on locked Auto and enforces every included setting, including for Free recipients |
-| Enable **Lock** for a member | Makes that setting read-only when the profile is active, even outside a Required assignment |
+## Creating and Editing Profiles
 
-## Adding Settings
+### Add Settings
 
-The Add Setting flow uses Neptune's real Settings pages instead of a separate technical browser. Navigate as you normally would, then choose a value with the usual control. That exact value is added immediately, with no second Add step.
+The Add Setting flow uses Neptune's familiar Settings hierarchy instead of a flat technical list. Categories, sections, dividers, and nested pages provide the same context as the main Settings app. Select a setting row, choose the value or state in the modal, and confirm to add it to the profile.
 
-To include the value already shown without changing it, tap **Add Current** beneath the setting on iPhone or press and hold the focusable setting on Apple TV and choose **Add Current**. Select **Done** to commit the staged additions. The browser previews the Server Profile's complete theme, and leaving with unsaved changes asks before discarding them.
+On Apple TV, returning from a nested page restores focus to the originating row so another Back press does not accidentally exit the app. Leaving an edited profile with unsaved changes offers **Save** to save and exit, **Discard Changes**, and **Cancel**.
 
-Both the native editor and plugin dashboard can save **Replace Device Overrides**. When enabled, activating the profile removes only Device Overrides for its included settings. The client asks before clearing anything for a user-initiated selection, including switching to Auto. A later background automatic activation follows the saved policy without another prompt. A Required assignment instead preserves every Device Override as an underlay and temporarily suppresses only directly conflicting members.
+### Lock Several Settings
 
-## Pro Requirements
+Both the native editor and plugin dashboard provide **Lock All** and **Unlock All** shortcuts for the settings already added to the profile. These bulk actions affect locks editable at the current scope; inherited server locks remain protected. Individual Lock switches can still be mixed freely with either an optional or Required assignment.
+
+### Seerr Settings
+
+Eligible Seerr profile settings include **Active Seerr URL** and **Language Preferences**, in addition to the other Seerr controls. Active Seerr URL assigns the endpoint that profile should use; it does not copy the user's saved Seerr URL directory. Language Preferences saves its filter mode and language together so the profile cannot publish a partial combination.
+
+## Device Overrides
+
+Changing an unlocked setting in an active Server Profile creates or updates a local [Device Override](/settings/device-overrides). This lets the recipient customize that device without modifying the shared server definition. A locked member remains read-only.
+
+Both the native editor and plugin dashboard can save **Replace Device Overrides**. When enabled, activating an optional profile removes only Device Overrides for its included settings. The client asks before clearing anything for a user-initiated selection, including switching to Auto. A later background automatic activation follows the saved policy without another prompt. A Required assignment does not clear overrides; unlocked members continue using them, while explicit Locks temporarily outrank them.
+
+## Access and Pro Requirements
 
 Any Jellyfin administrator can author Settings Profiles and Server Profiles in the Free plugin dashboard. Native authoring requires the administrator's Neptune Pro entitlement in addition to Jellyfin administrator authorization.
 

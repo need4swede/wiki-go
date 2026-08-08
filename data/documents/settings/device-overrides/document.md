@@ -14,8 +14,11 @@ on one physical device and remains Free.
 For example, you can keep the **Immersive** item-detail layout on an Apple TV
 and use **Minimal** on an iPhone without separating every other preference.
 Device Overrides is a free feature. Creating a new override requires
-[Settings Sync](/settings/backup) to be enabled, while existing overrides
-remain manageable when sync is off.
+[Settings Sync](/settings/backup) to be enabled when you use **Keep Here**
+manually, while existing overrides remain manageable when sync is off. Editing
+an unlocked setting in an active Server Profile is the exception: Neptune
+creates the Device Override automatically so it can preserve the server-owned
+definition.
 
 
 
@@ -100,7 +103,9 @@ off.
 - Existing overrides remain active.
 - You can inspect or remove an existing override.
 - Removing one queues its current value until sync is turned on again.
-- You cannot create a new override until Settings Sync is enabled.
+- You cannot create a new override manually with **Keep Here** until Settings
+  Sync is enabled. Changing an unlocked setting in an active Server Profile can
+  still create its Device Override automatically.
 
 Deleting the cloud backup does not delete this device's overrides. Neptune also
 does not immediately recreate the backup after deletion. A later local change
@@ -114,13 +119,15 @@ A current Neptune MDM plugin supports both one-time administrator changes and
 persistent locks.
 
 When a setting is marked **Lock for User**, the server value stays locked and
-wins over a Device Override. Every member of an active Required Settings
-Profile does the same, as does a separately locked member of another active
-profile. Neptune does not delete the Device Override in any of these cases—it
-preserves it underneath and restores it when the policy is removed. A Server
-Profile definition is always read-only, but an unlocked member of a
-non-required Server Profile can still be changed locally by explicitly
-enabling a Device Override for it.
+wins over a Device Override. An explicitly locked member of the active
+Settings Profile does the same whether that profile is optional or Required.
+Neptune does not delete the Device Override in either case—it preserves it
+underneath and restores it when the lock is removed. Requirement controls
+which profile stays active; it does not lock that profile's members.
+
+A Server Profile definition itself remains server-owned. Changing one of its
+unlocked settings creates or updates a Device Override automatically, so the
+user can customize the active profile without rewriting the shared definition.
 
 These MDM operations are not Pro-gated for the recipient. A Jellyfin
 administrator can make or lock an ordinary per-setting change from the Free
@@ -138,13 +145,12 @@ This still works if the device was offline during the change. The forced value
 is applied when Neptune reconnects, even if ordinary device-to-device sync is
 off.
 
-The complete order for one setting is: directly locked server value, member of
-the active Required profile or separately locked member of another active
-profile, unseen one-time administrator push, explicit Device Override, active
-named Settings Profile, then regular synchronized settings. A profile allowed
-to replace a conflict removes that matching Device Override before this order
-is evaluated. Required enforcement instead preserves the matching override as
-an underlay and suppresses it only while the requirement matches.
+The complete order for one setting is: directly locked server value,
+explicitly locked member of the active profile, unseen one-time administrator
+push, explicit Device Override, active named Settings Profile, then regular
+synchronized settings. A profile allowed to replace a conflict removes that
+matching Device Override before this order is evaluated. Marking a profile
+Required does not change this value priority.
 An administrator push suppresses only the conflicting member of an active
 profile until that profile field is edited or the active selection changes.
 Server Defaults are a starting template used only when there is no personal
