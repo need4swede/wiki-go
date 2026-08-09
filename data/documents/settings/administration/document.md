@@ -7,9 +7,8 @@ order: 90
 Server administration from the couch. With today's Jellyfin backend, admin
 accounts get an **Administration** entry under Profiles in Settings, covering
 the user-management basics that normally require the Jellyfin dashboard.
-Administration is capability-specific: Emby connections do not currently
-expose user/server administration or the Neptune companion suite, and future
-providers may offer a different set of controls.
+Administration is capability-specific, and future providers may offer a
+different set of controls.
 
 
 
@@ -65,8 +64,7 @@ Plugin-dashboard, native-console, and recipient requirements are listed in the
 [MDM availability table](/plugins/mdm#availability). Neptune Pro never grants
 Jellyfin administrator permission.
 
-This entry is available only for Jellyfin because Neptune does not yet have an
-Emby companion. It manages Neptune MDM only; Neptune Indexers remains separate.
+This entry manages Neptune MDM only; Neptune Indexers remains separate.
 
 
 

@@ -11,11 +11,8 @@ settings and devices, **Transcoder** controls download quality policy, and
 **Studio** provides server-backed UI customization—starting with Top Shelf
 artwork.
 
-The app itself is backend-agnostic and does not require these plugins.
-These plugins currently extend Jellyfin. Neptune does not yet have an Emby
-companion, so companion-backed capabilities such as Settings Sync, Server
-Defaults, announcements, and Neptune MDM are unavailable on an Emby
-connection. Plex and additional backends remain planned.
+The app itself is backend-agnostic and does not require these plugins. These
+plugins currently extend Jellyfin.
 
 ## In This Section
 

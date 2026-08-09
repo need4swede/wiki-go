@@ -6,12 +6,9 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 
 ## Supported Backends
 
-| Backend | Status |
-|---------|--------|
-| **Jellyfin 10.10+** | Supported today |
-| **Emby 4.9.5+** | Beta; core client available while capability coverage expands |
-| **Plex** | Planned |
-| **Additional backends** | Planned; to be determined |
+Neptune is designed for Jellyfin, Emby, Plex, and additional media-server
+backends. See [Supported Media Servers](/getting-started/backends) for current
+availability.
 
 
 
@@ -32,7 +29,7 @@ A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architectur
 |------|-------------|
 | [Installation](/getting-started/installation) | App Store, betas, and requirements |
 | [Setup](/getting-started/setup) | Server connection, sign-in, plugins, Seerr |
-| [Supported Media Servers](/getting-started/backends) | Jellyfin, Emby beta, Plex status, and capability differences |
+| [Supported Media Servers](/getting-started/backends) | Available backends and capability differences |
 | [One Neptune](/getting-started/backends/one-neptune) | One familiar page and navigation system across every backend |
 | [Devices](/getting-started/devices) | Neptune on Apple TV, iPhone, iPad, and Mac |
 

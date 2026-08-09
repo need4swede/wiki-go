@@ -11,7 +11,7 @@ order: 10
 | **Apple TV** | Apple TV 4K, tvOS 18.5 or later |
 | **iPhone / iPad** | iOS or iPadOS 16 or later |
 | **Mac** | TBD |
-| **Media server** | Jellyfin 10.10+ or Emby 4.9.5+ (beta) |
+| **Media server** | A supported media server |
 
 ## Apple TV
 

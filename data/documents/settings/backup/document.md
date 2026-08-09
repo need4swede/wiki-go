@@ -17,10 +17,8 @@ matching device class or only to selected users.
 Backup & Restore is currently powered by the Jellyfin-specific [Neptune
 MDM](/plugins/mdm) plugin. Without a compatible backend extension, Neptune
 still works; your settings stay device-local and Neptune does not show cloud
-sync actions that cannot work. The current Emby beta has no Neptune companion,
-so its local settings remain available while Backup & Restore is
-capability-unavailable. Sync support for future backends will be documented as
-it becomes available.
+sync actions that cannot work. Sync support for future backends will be
+documented as it becomes available.
 
 
 

@@ -92,11 +92,7 @@ Vivid green glow over a deep forest canvas.
 - **Style**: Modern, rich, high-contrast
 - **Background**: Animated forest-green gradient
 - **Accent**: Bright leaf green
-- **Best for**: A fresh, cinematic interface with Emby-inspired color
-
-Forest is previewed when the Emby card is focused on tvOS and selected when
-Emby setup begins, but it is a regular theme that can be used with any media
-server.
+- **Best for**: A fresh, cinematic interface
 
 
 

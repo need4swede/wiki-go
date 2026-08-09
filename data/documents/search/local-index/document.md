@@ -22,9 +22,8 @@ Neptune keeps a full-text index of your library on the device, so searches retur
 
 Backend Search behavior can vary by server capability, while Neptune keeps the
 same Search page and interaction design. The richer on-device index is used
-only when the active backend can synchronize the required catalog safely.
-Jellyfin supports that path today; the current Emby beta uses server search
-while its full local-index synchronization remains in development.
+only when the active backend can synchronize the required catalog safely;
+otherwise, Neptune uses server search.
 
 
 

@@ -23,11 +23,8 @@ A media backend can require its own:
 - stream negotiation and playback reporting;
 - server-side capabilities, subscriptions, or optional companion software.
 
-For example, Jellyfin can use the optional Neptune Plugin Suite, while Emby
-does not currently offer Neptune's plugin-backed Settings Sync, Server
-Defaults, MDM, or administration features. Those rows are hidden or explained
-individually. They do not change Home, Library, Search, details, playback, or
-navigation.
+Unsupported rows are hidden or explained individually. They do not change
+Home, Library, Search, details, playback, or navigation.
 
 Seerr is configured independently, so Discover follows the connected Seerr
 service rather than the selected media backend.
@@ -76,13 +73,12 @@ established Jellyfin launch, focus, navigation, or playback lifecycle.
 ## Onboarding
 
 Each backend can have its own logo, authentication, and starting theme. After
-login, everyone continues through Neptune's universal setup steps. A
-Jellyfin-only companion installation step is skipped for Emby, but Trident,
-Seerr, preferences, information, and the welcome showcase remain.
+login, everyone continues through Neptune's universal setup steps, with
+capability-specific steps shown only when relevant.
 
-Completion is remembered separately for each backend. Completing Jellyfin
-setup does not skip a user's first Emby or future Plex tour, and a completed
-backend tour is not repeated every time that user returns.
+Completion is remembered separately for each backend, so finishing setup for
+one does not skip another backend's first tour. A completed backend tour is not
+repeated every time that user returns.
 
 ## Future backends
 

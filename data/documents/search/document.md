@@ -20,12 +20,10 @@ Open the Search tab, or use [Compass](/browsing/navigation/compass) on Apple TV
 or iPhone to start a search from anywhere. Type with the keyboard or use
 dictation.
 
-The Search page and result geometry stay the same for every backend. The
-available search collaborators are capability-based: Jellyfin currently
-supports Neptune's full local catalog synchronization, while the Emby beta
-uses server search until its full local-index synchronization is connected.
-Semantic and AI features that require that local catalog remain unavailable
-for that Emby session rather than replacing the Search page.
+The Search page and result geometry stay the same for every backend. Available
+search collaborators are capability-based. When a backend cannot synchronize
+the full local catalog, Neptune uses server search and hides Semantic and AI
+features that depend on that catalog rather than replacing the Search page.
 
 | What you remember | Example | What Neptune uses |
 |-------------------|---------|-------------------|
