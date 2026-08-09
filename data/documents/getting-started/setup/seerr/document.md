@@ -58,10 +58,6 @@ Saved Seerr URLs are an ordered list for manual switching.
 Adding an address to the saved list does not select it or replace the active connection.
 
 In settings and MDM data, these are deliberately separate: `seerrServerURL` is active, while `seerrURLs` contains saved addresses.
-Older Neptune MDM data may call the saved list `jellyseerrURLs`; that compatibility name is not normally the active endpoint. One older-plugin migration is supported for new users: if MDM 1.2.6.101 Server Defaults have no active field
-and contain exactly one valid saved address, Neptune selects that address.
-With multiple saved addresses, Neptune leaves the active address unset so you
-can choose explicitly.
 
 Neptune applies a new Jellyfin user's Server Defaults before its first
 automatic Seerr sign-in. This works for password and Quick Connect sign-in and

@@ -6,8 +6,8 @@ order: 10
 
 Native Pins are Neptune’s shared bookmarks for media, people, and library
 browse contexts. They belong to the signed-in server account and use the same
-ordered settings format on iPhone, iPad, and Apple TV. With Backup & Restore
-enabled, that ordered list follows the account across devices.
+ordered settings format across supported Neptune clients. With Backup &
+Restore enabled, that ordered list follows the account across devices.
 
 These Pins are separate from the one-to-eight **Compass Shortcuts** used by
 the iPhone Compass and [Live Activity](/ios/live-activity).

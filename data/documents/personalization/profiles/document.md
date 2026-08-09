@@ -42,25 +42,21 @@ The **Copy Preferences From** step is handy when setting up a family member who 
 several named settings environments. Normal Settings controls update the named
 profile when one is active, or regular synchronized settings when none is
 active. Select one on a physical device, or assign at most one
-automatic profile to iPhone, iPad, Apple TV, and future Mac. Settings Profiles
-require Neptune Pro for personal creation, editing, selection, and automatic
-use; individual Device Overrides remain Free.
+automatic profile to each supported device type. Settings Profiles can be
+personal or published by a server administrator.
 
 A server administrator can also publish **Server Profiles** whose shared
 definitions are read-only to recipients. A
-profile can be the automatic choice for every device in a class—for example,
-one **iPhone** profile for all current and future users—or be added only to
-selected users. A user's own automatic assignment is more specific.
-Publishing or ordinarily assigning one still requires the recipient's Pro
-entitlement before it applies. Administrators can instead mark an assignment
-Required: it applies to matching Free and Pro recipients and cannot be disabled
-or replaced. Required controls profile selection only. A separate Lock makes
-an individual member read-only, and those locks work in either optional or
+profile can be the automatic choice for every device in a class or be added
+only to selected users. A user's own automatic assignment is more specific.
+Administrators can mark an assignment Required so it cannot be disabled or
+replaced. Required controls profile selection only. A separate Lock makes an
+individual member read-only, and those locks work in either optional or
 Required profiles.
 
 Profile definitions and device-type assignments sync with the account. The
 active manual choice stays on the physical device where it was selected, so
-changing kits on an iPhone does not force the Apple TV to switch.
+changing profiles on one client does not force another client to switch.
 
 A named profile is a reversible layer over the regular synchronized settings.
 When it stops applying, Neptune reveals the newest synchronized baseline, or
@@ -72,6 +68,9 @@ Creating one starts from the current device, Server Defaults, or Neptune
 Defaults, then opens Neptune's familiar settings editor. Each preset can also
 choose whether applying it may clear only the Device Overrides that conflict
 with its saved settings; a user-initiated switch asks before doing so.
+
+See [Settings Profiles availability](/personalization/profile-presets#availability)
+for personal, optional Server Profile, and Required-profile access rules.
 
 
 

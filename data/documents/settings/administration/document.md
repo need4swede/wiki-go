@@ -19,15 +19,12 @@ Administration can be locked behind a 4-digit passcode, so kids poking around Se
 
 
 
-## Neptune MDM (Neptune Pro)
+## Neptune MDM
 
 Jellyfin administrator accounts get a **Neptune MDM** entry inside the same
-Administration menu on iPhone, iPad, and Apple TV. Managing from the native
-app requires [Neptune Pro](/neptune-pro); Free administrators retain the
-complete Jellyfin plugin dashboard. The native route uses the existing
-passcode challenge when one is configured, then checks administrator
-authorization again in the app and on the server. Pro never grants
-administrator permission.
+Administration menu on supported Neptune clients. The native route uses the
+existing passcode challenge when one is configured, then checks administrator
+authorization again in the app and on the server.
 
 From the native console, an administrator can:
 
@@ -46,7 +43,7 @@ From the native console, an administrator can:
 - permanently wipe Neptune MDM data after typing the required confirmation.
 
 The user and Server Defaults editors mirror Neptune's ordinary Settings
-hierarchy on both iPhone/iPad and Apple TV. Nested pages retain a managed-target
+hierarchy across supported clients. Nested pages retain a managed-target
 reminder and edit one server-side draft; they never sign the administrator in
 as the selected user or alter the administrator's local preferences. Only
 schema-supported remote settings appear. Device-local actions such as launching
@@ -62,10 +59,11 @@ Use the [Neptune MDM guide](/plugins/mdm) for the complete workflow:
 | Push or lock exact settings for one user | [Remote Management](/plugins/mdm/remote-management) |
 | Send messages, manage child policy, or review devices | [Announcements](/plugins/mdm/announcements), [Child Accounts](/plugins/mdm/child-accounts), and [Devices & Data](/plugins/mdm/devices) |
 
-Any Jellyfin administrator can use the complete plugin dashboard for free.
-Native MDM administration requires the administrator's Neptune Pro entitlement
-in addition to Jellyfin administrator authorization. Recipient-side Pro rules
-for optional and Required profiles are covered in the Server Profiles guide.
+### Availability
+
+Plugin-dashboard, native-console, and recipient requirements are listed in the
+[MDM availability table](/plugins/mdm#availability). Neptune Pro never grants
+Jellyfin administrator permission.
 
 This entry is available only for Jellyfin because Neptune does not yet have an
 Emby companion. It manages Neptune MDM only; Neptune Indexers remains separate.

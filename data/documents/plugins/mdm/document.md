@@ -8,8 +8,6 @@ Neptune MDM is the management extension for Jellyfin. It keeps preferences consi
 
 Neptune's app and per-device preferences remain usable without the plugin. Sync and remote-management support for future backends will depend on the extension capabilities those backends provide.
 
-> The complete Jellyfin plugin dashboard is Free. Administering Neptune MDM directly from a Neptune client requires [Neptune Pro](/neptune-pro). Receiving managed settings and using Settings Sync do not require Pro, including ordinary per-setting administrator changes and persistent **Lock for User** policies.
-
 ## Features
 
 | What you want to do | Use | How it behaves |
@@ -24,5 +22,19 @@ Neptune's app and per-device preferences remain usable without the plugin. Sync 
 
 ## Where to Manage It
 
-- **Jellyfin dashboard:** Any Jellyfin administrator can use the complete Neptune MDM dashboard for free.
-- **Neptune:** A Jellyfin administrator with Neptune Pro can open **Administration** and choose **Neptune MDM** from any Neptune client.
+- **Jellyfin dashboard:** Open the Neptune MDM plugin page from the server dashboard.
+- **Neptune:** Open **Administration** and choose **Neptune MDM** from any Neptune client.
+
+## Availability
+
+Administration and receiving managed configuration have separate access rules:
+
+| Area | Who can use it |
+|------|----------------|
+| Neptune MDM dashboard in Jellyfin | Any Jellyfin administrator |
+| Neptune's native MDM console | Jellyfin administrators with [Neptune Pro](/neptune-pro) |
+| Settings Sync, Device Overrides, Server Defaults, managed settings and locks, announcements, and child policy | All Neptune users on the server |
+| Personal Settings Profiles and optional Server Profiles | Neptune Pro users |
+| Required Server Profiles | Any user included in the requirement |
+
+A Required profile controls which profile is active. It does not unlock personal profile features or make settings read-only; individual **Lock** controls do that.

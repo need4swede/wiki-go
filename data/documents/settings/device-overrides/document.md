@@ -7,15 +7,15 @@ order: 85
 Device Overrides lets one setting stay different on one device while the rest
 of your Neptune preferences continue to sync normally.
 
-Unlike [Settings Profiles](/personalization/profile-presets), the Neptune Pro
-feature for named settings environments, a Device Override keeps one setting
-on one physical device and remains Free.
+Unlike [Settings Profiles](/personalization/profile-presets), which provide
+named settings environments, a Device Override keeps one setting on one
+physical device.
 
-For example, you can keep the **Immersive** item-detail layout on an Apple TV
-and use **Minimal** on an iPhone without separating every other preference.
-Device Overrides is a free feature. Creating a new override requires
-[Settings Sync](/settings/backup) to be enabled when you use **Keep Here**
-manually, while existing overrides remain manageable when sync is off. Editing
+For example, you can keep the **Immersive** item-detail layout on one device
+and use **Minimal** on another without separating every other preference.
+Creating a new override requires [Settings Sync](/settings/backup) to be
+enabled when you use **Keep Here** manually, while existing overrides remain
+manageable when sync is off. Editing
 an unlocked setting in an active Server Profile is the exception: Neptune
 creates the Device Override automatically so it can preserve the server-owned
 definition.
@@ -53,10 +53,9 @@ Applying an override:
 - Leaves every other setting synchronized
 - Does not immediately change the server or any other device
 
-This is forward-only behavior. If the Apple TV and iPhone already have the same
-value, applying an override does not give the other devices an older value or
-try to reconstruct what they used previously. Their current value stays as it
-is.
+This is forward-only behavior. If two devices already have the same value,
+applying an override does not give the other device an older value or try to
+reconstruct what it used previously. Its current value stays as it is.
 
 Overrides belong to one server account, profile, and physical device. They do
 not travel inside the cloud backup. Switching profiles or servers uses that
@@ -115,7 +114,7 @@ can create a new backup if Settings Sync is still enabled.
 
 ## Administrator Changes
 
-A current Neptune MDM plugin supports both one-time administrator changes and
+Neptune MDM supports both one-time administrator changes and
 persistent locks.
 
 When a setting is marked **Lock for User**, the server value stays locked and
@@ -129,12 +128,7 @@ A Server Profile definition itself remains server-owned. Changing one of its
 unlocked settings creates or updates a Device Override automatically, so the
 user can customize the active profile without rewriting the shared definition.
 
-These MDM operations are not Pro-gated for the recipient. A Jellyfin
-administrator can make or lock an ordinary per-setting change from the Free
-plugin dashboard, including for a Free user. Native MDM administration is the
-separate Pro convenience for the administrator.
-
-With a current [Neptune MDM](/plugins/mdm) plugin, a server administrator's
+With [Neptune MDM](/plugins/mdm), a server administrator's
 ordinary one-time change takes priority over an override for that same setting:
 
 - The administrator's value is applied.
@@ -161,13 +155,6 @@ opinion, and later default changes are not retroactive. The additional
 empty-document guard applies specifically to adopting the template's Settings
 Profiles library.
 
-Older plugin versions still support the normal forward-only filtering, but
-cannot provide the durable proof Neptune needs to clear an override after an
-administrator change. Neptune shows a compatibility warning when the plugin
-should be updated.
-
-
-
 ## Which Settings Can Be Overridden?
 
 The browser includes synchronized profile settings from Appearance, Home,
@@ -179,29 +166,8 @@ logging, the **Sync across devices** switch itself, and runtime-only
 last-used values.
 
 An iPhone-only setting can be kept on an iPhone even though it has no effect on
-Apple TV. The preference remains part of the synchronized profile unless you
-override it.
-
-
-
-## Settings Recovery After an Upgrade
-
-When an existing installation first upgrades to the newer settings-sync
-system, Neptune compares its earlier local settings with the cloud backup. In
-the uncommon case where it cannot safely determine which copy should win,
-cloud settings become active and **Settings Recovery** appears under
-**Backup and Restore**.
-
-Choose **Review Which Settings to Keep**, then select:
-
-- **Keep Cloud Settings** to keep the settings currently in use
-- **Keep This Device’s Earlier Settings** to restore the retained local copy
-
-Restoring the earlier copy makes it this device's current synchronized
-configuration, so those values can update your other devices. This recovery
-choice is separate from Device Overrides and normally appears only once.
-
-
+other device types. The preference remains part of the synchronized profile
+unless you override it.
 
 ## Troubleshooting
 
@@ -209,7 +175,6 @@ choice is separate from Device Overrides and normally appears only once.
 |---------|---------------|
 | **Keep Here is disabled** | Turn on **Sync across devices**. If that switch is unavailable, confirm Neptune MDM is active |
 | **A setting has no row shortcut** | Open the Device Overrides browser; sliders and reorder editors are managed there |
-| **The setting is absent from the browser** | It may be device-local, unavailable on this platform, or unsupported by the current app version |
+| **The setting is absent from the browser** | It may be device-local or unavailable on this device type |
 | **A profile did not change an overridden setting** | Edit the profile and enable **Replace Device Overrides**, then select it and confirm **Clear Overrides & Switch** |
-| **An administrator change did not clear an override** | Update Neptune MDM and reconnect |
 | **Uploads are paused to protect saved choices** | Neptune could not safely recover its local override record; leave sync paused and use Get Help before resetting app data |

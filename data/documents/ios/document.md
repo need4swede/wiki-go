@@ -4,10 +4,11 @@ order: 85
 
 # iPhone & iPad
 
-Neptune uses the same library, profile, playback engine, and preferences on
-Apple TV, iPhone, and iPad. Its touch interface also connects Neptune to
-iOS-owned surfaces such as Home Screen widgets, Lock Screen widgets, and Live
-Activities, and it can continue video or audio after you leave the app.
+Neptune uses the same library, profile, playback engine, and preferences across
+supported clients. On iPhone and iPad, its touch interface also connects
+Neptune to iOS-owned surfaces such as Home Screen widgets, Lock Screen widgets,
+and Live Activities, and it can continue video or audio after you leave the
+app.
 
 
 
@@ -29,7 +30,7 @@ The word “shortcut” covers three intentionally separate features:
 
 | Feature | Devices | What It Stores | Where You Configure It |
 |---------|---------|----------------|------------------------|
-| **Native Pins** | iPhone, iPad, Apple TV | Bookmarks for media, people, and library browse contexts | Pin or unpin the item where it appears in Neptune |
+| **Native Pins** | Supported Neptune clients | Bookmarks for media, people, and library browse contexts | Pin or unpin the item where it appears in Neptune |
 | **Home Screen and Lock Screen widgets** | iPhone and iPad | One Page, Section, or native Pin selection per widget instance | Add the widget in iOS, then choose **Edit Widget** |
 | **Compass Shortcuts** | iPhone | One to eight quick actions shared by the in-app Compass and Compass Live Activity | **Settings > User Preferences > Compass > Compass Shortcuts** |
 

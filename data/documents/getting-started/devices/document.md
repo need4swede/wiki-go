@@ -8,7 +8,9 @@ order: 40
 
 Whatever device you pick up, you get the same home screen, the same search, the same Discover, the same [Conductor](/playback/conductor) picking your tracks, and the same [Trident](/playback/trident-player) engine playing your files. Sign in with the same account and your profile is your profile.
 
-With the [Neptune MDM](/plugins/mdm) plugin installed, preferences sync live: change your theme on your iPhone and the Apple TV follows in real time. Without it, each device keeps its own local settings.
+With the [Neptune MDM](/plugins/mdm) plugin installed, preferences sync live:
+change your theme on one device and your other Neptune clients follow in real
+time. Without it, each device keeps its own local settings.
 
 
 

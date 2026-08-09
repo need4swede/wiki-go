@@ -20,7 +20,7 @@ Access Settings via the gear icon at the left edge of the tab menu bar.
 | [Images](/settings/images) | Image cache and downloads |
 | [Metadata](/settings/metadata) | Metadata cache and TMDB data |
 | [Backup & Restore](/settings/backup) | Sync preferences across devices |
-| [Settings Profiles](/personalization/profile-presets) | Personal Pro configurations and optional or Required Server Profiles |
+| [Settings Profiles](/personalization/profile-presets) | Personal configurations and optional or Required Server Profiles |
 | [Device Overrides](/settings/device-overrides) | Keep individual settings different on one device |
 | [Administration](/settings/administration) | User management and parental controls (admins) |
 | [iOS Widgets](/ios/widgets) | Home Screen and Lock Screen Pages, Sections, and Pins |
@@ -37,9 +37,8 @@ The Settings screen groups everything by scope:
 personal appearance, [Conductor](/playback/conductor), subtitle style, sounds,
 and [Backup & Restore](/settings/backup). Backup & Restore contains both
 [Settings Profiles](/personalization/profile-presets), for reusable synced
-configurations with Neptune Pro, and [Device Overrides](/settings/device-overrides),
-the Free way to keep one otherwise synchronized setting different on the
-current device. On iPhone, User
+configurations, and [Device Overrides](/settings/device-overrides), which keep
+one otherwise synchronized setting different on the current device. On iPhone, User
 Preferences also contains separate **Live Activity**, **Widgets**, and
 **Compass** destinations; iPad shows **Widgets** but not the iPhone-only
 Compass surfaces. Admins also get an **Administration** entry here.
@@ -69,8 +68,7 @@ Nearly every preference in Neptune belongs to the signed-in profile, so each
 family member gets their own setup. With Settings Sync, those profile
 preferences normally follow the same user to every device. Settings Profiles
 sync named configurations and the single optional automatic assignment for
-each of iPhone, iPad, Apple TV, and Mac; Mac is reserved for future macOS
-support. The manually selected profile remains local. While a named profile is
+each supported device type. The manually selected profile remains local. While a named profile is
 active, ordinary eligible settings changes update that profile and sync to
 other devices using it. Stopping a named profile returns to the normal
 synchronized preferences: the newest values already observed through Settings
@@ -97,12 +95,6 @@ change them. Managed selectors display their locked value immediately, so
 dependent options—such as Transcode-only playback settings—appear without the
 user first touching the selector. Removing the policy restores the user's
 personal setting or preserved Device Override underneath it.
-
-Direct administrator changes and **Lock for User** work for Free recipients.
-The Jellyfin plugin dashboard also requires no Neptune Pro from the
-administrator; only opening the native MDM console is an administrator-side
-Pro feature. Personal profile controls remain Pro, while an explicit Required
-assignment is applied as server policy to matching Free or Pro recipients.
 
 Device-wide items such as the image cache are shared locally. Backend-managed
 items such as parental controls and streaming limits live on the media server

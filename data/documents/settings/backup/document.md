@@ -10,7 +10,7 @@ customized home rows all stay aligned. When one setting genuinely needs to be
 different on one device, [Device Overrides](/settings/device-overrides) can
 keep that setting local without disabling the rest of sync. [Settings
 Profiles](/personalization/profile-presets) provide named settings environments
-that can be selected locally or assigned by device type with Neptune Pro.
+that can be selected locally or assigned by device type.
 Administrators can separately publish reusable Server Profiles to every
 matching device class or only to selected users.
 
@@ -74,7 +74,7 @@ Go to **Settings > User Preferences > Backup and Restore**:
 | Action | Result |
 |--------|--------|
 | **Sync across devices** | The master switch. First save uploads a fresh backup |
-| **Settings Profiles** | With Neptune Pro, creates named settings profiles and optionally makes one automatic for each device type |
+| **Settings Profiles** | Creates named settings profiles and optionally makes one automatic for each device type |
 | **Restore from Backup** | Applies the latest synchronized values; the active Settings Profile choice and Device Overrides stay local |
 | **Device Overrides** | Keeps selected settings local to this device while everything else syncs |
 | **Delete Cloud Backup** | Removes the backup from the server. Devices keep their local settings and overrides |
@@ -82,10 +82,9 @@ Go to **Settings > User Preferences > Backup and Restore**:
 [Settings Profiles](/personalization/profile-presets) lives inside Backup and
 Restore. Its definitions and one optional automatic assignment per device type
 use the same Settings Sync connection. Definitions and the local choice remain
-stored if Pro access ends, but personal selection and ordinary automatic use
-remain dormant until Pro returns. Device Overrides remain Free. An explicit
-Required assignment is managed policy and keeps the assigned profile active for
-a matching Free or Pro recipient.
+stored even while a profile is inactive. An explicit Required assignment is
+managed policy and keeps the assigned profile active independently of personal
+profile selection.
 
 Administrator-managed policy is stored separately from your cloud backup. A
 directly locked setting or Required Settings Profile still applies when
@@ -99,9 +98,6 @@ under a locked member remain stored underneath.
 Server Profiles are also stored separately. Globally assigned profiles and
 profiles explicitly added to this user refresh even when ordinary Settings
 Sync is off. They do not become editable personal profiles in the backup.
-
-
-
 ## How It Works
 
 With Neptune MDM, rapid local changes are briefly batched and only the settings
@@ -119,14 +115,13 @@ automatic Seerr sign-in, even when Settings Sync is off. The onboarding page
 labels this as server setup instead of offering to restore it as a personal
 “Welcome Back” backup.
 
-Settings Profile definitions and iPhone, iPad, Apple TV, and Mac assignments
-sync as one document. Ordinary eligible changes update the active target: the
+Settings Profile definitions and device-type assignments sync as one document.
+Ordinary eligible changes update the active target: the
 regular synchronized setting when no named profile is active, or the named
 profile definition when one is active. The named profile's effective member
 values are not uploaded as separate regular-setting changes, preventing an
-iPhone profile from overwriting an Apple TV's configuration. A profile's
-**Replace Device Overrides** choice also syncs. Mac is reserved for future
-macOS support.
+assignment for one device type from overwriting another client's configuration.
+A profile's **Replace Device Overrides** choice also syncs.
 
 A global automatic assignment is a live managed layer rather than a sync
 change. An unassigned Server Profile stays out of the account until an
@@ -137,11 +132,10 @@ profile is assigned for this device class, Neptune uses ordinary settings;
 Server Defaults only seed those settings during first setup and are not
 reapplied when Auto is selected.
 
-Optional personal or Server Profile assignments require the recipient's Pro
-entitlement before they apply. A matching Required assignment is the managed
-exception and works for Free recipients. Required scope is currently the user
-plus device class, so it affects every matching device for that account rather
-than one particular physical device.
+Optional personal or Server Profile assignments follow the recipient's profile
+availability. A matching Required assignment is managed policy. Required scope
+is currently the user plus device class, so it affects every matching device
+for that account rather than one particular physical device.
 
 Offline clients keep the last Required policy and matching definition they
 successfully reconciled for the same server, user, and device class. If Neptune
@@ -174,23 +168,6 @@ If Settings Sync remains enabled, a later local change can create a new backup
 from the current synchronized settings; active overrides remain excluded. Turn
 off **Sync across devices** as well if you want settings to remain local after
 deletion.
-
-
-
-## Settings Recovery After an Upgrade
-
-When an existing installation upgrades to the newer field-level sync system,
-Neptune reconciles its earlier local settings with the server backup. If the
-app cannot safely tell which copy should win, cloud settings become active and
-a one-time **Settings Recovery** section appears.
-
-Choose **Review Which Settings to Keep** to keep the cloud version or restore
-the retained settings from this device. Restoring the earlier copy makes it
-the current synchronized configuration, so those values can update your other
-devices. See [Device Overrides](/settings/device-overrides#settings-recovery-after-an-upgrade)
-for more detail.
-
-
 
 ## Backup Status
 

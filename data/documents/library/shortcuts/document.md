@@ -6,8 +6,8 @@ order: 10
 
 Bookmark media, people, and library browse contexts, then reach them from
 categorized Library rows or the Pins row on Home. Native Pins use the same
-ordered, account-scoped settings format on Apple TV, iPhone, and iPad; Backup
-& Restore can synchronize that list between them.
+ordered, account-scoped settings format across supported Neptune clients;
+Backup & Restore can synchronize that list between them.
 
 A second variant, **timestamp Pins**, captures a specific Apple TV playback
 moment so you can return to it later.

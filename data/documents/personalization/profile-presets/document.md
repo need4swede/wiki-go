@@ -15,21 +15,13 @@ Find them at:
 If the active backend does not provide Backup and Restore, Settings Profiles
 appears directly in **User Preferences** and stays on that device.
 
-Personal Settings Profiles require [Neptune Pro](/neptune-pro): creating,
-editing, duplicating, selecting, and configuring automatic use are all Pro
-features. Individual [Device Overrides](/settings/device-overrides) remain
-Free. A matching **Required** Server Profile is the one application exception:
-it can be consumed by a Free recipient without unlocking any personal profile
-controls.
-
-A Jellyfin administrator using a current [Neptune MDM](/plugins/mdm) plugin can
+A Jellyfin administrator using [Neptune MDM](/plugins/mdm) can
 create a live **Server Profile** once, then assign it globally by device type
 or only to selected users. Per-user profiles and assignments remain the more
-specific layer. Publishing a profile or assigning it as an ordinary Auto
-choice does not bypass the recipient's Pro requirement. Marking an assignment
-**Required** does: matching Free or Pro recipients must use that profile on the
-assigned device class. Required does not make its settings read-only. Only
-members with their own **Lock** outrank a directly conflicting Device Override.
+specific layer. An ordinary assignment follows the recipient's normal profile
+selection. Marking an assignment **Required** instead keeps matching devices on
+that profile. Required does not make its settings read-only. Only members with
+their own **Lock** outrank a directly conflicting Device Override.
 
 
 
@@ -104,23 +96,21 @@ same menu also offers **Edit Profile**, which opens the editor without
 activating it. Choosing the active named profile offers **Stop Using on This
 Device** instead.
 
-The choice is local to the physical device. Selecting Blue on Apple TV does
-not select Blue on iPhone.
+The choice is local to the physical device. Selecting Blue on one Neptune
+client does not select Blue on another.
 
 If your administrator requires a personal or Server Profile for this device
-type, Neptune keeps Device Preset on locked Auto. This applies whether the
-recipient is Free or Pro. You cannot switch to Manual, select another profile,
-or edit or delete the required definition. You may still change its unlocked
-settings; Neptune saves those local differences as Device Overrides. Settings
-with a separate Lock remain read-only. Your earlier profile selection is kept
-underneath and returns if the requirement is removed. A Free recipient sees
-the server-managed profile name and matching device class in a read-only
-selection view. A Pro recipient may manage other personal profiles, but cannot
-replace the active requirement.
+type, Neptune keeps Device Preset on locked Auto. You cannot switch to Manual,
+select another profile, or edit or delete the required definition. You may
+still change its unlocked settings; Neptune saves those local differences as
+Device Overrides. Settings with a separate Lock remain read-only. Your earlier
+profile selection is kept underneath and returns if the requirement is
+removed. Neptune shows the server-managed profile name and matching device
+class in a read-only selection view; the active requirement cannot be replaced.
 
 The Blue definition can still sync. If both devices use Blue, changing an
-eligible setting on either device updates Blue for both. If the iPhone has no
-named profile, it does not receive Blue's effective values.
+eligible setting on either device updates Blue for both. A device without a
+named profile does not receive Blue's effective values.
 
 
 
@@ -149,14 +139,7 @@ special backup, or reapply Server Defaults.
 
 ## Auto Profiles by Device Type
 
-Each device type can have zero or one automatic profile:
-
-| Device Type | Used By |
-|-------------|---------|
-| **iPhone** | iPhone |
-| **iPad** | iPad |
-| **Apple TV** | Apple TV |
-| **Mac** | Reserved for future macOS support |
+Each supported device type can have zero or one automatic profile.
 
 Assignments sync with your account. Every matching device in **Auto** follows
 that assignment. A manual profile choice affects only that device until you
@@ -169,18 +152,17 @@ An administrator can require the automatic assignment for a specific user.
 That requirement applies to every device of the matching type signed in as
 that user. It does not force the same profile onto other device types.
 
-A current Neptune MDM server can also provide a global automatic assignment
+Neptune MDM can also provide a global automatic assignment
 for every user. A personal automatic assignment wins over an optional global
 one. A per-user required assignment wins over a global required assignment.
 Required assignments keep the device on Auto; optional assignments can still
 be replaced by Manual on that physical device.
 
-Personal automatic assignments and optional Server Profile assignments become
-effective only while the signed-in recipient has Pro. An explicit Required
-assignment is managed policy and applies to a matching Free or Pro recipient.
+An explicit Required assignment is delivered as managed policy rather than as
+a personal profile choice, so it applies independently of personal selection.
 Required resolution uses the signed-in server user and device class, not one
-particular physical device: a per-user iPhone requirement affects every iPhone
-signed in as that user.
+particular physical device: a per-user requirement affects every matching
+device signed in as that user.
 
 
 
@@ -220,14 +202,14 @@ Settings Sync carries:
 
 - Profile names, order, and saved values
 - The **Replace Device Overrides** choice
-- Automatic iPhone, iPad, Apple TV, and Mac assignments
+- Automatic device-type assignments
 
 It does not carry the profile currently selected on a physical device.
 
 Server requirements are delivered separately from your synchronized profile
-document. They still arrive when ordinary Settings Sync is off and can apply
-to a Free recipient. Device uploads cannot delete a profile referenced by
-policy or replace one of its explicitly locked values.
+document. They still arrive when ordinary Settings Sync is off. Device uploads
+cannot delete a profile referenced by policy or replace one of its explicitly
+locked values.
 
 Server Profiles use that same managed delivery path. They are not copied into
 your personal backup. Changes and removals reach every user assigned that
@@ -235,8 +217,8 @@ profile, including devices with ordinary Settings Sync off, while personal
 profiles remain stored underneath.
 
 When Blue is active, ordinary eligible changes update Blue's definition. They
-are not also uploaded as regular-setting changes. This prevents an Apple TV
-using Blue from overwriting an iPhone that has no named profile.
+are not also uploaded as regular-setting changes. This prevents a client using
+Blue from overwriting another client's configuration.
 
 Neptune still tracks newer regular settings underneath an active named profile.
 Stopping the named profile restores the latest synchronized value. If no
@@ -246,8 +228,6 @@ new Restore from Backup operation.
 
 Without Settings Sync, profiles still work on the device where they were
 created, but their definitions and assignments do not reach other devices.
-Personal profile definitions and choices remain stored while Free, but stay
-dormant unless the matching profile is explicitly Required by the server.
 
 If a client goes offline after successfully reconciling a Required assignment,
 it keeps using that last verified assignment and definition for the same
@@ -318,7 +298,7 @@ and asks for confirmation first.
 
 ## Server Profiles
 
-On a current [Neptune MDM](/plugins/mdm) server, administrators have a separate
+With [Neptune MDM](/plugins/mdm), administrators have a separate
 **Server Profiles** library in both the Jellyfin dashboard and Neptune's native
 admin console. The reusable library can contain up to 12 Server Profiles, and
 a user can also keep up to 12 personal profiles.
@@ -327,8 +307,8 @@ From a recipient's perspective:
 
 - A globally assigned Server Profile appears for every user on the matching
   device class; an administrator can instead add one only to selected users.
-- An optional profile requires Pro and can be selected manually or used through
-  Auto. A Required profile stays active for matching Free or Pro recipients.
+- An optional profile can be selected manually or used through Auto. A Required
+  profile stays active on matching devices.
 - Required controls profile selection. Separate per-setting Locks determine
   which values are read-only.
 - The server-owned definition cannot be renamed, edited, reordered, or deleted
@@ -337,7 +317,7 @@ From a recipient's perspective:
 - Later definition or Lock changes reach every user in the profile's scope.
 
 For administrator authoring, global and per-user assignment, Lock controls,
-Seerr fields, and recipient entitlement rules, see the dedicated [Server
+Seerr fields, and availability rules, see the dedicated [Server
 Profiles guide](/plugins/mdm/server-profiles).
 
 
@@ -353,17 +333,26 @@ to the user and can be edited or deleted normally. Changing Server Defaults
 later does not rewrite existing users. Switching to Auto with no assigned
 profile does not reapply Server Defaults.
 
-Administrators can prepare Settings Profiles from the Free Jellyfin dashboard.
-Each signed-in user still needs Neptune Pro to select one or use an ordinary
-automatic assignment. MDM configuration does not grant App Store entitlement;
-it only allows a Free recipient to consume a profile when the server explicitly
-marks the matching assignment Required.
+Administrators can prepare a starting Settings Profiles library in Server
+Defaults. These remain ordinary profile definitions and assignments after the
+one-time copy; a live Required assignment is separate managed policy.
 
 Server Defaults are not persistent policy. To lock a setting, the administrator
 can lock that member in a Server Profile or target a specific user in Neptune
 MDM. Requiring the profile is optional and controls profile selection only.
-Direct per-user locking works without a Settings Profile and does not require
-that user to have Pro.
+Direct per-user locking works without a Settings Profile.
+
+
+
+## Availability
+
+| Capability | Requirement |
+|------------|-------------|
+| Device Overrides | Available without Neptune Pro |
+| Create, edit, duplicate, select, or automatically assign a personal Settings Profile | [Neptune Pro](/neptune-pro) |
+| Select or ordinarily assign a Server Profile | Neptune Pro for the recipient |
+| Required Server Profile | Applies as managed policy regardless of the recipient's plan; personal profile controls remain unchanged |
+| Administer Server Profiles | See [MDM availability](/plugins/mdm#availability) |
 
 
 

@@ -20,7 +20,7 @@ Apple-platform integrations, including named Settings Profiles.
 | [Pin Widgets](/ios/widgets#pin-widgets-neptune-pro) | Put a native Pin on the iPhone or iPad Home Screen or Lock Screen, with direct Play for movie and episode Pins |
 | [Section Widgets](/ios/widgets#section-widgets-neptune-pro) | Rotate current media from 16 supported Home and Discover sections in a widget |
 | [Settings Profiles](/personalization/profile-presets) | Build and manage personal named settings environments, select one manually, or assign one automatically per device type |
-| [Native MDM Administration](/plugins/mdm#where-to-manage-it) | Operate the complete Neptune MDM admin suite directly from iPhone, iPad, Apple TV, and future Mac |
+| [Native MDM Administration](/plugins/mdm#where-to-manage-it) | Operate the complete Neptune MDM admin suite directly from supported Neptune clients |
 
 
 
@@ -35,14 +35,14 @@ Apple-platform integrations, including named Settings Profiles.
 | **Offline** | Requires a network connection to your media backend | Download and play media without a network connection |
 | **Top Shelf** | Core Top Shelf presentation and content controls | Cinematic mode, Studio artwork, ordering, item limits, rich details, and Play actions |
 | **iOS Widgets** | Every size can open a standard Neptune Page; native Pins and in-app Home and Discover sections remain available | Adds native Pin Widgets and dynamic Section Widgets to the per-widget picker |
-| **Device personalization** | Device Overrides keep individual settings local to one physical device; Free recipients can consume an explicitly Required Server Profile | Settings Profiles add personal named environments, device-local selection, in-place editing, and automatic iPhone, iPad, Apple TV, and future Mac assignments |
+| **Device personalization** | Device Overrides keep individual settings local to one physical device; Free recipients can consume an explicitly Required Server Profile | Settings Profiles add personal named environments, device-local selection, in-place editing, and automatic assignments by device type |
 | **Neptune MDM administration** | Use the complete Jellyfin plugin dashboard; clients receive direct managed settings, locks, and Required profiles without recipient Pro | Adds the native administrator console inside Neptune; Jellyfin admin authorization is still required |
 
 ## Plans and Devices
 
 Neptune Pro is available as monthly and yearly subscriptions or a Lifetime purchase. Current prices and any trial eligibility appear in Neptune's purchase screen and are handled by the App Store.
 
-The purchase is universal across Neptune's Apple platforms. Buy once with the same App Store account and restore it on Apple TV, iPhone, iPad and Mac. Lifetime also includes access to the [Pilot program](/getting-started/installation#passengers--pilots) for preview builds of released platforms.
+The purchase is universal across supported Neptune clients. Buy once with the same App Store account and restore it on any supported Apple device. Lifetime also includes access to the [Pilot program](/getting-started/installation#passengers--pilots) for preview builds of released platforms.
 
 The **Neptune Pro** row in Settings shows the active tier. Free users can open the purchase screen and restore purchases; monthly and yearly subscribers can open the Lifetime upgrade path.
 

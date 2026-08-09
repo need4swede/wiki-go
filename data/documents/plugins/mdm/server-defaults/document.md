@@ -15,9 +15,7 @@ Server Defaults can provide a starting Settings Profiles document:
 | Example | What It Does |
 |---------|--------------|
 | Starting profile library | Gives every new user the same named settings environments |
-| iPhone assignment | Makes one profile automatic on every iPhone signed in to the new account |
-| iPad or Apple TV assignment | Uses a different automatic loadout on those device types |
-| Mac assignment | Reserves an automatic loadout for future macOS support |
+| Device-type assignments | Makes different profiles automatic for supported device types |
 | Override-clearing choice | Lets an applied profile replace only the Device Overrides that conflict with its included settings |
 
 Only configured values participate. An omitted setting keeps its local value, and an explicit local non-default, unsent local change, or Device Override wins. Saved URL lists merge with URLs already recorded by the device: administrator entries appear first and duplicates are removed. If the user explicitly cleared a list before bootstrap, it remains empty.
@@ -30,11 +28,9 @@ Neptune copies the template library and assignments only when the local Settings
 
 Selecting a user with no personal Neptune backup in Remote Management shows their effective Server Defaults and labels the document as inherited. Viewing it does not create a personal backup, and the delete action remains unavailable until that user has personal state.
 
-The Seerr saved-URL list is for manual switching, while the active or preconfigured Seerr endpoint is separate. In the settings document, `seerrServerURL` is active and `seerrURLs` is the saved list. Neptune still reads the older MDM 1.2.6-era `jellyseerrURLs` saved-list name and writes both formats during the compatibility window.
+The Seerr saved-URL list is for manual switching, while the active or preconfigured Seerr endpoint is separate. In the settings document, `seerrServerURL` is active and `seerrURLs` is the saved list.
 
-If MDM 1.2.6.101 Server Defaults contain exactly one valid saved address and no active-address field, Neptune uses that address as active during first-time setup. It does not guess when there are multiple addresses, alter a personal backup, or override an explicit clear.
-
-Server Defaults profile inheritance is not Required policy and does not bypass Neptune Pro. A new Free user may receive the starting profile library and assignments, but Neptune does not apply them until that signed-in user has Pro. A live Required assignment delivered as managed policy is separate and does keep the matching profile active. It does not lock profile members unless the administrator separately locks them. Ordinary configured Server Defaults do not require Pro.
+Server Defaults profile inheritance is not Required policy. It can seed a starting profile library and assignments, but those remain ordinary profile choices rather than managed requirements. A live Required assignment is delivered separately, and profile members remain customizable unless the administrator also locks them.
 
 ## When Defaults Apply
 

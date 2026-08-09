@@ -28,10 +28,10 @@ The definition is shared, but assignment and policy can be global or specific to
 
 | Profile assignment | Individual setting | Recipient experience |
 |--------------------|--------------------|----------------------|
-| Optional | Unlocked | A Pro recipient may choose the profile and customize the setting |
-| Optional | Locked | A Pro recipient may choose the profile, but the setting is read-only while that profile is active |
-| Required | Unlocked | A Free or Pro recipient must use the profile but may customize the setting |
-| Required | Locked | A Free or Pro recipient must use the profile, and that setting is read-only |
+| Optional | Unlocked | The recipient may choose the profile and customize the setting |
+| Optional | Locked | The recipient may choose the profile, but the setting is read-only while that profile is active |
+| Required | Unlocked | The matching recipient must use the profile but may customize the setting |
+| Required | Locked | The matching recipient must use the profile, and that setting is read-only |
 
 Locks are evaluated per setting. The same profile can contain both locked and unlocked members. An explicit Lock outranks a conflicting Device Override while preserving that override underneath; requirement alone does not change a setting's value priority.
 
@@ -39,7 +39,7 @@ Locks are evaluated per setting. The same profile can contain both locked and un
 
 ### Globally by Device Class
 
-Use **Apply Automatically to All Users On** to assign a profile globally by device class. For example, assign an **iPhone** Server Profile to iPhone while leaving iPad, Apple TV, and Mac unassigned. Every matching iPhone in Auto uses that profile, while unassigned devices use their ordinary settings, initially seeded from [Server Defaults](/plugins/mdm/server-defaults) when configured.
+Use **Apply Automatically to All Users On** to assign a profile globally by device class. For example, assign a Server Profile to one supported device type while leaving the others unassigned. Every matching device in Auto uses that profile, while unassigned devices use their ordinary settings, initially seeded from [Server Defaults](/plugins/mdm/server-defaults) when configured.
 
 Each device class has at most one global assignment. Reassigning it names the current and replacement profiles and asks for confirmation.
 
@@ -75,8 +75,6 @@ Changing an unlocked setting in an active Server Profile creates or updates a lo
 
 Both the native editor and plugin dashboard can save **Replace Device Overrides**. When enabled, activating an optional profile removes only Device Overrides for its included settings. The client asks before clearing anything for a user-initiated selection, including switching to Auto. A later background automatic activation follows the saved policy without another prompt. A Required assignment does not clear overrides; unlocked members continue using them, while explicit Locks temporarily outrank them.
 
-## Access and Pro Requirements
+## Availability
 
-Any Jellyfin administrator can author Settings Profiles and Server Profiles in the Free plugin dashboard. Native authoring requires the administrator's Neptune Pro entitlement in addition to Jellyfin administrator authorization.
-
-A recipient needs Pro to select a Server Profile manually or consume an ordinary automatic assignment. A matching Required assignment is the sole profile-application exception and works for Free and Pro recipients, but it does not grant personal Profile Preset features.
+Administrator and recipient requirements are listed in the consolidated [MDM availability table](/plugins/mdm#availability).
