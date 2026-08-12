@@ -15,7 +15,7 @@ Everything from pressing Play to choosing tracks and scrubbing.
 | [Trident Player](/playback/trident-player) | Neptune's direct-play engine, supported formats, HDR, audio, and subtitles |
 | [Player Controls](/playback/player-controls) | Transport bar, scrubbing, skip segments, Up Next |
 | [Playback Menu](/playback/playback-menu) | The in-player menu: audio, subtitles, video, chapters, info |
-| [Conductor](/playback/conductor) | Track and version selection, with optional Pro learning |
+| [Conductor](/playback/conductor) | Track and version selection, with Pro live Language Rules and optional Auto learning |
 | [Picture in Picture & Background Playback](/ios/playback) | Continue video or audio outside the iPhone and iPad app |
 
 
@@ -46,7 +46,7 @@ See [Playback Settings](/settings/playback) for configuration details.
 
 **From Details:** Press Play, pick a version if the item has several, or select an episode.
 
-When playback starts, [Conductor](/playback/conductor) picks the audio track, subtitle track, and preferred version from your preferences. Neptune Pro's Auto mode can also learn from changes you make while watching.
+When playback starts, [Conductor](/playback/conductor) picks the audio track, subtitle track, and preferred version from your preferences. Neptune Pro can apply Language Rules after live audio changes in Manual or Auto, and Auto mode can also learn from choices you make while watching.
 
 
 

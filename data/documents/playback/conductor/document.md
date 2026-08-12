@@ -14,7 +14,7 @@ Set it up in **Settings > User Preferences > Conductor**. A short onboarding wal
 
 | Mode | Behavior |
 |------|----------|
-| **Manual** | Uses your fixed language, subtitle, anime, and quality rules. Included with Neptune |
+| **Manual** | Uses your fixed language, subtitle, anime, and quality rules. With Neptune Pro, Language Rules can also react to audio changes during playback |
 | **Auto** | Adds learning from your playback choices. Requires Neptune Pro |
 
 In Auto mode, a track or version change that you keep watching becomes a learning signal. Conductor remembers an exact choice for that file, recognizes preferences across a series, and builds broader preferences for new items. A one-off override still wins immediately; Auto simply uses it to make a better starting choice next time.
@@ -48,6 +48,28 @@ Add the languages you understand under **Languages**, and order them by priority
 | **Dubbed** | A dub in your language when one exists |
 
 **Automatic Subtitles** turns subtitles on in your language when the audio is foreign, and enables forced subtitles for foreign dialogue in content you watch natively. **Prefer SDH Subtitles** picks a hearing-accessible track when available.
+
+
+
+## Language Rules
+
+Language Rules let you choose a subtitle language based on the audio language that is active. For example, a **Japanese audio → English subtitles** rule selects English subtitles whenever Conductor starts playback with Japanese audio.
+
+Open **Settings > User Preferences > Conductor > Language Rules** to add or remove rules. Each side can match either:
+
+- **Any Variation**, which includes every regional or script variation of that language.
+- **An exact variation**, such as Latin American Spanish, Brazilian Portuguese, or Traditional Chinese.
+
+Rules are explicit instructions rather than learned preferences:
+
+| When the rule is evaluated | Free | Neptune Pro |
+|----------------------------|------|-------------|
+| **Playback starts** | Yes, in Manual or Auto | Yes, in Manual or Auto |
+| **You switch audio tracks during playback** | No | Yes, in Manual or Auto |
+
+With Neptune Pro, Conductor applies the matching rule automatically after you switch audio tracks. This does not require Auto mode and does not create a learned preference. If the requested subtitle language or exact variation is unavailable during a live switch, Neptune keeps the current subtitle selection unchanged.
+
+Audio is resolved before subtitles at playback start. That means Anime Mode can determine whether a Language Rule matches. With Anime Mode set to **Dubbed**, an available English dub is selected first, so a Japanese → English rule does not activate. If Japanese audio is selected instead—or you switch to it during playback—the rule can select English subtitles.
 
 
 

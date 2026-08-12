@@ -12,7 +12,7 @@ Apple-platform integrations, including named Settings Profiles.
 
 | Feature | What Pro Adds |
 |---------|---------------|
-| [Conductor Pro](/neptune-pro/conductor-pro) | Auto mode learns audio, subtitle, quality, and version choices over time |
+| [Conductor Pro](/neptune-pro/conductor-pro) | Auto mode learns playback choices, and Language Rules react to live audio changes in Manual or Auto |
 | [Neptune AI](/neptune-pro/neptune-ai) | Neptune's bespoke, first-party hosted intelligence provider |
 | [TMDB Integration](/neptune-pro/tmdb-integration) | Richer artwork, trailers, credits, release dates, people, studios, and networks |
 | [Downloads](/neptune-pro/downloads) | Original-quality or space-saving offline movies and episodes |
@@ -29,7 +29,7 @@ Apple-platform integrations, including named Settings Profiles.
 | Feature | Free | Neptune Pro |
 |------------|------|-------------|
 | **Playback** | Every supported codec, format, HDR profile, and subtitle type, plus iOS [Picture in Picture and Background Playback](/ios/playback) | The same complete playback engine |
-| **Conductor** | Manual rules automatically select tracks and versions | Auto mode adapts and learns from your choices over time |
+| **Conductor** | Manual rules automatically select tracks and versions at playback start | Adds live Language Rule reactions in Manual or Auto; Auto also adapts and learns over time |
 | **AI / LLM** | Use third-party provider with your own compute or API key | Use the integrated, official first-party Neptune AI service |
 | **Metadata** | Everything supplied by your media backend | Commercial API access across detail, people, home surfaces and more |
 | **Offline** | Requires a network connection to your media backend | Download and play media without a network connection |
@@ -52,7 +52,7 @@ The **Neptune Pro** row in Settings shows the active tier. Free users can open t
 
 Neptune checks Pro access live without deleting your preferences:
 
-- Conductor returns to Manual mode; its learned profile remains dormant and returns after reactivation.
+- Conductor returns to Manual mode and stops applying Language Rules after live audio changes. Startup rules remain active, while the learned profile stays dormant and returns after reactivation.
 - Neptune AI becomes unavailable, while configured bring-your-own providers remain intact.
 - TMDB-only enrichment is hidden; backend-native metadata continues normally and cached enrichment is retained for later reactivation.
 - Downloads and their management surfaces become unavailable. Existing files and progress remain on the device.
