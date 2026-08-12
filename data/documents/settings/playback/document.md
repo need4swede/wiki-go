@@ -141,5 +141,14 @@ transcode limits, and troubleshooting.
 | Setting | Description |
 |---------|-------------|
 | **Prevent Screensaver on Pause** | Keep the screensaver away while paused (default off) |
-| **Full Video Caching** | Add bounded disk-backed read-ahead during playback. Enables pause-to-buffer, but is not an offline download (default off) |
+| **Full Video Caching** | When paused, cache the remaining video to disk (default off) |
 | **De-Interlacing** | Auto, On, or Off. Removes combing artifacts from interlaced content like DVDs and broadcasts (default Auto) |
+
+Ordinary caching remains active with **Full Video Caching** off and keeps a
+bounded working window for the current playback session. With the setting on,
+pausing lets Neptune cache toward the end of the video using available storage.
+It preserves a safe free-space margin, removes only already-watched cache
+blocks when more room is needed, and automatically resumes after storage
+headroom recovers. The video does not need to fit in full before caching starts.
+This cache is temporary and is deleted when the player closes; use
+[Downloads](/browsing/home-screen/downloads) for persistent offline viewing.

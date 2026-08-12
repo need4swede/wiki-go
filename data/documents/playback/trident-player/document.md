@@ -35,7 +35,28 @@ Configure this in **Settings > Playback > Playback Mode** with a target bitrate 
 
 Switch audio or subtitle tracks mid-playback from the [Playback Menu](/playback/playback-menu). Track changes happen in place without restarting the video stream.
 
-Enable **Full Video Caching** in **Settings > Playback > Advanced** for disk-backed read-ahead. Pausing lets Trident continue building a playback cushion, and seeking within cached portions avoids another download. This is a bounded per-session cache—not an offline download or a promise that the entire file will remain on the device. Use [Downloads](/browsing/home-screen/downloads) for offline viewing.
+Eligible remote direct-play videos use a temporary disk cache even when **Full
+Video Caching** is off. Ordinary caching keeps a bounded working window for the
+current playback session, which supports read-ahead and instant seeking within
+cached portions.
+
+Enable **Full Video Caching** in **Settings > Playback > Advanced** to continue
+caching toward the end of the video while playback is paused. Neptune uses as
+much safe storage as is currently available; the rest of the video does not
+need to fit before caching begins. It preserves a safe amount of free space
+and, when necessary, removes the oldest already-watched cache blocks to make
+room for new video farther ahead. Upcoming cached video is not removed for
+this. If no safe space can be reclaimed, caching waits without interrupting
+playback and resumes when enough storage becomes available again.
+
+The cache value under **Info > Player** shows how much media is currently
+cached. It can grow, plateau, or remain roughly steady while old watched data
+is replaced with new data ahead. It is not a free-storage counter.
+
+The cache is temporary and is deleted when the player closes. It is not an
+offline download and does not guarantee that an oversized video will remain
+cached in full. Use [Downloads](/browsing/home-screen/downloads) for offline
+viewing.
 
 On iPhone and iPad, Trident also powers
 [Picture in Picture and Background Playback](/ios/playback). Picture in
