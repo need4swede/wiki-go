@@ -14,7 +14,7 @@ four areas are available on each platform:
 | Area | What it shows |
 |------|---------------|
 | **Overview** | A focused current-period snapshot: active watching time, comparison, completed movies and episodes, streak, and viewing calendar |
-| **History** | Your exact viewing ledger, with date sections, filters, search on iPhone/iPad, pagination, and controls for each play |
+| **History** | A compact viewing ledger: movies stay individual, shows group their episode plays, and filters, search, pagination, and per-play controls reveal the exact evidence |
 | **Insights** | Explainable patterns such as top titles, genres, busy days, device mix, habits, and changing tastes |
 | **Rewind** | A year-by-year favorites story with annual totals shown once rather than repeated as separate cards |
 
@@ -26,12 +26,18 @@ watched in another app before Activity was available.
 The Viewing Calendar answers **when and how much** you watched. It shows the
 current month's rhythm and rolls a selected day up by movie or show.
 
-History answers **exactly what happened**. It keeps every qualified play as an
-individual, manageable record and can combine title/series search with media
-type, playback result, date range, and source-device filters. This makes it
-useful for questions such as “Which movies did I finish this year on another
-device?” and for correcting or removing a particular record. Matching plays
-can continue through older months and are organized as Today,
+History answers **exactly what happened** without filling the main list with
+episode rows. Movies remain individual entries. Episode plays from the same
+show collapse into one show row within each date section; that row summarizes
+the number of episodes, known active time, and latest episode. Select the show
+to reveal its exact episode plays newest-first, then include, exclude, or
+delete a particular play. Imported position-only records remain visible but
+do not inflate the show's active-time total.
+
+History can combine title/series search with media type, playback result, date
+range, and source-device filters. This makes it useful for questions such as
+“Which movies did I finish this year on another device?” Matching plays can
+continue through older months and are organized as Today,
 Yesterday, Earlier in the current month, then month-and-year sections. Empty
 sections are omitted, so a play never appears under more than one heading.
 
