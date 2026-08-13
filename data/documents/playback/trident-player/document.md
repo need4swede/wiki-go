@@ -49,14 +49,18 @@ room for new video farther ahead. Upcoming cached video is not removed for
 this. If no safe space can be reclaimed, caching waits without interrupting
 playback and resumes when enough storage becomes available again.
 
+On iPhone and iPad, leaving Neptune releases the extended cache back to the
+ordinary playback window. Returning to the same paused session resumes caching.
+A normal player close removes the temporary cache immediately, and Neptune
+cleans up an orphan on its next launch if an abrupt termination prevented
+normal close.
+
 The cache value under **Info > Player** shows how much media is currently
 cached. It can grow, plateau, or remain roughly steady while old watched data
 is replaced with new data ahead. It is not a free-storage counter.
 
-The cache is temporary and is deleted when the player closes. It is not an
-offline download and does not guarantee that an oversized video will remain
-cached in full. Use [Downloads](/browsing/home-screen/downloads) for offline
-viewing.
+The cache is temporary, not an offline download. Use
+[Downloads](/browsing/home-screen/downloads) for persistent offline viewing.
 
 On iPhone and iPad, Trident also powers
 [Picture in Picture and Background Playback](/ios/playback). Picture in

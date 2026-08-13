@@ -146,9 +146,17 @@ transcode limits, and troubleshooting.
 
 Ordinary caching remains active with **Full Video Caching** off and keeps a
 bounded working window for the current playback session. With the setting on,
-pausing lets Neptune cache toward the end of the video using available storage.
+pausing lets Neptune cache toward the end of the video using safe available
+storage.
 It preserves a safe free-space margin, removes only already-watched cache
 blocks when more room is needed, and automatically resumes after storage
 headroom recovers. The video does not need to fit in full before caching starts.
-This cache is temporary and is deleted when the player closes; use
+
+Full Video Caching is available on Apple TV, iPhone, and iPad. On iPhone and
+iPad, leaving Neptune releases the extended cache back to its ordinary playback
+window. Returning to the same paused session resumes caching. A normal player
+close removes the temporary cache immediately, and Neptune cleans up an orphan
+on its next launch if an abrupt termination prevented normal close.
+
+This is not an offline download. Use
 [Downloads](/browsing/home-screen/downloads) for persistent offline viewing.
