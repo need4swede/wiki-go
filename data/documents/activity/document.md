@@ -13,10 +13,10 @@ four areas are available on each platform:
 
 | Area | What it shows |
 |------|---------------|
-| **Overview** | Active watching time, completed movies and episodes, streaks, discoveries, rewatches, calendar days, milestones, and recent activity |
+| **Overview** | A focused current-period snapshot: active watching time, comparison, completed movies and episodes, streak, and viewing calendar |
 | **History** | Your Neptune viewing timeline, with filters, search on iPhone/iPad, pagination, and controls for each play |
-| **Insights** | Explainable patterns such as top titles, genres, busy days, device mix, and period changes |
-| **Rewind** | A year-by-year sequence telling the story of what you watched |
+| **Insights** | Explainable patterns such as top titles, genres, busy days, device mix, habits, and changing tastes |
+| **Rewind** | A year-by-year favorites story with annual totals shown once rather than repeated as separate cards |
 
 Activity counts playback in Neptune only. It does not pretend to know what you
 watched in another app before Activity was available.
@@ -76,9 +76,10 @@ time. New Activity plays use the accurate active-time model.
 
 ## Neptune Rewind
 
-Rewind is available for each year represented in Activity. It can include
-active hours, movie/episode split, top show or movie, top genre, biggest day,
-longest streak, and biggest binge.
+Rewind is available for each year represented in Activity. Its introduction
+summarizes active hours, qualified plays, and the movie/episode split once.
+The rest of the story concentrates on distinctive annual favorites such as
+your top show, movie, genre, and biggest binge.
 
 After your first qualified play, Neptune can show an honest shorter Rewind. A
 fuller story becomes available after five qualified plays and two active hours.
