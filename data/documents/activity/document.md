@@ -101,10 +101,13 @@ back at the year. Neptune does not present a partial August recap as a finished
 annual story. Completed Rewinds remain available in your archive whenever you
 want to revisit them.
 
-Each Rewind unfolds as a series of colorful chapters rather than one dense
+Each Rewind unfolds as a series of cinematic chapters rather than one dense
 statistics card. It opens with active time and viewing volume, then gives
 individual moments to the year's top show, movie, genre, biggest viewing day,
 longest streak, and biggest binge when the Activity record supports them.
+Movie and show moments use their backdrop and logo when available, and tapping
+or clicking one opens that title. Statistical moments use matching
+theme-colored artwork and the same layout, so the story remains cohesive.
 
 After your first qualified play, Neptune can show an honest shorter Rewind. A
 fuller story becomes available after five qualified plays and two active hours.
