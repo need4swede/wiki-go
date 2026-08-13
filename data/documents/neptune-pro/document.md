@@ -38,7 +38,7 @@ Apple-platform integrations, including named Settings Profiles.
 | **iOS Widgets** | Every size can open a standard Neptune Page; native Pins and in-app Home and Discover sections remain available | Adds native Pin Widgets and dynamic Section Widgets to the per-widget picker |
 | **Device personalization** | Device Overrides keep individual settings local to one physical device; Free recipients can consume an explicitly Required Server Profile | Settings Profiles add personal named environments, device-local selection, in-place editing, and automatic assignments by device type |
 | **Neptune MDM administration** | Use the complete Jellyfin plugin dashboard; clients receive direct managed settings, locks, and Required profiles without recipient Pro | Adds the native administrator console inside Neptune; Jellyfin admin authorization is still required |
-| **Activity** | Accurate capture, sync, full History, Overview, core insights, annual Rewind, privacy controls, deletion, and export | Adds advanced deterministic insight packs without gating or deleting the private ledger |
+| **Activity** | Accurate local capture, automatic continuity when supported, full History, Overview, core insights, annual Rewind, and per-play controls | Adds advanced deterministic insight packs without gating or deleting the private ledger |
 
 ## Plans and Devices
 
@@ -72,8 +72,9 @@ Neptune checks Pro access live without deleting your preferences:
 - The native Neptune MDM console closes or locks and blocks further client-side
   admin actions. Server data, delivered policies, Settings Sync, and the Free
   Jellyfin plugin dashboard are unchanged.
-- Advanced Activity insight cards are removed, while capture, sync, History,
-  privacy controls, export, core insights, and Rewind stay available. Restoring
-  Pro recomputes the cards from the retained private ledger.
+- Advanced Activity insight cards are removed, while automatic local capture,
+  capability-driven continuity, History, per-play controls, core insights, and
+  Rewind stay available. Restoring Pro recomputes the cards from the retained
+  private ledger.
 
 Use **Restore Purchases** if an active subscription or Lifetime purchase is not recognized on a device.

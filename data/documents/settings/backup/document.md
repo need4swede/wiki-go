@@ -37,6 +37,11 @@ documented as it becomes available.
 | [Live Activity](/ios/live-activity) | Enabled state and selected activity type |
 | [Settings Profiles](/personalization/profile-presets) | Profile definitions, saved values, override-replacement choices, order, and device-type assignments |
 
+[Activity](/activity) also uses the compatible Neptune MDM companion for
+automatic cross-device continuity, but its growing playback ledger is kept
+outside the settings backup document. Without that companion, Activity stays
+local to the device.
+
 What stays device-local: diagnostics toggles, the sync switch itself, and
 anything tied to the specific hardware. The active Settings Profile choice is
 local too: Auto, Manual with no profile selected, or a manually selected named

@@ -92,7 +92,7 @@ availability.
 
 | Page | Description |
 |------|-------------|
-| [Activity](/activity) | Private synchronized History, viewing insights, privacy controls, and annual Neptune Rewind |
+| [Activity](/activity) | Private local History, automatic continuity when supported, viewing insights, and annual Neptune Rewind |
 
 ### Personalization
 

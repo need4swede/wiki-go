@@ -37,18 +37,17 @@ binge is at least three episodes of the same series with no break longer than
 
 ## Sync Across Devices
 
-Local Activity capture starts on by default. **Activity Sync starts off** and
-requires your explicit choice because it uploads detailed viewing history to
-your own media server.
+Activity records locally as a native part of Neptune. When the active backend
+provides a compatible Neptune backup/sync companion, Neptune automatically
+keeps the signed-in account's Activity consistent across its devices.
 
-For Jellyfin, Activity Sync requires a compatible version of the optional
-[Neptune Plugin Suite](/plugins). When enabled, an offline play on Apple TV can
-appear on your iPhone after both reconnect. Deletes and clear actions also
-synchronize safely.
+For Jellyfin, this requires a compatible version of the optional
+[Neptune Plugin Suite](/plugins). An offline play on Apple TV can appear on
+your iPhone after both reconnect, and per-play changes synchronize safely.
 
-Activity Sync is independent from Settings Sync. You can enable either one,
-both, or neither. On a new device, Neptune asks before joining Activity that is
-already stored on your server.
+Activity uses a dedicated growing-ledger protocol behind the scenes rather
+than putting watch history inside the settings backup JSON. There is no second
+Activity Sync switch or join prompt.
 
 Backends without an Activity Sync companion still get complete device-local
 Activity.
@@ -60,19 +59,13 @@ Activity belongs to the signed-in user:
 - Neptune provides no administrator browser or per-user Activity admin API.
   As with other server data, the machine's operator can still access files on
   the server; Activity Sync is not end-to-end encrypted.
-- Activity is not part of managed settings, Settings Profiles, or MDM policy.
+- Activity is not an administrator-managed setting, Settings Profile member,
+  or field in the settings backup payload.
 - You can keep a play in History while excluding it from Insights and Rewind.
-- You can keep the next play private before it starts or exclude the current
-  play directly from the player.
-- You can delete one play, remove one device's history, or clear Activity.
-- If sync is on, clear can erase Activity everywhere after confirmation.
-- You can export your history as JSON or CSV.
+- You can exclude the current play directly from the player.
+- You can delete an individual play from History.
 - Editing Activity does not mark media played or unplayed on your server.
-- Clearing Activity does not change [Conductor](/playback/conductor) preferences or learning.
-
-The privacy page also shows capture and sync state, queued changes, last sync,
-devices represented in the ledger, and whether older imported records have
-exact or approximate timing.
+- Activity does not change [Conductor](/playback/conductor) preferences or learning.
 
 ## Older Watch History
 
@@ -94,9 +87,9 @@ Neptune does not upload your private history merely to create it.
 
 ## Free and Pro
 
-Activity's ownership and privacy features are Free: accurate capture,
-cross-device sync, full History, Overview, core insights, annual Rewind,
-deletion, clear, and export.
+Activity's ownership features are Free: accurate capture, automatic
+cross-device continuity when supported, full History, Overview, core insights,
+annual Rewind, and per-play controls.
 
 [Neptune Pro](/neptune-pro) adds deeper deterministic insights about comfort
 viewing, taste shifts, people, weekday habits, languages, playback patterns,
