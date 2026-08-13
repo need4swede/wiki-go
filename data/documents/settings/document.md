@@ -44,7 +44,7 @@ Preferences also contains separate **Live Activity**, **Widgets**, and
 Compass surfaces. Admins also get an **Administration** entry here.
 
 **Neptune.** The [Neptune Pro](/neptune-pro) status and upgrade row, followed
-by app behavior: Home, Playback, Plugins, Deep Learning, Images, Metadata. On
+by [Activity](/activity) and app behavior: Home, Playback, Plugins, Deep Learning, Images, Metadata. On
 iPhone and iPad, Playback also owns the independent Picture in Picture and
 Background Playback toggles.
 

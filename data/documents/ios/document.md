@@ -21,6 +21,7 @@ app.
 | [Live Activity](/ios/live-activity) | Put the iPhone Compass in Dynamic Island and on the Lock Screen |
 | [Picture in Picture & Background Playback](/ios/playback) | Keep video floating or audio playing when Neptune leaves the foreground |
 | [Backdrops](/ios/backdrops) | Choose how widescreen artwork is fitted to an upright screen, or place an image by hand |
+| [Activity](/activity) | View and synchronize private history, insights, and Rewind across Neptune devices |
 
 
 
@@ -54,5 +55,8 @@ also does not mirror the Compass: every widget instance has its own selection.
 - Backdrop framing and hold-to-reposition are iPhone and iPad features. Apple TV
   keeps filling the screen, because a television is already the shape backdrop
   artwork is made for.
+- Activity has the same Overview, History, Insights, Rewind, privacy, and sync
+  contract as Apple TV. iPhone and iPad additionally provide touch search and
+  locally rendered Rewind share cards.
 - Neptune for iPhone and iPad is currently distributed through TestFlight.
   See [Installation](/getting-started/installation).

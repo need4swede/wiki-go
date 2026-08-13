@@ -30,7 +30,7 @@ plugins currently extend Jellyfin.
 | Plugin | Purpose |
 |--------|---------|
 | **Neptune Indexers** | Builds library and search indexes on the server so clients don't have to, and enriches music video libraries with credits, artist info, and artwork |
-| **Neptune MDM** | Syncs settings, publishes reusable Server Profiles globally or to selected users, seeds Server Defaults, and gives admins remote management, announcements, and child accounts |
+| **Neptune MDM** | Syncs settings and opt-in current-user Activity, publishes reusable Server Profiles, seeds Server Defaults, and gives admins remote management, announcements, and child accounts |
 | **Neptune Transcoder** | Replaces Neptune's built-in download quality presets with a server-managed ladder and lets admins disable original-quality downloads |
 | **Neptune Studio** | Provides a server-backed UI customization system for Neptune, including a visual editor and renderer for Top Shelf designs |
 
