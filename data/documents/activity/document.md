@@ -69,6 +69,12 @@ Activity uses a dedicated growing-ledger protocol behind the scenes rather
 than putting watch history inside the settings backup JSON. There is no second
 Activity Sync switch or join prompt.
 
+The companion synchronizes only Activity that Neptune recorded. It does not
+backfill Jellyfin or Emby watch history, Playback Reporting data, or viewing
+from other clients. Apart from the one-time import of Neptune's own older local
+records described below, Activity starts fresh and grows from new Neptune
+playback.
+
 Backends without an Activity Sync companion still get complete device-local
 Activity.
 
