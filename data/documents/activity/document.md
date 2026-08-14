@@ -13,7 +13,7 @@ four areas are available on each platform:
 
 | Area | What it shows |
 |------|---------------|
-| **Overview** | A focused current-period snapshot: active watching time, comparison, completed movies and episodes, streak, and viewing calendar |
+| **Overview** | A focused current-period snapshot: active watching time, comparison, completed movies and episodes, streak, viewing calendar, and factual play/day totals from the last year |
 | **History** | A compact viewing ledger: movies stay individual, shows group their episode plays, and filters, search, pagination, and deletion reveal the exact evidence |
 | **Insights · Pro** | A living profile of your taste, habits, discovery, playback experience, evolution, and viewing psychology |
 | **Rewind · Pro** | A December year-end celebration told through cinematic, evidence-backed chapters, with completed years kept in an archive |
@@ -111,6 +111,11 @@ traits into **Taste**, **Habits**, **Discovery**, **Playback Experience**, and
 confidence and supporting evidence; Neptune leaves a trait out when there is
 not enough data.
 
+The main Insights page opens with one compact route into Viewing Psychology,
+followed by the deeper trait sections. Its factual trailing-year play and
+active-day totals live in Overview instead of being repeated in a separate
+profile-summary card.
+
 Insights looks for deeper patterns: how broad or focused your taste is, how
 weekday and weekend taste differ, which genres and creators connect your
 viewing, whether you roam across release eras, countries, and languages,
@@ -124,23 +129,26 @@ to Rewind.
 
 ### Your Viewing Psychology
 
-Insights also connects those facts into five Big Five-compatible **viewing
-lenses**. They are designed to help you recognize patterns in entertainment
-behavior, not to replace a personality questionnaire:
+Insights also connects those facts into a conservative behavioral **Big Five
+estimate**. It is designed to help you recognize patterns in entertainment
+behavior, not to replace a validated personality questionnaire:
 
 | Lens | What Neptune can observe |
 |------|---------------------------|
-| **Openness — Curiosity & range** | Breadth, discovery, exploration, cultures, languages, eras, and changing taste |
-| **Conscientiousness — Structure & follow-through** | Completion, returning after a sample, routine, continuity, and continuation tempo |
-| **Extraversion — Entertainment energy** | Session depth, binges, exploration pace, and changes between viewing contexts |
-| **Agreeableness — Connection & warmth** | Loyalty to story worlds and creators, familiar-title returns, and follow-through |
-| **Emotional Sensitivity — Comfort & intensity** | Familiarity timing, rewatching, context shifts, and routine |
+| **Openness — Conventional ↔ open-minded** | Breadth, discovery, exploration, cultures, languages, eras, and changing taste |
+| **Conscientiousness — Flexible ↔ organized** | Completion, returning after a sample, routine, continuity, and continuation tempo |
+| **Extraversion — Reserved ↔ energetic** | Session depth, binges, exploration pace, and changes between viewing contexts |
+| **Agreeableness — Independent ↔ cooperative** | Loyalty to story worlds and creators, familiar-title returns, and follow-through |
+| **Neuroticism — Emotionally stable ↔ reactive** | Familiarity timing, rewatching, context shifts, and routine |
 
-Every lens shows a directional viewing signal, evidence support, and the number
-of contributing plays. A signal is not a population percentile. Neptune gives
-the more indirect lenses lower certainty because watch history cannot establish
-someone's social behavior, relationships, emotional health, or entire offline
-personality.
+Every lens shows a position between two normal poles, behavioral evidence
+strength, and the number of contributing plays. The position is not a
+population percentile. Neptune pulls estimates toward the neutral midpoint
+when history is sparse, signals disagree, or the viewing proxy is indirect.
+Openness and Conscientiousness have the strongest grounding in observable
+behavior; Extraversion is weaker, and Agreeableness and Neuroticism remain the
+most cautious because watch history cannot establish someone's interpersonal
+orientation, emotional health, or entire offline personality.
 
 When Conductor Pro Auto learning is active, Insights can also use a bounded
 summary of what Conductor has learned—such as picture-versus-sound balance and
@@ -150,8 +158,9 @@ training, and clearing one feature does not clear the other.
 Choose **Your Viewing Psychology** to enter a dedicated Neptune AI experience.
 Opening Activity or the main Insights page alone does not generate anything.
 Inside, **Portrait** presents an animated five-axis profile and possible viewing
-motivations; **Five Dimensions** lets you open each lens for its interpretation,
-supporting observations, and counterpoint; **Deeper Patterns** connects signals
+motivations; **Big Five Estimate** lets you open each lens for its interpretation,
+supporting observations, counterpoint, axis position, and evidence strength;
+**Deeper Patterns** connects signals
 that are easy to miss in separate statistics; and **Evidence** shows how much
 history supports each result.
 
