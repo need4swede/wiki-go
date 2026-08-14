@@ -15,7 +15,7 @@ four areas are available on each platform:
 |------|---------------|
 | **Overview** | A focused current-period snapshot: active watching time, comparison, completed movies and episodes, streak, and viewing calendar |
 | **History** | A compact viewing ledger: movies stay individual, shows group their episode plays, and filters, search, pagination, and deletion reveal the exact evidence |
-| **Insights · Pro** | A living profile of your taste, habits, discovery, playback experience, and evolution |
+| **Insights · Pro** | A living profile of your taste, habits, discovery, playback experience, evolution, and viewing psychology |
 | **Rewind · Pro** | A December year-end celebration told through cinematic, evidence-backed chapters, with completed years kept in an archive |
 
 Activity counts playback in Neptune only. It does not pretend to know what you
@@ -122,20 +122,47 @@ deliberately does not repeat annual
 top movies, shows, genres, people, or studios. Those celebratory winners belong
 to Rewind.
 
+### Your Viewing Psychology
+
+Insights also connects those facts into five Big Five-compatible **viewing
+lenses**. They are designed to help you recognize patterns in entertainment
+behavior, not to replace a personality questionnaire:
+
+| Lens | What Neptune can observe |
+|------|---------------------------|
+| **Openness — Curiosity & range** | Breadth, discovery, exploration, cultures, languages, eras, and changing taste |
+| **Conscientiousness — Structure & follow-through** | Completion, returning after a sample, routine, continuity, and continuation tempo |
+| **Extraversion — Entertainment energy** | Session depth, binges, exploration pace, and changes between viewing contexts |
+| **Agreeableness — Connection & warmth** | Loyalty to story worlds and creators, familiar-title returns, and follow-through |
+| **Emotional Sensitivity — Comfort & intensity** | Familiarity timing, rewatching, context shifts, and routine |
+
+Every lens shows a directional viewing signal, evidence support, and the number
+of contributing plays. A signal is not a population percentile. Neptune gives
+the more indirect lenses lower certainty because watch history cannot establish
+someone's social behavior, relationships, emotional health, or entire offline
+personality.
+
 When Conductor Pro Auto learning is active, Insights can also use a bounded
 summary of what Conductor has learned—such as picture-versus-sound balance and
 how often its choices fit. Activity cannot change Conductor preferences or
 training, and clearing one feature does not clear the other.
 
-**Interpret with Neptune AI** is optional and runs only when you select it.
+Choose **Your Viewing Psychology** to enter a dedicated Neptune AI experience.
+Opening Activity or the main Insights page alone does not generate anything.
+Inside, **Portrait** presents an animated five-axis profile and possible viewing
+motivations; **Five Dimensions** lets you open each lens for its interpretation,
+supporting observations, and counterpoint; **Deeper Patterns** connects signals
+that are easy to miss in separate statistics; and **Evidence** shows how much
+history supports each result.
+
 Neptune sends compact profile traits, aggregate values, confidence, and
 evidence counts through your active AI provider. It does not send the Activity
 ledger, timestamps, device IDs, event IDs, playback URLs, or diagnostics. The
-result is a layered interpretation: a viewing archetype, a whole-profile
-synthesis, hidden connections across different signals, and the distinctive
-tensions in your taste—such as exploring widely while committing selectively.
-It is layered over the local evidence, not a new source of viewing truth, and
-it does not diagnose you or invent off-screen motives from a watching pattern.
+result is a structured viewing archetype, whole-profile synthesis, dimension
+interpretations, hidden connections, possible motivations, and distinctive
+tensions—such as exploring widely while committing selectively. It is layered
+over the local evidence, not a new source of viewing truth, and it does not
+diagnose you or invent off-screen motives from a watching pattern.
 
 ## Neptune Rewind
 
