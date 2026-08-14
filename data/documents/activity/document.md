@@ -114,11 +114,14 @@ viewing day, longest streak, and biggest binge when the Activity record supports
 them. Movie and show moments use their backdrop and logo when available, keep
 the title visible as a fallback, and open that title when selected. Statistical
 moments use representative artwork from the playback behind the result: genre
-chooses a title with that genre, biggest day chooses something played that day,
-and longest streak chooses something watched during that run. Rewind prefers a
-different eligible backdrop for each later chapter before repeating one; very
-small histories can still repeat their only evidence. A cinematic symbolic
-treatment is the fallback when no media art exists. If the year's top show is
+chooses the most-watched backdrop-bearing movie or series with that genre,
+biggest day chooses the most-watched title from that day, and longest streak
+chooses the most-watched title during that run. Episode time is combined for
+the whole series. A title can therefore appear twice when it truly wins both
+facts; visual variety never replaces statistical truth. If one fact
+has no usable artwork, Rewind borrows another unused visual from that year's
+in-scope Activity before using its cinematic symbolic fallback. If the year's
+top show is
 also its biggest binge, Neptune combines those facts into one chapter instead
 of repeating the same series.
 
