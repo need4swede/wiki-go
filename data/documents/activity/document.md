@@ -99,16 +99,24 @@ time. New Activity plays use the accurate active-time model.
 ## Your Viewing Profile
 
 With Neptune Pro, **Insights** becomes a living profile rather than another
-statistics dashboard. It organizes evidence-backed traits into **Taste**,
-**Habits**, **Discovery**, **Playback Experience**, and **Evolution**. Each
-trait is calculated from qualified Activity and carries confidence and
-supporting evidence; Neptune leaves a trait out when there is not enough data.
+statistics dashboard or a preview of Rewind. It organizes evidence-backed
+traits into **Taste**, **Habits**, **Discovery**, **Playback Experience**, and
+**Evolution**. Each trait is calculated from qualified Activity and carries
+confidence and supporting evidence; Neptune leaves a trait out when there is
+not enough data.
+
+Insights looks for deeper patterns: how broad or focused your taste is, which
+genres connect in your viewing, whether you lean toward episodic worlds or
+one-sitting stories, the shape and consistency of your sessions, your binge and
+completion tendencies, how quickly you explore, your original-language range,
+and how your taste changes over time. It deliberately does not repeat annual
+top movies, shows, genres, people, or studios. Those celebratory winners belong
+to Rewind.
 
 When Conductor Pro Auto learning is active, Insights can also use a bounded
-summary of what Conductor has learned—such as preferred languages, subtitle
-usage, picture-versus-sound balance, and how often its choices fit. Activity
-cannot change Conductor preferences or training, and clearing one feature does
-not clear the other.
+summary of what Conductor has learned—such as picture-versus-sound balance and
+how often its choices fit. Activity cannot change Conductor preferences or
+training, and clearing one feature does not clear the other.
 
 **Interpret with Neptune AI** is optional and runs only when you select it.
 Neptune sends compact profile traits, aggregate values, confidence, and
