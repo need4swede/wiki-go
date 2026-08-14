@@ -111,11 +111,14 @@ traits into **Taste**, **Habits**, **Discovery**, **Playback Experience**, and
 confidence and supporting evidence; Neptune leaves a trait out when there is
 not enough data.
 
-Insights looks for deeper patterns: how broad or focused your taste is, which
-genres connect in your viewing, whether you lean toward episodic worlds or
-one-sitting stories, the shape and consistency of your sessions, your binge and
-completion tendencies, how quickly you explore, your original-language range,
-and how your taste changes over time. It deliberately does not repeat annual
+Insights looks for deeper patterns: how broad or focused your taste is, how
+weekday and weekend taste differ, which genres and creators connect your
+viewing, whether you roam across release eras, countries, and languages,
+whether you lean toward episodic worlds or one-sitting stories, when you tend
+to watch, how quickly you return to a story world, what happens after you
+sample something, whether familiar titles occupy a different part of your day,
+and how your genre and movie-versus-series balance changes over time. It
+deliberately does not repeat annual
 top movies, shows, genres, people, or studios. Those celebratory winners belong
 to Rewind.
 
@@ -128,8 +131,11 @@ training, and clearing one feature does not clear the other.
 Neptune sends compact profile traits, aggregate values, confidence, and
 evidence counts through your active AI provider. It does not send the Activity
 ledger, timestamps, device IDs, event IDs, playback URLs, or diagnostics. The
-result is a short interpretation layered over the local evidence, not a new
-source of viewing truth.
+result is a layered interpretation: a viewing archetype, a whole-profile
+synthesis, hidden connections across different signals, and the distinctive
+tensions in your taste—such as exploring widely while committing selectively.
+It is layered over the local evidence, not a new source of viewing truth, and
+it does not diagnose you or invent off-screen motives from a watching pattern.
 
 ## Neptune Rewind
 
