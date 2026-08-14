@@ -113,8 +113,12 @@ individual cinematic chapters to the year's top show, movie, genre, biggest
 viewing day, longest streak, and biggest binge when the Activity record supports
 them. Movie and show moments use their backdrop and logo when available, keep
 the title visible as a fallback, and open that title when selected. Statistical
-moments use representative artwork from the playback behind the result when
-possible, with matching theme artwork as a fallback. If the year's top show is
+moments use representative artwork from the playback behind the result: genre
+chooses a title with that genre, biggest day chooses something played that day,
+and longest streak chooses something watched during that run. Rewind prefers a
+different eligible backdrop for each later chapter before repeating one; very
+small histories can still repeat their only evidence. A cinematic symbolic
+treatment is the fallback when no media art exists. If the year's top show is
 also its biggest binge, Neptune combines those facts into one chapter instead
 of repeating the same series.
 
