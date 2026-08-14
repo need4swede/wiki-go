@@ -101,13 +101,22 @@ back at the year. Neptune does not present a partial August recap as a finished
 annual story. Completed Rewinds remain available in your archive whenever you
 want to revisit them.
 
-Each Rewind unfolds as a series of cinematic chapters rather than one dense
-statistics card. It opens with active time and viewing volume, then gives
-individual moments to the year's top show, movie, genre, biggest viewing day,
-longest streak, and biggest binge when the Activity record supports them.
-Movie and show moments use their backdrop and logo when available, and tapping
-or clicking one opens that title. Statistical moments use matching
-theme-colored artwork and the same layout, so the story remains cohesive.
+The archive presents every available year as its own artwork-backed Spotlight
+card instead of a row of year tabs. Choose a card to enter that year's separate
+full-screen experience. The cards use the same cinematic proportions, artwork
+treatment, paging, and focus or swipe behavior as Neptune's Home Spotlight, so
+Rewind feels like a media experience rather than another Settings panel.
+
+Inside, each Rewind unfolds as one horizontally paged story rather than one
+dense statistics card. It opens with active time and viewing volume, then gives
+individual cinematic chapters to the year's top show, movie, genre, biggest
+viewing day, longest streak, and biggest binge when the Activity record supports
+them. Movie and show moments use their backdrop and logo when available, keep
+the title visible as a fallback, and open that title when selected. Statistical
+moments use representative artwork from the playback behind the result when
+possible, with matching theme artwork as a fallback. If the year's top show is
+also its biggest binge, Neptune combines those facts into one chapter instead
+of repeating the same series.
 
 After your first qualified play, Neptune can show an honest shorter Rewind. A
 fuller story becomes available after five qualified plays and two active hours.
