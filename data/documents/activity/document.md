@@ -14,9 +14,9 @@ four areas are available on each platform:
 | Area | What it shows |
 |------|---------------|
 | **Overview** | A focused current-period snapshot: active watching time, comparison, completed movies and episodes, streak, and viewing calendar |
-| **History** | A compact viewing ledger: movies stay individual, shows group their episode plays, and filters, search, pagination, and per-play controls reveal the exact evidence |
-| **Insights** | Explainable patterns such as top titles, genres, busy days, device mix, habits, and changing tastes |
-| **Rewind** | A December year-end celebration told through colorful, distinct chapters, with completed years kept in an archive |
+| **History** | A compact viewing ledger: movies stay individual, shows group their episode plays, and filters, search, pagination, and deletion reveal the exact evidence |
+| **Insights · Pro** | A living profile of your taste, habits, discovery, playback experience, and evolution |
+| **Rewind · Pro** | A December year-end celebration told through cinematic, evidence-backed chapters, with completed years kept in an archive |
 
 Activity counts playback in Neptune only. It does not pretend to know what you
 watched in another app before Activity was available.
@@ -30,8 +30,8 @@ History answers **exactly what happened** without filling the main list with
 episode rows. Movies remain individual entries. Episode plays from the same
 show collapse into one show row within each date section; that row summarizes
 the number of episodes, known active time, and latest episode. Select the show
-to reveal its exact episode plays newest-first, then include, exclude, or
-delete a particular play. Imported position-only records remain visible but
+to reveal its exact episode plays newest-first, then open or delete a
+particular play. Imported position-only records remain visible but
 do not inflate the show's active-time total.
 
 History can combine title/series search with media type, playback result, date
@@ -63,7 +63,7 @@ keeps the signed-in account's Activity consistent across its devices.
 
 For Jellyfin, this requires a compatible version of the optional
 [Neptune Plugin Suite](/plugins). An offline play on Apple TV can appear on
-your iPhone after both reconnect, and per-play changes synchronize safely.
+your iPhone after both reconnect, and deletions synchronize safely.
 
 Activity uses a dedicated growing-ledger protocol behind the scenes rather
 than putting watch history inside the settings backup JSON. There is no second
@@ -81,8 +81,10 @@ Activity belongs to the signed-in user:
   the server; Activity Sync is not end-to-end encrypted.
 - Activity is not an administrator-managed setting, Settings Profile member,
   or field in the settings backup payload.
-- You can keep a play in History while excluding it from Insights and Rewind.
-- You can exclude the current play directly from the player.
+- Activity has one device-local master recording switch. It is on by default;
+  turning it off stops future capture on that device without deleting History.
+  The switch does not synchronize and is not administrator-managed.
+- There is no per-play include/exclude control or private-next-play action.
 - You can delete an individual play from History.
 - Editing Activity does not mark media played or unplayed on your server.
 - Activity does not change [Conductor](/playback/conductor) preferences or learning.
@@ -94,9 +96,30 @@ imports those records once so they are not lost, but labels them as legacy
 instead of claiming their final playback position was exact active watching
 time. New Activity plays use the accurate active-time model.
 
+## Your Viewing Profile
+
+With Neptune Pro, **Insights** becomes a living profile rather than another
+statistics dashboard. It organizes evidence-backed traits into **Taste**,
+**Habits**, **Discovery**, **Playback Experience**, and **Evolution**. Each
+trait is calculated from qualified Activity and carries confidence and
+supporting evidence; Neptune leaves a trait out when there is not enough data.
+
+When Conductor Pro Auto learning is active, Insights can also use a bounded
+summary of what Conductor has learned—such as preferred languages, subtitle
+usage, picture-versus-sound balance, and how often its choices fit. Activity
+cannot change Conductor preferences or training, and clearing one feature does
+not clear the other.
+
+**Interpret with Neptune AI** is optional and runs only when you select it.
+Neptune sends compact profile traits, aggregate values, confidence, and
+evidence counts through your active AI provider. It does not send the Activity
+ledger, timestamps, device IDs, event IDs, playback URLs, or diagnostics. The
+result is a short interpretation layered over the local evidence, not a new
+source of viewing truth.
+
 ## Neptune Rewind
 
-The current year's Rewind arrives in December, when it makes sense to look
+Rewind is part of Activity Pro. The current year's Rewind arrives in December, when it makes sense to look
 back at the year. Neptune does not present a partial August recap as a finished
 annual story. Completed Rewinds remain available in your archive whenever you
 want to revisit them.
@@ -110,8 +133,11 @@ Rewind feels like a media experience rather than another Settings panel.
 Inside, each Rewind unfolds as one horizontally paged story rather than one
 dense statistics card. It opens with active time and viewing volume, then gives
 individual cinematic chapters to the year's top show, movie, genre, biggest
-viewing day, longest streak, and biggest binge when the Activity record supports
-them. Movie and show moments use their backdrop and logo when available, keep
+viewing day, longest streak, biggest binge, comfort title, discoveries, person,
+studio, era, language, playback style, subtitle story, and taste change when
+the Activity record supports them. Every ranked chapter explains why it won
+using the relevant time, plays, episodes, titles, share, or streak evidence.
+Movie and show moments use their backdrop and logo when available, keep
 the title visible as a fallback, and open that title when selected. Statistical
 moments use representative artwork from the playback behind the result: genre
 chooses the most-watched backdrop-bearing movie or series with that genre,
@@ -132,12 +158,12 @@ Neptune does not upload your private history merely to create it.
 
 ## Free and Pro
 
-Activity's ownership features are Free: accurate capture, automatic
-cross-device continuity when supported, full History, Overview, core insights,
-annual Rewind, and per-play controls.
+Activity's ownership features are Free: accurate capture, one device-local
+master recording switch, automatic cross-device continuity when supported,
+Overview, complete searchable/filterable History, and individual deletion.
 
-[Neptune Pro](/neptune-pro) adds deeper deterministic insights about comfort
-viewing, taste shifts, people, weekday habits, languages, playback patterns,
-and comparison evidence. If Pro ends, those advanced cards disappear without
-deleting any Activity. They return from your retained history when Pro is
-restored.
+[Neptune Pro](/neptune-pro) adds the complete living Insights profile,
+optional Conductor Pro context, explicit Neptune AI interpretation, and annual
+Rewind plus the completed-year archive. If Pro ends while either Pro tab is
+open, Activity returns to Overview. No Activity is deleted; the profile and
+Rewinds return from retained history when Pro is restored.

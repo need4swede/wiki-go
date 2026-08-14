@@ -159,7 +159,7 @@ availability.
 - **iOS Widgets**: Put a Neptune Page, dynamic Section, or native Pin on the iPhone or iPad Home Screen and Lock Screen
 - **Compass Live Activity**: Reach one to eight configurable shortcuts from Dynamic Island, the iPhone Lock Screen, or Neptune's in-app palette
 - **Picture in Picture & Background Playback**: Keep video floating over other apps or continue audio with Lock Screen and Control Center controls
-- **Activity**: Accurate Neptune-only viewing history, opt-in cross-device sync, explainable insights, and annual Rewind
+- **Activity**: Free Neptune-only Overview and History with automatic continuity when supported; Activity Pro adds a living profile and annual Rewind
 - **Cloud Backup & Sync**: Preferences, preset definitions, and device-type assignments follow you across devices, with Device Overrides for settings that should stay different on one physical device
 - **Custom Themes**: Nine built-in themes with Adaptive and Dynamic modes, plus JSON import for your own designs
 - **Family Ready**: Per-profile everything, child accounts, and PIN-protected admin tools

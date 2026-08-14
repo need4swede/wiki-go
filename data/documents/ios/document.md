@@ -55,8 +55,8 @@ also does not mirror the Compass: every widget instance has its own selection.
 - Backdrop framing and hold-to-reposition are iPhone and iPad features. Apple TV
   keeps filling the screen, because a television is already the shape backdrop
   artwork is made for.
-- Activity has the same Overview, History, Insights, Rewind, privacy, and sync
-  contract as Apple TV. iPhone and iPad additionally provide touch search and
-  locally rendered Rewind share cards.
+- Activity has the same Free Overview/History, device master switch, automatic
+  continuity, and Pro Insights/Rewind contract as Apple TV. iPhone and iPad
+  additionally provide touch search and locally rendered Rewind share cards.
 - Neptune for iPhone and iPad is currently distributed through TestFlight.
   See [Installation](/getting-started/installation).
