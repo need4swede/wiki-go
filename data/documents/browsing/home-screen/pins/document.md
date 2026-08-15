@@ -33,10 +33,9 @@ Apple TV provides the Library Pins reorder mode. iPhone and iPad preserve that
 shared order but do not have a separate Pins editor.
 
 When several timestamp Pins point to the same item, the Pins row combines them
-into one card. On Apple TV, selecting it lets you choose the saved moment. On
-iPhone and iPad, the combined card displays the saved time and opens the
-current media destination. Creating and choosing exact timestamp playback
-remain Apple TV actions.
+into one card. On Apple TV, iPhone, and iPad, selecting it lets you choose the
+saved moment, play from that exact time, open the item, or remove the selected
+moment.
 
 
 
@@ -44,11 +43,11 @@ remain Apple TV actions.
 
 Pin an item from its detail page or by long-pressing or touching and holding a
 content card. You can also Pin people. Apple TV additionally creates browse
-Pins such as genres or studios and timestamp Pins during playback; those
-synced Pins remain usable on iPhone and iPad.
+Pins such as genres or studios. Both Apple TV and iPhone/iPad can create
+timestamp Pins during playback.
 
 Pins follow the signed-in server account. With
 [Backup & Restore](/settings/backup) enabled, they sync across devices;
-timestamp images remain local to the Apple TV that captured them.
+timestamp images remain local to the device that captured them.
 
 For the touch-specific behavior, see [Pins on iPhone & iPad](/ios/pins).

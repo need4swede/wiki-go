@@ -22,6 +22,8 @@ On iPhone or iPad:
   **Pin** action.
 - Touch and hold a media card, then choose **Pin** or **Unpin**.
 - Pin a person from their detail page or by touching and holding their card.
+- During playback, use **Pin Timestamp** in the top action row. It is available
+  under **Settings > Playback > Controls > Action Buttons** and starts hidden.
 - Touch and hold an existing Pin card and choose **Remove Pin**.
 
 There is no separate Pins editor in iOS Settings. New Pins join the shared
@@ -46,19 +48,19 @@ their current library results rather than storing an old result list.
 
 
 
-## Pins Created on Apple TV
+## Timestamp and Browse Pins
 
-Apple TV can create additional browse-context and timestamp Pins. Those Pins
-remain part of the same synchronized list and can appear on iPhone and iPad.
+Apple TV can create additional browse-context Pins. Both Apple TV and iPhone
+or iPad can create timestamp Pins during playback. They remain part of the
+same synchronized list and appear on every signed-in device.
 
 - Genre, studio, network, and Smart Tag Pins open a touch-native browse grid.
 - Timestamp Pins remain visible with their saved time. If several moments
   belong to one movie or episode, iOS collapses them into one card.
+- Select that card to choose an exact moment, **Play from [time]**, open the
+  item, or remove only the selected moment.
 - Removing that collapsed timestamp card on iOS removes all saved moments for
   that item.
-
-Creating a new timestamp Pin and choosing an exact saved moment for playback
-remain Apple TV player actions.
 
 
 
@@ -68,7 +70,7 @@ With [Backup & Restore](/settings/backup) enabled, Pins sync with the rest of
 the profile’s settings. A Pin added or removed on one device is applied to the
 other devices signed into the same server account.
 
-Timestamp positions sync, but the captured frame image stays on the Apple TV
+Timestamp positions sync, but each captured frame image stays on the device
 that created it. Other devices use the item’s normal artwork.
 
 

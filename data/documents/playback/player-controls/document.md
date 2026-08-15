@@ -39,8 +39,21 @@ The skip interval is configurable (5, 10, or 15 seconds). The Menu button behavi
 
 ## iPhone & iPad In-Player Controls
 
-The touch player includes an orientation button beside the Playback Menu and
-Video Zoom buttons. It switches between portrait and one landscape direction:
+The touch player’s top row is configurable under **Settings > Playback >
+Controls > Action Buttons**. Its defaults are:
+
+| Button | What It Does |
+|--------|--------------|
+| **Playback Menu** | Opens audio, subtitle, chapter, quality, and related session controls. It can be moved but never hidden |
+| **Rotate** | Switches between portrait and one landscape direction |
+| **Fit / Fill** | Fits the whole picture or fills the screen |
+
+**Pin Timestamp** is also available and starts hidden. Enabling it captures
+the current playback position plus a local frame thumbnail, then syncs the Pin
+metadata with your other devices. You can reorder every action and hide any
+action except Playback Menu.
+
+The Rotate action behaves as follows:
 
 - From portrait, it rotates 90 degrees clockwise into landscape.
 - From either landscape direction, it returns to portrait.
@@ -82,10 +95,9 @@ Three buttons show by default:
 
 Four more can be enabled in **Settings > Playback > Controls > Action Buttons**: **Bitrate**, **Technical Info**, **Autoplay** (toggles autoplay for the session), and **Play / Pause**. Reorder or hide everything except the Playback Menu.
 
-The timestamp Pin action is currently Apple TV-only. On iPhone and iPad, use
-the Pin action on a media detail page or touch and hold a media card to create
-a normal native Pin. Synchronized timestamp Pins remain visible there; see
-[Pins on iPhone & iPad](/ios/pins).
+iPhone/iPad and Apple TV store separate action layouts, so platform-only
+buttons never appear on the wrong device. Both layouts participate in Settings
+Sync, Settings Profiles, Device Overrides, and administrator management.
 
 
 

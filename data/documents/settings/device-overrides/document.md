@@ -13,6 +13,8 @@ physical device.
 
 For example, you can keep the **Immersive** item-detail layout on one device
 and use **Minimal** on another without separating every other preference.
+You can also keep an iPhone player Action Button order or visibility choice on
+that device while Apple TV retains its own layout.
 Creating a new override requires [Settings Sync](/settings/backup) to be
 enabled when you use **Keep Here** manually, while existing overrides remain
 manageable when sync is off. Editing

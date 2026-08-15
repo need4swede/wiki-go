@@ -68,6 +68,16 @@ ends, Neptune returns to the orientation used before the player opened.
 | **Playback Menu** | Choose which tabs appear in the in-player menu, and their order |
 | **Back / Menu Button** | Always Exit, or Dismiss First |
 
+On iPhone and iPad, **Action Buttons** defaults to **Playback Menu, Rotate,
+Fit / Fill**. **Pin Timestamp** is available but hidden until you enable it.
+Playback Menu cannot be disabled, although it can be moved. Apple TV keeps its
+own action list and defaults, so device-specific controls do not cross into the
+wrong player.
+
+Action order and visibility sync as separate platform settings. Each can be
+kept on one device with a Device Override, saved in a Settings Profile, or
+managed and locked by a Neptune MDM administrator.
+
 Timeline options: **Buffer Indicator**, **Chapter Markers**, **Seek Thumbnails**, and **Trickplay** (all on by default).
 
 **Trickplay** decides where seek previews come from. Leave it on and Neptune
@@ -80,9 +90,8 @@ either source, without reprocessing server images that are already correct.
 See [Player Controls](/playback/player-controls#scrubbing) for how the two
 sources differ.
 
-iPhone and iPad show the Timeline group as its own section with these four
-settings. The rest of the Controls tab is Apple TV only, since it covers Siri
-Remote behavior.
+iPhone and iPad show the Timeline group as its own section. Siri Remote
+behavior and the remaining Apple TV-only controls do not appear there.
 
 Seeking options: **Scrub Sensitivity** (1 to 10; default 7), **Skip Interval** (5, 10, or 15 seconds), **Resume on Seek**, and **Seek Mode** (Locked, Limited, or Unlocked) with an on-screen demo of each mode.
 
