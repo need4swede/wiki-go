@@ -24,7 +24,8 @@ On iPhone or iPad:
 - Pin a person from their detail page or by touching and holding their card.
 - During playback, use **Pin Timestamp** in the top action row. It is available
   under **Settings > Playback > Controls > Action Buttons** and starts hidden.
-- Touch and hold an existing Pin card and choose **Remove Pin**.
+- Touch and hold an existing item Pin to choose **Go to Item** or **Remove
+  Pin**. Timestamp Pins also offer **Play from [time]**.
 
 There is no separate Pins editor in iOS Settings. New Pins join the shared
 order, and removing one updates every in-app Pins row. Apple TV also offers
@@ -57,10 +58,10 @@ same synchronized list and appear on every signed-in device.
 - Genre, studio, network, and Smart Tag Pins open a touch-native browse grid.
 - Timestamp Pins remain visible with their saved time. If several moments
   belong to one movie or episode, iOS collapses them into one card.
-- Select that card to choose an exact moment, **Play from [time]**, open the
-  item, or remove only the selected moment.
-- Removing that collapsed timestamp card on iOS removes all saved moments for
-  that item.
+- Select that card to open the moment chooser, choose an exact moment, **Play
+  from [time]**, open the item, or remove only the selected moment.
+- Removing a timestamp from its card menu removes that displayed moment; if
+  more moments remain, the collapsed card advances to the next one.
 
 
 

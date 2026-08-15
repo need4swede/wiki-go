@@ -24,7 +24,8 @@ Quick access to the movies, shows, episodes, collections, people, genres, studio
 Select a Pin to open its item, person, or current browse destination.
 
 - On Apple TV, long-press a Pin card for its actions.
-- On iPhone or iPad, touch and hold a Pin card and choose **Remove Pin**.
+- On iPhone or iPad, touch and hold an item Pin for **Go to Item** and
+  **Remove Pin**. Timestamp Pins additionally offer **Play from [time]**.
 
 Pins are read-only on the content tabs. To reorder Pins or move their category
 rows, use the **Pins** section on the [Library](/library) tab.
