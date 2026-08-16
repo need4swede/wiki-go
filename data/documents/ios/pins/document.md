@@ -58,8 +58,12 @@ same synchronized list and appear on every signed-in device.
 - Genre, studio, network, and Smart Tag Pins open a touch-native browse grid.
 - Timestamp Pins remain visible with their saved time. If several moments
   belong to one movie or episode, iOS collapses them into one card.
-- Select that card to open the moment chooser, choose an exact moment, **Play
-  from [time]**, open the item, or remove only the selected moment.
+- Timestamp cards always show a wide saved frame, including titles with only
+  one saved moment.
+- Select that card to open the moment chooser. Multiple moments swipe with the
+  same direct-touch, glide, and snap interaction as the episode gallery, while
+  the selected frame supplies the sheet's blurred backdrop. From there you can
+  **Play from [time]**, open the item, or remove only the selected moment.
 - Removing a timestamp from its card menu removes that displayed moment; if
   more moments remain, the collapsed card advances to the next one.
 
@@ -72,7 +76,10 @@ the profile’s settings. A Pin added or removed on one device is applied to the
 other devices signed into the same server account.
 
 Timestamp positions sync, but each captured frame image stays on the device
-that created it. Other devices use the item’s normal artwork.
+that created it. On iPhone and iPad, Jellyfin preview tiles rebuild and cache
+the matching frame when a synchronized Pin arrives without its local image.
+If the connected backend cannot provide preview tiles, Neptune uses wide item
+artwork instead.
 
 
 
