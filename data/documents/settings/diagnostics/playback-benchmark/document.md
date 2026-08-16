@@ -42,9 +42,11 @@ tested until Neptune runs a dedicated pass for them.
 
 Start the queue and let each sample complete. Neptune streams the real file
 from your server and exercises the network, demuxer, decoder, audio path, and
-renderer. On Apple TV, the running screen hides the Settings navigation bar and
-places focus on **Cancel Benchmark**, so stopping the diagnostic is always the
-immediate action. You can cancel the current run at any time.
+renderer for about 24 seconds after the first frame. The progress bar includes
+startup plus that complete measured window. On Apple TV, the running screen
+hides the Settings navigation bar and places focus on **Cancel Benchmark**, so
+stopping the diagnostic is always the immediate action. You can cancel the
+current run at any time.
 
 Benchmark playback is isolated from ordinary playback. It does not:
 
@@ -92,14 +94,17 @@ later result.
 
 The benchmark, score, grade, and raw evidence are Free. Neptune Pro adds an
 optional **Analyze Results** button after the queue completes. Selecting it asks
-[Neptune AI](/neptune-pro/neptune-ai) to interpret startup time, buffering,
-frame health, A/V drift, retries, sustained playback, and only the criteria that
-the benchmark actually exercised.
+[Neptune AI](/neptune-pro/neptune-ai) to explain the likely viewing experience:
+whether initial loading felt quick or noticeable, playback stayed smooth,
+interruptions or visible stutter occurred, and audio stayed in sync. It uses
+only the criteria the benchmark actually exercised.
 
-Neptune AI refers to anonymous samples rather than titles and separates measured
-facts from possible explanations. Its response can suggest useful next checks,
-but it does not certify a format or prove that every similar file will behave
-the same way.
+Neptune AI refers to anonymous samples rather than titles and translates healthy
+telemetry into experience language instead of reciting seconds, frame counts,
+drift, bitrate, latency, or throughput statistics. Technical network analysis
+belongs to Network Speed Test. Its response can suggest useful next checks, but
+it does not certify a format or prove that every similar file will behave the
+same way.
 
 
 

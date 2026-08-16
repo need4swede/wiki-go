@@ -10,24 +10,24 @@ uses for playback; it is not a general internet speed test and does not test
 upload speed.
 
 Open **Settings > About > Diagnostics > Network Speed Test**. Search for a
-movie or episode when you want to control the test file, or leave **Automatic
-Selection** active, then select **Start Speed Test**.
+movie or episode, select the file you want to measure, then select **Start
+Speed Test**. Neptune requires an explicit file selection so the source of the
+result is always clear.
 
 
 
 ## How the Test Works
 
 Neptune uses a directly streamable movie or episode in your library as the byte
-source. You can choose the title with the same local fuzzy library search used
-by Playback Benchmark, including punctuation variants such as `spiderman` and
-`Spider-Man`, or let Neptune choose a file automatically. The title shown under
-**Test File from Your Library** is not a public test server or bundled sample.
+source. Choose the title with the same local fuzzy library search used by
+Playback Benchmark, including punctuation variants such as `spiderman` and
+`Spider-Man`. The title shown under **Test File from Your Library** is not a
+public test server or bundled sample.
 
-The transfer runs for approximately 10 seconds and can read up to 512 MB. It
-may finish earlier if it reaches that safety ceiling or the selected source
-ends. Downloaded bytes are discarded: Neptune does not decode the file, start
-a playback session, report progress, change watched state, or add an Activity
-entry.
+The transfer runs for up to five minutes or until the selected file ends. You
+can cancel it at any time. Downloaded bytes are discarded: Neptune does not
+decode the file, start a playback session, report progress, change watched
+state, or add an Activity entry.
 
 
 
@@ -67,13 +67,16 @@ to interpret a multiplier.
 
 The test, graph, metrics, and recommended limit are Free. Neptune Pro adds an
 optional **Analyze Results** button after the test completes. Selecting it asks
-[Neptune AI](/neptune-pro/neptune-ai) to explain the measured stability,
-first-byte delay, sustained speed, and useful next checks in plain language.
+[Neptune AI](/neptune-pro/neptune-ai) for a network-focused explanation of
+connection responsiveness, first-byte delay, sustained speed, whole-run
+stability, and useful next checks.
 
 This action always uses Neptune AI; it does not silently send the diagnostic to
-a bring-your-own model. AI can explain the evidence, but a 10-second sample
-cannot prove long-term reliability or identify a specific Wi-Fi, server, or
-proxy problem without supporting measurements.
+a bring-your-own model. Network analysis may explain technical values, but it
+does not claim to measure video decoding, rendering, frame pacing, A/V sync, or
+the viewing experience. Even a five-minute ceiling cannot prove long-term
+reliability or identify a specific Wi-Fi, server, or proxy problem without
+supporting measurements.
 
 
 
