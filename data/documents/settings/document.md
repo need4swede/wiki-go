@@ -23,6 +23,7 @@ Access Settings via the gear icon at the left edge of the tab menu bar.
 | [Settings Profiles](/personalization/profile-presets) | Personal configurations and optional or Required Server Profiles |
 | [Device Overrides](/settings/device-overrides) | Keep individual settings different on one device |
 | [Administration](/settings/administration) | User management and parental controls (admins) |
+| [Diagnostics](/settings/diagnostics) | App and server information, network testing, playback benchmarking, and support logs |
 | [iOS Widgets](/ios/widgets) | Home Screen and Lock Screen Pages, Sections, and Pins |
 | [iPhone Live Activity](/ios/live-activity) | Compass in Dynamic Island and on the Lock Screen |
 | [iOS Playback Outside the App](/ios/playback) | Picture in Picture, background audio, and system controls |
