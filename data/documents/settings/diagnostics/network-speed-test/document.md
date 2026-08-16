@@ -10,22 +10,27 @@ uses for playback; it is not a general internet speed test and does not test
 upload speed.
 
 Open **Settings > About > Diagnostics > Network Speed Test**. Search for a
-movie or episode, select the file you want to measure, then select **Start
-Speed Test**. Neptune requires an explicit file selection so the source of the
-result is always clear.
+movie, show, or episode, select the file you want to measure, then select
+**Start Speed Test**. Selecting a show opens its seasons and episodes so you
+can choose the exact episode file. Neptune requires an explicit file selection
+so the source of the result is always clear. Once a file is selected, search
+results collapse; use **Change Test File** to pick something else.
 
 
 
 ## How the Test Works
 
 Neptune uses a directly streamable movie or episode in your library as the byte
-source. Choose the title with the same local fuzzy library search used by
+source. A show itself is only a library container, so Neptune asks you to pick
+a season and episode before starting. Choose the title with the same local fuzzy library search used by
 Playback Benchmark, including punctuation variants such as `spiderman` and
 `Spider-Man`. The title shown under **Test File from Your Library** is not a
 public test server or bundled sample.
 
 The transfer runs for up to five minutes or until the selected file ends. You
-can cancel it at any time. Downloaded bytes are discarded: Neptune does not
+can select **Stop Test** at any time after data begins arriving; Neptune treats
+the bytes, elapsed time, latency, and graph collected so far as a completed
+result. Downloaded bytes are discarded: Neptune does not
 decode the file, start a playback session, report progress, change watched
 state, or add an Activity entry.
 
