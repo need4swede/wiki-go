@@ -42,7 +42,9 @@ tested until Neptune runs a dedicated pass for them.
 
 Start the queue and let each sample complete. Neptune streams the real file
 from your server and exercises the network, demuxer, decoder, audio path, and
-renderer. You can cancel the current run at any time.
+renderer. On Apple TV, the running screen hides the Settings navigation bar and
+places focus on **Cancel Benchmark**, so stopping the diagnostic is always the
+immediate action. You can cancel the current run at any time.
 
 Benchmark playback is isolated from ordinary playback. It does not:
 
@@ -86,8 +88,29 @@ later result.
 
 
 
+## Analyze Results with Neptune AI
+
+The benchmark, score, grade, and raw evidence are Free. Neptune Pro adds an
+optional **Analyze Results** button after the queue completes. Selecting it asks
+[Neptune AI](/neptune-pro/neptune-ai) to interpret startup time, buffering,
+frame health, A/V drift, retries, sustained playback, and only the criteria that
+the benchmark actually exercised.
+
+Neptune AI refers to anonymous samples rather than titles and separates measured
+facts from possible explanations. Its response can suggest useful next checks,
+but it does not certify a format or prove that every similar file will behave
+the same way.
+
+
+
 ## Privacy
 
 The queue and results remain in memory and are not stored as benchmark
 history. Results exclude stream URLs, access tokens, credentials, server file
 paths, and playback-session identifiers.
+
+Neptune AI analysis runs only after you select **Analyze Results**. Its bounded
+payload excludes media titles, item and source identifiers, filenames, URLs,
+paths, credentials, decoder identity, and internal read-throughput estimates.
+It contains anonymous playback measurements and criteria exercised by the run.
+The analysis is not stored as benchmark history.

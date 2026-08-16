@@ -9,16 +9,19 @@ to the current Neptune device. It uses the same authenticated route Neptune
 uses for playback; it is not a general internet speed test and does not test
 upload speed.
 
-Open **Settings > About > Diagnostics > Network Speed Test**, then select
-**Start Speed Test**.
+Open **Settings > About > Diagnostics > Network Speed Test**. Search for a
+movie or episode when you want to control the test file, or leave **Automatic
+Selection** active, then select **Start Speed Test**.
 
 
 
 ## How the Test Works
 
-Neptune automatically finds a directly streamable movie or episode in your
-library and uses that file as the byte source. The title shown under **Test
-File from Your Library** is not a public test server or bundled sample.
+Neptune uses a directly streamable movie or episode in your library as the byte
+source. You can choose the title with the same local fuzzy library search used
+by Playback Benchmark, including punctuation variants such as `spiderman` and
+`Spider-Man`, or let Neptune choose a file automatically. The title shown under
+**Test File from Your Library** is not a public test server or bundled sample.
 
 The transfer runs for approximately 10 seconds and can read up to 512 MB. It
 may finish earlier if it reaches that safety ceiling or the selected source
@@ -50,10 +53,27 @@ on the graph, which represents only the most recent interval.
 | **Transfer Duration** | The measured data-transfer window |
 | **File Bitrate** | The selected file's average source bitrate, when the server provides it |
 | **Recommended Streaming Limit** | 70% of the measured average, leaving room for bitrate spikes and protocol overhead |
-| **Source Headroom** | How many times the measured average exceeds the selected file's average bitrate |
 
 The recommendation is guidance only. Neptune does not automatically change
 playback quality or streaming limits after a test.
+
+Source or throughput headroom is intentionally not shown. **Recommended
+Streaming Limit** communicates the useful safety margin without requiring you
+to interpret a multiplier.
+
+
+
+## Analyze Results with Neptune AI
+
+The test, graph, metrics, and recommended limit are Free. Neptune Pro adds an
+optional **Analyze Results** button after the test completes. Selecting it asks
+[Neptune AI](/neptune-pro/neptune-ai) to explain the measured stability,
+first-byte delay, sustained speed, and useful next checks in plain language.
+
+This action always uses Neptune AI; it does not silently send the diagnostic to
+a bring-your-own model. AI can explain the evidence, but a 10-second sample
+cannot prove long-term reliability or identify a specific Wi-Fi, server, or
+proxy problem without supporting measurements.
 
 
 
@@ -77,3 +97,10 @@ The stream URL, access token, server file path, and response bytes are not
 stored in the result or diagnostic logs. Only aggregate latency and final
 throughput are logged. The live graph remains in memory for the current result
 and is not saved as test history.
+
+Neptune AI receives a bounded set of technical measurements only after you
+select **Analyze Results**: average and rolling throughput, first-byte delay,
+duration, transferred byte count, device class, and the test file's bitrate
+when known. The media title and item identifier, server identity, URL, token,
+path, and credentials stay on the device. The analysis is not saved as test
+history.
