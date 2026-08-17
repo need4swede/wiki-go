@@ -28,6 +28,8 @@ The tab bar and app navigation behavior:
 | Setting | Description |
 |---------|-------------|
 | **Customize Navigation Bar** | Reorder or hide tabs. Settings and Search stay at the edges |
+| **Impatient Mode** | Play or resume playable cards immediately instead of opening Item Detail first |
+| **Limit to Continue Watching / Next-Up** | Apply Impatient Mode only to those two continuation sections |
 | **Movies Tab Label** | Movies, Films, or Cinema |
 | **Shows Tab Label** | Shows, TV, or Series |
 | **Highlight Navigation Bar / Highlight Library Picker** | Focus highlight styles, with a Small or Large size |
@@ -36,6 +38,12 @@ The tab bar and app navigation behavior:
 | **Exit App on Back Press** | Never, from the Default Tab, or Always |
 
 See [Navigation](/browsing/navigation) for how these play out.
+
+**Limit to Continue Watching / Next-Up** appears only after you turn on
+Impatient Mode. With the limiter enabled, selecting a Continue Watching or
+Next Up card starts playback immediately and resumes saved progress when one
+exists. Cards in Spotlight, Search, Favorites, Recently Added, New Releases,
+and other sections keep their normal detail-first behavior.
 
 Movies, Shows, and Music are hidden by default. Movies and Shows reuse the Home sections with type filtering. Music has its own Spotlight, Continue Watching, Recently Added, and Artists layout; long-press the Music tab and choose **Edit Music** to customize it.
 

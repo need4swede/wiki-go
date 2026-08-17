@@ -50,7 +50,11 @@ Hold Select on any row for a **Reset to Default** option.
 
 **Quality** switches between Direct Play and the bitrate ladder (120 Mbps down to 1 Mbps). Each option says whether it means direct playing or transcoding for the current file. Changing quality restarts the stream in place: same position, same tracks, no kick-out to the menu.
 
-**Zoom** picks **Fit** (the whole frame, with bars if needed) or **Fill** (fill the screen, cropping the edges). Applies instantly.
+**Zoom** changes how the picture uses the display and applies instantly.
+iPhone offers **Fit**, **Adaptive**, and **Fill**; iPad and Apple TV offer
+**Fit** and **Fill**. Adaptive uses extra landscape space when suitable while
+keeping the visible picture clear of the Dynamic Island or camera area. See
+[Playback Settings](/settings/playback#video-zoom) for a full comparison.
 
 **De-interlacing** controls combing removal for interlaced sources like DVDs and TV broadcasts: **Auto** engages when frames are flagged interlaced, **On** forces it, **Off** never de-interlaces. Available on the Trident engine.
 

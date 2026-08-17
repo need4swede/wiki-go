@@ -7,8 +7,9 @@ order: 20
 Neptune Pro includes Neptune AI, the bespoke first-party intelligence system developed alongside Neptune's features. It is ready without an API key, local server, endpoint, or model selection.
 
 Neptune AI currently powers natural-language Search, Episode Finder, Title
-Insights, and Person Insights, with a first-party foundation that can expand
-into other parts of Neptune.
+Insights, Person Insights, and the optional interpretation of your
+[Activity viewing profile](/activity#your-viewing-profile), with a first-party
+foundation that can expand into other parts of Neptune.
 
 
 

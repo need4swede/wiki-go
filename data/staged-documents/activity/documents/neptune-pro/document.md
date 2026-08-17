@@ -21,6 +21,7 @@ Apple-platform integrations, including named Settings Profiles.
 | [Section Widgets](/ios/widgets#section-widgets-neptune-pro) | Rotate current media from 16 supported Home and Discover sections in a widget |
 | [Settings Profiles](/personalization/profile-presets) | Build and manage personal named settings environments, select one manually, or assign one automatically per device type |
 | [Native MDM Administration](/plugins/mdm#where-to-manage-it) | Operate the complete Neptune MDM admin suite directly from supported Neptune clients |
+| [Activity Pro](/activity#free-and-pro) | Build a living viewing profile with optional Conductor Pro context and Neptune AI interpretation, then relive each year in a cinematic Rewind |
 
 
 
@@ -37,6 +38,7 @@ Apple-platform integrations, including named Settings Profiles.
 | **iOS Widgets** | Every size can open a standard Neptune Page; native Pins and in-app Home and Discover sections remain available | Adds native Pin Widgets and dynamic Section Widgets to the per-widget picker |
 | **Device personalization** | Device Overrides keep individual settings local to one physical device; Free recipients can consume an explicitly Required Server Profile | Settings Profiles add personal named environments, device-local selection, in-place editing, and automatic assignments by device type |
 | **Neptune MDM administration** | Use the complete Jellyfin plugin dashboard; clients receive direct managed settings, locks, and Required profiles without recipient Pro | Adds the native administrator console inside Neptune; Jellyfin admin authorization is still required |
+| **Activity** | Accurate local capture, one device master switch, automatic continuity when supported, Overview, complete History, and deletion | Adds the living Insights profile, optional Conductor Pro context and AI interpretation, and annual Rewind/archive without gating or deleting the private ledger |
 
 ## Plans and Devices
 
@@ -70,4 +72,9 @@ Neptune checks Pro access live without deleting your preferences:
 - The native Neptune MDM console closes or locks and blocks further client-side
   admin actions. Server data, delivered policies, Settings Sync, and the Free
   Jellyfin plugin dashboard are unchanged.
+- Activity returns from Insights or Rewind to Overview. Capture (when its
+  device switch is on), capability-driven continuity, Overview, and complete
+  History remain available. Restoring Pro recomputes the profile and Rewinds
+  from the retained private ledger.
+
 Use **Restore Purchases** if an active subscription or Lifetime purchase is not recognized on a device.

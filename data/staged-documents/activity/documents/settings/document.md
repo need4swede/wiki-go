@@ -18,12 +18,11 @@ Access Settings via the gear icon at the left edge of the tab menu bar.
 | [Plugins](/settings/plugins) | Plugin status and management |
 | [Deep Learning](/settings/deep-learning) | AI features and language model providers |
 | [Images](/settings/images) | Image cache and downloads |
-| [Metadata](/settings/metadata) | Metadata cache and the Pro control for optional TMDB enrichment |
+| [Metadata](/settings/metadata) | Metadata cache and TMDB data |
 | [Backup & Restore](/settings/backup) | Sync preferences across devices |
 | [Settings Profiles](/personalization/profile-presets) | Personal configurations and optional or Required Server Profiles |
 | [Device Overrides](/settings/device-overrides) | Keep individual settings different on one device |
 | [Administration](/settings/administration) | User management and parental controls (admins) |
-| [Diagnostics](/settings/diagnostics) | App and server information, network testing, playback benchmarking, and support logs |
 | [iOS Widgets](/ios/widgets) | Home Screen and Lock Screen Pages, Sections, and Pins |
 | [iPhone Live Activity](/ios/live-activity) | Compass in Dynamic Island and on the Lock Screen |
 | [iOS Playback Outside the App](/ios/playback) | Picture in Picture, background audio, and system controls |
@@ -45,7 +44,7 @@ Preferences also contains separate **Live Activity**, **Widgets**, and
 Compass surfaces. Admins also get an **Administration** entry here.
 
 **Neptune.** The [Neptune Pro](/neptune-pro) status and upgrade row, followed
-by app behavior: Home, Playback, Plugins, Deep Learning, Images, Metadata. On
+by [Activity](/activity) and app behavior: Home, Playback, Plugins, Deep Learning, Images, Metadata. On
 iPhone and iPad, Playback also owns the independent Picture in Picture and
 Background Playback toggles.
 

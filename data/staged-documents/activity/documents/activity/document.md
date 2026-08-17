@@ -65,9 +65,7 @@ For Jellyfin, this requires a compatible version of the optional
 [Neptune Plugin Suite](/plugins). An offline play on Apple TV can appear on
 your iPhone after both reconnect, and deletions synchronize safely.
 
-Activity uses a dedicated growing-ledger protocol behind the scenes rather
-than putting watch history inside the settings backup JSON. There is no second
-Activity Sync switch or join prompt.
+There is no second Activity Sync switch or join prompt.
 
 The companion synchronizes only Activity that Neptune recorded. It does not
 backfill Jellyfin or Emby watch history, Playback Reporting data, or viewing
@@ -82,11 +80,11 @@ Activity.
 
 Activity belongs to the signed-in user:
 
-- Neptune provides no administrator browser or per-user Activity admin API.
-  As with other server data, the machine's operator can still access files on
-  the server; Activity Sync is not end-to-end encrypted.
-- Activity is not an administrator-managed setting, Settings Profile member,
-  or field in the settings backup payload.
+- Activity is not exposed through Neptune's administrator tools. As with other
+  server data, the machine's operator can still access files on the server;
+  Activity Sync is not end-to-end encrypted.
+- Activity is not controlled by administrator-managed settings or Settings
+  Profiles.
 - Activity has one device-local master recording switch. It is on by default;
   turning it off stops future capture on that device without deleting History.
   The switch does not synchronize and is not administrator-managed.
@@ -105,11 +103,10 @@ time. New Activity plays use the accurate active-time model.
 ## Your Viewing Profile
 
 With Neptune Pro, **Insights** becomes a living profile rather than another
-statistics dashboard or a preview of Rewind. It organizes evidence-backed
-traits into **Taste**, **Habits**, **Discovery**, **Playback Experience**, and
-**Evolution**. Each trait is calculated from qualified Activity and carries
-confidence and supporting evidence; Neptune leaves a trait out when there is
-not enough data.
+statistics dashboard or a preview of Rewind. It organizes what Neptune notices
+into **Taste**, **Story Preferences**, **Habits**, **What Holds Your
+Attention**, **Discovery**, **Playback Experience**, and **Evolution**. Traits
+appear as your Activity grows, with supporting observations you can inspect.
 
 The main Insights page opens with one compact route into Viewing Psychology,
 followed by the deeper trait sections. Its factual trailing-year play and
@@ -123,55 +120,56 @@ whether you lean toward episodic worlds or one-sitting stories, when you tend
 to watch, how quickly you return to a story world, what happens after you
 sample something, whether familiar titles occupy a different part of your day,
 and how your genre and movie-versus-series balance changes over time. It
-deliberately does not repeat annual
+can also look beyond broad genre labels to recurring themes, emotional tone,
+familiar settings, story qualities that hold your attention, qualities that
+recur when you rewatch, weekday-versus-weekend mood changes, and story
+interests that are growing or fading. These details appear as your profile has
+enough viewing history to support them; individual titles are never presented
+as conclusions about you.
+
+Insights deliberately does not repeat annual
 top movies, shows, genres, people, or studios. Those celebratory winners belong
 to Rewind.
 
 ### Your Viewing Psychology
 
 Insights also connects those facts into a conservative behavioral **Big Five
-estimate**. It is designed to help you recognize patterns in entertainment
+profile**. It is designed to help you recognize patterns in entertainment
 behavior, not to replace a validated personality questionnaire:
 
 | Lens | What Neptune can observe |
 |------|---------------------------|
-| **Openness — Conventional ↔ open-minded** | Breadth, discovery, exploration, cultures, languages, eras, and changing taste |
+| **Openness — Conventional ↔ open-minded** | Genre and narrative breadth, discovery, exploration, cultures, languages, eras, and changing taste |
 | **Conscientiousness — Flexible ↔ organized** | Completion, returning after a sample, routine, continuity, and continuation tempo |
 | **Extraversion — Reserved ↔ energetic** | Session depth, binges, exploration pace, and changes between viewing contexts |
 | **Agreeableness — Independent ↔ cooperative** | Loyalty to story worlds and creators, familiar-title returns, and follow-through |
 | **Neuroticism — Emotionally stable ↔ reactive** | Familiarity timing, rewatching, context shifts, and routine |
 
-Every lens shows a position between two normal poles, behavioral evidence
-strength, and the number of contributing plays. The position is not a
-population percentile. Neptune pulls estimates toward the neutral midpoint
-when history is sparse, signals disagree, or the viewing proxy is indirect.
-Openness and Conscientiousness have the strongest grounding in observable
-behavior; Extraversion is weaker, and Agreeableness and Neuroticism remain the
-most cautious because watch history cannot establish someone's interpersonal
-orientation, emotional health, or entire offline personality.
+Every lens shows a position between two normal poles, how strongly your
+Activity supports it, and the viewing observations behind it. Results evolve
+as your history grows and are not population percentiles. They describe
+entertainment behavior, not someone's interpersonal character, emotional
+health, or entire offline personality.
 
-When Conductor Pro Auto learning is active, Insights can also use a bounded
-summary of what Conductor has learned—such as picture-versus-sound balance and
-how often its choices fit. Activity cannot change Conductor preferences or
-training, and clearing one feature does not clear the other.
+When Conductor Pro Auto learning is active, Insights can also reflect your
+picture-and-sound preferences and how well its choices tend to fit. Activity
+cannot change Conductor preferences, and clearing one feature does not clear
+the other.
 
 Choose **Your Viewing Psychology** to enter a dedicated Neptune AI experience.
 Opening Activity or the main Insights page alone does not generate anything.
 Inside, **Portrait** presents an animated five-axis profile and possible viewing
-motivations; **Big Five Estimate** lets you open each lens for its interpretation,
+motivations; **Big 5** lets you open each lens for its interpretation,
 supporting observations, counterpoint, axis position, and evidence strength;
 **Deeper Patterns** connects signals
 that are easy to miss in separate statistics; and **Evidence** shows how much
 history supports each result.
 
-Neptune sends compact profile traits, aggregate values, confidence, and
-evidence counts through your active AI provider. It does not send the Activity
-ledger, timestamps, device IDs, event IDs, playback URLs, or diagnostics. The
-result is a structured viewing archetype, whole-profile synthesis, dimension
-interpretations, hidden connections, possible motivations, and distinctive
-tensions—such as exploring widely while committing selectively. It is layered
-over the local evidence, not a new source of viewing truth, and it does not
-diagnose you or invent off-screen motives from a watching pattern.
+Neptune AI turns the profile into a conversational portrait, dimension
+interpretations, connections, possible motivations, and distinctive tensions
+that are easy to miss in separate statistics. It stays grounded in the
+observations shown in Activity and does not diagnose you or claim to know your
+off-screen motives.
 
 ## Neptune Rewind
 
@@ -193,19 +191,11 @@ viewing day, longest streak, biggest binge, comfort title, discoveries, person,
 studio, era, language, playback style, subtitle story, and taste change when
 the Activity record supports them. Every ranked chapter explains why it won
 using the relevant time, plays, episodes, titles, share, or streak evidence.
-Movie and show moments use their backdrop and logo when available, keep
-the title visible as a fallback, and open that title when selected. Statistical
-moments use representative artwork from the playback behind the result: genre
-chooses the most-watched backdrop-bearing movie or series with that genre,
-biggest day chooses the most-watched title from that day, and longest streak
-chooses the most-watched title during that run. Episode time is combined for
-the whole series. A title can therefore appear twice when it truly wins both
-facts; visual variety never replaces statistical truth. If one fact
-has no usable artwork, Rewind borrows another unused visual from that year's
-in-scope Activity before using its cinematic symbolic fallback. If the year's
-top show is
-also its biggest binge, Neptune combines those facts into one chapter instead
-of repeating the same series.
+Movie and show moments use their backdrop and logo when available, keep the
+title visible as a fallback, and open that title when selected. Other moments
+use relevant artwork from that year's viewing when available, with a cinematic
+symbolic treatment when it is not. Closely related wins can share one chapter
+instead of repeating the same story twice.
 
 After your first qualified play, Neptune can show an honest shorter Rewind. A
 fuller story becomes available after five qualified plays and two active hours.

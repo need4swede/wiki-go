@@ -4,7 +4,7 @@ order: 20
 
 # Neptune MDM
 
-Neptune MDM is the management extension for Jellyfin. It keeps preferences consistent across Neptune clients and gives server administrators tools for remotely managing settings, reusable profiles, announcements, child accounts, and device records.
+Neptune MDM is the management extension for Jellyfin. It keeps preferences and the signed-in user's private Activity consistent across Neptune clients, and gives server administrators tools for remotely managing settings, reusable profiles, announcements, child accounts, and device records.
 
 Neptune's app and per-device preferences remain usable without the plugin. Sync and remote-management support for future backends will depend on the extension capabilities those backends provide.
 
@@ -13,6 +13,7 @@ Neptune's app and per-device preferences remain usable without the plugin. Sync 
 | What you want to do | Use | How it behaves |
 |---------------------|-----|----------------|
 | Cross-device backup | [Settings Sync](/plugins/mdm/settings-sync) | Keeps supported settings and personal profiles synchronized |
+| Private viewing-history continuity | [Activity](/activity) | Synchronizes the signed-in user's Activity automatically when supported; administrators cannot browse it |
 | Starting configuration / OOBE | [Server Defaults](/plugins/mdm/server-defaults) | Seeds settings once; later changes are not retroactive |
 | Create a preset for users or devices | [Server Profiles](/plugins/mdm/server-profiles) | Keeps one server-owned definition and updates everyone in its scope |
 | Change settings for an existing user | [Remote Management](/plugins/mdm/remote-management) | Sends only the selected fields and can keep individual values managed |

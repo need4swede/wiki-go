@@ -12,7 +12,9 @@ Platform-only actions are called out below.
 
 ## Control Bar
 
-Tap the touch surface to show controls:
+Lightly tap the Siri Remote surface without pressing it down to show controls. Use the glass
+touch surface on the original black remote or the clickpad on newer Siri Remotes. This
+touch-only gesture reveals the controls without selecting or highlighting one:
 
 - Title, with the show and episode context line (hideable in settings)
 - Progress bar with buffered content indicator and chapter markers
@@ -28,16 +30,41 @@ Controls auto-hide after a configurable timeout (3, 5, or 10 seconds). By defaul
 | Action | Control |
 |--------|---------|
 | Play/Pause | Play/Pause button |
+| Pause or resume when no control is focused | Physically click the touch surface or clickpad |
 | Skip back / forward | Press left / right on the D-pad |
-| Show controls | Tap the touch surface |
+| Show controls without selecting one | Lightly tap the touch surface or clickpad without clicking |
+| Use an onscreen control | Navigate focus onto it, then click |
 | Open the Playback Menu | Swipe down |
 | Exit | Menu button |
+
+After a light-touch reveal, a physical click still pauses or resumes because no onscreen
+control has focus. Once you navigate onto the progress bar or a button, clicking uses that
+focused control instead. This behavior is the same on the original black Siri Remote and
+newer Siri Remotes.
 
 The skip interval is configurable (5, 10, or 15 seconds). The Menu button behavior is configurable too: **Always Exit** leaves playback immediately, **Dismiss First** hides the controls on the first press and exits on the second.
 
 
 
 ## iPhone & iPad In-Player Controls
+
+### Touch Gestures
+
+A single tap anywhere on the video shows the controls when they are hidden and
+hides them when they are visible.
+
+Turn on **Settings > Playback > Controls > Double Tap to Skip** to add
+directional seeking:
+
+- rapidly double-tap the left third of the video to skip backward;
+- rapidly double-tap the right third to skip forward; and
+- use **Skip Interval** in the same settings section to choose 5, 10, or 15
+  seconds (10 seconds by default).
+
+The double-tap gesture takes priority over the single tap, so its first tap
+does not accidentally show or hide the controls. A brief icon confirms the
+skip direction. Repeated double taps continue from the last requested
+position, even while the video is still catching up to the previous seek.
 
 The touch player’s top row is configurable under **Settings > Playback >
 Controls > Action Buttons**. Its defaults are:
@@ -46,7 +73,13 @@ Controls > Action Buttons**. Its defaults are:
 |--------|--------------|
 | **Playback Menu** | Opens audio, subtitle, chapter, quality, and related session controls. It can be moved but never hidden |
 | **Rotate** | Switches between portrait and one landscape direction |
-| **Fit / Fill** | Fits the whole picture or fills the screen |
+| **Video Zoom** | Cycles through Fit, Adaptive, and Fill. iPad cycles between Fit and Fill |
+
+On iPhone, **Adaptive** can use more landscape screen space while keeping the
+visible picture clear of the Dynamic Island or camera area. It automatically
+keeps narrower video such as 4:3 centered when expanding it would provide no
+benefit. See [Playback Settings](/settings/playback#video-zoom) for a comparison
+of all three modes.
 
 **Pin Timestamp** is also available and starts hidden. Enabling it captures
 the current playback position plus a local frame thumbnail, then syncs the Pin
@@ -105,10 +138,15 @@ Sync, Settings Profiles, Device Overrides, and administrator management.
 
 With controls visible:
 
-1. Swipe left/right to scrub through the timeline
-2. A floating thumbnail with a time pill follows the playhead
-3. The current chapter name appears under the timestamps
-4. Release to seek
+1. Navigate focus onto the progress bar
+2. Click first if your Seek Mode requires activation, then move left/right to scrub
+3. A floating thumbnail with a time pill follows the playhead
+4. The current chapter name appears under the timestamps
+5. Click after moving to commit the seek, or press Menu to cancel
+
+If you click the focused progress bar but do not move it, the next click pauses or resumes
+instead of seeking. The progress bar stays armed, so another stationary click reverses the
+pause or resume. As soon as you reposition the playhead, the next click commits the seek.
 
 **Seek Mode** in **Settings > Playback > Controls** decides how seeking engages:
 
@@ -118,6 +156,7 @@ With controls visible:
 | **Limited** | D-pad skips instantly; touch scrubbing requires a click |
 | **Unlocked** | Both D-pad and touch work immediately (default) |
 
+In every mode, clicking an idle player progress bar arms the stationary click behavior above.
 Scrub speed is adjustable with **Scrub Sensitivity**.
 
 ### Where Seek Previews Come From
@@ -161,7 +200,10 @@ playback with no further setup.
 
 When your backend provides segment data, a skip button appears at the right moment: **Skip Intro**, **Skip Credits**, **Skip Recap**, **Skip Preview**, or **Skip Ad**. On Jellyfin, segment data can come from the Intro Skipper plugin or Jellyfin 10.11 media segments; availability may differ on future backends.
 
-- With controls hidden, the button appears as a standalone pill. Pressing Select skips even though controls are down. It dismisses itself if ignored.
+- With controls hidden, the button appears as a standalone pill. While that Skip action is
+  actionable, pressing Select uses it instead of pausing, even though controls are down. It
+  dismisses itself if ignored; outside that actionable window, a hidden-controls click toggles
+  play/pause normally.
 - With **Auto Skip** on (**Settings > Playback > Autoplay**), segments skip without a button press.
 
 

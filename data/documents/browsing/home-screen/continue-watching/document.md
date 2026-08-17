@@ -40,6 +40,11 @@ On the Movies and Shows tabs, picking a specific library from the library picker
 
 You land exactly where you left off rather than at the top of the show's page.
 
+If **Impatient Mode** is enabled, the card starts playback immediately and
+resumes from its saved position. Turn on **Limit to Continue Watching /
+Next-Up** under **Settings > Home > Navigation** to keep that shortcut here
+and in Next Up while other cards continue opening their normal destinations.
+
 
 
 ## Long Press

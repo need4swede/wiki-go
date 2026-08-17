@@ -92,8 +92,8 @@ Center show the title, series name when applicable, duration, elapsed time,
 and available artwork. Their transport controls support:
 
 - Play and Pause
-- Skip back 15 seconds
-- Skip forward 15 seconds
+- Skip back by the configured **Skip Interval** (5, 10, or 15 seconds)
+- Skip forward by the configured **Skip Interval**
 - Scrubbing to a position
 
 Headphone and other system media Play/Pause commands use the same session.

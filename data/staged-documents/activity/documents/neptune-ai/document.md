@@ -15,6 +15,7 @@ Neptune AI is included with [Neptune Pro](/neptune-pro/neptune-ai). There are no
 | **Finding something** | [AI Search](/search/prompt-search) and [Episode Finder](/neptune-ai/episode-finder) |
 | **Understanding a title** | [Title Insights](/neptune-ai/title-insights) |
 | **Exploring a career** | [Person Insights](/neptune-ai/person-insights) |
+| **Understanding your viewing profile** | [Activity Insights](/activity#your-viewing-profile) |
 
 ## What Neptune AI Powers Today
 
@@ -24,6 +25,7 @@ Neptune AI is included with [Neptune Pro](/neptune-pro/neptune-ai). There are no
 | [Episode Finder](/neptune-ai/episode-finder) | Describe an episode and Neptune AI finds it in your library |
 | [Title Insights](/neptune-ai/title-insights) | Adds context, themes, trustworthy trivia, similar titles, and a “Why Watch” suggestion |
 | [Person Insights](/neptune-ai/person-insights) | Builds a concise career story, fun facts, signature roles, collaborators, and a library-aware recommendation |
+| [Activity Insights](/activity#your-viewing-profile) | Optionally interprets the deterministic local profile of your taste, habits, discovery, and playback experience |
 
 ## AI Search
 
@@ -69,7 +71,7 @@ Bring-your-own providers remain useful when local-only inference, a favorite mod
 
 ## Privacy
 
-Neptune sends a request only when an AI-powered action runs. The request contains the prompt and the minimum relevant context—for example, a search query and candidate titles, an item's metadata, or one series' episode inventory.
+Neptune sends a request only when an AI-powered action runs. The request contains the prompt and the minimum relevant context—for example, a search query and candidate titles, an item's metadata, one series' episode inventory, or compact aggregate Activity profile traits. Activity interpretation excludes raw ledger rows, timestamps, device IDs, event IDs, and playback URLs.
 
 Normal browsing, playback, local search, semantic matching, and library indexing do not upload your library to Neptune AI. If you prefer all inference to stay on your network, configure Ollama instead.
 

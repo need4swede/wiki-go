@@ -45,6 +45,11 @@ With the current Jellyfin backend, Next Up shows the same episodes regardless of
 
 Selecting a Next Up episode takes you to the show's detail page with the season pre-selected and the episode highlighted. You can hit play right away without digging through seasons.
 
+If **Impatient Mode** is enabled, selecting the episode starts it immediately.
+The **Limit to Continue Watching / Next-Up** option under **Settings > Home >
+Navigation** keeps this shortcut for Next Up and Continue Watching while all
+other cards retain their normal behavior.
+
 
 
 ## Long Press

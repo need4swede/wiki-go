@@ -41,6 +41,22 @@ Choosing Transcode reveals:
 
 You can also change quality per-session from the [Playback Menu](/playback/playback-menu)'s Video tab.
 
+### Video Zoom
+
+**Video Zoom** controls how the picture uses the screen. You can choose a
+default under **Settings > Playback > Player**, then change it at any time from
+the player’s **Video > Zoom** menu.
+
+| Mode | Available On | What It Does |
+|------|--------------|--------------|
+| **Fit** | iPhone, iPad, and Apple TV | Shows the entire picture, centered. Black bars may appear when the video and screen have different shapes. |
+| **Adaptive** | iPhone | In landscape, uses more of the display when it can while keeping the visible picture clear of the Dynamic Island or camera area. Narrower video, including 4:3, stays centered when enlarging it would not help. |
+| **Fill** | iPhone, iPad, and Apple TV | Fills the display from edge to edge by cropping part of the picture. On iPhone, the picture may extend behind the Dynamic Island or camera area. |
+
+Adaptive makes the decision separately for each video. If centered Fit is the
+best presentation for a particular title, the selected mode still remains
+Adaptive and will adjust again for the next video.
+
 ### Orientation (iPhone & iPad)
 
 The **Orientation** picker appears directly below **Video Zoom**:
@@ -63,13 +79,22 @@ ends, Neptune returns to the orientation used before the player opened.
 |---------|-------------|
 | **Show Controls on Pause** | Surface controls whenever playback pauses (default on) |
 | **Controls Auto-Hide** | 3, 5, or 10 seconds |
+| **Double Tap to Skip** | On iPhone and iPad, rapidly double-tap the left or right side of the video to skip backward or forward (default off) |
+| **Skip Interval** | Move 5, 10, or 15 seconds with each skip action (default 10 seconds) |
 | **Hide Title in Controls** | Drop the title block for a cleaner look |
 | **Action Buttons** | Reorder or hide the buttons in the player controls (see [Player Controls](/playback/player-controls)) |
 | **Playback Menu** | Choose which tabs appear in the in-player menu, and their order |
 | **Back / Menu Button** | Always Exit, or Dismiss First |
 
-On iPhone and iPad, **Action Buttons** defaults to **Playback Menu, Rotate,
-Fit / Fill**. **Pin Timestamp** is available but hidden until you enable it.
+On iPhone and iPad, a single tap anywhere on the video toggles the controls.
+When **Double Tap to Skip** is on, a rapid double tap on the left third skips
+backward and one on the right third skips forward. The double tap does not
+also trigger the single-tap control action. See
+[Player Controls](/playback/player-controls#touch-gestures) for the complete
+gesture behavior.
+
+**Action Buttons** defaults to **Playback Menu, Rotate, Video Zoom** on iPhone
+and iPad. **Pin Timestamp** is available but hidden until you enable it.
 Playback Menu cannot be disabled, although it can be moved. Apple TV keeps its
 own action list and defaults, so device-specific controls do not cross into the
 wrong player.
@@ -90,10 +115,13 @@ either source, without reprocessing server images that are already correct.
 See [Player Controls](/playback/player-controls#scrubbing) for how the two
 sources differ.
 
-iPhone and iPad show the Timeline group as its own section. Siri Remote
-behavior and the remaining Apple TV-only controls do not appear there.
+iPhone and iPad place their supported timeline options in the **Controls**
+section. Siri Remote behavior and the remaining Apple TV-only controls do not
+appear there.
 
-Seeking options: **Scrub Sensitivity** (1 to 10; default 7), **Skip Interval** (5, 10, or 15 seconds), **Resume on Seek**, and **Seek Mode** (Locked, Limited, or Unlocked) with an on-screen demo of each mode.
+Other seeking options: **Scrub Sensitivity** (1 to 10; default 7), **Resume on
+Seek**, and **Seek Mode** (Locked, Limited, or Unlocked) with an on-screen demo
+of each mode.
 
 
 

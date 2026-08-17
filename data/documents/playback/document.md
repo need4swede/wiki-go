@@ -52,8 +52,14 @@ When playback starts, [Conductor](/playback/conductor) picks the audio track, su
 
 ## During Playback
 
-Tap the Siri Remote touch surface on Apple TV, or tap the video on iPhone and
-iPad, to reveal the progress bar and controls.
+On Apple TV, lightly tap the Siri Remote surface without clicking to reveal the progress bar
+and controls without selecting one. Physically click the surface when no onscreen control is
+focused to pause or resume; after navigating focus onto a control, the same click activates
+that control instead. This works with both the original black Siri Remote's glass surface and
+the clickpad on newer remotes. See [Player Controls](/playback/player-controls) for progress-bar
+clicks and the actionable Skip Intro/Credits exception.
+
+On iPhone and iPad, tap the video to reveal the progress bar and controls.
 
 On Apple TV, swipe **down** to open the
 [Playback Menu](/playback/playback-menu). On iPhone and iPad, use the onscreen
