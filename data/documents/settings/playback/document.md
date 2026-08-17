@@ -79,7 +79,7 @@ ends, Neptune returns to the orientation used before the player opened.
 |---------|-------------|
 | **Show Controls on Pause** | Surface controls whenever playback pauses (default on) |
 | **Controls Auto-Hide** | 3, 5, or 10 seconds |
-| **Double Tap to Skip** | On iPhone and iPad, rapidly double-tap the left or right side of the video to skip backward or forward (default off) |
+| **Double Tap to Skip** | On iPhone and iPad, rapidly double-tap the left or right side of the video to skip backward or forward (default on) |
 | **Skip Interval** | Move 5, 10, or 15 seconds with each skip action (default 10 seconds) |
 | **Hide Title in Controls** | Drop the title block for a cleaner look |
 | **Action Buttons** | Reorder or hide the buttons in the player controls (see [Player Controls](/playback/player-controls)) |
