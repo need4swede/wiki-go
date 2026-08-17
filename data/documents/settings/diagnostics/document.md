@@ -8,6 +8,10 @@ Diagnostics helps you inspect Neptune, test the connection to your media
 server, verify real playback, and send a support report when something goes
 wrong. Open **Settings > About > Diagnostics** on Apple TV, iPhone, or iPad.
 
+On Apple TV, Diagnostics opens as a dedicated menu whose four rows are peers.
+On iPhone and iPad, the same destinations and Send Logs action appear together
+in the Diagnostics section of Settings.
+
 
 
 ## Available Tools

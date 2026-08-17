@@ -14,7 +14,13 @@ movie, show, or episode, select the file you want to measure, then select
 **Start Speed Test**. Selecting a show opens its seasons and episodes so you
 can choose the exact episode file. Neptune requires an explicit file selection
 so the source of the result is always clear. Once a file is selected, search
-results collapse; use **Change Test File** to pick something else.
+results collapse. **Start Speed Test** appears directly beneath the selected
+file, followed by **Change Test File** when you want to pick something else.
+
+On Apple TV, Siri Remote dictation follows the same flow as Compass search:
+after speech settles, Neptune submits the title search and dismisses the
+keyboard automatically. When entering a title one character at a time, select
+the keyboard's **Search** key when you are finished.
 
 
 

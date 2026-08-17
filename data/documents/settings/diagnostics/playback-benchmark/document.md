@@ -19,6 +19,11 @@ Search for a movie or episode to add it to the benchmark queue. Search uses
 Neptune's local library index and fuzzy title matching, so punctuation variants
 such as `spiderman` and `Spider-Man` can still match.
 
+On Apple TV, Siri Remote dictation follows the same flow as Compass search:
+after speech settles, Neptune submits the title search and dismisses the
+keyboard automatically. When entering a title one character at a time, select
+the keyboard's **Search** key when you are finished.
+
 Suggestions are optional. Select **Suggest Items to Test** when you want
 Neptune to propose demanding or representative files from your library. You
 can combine suggested and manually searched items in one queue.
@@ -74,6 +79,9 @@ outcomes that are meaningful to the viewing experience:
 Decoder identity and read-throughput estimates are internal telemetry; they
 are not shown and do not affect the score. The criteria beneath a result are
 limited to properties exercised by that specific file and pass.
+
+On Apple TV, each result card is a focus stop. Move down through the cards to
+scroll the complete queue and reach **Analyze Results** and **Run Again**.
 
 
 
