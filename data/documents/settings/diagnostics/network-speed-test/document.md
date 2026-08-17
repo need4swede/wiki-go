@@ -76,6 +76,14 @@ optional **Analyze Results** button after the test completes. Selecting it asks
 connection responsiveness, first-byte delay, sustained speed, whole-run
 stability, and useful next checks.
 
+The analysis is a short, natural interpretation rather than another bullet list
+of the results already on screen. It calls out only the measurements that shape
+the conclusion and, when the evidence warrants it, suggests checks you can
+actually perform—for example repeating the run, comparing wired and wireless
+routes, or checking competing traffic and server, router, VPN, or proxy load.
+It never recommends changing a Neptune buffer, cache, quality, or other client
+control that Neptune does not provide.
+
 This action always uses Neptune AI; it does not silently send the diagnostic to
 a bring-your-own model. Network analysis may explain technical values, but it
 does not claim to measure video decoding, rendering, frame pacing, A/V sync, or
