@@ -18,7 +18,7 @@ Access Settings via the gear icon at the left edge of the tab menu bar.
 | [Plugins](/settings/plugins) | Plugin status and management |
 | [Deep Learning](/settings/deep-learning) | AI features and language model providers |
 | [Images](/settings/images) | Image cache and downloads |
-| [Metadata](/settings/metadata) | Metadata cache and TMDB data |
+| [Metadata](/settings/metadata) | Metadata cache and the Pro control for optional TMDB enrichment |
 | [Backup & Restore](/settings/backup) | Sync preferences across devices |
 | [Settings Profiles](/personalization/profile-presets) | Personal configurations and optional or Required Server Profiles |
 | [Device Overrides](/settings/device-overrides) | Keep individual settings different on one device |
