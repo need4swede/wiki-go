@@ -123,8 +123,21 @@
         return `> [!${type}]\n${prefixLines(markdown, '> ')}\n\n`;
     }
 
+    function textNodeToMarkdown(node) {
+        let value = node.nodeValue || '';
+
+        // Goldmark's hard-wrap renderer emits `<br>\n`. The BR represents the
+        // source newline; the following formatting newline is not content.
+        // Counting both turns every soft line break into a blank paragraph.
+        if (node.previousSibling?.nodeType === Node.ELEMENT_NODE && node.previousSibling.tagName === 'BR') {
+            value = value.replace(/^\r?\n[\t ]*/, '');
+        }
+
+        return escapeText(value);
+    }
+
     function convertNode(node, context = {}) {
-        if (node.nodeType === Node.TEXT_NODE) return escapeText(node.nodeValue || '');
+        if (node.nodeType === Node.TEXT_NODE) return textNodeToMarkdown(node);
         if (node.nodeType !== Node.ELEMENT_NODE) return '';
 
         const element = node;
@@ -156,7 +169,9 @@
         }
 
         switch (tag) {
-            case 'br': return '  \n';
+            // This wiki renders ordinary Markdown newlines as hard wraps, so a
+            // single source newline preserves the visible line break.
+            case 'br': return '\n';
             case 'p': return `${children().trim()}\n\n`;
             case 'strong':
             case 'b': return `**${children()}**`;
