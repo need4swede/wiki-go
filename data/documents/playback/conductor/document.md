@@ -12,8 +12,8 @@ A short onboarding walks you through the choices the first time.
 ## Modes
 
 | Mode | Behavior |
-|------|----------|
-| **Manual** | Uses your fixed language, subtitle, anime, and quality rules. With Neptune Pro, Language Rules can also react to audio changes during playback |
+| --- | --- |
+| **Manual** | Uses your fixed language, subtitle, anime, and quality rules |
 | **Auto** | Adds learning from your playback choices. Requires Neptune Pro |
 
 In Auto mode, a track or version change that you keep watching becomes a learning signal.
@@ -42,7 +42,7 @@ Conductor uses this list to judge every track decision that follows.
 **Foreign Audio** decides what happens when a title's original language isn't one of yours:
 
 | Option | Behavior |
-|--------|----------|
+| --- | --- |
 | **Automatic** | Balances original audio and dubs based on your languages |
 | **Original** | Always the original language track |
 | **Dubbed** | A dub in your language when one exists |
@@ -64,7 +64,7 @@ Each side can match either:
 Rules are explicit instructions rather than learned preferences:
 
 | When the rule is evaluated | Free | Neptune Pro |
-|----------------------------|------|-------------|
+| --- | --- | --- |
 | **Playback starts** | Yes, in Manual or Auto | Yes, in Manual or Auto |
 | **You switch audio tracks during playback** | No | Yes, in Manual or Auto |
 
@@ -82,7 +82,7 @@ If Japanese audio is selected instead—or you switch to it during playback—th
 Anime gets its own rule, because plenty of people who watch everything else dubbed want anime subbed:
 
 | Option | Behavior |
-|--------|----------|
+| --- | --- |
 | **Auto** | Follows your Foreign Audio rule |
 | **Subbed** | Japanese audio with subtitles |
 | **Dubbed** | Dubbed audio when available |
