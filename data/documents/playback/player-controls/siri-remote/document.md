@@ -1,0 +1,55 @@
+---
+order: 10
+---
+
+# Siri Remote Controls
+
+Apple TV uses the Siri Remote to reveal, navigate, and operate the in-player controls.
+For scrubbing, skip segments, Up Next, and other playback behavior shared with touch devices, see [Player Controls](/playback/player-controls).
+
+## Control Bar
+
+Lightly tap the Siri Remote surface without pressing it down to show controls.
+Use the glass touch surface on the original black remote or the clickpad on newer Siri Remotes.
+This touch-only gesture reveals the controls without selecting or highlighting one:
+
+- Title, with the show and episode context line (hideable in settings)
+- Progress bar with buffered content indicator and chapter markers
+- Elapsed time on the left; the clock time your video ends and time remaining on the right
+- An action button row on the right side of the title
+
+Controls auto-hide after a configurable timeout (3, 5, or 10 seconds).
+By default they also appear whenever you pause and stay up until you resume.
+Both behaviors live in **Settings > Playback > Controls**.
+
+## Remote Gestures
+
+| Control | Action |
+|---------|--------|
+| Play/Pause button | Play/Pause |
+| Physically click the touch surface or clickpad | Pause or resume when no control is focused |
+| Press left / right on the D-pad | Skip back / forward |
+| Lightly tap the touch surface without clicking | Take a peek at the controls |
+| Navigate focus onto it, then click | Use an onscreen control |
+| Swipe down | Open the Playback Menu |
+| Menu button | Exit |
+
+The Menu button behavior is configurable:
+**Always Exit** leaves playback immediately, while **Dismiss First** hides the controls on the first press and exits on the second.
+
+## Action Buttons
+
+On Apple TV, an action row sits beside the title when controls are visible.
+Three buttons show by default:
+
+| Button | What It Does |
+|--------|--------------|
+| **Playback Menu** | Opens the [Playback Menu](/playback/playback-menu). Always available |
+| **Pin** | Captures the current moment as a [timestamp pin](/library/shortcuts): position plus a thumbnail of the frame. A pill confirms "Pinned at [time]" |
+| **Next Episode** | Jumps to the next episode (or re-rolls during shuffle) |
+
+Four more can be enabled in **Settings > Playback > Controls > Action Buttons**: **Bitrate**, **Technical Info**, **Autoplay** (toggles autoplay for the session), and **Play / Pause**.
+Reorder or hide everything except the Playback Menu.
+
+iPhone/iPad and Apple TV store separate action layouts, so platform-only buttons never appear on the wrong device.
+Both layouts participate in Settings Sync, Settings Profiles, Device Overrides, and administrator management.

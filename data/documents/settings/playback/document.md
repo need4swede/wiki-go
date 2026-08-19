@@ -79,7 +79,7 @@ When playback ends, Neptune returns to the orientation used before the player op
 On iPhone and iPad, a single tap anywhere on the video toggles the controls.
 When **Double Tap to Skip** is on, a rapid double tap on the left third skips backward and one on the right third skips forward.
 The double tap does not also trigger the single-tap control action.
-See [Player Controls](/playback/player-controls#touch-gestures) for the complete gesture behavior.
+See [Touch Controls](/playback/player-controls/touch#touch-gestures) for the complete gesture behavior.
 
 **Action Buttons** defaults to **Playback Menu, Rotate, Video Zoom** on iPhone and iPad.
 **Pin Timestamp** is available but hidden until you enable it.
