@@ -126,6 +126,7 @@ availability.
 | [TMDB Integration](/neptune-pro/tmdb-integration) | Richer metadata, people, trailers, studios, and release dates |
 | [Downloads](/neptune-pro/downloads) | Original or space-saving offline media |
 | [Top Shelf Customization](/neptune-pro/top-shelf-customization) | Cinematic Apple TV Home Screen presentation |
+| [Cinematic Loading Screens](/neptune-pro/loading-screens) | Cached library artwork during launch on Apple TV, iPhone, and iPad |
 | [Pin Widgets](/ios/widgets#pin-widgets-neptune-pro) | Put native Pins on the iPhone or iPad Home Screen and Lock Screen |
 | [Section Widgets](/ios/widgets#section-widgets-neptune-pro) | Rotate current media from supported Home and Discover sections in iOS widgets |
 

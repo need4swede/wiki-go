@@ -5,8 +5,9 @@ order: 100
 # Neptune Pro
 
 Pro expands Neptune with intelligence built specifically for the app, richer
-connected metadata, adaptive playback preferences, offline media, and deeper
-Apple-platform integrations, including named Settings Profiles.
+connected metadata, adaptive playback preferences, cinematic launches, offline
+media, and deeper Apple-platform integrations, including named Settings
+Profiles.
 
 ## What Pro Includes
 
@@ -17,6 +18,7 @@ Apple-platform integrations, including named Settings Profiles.
 | [TMDB Integration](/neptune-pro/tmdb-integration) | Richer artwork, trailers, credits, release dates, people, studios, and networks |
 | [Downloads](/neptune-pro/downloads) | Original-quality or space-saving offline movies and episodes |
 | [Top Shelf Customization](/neptune-pro/top-shelf-customization) | Cinematic presentation, Studio designs, section ordering, and direct Play actions on Apple TV |
+| [Cinematic Loading Screens](/neptune-pro/loading-screens) | Cached library posters and backdrops with a configurable artwork source |
 | [Pin Widgets](/ios/widgets#pin-widgets-neptune-pro) | Put a native Pin on the iPhone or iPad Home Screen or Lock Screen, with direct Play for movie and episode Pins |
 | [Section Widgets](/ios/widgets#section-widgets-neptune-pro) | Rotate current media from 16 supported Home and Discover sections in a widget |
 | [Settings Profiles](/personalization/profile-presets) | Build and manage personal named settings environments, select one manually, or assign one automatically per device type |
@@ -34,6 +36,7 @@ Apple-platform integrations, including named Settings Profiles.
 | **Metadata** | Everything supplied by your media backend | Commercial API access across detail, people, home surfaces and more |
 | **Offline** | Requires a network connection to your media backend | Download and play media without a network connection |
 | **Top Shelf** | Core Top Shelf presentation and content controls | Cinematic mode, Studio artwork, ordering, item limits, rich details, and Play actions |
+| **Loading screen** | Neptune logo, progress, and optional launch hints on a black background | Adds cached library artwork from Spotlight, Continue, Favorites, Recently Added, or Random |
 | **iOS Widgets** | Every size can open a standard Neptune Page; native Pins and in-app Home and Discover sections remain available | Adds native Pin Widgets and dynamic Section Widgets to the per-widget picker |
 | **Device personalization** | Device Overrides keep individual settings local to one physical device; Free recipients can consume an explicitly Required Server Profile | Settings Profiles add personal named environments, device-local selection, in-place editing, and automatic assignments by device type |
 | **Neptune MDM administration** | Use the complete Jellyfin plugin dashboard; clients receive direct managed settings, locks, and Required profiles without recipient Pro | Adds the native administrator console inside Neptune; Jellyfin admin authorization is still required |
@@ -57,6 +60,9 @@ Neptune checks Pro access live without deleting your preferences:
 - TMDB-only enrichment is hidden; backend-native metadata continues normally and cached enrichment is retained for later reactivation.
 - Downloads and their management surfaces become unavailable. Existing files and progress remain on the device.
 - Top Shelf falls back to its Free presentation and limits while keeping saved Pro choices for later.
+- The loading screen returns to its Free black presentation and clears its
+  launch artwork reserve. The artwork toggle and selected source remain saved
+  for restoration.
 - Standard iOS Page widgets continue working. Configured Pin and Section
   widgets retain their selections but show the matching locked state; restoring
   Pro republishes their current content without deleting the native Pin or

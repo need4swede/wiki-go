@@ -4,7 +4,22 @@ order: 10
 
 # Home Settings
 
-Control what the Home screen shows and how the app navigates. Four tabs: **Library**, **Navigation**, **Spotlight**, and **Sections**.
+Control what the Home screen shows, how the app navigates, and what appears
+while Home is loading. Four tabs: **Library**, **Navigation**, **Spotlight**,
+and **Sections**.
+
+## Loading Screen
+
+| Setting | Description |
+|---------|-------------|
+| **Display hints** | Show or hide launch messages (Free) |
+| **Use library artwork** | Put a cached poster or backdrop behind the loading sequence (Neptune Pro) |
+| **Artwork source** | Choose Spotlight, Continue, Favorites, Recently Added, or Random (Neptune Pro) |
+
+iPhone and iPad use posters in portrait and backdrops in landscape. Apple TV
+uses backdrops. See [Cinematic Loading Screens](/neptune-pro/loading-screens)
+for source selection, orientation behavior, and how the independent launch
+artwork reserve works.
 
 
 

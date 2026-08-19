@@ -12,7 +12,7 @@ Access Settings via the gear icon at the left edge of the tab menu bar.
 
 | Page | Description |
 |------|-------------|
-| [Home](/settings/home) | Home screen sections, navigation bar, spotlight, libraries |
+| [Home](/settings/home) | Loading screen, Home sections, navigation bar, spotlight, libraries |
 | [Playback](/settings/playback) | Engine, controls, autoplay, audio, background continuation, advanced |
 | [Subtitle Style](/settings/subtitles) | Subtitle appearance |
 | [Plugins](/settings/plugins) | Plugin status and management |
@@ -45,7 +45,8 @@ Preferences also contains separate **Live Activity**, **Widgets**, and
 Compass surfaces. Admins also get an **Administration** entry here.
 
 **Neptune.** The [Neptune Pro](/neptune-pro) status and upgrade row, followed
-by app behavior: Home, Playback, Plugins, Deep Learning, Images, Metadata. On
+by app behavior: Home—including [Loading Screen](/neptune-pro/loading-screens)
+preferences—Playback, Plugins, Deep Learning, Images, Metadata. On
 iPhone and iPad, Playback also owns the independent Picture in Picture and
 Background Playback toggles.
 
