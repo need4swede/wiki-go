@@ -60,11 +60,6 @@ const SHORTCUT_DEFINITIONS = {
     },
 
     // Editor shortcuts
-    'togglePreview': {
-        mac: { cmd: true, shift: true, key: 'p' },
-        other: { ctrl: true, shift: true, key: 'p' },
-        description: 'Preview Toggle'
-    },
     'toggleWordWrap': {
         mac: { option: true, key: 'z' },
         other: { alt: true, key: 'z' },
@@ -229,7 +224,6 @@ function registerAllCodeMirrorShortcuts() {
         CodeMirror.keyMap.default['Cmd-H'] = 'formatHeading';
         CodeMirror.keyMap.default['Cmd-K'] = 'formatQuote';
         CodeMirror.keyMap.default['Cmd-/'] = 'formatCode';
-        CodeMirror.keyMap.default['Cmd-Shift-P'] = 'togglePreview';
         CodeMirror.keyMap.default['Alt-Z'] = 'toggleWordWrap';
         CodeMirror.keyMap.default['Alt-N'] = 'toggleLineNumbers';
         CodeMirror.keyMap.default['Alt-C'] = 'toggleAutocapitalize';
@@ -255,7 +249,6 @@ function registerAllCodeMirrorShortcuts() {
         CodeMirror.keyMap.default['Ctrl-H'] = 'formatHeading';
         CodeMirror.keyMap.default['Ctrl-K'] = 'formatQuote';
         CodeMirror.keyMap.default['Ctrl-/'] = 'formatCode';
-        CodeMirror.keyMap.default['Ctrl-Shift-P'] = 'togglePreview';
         CodeMirror.keyMap.default['Alt-Z'] = 'toggleWordWrap';
         CodeMirror.keyMap.default['Alt-N'] = 'toggleLineNumbers';
         CodeMirror.keyMap.default['Alt-C'] = 'toggleAutocapitalize';
@@ -468,13 +461,6 @@ function registerFormattingCommands() {
         cm.focus();
     };
 
-    // Register toggle preview command
-    CodeMirror.commands.togglePreview = function(cm) {
-        if (window.EditorPreview && typeof window.EditorPreview.togglePreview === 'function') {
-            window.EditorPreview.togglePreview();
-        }
-    };
-
     // Register toggle word wrap command
     CodeMirror.commands.toggleWordWrap = function(cm) {
         if (window.EditorCore && typeof window.EditorCore.toggleWordWrap === 'function') {
@@ -508,35 +494,7 @@ function handleKeyDown(e) {
             case 'enterEditMode':
                 e.preventDefault();
                 if (editPageButton && !mainContent.classList.contains('editing')) {
-                    // Check auth before navigating
-                    fetch('/api/check-auth').then(authResponse => {
-                        if (authResponse.status === 401) {
-                            // Show login dialog
-                            window.Auth.showLoginDialog(() => {
-                                window.Auth.checkUserRole('editor').then(canEdit => {
-                                    if (canEdit) {
-                                        const url = new URL(window.location);
-                                        url.searchParams.set('mode', 'edit');
-                                        window.location.href = url.toString();
-                                    } else {
-                                        window.Auth.showPermissionError('editor');
-                                    }
-                                });
-                            });
-                            return;
-                        }
-                        
-                        // Check role and navigate
-                        window.Auth.checkUserRole('editor').then(canEdit => {
-                            if (canEdit) {
-                                const url = new URL(window.location);
-                                url.searchParams.set('mode', 'edit');
-                                window.location.href = url.toString();
-                            } else {
-                                window.Auth.showPermissionError('editor');
-                            }
-                        });
-                    });
+                    editPageButton.click();
                 }
                 return;
 
@@ -555,14 +513,6 @@ function handleKeyDown(e) {
                 }
                 return;
 
-            case 'togglePreview':
-                e.preventDefault();
-                if (mainContent && mainContent.classList.contains('editing')) {
-                    if (window.EditorPreview && typeof window.EditorPreview.togglePreview === 'function') {
-                        window.EditorPreview.togglePreview();
-                    }
-                }
-                return;
         }
     }
 
@@ -670,19 +620,15 @@ function handleEscapeKey(e) {
                             saveButton.click();
                         }
                     },
-                    // Discard callback - navigate to view mode without saving
+                    // Discard callback - return to the rendered article in place
                     function() {
-                        const url = new URL(window.location);
-                        url.searchParams.delete('mode');
-                        window.location.href = url.pathname + url.search;
+                        exitEditMode();
                     }
                 );
             }
         } else {
-            // No unsaved changes, navigate to view mode
-            const url = new URL(window.location);
-            url.searchParams.delete('mode');
-            window.location.href = url.pathname + url.search;
+            // No unsaved changes, return to the rendered article in place.
+            exitEditMode();
         }
     }
 }

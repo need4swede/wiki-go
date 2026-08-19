@@ -6,13 +6,12 @@
  * - editor-core.js: Core editor functionality and content management
  * - editor-toolbar.js: Toolbar creation and actions
  * - editor-pickers.js: Emoji, document, table, and anchor pickers
- * - editor-preview.js: Preview functionality
  * - editor-themes.js: Theme management and mobile handling
  */
 
 // Ensure modules are loaded before using them
 function ensureModulesLoaded() {
-    const modules = ['EditorCore', 'EditorToolbar', 'EditorPickers', 'EditorPreview', 'EditorThemes'];
+    const modules = ['EditorVisual', 'EditorCore', 'EditorToolbar', 'EditorPickers', 'EditorThemes'];
     for (const module of modules) {
         if (!window[module]) {
             console.warn(`Editor module ${module} not loaded yet`);
@@ -70,22 +69,6 @@ function createToolbar(container) {
 function setupToolbarActions(toolbar) {
     if (!window.EditorToolbar) return;
     return window.EditorToolbar.setupToolbarActions(toolbar);
-}
-
-// Preview functions
-function createPreview(container) {
-    if (!window.EditorPreview) return null;
-    return window.EditorPreview.createPreview(container);
-}
-
-function togglePreview() {
-    if (!window.EditorPreview) return;
-    return window.EditorPreview.togglePreview();
-}
-
-function updatePreview(content) {
-    if (!window.EditorPreview) return;
-    return window.EditorPreview.updatePreview(content);
 }
 
 // Picker functions
@@ -245,25 +228,59 @@ function hideUnsavedChangesDialog() {
     }
 }
 
-// Function to initialize edit controls
+let editControlsInitialized = false;
+
+function getEditElements() {
+    return {
+        mainContent: document.querySelector('.content'),
+        editorContainer: document.querySelector('.editor-container'),
+        viewToolbar: document.querySelector('.view-toolbar'),
+        editToolbar: document.querySelector('.edit-toolbar')
+    };
+}
+
+// Enter edit mode without navigating away from the rendered document.
+async function enterEditMode() {
+    const elements = getEditElements();
+    if (!elements.mainContent || !elements.editorContainer || !elements.viewToolbar || !elements.editToolbar) {
+        return false;
+    }
+    if (elements.mainContent.classList.contains('editing')) return true;
+
+    return await loadEditor(
+        elements.mainContent,
+        elements.editorContainer,
+        elements.viewToolbar,
+        elements.editToolbar
+    );
+}
+
+function leaveEditMode() {
+    const elements = getEditElements();
+    exitEditMode(
+        elements.mainContent,
+        elements.editorContainer,
+        elements.viewToolbar,
+        elements.editToolbar
+    );
+}
+
+// Function to initialize edit controls after the deferred editor bundle loads.
 function initializeEditControls() {
-    const editPageButton = document.querySelector('.edit-page');
+    if (editControlsInitialized) return;
+
     const saveButton = document.querySelector('.save-changes');
     const cancelButton = document.querySelector('.cancel-edit');
-    const mainContent = document.querySelector('.content');
-    const editorContainer = document.querySelector('.editor-container');
-    const viewToolbar = document.querySelector('.view-toolbar');
-    const editToolbar = document.querySelector('.edit-toolbar');
-    const markdownContent = document.querySelector('.markdown-content');
+    const modeButton = document.querySelector('.toggle-editor-mode');
+    editControlsInitialized = true;
 
-    // Check if we're in edit mode (?mode=edit in URL)
-    const urlParams = new URLSearchParams(window.location.search);
-    const isEditMode = urlParams.get('mode') === 'edit';
-    
-    // Set up save and cancel buttons FIRST (needed in edit mode)
     // Save button functionality
     if (saveButton) {
         saveButton.addEventListener('click', async function() {
+            if (!isEditorActive() || saveButton.disabled) return;
+
+            saveButton.disabled = true;
+            saveButton.setAttribute('aria-busy', 'true');
             try {
                 const isHomepage = window.location.pathname === '/';
                 const apiPath = isHomepage ? '/api/save/' : `/api/save${window.location.pathname}`;
@@ -285,14 +302,15 @@ function initializeEditControls() {
                     window.EditorCore.setOriginalContent(content);
                 }
 
-                // Navigate back to view mode (remove ?mode=edit)
-                const url = new URL(window.location);
-                url.searchParams.delete('mode');
-                window.location.href = url.pathname + url.search;
+                // Reload the same URL so titles, layouts, attachments, and other
+                // server-derived content all reflect the saved markdown.
+                window.location.reload();
 
             } catch (error) {
                 console.error('Error:', error);
                 alert('Failed to save changes');
+                saveButton.disabled = false;
+                saveButton.setAttribute('aria-busy', 'false');
             }
         });
     }
@@ -304,79 +322,36 @@ function initializeEditControls() {
             if (hasUnsavedChanges()) {
                 // Show custom unsaved changes dialog
                 showUnsavedChangesDialog(
-                    // Save callback - save then navigate to view mode
+                    // Save callback
                     function() {
                         const saveButton = document.querySelector('.save-changes');
                         if (saveButton) {
                             saveButton.click();
                         }
                     },
-                    // Discard callback - navigate to view mode without saving
+                    // Discard callback
                     function() {
-                        const url = new URL(window.location);
-                        url.searchParams.delete('mode');
-                        window.location.href = url.pathname + url.search;
+                        leaveEditMode();
                     }
                 );
             } else {
-                // No unsaved changes, navigate to view mode
-                const url = new URL(window.location);
-                url.searchParams.delete('mode');
-                window.location.href = url.pathname + url.search;
+                leaveEditMode();
             }
         });
     }
-    
-    // If in edit mode, auto-load the editor
-    if (isEditMode && mainContent && editorContainer && viewToolbar && editToolbar) {
-        loadEditor(mainContent, editorContainer, viewToolbar, editToolbar);
-        return; // Exit early, don't set up edit button handler
-    }
 
-    // Auto-enter edit mode if content is empty
-    if (markdownContent && editPageButton) {
-        const contentText = markdownContent.textContent.trim();
-        const h1Only = markdownContent.children.length === 1 &&
-                      markdownContent.children[0].tagName === 'H1';
-
-        if (h1Only) {
-            editPageButton.click();
-        }
-    }
-
-    // Update edit button functionality - navigate to ?mode=edit
-    if (editPageButton) {
-        editPageButton.addEventListener('click', async function() {
-            // Check authentication first
-            const authResponse = await fetch('/api/check-auth');
-            if (authResponse.status === 401) {
-                // Show login dialog
-                window.Auth.showLoginDialog(() => {
-                    // After successful login, check role and navigate to edit mode
-                    window.Auth.checkUserRole('editor').then(canEdit => {
-                        if (canEdit) {
-                            const url = new URL(window.location);
-                            url.searchParams.set('mode', 'edit');
-                            window.location.href = url.toString();
-                        } else {
-                            window.Auth.showPermissionError('editor');
-                        }
-                    });
-                });
-                return;
+    if (modeButton) {
+        modeButton.addEventListener('click', async function() {
+            if (!isEditorActive() || modeButton.disabled) return;
+            modeButton.disabled = true;
+            try {
+                await window.EditorCore.toggleMode();
+            } catch (error) {
+                console.error('Error switching editor mode:', error);
+                alert('Failed to switch editor mode');
+            } finally {
+                modeButton.disabled = false;
             }
-            
-            // Check if user has editor/admin role
-            const canEdit = await window.Auth.checkUserRole('editor');
-            if (!canEdit) {
-                window.Auth.showPermissionError('editor');
-                return;
-            }
-            
-            // Navigate to edit mode
-            const url = new URL(window.location);
-            url.searchParams.set('mode', 'edit');
-            window.location.href = url.toString();
         });
     }
 }
@@ -385,6 +360,7 @@ function initializeEditControls() {
 window.WikiEditor = {
     // Main functions
     loadEditor,
+    enterEditMode,
     exitEditMode,
     getEditorContent,
     insertIntoEditor,

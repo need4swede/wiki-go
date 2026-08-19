@@ -182,9 +182,7 @@ function createToolbar(container) {
         { icon: 'fa-tasks', action: 'kanban', title: 'Insert Kanban Board Template' },
         { type: 'separator' },
         { icon: 'fa-undo', action: 'undo', title: 'Undo' },
-        { icon: 'fa-repeat', action: 'redo', title: 'Redo' },
-        { type: 'separator' },
-        { icon: 'fa-eye', action: 'preview', title: `Hide Preview (${getShortcut('Cmd+Shift+P', 'Ctrl+Shift+P')})`, id: 'toggle-preview', initialActive: true }
+        { icon: 'fa-repeat', action: 'redo', title: 'Redo' }
     ];
 
     buttons.forEach(button => {
@@ -448,10 +446,6 @@ function setupToolbarActions(toolbar) {
                     editor.redo();
                     editor.focus();
                 }
-                break;
-            case 'preview':
-                // Toggle preview panel visibility (button state is handled in EditorPreview.togglePreview)
-                window.EditorPreview.togglePreview();
                 break;
             case 'emoji':
                 window.EditorPickers.showEmojiPicker(button);

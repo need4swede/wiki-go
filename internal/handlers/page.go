@@ -13,10 +13,10 @@ import (
 	"wiki-go/internal/auth"
 	"wiki-go/internal/comments"
 	"wiki-go/internal/config"
+	"wiki-go/internal/frontmatter"
 	"wiki-go/internal/i18n"
 	"wiki-go/internal/types"
 	"wiki-go/internal/utils"
-	"wiki-go/internal/frontmatter"
 )
 
 // PageHandler handles requests for pages
@@ -25,26 +25,6 @@ func PageHandler(w http.ResponseWriter, r *http.Request, cfg *config.Config) {
 	w.Header().Set("Cache-Control", "no-cache, no-store, must-revalidate")
 	w.Header().Set("Pragma", "no-cache")
 	w.Header().Set("Expires", "0")
-
-	// Detect edit mode from query parameter
-	mode := r.URL.Query().Get("mode")
-	isEditMode := mode == "edit"
-
-	// Edit mode requires authentication and editor/admin role
-	if isEditMode {
-		session := auth.GetSession(r)
-		if session == nil {
-			// User not authenticated - redirect to view mode
-			http.Redirect(w, r, r.URL.Path, http.StatusSeeOther)
-			return
-		}
-		// Check if user has editor or admin role
-		if !auth.RequireRole(r, "editor") {
-			// User lacks required role - redirect to view mode
-			http.Redirect(w, r, r.URL.Path, http.StatusSeeOther)
-			return
-		}
-	}
 
 	// Get the requested path
 	path := r.URL.Path
@@ -117,7 +97,6 @@ func PageHandler(w http.ResponseWriter, r *http.Request, cfg *config.Config) {
 	var content template.HTML
 	var lastModified time.Time
 	var dirContent template.HTML
-	var rawContent string // Raw markdown content for edit mode
 	var displayImageAttachments bool // Whether to show images in attachments section
 
 	// Look for document.md in the directory
@@ -129,11 +108,6 @@ func PageHandler(w http.ResponseWriter, r *http.Request, cfg *config.Config) {
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
-		}
-
-		// If in edit mode, store raw content with frontmatter preserved
-		if isEditMode {
-			rawContent = string(mdContent)
 		}
 
 		// Parse frontmatter to get document layout and other settings
@@ -148,12 +122,12 @@ func PageHandler(w http.ResponseWriter, r *http.Request, cfg *config.Config) {
 
 		// Use the document path for rendering to handle local file references
 		content = template.HTML(utils.RenderMarkdownWithPath(string(mdContent), decodedPath))
-		
+
 		// If content is empty but document exists, ensure we have something truthy for template conditions
 		if strings.TrimSpace(string(content)) == "" {
 			content = template.HTML(" ") // Single space to make it truthy but effectively empty
 		}
-		
+
 		lastModified = docInfo.ModTime()
 
 		// Update the document layout in the page data
@@ -264,8 +238,6 @@ func PageHandler(w http.ResponseWriter, r *http.Request, cfg *config.Config) {
 		UserRole:                userRole,
 		DocPath:                 decodedPath,
 		DocumentLayout:          navItem.DocumentLayout,
-		IsEditMode:              isEditMode,
-		RawContent:              rawContent,              // Pass raw markdown content for edit mode
 		DisplayImageAttachments: displayImageAttachments, // Pass image attachments display setting
 	}
 

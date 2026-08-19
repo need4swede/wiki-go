@@ -2,92 +2,83 @@
 .editor-layout {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    width: 100%;
+    height: auto;
+    min-height: 32rem;
     background: var(--bg-color);
-    overflow: hidden;
-    min-height: 0;
+    overflow: visible;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
 }
 
 .editor-area {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-}
-
-/* Preview panel - left side */
-.editor-preview-panel {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    border-right: 1px solid var(--border-color);
-    min-width: 0;
-    background: var(--bg-color);
+    overflow: visible;
 }
 
-.editor-preview-panel .editor-preview {
-    position: relative;
-    flex: 1;
-    display: block;
-    overflow: auto;
-    padding: 20px;
-}
-
-/* Editor panel - right side */
+/* The source editor fills the article region. */
 .editor-main-area {
-    flex: 1;
     display: flex;
     flex-direction: column;
     min-width: 0;
     background: var(--bg-color);
 }
 
-/* Editor styles - Full screen overlay */
+/* Editor styles - in-place article replacement */
 .editor-container {
     display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    position: relative;
+    width: 100%;
     background: var(--bg-color);
     padding: 0;
-    z-index: 1000;
+    scroll-margin-top: 88px;
 }
 
 .editor-container.active {
-    display: flex;
-    flex-direction: column;
+    display: block;
 }
 
-/* Editor header bar */
-.editor-header {
+/* The regular rendered page is the primary editing surface. */
+.visual-editor-toolbar {
     display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
     align-items: center;
-    justify-content: space-between;
-    padding: 12px 20px;
+    margin: 0 0 14px;
+    padding: 7px;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius-sm);
     background: var(--glass-bg);
-    border-bottom: 1px solid var(--glass-border);
-    flex-shrink: 0;
+    box-shadow: var(--card-shadow);
 }
 
-.editor-header-title {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--text-color);
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.visual-editor-toolbar .toolbar-button {
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    justify-content: center;
 }
 
-.editor-header-title i {
-    color: var(--primary-color);
+.visual-editor-surface {
+    min-height: 20rem;
+    cursor: text;
+    outline: 1px solid transparent;
+    outline-offset: 10px;
+    border-radius: var(--border-radius-sm);
 }
 
-.editor-header-actions {
-    display: flex;
-    gap: 8px;
-    align-items: center;
+.visual-editor-surface:focus {
+    outline-color: rgba(var(--primary-rgb), 0.35);
+}
+
+.visual-editor-surface a {
+    cursor: text;
+}
+
+.visual-editor-protected {
+    cursor: default;
 }
 
 .editor-toolbar {
@@ -137,9 +128,15 @@
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
-    position: sticky;
-    top: 0;
+    position: relative;
     z-index: 10;
+    flex-shrink: 0;
+}
+
+.content.editing > .file-attachments-section,
+.content.editing > .directory-list,
+.content.editing > .comments-section {
+    display: none;
 }
 
 .custom-toolbar button {
@@ -311,71 +308,6 @@
     color: var(--text-color) !important;
 }
 
-/* Keep the preview button active even in preview mode */
-.custom-toolbar button.preview-button {
-    opacity: 1 !important;
-    cursor: pointer !important;
-}
-
-.custom-toolbar button.preview-button:hover {
-    background: var(--hover-bg) !important;
-    border-color: var(--primary-color) !important;
-    color: var(--primary-color) !important;
-}
-
-/* Preview styles */
-.editor-preview {
-    background: var(--bg-color);
-    padding: 16px;
-    overflow: auto;
-    font-family: var(--text-font);
-    line-height: 1.6;
-}
-
-/* Preview header label */
-.preview-header {
-    padding: 8px 16px;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: var(--breadcrumb-color);
-    background: var(--glass-bg);
-    border-bottom: 1px solid var(--glass-border);
-}
-
-/* Legacy class for backwards compatibility */
-.editor-preview-active {
-    display: block;
-}
-
-/* Preview loading indicator */
-.preview-loading {
-    color: var(--breadcrumb-color);
-    text-align: center;
-    padding: 20px;
-    font-style: italic;
-}
-
-/* Fix for double-colored code blocks in preview */
-.editor-preview pre code {
-    background: transparent !important;
-    color: inherit !important;
-    border: none !important;
-    padding: 0 !important;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
-}
-
-/* Ensure proper styling for code blocks in preview */
-.editor-preview pre {
-    background-color: var(--code-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 3px;
-    padding: 0.5em;
-    margin: 0.5em 0;
-    overflow: auto;
-}
-
 /* Editor status bar */
 .editor-statusbar {
     color: var(--text-color) !important;
@@ -414,22 +346,22 @@
     background: var(--bg-color);
     display: flex;
     flex-direction: column;
-    flex: 1;
-    min-height: 0;
+    min-height: 30rem;
 }
 
 .custom-editor-wrapper .CodeMirror {
     color: var(--text-color);
     background: var(--bg-color);
-    flex: 1;
     height: auto !important;
-    min-height: 0;
+    min-height: 30rem;
     border: none;
     font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
 .custom-editor-wrapper .CodeMirror-scroll {
-    min-height: 100%;
+    min-height: 30rem;
+    overflow-y: hidden !important;
+    overflow-x: auto !important;
 }
 
 /* Fix for line numbers and line highlighting */
@@ -586,73 +518,6 @@
 .custom-editor-wrapper .CodeMirror-line:has(.cm-header-6) .CodeMirror-cursor {
     height: 14px !important;
 }
-
-/* Editor preview styles */
-.editor-preview h1 {
-    margin-top: 0;
-    margin-bottom: 0.5em;
-    font-size: 32px;
-    font-weight: 600;
-    color: var(--text-color);
-}
-
-.editor-preview h2 {
-    font-size: 24px;
-    font-weight: 600;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-    padding-bottom: 0.25em;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.editor-preview h3 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-}
-
-.editor-preview h4 {
-    font-size: 18px;
-    font-weight: 600;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-}
-
-.editor-preview h5 {
-    font-size: 16px;
-    font-weight: 600;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-}
-
-.editor-preview h6 {
-    font-size: 14px;
-    font-weight: 600;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-}
-
-.editor-preview h1,
-.editor-preview h2,
-.editor-preview h3,
-.editor-preview h4,
-.editor-preview h5,
-.editor-preview h6 {
-    color: var(--text-color);
-}
-
-.editor-preview img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 1.5rem auto;
-    border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.editor-preview a          { color: var(--primary-color); text-decoration: none; }
-.editor-preview a:hover    { text-decoration: underline; }
 
 /* Table picker styles */
 .table-picker {
@@ -895,8 +760,8 @@
 /* Mobile responsive styles */
 @media (max-width: 950px) {
     .editor-container {
-        margin: 0 -8px;
-        width: calc(100% + 16px);
+        margin: 0;
+        width: 100%;
     }
 
     .editor-toolbar {
@@ -906,44 +771,18 @@
 
     .editor-layout {
         margin-top: 0;
+        height: auto;
+        min-height: 30rem;
+        border-radius: var(--border-radius-sm);
     }
 
-    /* Stack preview and editor vertically on mobile */
     .editor-area {
         flex-direction: column;
     }
 
-    .editor-preview-panel {
-        flex: 0 0 35%;
-        border-right: none;
-        border-bottom: 1px solid var(--glass-border);
-        max-height: 35%;
-    }
-
     .editor-main-area {
         flex: 1;
-        min-height: 50%;
-    }
-
-    /* Mobile header adjustments */
-    .editor-header {
-        padding: 10px 12px;
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-
-    .editor-header-title {
-        font-size: 14px;
-    }
-
-    .editor-header-actions {
-        flex-wrap: wrap;
-        gap: 6px;
-    }
-
-    .editor-header-actions .editor-button {
-        padding: 8px 12px;
-        font-size: 12px;
+        min-height: 0;
     }
 
     /* Replace EasyMDEContainer with custom-editor-wrapper */
@@ -995,22 +834,6 @@
         border-left: 2px solid rgba(var(--primary-rgb), 0.7) !important;
     }
 
-    /* Editor is now a full-screen fixed overlay (z-index: 1000),
-       so sidebar interactions don't affect it */
-
-    /* Ensure content after overlay is consistent with main app */
-    body.sidebar-active::after {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.3);
-        z-index: 90;
-        backdrop-filter: blur(2px);
-    }
-
     /* Mobile responsive heading styles */
     .custom-editor-wrapper .CodeMirror .cm-header-1 {
         font-size: 24px;
@@ -1030,28 +853,6 @@
 
     .custom-editor-wrapper .CodeMirror .cm-header-5,
     .custom-editor-wrapper .CodeMirror .cm-header-6 {
-        font-size: 14px;
-    }
-
-    /* Mobile responsive preview heading styles */
-    .editor-preview h1 {
-        font-size: 24px;
-    }
-
-    .editor-preview h2 {
-        font-size: 20px;
-    }
-
-    .editor-preview h3 {
-        font-size: 18px;
-    }
-
-    .editor-preview h4 {
-        font-size: 16px;
-    }
-
-    .editor-preview h5,
-    .editor-preview h6 {
         font-size: 14px;
     }
 
@@ -1088,19 +889,4 @@
         height: 18px;
         margin: 2px;
     }
-}
-
-/* Kanban preview styles */
-.editor-preview.kanban-preview {
-    padding: 20px;
-    overflow-x: auto;
-}
-
-.editor-preview.kanban-preview .kanban-board {
-    min-height: 400px;
-}
-
-/* Ensure kanban cards are properly displayed in the preview */
-.editor-preview.kanban-preview .kanban-card {
-    margin-bottom: 10px;
 }

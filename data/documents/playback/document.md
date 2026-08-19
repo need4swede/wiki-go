@@ -50,7 +50,7 @@ Neptune Pro can apply Language Rules after live audio changes in Manual or Auto,
 On Apple TV, lightly tap the Siri Remote surface without clicking to reveal the progress bar and controls without selecting one.
 Physically click the surface when no onscreen control is focused to pause or resume; after navigating focus onto a control, the same click activates that control instead.
 This works with both the original black Siri Remote's glass surface and the clickpad on newer remotes.
-See [Player Controls](/playback/player-controls) for progress-bar clicks and the actionable Skip Intro/Credits exception.
+See [Siri Remote Controls](/playback/player-controls/siri-remote) for progress-bar clicks and the actionable Skip Intro/Credits exception.
 
 On iPhone and iPad, tap the video to reveal the progress bar and controls.
 
@@ -73,4 +73,4 @@ See [Picture in Picture & Background Playback](/ios/playback) for setup and the 
 TV shows advance to the next episode when one finishes, with an Up Next countdown you can cancel.
 Movies in a collection can also auto-advance.
 Configure behavior in **Settings > Playback > Autoplay**.
-See [Player Controls](/playback/player-controls) for details.
+See [Playback Settings](/settings/playback#autoplay) for details.

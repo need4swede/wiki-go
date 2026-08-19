@@ -6,6 +6,19 @@
 // Global editor variables
 let editor = null;
 let originalContent = '';
+let viewScrollPosition = 0;
+let editorMode = 'visual';
+let visualEditor = null;
+let visualToolbar = null;
+let visualBaseMarkdown = '';
+let visualChanged = false;
+let visualRequiresReload = false;
+let dirty = false;
+let settingSourceValue = false;
+let sourceChanged = false;
+let visualInputHandler = null;
+let visualClickHandler = null;
+let activeElements = null;
 
 // Define custom CodeMirror modes
 if (typeof CodeMirror !== 'undefined') {
@@ -155,175 +168,245 @@ function wrapText(cm, prefix = '', suffix = '', placeholder = '') {
     cm.focus();
 }
 
-// Main editor loading function
+function setSourceContent(markdown) {
+    if (!editor) return;
+    settingSourceValue = true;
+    editor.setValue(markdown);
+    editor.clearHistory?.();
+    settingSourceValue = false;
+    sourceChanged = false;
+}
+
+function updateModeToggle() {
+    const button = document.querySelector('.toggle-editor-mode');
+    if (!button) return;
+
+    const sourceMode = editorMode === 'source';
+    const icon = button.querySelector('i');
+    const label = button.querySelector('.button-text');
+    if (icon) icon.className = sourceMode ? 'fa fa-file-text-o' : 'fa fa-code';
+    if (label) label.textContent = sourceMode ? 'Visual' : 'Markdown';
+    button.title = sourceMode ? 'Edit the rendered page' : 'Edit Markdown source';
+    button.setAttribute('aria-label', button.title);
+    button.setAttribute('aria-pressed', sourceMode ? 'true' : 'false');
+}
+
+function activateVisualEditor(markdown) {
+    if (!visualEditor) return;
+
+    window.EditorVisual.activate(visualEditor, markdown);
+    visualToolbar?.remove();
+    visualToolbar = window.EditorVisual.createToolbar(visualEditor);
+
+    visualInputHandler = () => {
+        visualChanged = true;
+        dirty = true;
+        setupBeforeUnloadHandler();
+    };
+    visualEditor.addEventListener('input', visualInputHandler);
+    visualEditor.addEventListener('change', visualInputHandler);
+
+    // While editing, links must remain editable instead of navigating away.
+    // Checkbox clicks stay local as well; the normal page has live-save handlers.
+    visualClickHandler = (event) => {
+        if (event.type === 'dragstart') {
+            event.preventDefault();
+            event.stopPropagation();
+            return;
+        }
+
+        const interactive = event.target.closest('a, button');
+        if (interactive) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        if (event.target.matches('input[type="checkbox"]')) event.stopPropagation();
+    };
+    visualEditor.addEventListener('click', visualClickHandler, true);
+    visualEditor.addEventListener('dragstart', visualClickHandler, true);
+}
+
+function deactivateVisualEditor() {
+    if (!visualEditor) return;
+    if (visualInputHandler) {
+        visualEditor.removeEventListener('input', visualInputHandler);
+        visualEditor.removeEventListener('change', visualInputHandler);
+    }
+    if (visualClickHandler) {
+        visualEditor.removeEventListener('click', visualClickHandler, true);
+        visualEditor.removeEventListener('dragstart', visualClickHandler, true);
+    }
+    visualInputHandler = null;
+    visualClickHandler = null;
+    window.EditorVisual.deactivate(visualEditor);
+}
+
+function createSourceEditor(editorContainer, markdown) {
+    if (editor) {
+        setSourceContent(markdown);
+        return editor;
+    }
+
+    editorContainer.innerHTML = '';
+    const editorLayout = document.createElement('div');
+    editorLayout.className = 'editor-layout';
+    editorContainer.appendChild(editorLayout);
+
+    const toolbar = window.EditorToolbar.createToolbar(editorLayout);
+    const editorArea = document.createElement('div');
+    editorArea.className = 'editor-area';
+    editorLayout.appendChild(editorArea);
+
+    const editorMainArea = document.createElement('div');
+    editorMainArea.className = 'editor-main-area';
+    editorArea.appendChild(editorMainArea);
+
+    const editorWrapper = document.createElement('div');
+    editorWrapper.className = 'custom-editor-wrapper';
+    editorMainArea.appendChild(editorWrapper);
+
+    const textarea = document.createElement('textarea');
+    textarea.id = 'markdown-editor';
+    editorWrapper.appendChild(textarea);
+    const statusbar = createStatusbar(editorMainArea);
+    const isMobile = window.innerWidth <= 768;
+
+    editor = CodeMirror.fromTextArea(textarea, {
+        mode: 'markdown-with-frontmatter',
+        theme: 'default',
+        lineNumbers: false,
+        lineWrapping: true,
+        autofocus: true,
+        tabSize: 2,
+        indentWithTabs: false,
+        styleActiveLine: isMobile ? false : { nonEmpty: true },
+        extraKeys: {},
+        placeholder: 'Write your markdown here...',
+        spellcheck: true,
+        gutters: ['CodeMirror-linenumbers'],
+        // Let the page own vertical scrolling instead of creating a nested pane.
+        viewportMargin: Infinity
+    });
+    editor.addOverlay('markdown-highlight-overlay');
+    editor.setSize(null, 'auto');
+
+    window.EditorToolbar.setupToolbarActions(toolbar);
+    editor.on('cursorActivity', () => updateStatusbar(statusbar));
+    editor.on('change', () => {
+        updateStatusbar(statusbar);
+        if (settingSourceValue) return;
+        sourceChanged = true;
+        dirty = true;
+        setupBeforeUnloadHandler();
+    });
+
+    const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+    window.EditorThemes.updateCodeMirrorTheme(isDarkMode ? 'dark' : 'light');
+    setSourceContent(markdown);
+    refreshEditor(statusbar);
+
+    const wrapButton = document.querySelector('.toggle-wordwrap-button');
+    if (wrapButton && editor.getOption('lineWrapping')) {
+        const getShortcut = window.EditorToolbar?.getShortcut || ((mac, other) => mac || other);
+        wrapButton.classList.add('active');
+        wrapButton.title = `Disable Word Wrap (${getShortcut('Option+Z', 'Alt+Z')})`;
+    }
+
+    return editor;
+}
+
+// Enter edit mode on the rendered document. Markdown source remains optional.
 async function loadEditor(mainContent, editorContainer, viewToolbar, editToolbar) {
     try {
         const isHomepage = window.location.pathname === '/';
         const apiPath = isHomepage ? '/api/source/' : `/api/source${window.location.pathname}`;
-
         const response = await fetch(apiPath);
         if (!response.ok) throw new Error('Failed to fetch content');
 
         const markdown = await response.text();
+        visualEditor = mainContent.querySelector('.markdown-content');
+        if (!visualEditor) throw new Error('Rendered document not found');
 
-        // Store original content for change detection
+        activeElements = { mainContent, editorContainer, viewToolbar, editToolbar };
         originalContent = markdown;
+        visualBaseMarkdown = markdown;
+        viewScrollPosition = window.scrollY;
+        editorMode = 'visual';
+        visualChanged = false;
+        visualRequiresReload = false;
+        dirty = false;
+        sourceChanged = false;
 
-        // Show editor and switch toolbars
-        mainContent.classList.add('editing');
-        editorContainer.classList.add('active');
+        mainContent.classList.add('editing', 'visual-editing');
+        mainContent.classList.remove('source-editing');
+        editorContainer.hidden = true;
+        editorContainer.setAttribute('aria-hidden', 'true');
+        editorContainer.classList.remove('active');
         viewToolbar.style.display = 'none';
         editToolbar.style.display = 'flex';
 
-        // Hide the sidebar when entering edit mode
-        const sidebar = document.querySelector('.sidebar');
-        if (sidebar) {
-            sidebar.style.display = 'none';
-        }
-
-        // Clear the editor container
-        editorContainer.innerHTML = '';
-
-        // 0. Create header bar with title and action buttons
-        const header = createEditorHeader(editorContainer, editToolbar);
-
-        // Create a container for our editor components (toolbar, editor, preview, statusbar)
-        const editorLayout = document.createElement('div');
-        editorLayout.className = 'editor-layout';
-        editorContainer.appendChild(editorLayout);
-
-        // 1. Create formatting toolbar
-        const toolbar = window.EditorToolbar.createToolbar(editorLayout);
-
-        // 2. Create an editor area container to hold both preview (left) and editor (right)
-        const editorArea = document.createElement('div');
-        editorArea.className = 'editor-area';
-        editorLayout.appendChild(editorArea);
-
-        // 3. Create preview panel on the LEFT side
-        const previewPanel = document.createElement('div');
-        previewPanel.className = 'editor-preview-panel';
-        editorArea.appendChild(previewPanel);
-
-        // Add preview header
-        const previewHeader = document.createElement('div');
-        previewHeader.className = 'preview-header';
-        previewHeader.textContent = 'Preview';
-        previewPanel.appendChild(previewHeader);
-
-        // Create preview element inside the preview panel
-        const previewElement = window.EditorPreview.createPreview(previewPanel);
-
-        // 4. Create main editor area on the RIGHT side
-        const editorMainArea = document.createElement('div');
-        editorMainArea.className = 'editor-main-area';
-        editorArea.appendChild(editorMainArea);
-
-        // 5. Create editor wrapper inside the main editor area
-        const editorWrapper = document.createElement('div');
-        editorWrapper.className = 'custom-editor-wrapper';
-        editorMainArea.appendChild(editorWrapper);
-
-        // 6. Create textarea for CodeMirror
-        const textarea = document.createElement('textarea');
-        textarea.id = 'markdown-editor';
-        editorWrapper.appendChild(textarea);
-
-        // 7. Create statusbar at the bottom of the main editor area
-        const statusbar = createStatusbar(editorMainArea);
-
-        // Initialize CodeMirror
-        if (!editor) {
-            // Check if we're on mobile
-            const isMobile = window.innerWidth <= 768;
-
-            editor = CodeMirror.fromTextArea(textarea, {
-                mode: 'markdown',
-                theme: 'default', // Always use default theme and customize it
-                lineNumbers: false, // Line numbers off by default
-                lineWrapping: true,
-                autofocus: true,
-                tabSize: 2,
-                indentWithTabs: false,
-                // Disable styleActiveLine completely on mobile to prevent the highlighting issue
-                styleActiveLine: isMobile ? false : {
-                    nonEmpty: true
-                },
-                extraKeys: {
-                    // Tab and Enter handling is now done directly in markdown-table-editor.js
-                    // by overriding the CodeMirror commands
-                    // All other shortcuts are handled centrally in keyboard-shortcuts.js
-                },
-                placeholder: 'Write your markdown here...',
-                spellcheck: true,
-                gutters: ["CodeMirror-linenumbers"]
-            });
-
-            // Apply our custom markdown mode with frontmatter support
-            editor.setOption("mode", "markdown-with-frontmatter");
-            editor.addOverlay("markdown-highlight-overlay");
-
-            // Apply custom styling to the editor
-            const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
-
-            // Apply custom styling to tone down the syntax highlighting colors
-            const editorElement = document.querySelector('.CodeMirror');
-            if (editorElement) {
-                window.EditorThemes.updateCodeMirrorTheme(isDarkMode ? 'dark' : 'light');
-            }
-
-            // Editor height is now controlled by flexbox, no fixed size needed
-            editor.setSize(null, '100%');
-
-            // Set up events for toolbar interactions
-            window.EditorToolbar.setupToolbarActions(toolbar);
-
-            // Set up events for statusbar updates
-            editor.on('cursorActivity', () => updateStatusbar(statusbar));
-            editor.on('change', () => {
-                updateStatusbar(statusbar);
-
-                // Always update the live preview
-                window.EditorPreview.updatePreview(editor.getValue());
-
-                // Set up beforeunload handler when changes occur
-                setupBeforeUnloadHandler();
-            });
-
-            // Set initial state of the wordwrap button based on editor settings
-            const wrapButton = document.querySelector('.toggle-wordwrap-button');
-            if (wrapButton && editor.getOption('lineWrapping')) {
-                // Use the shared getShortcut function from EditorToolbar
-                const getShortcut = window.EditorToolbar && window.EditorToolbar.getShortcut ? 
-                    window.EditorToolbar.getShortcut : (mac, other) => mac || other;
-                
-                const shortcut = getShortcut('Option+Z', 'Alt+Z');
-                
-                wrapButton.classList.add('active');
-                wrapButton.title = `Disable Word Wrap (${shortcut})`;
-            }
-        }
-
-        // Set initial content
-        editor.setValue(markdown);
-        // Clear history so the loaded content is the initial undo boundary
-        if (editor && typeof editor.clearHistory === 'function') {
-            editor.clearHistory();
-        }
-
-        // Make sure editor is visible
-        document.querySelector('.CodeMirror').style.display = 'block';
-
-        // Force a refresh with multiple attempts to ensure editor renders properly
-        refreshEditor(statusbar);
-
-        // Load initial preview (immediate, no debounce)
-        window.EditorPreview.updatePreview(markdown, true);
-
+        activateVisualEditor(markdown);
+        updateModeToggle();
+        visualEditor.focus({ preventScroll: true });
+        return true;
     } catch (error) {
         console.error('Error:', error);
+        exitEditMode(mainContent, editorContainer, viewToolbar, editToolbar);
         alert('Failed to load content for editing');
+        return false;
     }
+}
+
+async function toggleMode() {
+    if (!activeElements || !visualEditor) return false;
+    const { mainContent, editorContainer } = activeElements;
+
+    if (editorMode === 'visual') {
+        const markdown = visualChanged
+            ? window.EditorVisual.toMarkdown(visualEditor, visualBaseMarkdown)
+            : visualBaseMarkdown;
+
+        deactivateVisualEditor();
+        visualToolbar?.remove();
+        visualToolbar = null;
+        editorMode = 'source';
+        visualChanged = false;
+        mainContent.classList.remove('visual-editing');
+        mainContent.classList.add('source-editing');
+        editorContainer.hidden = false;
+        editorContainer.setAttribute('aria-hidden', 'false');
+        editorContainer.classList.add('active');
+        createSourceEditor(editorContainer, markdown);
+        updateModeToggle();
+        editor.focus();
+        return true;
+    }
+
+    const markdown = editor.getValue();
+    if (sourceChanged) {
+        const response = await fetch(`/api/render-markdown?path=${encodeURIComponent(window.location.pathname)}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'text/plain' },
+            body: markdown
+        });
+        if (!response.ok) throw new Error('Failed to render Markdown');
+
+        visualEditor.innerHTML = await response.text();
+        visualRequiresReload = true;
+    }
+    visualBaseMarkdown = markdown;
+    visualChanged = false;
+    sourceChanged = false;
+    editorMode = 'visual';
+    mainContent.classList.remove('source-editing');
+    mainContent.classList.add('visual-editing');
+    editorContainer.classList.remove('active');
+    editorContainer.hidden = true;
+    editorContainer.setAttribute('aria-hidden', 'true');
+    activateVisualEditor(markdown);
+    updateModeToggle();
+    visualEditor.focus({ preventScroll: true });
+    return true;
 }
 
 // Function to create statusbar
@@ -366,67 +449,16 @@ function updateStatusbar(statusbar) {
     statusbar.querySelector('.cursor').textContent = `${cursor.line + 1}:${cursor.ch}`;
 }
 
-// Function to create editor header bar
-function createEditorHeader(container, editToolbar) {
-    const header = document.createElement('div');
-    header.className = 'editor-header';
-
-    // Title section
-    const titleSection = document.createElement('div');
-    titleSection.className = 'editor-header-title';
-
-    const icon = document.createElement('i');
-    icon.className = 'fa fa-edit';
-    titleSection.appendChild(icon);
-
-    // Get current page title
-    const pageTitle = document.querySelector('.breadcrumbs a:last-child')?.textContent ||
-                      document.querySelector('h1')?.textContent ||
-                      'Editing';
-    const titleText = document.createElement('span');
-    titleText.textContent = `Editing: ${pageTitle}`;
-    titleSection.appendChild(titleText);
-
-    header.appendChild(titleSection);
-
-    // Actions section - move buttons from the edit toolbar to the header
-    const actionsSection = document.createElement('div');
-    actionsSection.className = 'editor-header-actions';
-
-    // Move the actual buttons from editToolbar (not clones)
-    if (editToolbar) {
-        const buttons = Array.from(editToolbar.querySelectorAll('.editor-button, button'));
-        buttons.forEach(btn => {
-            // Move the button to the header (this preserves event listeners)
-            actionsSection.appendChild(btn);
-        });
-    }
-
-    header.appendChild(actionsSection);
-    container.appendChild(header);
-
-    // Hide the original edit toolbar container (now empty)
-    if (editToolbar) {
-        editToolbar.style.display = 'none';
-    }
-
-    return header;
-}
-
 // Helper function to ensure editor gets properly refreshed
 function refreshEditor(statusbar) {
     if (!editor) return;
 
-    // Immediate refresh - apply all refreshes at once
     editor.refresh();
-    editor.focus();
     if (statusbar) updateStatusbar(statusbar);
 
-    // Secondary quick refresh to ensure rendering
     requestAnimationFrame(() => {
         if (editor) {
             editor.refresh();
-            editor.focus();
             if (statusbar) updateStatusbar(statusbar);
         }
     });
@@ -434,27 +466,29 @@ function refreshEditor(statusbar) {
 
 // Exit edit mode
 function exitEditMode(mainContent, editorContainer, viewToolbar, editToolbar) {
-    // Remove beforeunload handler first
     removeBeforeUnloadHandler();
 
-    // Make sure to update UI state classes first
-    if (mainContent) mainContent.classList.remove('editing');
-    if (editorContainer) editorContainer.classList.remove('active');
+    // A reload is the reliable way to restore generated widgets and their
+    // event listeners after the document DOM itself was changed or re-rendered.
+    if (dirty || visualRequiresReload) {
+        window.location.reload();
+        return;
+    }
 
-    // Update toolbar visibility
+    deactivateVisualEditor();
+    visualToolbar?.remove();
+    visualToolbar = null;
+
+    if (mainContent) mainContent.classList.remove('editing', 'visual-editing', 'source-editing');
+    if (editorContainer) {
+        editorContainer.classList.remove('active');
+        editorContainer.hidden = true;
+        editorContainer.setAttribute('aria-hidden', 'true');
+    }
+
     if (viewToolbar) viewToolbar.style.display = 'flex';
     if (editToolbar) editToolbar.style.display = 'none';
 
-    // Show the sidebar again when exiting edit mode
-    const sidebar = document.querySelector('.sidebar');
-    if (sidebar) {
-        sidebar.style.display = '';
-    }
-
-    // Reset original content
-    originalContent = '';
-
-    // Completely destroy the editor instance
     if (editor) {
         try {
             editor.toTextArea();
@@ -464,82 +498,109 @@ function exitEditMode(mainContent, editorContainer, viewToolbar, editToolbar) {
         editor = null;
     }
 
-    // Remove preview element
-    window.EditorPreview.cleanup();
+    window.EditorPickers?.cleanup();
+    if (editorContainer) editorContainer.innerHTML = '';
 
-    // Remove pickers
-    window.EditorPickers.cleanup();
+    originalContent = '';
+    visualBaseMarkdown = '';
+    visualEditor = null;
+    activeElements = null;
+    editorMode = 'visual';
+    visualChanged = false;
+    visualRequiresReload = false;
+    dirty = false;
+    sourceChanged = false;
+    updateModeToggle();
+
+    requestAnimationFrame(() => {
+        window.scrollTo({ top: viewScrollPosition, behavior: 'auto' });
+    });
 }
 
 // Content management functions
 function getEditorContent() {
-    return editor ? editor.getValue() : '';
+    if (editorMode === 'source' && editor) return editor.getValue();
+    if (visualEditor) {
+        return visualChanged
+            ? window.EditorVisual.toMarkdown(visualEditor, visualBaseMarkdown)
+            : visualBaseMarkdown;
+    }
+    return '';
 }
 
 function insertIntoEditor(url, isImage, name) {
-    // Check if editor exists and is initialized
-    if (!editor) {
-        return false;
-    }
-
-    // Check if it's an MP4 file
     const isVideo = name.toLowerCase().endsWith('.mp4');
-
-    // Extract just the filename from the URL
     const filename = name;
-
-    // Create markdown code based on file type
     let markdown = '';
     if (isVideo) {
-        // For MP4 files, use code block syntax with just the filename
         markdown = "```mp4\n" + filename + "\n```\n\n";
     } else if (isImage) {
-        // For images, use image markdown with just the filename
         markdown = `![${name}](${filename})\n\n`;
     } else {
-        // For other files, use link markdown with just the filename
         markdown = `[${name}](${filename})\n\n`;
     }
 
-    // Insert markdown at cursor position
-    editor.replaceSelection(markdown);
+    if (editorMode === 'source' && editor) {
+        editor.replaceSelection(markdown);
+        editor.focus();
+        return true;
+    }
 
-    // Focus the editor
-    editor.focus();
+    if (!visualEditor) return false;
+    visualEditor.focus();
+    if (isVideo) {
+        const video = document.createElement('video');
+        video.src = url;
+        video.controls = true;
+        visualEditor.appendChild(video);
+    } else {
+        const element = document.createElement(isImage ? 'img' : 'a');
+        if (isImage) {
+            element.src = url;
+            element.alt = name;
+        } else {
+            element.href = url;
+            element.textContent = name;
+        }
+        const selection = window.getSelection();
+        if (selection?.rangeCount) {
+            const range = selection.getRangeAt(0);
+            range.deleteContents();
+            range.insertNode(element);
+            range.setStartAfter(element);
+            range.collapse(true);
+            selection.removeAllRanges();
+            selection.addRange(range);
+        } else {
+            visualEditor.appendChild(element);
+        }
+    }
+    visualEditor.dispatchEvent(new Event('input', { bubbles: true }));
 
     return true;
 }
 
 function insertRawContent(content) {
-    // Check if editor exists and is initialized
-    if (!editor) {
-        return false;
+    if (editorMode === 'source' && editor) {
+        editor.replaceSelection(content);
+        editor.focus();
+        return true;
     }
 
-    // Insert content at cursor position
-    editor.replaceSelection(content);
-
-    // Focus the editor
-    editor.focus();
-
+    if (!visualEditor) return false;
+    visualEditor.focus();
+    document.execCommand('insertText', false, content);
+    visualEditor.dispatchEvent(new Event('input', { bubbles: true }));
     return true;
 }
 
 function isEditorActive() {
-    return !!editor;
+    return !!activeElements;
 }
 
 // Function to check if document has unsaved changes
 function hasUnsavedChanges() {
-    if (!editor) return false;
-
-    // Compare current content with original content
-    const currentContent = editor.getValue();
-    if (currentContent !== originalContent) {
-        return true;
-    }
-
-    return false;
+    return isEditorActive() && dirty;
 }
 
 // Add function to handle beforeunload event
@@ -719,6 +780,7 @@ window.EditorCore = {
     loadEditor,
     exitEditMode,
     refreshEditor,
+    toggleMode,
 
     // Content functions
     getEditorContent,
@@ -735,6 +797,13 @@ window.EditorCore = {
 
     // Getters
     getEditor: () => editor,
+    getMode: () => editorMode,
     getOriginalContent: () => originalContent,
-    setOriginalContent: (content) => { originalContent = content; }
+    setOriginalContent: (content) => {
+        originalContent = content;
+        visualBaseMarkdown = content;
+        dirty = false;
+        visualChanged = false;
+        sourceChanged = false;
+    }
 };

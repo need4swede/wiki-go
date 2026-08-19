@@ -218,7 +218,7 @@
 }
 
 /* Content editing state */
-.content.editing .markdown-content {
+.content.source-editing .markdown-content {
     display: none;
 }
 

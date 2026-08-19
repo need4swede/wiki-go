@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="user-role" content="{{.UserRole}}">
     <meta name="doc-path" content="{{.CurrentDir.Path}}">
+    <meta name="asset-version" content="{{getVersion}}">
     <meta name="enable-link-embedding" content="{{.Config.Wiki.EnableLinkEmbedding}}">
     <meta name="disable-content-max-width" content="{{.Config.Wiki.DisableContentMaxWidth}}">
     <!-- Theme Colors -->
@@ -61,25 +62,11 @@
     {{end}}
     <!-- External libraries -->
     <link id="prism-theme" rel="stylesheet" href="/static/libs/prism-1.30.0/prism-tomorrow.min.css">
-    {{if .IsEditMode}}
-    <!-- CodeMirror CSS - Only loaded in edit mode for performance (~50KB) -->
-    <link rel="stylesheet" href="/static/libs/codemirror-5.65.18/codemirror.min.css">
-    <link rel="stylesheet" href="/static/libs/codemirror-5.65.18/theme/darcula.min.css">
-    <link rel="stylesheet" href="/static/css/editor.css?={{getVersion}}">
-    {{end}}
     <link rel="stylesheet" href="/static/libs/fontawesome-4.7.0/css/fontawesome.min.css">
     <link rel="stylesheet" href="/static/css/print.css?={{getVersion}}" media="print">
     <!-- Custom overrides -->
     <link rel="stylesheet" href="/static/custom.css?={{getVersion}}">
     <script src="/static/js/markdown-extensions.js?={{getVersion}}"></script>
-    {{if .IsEditMode}}
-    <!-- CodeMirror Scripts - Only loaded in edit mode for performance (~400KB) -->
-    <script src="/static/libs/codemirror-5.65.18/codemirror.min.js"></script>
-    <script src="/static/libs/codemirror-5.65.18/mode/markdown.min.js"></script>
-    <script src="/static/libs/codemirror-5.65.18/addon/edit/continuelist.min.js"></script>
-    <script src="/static/libs/codemirror-5.65.18/addon/display/placeholder.min.js"></script>
-    <script src="/static/libs/codemirror-5.65.18/addon/selection/active-line.min.js"></script>
-    {{end}}
 </head>
 
 <body>
@@ -173,6 +160,10 @@
                             <i class="fa fa-times"></i>
                             <span class="button-text">{{t "common.cancel"}}</span>
                         </button>
+                        <button class="toolbar-button toggle-editor-mode" title="Edit Markdown source" aria-label="Edit Markdown source" aria-pressed="false">
+                            <i class="fa fa-code"></i>
+                            <span class="button-text">Markdown</span>
+                        </button>
                         <button class="toolbar-button view-history" title="{{t "toolbar.history"}}">
                             <i class="fa fa-history"></i>
                             <span class="button-text">{{t "toolbar.history"}}</span>
@@ -197,17 +188,11 @@
             </div>
         </div>
         {{if .Content}}
-        {{if .IsEditMode}}
-        <!-- Edit mode: Show textarea with raw markdown content -->
-        <div class="editor-container">
-            <!-- The textarea will be created dynamically by our editor code -->
-        </div>
-        {{else}}
-        <!-- View mode: Show rendered content -->
+        <!-- The article and editor share this location; edit mode swaps between them client-side. -->
         <div class="markdown-content" dir="auto">
             {{template "content" .}}
         </div>
-        {{end}}
+        <div class="editor-container" hidden aria-hidden="true"></div>
 
         <!-- Add file attachments section -->
         {{if not .Config.Wiki.HideAttachments}}
@@ -260,28 +245,6 @@
     <script src="/static/js/keyboard-shortcuts.js?={{getVersion}}"></script>
     <script src="/static/js/edit-button.js?={{getVersion}}"></script>
     <script src="/static/js/app-init.js?={{getVersion}}"></script>
-    {{if .IsEditMode}}
-    <!-- ============================================ -->
-    <!-- EDIT MODE ONLY - Performance Optimization    -->
-    <!-- These scripts (~2MB total) are ONLY loaded   -->
-    <!-- when in edit mode (?mode=edit) to prevent    -->
-    <!-- 25+ second freeze on page load in view mode  -->
-    <!-- ============================================ -->
-
-    <!-- Markdown table editor dependencies (~600KB) -->
-    <script src="/static/js/mte-meaw.js?={{getVersion}}"></script>
-    <script src="/static/js/mte-kernel-2.1.1.js?={{getVersion}}"></script>
-
-    <!-- Editor modules - loaded in dependency order (~1MB) -->
-    <script src="/static/js/editor-themes.js?={{getVersion}}"></script>
-    <script src="/static/js/editor-core.js?={{getVersion}}"></script>
-    <script src="/static/js/editor-preview.js?={{getVersion}}"></script>
-    <script src="/static/js/editor-pickers.js?={{getVersion}}"></script>
-    <script src="/static/js/editor-toolbar.js?={{getVersion}}"></script>
-    <script src="/static/js/editor.js?={{getVersion}}"></script>
-
-    <script src="/static/js/markdown-table-editor.js?={{getVersion}}"></script>
-    {{end}}
     <script src="/static/js/search.js?={{getVersion}}" defer></script>
     <script src="/static/js/move-document.js?={{getVersion}}" defer></script>
     <script src="/static/js/import-manager.js?={{getVersion}}" defer></script>

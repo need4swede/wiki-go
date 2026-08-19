@@ -506,26 +506,6 @@ func HomeHandler(w http.ResponseWriter, r *http.Request, cfg *config.Config) {
 		return
 	}
 
-	// Detect edit mode from query parameter
-	mode := r.URL.Query().Get("mode")
-	isEditMode := mode == "edit"
-
-	// Edit mode requires authentication and editor/admin role
-	if isEditMode {
-		session := auth.GetSession(r)
-		if session == nil {
-			// User not authenticated - redirect to view mode
-			http.Redirect(w, r, "/", http.StatusSeeOther)
-			return
-		}
-		// Check if user has editor or admin role
-		if !auth.RequireRole(r, "editor") {
-			// User lacks required role - redirect to view mode
-			http.Redirect(w, r, "/", http.StatusSeeOther)
-			return
-		}
-	}
-
 	// Get navigation items
 	nav, err := utils.BuildNavigation(cfg.Wiki.RootDir, cfg.Wiki.DocumentsDir)
 	if err != nil {
@@ -554,12 +534,6 @@ func HomeHandler(w http.ResponseWriter, r *http.Request, cfg *config.Config) {
 		content = []byte("# Welcome to LeoMoon Wiki-Go\n\nThis is your homepage.")
 	}
 
-	var rawContent string
-	// If in edit mode, store raw content with frontmatter preserved
-	if isEditMode {
-		rawContent = string(content)
-	}
-
 	// Parse frontmatter to get display_image_attachments setting
 	var displayImageAttachments bool
 	metadata, _, hasFrontmatter := frontmatter.Parse(string(content))
@@ -579,7 +553,7 @@ func HomeHandler(w http.ResponseWriter, r *http.Request, cfg *config.Config) {
 	// Get authentication status
 	// session is already retrieved above
 	isAuthenticated := session != nil
-	
+
 	// Get user role
 	userRole := ""
 	if isAuthenticated && session != nil {
@@ -588,7 +562,7 @@ func HomeHandler(w http.ResponseWriter, r *http.Request, cfg *config.Config) {
 
 	// Render the markdown content
 	renderedContent := template.HTML(utils.RenderMarkdown(string(content)))
-	
+
 	// If content is empty but home document exists, ensure we have something truthy for template conditions
 	if strings.TrimSpace(string(renderedContent)) == "" {
 		renderedContent = template.HTML(" ") // Single space to make it truthy but effectively empty
@@ -606,8 +580,6 @@ func HomeHandler(w http.ResponseWriter, r *http.Request, cfg *config.Config) {
 		IsAuthenticated:         isAuthenticated,
 		UserRole:                userRole,
 		DocPath:                 "pages/home", // Special path for homepage
-		IsEditMode:              isEditMode,
-		RawContent:              rawContent,
 		DisplayImageAttachments: displayImageAttachments,
 	}
 

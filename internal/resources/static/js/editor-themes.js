@@ -57,7 +57,6 @@ function setupMobileSidebarEffect() {
         const editorContainer = document.querySelector('.editor-container');
         const editorLayout = document.querySelector('.editor-layout');
         const editorArea = document.querySelector('.editor-area');
-        const previewElement = document.querySelector('.editor-preview');
 
         if (isActive && editorContainer) {
             // Ensure editor elements get sidebar-blur class when sidebar is open
@@ -67,14 +66,12 @@ function setupMobileSidebarEffect() {
                 editorContainer.classList.add('sidebar-blur');
                 if (editorLayout) editorLayout.classList.add('sidebar-blur');
                 if (editorArea) editorArea.classList.add('sidebar-blur');
-                if (previewElement) previewElement.classList.add('sidebar-blur');
             }
         } else {
             // Remove sidebar-blur class when sidebar is closed
             if (editorContainer) editorContainer.classList.remove('sidebar-blur');
             if (editorLayout) editorLayout.classList.remove('sidebar-blur');
             if (editorArea) editorArea.classList.remove('sidebar-blur');
-            if (previewElement) previewElement.classList.remove('sidebar-blur');
 
             // Ensure editor gets focus back when needed
             const editor = window.EditorCore.getEditor();
@@ -132,8 +129,11 @@ function handleResponsiveChanges() {
 
 // Initialize mobile effects and responsive handling
 function initializeMobileEffects() {
-    // Call this function when the page loads
-    document.addEventListener('DOMContentLoaded', setupMobileSidebarEffect);
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupMobileSidebarEffect, { once: true });
+    } else {
+        setupMobileSidebarEffect();
+    }
 
     // Also call when window resizes between mobile and desktop views
     window.addEventListener('resize', handleResponsiveChanges);
@@ -143,11 +143,14 @@ function initializeMobileEffects() {
 function initialize() {
     initializeTheme();
     initializeMobileEffects();
-    // Preview shortcut is now handled centrally in keyboard-shortcuts.js
 }
 
-// Auto-initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', initialize);
+// Auto-initialize whether this deferred bundle loads before or after DOM ready.
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initialize, { once: true });
+} else {
+    initialize();
+}
 
 // Export the module
 window.EditorThemes = {

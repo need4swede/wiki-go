@@ -334,13 +334,10 @@
             localStorage.removeItem('pendingAction');
 
             if (pendingAction === 'editPage') {
-                // Check if the user has editor or admin role then navigate to edit mode
+                // Check the role, then enter the editor without leaving this page.
                 checkUserRole('editor').then(canEdit => {
                     if (canEdit) {
-                        // Navigate to edit mode
-                        const url = new URL(window.location);
-                        url.searchParams.set('mode', 'edit');
-                        window.location.href = url.toString();
+                        window.InPlaceEditor?.requestEdit();
                     } else {
                         showPermissionError('editor');
                     }

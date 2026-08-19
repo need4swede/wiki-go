@@ -10,82 +10,19 @@ Player controls differ by platform. Choose the guide for your device to learn ho
 
 | Guide | Covers |
 |-------|--------|
-| [Siri Remote](/playback/player-controls/siri-remote) | Apple TV's control bar, remote gestures, action buttons, and remote-specific behavior |
+| [Siri Remote](/playback/player-controls/siri-remote) | Apple TV's control bar, remote gestures, and action buttons |
 | [Touch](/playback/player-controls/touch) | iPhone and iPad touch gestures, action buttons, orientation, and outside-app controls |
 
-## Shared Playback Behavior
+## Related Settings
 
-These behaviors apply across playback, although the exact controls used to operate them depend on the platform.
+The platform guides explain how to operate the player.
+Use these pages for playback behavior and settings that affect the controls:
 
-### Scrubbing
+| Topic | Documentation |
+|-------|---------------|
+| Scrubbing, Seek Mode, and seek previews | [Playback Settings](/settings/playback#controls) |
+| Autoplay, Up Next, and skip segments | [Playback Settings](/settings/playback#autoplay) |
+| Screensaver and video caching | [Playback Settings](/settings/playback#advanced) |
+| Audio, subtitles, video, chapters, and stream info | [Playback Menu](/playback/playback-menu) |
 
-With controls visible:
-
-1. Navigate focus onto the progress bar
-2. Click first if your Seek Mode requires activation, then move left/right to scrub
-3. A floating thumbnail with a time pill follows the playhead
-4. The current chapter name appears under the timestamps
-5. Click after moving to commit the seek, or press Menu to cancel
-
-If you click the focused progress bar but do not move it, the next click pauses or resumes instead of seeking.
-The progress bar stays armed, so another stationary click reverses the pause or resume.
-As soon as you reposition the playhead, the next click commits the seek.
-
-**Seek Mode** in **Settings > Playback > Controls** decides how seeking engages:
-
-| Mode | Behavior |
-|------|----------|
-| **Locked** | Click the progress bar to enter seek mode first |
-| **Limited** | D-pad skips instantly; touch scrubbing requires a click |
-| **Unlocked** | Both D-pad and touch work immediately (default) |
-
-In every mode, clicking an idle player progress bar arms the stationary click behavior above.
-Scrub speed is adjustable with **Scrub Sensitivity**.
-
-#### Where Seek Previews Come From
-
-Neptune has two sources and uses whichever fits the item:
-
-| Source | When It Is Used |
-|--------|-----------------|
-| **Backend Preview Images** | Your backend provides native preview images for the item |
-| **Live extraction** | Everything else. Trident decodes frames from the video itself while you scrub |
-
-Live extraction generates a preview directly from the video when native images are missing or cannot be loaded.
-It needs no pre-generated artwork from the backend. When backend previews are not available, Neptune uses live extraction automatically, and switches between the two on a per item basis.
-
-These can be configured via **Settings > Playback > Controls > Timeline**.
-
-### Skip Segments
-
-When your backend provides segment data, a skip button appears at the right moment, such as - **Skip Intro**, **Skip Credits**, **Skip Recap**, **Skip Preview**, or **Skip Ad**.
-On Jellyfin, segment data can come from the Intro Skipper plugin or Jellyfin 10.11 media segments; availability may differ on future backends.
-
-- With controls hidden, the button appears as a standalone pill.
-  While that Skip action is actionable, pressing Select uses it instead of pausing, even though controls are down.
-  It dismisses itself if ignored; outside that actionable window, a hidden-controls click toggles play/pause normally.
-- With **Auto Skip** on (**Settings > Playback > Autoplay**), segments skip without a button press.
-
-### Up Next
-
-When an episode ends, Up Next counts down to the next one:
-
-- **Auto countdown (default):** the countdown runs the length of the end credits as an ambient ring, then expands for the final seconds.
-  Long credits don't mean a long wait; short credits don't cut you off.
-- **Fixed countdown:** a set 10, 20, or 30 seconds with a **Play Now** button.
-
-Press Menu to cancel and let the credits roll.
-Autoplay can also carry across seasons, and through movie collections if you enable **Autoplay Collections**.
-All of it lives in **Settings > Playback > Autoplay**.
-
-On iPhone and iPad, Up Next does not start a fresh playback session while Neptune remains backgrounded.
-The finished session stops and can be continued from Continue Watching after you return.
-
-### Shuffle
-
-When a series is playing in [shuffle mode](/browsing/item-details/tv-shows), a corner prompt offers **Skip Episode** to re-roll, and each episode opens with a title card telling you what you landed on.
-
-### Screensaver
-
-Playing video always blocks the screensaver.
-While paused, the system is allowed to start it unless you turn on **Prevent Screensaver on Pause** in **Settings > Playback > Advanced**.
+See [Playback](/playback) for the complete playback guide.

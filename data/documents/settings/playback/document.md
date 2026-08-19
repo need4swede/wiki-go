@@ -96,7 +96,7 @@ Leave it on and Neptune uses native preview images exposed by your backend, fall
 Turn it off and Neptune always extracts its own frames.
 It only appears while **Seek Thumbnails** is on, since that setting decides whether previews show at all.
 HDR and Dolby Vision previews use the same color-normalization path on either source, without reprocessing server images that are already correct.
-See [Player Controls](/playback/player-controls#scrubbing) for how the two sources differ.
+See [Player Controls](/playback/player-controls) for the platform-specific control guides.
 
 iPhone and iPad place their supported timeline options in the **Controls** section.
 Siri Remote behavior and the remaining Apple TV-only controls do not appear there.
