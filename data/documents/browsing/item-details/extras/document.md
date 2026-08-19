@@ -6,8 +6,6 @@ order: 30
 
 Movies and TV shows may include bonus content.
 
-
-
 ## Extra Types
 
 | Type | Description |
@@ -21,8 +19,6 @@ Movies and TV shows may include bonus content.
 | **Samples** | Preview clips |
 | **Theme Videos** | Title sequences and theme footage |
 
-
-
 ## Viewing Extras
 
 1. Navigate to the **Extras** section on any detail page
@@ -31,20 +27,18 @@ Movies and TV shows may include bonus content.
 
 Extras stored in your library play in Neptune's player like any other video.
 
-
-
 ## Trailers
 
 The **Trailer** button in the action pill plays the best available trailer:
 
-1. **Local trailer files.** When your media library exposes trailer files as special features (for example, `MovieName/Trailers/Official Trailer.mp4` on Jellyfin), they play right in Neptune.
-2. **YouTube.** When there's no local trailer, Neptune finds the official trailer through your server's metadata or TMDB and opens it in the YouTube app.
+1. **Local trailer files.**
+   When your media library exposes trailer files as special features (for example, `MovieName/Trailers/Official Trailer.mp4` on Jellyfin), they play right in Neptune.
+2. **YouTube.**
+   When there's no local trailer, Neptune finds the official trailer through your server's metadata or TMDB and opens it in the YouTube app.
 
 When an item has several trailers, a **Choose Trailer** picker lists the local ones alongside a **Watch on YouTube** option.
 
 The button only appears when at least one source is likely to yield a trailer.
-
-
 
 ## Collections
 
@@ -53,8 +47,6 @@ When a movie belongs to a collection (e.g., "The Lord of the Rings"):
 1. Scroll to the **Part of Collection** section
 2. Select the collection
 3. Browse all movies in the collection
-
-
 
 ## Similar Items
 

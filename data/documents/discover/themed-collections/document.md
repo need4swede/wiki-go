@@ -4,9 +4,8 @@ order: 30
 
 # Themed Collections
 
-Build your own permanent Discover shortcuts around ideas rather than genres. Each card represents a catalog keyword and opens a Movies/TV browse across Seerr, including titles that are not in your library yet.
-
-
+Build your own permanent Discover shortcuts around ideas rather than genres.
+Each card represents a catalog keyword and opens a Movies/TV browse across Seerr, including titles that are not in your library yet.
 
 ## Default Collections
 
@@ -23,8 +22,6 @@ Neptune begins with ten themes:
 - Coming of Age
 - Survival
 
-
-
 ## Adding a Collection
 
 1. Open the **Themed Collections** row on Discover.
@@ -34,21 +31,19 @@ Neptune begins with ten themes:
 
 The search uses TMDB's keyword catalog through Seerr, so specific ideas such as `found footage`, `talking animals`, `courtroom`, or `space opera` can become reusable browse cards.
 
-
-
 ## Removing and Restoring
 
-The collection manager lists **Your Collections** first. Select the checkmark beside a pinned keyword to remove it.
+The collection manager lists **Your Collections** first.
+Select the checkmark beside a pinned keyword to remove it.
 
-Once you change the list, **Reset to Defaults** becomes available. Resetting restores the ten starter themes and removes the custom keyword selection.
-
-
+Once you change the list, **Reset to Defaults** becomes available.
+Resetting restores the ten starter themes and removes the custom keyword selection.
 
 ## Browsing a Theme
 
-Select a themed card to open a full grid with Movies and TV Shows tabs. Results load page by page as you browse. Select any title to play it when available or request it through Seerr.
-
-
+Select a themed card to open a full grid with Movies and TV Shows tabs.
+Results load page by page as you browse.
+Select any title to play it when available or request it through Seerr.
 
 ## Themed Collections vs. Smart Tags
 

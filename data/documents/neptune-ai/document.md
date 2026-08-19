@@ -4,9 +4,11 @@ order: 50
 
 # Neptune AI
 
-Neptune AI is Neptune's built-in, hosted intelligence layer. It is a product-wide capability rather than a Search feature: today it helps understand natural-language queries, recover half-remembered episodes, and add useful context to titles and people; over time, the same layer can support intelligent experiences elsewhere in Neptune.
+Neptune AI is Neptune's built-in, hosted intelligence layer.
+It is a product-wide capability rather than a Search feature: today it helps understand natural-language queries, recover half-remembered episodes, and add useful context to titles and people; over time, the same layer can support intelligent experiences elsewhere in Neptune.
 
-Neptune AI is included with [Neptune Pro](/neptune-pro/neptune-ai). There are no API keys, model names, endpoints, or local servers to manage.
+Neptune AI is included with [Neptune Pro](/neptune-pro/neptune-ai).
+There are no API keys, model names, endpoints, or local servers to manage.
 
 ## In This Section
 
@@ -27,27 +29,29 @@ Neptune AI is included with [Neptune Pro](/neptune-pro/neptune-ai). There are no
 
 ## AI Search
 
-There is no Neptune AI search box. Use the normal Search tab and type naturally. Neptune shows instant local results first, then asks Neptune AI only when the result set is weak, empty, or clearly asks for a recommendation.
+There is no Neptune AI search box.
+Use the normal Search tab and type naturally.
+Neptune shows instant local results first, then asks Neptune AI only when the result set is weak, empty, or clearly asks for a recommendation.
 
-A **Searching with AI** indicator appears without taking the existing grid away. New matches are marked with a sparkle and **Found by AI**. See [AI Search](/search/prompt-search) for examples and the full handoff behavior.
-
-
+A **Searching with AI** indicator appears without taking the existing grid away.
+New matches are marked with a sparkle and **Found by AI**.
+See [AI Search](/search/prompt-search) for examples and the full handoff behavior.
 
 ## Access and Setup
 
 1. Open **Settings > Deep Learning**.
-2. Select **Neptune AI**. Free accounts see the Neptune Pro upgrade screen.
+2. Select **Neptune AI**.
+   Free accounts see the Neptune Pro upgrade screen.
 3. Ensure language models are enabled.
 4. Leave Neptune AI first in **Set Model Priority**, or place another configured provider ahead of it.
 5. Turn on **AI Search** if you want automatic search escalation.
 
 Episode Finder and Insights use the active provider even if the AI Search toggle is off; that toggle controls the unified Search bar specifically.
 
-
-
 ## Neptune AI vs. Bring Your Own Model
 
-Bring-your-own models are supported because choice matters, but they are general-purpose models connected through Neptune's provider interface. Neptune AI is different: it is the first-party intelligence system developed alongside Neptune itself, trained and tuned around Neptune's media workflows, structured feature contracts, and interaction patterns.
+Bring-your-own models are supported because choice matters, but they are general-purpose models connected through Neptune's provider interface.
+Neptune AI is different: it is the first-party intelligence system developed alongside Neptune itself, trained and tuned around Neptune's media workflows, structured feature contracts, and interaction patterns.
 
 | | **Neptune AI** | **Bring Your Own Model** |
 |---|----------------|--------------------------|
@@ -61,20 +65,24 @@ Bring-your-own models are supported because choice matters, but they are general
 | **Setup and upkeep** | Included with Neptune Pro and ready immediately; Neptune maintains the models and service | You maintain the endpoint, model, hardware, API key, quota, and compatibility |
 | **Privacy and control** | Sends only the active request and its minimal context to Neptune AI | Ollama can keep inference on your network; third-party cloud providers receive requests directly |
 
-That first-party relationship is the important difference. Neptune AI is not simply a hosted shortcut to a model Neptune also lets you configure yourself. The intelligence service and the app can evolve together: a new Neptune AI feature can introduce its own grounding, validation, cache, or server-side capability rather than being constrained to a generic completion request.
+That first-party relationship is the important difference.
+Neptune AI is not simply a hosted shortcut to a model Neptune also lets you configure yourself.
+The intelligence service and the app can evolve together: a new Neptune AI feature can introduce its own grounding, validation, cache, or server-side capability rather than being constrained to a generic completion request.
 
-Bring-your-own providers remain useful when local-only inference, a favorite model, or direct control matters most. They are also valid fallbacks. With **Set Model Priority**, Neptune AI can lead while Ollama or another provider remains available behind it—or the order can be reversed when you prefer local inference first.
-
-
+Bring-your-own providers remain useful when local-only inference, a favorite model, or direct control matters most.
+They are also valid fallbacks.
+With **Set Model Priority**, Neptune AI can lead while Ollama or another provider remains available behind it—or the order can be reversed when you prefer local inference first.
 
 ## Privacy
 
-Neptune sends a request only when an AI-powered action runs. The request contains the prompt and the minimum relevant context—for example, a search query and candidate titles, an item's metadata, or one series' episode inventory.
+Neptune sends a request only when an AI-powered action runs.
+The request contains the prompt and the minimum relevant context—for example, a search query and candidate titles, an item's metadata, or one series' episode inventory.
 
-Normal browsing, playback, local search, semantic matching, and library indexing do not upload your library to Neptune AI. If you prefer all inference to stay on your network, configure Ollama instead.
-
-
+Normal browsing, playback, local search, semantic matching, and library indexing do not upload your library to Neptune AI.
+If you prefer all inference to stay on your network, configure Ollama instead.
 
 ## Expectations
 
-Language models can misunderstand vague memories or lack reliable knowledge of very new and obscure titles. Neptune reduces that risk by searching locally first, grounding requests with your own metadata, verifying Episode Finder answers, showing match provenance, and keeping uncertain fields empty. AI assists the experience; it never replaces your server or the local index as the source of truth.
+Language models can misunderstand vague memories or lack reliable knowledge of very new and obscure titles.
+Neptune reduces that risk by searching locally first, grounding requests with your own metadata, verifying Episode Finder answers, showing match provenance, and keeping uncertain fields empty.
+AI assists the experience; it never replaces your server or the local index as the source of truth.

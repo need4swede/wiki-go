@@ -6,8 +6,6 @@ order: 20
 
 Browse series, seasons, and episodes.
 
-
-
 ## Show Level
 
 When first opening a series:
@@ -16,11 +14,10 @@ When first opening a series:
 - **Seasons row**: Browse all seasons
 - **Latest button**: Jump straight to the newest episode
 
-Select a season to view its episodes. Shows without season structure get a single "Episodes" list.
+Select a season to view its episodes.
+Shows without season structure get a single "Episodes" list.
 
 If your server is missing a season or upcoming episodes that exist elsewhere, Neptune can show them greyed out with air dates and a "Not available on your server" note, so you know what's coming.
-
-
 
 ## Season Level
 
@@ -35,8 +32,6 @@ When viewing a season:
 - Episode number and air date
 - Runtime and progress bar
 - Checkmark if watched
-
-
 
 ## Context Menus
 
@@ -62,40 +57,33 @@ Long-press (hold Select) on episodes and seasons for quick actions.
 
 Press **Menu** to close without taking action.
 
-
-
 ## Shuffle Mode
 
-Can't decide what to watch? Press **Shuffle** in the action pill and Neptune plays a random episode. A title card announces what you landed on, and a skip prompt in the corner lets you re-roll to a different episode if you're not feeling it. The Next Episode button keeps things random while shuffle is active.
+Can't decide what to watch?
+Press **Shuffle** in the action pill and Neptune plays a random episode.
+A title card announces what you landed on, and a skip prompt in the corner lets you re-roll to a different episode if you're not feeling it.
+The Next Episode button keeps things random while shuffle is active.
 
 Shuffle is per-show, so series that should stay sequential keep their order.
 
-
-
 ## Spoiler Protection
 
-Neptune can obscure thumbnails, titles, and descriptions for episodes that are
-both unwatched and completely unstarted. Once you begin an episode or mark it
-as watched, its details become visible.
+Neptune can obscure thumbnails, titles, and descriptions for episodes that are both unwatched and completely unstarted.
+Once you begin an episode or mark it as watched, its details become visible.
 
-On Apple TV, select the eye button in the action pill to change protection for
-the current show. This per-show choice takes priority over the app-wide
-setting, so you can protect an otherwise episodic show or reveal a serialized
-show.
+On Apple TV, select the eye button in the action pill to change protection for the current show.
+This per-show choice takes priority over the app-wide setting, so you can protect an otherwise episodic show or reveal a serialized show.
 
-For app-wide protection, go to **Settings > User Preferences > Appearance**,
-open the **Items** tab, then turn on **Hide Spoilers on Unstarted Episodes**.
-Its **Auto** scope protects serialized, hybrid, and unclassified shows while
-leaving episodic and anthology shows visible. **All** protects every show.
+For app-wide protection, go to **Settings > User Preferences > Appearance**, open the **Items** tab, then turn on **Hide Spoilers on Unstarted Episodes**.
+Its **Auto** scope protects serialized, hybrid, and unclassified shows while leaving episodic and anthology shows visible.
+**All** protects every show.
 
-See [Cards & Backdrops](/personalization/cards-and-backdrops) for the full
-guide to Auto, All, show classifications, and per-show choices.
-
-
+See [Cards & Backdrops](/personalization/cards-and-backdrops) for the full guide to Auto, All, show classifications, and per-show choices.
 
 ## Episode Finder
 
-Find a specific episode by describing what happens in it. Requires a language model; see the dedicated [Episode Finder](/neptune-ai/episode-finder) guide for its local matching, AI interpretation, verification, and confidence behavior.
+Find a specific episode by describing what happens in it.
+Requires a language model; see the dedicated [Episode Finder](/neptune-ai/episode-finder) guide for its local matching, AI interpretation, verification, and confidence behavior.
 
 ### How to Use
 
@@ -117,8 +105,7 @@ If Neptune finds one verified library episode with very high confidence, it can 
 
 Especially useful for rewatching memorable scenes when you can't remember which episode they're from.
 
-
-
 ## Theme Songs
 
-Theme music plays when viewing series details and fades out when you leave or start playback. Control volume, looping, and fade behavior in **Settings > User Preferences > Sounds**.
+Theme music plays when viewing series details and fades out when you leave or start playback.
+Control volume, looping, and fade behavior in **Settings > User Preferences > Sounds**.

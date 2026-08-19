@@ -6,8 +6,6 @@ order: 80
 
 Customize how Neptune looks and who uses it.
 
-
-
 ## In This Section
 
 | Page | Description |

@@ -4,9 +4,8 @@ order: 40
 
 # Plugin Settings
 
-Check plugin status and manage compatible backend extensions from inside the app. The options below describe Jellyfin's Neptune Plugin Suite; future backends may expose different extension options.
-
-
+Check plugin status and manage compatible backend extensions from inside the app.
+The options below describe Jellyfin's Neptune Plugin Suite; future backends may expose different extension options.
 
 ## Neptune Plugin Suite
 
@@ -29,15 +28,13 @@ Selecting the row shows version details (installed, latest available, release da
 | **Install Specific Version** | Roll back to an earlier release |
 | **Restart Server** | Reboot Jellyfin to finish an install. Active streams will be disconnected |
 
-When the suite is active, [Backup & Restore](/settings/backup) becomes available and Neptune uses server-side [indexes](/plugins/indexers) for faster startup and richer search. The upcoming [Transcoder](/plugins/transcoder) member will define download quality options, while [Studio](/plugins/studio) will provide server-backed UI customization, beginning with Top Shelf artwork.
-
-
+When the suite is active, [Backup & Restore](/settings/backup) becomes available and Neptune uses server-side [indexes](/plugins/indexers) for faster startup and richer search.
+The upcoming [Transcoder](/plugins/transcoder) member will define download quality options, while [Studio](/plugins/studio) will provide server-backed UI customization, beginning with Top Shelf artwork.
 
 ## Home Screen Sections
 
-The third-party plugin powering [Coming Soon](/browsing/home-screen/coming-soon) and [Because You Watched](/browsing/home-screen/because-you-watched). When detected, it appears here with an enable toggle.
-
-
+The third-party plugin powering [Coming Soon](/browsing/home-screen/coming-soon) and [Because You Watched](/browsing/home-screen/because-you-watched).
+When detected, it appears here with an enable toggle.
 
 ## Where Other Plugin Options Went
 

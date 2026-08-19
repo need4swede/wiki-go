@@ -4,9 +4,8 @@ order: 10
 
 # Video Codecs & Containers
 
-The video formats and containers Trident plays directly without backend transcoding. Audio formats live in [Audio](/playback/trident-player/audio), HDR behavior in [HDR & Dolby Vision](/playback/trident-player/hdr), and subtitle formats in [Subtitles](/playback/trident-player/subtitles).
-
-
+The video formats and containers Trident plays directly without backend transcoding.
+Audio formats live in [Audio](/playback/trident-player/audio), HDR behavior in [HDR & Dolby Vision](/playback/trident-player/hdr), and subtitle formats in [Subtitles](/playback/trident-player/subtitles).
 
 ## Video
 
@@ -27,11 +26,11 @@ The video formats and containers Trident plays directly without backend transcod
 | **MPEG-2** | DVDs and broadcast recordings |
 | **VC-1 / WMV3** | Older Blu-ray and Windows Media content |
 
-On iPhone and iPad, AV1 hardware acceleration is used when the device exposes it. Unsupported codecs are handed to a compatible backend for transcoding.
+On iPhone and iPad, AV1 hardware acceleration is used when the device exposes it.
+Unsupported codecs are handed to a compatible backend for transcoding.
 
-Interlaced content (common in DVDs and broadcast recordings) is de-interlaced automatically. Control this with the De-interlacing option in the [Playback Menu](/playback/playback-menu).
-
-
+Interlaced content (common in DVDs and broadcast recordings) is de-interlaced automatically.
+Control this with the De-interlacing option in the [Playback Menu](/playback/playback-menu).
 
 ## Video Limits
 
@@ -41,9 +40,8 @@ Interlaced content (common in DVDs and broadcast recordings) is de-interlaced au
 | **Frame rate** | Up to 60 fps |
 | **Bitrate** | Up to 200 Mbps |
 
-Hardware-decoded HEVC and H.264 are the reliable path at the upper limits. Practical VP9 and AV1 performance depends on the device, resolution, frame rate, and bitrate.
-
-
+Hardware-decoded HEVC and H.264 are the reliable path at the upper limits.
+Practical VP9 and AV1 performance depends on the device, resolution, frame rate, and bitrate.
 
 ## Containers
 
@@ -60,8 +58,7 @@ Hardware-decoded HEVC and H.264 are the reliable path at the upper limits. Pract
 
 Stream-link files (`.strm`) are supported as well.
 
-
-
 ## Unsupported Formats
 
-For a video codec or container Trident cannot play directly, a compatible backend can transcode the file to a supported format. The transcode happens in the background and depends on the connected backend's capabilities.
+For a video codec or container Trident cannot play directly, a compatible backend can transcode the file to a supported format.
+The transcode happens in the background and depends on the connected backend's capabilities.

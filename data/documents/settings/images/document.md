@@ -6,8 +6,6 @@ order: 60
 
 Manage how Neptune stores and preloads artwork for faster browsing.
 
-
-
 ## Download All Images
 
 When enabled, Neptune downloads your entire library's artwork in the background:
@@ -15,9 +13,9 @@ When enabled, Neptune downloads your entire library's artwork in the background:
 - **Faster navigation**: images are already there as you browse
 - **Reduced server load**: fetched once, served from the local cache
 
-Progress shows live while syncing (current phase, item, and count). Sync runs in the background, so you can keep using Neptune. For large libraries, let the first pass run overnight.
-
-
+Progress shows live while syncing (current phase, item, and count).
+Sync runs in the background, so you can keep using Neptune.
+For large libraries, let the first pass run overnight.
 
 ## Cache Breakdown
 
@@ -28,14 +26,13 @@ The cache size is broken down by image type (posters, backdrops, logos, thumbnai
 | **Clear** | Delete all cached images. They re-download as you browse |
 | **Clean Orphaned Images** | Remove artwork for items no longer in your library |
 
-
-
 ## Auto-Refresh Missing Images
 
-On by default. When an item's artwork fails to load or goes missing, Neptune quietly re-fetches it rather than leaving a blank card.
-
-
+On by default.
+When an item's artwork fails to load or goes missing, Neptune quietly re-fetches it rather than leaving a blank card.
 
 ## System Behavior
 
-The image cache uses the system's standard cache storage. The device may clear it when storage runs low; images re-download as needed. The cache is shared across profiles on the device.
+The image cache uses the system's standard cache storage.
+The device may clear it when storage runs low; images re-download as needed.
+The cache is shared across profiles on the device.

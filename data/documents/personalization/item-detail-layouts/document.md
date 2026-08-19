@@ -4,9 +4,9 @@ order: 30
 
 # Item Detail Layouts
 
-Choose how movie and TV show detail pages are presented. Three layouts ship, each with the same data but a different way of arranging it. Your selection syncs across every device signed in to the same profile.
-
-
+Choose how movie and TV show detail pages are presented.
+Three layouts ship, each with the same data but a different way of arranging it.
+Your selection syncs across every device signed in to the same profile.
 
 ## The Layouts
 
@@ -17,8 +17,6 @@ Choose how movie and TV show detail pages are presented. Three layouts ship, eac
 | **Minimal** | Backdrop-first. No poster, just title, metadata, and play controls anchored at the bottom of the screen. |
 
 Each layout uses the same backdrops, poster art, and metadata; only the composition changes.
-
-
 
 ## Choosing a Layout
 
@@ -32,8 +30,6 @@ Each layout uses the same backdrops, poster art, and metadata; only the composit
 
 The change applies instantly across every detail page.
 
-
-
 ## Description Toggles
 
 The **Minimal** and **Immersive** layouts share two toggles that trim on-screen text:
@@ -43,27 +39,31 @@ The **Minimal** and **Immersive** layouts share two toggles that trim on-screen 
 | **Item Description** | Hides the overview paragraph and genre line on movie and show pages. Title, metadata pills, and play controls stay. |
 | **Episode Description** | Hides the episode synopsis in the episode gallery. Useful for spoiler-free browsing. |
 
-Both toggles only appear when one of the full-bleed layouts is selected. The Detailed layout always shows full descriptions.
-
-
+Both toggles only appear when one of the full-bleed layouts is selected.
+The Detailed layout always shows full descriptions.
 
 ## Immersive Layout Details
 
 The Immersive layout adapts to whatever artwork is on screen:
 
-- **Backdrop-aware glass card.** When the backdrop is bright (snow scenes, white sets), a frosted panel appears behind the text so it stays legible. On darker artwork the glass fades out.
-- **Per-letter drop shadows.** Title and description text carries a drop shadow that strengthens on bright backdrops.
-- **Long titles auto-shrink.** Titles like The Lord of the Rings: The Return of the King scale down to stay on one line.
-- **Picker focus mode.** When the version picker or resume pill opens, the metadata fades back so the picker reads clearly.
-
-
+- **Backdrop-aware glass card.**
+  When the backdrop is bright (snow scenes, white sets), a frosted panel appears behind the text so it stays legible.
+  On darker artwork the glass fades out.
+- **Per-letter drop shadows.**
+  Title and description text carries a drop shadow that strengthens on bright backdrops.
+- **Long titles auto-shrink.**
+  Titles like The Lord of the Rings: The Return of the King scale down to stay on one line.
+- **Picker focus mode.**
+  When the version picker or resume pill opens, the metadata fades back so the picker reads clearly.
 
 ## Big Picture Mode
 
-A separate switch on the same Layouts tab. **Big Picture Mode** turns detail sections into full-screen pages with larger cards and paging navigation, built for sitting further from the screen. It works with any of the three layouts.
-
-
+A separate switch on the same Layouts tab.
+**Big Picture Mode** turns detail sections into full-screen pages with larger cards and paging navigation, built for sitting further from the screen.
+It works with any of the three layouts.
 
 ## Cross-Platform Sync
 
-Layout selection is a per-profile preference. Sign in on a second device and the same layout applies automatically. Server administrators using the [Neptune MDM](/plugins/mdm) plugin can set a default layout for all users.
+Layout selection is a per-profile preference.
+Sign in on a second device and the same layout applies automatically.
+Server administrators using the [Neptune MDM](/plugins/mdm) plugin can set a default layout for all users.

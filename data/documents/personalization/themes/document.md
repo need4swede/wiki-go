@@ -6,16 +6,12 @@ order: 20
 
 Customize Neptune's visual appearance.
 
-
-
 ## In This Section
 
 | Page | Description |
 |------|-------------|
 | [Built-in Themes](/personalization/themes/built-in) | Nine pre-designed themes |
 | [Custom Themes](/personalization/themes/custom) | Import custom JSON themes |
-
-
 
 ## What Themes Control
 
@@ -25,8 +21,6 @@ Customize Neptune's visual appearance.
 - Focus indicators and borders
 - Player controls appearance
 - Media quality badges
-
-
 
 ## Changing Themes
 
@@ -39,11 +33,10 @@ Customize Neptune's visual appearance.
 3. Focus a theme to preview it live
 4. Select to apply
 
-
-
 ## Theme Modes
 
-Theme Mode controls how Neptune blends your theme's colors with the content you're browsing. It sits at the top of the Themes tab.
+Theme Mode controls how Neptune blends your theme's colors with the content you're browsing.
+It sits at the top of the Themes tab.
 
 | Mode | Behavior |
 |------|----------|
@@ -51,15 +44,13 @@ Theme Mode controls how Neptune blends your theme's colors with the content you'
 | **Adaptive** | Accent colors adapt to focused posters and backdrops (the default) |
 | **Dynamic** | Full palette adapts to the focused content |
 
-Adaptive has a sub-option to only adapt colors on item detail pages, keeping browsing stable. All modes work with every theme, built-in or custom.
-
-
+Adaptive has a sub-option to only adapt colors on item detail pages, keeping browsing stable.
+All modes work with every theme, built-in or custom.
 
 ## Per-Profile Themes
 
-Each profile has its own theme, and the launch profile picker even previews each person's choice behind their avatar. Neptune switches automatically when you switch profiles.
-
-
+Each profile has its own theme, and the launch profile picker even previews each person's choice behind their avatar.
+Neptune switches automatically when you switch profiles.
 
 ## Tips
 

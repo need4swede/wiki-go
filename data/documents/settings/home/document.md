@@ -4,24 +4,21 @@ order: 10
 
 # Home Settings
 
-Control what the Home screen shows, how the app navigates, and what appears
-while Home is loading. Four tabs: **Library**, **Navigation**, **Spotlight**,
-and **Sections**.
+Control what the Home screen shows, how the app navigates, and what appears while Home is loading.
+Four tabs: **Library**, **Navigation**, **Spotlight**, and **Sections**.
 
 ## Loading Screen
 
 | Setting | Description |
 |---------|-------------|
-| **Display hints** | Show or hide launch messages (Free) |
-| **Use library artwork** | Put a cached poster or backdrop behind the loading sequence (Neptune Pro) |
-| **Artwork source** | Choose Spotlight, Continue, Favorites, Recently Added, or Random (Neptune Pro) |
+| **Display hints** | Show or hide launch messages |
+| **Use library artwork** | Put a cached poster or backdrop behind the loading sequence |
+| **Artwork source** | Choose Spotlight, Continue, Favorites, Recently Added, or Random |
 
-iPhone and iPad use posters in portrait and backdrops in landscape. Apple TV
-uses backdrops. See [Cinematic Loading Screens](/neptune-pro/loading-screens)
-for source selection, orientation behavior, and how the independent launch
-artwork reserve works.
+Posters are used in portrait orientations and backdrops in landscape.
 
-
+Featuring library artwork during loading screens is exclusive to [Neptune Pro](/neptune-pro) users.
+See [Cinematic Loading Screens](/neptune-pro/loading-screens) for source selection, orientation behavior, and how the independent launch artwork reserve works.
 
 ## Library
 
@@ -33,8 +30,6 @@ How library content presents itself on Home:
 | **Group Movies into Collections** | Fold movies into their collections on the Movies tab: Off, Auto, or On |
 | **Keep Sorting Preference** | Remember your last sort in browse views |
 | **Display Titles / Display Year / Display Card Labels** | What text appears under library cards |
-
-
 
 ## Navigation
 
@@ -54,15 +49,13 @@ The tab bar and app navigation behavior:
 
 See [Navigation](/browsing/navigation) for how these play out.
 
-**Limit to Continue Watching / Next-Up** appears only after you turn on
-Impatient Mode. With the limiter enabled, selecting a Continue Watching or
-Next Up card starts playback immediately and resumes saved progress when one
-exists. Cards in Spotlight, Search, Favorites, Recently Added, New Releases,
-and other sections keep their normal detail-first behavior.
+**Limit to Continue Watching / Next-Up** appears only after you turn on Impatient Mode.
+With the limiter enabled, selecting a Continue Watching or Next Up card starts playback immediately and resumes saved progress when one exists.
+Cards in Spotlight, Search, Favorites, Recently Added, New Releases, and other sections keep their normal detail-first behavior.
 
-Movies, Shows, and Music are hidden by default. Movies and Shows reuse the Home sections with type filtering. Music has its own Spotlight, Continue Watching, Recently Added, and Artists layout; long-press the Music tab and choose **Edit Music** to customize it.
-
-
+Movies, Shows, and Music are hidden by default.
+Movies and Shows reuse the Home sections with type filtering.
+Music has its own Spotlight, Continue Watching, Recently Added, and Artists layout; long-press the Music tab and choose **Edit Music** to customize it.
 
 ## Spotlight
 
@@ -70,8 +63,6 @@ Movies, Shows, and Music are hidden by default. Movies and Shows reuse the Home 
 |---------|-------------|
 | **Spotlight Limit** | Carousel size, 4 to 12 items |
 | **Direct Navigation** | Skip the fullscreen gallery and open spotlight items directly |
-
-
 
 ## Sections
 

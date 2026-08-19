@@ -24,11 +24,9 @@ The home screen is made up of the following sections, listed in default order:
 | [Coming Soon](/browsing/home-screen/coming-soon) | Upcoming releases you've requested |
 | [Because You Watched](/browsing/home-screen/because-you-watched) | Similar titles based on movies you've watched (requires plugin) |
 
-The **Pins** row mirrors your [Library Pins](/library/shortcuts). Pin an item
-from its detail page or with a long press or touch-and-hold and it shows up
-here. The same gesture on an existing Pin offers removal.
-
-
+The **Pins** row mirrors your [Library Pins](/library/shortcuts).
+Pin an item from its detail page or with a long press or touch-and-hold and it shows up here.
+The same gesture on an existing Pin offers removal.
 
 ## Quick Actions
 
@@ -40,7 +38,8 @@ Long-press any content card to open the quick actions modal:
 
 ## Customizing Sections
 
-Long-press any tab in the menu bar and select **Edit Home Screen**. The editor shows every section as a labeled card:
+Long-press any tab in the menu bar and select **Edit Home Screen**.
+The editor shows every section as a labeled card:
 
 | Action | How |
 |--------|-----|
@@ -50,11 +49,11 @@ Long-press any tab in the menu bar and select **Edit Home Screen**. The editor s
 | **Start over** | Press Restore Default |
 | **Save and exit** | Press Done or Back |
 
-Section order and visibility are saved per profile. Each server account has its own layout.
+Section order and visibility are saved per profile.
+Each server account has its own layout.
 
-For finer control, **Settings > Home** sets row limits (Continue Watching, Next Up, Recently Added, Recommended), the new-release window, library card options, and more. See [Home Settings](/settings/home).
-
-
+For finer control, **Settings > Home** sets row limits (Continue Watching, Next Up, Recently Added, Recommended), the new-release window, library card options, and more.
+See [Home Settings](/settings/home).
 
 ## Movies, Shows & Music Tabs
 
@@ -63,29 +62,29 @@ The optional **Movies** and **Shows** tabs use the same configurable sections as
 - **Movies tab:** Spotlight shows only movies, content rows show only movies
 - **Shows tab:** Spotlight shows only shows, content rows show only TV content
 
-Some sections are restricted by tab. Next Up is hidden on Movies because it only contains episodes, Because You Watched is hidden on Shows because it is movie-based, and Collections stays on Home because a collection can mix media types. Libraries, Pins, and Downloads appear on Home, Movies, and Shows with content filtered for the current tab.
+Some sections are restricted by tab.
+Next Up is hidden on Movies because it only contains episodes, Because You Watched is hidden on Shows because it is movie-based, and Collections stays on Home because a collection can mix media types.
+Libraries, Pins, and Downloads appear on Home, Movies, and Shows with content filtered for the current tab.
 
 If you have multiple movie or show libraries, a library picker appears at the top letting you filter by library or view all.
 
-The **Music** tab is a dedicated music-video experience rather than another
-Home filter. It combines your music-video libraries into its own Spotlight,
-Continue Watching, Recently Added, Artists, and music-video Pins content.
-Long-press Music and choose **Edit Music** to reorder or hide its configurable
-sections. The tab is hidden by default; enable it under **Settings > Home >
-Navigation**.
-
-
+The **Music** tab is a dedicated music-video experience rather than another Home filter.
+It combines your music-video libraries into its own Spotlight, Continue Watching, Recently Added, Artists, and music-video Pins content.
+Long-press Music and choose **Edit Music** to reorder or hide its configurable sections.
+The tab is hidden by default; enable it under **Settings > Home > Navigation**.
 
 ## Content Cards
 
-**Poster cards:** Movies and shows with poster art displayed vertically. Used by New Releases, Recently Added, Favorites, Recommended, Coming Soon, and Because You Watched.
+**Poster cards:** Movies and shows with poster art displayed vertically.
+Used by New Releases, Recently Added, Favorites, Recommended, Coming Soon, and Because You Watched.
 
 **Wide cards:** Continue Watching and Next Up use wider thumbnails showing episode screenshots or movie backdrops at a landscape aspect ratio.
 
-**Focus behavior:** Cards scale up with a highlight border on focus. The focused item's backdrop appears behind all content at the top of the screen.
-
-
+**Focus behavior:** Cards scale up with a highlight border on focus.
+The focused item's backdrop appears behind all content at the top of the screen.
 
 ## Background Refresh
 
-Content refreshes automatically while you browse. Each refresh updates only the rows whose content has changed, so the screen never jumps under you. Refresh pauses during playback and on non-content tabs, then resumes when you return.
+Content refreshes automatically while you browse.
+Each refresh updates only the rows whose content has changed, so the screen never jumps under you.
+Refresh pauses during playback and on non-content tabs, then resumes when you return.

@@ -4,9 +4,8 @@ order: 20
 
 # Libraries
 
-Artwork cards for the media libraries available to your account. Select a card to open that library with its own browse, filter, and sort controls.
-
-
+Artwork cards for the media libraries available to your account.
+Select a card to open that library with its own browse, filter, and sort controls.
 
 ## Tab Visibility
 
@@ -16,9 +15,8 @@ Artwork cards for the media libraries available to your account. Select a card t
 | **Movies** | Movie libraries only |
 | **Shows** | TV libraries only |
 
-The Music tab has its own artist-first layout rather than a Libraries row. Opening a music-video library elsewhere in Neptune takes you to its artist browse.
-
-
+The Music tab has its own artist-first layout rather than a Libraries row.
+Opening a music-video library elsewhere in Neptune takes you to its artist browse.
 
 ## Customization
 
@@ -29,8 +27,6 @@ Open **Settings > Home > Library** to:
 - Automatically open the only available library instead of showing a picker
 
 You can move or hide the entire Libraries section with **Edit Home Screen**.
-
-
 
 ## Behavior Notes
 

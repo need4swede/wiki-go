@@ -4,11 +4,11 @@ order: 10
 
 # Episode Finder
 
-Describe a scene, quote, joke, event, or half-remembered plot point and Neptune finds the episode in your library. Episode Finder is built for the moment when you know exactly what happened but cannot remember the title, season, or episode number.
+Describe a scene, quote, joke, event, or half-remembered plot point and Neptune finds the episode in your library.
+Episode Finder is built for the moment when you know exactly what happened but cannot remember the title, season, or episode number.
 
-It works with any configured language-model provider. [Neptune AI](/neptune-ai) provides the zero-setup hosted experience with Neptune Pro.
-
-
+It works with any configured language-model provider.
+[Neptune AI](/neptune-ai) provides the zero-setup hosted experience with Neptune Pro.
 
 ## How to Use It
 
@@ -38,4 +38,5 @@ You can describe a scene naturally or enter a direct reference:
 | **Not in library** | The episode is known, but Neptune cannot play it from your server |
 | **Best guess** | A possible answer that could not be fully verified |
 
-Neptune can show up to four candidates. Focus a card to see its season, episode, title, overview, and confidence status.
+Neptune can show up to four candidates.
+Focus a card to see its season, episode, title, overview, and confidence status.

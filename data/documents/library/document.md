@@ -6,8 +6,6 @@ order: 30
 
 Browse your entire media collection with filtering, stats, and category-based browsing.
 
-
-
 ## In This Section
 
 | Page | Description |
@@ -15,11 +13,10 @@ Browse your entire media collection with filtering, stats, and category-based br
 | [Pins](/library/shortcuts) | Pinning items, browse pins, and timestamp pins |
 | [Smart Tags](/library/smart-tags) | Theme and mood browsing, Surprise Me, Mix & Match |
 
-
-
 ## Overview
 
-The Library tab is the map of everything you have. Unlike the Home tab's curated rows, the Library gives you your libraries, pins, browsable categories, stats, and a full filterable grid of all your content.
+The Library tab is the map of everything you have.
+Unlike the Home tab's curated rows, the Library gives you your libraries, pins, browsable categories, stats, and a full filterable grid of all your content.
 
 Sections on the Library landing page, in default order:
 
@@ -32,9 +29,8 @@ Sections on the Library landing page, in default order:
 | **Browse by** | Format, Genre, Network, Person, Tags, Specs, and Studio |
 | **Library Stats** | Counts for movies, shows, episodes, collections, in progress, favorites |
 
-Long-press the Library tab and select **Edit Library** to reorder or hide these sections. Long-press cards within Your Libraries or Browse by to rearrange them in place.
-
-
+Long-press the Library tab and select **Edit Library** to reorder or hide these sections.
+Long-press cards within Your Libraries or Browse by to rearrange them in place.
 
 ## Browse By
 
@@ -50,17 +46,18 @@ Each category opens a browsable view filtered to that selection:
 | **Specs** | Audio, dynamic range, resolution, and subtitles |
 | **Tags** | [Smart Tags](/library/smart-tags): themes, settings, and moods |
 
-The Specs browser includes **Refresh** and **Full Rescan** actions if your technical data looks out of date. Installing the [Neptune Indexers](/plugins/indexers) plugin makes these views instant.
-
-
+The Specs browser includes **Refresh** and **Full Rescan** actions if your technical data looks out of date.
+Installing the [Neptune Indexers](/plugins/indexers) plugin makes these views instant.
 
 ## Full Library Grid
 
-**Browse All** opens the full grid: a collapsible filter sidebar on the left, a poster grid on the right, with infinite scroll. The sidebar expands when you navigate to it and collapses to icons while you browse.
+**Browse All** opens the full grid: a collapsible filter sidebar on the left, a poster grid on the right, with infinite scroll.
+The sidebar expands when you navigate to it and collapses to icons while you browse.
 
 ### Media Types
 
-Pills at the top switch content type: **All**, **Movies**, **Shows**, **Collections**, **Favorites**. The Collections view adds its own pills for movie, show, and mixed collections.
+Pills at the top switch content type: **All**, **Movies**, **Shows**, **Collections**, **Favorites**.
+The Collections view adds its own pills for movie, show, and mixed collections.
 
 ### Filters
 
@@ -76,9 +73,8 @@ Pills at the top switch content type: **All**, **Movies**, **Shows**, **Collecti
 
 ### Sorting
 
-Sort by **Name**, **Date Added**, **Release Date**, **Community Rating**, **Critic Rating**, **Runtime**, or **Random**, ascending or descending. Random is a good way to settle a "what do we watch" argument.
-
-
+Sort by **Name**, **Date Added**, **Release Date**, **Community Rating**, **Critic Rating**, **Runtime**, or **Random**, ascending or descending.
+Random is a good way to settle a "what do we watch" argument.
 
 ## Navigation Tips
 

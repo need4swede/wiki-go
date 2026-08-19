@@ -4,17 +4,15 @@ order: 100
 
 # Collections
 
-Your box sets and franchises in a horizontal Home row. Each card opens the collection detail page, where you can browse, filter, sort, and play its items.
-
-
+Your box sets and franchises in a horizontal Home row.
+Each card opens the collection detail page, where you can browse, filter, sort, and play its items.
 
 ## Home-Only Section
 
 Collections can contain movies, shows, or both, so the row appears on the combined Home tab rather than the filtered Movies, Shows, or Music tabs.
 
-The row shows a window of your collections. When more are available, a trailing **See All** card opens the complete [Collections](/browsing/collections) browse.
-
-
+The row shows a window of your collections.
+When more are available, a trailing **See All** card opens the complete [Collections](/browsing/collections) browse.
 
 ## Navigation
 
@@ -25,8 +23,7 @@ The row shows a window of your collections. When more are available, a trailing 
 
 Long-press a collection card for quick actions, including adding it to [Library Pins](/library/shortcuts).
 
-
-
 ## Related Setting
 
-The Home row is separate from **Group Movies into Collections** in **Settings > Home > Library**. That setting folds movies into collection cards while browsing the Movies tab; it does not control whether this Home section is visible.
+The Home row is separate from **Group Movies into Collections** in **Settings > Home > Library**.
+That setting folds movies into collection cards while browsing the Movies tab; it does not control whether this Home section is visible.

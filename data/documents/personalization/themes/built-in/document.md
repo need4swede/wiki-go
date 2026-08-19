@@ -4,9 +4,8 @@ order: 10
 
 # Built-in Themes
 
-Neptune includes nine built-in themes. All of them are dark; the difference is in color, warmth, and motion.
-
-
+Neptune includes nine built-in themes.
+All of them are dark; the difference is in color, warmth, and motion.
 
 ## Ocean
 
@@ -17,8 +16,6 @@ Deep blue underwater aesthetic with animated effects.
 - **Accent**: Teal/cyan
 - **Best for**: Dark rooms, cinematic feel
 
-
-
 ## Midnight
 
 Rich purples and deep blues.
@@ -27,8 +24,6 @@ Rich purples and deep blues.
 - **Background**: Animated purple gradient
 - **Accent**: Purple/violet
 - **Best for**: Evening viewing
-
-
 
 ## Mint
 
@@ -39,18 +34,15 @@ Fresh teal and purple combination.
 - **Accent**: Mint green
 - **Best for**: Bright, energetic interface
 
-
-
 ## Void
 
-True black optimized for OLED displays. The default.
+True black optimized for OLED displays.
+The default.
 
 - **Style**: Minimal, high-contrast
 - **Background**: Flat black (no animation)
 - **Accent**: Subtle gray
 - **Best for**: OLED TVs, letting the content carry the color
-
-
 
 ## Nordic
 
@@ -61,8 +53,6 @@ Cool grays and icy blues.
 - **Accent**: Ice blue
 - **Best for**: Clean, modern aesthetic
 
-
-
 ## Volcano
 
 Warm reds and oranges.
@@ -71,8 +61,6 @@ Warm reds and oranges.
 - **Background**: Animated warm gradient
 - **Accent**: Orange/red
 - **Best for**: Action movies, warm ambiance
-
-
 
 ## Nebula
 
@@ -83,8 +71,6 @@ Cosmic pinks and oranges with a deep violet base.
 - **Accent**: Pink/magenta
 - **Best for**: Bold, atmospheric viewing
 
-
-
 ## Forest
 
 Vivid green glow over a deep forest canvas.
@@ -93,8 +79,6 @@ Vivid green glow over a deep forest canvas.
 - **Background**: Animated forest-green gradient
 - **Accent**: Bright leaf green
 - **Best for**: A fresh, cinematic interface
-
-
 
 ## Ember
 

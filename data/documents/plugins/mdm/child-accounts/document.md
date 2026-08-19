@@ -14,4 +14,5 @@ Neptune MDM stores one child-policy state for each user:
 
 When a user is marked **Child**, Neptune hides Discover and the request catalog on every device they use, and it shows only content within that user's age rating.
 
-Child accounts work with Neptune's in-app parental controls, where administrators set the age-rating limit and choose which libraries the account can access. See [Administration](/settings/administration) for the client-side setup.
+Child accounts work with Neptune's in-app parental controls, where administrators set the age-rating limit and choose which libraries the account can access.
+See [Administration](/settings/administration) for the client-side setup.

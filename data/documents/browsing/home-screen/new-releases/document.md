@@ -4,9 +4,8 @@ order: 70
 
 # New Releases
 
-Recently premiered movies and new seasons of shows. This section highlights content that just became available, grouping items into the most useful card for each release: a movie poster for new films, a season poster for new seasons, and a series poster for brand new shows.
-
-
+Recently premiered movies and new seasons of shows.
+This section highlights content that just became available, grouping items into the most useful card for each release: a movie poster for new films, a season poster for new seasons, and a series poster for brand new shows.
 
 ## How Items Are Selected
 
@@ -19,11 +18,10 @@ Neptune scans your library for movies, series, seasons, and episodes that premie
 
 Everything is sorted newest first.
 
-
-
 ## Configurable Window
 
-The new release window sets how far back to look. Change it with **New Release Threshold** in **Settings > Home > Sections**:
+The new release window sets how far back to look.
+Change it with **New Release Threshold** in **Settings > Home > Sections**:
 
 | Option | Description |
 |--------|-------------|
@@ -33,13 +31,11 @@ The new release window sets how far back to look. Change it with **New Release T
 | 60 days | For less frequently updated libraries |
 | 90 days | Maximum. Catches slow additions. |
 
-
-
 ## Movie Release Dates
 
-Movies rank by their **home release date** from TMDB (when they became available for streaming or digital purchase), not their theatrical premiere. A movie that was in theaters three months ago but just hit streaming appears as a new release, which is what you actually want. Movies without TMDB data fall back to the premiere date supplied by the connected backend.
-
-
+Movies rank by their **home release date** from TMDB (when they became available for streaming or digital purchase), not their theatrical premiere.
+A movie that was in theaters three months ago but just hit streaming appears as a new release, which is what you actually want.
+Movies without TMDB data fall back to the premiere date supplied by the connected backend.
 
 ## Tab Visibility
 
@@ -49,8 +45,6 @@ Movies rank by their **home release date** from TMDB (when they became available
 | **Movies** | Only new movies |
 | **Shows** | Only new series, seasons, and episodes |
 
-
-
 ## Navigation
 
 | What you select | Where it takes you |
@@ -59,11 +53,10 @@ Movies rank by their **home release date** from TMDB (when they became available
 | A new season | The show's detail page with that season pre-selected |
 | A new series | The show's detail page |
 
-
-
 ## Relationship with Recently Added
 
 New Releases and [Recently Added](../recently-added/) work together:
 
 - When **New Releases is visible**: Recently Added excludes items that fall within the new release window, so the same item never appears in both rows.
-- When **New Releases is hidden** (via section customization): Recently Added adopts those items back. No content is lost when a section is hidden.
+- When **New Releases is hidden** (via section customization): Recently Added adopts those items back.
+  No content is lost when a section is hidden.

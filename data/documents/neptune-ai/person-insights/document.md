@@ -4,17 +4,16 @@ order: 30
 
 # Person Insights
 
-Person Insights turns a filmography into a story. It looks across a performer's or filmmaker's career, recognizes recurring patterns, and can suggest what to watch next from titles already available to you.
+Person Insights turns a filmography into a story.
+It looks across a performer's or filmmaker's career, recognizes recurring patterns, and can suggest what to watch next from titles already available to you.
 
-It works with any configured language-model provider. [Neptune AI](/neptune-ai) provides the zero-setup hosted experience with Neptune Pro.
-
-
+It works with any configured language-model provider.
+[Neptune AI](/neptune-ai) provides the zero-setup hosted experience with Neptune Pro.
 
 ## Opening Insights
 
-Open a person page and select the biography. Neptune opens the full biography and generates Insights underneath it when a language model is available.
-
-
+Open a person page and select the biography.
+Neptune opens the full biography and generates Insights underneath it when a language model is available.
 
 ## Insight Sections
 
@@ -26,9 +25,8 @@ Open a person page and select the biography. Neptune opens the full biography an
 | **Frequent Collaborators** | Directors, actors, or creators they repeatedly work with |
 | **What to Watch Next** | An unwatched title associated with them from your library |
 
-The recommendation is library-aware rather than a generic filmography pick. If Neptune has no suitable unwatched title, that section can be omitted.
-
-
+The recommendation is library-aware rather than a generic filmography pick.
+If Neptune has no suitable unwatched title, that section can be omitted.
 
 ## What Neptune Uses
 
@@ -41,8 +39,6 @@ The active provider receives the context needed to understand the career:
 - A limited set of other known credits when available
 
 This lets Neptune connect the person's wider career to what you can actually watch.
-
-
 
 ## Useful Ways to Explore
 

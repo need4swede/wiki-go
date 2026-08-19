@@ -6,8 +6,6 @@ order: 40
 
 How Trident handles subtitle tracks.
 
-
-
 ## Supported Formats
 
 ### Text Subtitles
@@ -27,9 +25,8 @@ How Trident handles subtitle tracks.
 | **VobSub** | DVD subtitles |
 | **DVB** | Broadcast subtitles |
 
-All formats render locally. The server doesn't have to burn subtitles into the video.
-
-
+All formats render locally.
+The server doesn't have to burn subtitles into the video.
 
 ## Styled Subtitles
 
@@ -44,13 +41,10 @@ Trident supports rendering ASS subtitles, so styling comes through intact:
 
 This is what makes anime fan-subs render the way the typesetter intended, with styled signs and on-screen text.
 
-
-
 ## Track Switching
 
-Switch subtitle tracks during playback without restarting the video stream. Text and image-based tracks such as PGS and VobSub can both be changed in place.
-
-
+Switch subtitle tracks during playback without restarting the video stream.
+Text and image-based tracks such as PGS and VobSub can both be changed in place.
 
 ## Multiple Languages
 
@@ -62,21 +56,18 @@ If a file contains multiple subtitle tracks, Trident lists them all with:
 
 Open the [Playback Menu](/playback/playback-menu) (swipe down during playback) to choose a track.
 
-
-
 ## External Subtitles
 
-External subtitle files exposed by your media server are picked up alongside embedded tracks. They're marked **External** in the track list.
-
-
+External subtitle files exposed by your media server are picked up alongside embedded tracks.
+They're marked **External** in the track list.
 
 ## Timing and Position
 
-If subtitles are out of sync with the video, open the Playback Menu's Subtitles tab and use **Timing** to shift them up to 5 seconds either way while you watch. The offset applies to the current file only.
+If subtitles are out of sync with the video, open the Playback Menu's Subtitles tab and use **Timing** to shift them up to 5 seconds either way while you watch.
+The offset applies to the current file only.
 
-**Position** raises subtitles off the bottom edge, useful for keeping captions clear of letterbox bars or burned-in text. Styled ASS subtitles keep their typesetting anchored when repositioned.
-
-
+**Position** raises subtitles off the bottom edge, useful for keeping captions clear of letterbox bars or burned-in text.
+Styled ASS subtitles keep their typesetting anchored when repositioned.
 
 ## Character Encoding
 
@@ -87,9 +78,8 @@ Trident handles common encodings:
 - Big5 (Chinese Traditional)
 - GB-18030 (Chinese Simplified)
 
-If characters appear garbled, the file likely uses an unsupported encoding. Re-encoding as UTF-8 fixes most cases.
-
-
+If characters appear garbled, the file likely uses an unsupported encoding.
+Re-encoding as UTF-8 fixes most cases.
 
 ## Default Styling
 

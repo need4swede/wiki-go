@@ -6,11 +6,10 @@ order: 10
 
 Instant, offline search powered by a database on your device.
 
-
-
 ## Overview
 
-Neptune keeps a full-text index of your library on the device, so searches return as you type without a round trip to the server. It's always on and needs no setup.
+Neptune keeps a full-text index of your library on the device, so searches return as you type without a round trip to the server.
+It's always on and needs no setup.
 
 | Aspect | Local Index | Backend Search |
 |--------|-------------|---------------------|
@@ -20,12 +19,8 @@ Neptune keeps a full-text index of your library on the device, so searches retur
 | **Genre synonyms** | "sci-fi" finds Science Fiction | Exact only |
 | **People search** | Cast and crew, with credits data | Often incomplete |
 
-Backend Search behavior can vary by server capability, while Neptune keeps the
-same Search page and interaction design. The richer on-device index is used
-only when the active backend can synchronize the required catalog safely;
-otherwise, Neptune uses server search.
-
-
+Backend Search behavior can vary by server capability, while Neptune keeps the same Search page and interaction design.
+The richer on-device index is used only when the active backend can synchronize the required catalog safely; otherwise, Neptune uses server search.
 
 ## What's Indexed
 
@@ -40,8 +35,6 @@ otherwise, Neptune uses server search.
 
 Movies, shows, episodes, music videos, collections, and home videos are all covered.
 
-
-
 ## Smart Matching
 
 - **Prefix matching:** "spi" starts finding Spider-Man
@@ -49,10 +42,10 @@ Movies, shows, episodes, music videos, collections, and home videos are all cove
 - **Accent folding:** "cafe" matches "café"
 - **Name normalization:** "johnwilliams" finds John Williams
 
-
-
 ## Keeping the Index Fresh
 
-The index updates automatically as your library changes. With the [Neptune Indexers](/plugins/indexers) plugin installed, the server pre-builds the index and clients import it in seconds, complete with full TMDB cast and crew credits. A new device gets working search on first sign-in instead of running a long initial sync.
+The index updates automatically as your library changes.
+With the [Neptune Indexers](/plugins/indexers) plugin installed, the server pre-builds the index and clients import it in seconds, complete with full TMDB cast and crew credits.
+A new device gets working search on first sign-in instead of running a long initial sync.
 
 If search results ever look out of step with your library, **Resync Library** on the main Settings page rebuilds everything from the server.

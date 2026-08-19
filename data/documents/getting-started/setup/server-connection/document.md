@@ -26,5 +26,7 @@ For remote servers or when auto-discovery doesn't find your server:
 
 ## Multiple Addresses
 
-A server can have more than one saved address (for example, a local address for home and a domain for remote access). Manage them later under that backend's section in **Settings > Change URL**. For Jellyfin, that would be **Settings > Jellyfin > Change URL**.
+A server can have more than one saved address (for example, a local address for home and a domain for remote access).
+Manage them later under that backend's section in **Settings > Change URL**.
+For Jellyfin, that would be **Settings > Jellyfin > Change URL**.
 You can add addresses, reorder them, and switch between them without signing in again.

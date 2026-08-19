@@ -6,8 +6,6 @@ order: 30
 
 How Trident decodes and outputs audio.
 
-
-
 ## Supported Formats
 
 ### Lossless and Uncompressed
@@ -37,13 +35,10 @@ How Trident decodes and outputs audio.
 | **Vorbis** | Open source compressed |
 | **MP3** | Older compressed audio |
 
-
-
 ## Audio Containers
 
-Audio tracks can be embedded in Trident's supported video containers. Standalone Ogg (`.ogg`) and WAV (`.wav`) files are supported as well.
-
-
+Audio tracks can be embedded in Trident's supported video containers.
+Standalone Ogg (`.ogg`) and WAV (`.wav`) files are supported as well.
 
 ## Multi-Channel Output
 
@@ -55,15 +50,15 @@ Trident matches its output to whatever your audio system supports.
 | 5.1 soundbar | Downmixed to 5.1 |
 | Stereo TV | Stereo downmix |
 
-When the source has more channels than your output, Trident downmixes. The downmix preserves dialog level and front-rear balance.
-
-
+When the source has more channels than your output, Trident downmixes.
+The downmix preserves dialog level and front-rear balance.
 
 ## Dolby Atmos
 
 ### E-AC3 Atmos (Streaming Atmos)
 
-E-AC3 Atmos (Dolby Digital Plus with Atmos) can be passed through directly to compatible receivers. Make sure **EAC3-Atmos Passthrough** in **Settings > Playback > Audio** is enabled.
+E-AC3 Atmos (Dolby Digital Plus with Atmos) can be passed through directly to compatible receivers.
+Make sure **EAC3-Atmos Passthrough** in **Settings > Playback > Audio** is enabled.
 
 | Your Equipment | What You Hear |
 |----------------|---------------|
@@ -74,7 +69,8 @@ E-AC3 Atmos (Dolby Digital Plus with Atmos) can be passed through directly to co
 
 ### TrueHD Atmos (Blu-ray Atmos)
 
-TrueHD Atmos contains lossless 7.1 audio plus spatial object metadata. Trident decodes the lossless 7.1 - this is a platform limitation of the Apple TV.
+TrueHD Atmos contains lossless 7.1 audio plus spatial object metadata.
+Trident decodes the lossless 7.1 - this is a platform limitation of the Apple TV.
 
 | What You Hear | Details |
 |---------------|---------|
@@ -82,9 +78,8 @@ TrueHD Atmos contains lossless 7.1 audio plus spatial object metadata. Trident d
 
 ## Track Switching
 
-You can switch audio tracks during playback from the [Playback Menu](/playback/playback-menu). The change happens in place without restarting the video stream.
-
-
+You can switch audio tracks during playback from the [Playback Menu](/playback/playback-menu).
+The change happens in place without restarting the video stream.
 
 ## Sound Shaping
 

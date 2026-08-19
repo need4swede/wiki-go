@@ -6,9 +6,8 @@ order: 10
 
 Conductor Pro expands Neptune's playback-selection engine in two ways: Auto mode learns from what you actually choose, and authored Language Rules can react immediately when you switch audio tracks in either Manual or Auto.
 
-The result is not a single global “always use this track” switch. Conductor builds memory at several levels so an exception can stay an exception while a real pattern carries across a series or library.
-
-
+The result is not a single global “always use this track” switch.
+Conductor builds memory at several levels so an exception can stay an exception while a real pattern carries across a series or library.
 
 ## Manual vs. Conductor Pro
 
@@ -22,21 +21,22 @@ The result is not a single global “always use this track” switch. Conductor 
 | **Playback changes** | Apply to the current session | Apply immediately and can become learning signals |
 | **Profile insights** | Not applicable | Shows learned files, series, accuracy, and audio/subtitle patterns |
 
-
-
 ## How Learning Works
 
-When you change an audio track, subtitle track, quality, or version and continue watching, Auto mode can treat the choice as meaningful. At the end of the session, Conductor weighs the state you actually watched—not every accidental tap—and updates the relevant memory.
+When you change an audio track, subtitle track, quality, or version and continue watching, Auto mode can treat the choice as meaningful.
+At the end of the session, Conductor weighs the state you actually watched—not every accidental tap—and updates the relevant memory.
 
 On the next play, resolution follows this order:
 
-1. **Exact file memory.** A confirmed choice for this specific file wins when the track or version still exists.
-2. **Series fingerprint.** A reliable pattern from earlier episodes can guide a new episode.
-3. **Your Conductor rules.** If there is not enough learned evidence, Neptune uses the same predictable Manual profile.
+1. **Exact file memory.**
+   A confirmed choice for this specific file wins when the track or version still exists.
+2. **Series fingerprint.**
+   A reliable pattern from earlier episodes can guide a new episode.
+3. **Your Conductor rules.**
+   If there is not enough learned evidence, Neptune uses the same predictable Manual profile.
 
-Your direct choice always wins. Learning chooses the next starting point; it never locks the [Playback Menu](/playback/playback-menu).
-
-
+Your direct choice always wins.
+Learning chooses the next starting point; it never locks the [Playback Menu](/playback/playback-menu).
 
 ## Where It Helps
 
@@ -46,14 +46,17 @@ Your direct choice always wins. Learning chooses the next starting point; it nev
 - Carry a preferred subtitle language variant or SDH choice across a season.
 - Reopen a multi-version movie with the version you previously confirmed.
 
-
-
 ## Managing the Profile
 
-Open **Settings > User Preferences > Conductor** and choose **Auto** to enable learning. Neptune Pro's live Language Rule behavior does not require Auto.
+Open **Settings > User Preferences > Conductor** and choose **Auto** to enable learning.
+Neptune Pro's live Language Rule behavior does not require Auto.
 
-**View Profile Data** shows what Conductor has learned, including tracked files and series, selection accuracy, and audio and subtitle profiles. **Run Setup Again** changes the baseline rules without erasing learned memory. **Clear Learning Data** removes the adaptive profile and starts fresh.
+**View Profile Data** shows what Conductor has learned, including tracked files and series, selection accuracy, and audio and subtitle profiles.
+**Run Setup Again** changes the baseline rules without erasing learned memory.
+**Clear Learning Data** removes the adaptive profile and starts fresh.
 
-If Pro expires, Neptune uses Manual mode and stops reacting to audio-track changes without deleting the Auto selection, Language Rules, or learning data. Playback-start rules continue to work. Reactivating Pro restores Auto and its memory and enables live rule reactions for subsequent audio changes.
+If Pro expires, Neptune uses Manual mode and stops reacting to audio-track changes without deleting the Auto selection, Language Rules, or learning data.
+Playback-start rules continue to work.
+Reactivating Pro restores Auto and its memory and enables live rule reactions for subsequent audio changes.
 
 For every fixed language, anime, subtitle, and quality option, see the complete [Conductor guide](/playback/conductor).

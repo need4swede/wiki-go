@@ -6,17 +6,14 @@ order: 40
 
 Browse box sets and movie franchises as unified collections.
 
-
-
 ## What Are Collections
 
-Collections group related movies together. Common examples:
+Collections group related movies together.
+Common examples:
 
 - **Franchises**: Star Wars, Marvel Cinematic Universe, Lord of the Rings
 - **Series**: Harry Potter, The Godfather, Indiana Jones
 - **Trilogies**: The Dark Knight Trilogy, Back to the Future
-
-
 
 ## Accessing Collections
 
@@ -29,8 +26,6 @@ Collections appear in several places:
 
 You can also have the Movies tab fold movies into their collections automatically with **Group Movies into Collections** in **Settings > Home**.
 
-
-
 ## Collection Detail Page
 
 Selecting a collection opens a dedicated page with:
@@ -41,21 +36,19 @@ Selecting a collection opens a dedicated page with:
 - A watched filter: **All**, **Unwatched**, **Watched**
 - Sorting: default order, name, premiere date, community rating, critic rating, date added, or runtime
 
-Default order follows release date, so franchises play chronologically. Each movie's watch status is tracked individually.
-
-
+Default order follows release date, so franchises play chronologically.
+Each movie's watch status is tracked individually.
 
 ## Theme Songs
 
-If a collection has theme music, it plays when viewing the collection page, just like series pages. Control this in **Settings > User Preferences > Sounds**.
-
-
+If a collection has theme music, it plays when viewing the collection page, just like series pages.
+Control this in **Settings > User Preferences > Sounds**.
 
 ## Collection Backdrops
 
-Collections can have their own backdrop image. If available, it displays as the full-screen background. Otherwise, Neptune uses the first item's backdrop.
-
-
+Collections can have their own backdrop image.
+If available, it displays as the full-screen background.
+Otherwise, Neptune uses the first item's backdrop.
 
 ## Tips
 

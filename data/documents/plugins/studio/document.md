@@ -4,9 +4,11 @@ order: 40
 
 # Neptune Studio
 
-Neptune Studio is the UI customization member of the Neptune Plugin Suite for Jellyfin. It gives server administrators visual tools for shaping how Neptune looks across their clients, with customization definitions and rendered assets managed centrally on the server.
+Neptune Studio is the UI customization member of the Neptune Plugin Suite for Jellyfin.
+It gives server administrators visual tools for shaping how Neptune looks across their clients, with customization definitions and rendered assets managed centrally on the server.
 
-Top Shelf customization is Studio's first integration today. More Neptune interface customization options will build on the same Studio foundation in the future.
+Top Shelf customization is Studio's first integration today.
+More Neptune interface customization options will build on the same Studio foundation in the future.
 
 ## Top Shelf Customization
 
@@ -17,17 +19,16 @@ Studio creates reusable designs for the two artwork-driven Apple TV Top Shelf su
 | **Banners** | Inset | Wide banner artwork with a focused safe area |
 | **Cinematic** | Carousel | Full-screen 16:9 artwork |
 
-The plugin ships with starter designs for both surfaces. Administrators can create, rename, duplicate, preview, set defaults, and delete custom designs without editing configuration files.
-
-
+The plugin ships with starter designs for both surfaces.
+Administrators can create, rename, duplicate, preview, set defaults, and delete custom designs without editing configuration files.
 
 ## Built to Expand
 
-Studio is organized as a capability-based customization service rather than a one-purpose artwork plugin. Neptune clients can detect the Studio capabilities their server exposes and surface only the editors and choices they understand.
+Studio is organized as a capability-based customization service rather than a one-purpose artwork plugin.
+Neptune clients can detect the Studio capabilities their server exposes and surface only the editors and choices they understand.
 
-Top Shelf cards are the first capability. As additional UI customization options are released, their controls and documentation will join this page.
-
-
+Top Shelf cards are the first capability.
+As additional UI customization options are released, their controls and documentation will join this page.
 
 ## Visual Editor
 
@@ -43,13 +44,13 @@ Each design can control:
 - **Episode and movie text:** position, width, alignment, size, weight, color, shadow, and background plate
 - **Safe area:** protected edges for tvOS focus and cropping behavior
 
-Search for a movie, series, or episode from the editor to render a live preview. Previewing does not save or replace the final cached artwork; changes become active only after **Save**.
-
-
+Search for a movie, series, or episode from the editor to render a live preview.
+Previewing does not save or replace the final cached artwork; changes become active only after **Save**.
 
 ## Defaults and Client Choice
 
-Studio stores separate defaults for Banners and Cinematic artwork. Neptune clients can choose:
+Studio stores separate defaults for Banners and Cinematic artwork.
+Neptune clients can choose:
 
 - Standard Neptune artwork
 - The server's current default for that surface
@@ -57,8 +58,7 @@ Studio stores separate defaults for Banners and Cinematic artwork. Neptune clien
 
 Choosing **Server default** lets an administrator change the presentation centrally without asking every client to select a new design.
 
-
-
 ## Rendering and Cache
 
-The render cache defaults to 512 MB and can be set to 128 MB, 512 MB, 1 GB, 2 GB, or 4 GB. The dashboard shows its current size and render count and provides a **Clear render cache** action.
+The render cache defaults to 512 MB and can be set to 128 MB, 512 MB, 1 GB, 2 GB, or 4 GB.
+The dashboard shows its current size and render count and provides a **Clear render cache** action.

@@ -4,55 +4,30 @@ order: 10
 
 # Network Speed Test
 
-Network Speed Test measures download performance from your active media server
-to the current Neptune device. It uses the same authenticated route Neptune
-uses for playback; it is not a general internet speed test and does not test
-upload speed.
+The **Network Speed Test** measures download performance from your active media server to the current Neptune device.
+It uses the same authenticated route Neptune uses for playback; it is not a general internet speed test and does not test upload speed.
 
-Open **Settings > About > Diagnostics > Network Speed Test**. Search for a
-movie, show, or episode, select the file you want to measure, then select
-**Start Speed Test**. Selecting a show opens its seasons and episodes so you
-can choose the exact episode file. Neptune requires an explicit file selection
-so the source of the result is always clear. Once a file is selected, search
-results collapse. **Start Speed Test** appears directly beneath the selected
-file, followed by **Change Test File** when you want to pick something else.
-
-On Apple TV, Siri Remote dictation follows the same flow as Compass search:
-after speech settles, Neptune submits the title search and dismisses the
-keyboard automatically. When entering a title one character at a time, select
-the keyboard's **Search** key when you are finished.
-
-
+To get started, open **Settings > About > Diagnostics > Network Speed Test**.
+Search for a movie or show, select the file you want to measure, then select **Start Speed Test**.
+> Selecting a show opens its seasons and episodes so you can choose the exact episode file.
 
 ## How the Test Works
 
-Neptune uses a directly streamable movie or episode in your library as the byte
-source. A show itself is only a library container, so Neptune asks you to pick
-a season and episode before starting. Choose the title with the same local fuzzy library search used by
-Playback Benchmark, including punctuation variants such as `spiderman` and
-`Spider-Man`. The title shown under **Test File from Your Library** is not a
-public test server or bundled sample.
+Neptune uses a directly streamable movie or episode in your library as the byte source.
+The transfer runs for up to five minutes or until the selected file ends.
+You can select **Stop Test** at any time after data begins arriving.
+Downloaded bytes are discarded.
 
-The transfer runs for up to five minutes or until the selected file ends. You
-can select **Stop Test** at any time after data begins arriving; Neptune treats
-the bytes, elapsed time, latency, and graph collected so far as a completed
-result. Downloaded bytes are discarded: Neptune does not
-decode the file, start a playback session, report progress, change watched
-state, or add an Activity entry.
-
-
+Results can change with server load, network conditions, VPN or proxy routing, and other traffic.
+Use [Playback Benchmark](/settings/diagnostics/playback-benchmark) when you also need to test demuxing, decoding, audio, and rendering.
 
 ## Live Graph
 
-The graph plots rolling throughput throughout the transfer, updating about
-four times per second. This makes brief drops and an unstable connection
-visible instead of reducing the entire test to one number.
+The graph plots rolling throughput throughout the transfer, updating about four times per second.
+This makes brief drops and an unstable connection visible instead of reducing the entire test to one number.
 
-The large number on the Results screen is the average download speed across
-the complete measurement window. It will not necessarily match the last point
-on the graph, which represents only the most recent interval.
-
-
+The large number on the Results screen is the average download speed across the complete measurement window.
+It will not necessarily match the last point on the graph, which represents only the most recent interval.
 
 ## Understanding Results
 
@@ -65,64 +40,9 @@ on the graph, which represents only the most recent interval.
 | **File Bitrate** | The selected file's average source bitrate, when the server provides it |
 | **Recommended Streaming Limit** | 70% of the measured average, leaving room for bitrate spikes and protocol overhead |
 
-The recommendation is guidance only. Neptune does not automatically change
-playback quality or streaming limits after a test.
-
-Source or throughput headroom is intentionally not shown. **Recommended
-Streaming Limit** communicates the useful safety margin without requiring you
-to interpret a multiplier.
-
-
+> The recommendation is guidance only.
+> Neptune does not automatically change playback quality or streaming limits after a test.
 
 ## Analyze Results with Neptune AI
 
-The test, graph, metrics, and recommended limit are Free. Neptune Pro adds an
-optional **Analyze Results** button after the test completes. Selecting it asks
-[Neptune AI](/neptune-pro/neptune-ai) for a network-focused explanation of
-connection responsiveness, first-byte delay, sustained speed, whole-run
-stability, and useful next checks.
-
-The analysis is a short, natural interpretation rather than another bullet list
-of the results already on screen. It calls out only the measurements that shape
-the conclusion and, when the evidence warrants it, suggests checks you can
-actually perform—for example repeating the run, comparing wired and wireless
-routes, or checking competing traffic and server, router, VPN, or proxy load.
-It never recommends changing a Neptune buffer, cache, quality, or other client
-control that Neptune does not provide.
-
-This action always uses Neptune AI; it does not silently send the diagnostic to
-a bring-your-own model. Network analysis may explain technical values, but it
-does not claim to measure video decoding, rendering, frame pacing, A/V sync, or
-the viewing experience. Even a five-minute ceiling cannot prove long-term
-reliability or identify a specific Wi-Fi, server, or proxy problem without
-supporting measurements.
-
-
-
-## Interpreting the Graph
-
-- A consistently high line usually indicates a stable route.
-- Large repeated drops can point to Wi-Fi interference, a busy server, a
-  constrained reverse proxy, or an unstable remote connection.
-- High throughput with a slow Time to First Byte can indicate server or proxy
-  response delay rather than a lack of sustained bandwidth.
-
-Results can change with server load, Wi-Fi conditions, VPN or proxy routing,
-and other traffic. Use [Playback Benchmark](/settings/diagnostics/playback-benchmark)
-when you also need to test demuxing, decoding, audio, and rendering.
-
-
-
-## Privacy
-
-The stream URL, access token, server file path, and response bytes are not
-stored in the result or diagnostic logs. Only aggregate latency and final
-throughput are logged. The live graph remains in memory for the current result
-and is not saved as test history.
-
-Neptune AI receives a bounded set of technical measurements only after you
-select **Analyze Results**: average and rolling throughput, first-byte delay,
-duration, transferred byte count, device class, and the test file's bitrate
-when known. The media title and item identifier, server identity, URL, token,
-path, and credentials stay on the device. The analysis is not saved as test
-history.
+[Neptune AI](/neptune-pro/neptune-ai) can provide an analysis of your test results and, when the evidence warrants it, suggests things for you to try to improve your results. This is very useful for those who may not understand the technical implications behind each factor in their test, but would still like to learn more about their results.

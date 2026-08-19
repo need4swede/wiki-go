@@ -1,16 +1,12 @@
 # Neptune
 
-A native media client for Apple TV, iPhone, iPad, and Mac. Neptune's architecture and experience are backend-agnostic, designed to stay familiar as support expands across media-server platforms.
-
-
+A native media client for Apple TV, iPhone, iPad, and Mac.
+Neptune's architecture and experience are backend-agnostic, designed to stay familiar as support expands across media-server platforms.
 
 ## Supported Backends
 
-Neptune is designed for Jellyfin, Emby, Plex, and additional media-server
-backends. See [Supported Media Servers](/getting-started/backends) for current
-availability.
-
-
+Neptune is designed for Jellyfin, Emby, Plex, and additional media-server backends.
+See [Supported Media Servers](/getting-started/backends) for current availability.
 
 ## Quick Start
 
@@ -18,8 +14,6 @@ availability.
 2. [Setup](/getting-started/setup): Connect to your media server
 3. [Navigation](/browsing/navigation): Learn the basics
 4. [Home Screen](/browsing/home-screen): Start browsing
-
-
 
 ## Documentation
 
@@ -140,8 +134,6 @@ availability.
 | [Transcoder](/plugins/transcoder) | Server-managed download quality profiles (coming soon) |
 | [Studio](/plugins/studio) | UI customization, beginning with Top Shelf design (coming soon) |
 
-
-
 ## Key Features
 
 - **Trident Player**: Direct plays nearly everything (MKV, TrueHD, DTS-HD MA, ASS subtitles) with HDR10+, Dolby Vision, and on-the-fly conversion for compatible Blu-ray Profile 7 files
@@ -157,8 +149,6 @@ availability.
 - **Cloud Backup & Sync**: Preferences, preset definitions, and device-type assignments follow you across devices, with Device Overrides for settings that should stay different on one physical device
 - **Custom Themes**: Nine built-in themes with Adaptive and Dynamic modes, plus JSON import for your own designs
 - **Family Ready**: Per-profile everything, child accounts, and PIN-protected admin tools
-
-
 
 ## Requirements
 

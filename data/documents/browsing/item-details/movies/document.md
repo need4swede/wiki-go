@@ -6,8 +6,6 @@ order: 10
 
 Movie detail pages show everything about a film.
 
-
-
 ## Top Section
 
 - **Play button**: Start playback (shows "Resume" if in progress, with a progress bar)
@@ -16,8 +14,6 @@ Movie detail pages show everything about a film.
 - **Metadata tiles**: Year, community rating, critic score, content rating, runtime
 
 The Detailed layout adds quality pills for resolution, codecs, and file size.
-
-
 
 ## Media Badges
 
@@ -43,9 +39,8 @@ Color-coded badges show video and audio quality.
 | DTS:X | Red | DTS:X immersive audio |
 | Lossless | Gold | TrueHD, DTS-HD MA, FLAC |
 
-Badges use blended colors when multiple properties combine. For example, 4K + Dolby Vision shows a teal badge, and TrueHD + Atmos shows a cyan badge.
-
-
+Badges use blended colors when multiple properties combine.
+For example, 4K + Dolby Vision shows a teal badge, and TrueHD + Atmos shows a cyan badge.
 
 ## Content Sections
 
