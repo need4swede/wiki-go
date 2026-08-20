@@ -12,7 +12,7 @@ Diagnostics helps you inspect Neptune, test the connection to your media server,
 |------|--------------|
 | [Info](/settings/diagnostics#info) | Shows read-only details about the app configuration and device |
 | [Network Speed Test](/settings/diagnostics/network-speed-test) | Measures sustained download performance from your active media server to this device |
-| [Playback Benchmark](/settings/diagnostics/playback-benchmark) | Tests real files from your library through Neptune's playback engine and grades the experience |
+| [Playback Benchmark](/settings/diagnostics/playback-benchmark) | Tests real files from your library and grades startup, stability, and smoothness |
 | [Send Logs](#send-logs) | Builds and uploads a sanitized diagnostic report for troubleshooting |
 
 ## Info
@@ -38,6 +38,6 @@ The two tests answer different questions:
 
 - **Network Speed Test** measures the server-to-device transfer route.
   It does not decode or render video.
-- **Playback Benchmark** exercises that route plus the container, codecs, selected audio track, decoder, and renderer.
+- **Playback Benchmark** plays a real sample from your library and measures how quickly it starts, whether it stalls, and whether the video remains smooth.
 
 A fast network result can therefore coexist with a poor playback benchmark, and a healthy playback benchmark can still vary with a different file, server load, or Wi-Fi conditions.

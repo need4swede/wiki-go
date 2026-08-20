@@ -19,7 +19,7 @@ You can select **Stop Test** at any time after data begins arriving.
 Downloaded bytes are discarded.
 
 Results can change with server load, network conditions, VPN or proxy routing, and other traffic.
-Use [Playback Benchmark](/settings/diagnostics/playback-benchmark) when you also need to test demuxing, decoding, audio, and rendering.
+Use [Playback Benchmark](/settings/diagnostics/playback-benchmark) when you also want to measure how a real library file starts, whether it stalls, and whether the video remains smooth.
 
 ## Live Graph
 
