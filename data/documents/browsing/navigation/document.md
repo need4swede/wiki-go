@@ -59,7 +59,7 @@ Compass provides quick navigation without returning to the tab bar:
 | **iPad** | Compass is not available; use the normal touch navigation |
 
 The Apple TV surface is a floating tab pill. iPhone uses a configurable one-to-eight-shortcut palette and can project the same shortcuts into Dynamic Island and onto the Lock Screen.
-See [Compass](/browsing/navigation/compass) and [Compass Live Activity](/ios/live-activity).
+See [Compass](/browsing/navigation/compass) and [Compass Live Activity](/browsing/navigation/compass/live-activity).
 
 ## Library Picker
 

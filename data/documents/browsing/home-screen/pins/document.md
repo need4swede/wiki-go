@@ -6,7 +6,7 @@ order: 40
 
 The Pins row provides quick access to the movies, shows, episodes, collections, people, genres, studios, networks, tags, and playback moments you've saved as [Library Pins](/library/shortcuts).
 
-For pin types, creating and removing pins, timestamp pins, edit mode, syncing, and device-specific actions, see [Library Pins](/library/shortcuts).
+For pin types, creating and removing pins, timestamp pins, edit mode, syncing, and detailed actions, see [Library Pins](/library/shortcuts).
 
 ## Tab Visibility
 
@@ -27,6 +27,4 @@ Select a Pin to open its item, person, or current browse destination.
 Pins are read-only on the content tabs.
 To reorder Pins or move their category rows, use the **Pins** section on the [Library](/library) tab and follow the [Library Pins edit guide](/library/shortcuts#edit-mode).
 
-The shared order is preserved on iPhone and iPad, but those platforms do not provide a separate Pins editor.
-
-For touch-specific pin actions, see [Pins on iPhone & iPad](/ios/pins).
+The shared order is preserved across devices.

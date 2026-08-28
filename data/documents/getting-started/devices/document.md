@@ -19,12 +19,13 @@ The interface adapts to how you actually hold and use each device:
 | Device | How it feels |
 |--------|--------------|
 | **Apple TV** | Focus-driven, built for the Siri Remote: the Compass, spotlight carousel, and long-press menus |
-| **iPhone** | Portrait-first with touch controls throughout, native [Pins](/ios/pins), configurable [widgets](/ios/widgets), an optional Compass [Live Activity](/ios/live-activity), and [Picture in Picture or background audio](/ios/playback) when you leave Neptune |
+| **iPhone** | Portrait-first with touch controls throughout, native [Pins](/library/shortcuts), configurable [widgets](/browsing/widgets), an optional Compass [Live Activity](/browsing/navigation/compass/live-activity), and [Picture in Picture or background audio](/playback/outside-the-app) when you leave Neptune |
 | **iPad** | The same touch experience with room to breathe, including native Pins, Home Screen widgets, Lock Screen widgets on iPadOS 17 or later, Picture in Picture, and background audio; the iPhone Compass and Live Activity stay off |
 | **Mac** | TBD |
 
-The documentation describes shared behavior with the TV controls as the reference.
-Where you read "press Select" or "long-press", the touch equivalent is a tap or a touch-and-hold.
+The documentation uses semantic controls so feature behavior can be described once.
+“Select” means the device's primary activation control; “long-press” means holding that control.
+Use the matching remote, mouse, keyboard, or touch gesture on your device.
 
 ## iOS System Surfaces
 
@@ -36,10 +37,10 @@ Neptune keeps three shortcut systems deliberately separate:
 - **Compass Shortcuts** belong to the iPhone Compass palette and Compass Live Activity.
   They do not replace native Pins or widget selections.
 
-[Picture in Picture and Background Playback](/ios/playback) are separate, independent iPhone and iPad playback settings.
+[Picture in Picture and Background Playback](/playback/outside-the-app) are separate, independent iPhone and iPad playback settings.
 One keeps video in a floating system window; the other keeps audio playing through app switching and screen lock.
 
-See [iPhone & iPad](/ios) for the complete guide.
+See [Widgets](/browsing/widgets), [Compass Live Activity](/browsing/navigation/compass/live-activity), [Library Pins](/library/shortcuts), and [Picture in Picture & Background Playback](/playback/outside-the-app) for the feature guides.
 
 ## Platform Status
 

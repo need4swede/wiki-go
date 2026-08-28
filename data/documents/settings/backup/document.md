@@ -20,13 +20,13 @@ Sync support for future backends will be documented as it becomes available.
 |----------|----------|
 | Appearance | Theme, theme mode, card styles, layouts, custom theme imports |
 | Home & Library layout | Section order and visibility, navigation bar, row limits |
-| Playback | Engine choice, autoplay behavior, audio settings, and iOS [Picture in Picture and Background Playback](/ios/playback) toggles |
+| Playback | Engine choice, autoplay behavior, audio settings, and iOS [Picture in Picture and Background Playback](/playback/outside-the-app) toggles |
 | Conductor | Languages, track rules, quality preferences |
 | Search & AI | Search options and language model configuration |
 | Sounds | Theme song volume and behavior |
 | [Library Pins](/library/shortcuts) | Pinned items, browse Pins, timestamp Pins |
-| [iPhone Compass](/ios/live-activity) | Ordered Compass Shortcuts, custom labels and symbols |
-| [Live Activity](/ios/live-activity) | Enabled state and selected activity type |
+| [iPhone Compass](/browsing/navigation/compass/live-activity) | Ordered Compass Shortcuts, custom labels and symbols |
+| [Live Activity](/browsing/navigation/compass/live-activity) | Enabled state and selected activity type |
 | [Settings Profiles](/personalization/profile-presets) | Profile definitions, saved values, override-replacement choices, order, and device-type assignments |
 
 What stays device-local: diagnostics toggles, the sync switch itself, and anything tied to the specific hardware.

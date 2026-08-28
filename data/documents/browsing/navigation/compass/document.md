@@ -6,7 +6,7 @@ order: 10
 
 Compass is Neptune’s quick-navigation surface.
 On Apple TV it is a floating pill opened by the Siri Remote.
-On iPhone it is a configurable palette that can also appear as a [Live Activity](/ios/live-activity) in Dynamic Island and on the Lock Screen.
+On iPhone it is a configurable palette that can also appear as a [Live Activity](/browsing/navigation/compass/live-activity) in Dynamic Island and on the Lock Screen.
 
 Compass is unavailable on iPad. iPhone and Apple TV use platform-specific controls and do not share the same Compass layout.
 
@@ -64,7 +64,7 @@ Enabling the separate Compass Live Activity adds system-owned entry points:
 | Expanded Dynamic Island | Shows the configured shortcuts as direct actions |
 | Lock Screen Live Activity | Shows the shortcut strip plus a palette launcher |
 
-See [Compass Live Activity](/ios/live-activity) for setup, lifecycle, and troubleshooting.
+See [Compass Live Activity](/browsing/navigation/compass/live-activity) for setup, lifecycle, and troubleshooting.
 
 ## Compass Shortcuts on iPhone
 
@@ -75,7 +75,7 @@ The exact defaults are **Settings, Home, Library, Search**.
 A shortcut can open another Neptune Page, one library, a saved search, media details, or supported direct playback.
 Labels, symbols, and order are customizable.
 
-Compass Shortcuts are not [native Pins](/ios/pins).
+Compass Shortcuts are not [Native Pins](/library/shortcuts).
 Native Pins bookmark library content and appear in Neptune’s content rows; Compass Shortcuts are quick actions used only by the iPhone Compass surfaces.
 
 ## Video Playback

@@ -7,7 +7,7 @@ order: 30
 On iPhone, Neptune can run [Compass](/browsing/navigation/compass) as one standard Live Activity. iOS may present that activity in Dynamic Island, on the Lock Screen, or in another system-owned Live Activity surface.
 
 The activity and Neptune’s in-app Compass palette use the same ordered set of one to eight **Compass Shortcuts**.
-They do not use your [native Pins](/ios/pins), and they are separate from conventional [Home Screen and Lock Screen widgets](/ios/widgets).
+They do not use your [native Pins](/library/shortcuts), and they are separate from conventional [Home Screen and Lock Screen widgets](/browsing/widgets).
 
 ## Requirements
 

@@ -18,7 +18,47 @@ The **Backdrops** tab controls the artwork behind everything:
 
 On iPhone and iPad there is a third setting, **Framing**, because a widescreen backdrop and an upright screen are opposite shapes.
 It also unlocks placing an individual backdrop by hand.
-See [Backdrops on iPhone & iPad](/ios/backdrops).
+
+**Settings > User Preferences > Appearance > Backdrops > Framing**
+
+| Mode | What you get |
+|------|--------------|
+| **Smart** | Neptune looks at the picture on your device, finds the subject, and aims the crop at it, then pulls back so more of the frame stays visible. Default. |
+| **Fill Screen** | Edge to edge, cropped from the centre. The original Neptune look. |
+
+Smart mode reads the image entirely on your device.
+Nothing is uploaded, no account or API key is involved, and it works the same on a library you are browsing offline.
+Faces win when there are any, and Neptune falls back to the picture's overall centre of attention when there are none.
+
+Framing follows your profile through Backup & Restore, and a server administrator can set a default for it from the Neptune plugin dashboard.
+Apple TV is unaffected: a television is already the shape backdrops are made for, so it keeps filling the screen.
+
+### Repositioning a Backdrop by Hand
+
+Automatic framing is a good guess, not a verdict.
+On any movie or show page, in all three detail layouts—Detailed, Immersive, and Minimal:
+
+1. **Touch and hold the backdrop.** It lifts, the page stops scrolling, and the fade at the artwork's edges thins out so you can see where the picture actually ends.
+2. **Drag** to move the picture sideways or up and down, and **pinch** to change how much of it is shown.
+3. **Tap** anywhere to lock it in.
+
+Neptune stores that placement for that specific image and uses it every later time the image appears.
+It carries across all three detail layouts, iPhone and iPad, and both orientations.
+Layouts show different amounts of the artwork, so a shorter hero may not be able to shift a picture quite as far as a full-screen one; returning to a roomier layout restores the original framing.
+
+While an image is lifted, **Reset framing** returns that image to automatic framing.
+Pinching outward stops once the whole backdrop is visible, so nothing is hidden from you.
+
+By default a backdrop sits at the very top of the page.
+Drag it downward and a dark gradient fills in above it, so the clock and battery have something to sit on.
+
+Backdrops you place by hand are part of **Backup & Restore**.
+Only the position is saved, never a copy of the artwork.
+Automatic framings are recalculated on the device and are not backed up.
+**Reset Repositioned Backdrops** clears every hand-placed framing at once.
+
+If a server administrator replaces a title's artwork, Neptune works out a fresh automatic framing.
+A placement you made by hand is kept; use **Reset framing** if it no longer suits the replacement.
 
 ## Cards
 
@@ -80,7 +120,7 @@ Choose **All** if you prefer the most consistent protection or do not want story
 
 ### Per-Show Choices
 
-The eye button on an Apple TV series page changes spoiler protection for that show only.
+The eye control on a series page changes spoiler protection for that show only.
 Use it when Auto makes the wrong choice for your viewing habits:
 
 - Protect an episodic show whose thumbnails still reveal too much

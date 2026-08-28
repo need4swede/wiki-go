@@ -19,6 +19,17 @@ import (
 	"wiki-go/internal/utils"
 )
 
+var legacyDocumentRedirects = map[string]string{
+	"/ios":                               "/getting-started/devices",
+	"/ios/pins":                          "/library/shortcuts",
+	"/ios/widgets":                       "/browsing/widgets",
+	"/ios/live-activity":                 "/browsing/navigation/compass/live-activity",
+	"/ios/playback":                      "/playback/outside-the-app",
+	"/ios/backdrops":                     "/personalization/cards-and-backdrops",
+	"/library/shortcuts/iphone-and-ipad": "/library/shortcuts",
+	"/personalization/cards-and-backdrops/iphone-and-ipad": "/personalization/cards-and-backdrops",
+}
+
 // PageHandler handles requests for pages
 func PageHandler(w http.ResponseWriter, r *http.Request, cfg *config.Config) {
 	// Add cache control headers to prevent caching
@@ -40,6 +51,11 @@ func PageHandler(w http.ResponseWriter, r *http.Request, cfg *config.Config) {
 	decodedPath, err := url.QueryUnescape(path)
 	if err != nil {
 		http.Error(w, "Invalid path", http.StatusBadRequest)
+		return
+	}
+
+	if redirectPath, ok := legacyDocumentRedirects[decodedPath]; ok {
+		http.Redirect(w, r, redirectPath, http.StatusMovedPermanently)
 		return
 	}
 

@@ -16,8 +16,8 @@ Pro expands Neptune with intelligence built specifically for the app, richer con
 | [Downloads](/neptune-pro/downloads) | Original-quality or space-saving offline movies and episodes |
 | [Top Shelf Customization](/neptune-pro/top-shelf-customization) | Cinematic presentation, Studio designs, section ordering, and direct Play actions on Apple TV |
 | [Cinematic Loading Screens](/neptune-pro/loading-screens) | Cached library posters and backdrops with a configurable artwork source |
-| [Pin Widgets](/ios/widgets#pin-widgets-neptune-pro) | Put a native Pin on the iPhone or iPad Home Screen or Lock Screen, with direct Play for movie and episode Pins |
-| [Section Widgets](/ios/widgets#section-widgets-neptune-pro) | Rotate current media from 16 supported Home and Discover sections in a widget |
+| [Pin Widgets](/browsing/widgets#pin-widgets-neptune-pro) | Put a native Pin on the iPhone or iPad Home Screen or Lock Screen, with direct Play for movie and episode Pins |
+| [Section Widgets](/browsing/widgets#section-widgets-neptune-pro) | Rotate current media from 16 supported Home and Discover sections in a widget |
 | [Settings Profiles](/personalization/profile-presets) | Build and manage personal named settings environments, select one manually, or assign one automatically per device type |
 | [Native MDM Administration](/plugins/mdm#where-to-manage-it) | Operate the complete Neptune MDM admin suite directly from supported Neptune clients |
 
@@ -25,7 +25,7 @@ Pro expands Neptune with intelligence built specifically for the app, richer con
 
 | Feature | Free | Neptune Pro |
 |------------|------|-------------|
-| **Playback** | Every supported codec, format, HDR profile, and subtitle type, plus iOS [Picture in Picture and Background Playback](/ios/playback) | The same complete playback engine |
+| **Playback** | Every supported codec, format, HDR profile, and subtitle type, plus iOS [Picture in Picture and Background Playback](/playback/outside-the-app) | The same complete playback engine |
 | **Conductor** | Manual rules automatically select tracks and versions at playback start | Adds live Language Rule reactions in Manual or Auto; Auto also adapts and learns over time |
 | **AI / LLM** | Use third-party provider with your own compute or API key | Use the integrated, official first-party Neptune AI service |
 | **Metadata** | Everything supplied by your media backend | Commercial API access across detail, people, home surfaces and more |

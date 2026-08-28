@@ -51,7 +51,7 @@ Only the settings the administrator actually changes are sent, leaving unrelated
 The settings form is built from a schema uploaded by Neptune.
 Native Neptune clients use stable schema destinations to mirror the familiar Settings navigation while preserving one exact remote draft across those pages.
 
-On iPhone and iPad, remote management includes the independent [Picture in Picture and Background Playback](/ios/playback) switches under Playback.
+On iPhone and iPad, remote management includes the independent [Picture in Picture and Background Playback](/playback/outside-the-app) switches under Playback.
 Both default on.
 A pushed change applies when the user starts the next playback session and has no playback effect on Apple TV.
 

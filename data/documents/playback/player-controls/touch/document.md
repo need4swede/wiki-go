@@ -65,10 +65,10 @@ See [Playback Settings](/settings/playback) for the Auto and Landscape startup o
 
 ## Picutre-in-Picture Controls
 
-With [Picture in Picture](/ios/playback#using-picture-in-picture) enabled, leaving Neptune during playback opens a system floating window automatically.
+With [Picture in Picture](/playback/outside-the-app#using-picture-in-picture) enabled, leaving Neptune during playback opens a system floating window automatically.
 
 Tap it for Play/Pause and skip controls, or return to Neptune with its full-screen control.
 
 Neptune does not add a separate Picture in Picture button to the in-app player.
 
-With [Background Playback](/ios/playback#background-playback-and-system-controls) enabled, the Lock Screen and Control Center show Now Playing information with Play/Pause, 15-second skips, and position scrubbing.
+With [Background Playback](/playback/outside-the-app#background-playback-and-system-controls) enabled, the Lock Screen and Control Center show Now Playing information with Play/Pause, 15-second skips, and position scrubbing.

@@ -14,7 +14,7 @@ Everything from pressing Play to choosing tracks and scrubbing.
 | [Player Controls](/playback/player-controls) | Transport bar, scrubbing, skip segments, Up Next |
 | [Playback Menu](/playback/playback-menu) | The in-player menu: audio, subtitles, video, chapters, info |
 | [Conductor](/playback/conductor) | Track and version selection, with Pro live Language Rules and optional Auto learning |
-| [Picture in Picture & Background Playback](/ios/playback) | Continue video or audio outside the iPhone and iPad app |
+| [Picture in Picture & Background Playback](/playback/outside-the-app) | Continue video or audio outside the iPhone and iPad app |
 
 ## Playback Modes
 
@@ -66,7 +66,7 @@ The two settings are independent and on by default under **Settings > Playback**
 
 Lock Screen and Control Center controls provide Play/Pause, 15-second skips, and scrubbing.
 Up Next deliberately stops at the end of the current item while Neptune is backgrounded.
-See [Picture in Picture & Background Playback](/ios/playback) for setup and the complete behavior matrix.
+See [Picture in Picture & Background Playback](/playback/outside-the-app) for setup and the complete behavior matrix.
 
 ## Auto-Play
 

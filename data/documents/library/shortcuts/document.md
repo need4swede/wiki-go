@@ -7,7 +7,7 @@ order: 10
 Bookmark media, people, and library browse contexts, then reach them from categorized Library rows or the Pins row on Home.
 Native Pins use the same ordered, account-scoped settings format across supported Neptune clients; Backup & Restore can synchronize that list between them.
 
-A second variant, **timestamp Pins**, captures a specific Apple TV playback moment so you can return to it later.
+A second variant, **timestamp Pins**, captures a specific playback moment so you can return to it later.
 
 ## What You Can Pin
 
@@ -28,45 +28,23 @@ A second variant, **timestamp Pins**, captures a specific Apple TV playback mome
 
 ## Pinning Items
 
-### On iPhone and iPad
+### From a Detail Page
 
-- Tap **Pin** on a media or person detail page.
-- Touch and hold a movie, show, season, episode, collection, music video, or person card and choose **Pin** or **Unpin**.
-- Touch and hold an existing Pin card and choose **Remove Pin**.
+Use the **Pin** action on any movie, series, season, episode, collection, music video, or person detail page.
+Select it once to pin the item and again to unpin it.
 
-iOS does not have a separate Pins settings editor.
-It preserves the shared order while adding and removing Pins where their targets already appear.
-Browse-context and timestamp Pins created on Apple TV remain usable on iPhone and iPad.
+### From a Card or Browse Picker
 
-See [Pins on iPhone & iPad](/ios/pins) for the touch-specific guide.
+Long-press a content card to open its quick actions and choose **Pin**, **Unpin**, or **Remove Pin**.
+This works for media, people, and browse cards.
+The same action on an episode card opens its episode menu.
 
-### On Apple TV
-
-#### From a Detail Page
-
-The first action button on any movie, series, season, or episode page is a **Pin** toggle.
-Press it once to pin the item, again to unpin.
-No confirmation dialog.
-
-#### Long-Press on Any Card
-
-Hold Select on any content card across Home, Library, or Browse.
-A modal appears with **Pin** or **Unpin** alongside the played-status actions.
-
-#### From the Episode Menu
-
-Long-press an episode card to open the episode menu.
-The Pin / Unpin action appears alongside Mark as Played and other quick actions.
-
-#### From a Person Page
-
-Person pages have a **Pin** button next to the portrait.
-Pinning a person gives you one-tap access to their filmography.
-
-#### From a Browse Picker
-
-When browsing by genre, studio, network, or person, long-press any picker card to pin that browse view.
+When browsing by genre, studio, network, or person, long-press a picker card to pin that browse view.
 For studios and networks, Neptune normalizes the name so the Pin matches its TMDB equivalent when possible.
+
+Use the same Pin action on a person page to save that person's filmography.
+
+The shared Pins order is preserved across devices while you add and remove Pins where their targets appear.
 
 ## Timestamp Pins
 
@@ -74,37 +52,35 @@ A timestamp Pin captures the exact moment you're watching: position plus a thumb
 
 ### Creating One
 
-Timestamp Pin creation currently uses the Apple TV player:
-
-1. Start playing any movie or episode on Apple TV.
-2. Tap the touch surface to reveal player controls.
-3. Press the **Pin** button on the action row.
-4. A confirmation pill shows “Pinned at 1:23:45” for a couple of seconds.
+Start playback, open the player controls, and choose **Pin Timestamp**.
+If it is hidden, add it under **Settings > Playback > Controls > Action Buttons**.
+A confirmation shows the saved time.
 
 The thumbnail comes from the live frame on screen.
 If a live frame is not available, Neptune falls back to the corresponding trickplay tile.
 
 ### Resuming from One
 
-On Apple TV, select a timestamp Pin card on the Library tab to open three choices:
+Open a timestamp Pin from the Library tab to choose one of three actions:
 
 - **Play from \[timestamp\].**
-Jumps to the exact moment.
+  Jumps to the exact moment.
 - **Go to Item.**
-Opens the item's detail page without auto-playing.
+  Opens the item's detail page without auto-playing.
 - **Remove Pin.**
-Deletes the Pin and its thumbnail.
+  Deletes the Pin and its thumbnail.
 
-On iPhone and iPad, synchronized timestamp Pins appear with their saved time and open the current media destination.
-Creating a new saved moment and choosing exact timestamp playback remain Apple TV actions.
+Timestamp Pins remain visible with their saved time.
+If several moments belong to one movie or episode, Neptune collapses them into one card.
+Open that card to see the chronological moment chooser, where saved moments use wide frames—even when there is only one saved moment.
+The selected frame supplies the sheet's blurred backdrop.
+From the chooser you can **Play from [time]**, open the item, or remove only the selected moment.
 
 ### Multiple Timestamps on One Item
 
-On Apple TV, several timestamp Pins for the same movie or episode collapse into one card with a count badge.
+Several timestamp Pins for the same movie or episode collapse into one card with a count badge.
 Selecting it opens a chronological carousel of saved moments.
-
-On iPhone and iPad, the moments also collapse into one card.
-Removing that card removes every timestamp Pin for the item.
+Removing a timestamp from its card menu removes the displayed moment; if more moments remain, the collapsed card advances to the next one.
 
 ## Where Pins Appear
 
@@ -115,6 +91,9 @@ Removing that card removes every timestamp Pin for the item.
 | **Shows** | Series, season, and episode Pins |
 | **Music** | Music-video Pins when the Music surface is enabled |
 | **Library** | Pins grouped into ordered category rows |
+
+Selecting a media Pin opens its current detail destination, while Person Pins open the person's page.
+Genre, studio, network, and Smart Tag Pins reopen their current library results rather than storing an old result list.
 
 | Card Style | Used For |
 | --- | --- |
@@ -127,8 +106,8 @@ The Pins section can be reordered or hidden through Library customization, and t
 
 ## Edit Mode
 
-Apple TV provides an edit mode for reordering the shared Pins list.
-Long-press any card in a Library Pins row to enter it; cards begin a gentle jiggle animation.
+The Library Pins row provides an edit mode for reordering the shared Pins list.
+Long-press any card in the row to enter it; cards begin a gentle jiggle animation.
 
 | Action | How |
 | --- | --- |
@@ -137,9 +116,28 @@ Long-press any card in a Library Pins row to enter it; cards begin a gentle jigg
 | Remove | Press Select on a card to open its menu, then choose Unpin |
 | Exit edit mode | Press Menu/Back, or focus away from the row |
 
-iPhone and iPad preserve this synchronized order but do not provide a separate reorder screen.
+Clients without a separate reorder screen still preserve the shared order while you add and remove Pins where they appear.
 
 ## Sync Across Devices
 
 If [Backup & Restore](/settings/backup) is enabled with the Neptune plugin, your Pins travel with the rest of the profile's settings.
 Pin something on one device and it appears on the others signed into the same server account.
+
+Timestamp positions sync, but each captured frame image stays on the device that created it.
+When you open a timestamp Pin, Jellyfin preview tiles rebuild and cache the matching frame if its local image is missing.
+A neutral placeholder remains in the chooser when the connected backend cannot provide preview tiles.
+
+## Pins in Widgets
+
+Pins inside Neptune are available without Neptune Pro.
+[Pin Widgets](/browsing/widgets#pin-widgets-neptune-pro) are a separate Pro feature that lets a conventional Home Screen or Lock Screen widget target one of those Pins.
+Movie and episode Pin widgets can also be configured to **Play**.
+
+The widget stores its own selection.
+Editing or removing the underlying Pin updates any widget that refers to it.
+
+## Native Pins and Compass Shortcuts
+
+Native Pins bookmark media, people, and library browse contexts and appear in Neptune's content rows.
+The iPhone Compass uses a separate one-to-eight set of Compass Shortcuts, which can also appear in its [Live Activity](/browsing/navigation/compass/live-activity).
+Compass Shortcuts do not replace Native Pins or a widget's independent Page, Section, or Pin selection.

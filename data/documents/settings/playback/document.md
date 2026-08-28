@@ -140,7 +140,7 @@ Locking the screen does not start Picture in Picture; Background Playback contro
 With both settings off, playback pauses when Neptune leaves the foreground.
 
 Changes apply to the next playback session.
-See [Picture in Picture & Background Playback](/ios/playback) for the complete four-state behavior, Lock Screen and Control Center actions, subtitle and transcode limits, and troubleshooting.
+See [Picture in Picture & Background Playback](/playback/outside-the-app) for the complete four-state behavior, Lock Screen and Control Center actions, subtitle and transcode limits, and troubleshooting.
 
 ## Advanced
 

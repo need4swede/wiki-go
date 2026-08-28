@@ -32,6 +32,7 @@ See [Supported Media Servers](/getting-started/backends) for current availabilit
 | Page | Description |
 |------|-------------|
 | [Navigation](/browsing/navigation) | Tab bar, Compass, remote controls |
+| [Widgets](/browsing/widgets) | Per-widget Pages, dynamic Sections, and native Pins |
 | [Home Screen](/browsing/home-screen) | Hero spotlight, content rows, customization |
 | [Item Details](/browsing/item-details) | Movies, TV shows, extras, people |
 | [Collections](/browsing/collections) | Box sets and franchises |
@@ -80,7 +81,7 @@ See [Supported Media Servers](/getting-started/backends) for current availabilit
 | [Player Controls](/playback/player-controls) | Scrubbing, skip segments, Up Next |
 | [Playback Menu](/playback/playback-menu) | In-player audio, subtitles, video, chapters, and info |
 | [Conductor](/playback/conductor) | Track and version selection, with optional Pro learning |
-| [Picture in Picture & Background Playback](/ios/playback) | Continue video or audio outside Neptune on iPhone and iPad |
+| [Picture in Picture & Background Playback](/playback/outside-the-app) | Continue video or audio outside Neptune on iPhone and iPad |
 
 ### Personalization
 
@@ -91,16 +92,6 @@ See [Supported Media Servers](/getting-started/backends) for current availabilit
 | [Themes](/personalization/themes) | Nine built-in themes plus custom imports |
 | [Item Detail Layouts](/personalization/item-detail-layouts) | Detailed, Immersive, or Minimal |
 | [Cards & Backdrops](/personalization/cards-and-backdrops) | Card styles and artwork behavior |
-
-### iPhone & iPad
-
-| Page | Description |
-|------|-------------|
-| [iPhone & iPad](/ios) | Touch features and iOS system integrations |
-| [Pins](/ios/pins) | Native library bookmarks on iPhone and iPad |
-| [Widgets](/ios/widgets) | Per-widget Pages, dynamic Sections, and native Pins |
-| [Live Activity](/ios/live-activity) | The iPhone Compass in Dynamic Island and on the Lock Screen |
-| [Picture in Picture & Background Playback](/ios/playback) | Floating video, Lock Screen audio, and system transport controls |
 
 ### Settings
 
@@ -121,8 +112,8 @@ See [Supported Media Servers](/getting-started/backends) for current availabilit
 | [Downloads](/neptune-pro/downloads) | Original or space-saving offline media |
 | [Top Shelf Customization](/neptune-pro/top-shelf-customization) | Cinematic Apple TV Home Screen presentation |
 | [Cinematic Loading Screens](/neptune-pro/loading-screens) | Cached library artwork during launch on Apple TV, iPhone, and iPad |
-| [Pin Widgets](/ios/widgets#pin-widgets-neptune-pro) | Put native Pins on the iPhone or iPad Home Screen and Lock Screen |
-| [Section Widgets](/ios/widgets#section-widgets-neptune-pro) | Rotate current media from supported Home and Discover sections in iOS widgets |
+| [Pin Widgets](/browsing/widgets#pin-widgets-neptune-pro) | Put native Pins on the iPhone or iPad Home Screen and Lock Screen |
+| [Section Widgets](/browsing/widgets#section-widgets-neptune-pro) | Rotate current media from supported Home and Discover sections in iOS widgets |
 
 ### Backend Extensions
 

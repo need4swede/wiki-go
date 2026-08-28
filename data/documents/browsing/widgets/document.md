@@ -1,13 +1,13 @@
 ---
-order: 20
+order: 30
 ---
 
-# Widgets on iPhone & iPad
+# Widgets
 
 Neptune provides one configurable widget for the iPhone and iPad Home Screen and Lock Screen.
-Every widget instance independently opens a standard Neptune Page, shows a dynamic Section, or uses one of your [native Pins](/ios/pins).
+Every widget instance independently opens a standard Neptune Page, shows a dynamic Section, or uses one of your [native Pins](/library/shortcuts).
 
-These conventional widgets are separate from the iPhone-only Compass [Live Activity](/ios/live-activity).
+These conventional widgets are separate from the iPhone-only Compass [Live Activity](/browsing/navigation/compass/live-activity).
 
 ## Supported Sizes
 
