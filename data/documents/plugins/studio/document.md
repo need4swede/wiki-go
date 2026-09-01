@@ -4,35 +4,24 @@ order: 40
 
 # Neptune Studio
 
-Neptune Studio is the UI customization member of the Neptune Plugin Suite for Jellyfin.
-It gives server administrators visual tools for shaping how Neptune looks across their clients, with customization definitions and rendered assets managed centrally on the server.
-
-Top Shelf customization is Studio's first integration today.
-More Neptune interface customization options will build on the same Studio foundation in the future.
+Neptune Studio is a Jellyfin plugin for configuring Neptune's Apple TV Top Shelf artwork.
+It stores designs and rendered assets on the server.
 
 ## Top Shelf Customization
 
-Studio creates reusable designs for the two artwork-driven Apple TV Top Shelf surfaces:
+Studio supports two Apple TV Top Shelf surfaces:
 
 | Surface | Neptune Style | Output |
 |---------|---------------|--------|
 | **Banners** | Inset | Wide banner artwork with a focused safe area |
 | **Cinematic** | Carousel | Full-screen 16:9 artwork |
 
-The plugin ships with starter designs for both surfaces.
-Administrators can create, rename, duplicate, preview, set defaults, and delete custom designs without editing configuration files.
+The plugin includes starter designs for both surfaces.
+Administrators can create, rename, duplicate, preview, set defaults, and delete designs without editing configuration files.
 
-## Built to Expand
+## Configure a Design
 
-Studio is organized as a capability-based customization service rather than a one-purpose artwork plugin.
-Neptune clients can detect the Studio capabilities their server exposes and surface only the editors and choices they understand.
-
-Top Shelf cards are the first capability.
-As additional UI customization options are released, their controls and documentation will join this page.
-
-## Visual Editor
-
-For today's Top Shelf tools, open **Jellyfin Dashboard > Plugins > Neptune Studio** after release and installation.
+After installation, open **Jellyfin Dashboard > Plugins > Neptune Studio**.
 
 Each design can control:
 

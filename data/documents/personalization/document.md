@@ -12,6 +12,6 @@ Customize how Neptune looks and who uses it.
 |------|-------------|
 | [Profiles](/personalization/profiles) | Multiple users, switching, preferences |
 | [Settings Profiles](/personalization/profile-presets) | Personal or server-published environments with device-type selection |
-| [Themes](/personalization/themes) | Built-in and custom themes |
+| [Themes](/personalization/themes) | Built-in themes |
 | [Item Detail Layouts](/personalization/item-detail-layouts) | Detailed, Immersive, and Minimal detail pages |
 | [Cards & Backdrops](/personalization/cards-and-backdrops) | Card styles, spoiler blurring, backdrop behavior |

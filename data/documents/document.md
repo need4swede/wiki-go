@@ -89,7 +89,7 @@ See [Supported Media Servers](/getting-started/backends) for current availabilit
 |------|-------------|
 | [Profiles](/personalization/profiles) | Multi-user support |
 | [Settings Profiles](/personalization/profile-presets) | Personal and server-published settings environments with device-type selection |
-| [Themes](/personalization/themes) | Nine built-in themes plus custom imports |
+| [Themes](/personalization/themes) | Nine built-in themes |
 | [Item Detail Layouts](/personalization/item-detail-layouts) | Detailed, Immersive, or Minimal |
 | [Cards & Backdrops](/personalization/cards-and-backdrops) | Card styles and artwork behavior |
 
@@ -108,9 +108,9 @@ See [Supported Media Servers](/getting-started/backends) for current availabilit
 | [Neptune Pro](/neptune-pro) | Plans, feature comparison, and purchase behavior |
 | [Conductor Pro](/neptune-pro/conductor-pro) | Playback preferences that learn as you watch |
 | [Neptune AI](/neptune-pro/neptune-ai) | Bespoke first-party intelligence with no setup |
-| [TMDB Integration](/neptune-pro/tmdb-integration) | Richer metadata, people, trailers, studios, and release dates |
+| [TMDB Integration](/neptune-pro/tmdb) | Richer metadata, people, trailers, studios, and release dates |
 | [Downloads](/neptune-pro/downloads) | Original or space-saving offline media |
-| [Top Shelf Customization](/neptune-pro/top-shelf-customization) | Cinematic Apple TV Home Screen presentation |
+| [Top Shelf Customization](/neptune-pro/top-shelf) | Cinematic Apple TV Home Screen presentation |
 | [Cinematic Loading Screens](/neptune-pro/loading-screens) | Cached library artwork during launch on Apple TV, iPhone, and iPad |
 | [Pin Widgets](/browsing/widgets#pin-widgets-neptune-pro) | Put native Pins on the iPhone or iPad Home Screen and Lock Screen |
 | [Section Widgets](/browsing/widgets#section-widgets-neptune-pro) | Rotate current media from supported Home and Discover sections in iOS widgets |
@@ -122,8 +122,8 @@ See [Supported Media Servers](/getting-started/backends) for current availabilit
 | [Neptune Plugin Suite](/plugins) | Optional Jellyfin extensions: Indexers, MDM, Transcoder, and Studio |
 | [Indexers](/plugins/indexers) | Server-side indexing and music metadata |
 | [MDM](/plugins/mdm) | Settings sync, live Server Profiles, Server Defaults, announcements, remote management |
-| [Transcoder](/plugins/transcoder) | Server-managed download quality profiles (coming soon) |
-| [Studio](/plugins/studio) | UI customization, beginning with Top Shelf design (coming soon) |
+| [Transcoder](/plugins/transcoder) | Server-managed download quality profiles |
+| [Studio](/plugins/studio) | UI customization, beginning with Top Shelf design |
 
 ## Key Features
 
@@ -138,7 +138,7 @@ See [Supported Media Servers](/getting-started/backends) for current availabilit
 - **Compass Live Activity**: Reach one to eight configurable shortcuts from Dynamic Island, the iPhone Lock Screen, or Neptune's in-app palette
 - **Picture in Picture & Background Playback**: Keep video floating over other apps or continue audio with Lock Screen and Control Center controls
 - **Cloud Backup & Sync**: Preferences, preset definitions, and device-type assignments follow you across devices, with Device Overrides for settings that should stay different on one physical device
-- **Custom Themes**: Nine built-in themes with Adaptive and Dynamic modes, plus JSON import for your own designs
+- **Themes**: Nine built-in themes with Adaptive and Dynamic modes
 - **Family Ready**: Per-profile everything, child accounts, and PIN-protected admin tools
 
 ## Requirements

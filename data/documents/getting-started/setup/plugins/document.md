@@ -16,7 +16,7 @@ Neptune itself works without them, and plugin support for future backends will b
 |--------|---------|
 | **[Neptune Indexers](/plugins/indexers)** | Server-side library and search indexing |
 | **[Neptune MDM](/plugins/mdm)** | Settings sync, reusable Server Profiles, Server Defaults, and remote management |
-| **[Neptune Transcoder](/plugins/transcoder)** | Server-managed download quality profiles (coming soon) |
+| **[Neptune Transcoder](/plugins/transcoder)** | Server-managed download quality profiles |
 | **[Neptune Studio](/plugins/studio)** | Neptune UI and artwork customization |
 
 See [Neptune Plugin Suite](/plugins) for full details on what each plugin does and how to install them.

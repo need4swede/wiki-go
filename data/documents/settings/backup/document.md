@@ -18,7 +18,7 @@ Sync support for future backends will be documented as it becomes available.
 
 | Category | Examples |
 |----------|----------|
-| Appearance | Theme, theme mode, card styles, layouts, custom theme imports |
+| Appearance | Theme, theme mode, card styles, and layouts |
 | Home & Library layout | Section order and visibility, navigation bar, row limits |
 | Playback | Engine choice, autoplay behavior, audio settings, and iOS [Picture in Picture and Background Playback](/playback/outside-the-app) toggles |
 | Conductor | Languages, track rules, quality preferences |

@@ -11,7 +11,6 @@ Customize Neptune's visual appearance.
 | Page | Description |
 |------|-------------|
 | [Built-in Themes](/personalization/themes/built-in) | Nine pre-designed themes |
-| [Custom Themes](/personalization/themes/custom) | Import custom JSON themes |
 
 ## What Themes Control
 

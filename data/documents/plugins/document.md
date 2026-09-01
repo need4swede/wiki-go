@@ -16,7 +16,7 @@ These plugins currently extend Jellyfin.
 |------|-------------|
 | [Indexers](/plugins/indexers) | Server-side indexing, richer search data, music metadata |
 | [MDM](/plugins/mdm) | Settings sync, reusable Server Profiles, Server Defaults, announcements, and remote management |
-| [Transcoder](/plugins/transcoder) | Server-managed download quality profiles and original-quality policy (coming soon) |
+| [Transcoder](/plugins/transcoder) | Server-managed download quality profiles and original-quality policy |
 | [Studio](/plugins/studio) | Neptune UI and artwork customization |
 
 ## Overview

@@ -35,6 +35,6 @@ Depending on the available options, you can keep the original file or choose a s
 Episode menus also provide download controls.
 
 Neptune includes a built-in quality ladder.
-When the upcoming [Neptune Transcoder](/plugins/transcoder) plugin is installed, the server administrator's profiles replace those presets and can control whether original-quality downloads are offered.
+When the [Neptune Transcoder](/plugins/transcoder) plugin is installed, the server administrator's profiles replace those presets and can control whether original-quality downloads are offered.
 
 Downloads stay on the device where they were created and respect the active profile's content restrictions.

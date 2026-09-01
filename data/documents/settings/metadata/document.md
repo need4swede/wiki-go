@@ -21,7 +21,7 @@ Smart mode is the right choice for almost everyone: it pre-fetches what you're l
 
 ## TMDB Metadata
 
-[Neptune Pro's TMDB Integration](/neptune-pro/tmdb-integration) fills gaps in your backend's metadata with:
+[Neptune Pro's TMDB Integration](/neptune-pro/tmdb) fills gaps in your backend's metadata with:
 
 - Title logos on detail pages and Seerr items
 - Cast and crew with photos, beyond what the connected backend provides

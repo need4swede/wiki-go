@@ -12,9 +12,9 @@ Pro expands Neptune with intelligence built specifically for the app, richer con
 |---------|---------------|
 | [Conductor Pro](/neptune-pro/conductor-pro) | Auto mode learns playback choices, and Language Rules react to live audio changes in Manual or Auto |
 | [Neptune AI](/neptune-pro/neptune-ai) | Neptune's bespoke, first-party hosted intelligence provider |
-| [TMDB Integration](/neptune-pro/tmdb-integration) | Richer artwork, trailers, credits, release dates, people, studios, and networks |
+| [TMDB Integration](/neptune-pro/tmdb) | Richer artwork, trailers, credits, release dates, people, studios, and networks |
 | [Downloads](/neptune-pro/downloads) | Original-quality or space-saving offline movies and episodes |
-| [Top Shelf Customization](/neptune-pro/top-shelf-customization) | Cinematic presentation, Studio designs, section ordering, and direct Play actions on Apple TV |
+| [Top Shelf Customization](/neptune-pro/top-shelf) | Cinematic presentation, Studio designs, section ordering, and direct Play actions on Apple TV |
 | [Cinematic Loading Screens](/neptune-pro/loading-screens) | Cached library posters and backdrops with a configurable artwork source |
 | [Pin Widgets](/browsing/widgets#pin-widgets-neptune-pro) | Put a native Pin on the iPhone or iPad Home Screen or Lock Screen, with direct Play for movie and episode Pins |
 | [Section Widgets](/browsing/widgets#section-widgets-neptune-pro) | Rotate current media from 16 supported Home and Discover sections in a widget |
