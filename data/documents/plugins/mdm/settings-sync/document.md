@@ -21,7 +21,7 @@ See [Backup & Restore](/settings/backup) for the client-side controls.
 
 ## Settings Profiles
 
-The synchronized document includes [Settings Profiles](/personalization/profile-presets), including their names, sparse included settings, override-clearing choices, order, and device-type assignments.
+The synchronized document includes [Settings Profiles](/plugins/mdm/settings-profiles), including their names, sparse included settings, override-clearing choices, order, and device-type assignments.
 The active choice remains local to each physical device, so manually switching profiles on one device does not force every device to use the same profile.
 
 The synchronized document retains profile definitions, assignments, and the device's selection even while a profile is not active.

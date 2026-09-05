@@ -88,7 +88,6 @@ See [Supported Media Servers](/getting-started/backends) for current availabilit
 | Page | Description |
 |------|-------------|
 | [Profiles](/personalization/profiles) | Multi-user support |
-| [Settings Profiles](/personalization/profile-presets) | Personal and server-published settings environments with device-type selection |
 | [Themes](/personalization/themes) | Nine built-in themes |
 | [Item Detail Layouts](/personalization/item-detail-layouts) | Detailed, Immersive, or Minimal |
 | [Cards & Backdrops](/personalization/cards-and-backdrops) | Card styles and artwork behavior |
@@ -98,7 +97,6 @@ See [Supported Media Servers](/getting-started/backends) for current availabilit
 | Page | Description |
 |------|-------------|
 | [Settings](/settings) | Every configuration screen, explained |
-| [Settings Profiles](/personalization/profile-presets) | Named personal or server-published profiles with device-type assignments |
 | [Device Overrides](/settings/device-overrides) | Keep one synchronized setting different on one device |
 
 ### Neptune Pro

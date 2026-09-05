@@ -28,6 +28,7 @@ var legacyDocumentRedirects = map[string]string{
 	"/ios/backdrops":                     "/personalization/cards-and-backdrops",
 	"/library/shortcuts/iphone-and-ipad": "/library/shortcuts",
 	"/personalization/cards-and-backdrops/iphone-and-ipad": "/personalization/cards-and-backdrops",
+	"/personalization/profile-presets":                "/plugins/mdm/settings-profiles",
 }
 
 // PageHandler handles requests for pages

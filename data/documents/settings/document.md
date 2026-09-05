@@ -18,7 +18,6 @@ Access Settings via the gear icon at the left edge of the tab menu bar.
 | [Images](/settings/images) | Image cache and downloads |
 | [Metadata](/settings/metadata) | Metadata cache and the Pro control for optional TMDB enrichment |
 | [Backup & Restore](/settings/backup) | Sync preferences across devices |
-| [Settings Profiles](/personalization/profile-presets) | Personal configurations and optional or Required Server Profiles |
 | [Device Overrides](/settings/device-overrides) | Keep individual settings different on one device |
 | [Administration](/settings/administration) | User management and parental controls (admins) |
 | [Diagnostics](/settings/diagnostics) | App and server information, network testing, playback benchmarking, and support logs |
@@ -32,7 +31,7 @@ The Settings screen groups everything by scope:
 
 **Profiles.**
 Avatar cards for switching users, plus **User Preferences**: your personal appearance, [Conductor](/playback/conductor), subtitle style, sounds, and [Backup & Restore](/settings/backup).
-Backup & Restore contains both [Settings Profiles](/personalization/profile-presets), for reusable synced configurations, and [Device Overrides](/settings/device-overrides), which keep one otherwise synchronized setting different on the current device.
+Backup & Restore contains both [Settings Profiles](/plugins/mdm/settings-profiles), for reusable synced configurations, and [Device Overrides](/settings/device-overrides), which keep one otherwise synchronized setting different on the current device.
 On iPhone, User Preferences also contains separate **Live Activity**, **Widgets**, and **Compass** destinations; iPad shows **Widgets** but not the iPhone-only Compass surfaces.
 Admins also get an **Administration** entry here.
 

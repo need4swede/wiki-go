@@ -7,7 +7,7 @@ order: 80
 Keep your Neptune preferences in sync across every device signed into the same server account.
 Settings, layout choices, theme picks, library pins, and your customized home rows all stay aligned.
 When one setting genuinely needs to be different on one device, [Device Overrides](/settings/device-overrides) can keep that setting local without disabling the rest of sync.
-[Settings Profiles](/personalization/profile-presets) provide named settings environments that can be selected locally or assigned by device type.
+[Settings Profiles](/plugins/mdm/settings-profiles) provide named settings environments that can be selected locally or assigned by device type.
 Administrators can separately publish reusable Server Profiles to every matching device class or only to selected users.
 
 Backup & Restore is currently powered by the Jellyfin-specific [Neptune MDM](/plugins/mdm) plugin.
@@ -27,7 +27,7 @@ Sync support for future backends will be documented as it becomes available.
 | [Library Pins](/library/shortcuts) | Pinned items, browse Pins, timestamp Pins |
 | [iPhone Compass](/browsing/navigation/compass/live-activity) | Ordered Compass Shortcuts, custom labels and symbols |
 | [Live Activity](/browsing/navigation/compass/live-activity) | Enabled state and selected activity type |
-| [Settings Profiles](/personalization/profile-presets) | Profile definitions, saved values, override-replacement choices, order, and device-type assignments |
+| [Settings Profiles](/plugins/mdm/settings-profiles) | Profile definitions, saved values, override-replacement choices, order, and device-type assignments |
 
 What stays device-local: diagnostics toggles, the sync switch itself, and anything tied to the specific hardware.
 The active Settings Profile choice is local too: Auto, Manual with no profile selected, or a manually selected named profile can be different on each physical device.
@@ -65,7 +65,7 @@ Go to **Settings > User Preferences > Backup and Restore**:
 | **Device Overrides** | Keeps selected settings local to this device while everything else syncs |
 | **Delete Cloud Backup** | Removes the backup from the server. Devices keep their local settings and overrides |
 
-[Settings Profiles](/personalization/profile-presets) lives inside Backup and Restore.
+[Settings Profiles](/plugins/mdm/settings-profiles) lives inside Backup and Restore.
 Its definitions and one optional automatic assignment per device type use the same Settings Sync connection.
 Definitions and the local choice remain stored even while a profile is inactive.
 An explicit Required assignment is managed policy and keeps the assigned profile active independently of personal profile selection.

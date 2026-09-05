@@ -6,7 +6,7 @@ order: 85
 
 Device Overrides lets one setting stay different on one device while the rest of your Neptune preferences continue to sync normally.
 
-Unlike [Settings Profiles](/personalization/profile-presets), which provide named settings environments, a Device Override keeps one setting on one physical device.
+Unlike [Settings Profiles](/plugins/mdm/settings-profiles), which provide named settings environments, a Device Override keeps one setting on one physical device.
 
 For example, you can keep the **Immersive** item-detail layout on one device and use **Minimal** on another without separating every other preference.
 You can also keep an iPhone player Action Button order or visibility choice on that device while Apple TV retains its own layout.

@@ -15,6 +15,7 @@ Sync and remote-management support for future backends will depend on the extens
 | What you want to do | Use | How it behaves |
 |---------------------|-----|----------------|
 | Cross-device backup | [Settings Sync](/plugins/mdm/settings-sync) | Keeps supported settings and personal profiles synchronized |
+| Create named settings environments | [Settings Profiles](/plugins/mdm/settings-profiles) | Saves reusable settings and optional device-type assignments |
 | Starting configuration / OOBE | [Server Defaults](/plugins/mdm/server-defaults) | Seeds settings once; later changes are not retroactive |
 | Create a preset for users or devices | [Server Profiles](/plugins/mdm/server-profiles) | Keeps one server-owned definition and updates everyone in its scope |
 | Change settings for an existing user | [Remote Management](/plugins/mdm/remote-management) | Sends only the selected fields and can keep individual values managed |
