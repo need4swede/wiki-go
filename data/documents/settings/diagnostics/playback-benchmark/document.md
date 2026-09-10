@@ -4,19 +4,17 @@ order: 20
 
 # Playback Benchmark
 
-Playback Benchmark tests real media from your server on the current device.
-It plays a short isolated sample and grades the measured experience.
+Playback Benchmark plays short samples of real media from your server to measure how they perform on the current device.
 
-To get started, open **Settings > About > Diagnostics > Playback Benchmark**.
+To get started, open **Playback Benchmark** in the **Diagnostics** area of Settings.
 
-## Choosing Samples
+## Choose What to Test
 
-Search for a movie or episode to add it to the benchmark queue.
-Select **Suggest Items to Test** when you want Neptune to propose demanding or representative files from your library.
-You can combine suggested and manually searched items in one queue.
+Search for a movie or episode, or select **Suggest Items to Test** to let Neptune find demanding or representative files in your library.
+You can combine searched and suggested items in the same queue.
 
-After a title is selected, Neptune probes its current media source.
-Queue rows show only the criteria that the upcoming base pass will actually exercise, such as:
+After you select a title, Neptune checks its current media source.
+The queue shows the characteristics the test will exercise, which may include:
 
 - container and resolution;
 - video codec, bit depth, HDR format, or Dolby Vision profile;
@@ -26,10 +24,10 @@ Queue rows show only the criteria that the upcoming base pass will actually exer
 ## Running the Benchmark
 
 Start the queue and let each sample complete.
-You can cancel the current run at any time.
+Neptune measures playback for 60 seconds after the first frame appears.
+You can cancel the run at any time.
 
-Benchmark playback is isolated from ordinary playback.
-It does not:
+The benchmark uses an isolated player, so it does not:
 
 - change resume position or watched state;
 - send playback progress reports;
@@ -38,35 +36,31 @@ It does not:
 
 ## Understanding Results
 
-Each sample receives one overall verbal grade. The result also separates the experience into categories so you can see what influenced it:
+Each sample receives an overall verbal result.
+For a completed run with enough reliable evidence, Neptune bases the grade on three parts of the measured experience.
+The **Measured Telemetry** cards show the supporting measurements.
 
-| Category | What It Tells You |
-|----------|-------------------|
-| **Startup** | The total wait before the first picture appeared. Lower is better. |
-| **Playback Stability** | Whether playback stalled after it started and, if so, for how long. No stalls is ideal. |
-| **Smoothness** | How many observed video frames were dropped, shown with the frame-loss percentage. Lower is better. |
-| **Dynamic Range** | The source format and the format actually displayed, such as **HDR10 → SDR**. A change means the picture was adapted for the current display path; it is not automatically a playback failure. |
+| Result Area | What Neptune Measures |
+|-------------|-----------------------|
+| **Startup** | The **Timing** card shows the total wait before the first picture, including setup and player startup, followed by the observation window and playback timeline advance. Lower startup time is better. |
+| **Playback Stability** | The **Continuity** card shows stall count, total stall time, the share of the run spent stalled, and the longest stall. No stalls is ideal. |
+| **Smoothness** | The **Video** card shows observed frames and frame rate, dropped and late frames, and the resulting frame-loss percentage. Lower frame loss is better. |
+| **Context** | The **Environment** card shows detected and effective dynamic range, thermal state, and whether Low Power Mode was active. These details do not affect the grade by themselves. |
 
-The badges beneath the result describe the workload that was tested, including the file's container, resolution, video format, source bitrate, and selected audio format. They provide context for the result rather than adding points to the grade.
+One noticeably weak scored category can lower the overall result.
+For example, a fast start does not make up for repeated stalls or dropped frames.
 
-## Measured Telemetry
+Dynamic range appears as the source and effective playback formats, such as **HDR10 → SDR**.
+A change means the picture was adapted for the current display path, not necessarily that playback failed.
+The workload badges also provide context about the container, resolution, video format, bitrate, and selected audio format without adding points to the grade.
 
-The **Measured Telemetry** cards provide more detail about the run. On Apple TV, move between the cards with the Siri Remote. On iPhone and iPad, swipe through them.
+On Apple TV, move between the cards with the Siri Remote.
+On iPhone and iPad, swipe through them.
+If Neptune cannot collect a value reliably, it leaves that value unavailable instead of treating it as a healthy result.
 
-| Card | Measurements |
-|------|--------------|
-| **Timing** | End-to-end startup, the portion spent starting playback, setup before playback began, the observation window, and how far the playback timeline advanced |
-| **Continuity** | Stall count, total stall time, the share of the run spent stalled, and the longest individual stall |
-| **Video** | Observed frames and frame rate, dropped and late frames, and the resulting frame-loss percentage |
-| **Environment** | Detected and effective dynamic range, the device's thermal state, and whether Low Power Mode was active |
+### Grade Scale
 
-These measurements are observations from this one run. If Neptune could not reliably collect a value on the current device, it will not treat the missing measurement as proof that playback was healthy.
-
-## What a Grade Means
-
-The grade summarizes startup, playback stability, and smoothness. One noticeably weak category can lower the overall result; a fast start does not cancel out stalls or dropped frames. Dynamic range and the workload badges describe what happened, but are not quality grades by themselves.
-
-From highest to lowest, the grade tiers are:
+From highest to lowest, the grades are:
 
 | Grade | General Meaning |
 |-------|-----------------|
@@ -79,14 +73,16 @@ From highest to lowest, the grade tiers are:
 
 **Not Verified** is not a quality grade. It means the run did not collect enough reliable evidence to judge the experience.
 
-A strong result means the current device, network route, and selected file performed well during that run. It is not a certification for every file with the same labels.
-
-Results from different user-selected files are useful diagnostics but are not standardized comparisons.
+A result applies only to that file, device, network route, and moment.
+It is useful for diagnosis, but it does not certify every file with similar formats or provide a standardized comparison between different files.
 Server load, network conditions, background device work, thermal state, file structure, and transcoding policy can all change a later result.
 
 ## Analyze Results with Neptune AI
 
 Neptune Pro adds an optional **Analyze Results** button after the queue completes.
-Selecting it asks [Neptune AI](/neptune-pro/neptune-ai) to turn the measurements into a short, plain-language explanation of what they would mean while watching. A healthy run may simply need no action. When the result shows a problem, Neptune AI can explain the likely symptom and suggest a sensible next check without exposing player internals.
+Selecting it asks [Neptune AI](/neptune-pro/neptune-ai) for a short, plain-language explanation of what the measurements would mean while watching.
+A healthy run may need no action.
+When the result shows a problem, Neptune AI can describe the likely symptom and suggest a sensible next check without exposing player internals.
 
-Only bounded technical measurements from the test are sent for analysis. Media titles, server details, URLs, file paths, and credentials stay on the device.
+Only bounded technical measurements from the test are sent for analysis.
+Media titles, server details, URLs, file paths, and credentials stay on the device.
