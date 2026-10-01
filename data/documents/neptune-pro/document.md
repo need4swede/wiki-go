@@ -14,6 +14,7 @@ Pro expands Neptune capabilities with richer connected metadata, adaptive playba
 | [Neptune AI](/neptune-pro/neptune-ai) | Neptune's bespoke, first-party hosted intelligence provider |
 | [TMDB Integration](/neptune-pro/tmdb) | Richer artwork, trailers, credits, release dates, people, studios, and networks |
 | [Downloads](/neptune-pro/downloads) | Original-quality or space-saving offline movies and episodes |
+| [Subtitles Pro](/neptune-pro/subtitles) | Search for and download an additional subtitle during playback, synchronized automatically |
 | [Top Shelf Customization](/neptune-pro/top-shelf) | Cinematic presentation, Studio designs, section ordering, and direct Play actions on Apple TV |
 | [Custom Loading Screens](/neptune-pro/loading-screens) | Cached library posters and backdrops with a configurable artwork source |
 | [Pin Widgets](/browsing/widgets#pin-widgets-neptune-pro) | Put a native Pin on the iPhone or iPad Home Screen or Lock Screen, with direct Play for movie and episode Pins |
@@ -30,6 +31,7 @@ Pro expands Neptune capabilities with richer connected metadata, adaptive playba
 | **AI / LLM** | Use third-party provider with your own compute or API key | Use the integrated, official first-party Neptune AI service |
 | **Metadata** | Everything supplied by your media backend | Commercial API access across detail, people, home surfaces and more |
 | **Offline** | Requires a network connection to your media backend | Download and play media without a network connection |
+| **Subtitles** | Embedded and media-server subtitle tracks | Adds Find More Subtitles: search, download, and real-time synchronized subtitles, with optional Save to Server |
 | **Top Shelf** | Core Top Shelf presentation and content controls | Cinematic mode, Studio artwork, ordering, item limits, rich details, and Play actions |
 | **Loading screen** | Neptune logo, progress, and optional launch hints on a black background | Adds cached library artwork from Spotlight, Continue, Favorites, Recently Added, or Random |
 | **iOS Widgets** | Every size can open a standard Neptune Page; native Pins and in-app Home and Discover sections remain available | Adds native Pin Widgets and dynamic Section Widgets to the per-widget picker |

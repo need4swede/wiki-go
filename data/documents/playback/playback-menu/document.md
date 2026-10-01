@@ -39,6 +39,8 @@ Hold Select on any row for a **Reset to Default** option.
 
 **Track** lists subtitle tracks with **Forced**, **SDH**, and **External** badges, plus an Off entry.
 
+**Find More Subtitles** searches for an additional subtitle beyond what the server provides and downloads it to the device, synchronized to the exact playback. Part of [Subtitles Pro](/neptune-pro/subtitles).
+
 **Style** adjusts appearance without leaving playback: font size, text color, background style, and brightness.
 The same options live in [Subtitle Style](/settings/subtitles) settings.
 
