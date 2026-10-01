@@ -11,14 +11,14 @@ The spotlight ranks items from your library based on viewing activity, release d
 
 Each spotlight item is tagged with a colored badge explaining why it's featured:
 
-| Badge | Color | Criteria |
-|-------|-------|----------|
-| **Continue** | Orange | Movies or episodes you started but didn't finish |
-| **New Episode** | Purple | A new episode from a show you're watching, aired within the last week |
-| **New Season** | Cyan | A new season of a show you've watched before, premiered within the last two weeks |
-| **New Series** | Teal | A brand new show added to your library |
-| **New Release** | Blue | A movie that just became available for home viewing |
-| **Recently Added** | Green | Fallback. Latest additions when nothing else qualifies. |
+| Badge | Criteria |
+|-------|----------|
+| **Continue** | Movies or episodes you started but didn't finish |
+| **New Episode** | A new episode from a show you're watching, aired within the last week |
+| **New Season** | A new season of a show you've watched before, premiered within the last two weeks |
+| **New Series** | A brand new show added to your library |
+| **New Release** | A movie that just became available for home viewing |
+| **Recently Added** | Latest additions when nothing else qualifies. |
 
 ## How Items Are Ranked
 
@@ -72,6 +72,4 @@ Each content tab builds its own spotlight:
 |---------|-------------|
 | **Spotlight Limit** | How many items the carousel holds (4 to 12, default 8) |
 | **Direct Navigation** | Skip the gallery and open items directly |
-
-Spotlight visibility is shared across the content tabs.
-Hiding Hero Spotlight in Home customization also hides it on Music; Music's own editor can hide it from Music alone.
+| **Immersive Spotlight** | Full-screen backdrops without borders for a more cinematic look |

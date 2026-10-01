@@ -52,6 +52,9 @@ The editor shows every section as a labeled card:
 Section order and visibility are saved per profile.
 Each server account has its own layout.
 
+Beyond reordering the built-in rows, the same editor lets you build your own filtered rows.
+See [Custom Sections](/browsing/home-screen/custom-sections).
+
 For finer control, **Settings > Home** sets row limits (Continue Watching, Next Up, Recently Added, Recommended), the new-release window, library card options, and more.
 See [Home Settings](/settings/home).
 
