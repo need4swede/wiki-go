@@ -41,3 +41,15 @@ The pill works with each **Navigation Bar Scroll Behavior** option in **Settings
 
 The picture is the same one used everywhere else in Neptune.
 See [Account Pictures](/personalization/profiles#account-pictures) to change it.
+
+## iPhone and iPad
+
+Neptune on iPhone and iPad shows your account picture in Settings, the account switcher, and **Who's watching?**.
+There's no clock in the corner on iPhone or iPad.
+
+To change your picture, tap your account card at the top of Settings, tap your own account to open its page, and choose **Change Photo**, then pick a photo.
+Neptune crops it to a square and saves it on your server.
+Choose **Remove Photo** to go back to your initial.
+
+If your server doesn't let your account change its picture, Neptune says so and keeps the current one.
+

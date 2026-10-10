@@ -24,10 +24,48 @@ Neptune keeps the metadata needed to present and play them coherently offline:
 - Episode and season organization
 - Playback position and duration
 - The tracks actually present in the downloaded file
-- Content restrictions for the active profile
+- Content restrictions for the active account
 
 Completed media appears in the Home screen's [Downloads row](/browsing/home-screen/downloads) and the device-wide **Settings > Downloads** manager.
 Active transfers show progress and estimated time remaining.
+
+## Sharing Downloads
+
+Each account chooses who else can see its downloads in **Settings > Downloads**:
+
+| Option | What it does |
+| --- | --- |
+| **Shared** | Other accounts on this device can watch your downloads |
+| **Private** | Only you can see your downloads |
+
+Before your first download, Neptune asks **Share Your Downloads?**.
+Choose **Share** or **Keep Private**; your answer applies to all your downloads, including earlier ones, and Neptune asks only once for your account, on any device.
+Until you answer, your downloads are shared.
+If your administrator sets this for you, Neptune doesn't ask.
+
+You always see your own downloads, plus other accounts' Shared downloads.
+A child account only sees other accounts' downloads that have a rating it's allowed to watch.
+
+With two or more accounts on the device, your downloads appear under **Your Downloads**, and other accounts' Shared downloads under **Shared by Others** with the owner's name.
+Each download also says whether it's Shared or Private, and which server it came from when your downloads come from more than one.
+With only one account on the device, downloads don't show Shared or Private.
+
+Anyone who can see a Shared download can delete it, but only its owner can delete a Private one.
+When you sign out, your Private downloads are removed from the device and your Shared ones stay.
+
+Your place in a download is saved for you on this device.
+
+## Downloads From Other Servers
+
+Downloads from every server you've signed in to on this device appear together, and each plays from its file whatever account is active.
+
+- When a download comes from your current account's server, Neptune also updates your progress on the server, now or the next time it can reach it.
+- When it comes from another server, your progress is saved on this device only.
+- If the server no longer has the item, or your account can't see it, Neptune stops sending progress for it and keeps your place on this device.
+
+Selecting a download from another server opens its details, from the copy saved with it: the poster, overview, where it came from, and **Resume**, **Play from Beginning**, and **Delete Download**.
+For a show, its downloaded episodes are listed, and each one plays.
+These downloads say **Progress saved on this device**.
 
 ## Device Storage
 

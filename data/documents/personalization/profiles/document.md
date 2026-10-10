@@ -103,6 +103,7 @@ Sessions are stored securely in the device Keychain:
 - Can be revoked from the media server
 
 **Sign out:** open your account in Settings and choose **Sign Out**.
+If that also deletes downloads from the device, the confirmation says how many.
 On Apple TV, this signs the account out of the current tvOS profile only.
 Other tvOS profiles that use the same account stay signed in.
 
@@ -117,9 +118,36 @@ Other tvOS profiles that use the same account stay signed in.
 
 Both ask you to confirm before anything is removed, and neither deletes backups on your server.
 
+## iPhone and iPad
+
+Neptune on iPhone and iPad keeps a list of accounts too.
+
+**Switch accounts:** tap your account card at the top of Settings and choose another account.
+If something is playing, Neptune asks before it stops.
+
+**Your account page:** tap your account card, then tap your own account to open its page.
+
+**Add an account:** tap your account card at the top of Settings and choose **Add Account**.
+Pick a server already on your device, or enter a new server address, then sign in with a password or Quick Connect.
+When it's added, you can switch to it right away or stay on your current account.
+
+**Automatically Sign In:** with more than one account, open your account's page and turn on **Automatically Sign In** to skip **Who's watching?** at launch.
+
+**Account PIN:** open your account's page and choose **Account PIN** to lock it with 4 digits.
+On a device with Face ID or Touch ID, you can also turn on **Unlock with Face ID** or **Unlock with Touch ID**.
+Anyone whose face or fingerprint is enrolled on the device can then open the account, so only turn it on for your own device.
+If the enrolled faces or fingerprints change, Neptune turns it off and asks for the PIN.
+
+Forgot the PIN? Tap **Forgot Account PIN** on the PIN screen, then sign in to that account again with its password or Quick Connect to set a new PIN or remove it.
+Signing in with a different account doesn't change anything.
+
+When you update from Neptune 1.3, the account you were using keeps signing in automatically, so nothing changes until you add another account.
+
 ## Updating from Neptune 1.3
 
-The first time each tvOS profile opens Neptune 1.4, a short tour shows what's new.
-On an Apple TV with more than one tvOS profile, it ends with **Verify Your Accounts**.
+On an Apple TV with more than one tvOS profile, each profile shows **Verify Your Accounts** the first time it opens Neptune 1.4.
 Earlier versions shared one account list across every profile, so this step lets you remove any account that belongs to someone else.
 Removing an account here only takes it off your profile.
+
+After updating, **What's New** walks you through the new features.
+You can see it again any time in **Settings > About > What's New**.
