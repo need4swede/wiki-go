@@ -30,6 +30,7 @@ Neptune securely saves your session:
 ### Multiple Users
 
 Everyone in your household can sign in with their own server account.
-Neptune shows a profile picker at launch, and each profile keeps its own watch history, theme, and preferences.
+Each account keeps its own watch history, theme, and preferences.
+On Apple TV, each tvOS profile also keeps its own list of accounts.
 
-See [Profiles](/personalization/profiles) for managing multiple accounts.
+See [Accounts & Profiles](/personalization/profiles) for managing multiple accounts.

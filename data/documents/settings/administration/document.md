@@ -5,18 +5,21 @@ order: 90
 # Administration
 
 Server administration from the couch.
-With today's Jellyfin backend, admin accounts get an **Administration** entry under Profiles in Settings, covering the user-management basics that normally require the Jellyfin dashboard.
+With today's Jellyfin backend, admin accounts get an **Administration** entry under Accounts in Settings, covering the user-management basics that normally require the Jellyfin dashboard.
 Administration is capability-specific, and future providers may offer a different set of controls.
 
-## Passcode
+## Admin PIN
 
-Administration can be locked behind a 4-digit passcode, so kids poking around Settings can't get into the admin panel.
+Administration can be locked behind a 4-digit **Admin PIN**, so kids poking around Settings can't get into the admin panel.
 You'll be asked to set one up, or you can skip it.
+
+The Admin PIN only locks Administration.
+To lock the account itself on Apple TV, give it an [Account PIN](/personalization/profiles#account-pins).
 
 ## Neptune MDM
 
 Jellyfin administrator accounts get a **Neptune MDM** entry inside the same Administration menu on supported Neptune clients.
-The native route uses the existing passcode challenge when one is configured, then checks administrator authorization again in the app and on the server.
+The native route asks for the Admin PIN when one is set, then checks administrator authorization again in the app and on the server.
 
 From the native console, an administrator can:
 

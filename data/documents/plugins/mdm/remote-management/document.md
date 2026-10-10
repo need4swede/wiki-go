@@ -12,7 +12,7 @@ When the same reusable configuration should reach several users or device classe
 
 ## Administer from Neptune
 
-On a supported Neptune client, open the existing **Administration** area, complete its passcode challenge if one is configured, and choose **Neptune MDM**.
+On a supported Neptune client, open the existing **Administration** area, enter its Admin PIN if one is set, and choose **Neptune MDM**.
 Only Jellyfin administrator accounts see this entry.
 
 The native console provides:
@@ -40,7 +40,7 @@ Other schema sections remain editable under **Additional Managed Settings**.
 Navigation Bar management includes Home, Movies, Shows, Music, Library, and Discover, and Music can be selected as the startup tab.
 Settings and Search stay pinned to the edges.
 
-The optional Neptune passcode protects the menu from other people using the same device; it does not replace server authorization.
+The optional Admin PIN protects the menu from other people using the same device; it does not replace server authorization.
 Neptune checks the active account before every operation, and the plugin separately requires elevated server authorization.
 
 ## Sending Changes

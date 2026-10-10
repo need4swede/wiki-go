@@ -87,7 +87,8 @@ See [Supported Media Servers](/getting-started/backends) for current availabilit
 
 | Page | Description |
 |------|-------------|
-| [Profiles](/personalization/profiles) | Multi-user support |
+| [Accounts & Profiles](/personalization/profiles) | Multiple accounts, tvOS profiles, and Account PINs |
+| [Account Picture & Clock](/personalization/account-picture-and-clock) | Your picture and the time in the top-right corner on Apple TV |
 | [Themes](/personalization/themes) | Nine built-in themes |
 | [Item Detail Layouts](/personalization/item-detail-layouts) | Detailed, Immersive, or Minimal |
 | [Cards & Backdrops](/personalization/cards-and-backdrops) | Card styles and artwork behavior |

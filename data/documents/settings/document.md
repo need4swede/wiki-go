@@ -29,8 +29,8 @@ Access Settings via the gear icon at the left edge of the tab menu bar.
 
 The Settings screen groups everything by scope:
 
-**Profiles.**
-Avatar cards for switching users, plus **User Preferences**: your personal appearance, [Conductor](/playback/conductor), subtitle style, sounds, and [Backup & Restore](/settings/backup).
+**Accounts** (**Profiles** on iPhone and iPad).
+Account cards (on Apple TV, select one to switch accounts), plus **User Preferences**: your personal appearance, [Conductor](/playback/conductor), subtitle style, sounds, and [Backup & Restore](/settings/backup).
 Backup & Restore contains both [Settings Profiles](/plugins/mdm/settings-profiles), for reusable synced configurations, and [Device Overrides](/settings/device-overrides), which keep one otherwise synchronized setting different on the current device.
 On iPhone, User Preferences also contains separate **Live Activity**, **Widgets**, and **Compass** destinations; iPad shows **Widgets** but not the iPhone-only Compass surfaces.
 Admins also get an **Administration** entry here.
@@ -49,7 +49,8 @@ Connection status, **Manage URLs**, **Seerr Preferences** (language filters and 
 **About.**
 Version and build info, connected services, **Get Help** (QR codes for the Discord, website, and support email), **Diagnostics**, and legal.
 
-At the bottom: **Resync Library** clears cached content and reloads everything from your server, and **Reset Neptune** erases all app data.
+At the bottom: **Resync Library** clears cached content and reloads everything from your server, and **Reset Neptune** erases app data.
+On Apple TV, Reset Neptune lets you reset just your tvOS profile or erase Neptune for every profile. See [Resetting Neptune on Apple TV](/personalization/profiles#resetting-neptune-on-apple-tv).
 
 ## Per-Profile vs Per-Device
 
