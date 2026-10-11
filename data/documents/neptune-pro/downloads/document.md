@@ -63,9 +63,26 @@ Downloads from every server you've signed in to on this device appear together, 
 - When it comes from another server, your progress is saved on this device only.
 - If the server no longer has the item, or your account can't see it, Neptune stops sending progress for it and keeps your place on this device.
 
-Selecting a download from another server opens its details, from the copy saved with it: the poster, overview, where it came from, and **Resume**, **Play from Beginning**, and **Delete Download**.
-For a show, its downloaded episodes are listed, and each one plays.
-These downloads say **Progress saved on this device**.
+Selecting any download opens its normal page: a movie's detail page, or a show's page with its episodes. Online, the page is the same as anywhere else in Neptune. Offline, or for a download from another server, Neptune fills it from what was saved with the download, including the show, its seasons and the episodes of each downloaded season, and plays the file on your device.
+
+Artwork travels with the download too. An episode saves its show's poster, backdrop and logo, the season posters and the thumbnails of the other episodes in its season, so pages look the same for every account on the device, even accounts on other servers. When the artwork changes on the download's server, Neptune updates the saved copies the next time an account on that server opens Neptune, and every account sees the new artwork. Downloads saved by an earlier version get the show details and artwork they're missing the same way.
+
+### What you can play
+
+Pages for your downloads look like any other page, so Neptune shows what will play:
+
+- Downloaded episodes show your iPhone, iPad or Apple TV symbol, and episodes still downloading show their progress.
+- When you're offline, or the show was downloaded from another server, episodes you haven't downloaded are grayed out and say **Not Available**. You can still read their details.
+- Each season shows how many of its episodes are downloaded.
+- The show's Play button plays your next downloaded episode. On iPhone and iPad it names it, for example **Play S2E4**.
+- **Downloaded Episodes** on a show's page lists every episode you've downloaded or are downloading, by season. Tap an episode to open it, or Play to watch it.
+- Opening a show from Downloads takes you to the season of the episode you'll play next.
+- When an episode ends offline, the next one plays only if it's downloaded. Otherwise playback stops, so you never miss an episode.
+
+If you open a show downloaded from another server, **Download Episodes** explains that the episodes came from another server. To download more of it, switch to an account on that server.
+Downloads from another server say **Progress saved on this device**.
+
+Your progress is your own: another account's place in a shared download never shows or resumes for you.
 
 ## Device Storage
 

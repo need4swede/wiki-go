@@ -12,7 +12,7 @@ On the Movies and Shows tabs, the row filters itself to the matching media type.
 The Home tab shows both.
 
 The row includes downloads from every server on this device.
-Selecting one from your current server opens its page; selecting one from another server opens its details, where you can resume or start it.
+Selecting one opens its page, even offline or when it came from another server.
 Press and hold any download to manage it.
 
 Downloads are a feature of [Neptune Pro](/neptune-pro/downloads).
