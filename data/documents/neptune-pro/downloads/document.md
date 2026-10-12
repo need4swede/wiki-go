@@ -74,6 +74,7 @@ Pages for your downloads look like any other page, so Neptune shows what will pl
 - Downloaded episodes show your iPhone, iPad or Apple TV symbol, and episodes still downloading show their progress.
 - When you're offline, or the show was downloaded from another server, episodes you haven't downloaded are grayed out and say **Not Available**. You can still read their details.
 - Each season shows how many of its episodes are downloaded.
+- On iPhone and iPad, a season's episode gallery shows just your downloads. Switch to the list to see the whole season. Unavailable episodes and seasons can't be opened.
 - The show's Play button plays your next downloaded episode. On iPhone and iPad it names it, for example **Play S2E4**.
 - **Downloaded Episodes** on a show's page lists every episode you've downloaded or are downloading, by season. Tap an episode to open it, or Play to watch it.
 - Opening a show from Downloads takes you to the season of the episode you'll play next.
