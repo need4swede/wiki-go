@@ -15,6 +15,7 @@ Everything from pressing Play to choosing tracks and scrubbing.
 | [Playback Menu](/playback/playback-menu) | The in-player menu: audio, subtitles, video, chapters, info |
 | [Conductor](/playback/conductor) | Track and version selection, with Pro live Language Rules and optional Auto learning |
 | [Picture in Picture & Background Playback](/playback/outside-the-app) | Continue video or audio outside the iPhone and iPad app |
+| [Skip Intros](/playback/skip-intros) | Skip buttons for intros, recaps, credits, and previews, from your server and TheIntroDB |
 
 ## Playback Modes
 

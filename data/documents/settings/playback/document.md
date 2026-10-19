@@ -113,7 +113,7 @@ Other seeking options: **Scrub Sensitivity** (1 to 10; default 7), **Resume on S
 | **Autoplay Countdown** | **Auto** runs the countdown for the full length of the end credits; **Fixed** uses a set duration |
 | **Autoplay Countdown Duration** | 10, 20, or 30 seconds |
 | **Up Next Style** | Regular or Minimal (Fixed mode only; Auto always uses the minimal pill) |
-| **Skip Intro / Credits** | Show a Skip button when your server provides segment data (default on) |
+| **Skip Intro / Credits** | Show a Skip button during intros, recaps, and credits, using timestamps from your server and TheIntroDB (default on). See [Skip Intros](/playback/skip-intros) |
 | **Auto Skip** | Skip intros and credits without pressing anything (default off) |
 
 ## Audio
