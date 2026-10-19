@@ -11,31 +11,39 @@ This works without Neptune Pro, on Apple TV, iPhone, and iPad.
 
 ## Turn It On or Off
 
-Open **Settings > Playback > Autoplay**:
+On Apple TV, open **Settings > Playback > Autoplay**.
+On iPhone and iPad, open **Settings > Playback** and find **Skipping**.
 
 | Setting | What It Does |
 |---------|--------------|
-| **Skip Intro / Credits** | Shows a Skip button when Neptune has timestamps for what you're watching (default on) |
-| **Auto Skip** | Skips the segment as soon as it starts, without showing the button (default off) |
+| **Skip Button** | Shows a Skip button when Neptune has timestamps for what you're watching (default on) |
+| **From Your Server** | Uses timestamps from your media server (default on) |
+| **From TheIntroDB** | Fills in what your server is missing with timestamps from TheIntroDB (default off) |
+| **Auto Skip** | Skips the segment as soon as it starts, without showing the button (default off). On iPhone and iPad it's called **Skip Automatically** |
 
-On iPhone and iPad, the same two settings are called **Show Skip Buttons** and **Skip Automatically**, under **Intros & Credits**.
-
-Turning off **Skip Intro / Credits** turns off every source below.
+The last three only appear while **Skip Button** is on.
+Turning off **Skip Button** turns off every source below.
 
 ## Where the Timestamps Come From
 
 Neptune looks in two places and combines what it finds.
-You don't need to set anything up for either one.
 
 **Your server comes first.**
 If your Jellyfin server has segments, from Jellyfin 10.11 media segments or a plugin like Intro Skipper, Neptune uses them.
 On Emby, Neptune uses the intro and credits markers Emby saves with each episode.
 Your server measured these on your own file, so they always win.
 
-**TheIntroDB fills in the rest.**
+**TheIntroDB fills in the rest, if you turn it on.**
 [TheIntroDB](https://theintrodb.org) is a free, community-built database of intro, recap, credits, and preview timestamps.
 When your server has nothing for a segment, Neptune asks TheIntroDB.
 This means Skip Intro works on shows and movies your server has never analyzed, even if you have no plugins installed.
+
+TheIntroDB is a third-party service, so it stays off until you turn it on.
+Neptune asks the first time you see the TheIntroDB page, whether that's while setting up Neptune or in What's New after updating.
+You can also turn on **From TheIntroDB** in Settings at any time.
+Neptune shows what it sends before you agree.
+
+Your media server's administrator can also turn it on or off for your account.
 
 If your server has an intro but no credits, you get your server's intro and TheIntroDB's credits.
 Neptune never shows two buttons for the same intro.
@@ -65,18 +73,20 @@ Credits and anything later in the file are skipped, because on a different cut t
 
 ## Privacy
 
-To look up timestamps, Neptune sends TheIntroDB the show or movie ID, the season and episode number, and the file's runtime.
+Nothing is sent to TheIntroDB unless **From TheIntroDB** is on.
+When it is, Neptune sends TheIntroDB the show or movie ID, the season and episode number, and the file's runtime.
 Like any website, TheIntroDB also sees your IP address.
 Neptune doesn't send your name, account, server address, or anything about your library.
 
-Results are kept on your device for a day, so replaying an episode doesn't look it up again.
+TheIntroDB's privacy policy is at theintrodb.org/docs/privacy.
+Turn off **From TheIntroDB** to stop all lookups.
 
 ## Supporting TheIntroDB
 
-Neptune is a proud sponsor of TheIntroDB.
+Neptune sponsors TheIntroDB.
 Every timestamp in it was added by someone who sat through an intro so the rest of us don't have to, and sponsoring it is our way of saying thanks and helping keep it free.
 
-Skip Intro with TheIntroDB is free for every Neptune user, with no Pro subscription and nothing to install on your server.
+TheIntroDB in Neptune is free for every Neptune user, with no Pro subscription and nothing to install on your server.
 
 If a show you watch is missing timestamps, you can add them at [theintrodb.org](https://theintrodb.org).
 They become available in Neptune once they're accepted.

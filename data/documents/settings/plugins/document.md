@@ -38,5 +38,5 @@ When detected, it appears here with an enable toggle.
 
 ## Where Other Plugin Options Went
 
-- **Intro Skipper** behavior (Skip button and Auto Skip) lives in **Settings > Playback > Autoplay**. The plugin is optional: Neptune also gets timestamps from TheIntroDB. See [Skip Intros](/playback/skip-intros)
+- **Intro Skipper** behavior (Skip button and Auto Skip) lives in **Settings > Playback > Autoplay**. The plugin is optional: Neptune can also get timestamps from TheIntroDB. See [Skip Intros](/playback/skip-intros)
 - **Theme songs** are a built-in feature, controlled in **Settings > User Preferences > Sounds** (enable, volume, loop, fade)

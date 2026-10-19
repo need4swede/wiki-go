@@ -12,6 +12,7 @@ Player controls differ by platform. Choose the guide for your device to learn ho
 |-------|--------|
 | [Siri Remote](/playback/player-controls/siri-remote) | Apple TV's control bar, remote gestures, and action buttons |
 | [Touch](/playback/player-controls/touch) | iPhone and iPad touch gestures, action buttons, orientation, and outside-app controls |
+| [Siri Voice Commands](/playback/player-controls/voice) | Pausing, resuming, and skipping by voice on Apple TV, iPhone, and iPad |
 
 ## Related Settings
 
