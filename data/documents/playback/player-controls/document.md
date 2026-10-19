@@ -22,7 +22,8 @@ Use these pages for playback behavior and settings that affect the controls:
 | Topic | Documentation |
 |-------|---------------|
 | Scrubbing, Seek Mode, and seek previews | [Playback Settings](/settings/playback#controls) |
-| Autoplay, Up Next, and skip segments | [Playback Settings](/settings/playback#autoplay) |
+| Autoplay and Up Next | [Playback Settings](/settings/playback#autoplay) |
+| Skip buttons and where their timestamps come from | [Skip Intros](/playback/skip-intros) |
 | Screensaver and video caching | [Playback Settings](/settings/playback#advanced) |
 | Audio, subtitles, video, chapters, and stream info | [Playback Menu](/playback/playback-menu) |
 

@@ -11,8 +11,7 @@ This works without Neptune Pro, on Apple TV, iPhone, and iPad.
 
 ## Turn It On or Off
 
-On Apple TV, open **Settings > Playback > Autoplay**.
-On iPhone and iPad, open **Settings > Playback** and find **Skipping**.
+Open **Settings > Playback > Skipping**.
 
 | Setting | What It Does |
 |---------|--------------|
