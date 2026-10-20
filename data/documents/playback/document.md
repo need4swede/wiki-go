@@ -16,6 +16,7 @@ Everything from pressing Play to choosing tracks and scrubbing.
 | [Conductor](/playback/conductor) | Track and version selection, with Pro live Language Rules and optional Auto learning |
 | [Picture in Picture & Background Playback](/playback/outside-the-app) | Continue video or audio outside the iPhone and iPad app |
 | [Skip Intros](/playback/skip-intros) | Skip buttons for intros, recaps, credits, and previews, from your server and TheIntroDB |
+| [Up Next](/playback/up-next) | The next episode's screen at the end credits, with a countdown |
 
 ## Playback Modes
 
@@ -71,7 +72,9 @@ See [Picture in Picture & Background Playback](/playback/outside-the-app) for se
 
 ## Auto-Play
 
-TV shows advance to the next episode when one finishes, with an Up Next countdown you can cancel.
+TV shows advance to the next episode when one finishes.
+At the end credits, the video shrinks into a corner and the next episode fills the screen with a countdown.
+See [Up Next](/playback/up-next).
 Movies in a collection can also auto-advance.
 Configure behavior in **Settings > Playback > Autoplay**.
 See [Playback Settings](/settings/playback#autoplay) for details.

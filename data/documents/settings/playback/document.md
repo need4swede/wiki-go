@@ -112,7 +112,10 @@ Other seeking options: **Scrub Sensitivity** (1 to 10; default 7), **Resume on S
 | **Autoplay Across Seasons** | Keep going into the next season (default on) |
 | **Autoplay Countdown** | **Auto** runs the countdown for the full length of the end credits; **Fixed** uses a set duration |
 | **Autoplay Countdown Duration** | 10, 20, or 30 seconds |
-| **Up Next Style** | Regular or Minimal (Fixed mode only; Auto always uses the minimal pill) |
+| **Up Next Background** | **Episode** or **Series** artwork behind the [Up Next](/playback/up-next) screen (default Episode) |
+
+The **Up Next Style** setting is gone.
+The [Up Next](/playback/up-next) screen replaced the large countdown pill, and anywhere a pill still shows, it's the small one.
 
 ## Skipping
 
