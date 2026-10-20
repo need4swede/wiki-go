@@ -30,10 +30,10 @@ See [Spoiler Protection](/browsing/item-details/tv-shows#spoiler-protection).
 |--------|----------|-----------------|
 | Start the next episode now | Select **Next Episode** | Tap **Next Episode** |
 | Keep watching the credits full screen | Swipe right to the video and select it, or press **Back** | Tap the video |
-| Get to the progress bar | Pause | Tap anywhere else on the screen |
-| Leave the player | Press **Back** twice | Tap anywhere, then close the player |
+| Get to the progress bar | Pause | Tap the video, then tap it again |
+| Leave the player | Press **Back** twice | Tap the **X** in the corner |
 
-When you pause or bring up the controls, the video grows back to full screen so you can scrub.
+On Apple TV, when you pause or bring up the controls, the video grows back to full screen so you can scrub.
 Close the controls and it shrinks back into its window, right where it left off.
 Seeking back before the credits cancels the countdown, and it comes back when you reach the credits again.
 
