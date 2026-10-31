@@ -46,6 +46,7 @@ To stop after this episode, leave the player.
 During [shuffle](/browsing/item-details/tv-shows#shuffle-mode), a **Re-Shuffle** button sits next to **Next Episode**.
 Each press picks a different random episode, and the countdown keeps going.
 Whatever is on screen when the countdown ends is what plays.
+Re-Shuffle is part of the Up Next screen, so it isn't on the countdown pill.
 
 ## Background Artwork
 
@@ -59,13 +60,35 @@ Open **Settings > Playback > Autoplay** and choose **Up Next Background**.
 Some older episode thumbnails are small.
 Neptune softens those a little so they don't look blocky on a big screen.
 
+## Scenes in the Credits
+
+Some shows have a scene during or after the credits, like a sitcom's closing joke.
+Neptune checks for one before the credits start, so Up Next never covers it or skips past it.
+
+It checks these in order, and the first one that can tell decides:
+
+| Check | What It Looks For |
+|-------|-------------------|
+| **Subtitles** | Spoken lines during or after the credits. Song lyrics and "subtitles by" lines don't count. |
+| **Your history with the show** | Whether you stayed for the end on earlier episodes, or went straight to the next one. |
+| **The sound** | Talking or laughter, compared to credits music. |
+| **Timing** | More than 30 seconds of video after the credits. |
+
+You don't need subtitles turned on.
+Neptune reads them quietly in the background, and it still works if you skip ahead into the credits.
+
+When Neptune knows where the scene ends, the countdown starts right after it and Up Next shows as usual.
+When it knows there's a scene but not where it ends, you get the countdown pill in the corner and the video stays full screen.
+
+A preview of the next episode after the credits doesn't count as a scene.
+Your history with a show is kept on this device for each account, so Neptune gets it right more often after an episode or two.
+The sound check only runs when Neptune plays the original file.
+
 ## When You Get the Countdown Pill Instead
 
-Some shows have a scene after the credits.
-Neptune won't cover it, so those episodes get the small countdown pill in the corner instead.
+You get the small countdown pill in the corner instead of the Up Next screen:
 
-You also get the pill:
-
+- When an episode has a scene in the credits and Neptune can't tell where it ends. See [Scenes in the Credits](#scenes-in-the-credits).
 - On iPhone held upright.
 - With AVPlayer selected as the player in **Settings > Playback > Player**.
 
