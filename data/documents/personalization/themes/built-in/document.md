@@ -4,6 +4,8 @@ order: 10
 
 # Built-in Themes
 
+Neptune includes ten built-in themes. Ocean is the default.
+
 ## Ocean
 
 Deep blue underwater aesthetic with animated effects.
@@ -57,3 +59,9 @@ Vivid green glow over a deep forest canvas.
 Warm gold on deep charcoal.
 
 - **Accent**: Amber/gold
+
+## Twilight
+
+Bright evening blue over a deep navy background.
+
+- **Accent**: Evening blue

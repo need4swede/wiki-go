@@ -31,7 +31,7 @@ Select a card to open its detail page, where you can:
 
 ## Language Filtering
 
-The calendar respects **Settings > Seerr > Seerr Preferences > Language Preferences**.
+The calendar respects **Settings > Account > Seerr > Seerr Preferences > Language Preferences**.
 If a language filter is active, both its movie and TV sources are narrowed before the dates are grouped.
 
 ## Empty Calendar

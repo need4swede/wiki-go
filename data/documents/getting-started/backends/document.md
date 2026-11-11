@@ -4,75 +4,110 @@ order: 30
 
 # Supported Media Servers
 
-Neptune keeps the same native Home, Library, Search, playback, and Settings experience across media-server platforms.
-The backend supplies the account, library, artwork, stream, and watch-state data behind those screens.
-
-This invariant is the [One Neptune](/getting-started/backends/one-neptune) architecture: parallel provider data adapters are acceptable; parallel provider interfaces are not.
-
-Backend support is capability-based.
-A server can support core browsing and playback even when an optional administration, plugin, sync, or download feature is unavailable.
-Neptune hides or explains unsupported actions instead of sending commands intended for a different server platform.
+Neptune uses the same Home, Library, Search, playback, and Settings pages across media servers.
+Your server supplies the accounts, library, artwork, streams, and watch history.
+See [One Neptune](/getting-started/backends/one-neptune) for what stays the same when you switch.
 
 ## Backends
 
-Neptune is designed for Jellyfin, Emby, Plex, and additional media-server backends.
-Availability can vary by release.
+| Backend | Status | Connection |
+|---------|--------|------------|
+| **Jellyfin** | Supported | Local discovery or a server address |
+| **Emby** | Supported | Local discovery or a server address |
+| **Plex** | Supported | Sign in with Plex, then choose a server |
+| **Silo** | In development, enabled in the current build | Local discovery or Silo's main server address |
+
+Availability can vary by installed version.
+Optional features depend on what the server and account support.
+An unavailable plugin, sync, administration, or download feature does not stop ordinary browsing and playback.
 
 ## Jellyfin
 
-Jellyfin is Neptune's primary and most complete backend.
-It supports normal server discovery and manual addresses, username/password authentication, and Quick Connect.
+Choose Jellyfin, find your server or enter its address, then sign in with a username and password or Quick Connect.
 
-The optional [Neptune Plugin Suite](/plugins) is built for Jellyfin.
-Depending on which suite components are installed, it adds features such as:
+The optional [Neptune Plugin Suite](/plugins) adds features such as:
 
 - Settings Sync and backup
 - Server Defaults and announcements
 - [Neptune MDM](/plugins/mdm)
-- faster server-side indexes
-- plugin-backed Home sections and artwork tools
+- Faster server-side indexes
+- Plugin-backed Home sections and artwork tools
 
-The app still works without the suite; those server-assisted features simply remain unavailable.
+Neptune works without the suite.
+
+## Emby
+
+Choose Emby, find your server or enter its address, then sign in with your Emby server username and password.
+You can also choose **Sign in with Emby Connect** and approve the displayed code for an account linked to that server.
+
+Emby uses Neptune's normal browsing, search, details, and player.
+The Jellyfin Neptune Plugin Suite does not install on Emby, so its companion features, including Settings Sync and Neptune MDM, are unavailable.
+Local Neptune preferences and a separately configured Seerr connection remain available.
 
 ## Plex
 
-Plex support remains planned.
-Neptune already reserves a branded setup choice and the Ember theme, but those presentation pieces do not by themselves make Plex a usable backend.
-The setup card remains unavailable until authentication, server selection, account storage, catalog, images, playback, reporting, and both Apple-platform integrations pass the same release checks as other backends.
+Choose Plex and follow the on-screen code sign-in.
+On Apple TV, scan the QR code or enter the code at `plex.tv/link`.
+On iPhone and iPad, use **Open Sign-In Page**.
+
+Choose a Plex Home user when prompted, enter that user's Plex PIN if required, then select an owned or shared server.
+Neptune gets the server's addresses from Plex.
+
+Plex supports movie and TV libraries, collections, search, and Neptune's player.
+Plex Music, Live TV/DVR, and Plex's cloud Discover and Watchlist are not offered.
+Server subscriptions and permissions still determine which server features are available.
+The Jellyfin Neptune Plugin Suite is unavailable on Plex.
+
+## Silo
+
+Silo is enabled while its integration is still in development.
+Choose Silo and find the server locally or enter its main address.
+Use the native Silo address, not its Jellyfin-compatible address.
+
+Sign in with a username and password where offered, or approve the on-screen device code.
+Choose a household profile and enter its Silo PIN if required.
+That profile becomes the saved Neptune account.
+
+Silo uses the same Neptune browsing and playback pages.
+Its available features follow the server's capabilities; the Jellyfin Neptune Plugin Suite is unavailable.
 
 ## Seerr
 
 [Seerr](/getting-started/setup/seerr) is configured independently from the media backend.
+Neptune offers only the sign-in methods that the Seerr server advertises:
 
-- With Jellyfin, Neptune can reuse the supported Jellyfin sign-in path when the active runtime allows it.
-- Plex and local Seerr authentication appear only when the Seerr server advertises those methods.
+- **Jellyfin:** can reuse a supported Jellyfin sign-in when available.
+- **Emby:** asks for explicit credentials when Seerr is configured for Emby.
+- **Plex or local Seerr account:** available when enabled by that Seerr server.
 
-The saved Seerr session is tied to the exact backend, media server, and user.
-Switching providers cannot silently restore another account's Seerr session.
+The saved Seerr session belongs to the selected media account.
+Switching accounts does not reuse another account's session.
 
 ## Notes for Server Administrators
 
-The Neptune Plugin Suite and its dashboard are currently Jellyfin extensions.
-
+The Neptune Plugin Suite and its dashboard are Jellyfin extensions.
 For Jellyfin users, Server Defaults can seed a new Neptune profile and MDM can manage synchronized settings.
 Local user settings remain available on every supported backend.
 
-Provider-side subscriptions are separate from Neptune Pro.
-Neptune respects a server's feature or playback restrictions and does not use Neptune Pro to bypass them.
+Provider subscriptions are separate from Neptune Pro.
+Neptune Pro does not bypass your server's playback restrictions or permissions.
 
 ## Switching and Disabled Builds
 
-Servers and credentials are stored separately by backend, server, and user.
-Accounts on two providers can safely use the same username or internal media ID without sharing data.
+Use **Add Account** in Settings to add another server or backend.
+Each account keeps its own credentials, watch history, and preferences.
+See [Accounts & Profiles](/personalization/profiles).
 
-If a beta backend is disabled in a particular Neptune build, the app does not contact it or attempt a background restore.
-The saved connection is retained rather than deleted, so it can be restored when support is enabled again.
+If a backend is disabled in a particular build, Neptune retains its saved connection without trying to contact it.
+It can be used again when that backend is enabled.
 
 ## Troubleshooting
 
 | Symptom | What to check |
 |---------|---------------|
-| A backend card says it is not ready | That provider is disabled in the installed Neptune build |
-| A feature disappears after switching servers | The new server, account policy, subscription, or companion may not advertise that capability |
+| A backend card says it is not ready | That backend is disabled in the installed Neptune build |
+| Plex shows no usable server | The selected Plex user needs access to a reachable media server |
+| Silo rejects an address | Use Silo's main address, not its Jellyfin-compatible listener |
+| A feature disappears after switching servers | Check the server's capabilities, account permissions, and subscription |
 
-Continue with [Server Connection](/getting-started/setup/server-connection) to add a server or [Authentication](/getting-started/setup/authentication) for sign-in details.
+Continue with [Server Connection](/getting-started/setup/server-connection) or [Authentication](/getting-started/setup/authentication) for setup instructions.

@@ -21,4 +21,4 @@ It fills gaps and connects titles, people, studios, networks, artwork, and relea
 Enrichment is additive.
 Neptune keeps the title, watch state, library membership, and playback identity anchored to your connected backend.
 
-You can disable this feature at any time in **Settings → Metadata**.
+You can disable this feature in **Settings > Data > Metadata** on Apple TV, or **Settings > Metadata** on iPhone and iPad.

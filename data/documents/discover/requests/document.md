@@ -40,7 +40,7 @@ You can cancel your own pending requests any time.
 
 ## My Requests
 
-Everyone gets a **My Requests** screen (from Discover or **Settings > Seerr**) to track and cancel their requests, filterable by **Pending**, **Approved**, **Processing**, **Available**, or **All**.
+Everyone gets a **My Requests** screen (from Discover or **Settings > Account > Seerr**) to track and cancel their requests, filterable by **Pending**, **Approved**, **Processing**, **Available**, or **All**.
 
 ## Managing Requests (Admins)
 
@@ -54,4 +54,4 @@ A banner at the top of Discover appears whenever requests are waiting on you.
 
 ## Quality Preferences
 
-With the advanced requests permission, **Settings > Seerr > Seerr Preferences** lets you set default quality profiles for movie and TV requests, or auto-select your preferred profile so the picker never asks.
+With the advanced requests permission, **Settings > Account > Seerr > Seerr Preferences** lets you set default quality profiles for movie and TV requests, or auto-select your preferred profile so the picker never asks.

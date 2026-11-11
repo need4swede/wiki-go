@@ -85,4 +85,4 @@ For subtitle formats without their own styling, Trident applies a clean default:
 - Bottom-of-screen position
 - Sized for TV viewing
 
-Customize the default in **Settings > User Preferences > Subtitle Style** (font size, color, background style, brightness, position), or from the Style drill-in right in the Playback Menu.
+Customize the default in **Settings > Playback > Subtitles** (font size, color, background style, brightness, position), or from the Style drill-in right in the Playback Menu.

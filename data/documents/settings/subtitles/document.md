@@ -7,7 +7,7 @@ order: 30
 Customize subtitle appearance.
 A live preview shows your changes as you make them.
 
-Find it in **Settings > User Preferences > Subtitle Style**, or adjust the same options mid-playback from the [Playback Menu](/playback/playback-menu)'s Subtitles tab.
+Find it in **Settings > Playback > Subtitles**, or adjust the same options mid-playback from the [Playback Menu](/playback/playback-menu)'s Subtitles category.
 
 ## Options
 

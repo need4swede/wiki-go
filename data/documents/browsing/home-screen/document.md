@@ -10,7 +10,7 @@ The home screen is made up of the following sections, listed in default order:
 
 | Section | Description |
 |---------|-------------|
-| [Spotlight](/browsing/home-screen/spotlight) | Full-bleed backdrop carousel highlighting what to watch next |
+| [Spotlight](/browsing/home-screen/spotlight) | Artwork header with Play, Details, and a rotating selection of what to watch next |
 | [Libraries](/browsing/home-screen/libraries) | Your media libraries as artwork cards |
 | [Continue Watching](/browsing/home-screen/continue-watching) | Movies and episodes you started but didn't finish, with progress bars |
 | [Pins](/browsing/home-screen/pins) | Your pinned items, people, browse filters, and playback moments |
@@ -38,7 +38,8 @@ Long-press any content card to open the quick actions modal:
 
 ## Customizing Sections
 
-Long-press any tab in the menu bar and select **Edit Home Screen**.
+On Apple TV, open **Settings > Home > Sections > Customize Home Screen Layout**.
+On iPhone and iPad, hold the Home control in the navigation pill, slide to **Options**, then choose **Edit Layout**.
 The editor shows every section as a labeled card:
 
 | Action | How |
@@ -48,6 +49,11 @@ The editor shows every section as a labeled card:
 | **Show a section** | Focus a hidden section, press the eye button again |
 | **Start over** | Press Restore Default |
 | **Save and exit** | Press Done or Back |
+
+Spotlight becomes the page header when it's first.
+Move it below another section and it becomes a card in that position instead; hide it to remove it.
+Its **Spotlight Content** settings choose which kinds of titles appear and how they're prioritized.
+See [Spotlight](/browsing/home-screen/spotlight) for the complete guide.
 
 Section order and visibility are saved per profile.
 Each server account has its own layout.
@@ -63,7 +69,7 @@ See [Home Settings](/settings/home).
 The optional **Movies** and **Shows** tabs use the same configurable sections as Home but filter their content:
 
 - **Movies tab:** Spotlight shows only movies, content rows show only movies
-- **Shows tab:** Spotlight shows only shows, content rows show only TV content
+- **Shows tab:** Spotlight shows episodes, seasons, and shows; content rows show only TV content
 
 Some sections are restricted by tab.
 Next Up is hidden on Movies because it only contains episodes, Because You Watched is hidden on Shows because it is movie-based, and Collections stays on Home because a collection can mix media types.
@@ -73,7 +79,6 @@ If you have multiple movie or show libraries, a library picker appears at the to
 
 The **Music** tab is a dedicated music-video experience rather than another Home filter.
 It combines your music-video libraries into its own Spotlight, Continue Watching, Recently Added, Artists, and music-video Pins content.
-Long-press Music and choose **Edit Music** to reorder or hide its configurable sections.
 The tab is hidden by default; enable it under **Settings > Home > Navigation**.
 
 ## Content Cards

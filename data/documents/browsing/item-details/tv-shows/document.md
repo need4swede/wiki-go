@@ -8,34 +8,67 @@ Browse series, seasons, and episodes.
 
 ## Show Level
 
-When first opening a series:
+Play starts or resumes the show using the episode Neptune has selected.
+Shows without a season structure use one Episodes grouping.
 
-- **Play button**: Resume or start from the beginning
-- **Seasons row**: Browse all seasons
-- **Latest button**: Jump straight to the newest episode
+### Apple TV
 
-Select a season to view its episodes.
-Shows without season structure get a single "Episodes" list.
+The show's hero has its logo, optional poster and description, Play or Resume, and an action pill.
+Customize what it shows under **Settings > Account > Appearance > Layouts > Show Pages**.
 
-If your server is missing a season or upcoming episodes that exist elsewhere, Neptune can show them greyed out with air dates and a "Not available on your server" note, so you know what's coming.
+Below it, Episodes has a season poster on the left and that season's episode gallery on the right.
+The initial position follows your furthest watch progress; a fully watched show starts again at the beginning.
+
+| Action | Control |
+|--------|---------|
+| Change season in place | Up / Down on the season poster |
+| Browse episodes | Right from the poster, then Left / Right |
+| Open the full season page | Select the season poster |
+| Return from an inline episode to the poster | Menu / Back |
+| Return to the episode you were browsing | Right from the poster |
+
+#### Jump Within a Season
+
+Hold Select on the inline season poster:
+
+| Action | Where It Goes |
+|--------|---------------|
+| **Jump to Latest** | Your current watch position in that season: the furthest episode with resume progress, otherwise the episode after your furthest watched one |
+| **Jump to Last** | The season's final displayed episode, regardless of watch history |
+
+Earlier unwatched gaps do not pull Jump to Latest backward.
+With no progress, it goes to the first available episode.
+If you've reached the end, it stays at the last available episode unless another episode has resume progress.
+
+Jump to Last can land on a missing or future episode card when those are shown.
+Both actions reveal and focus the target without starting playback or changing seasons.
+
+### iPhone and iPad
+
+Tap a season to browse its episodes in the touch episode gallery.
+Use the available gallery or list controls to find an episode, then open it for playback and other actions.
+
+If seasons or episodes are missing from your server, Neptune can show missing or future entries with their dates when the matching options are enabled.
 
 ## Season Level
 
-When viewing a season:
+On Apple TV, a season opens with its poster, the selected episode's description, Play or Resume, a menu pill, and **›**.
+Left from Play browses backward through episodes; **›** browses forward.
+Down enters the season tabs and episode row.
+Rest on a season tab to switch to it, or press Select to switch immediately.
+Up from the episode row returns to the displayed season's tab.
 
-- **Back button**: Return to show overview
-- **Episodes list**: All episodes in the season
+The tabs' long-press **Latest** action finds the newest released episode across the show.
+The inline poster's Jump to Latest stays within its displayed season and follows your watch position.
 
-**Episode cards show:**
-
-- Thumbnail and title
-- Episode number and air date
-- Runtime and progress bar
-- Checkmark if watched
+Episode cards show artwork, the episode number and title, a synopsis where allowed, runtime or time left, and watched or resume progress.
+Spoiler protection applies to unstarted episodes.
 
 ## Context Menus
 
-Long-press (hold Select) on episodes and seasons for quick actions.
+Long-press an episode or season for its available actions.
+Apple TV uses hold Select; iPhone and iPad use touch and hold.
+Administration and progress-reset actions appear only where supported and authorized.
 
 ### Episode Context Menu
 
@@ -45,7 +78,7 @@ Long-press (hold Select) on episodes and seasons for quick actions.
 | **Mark as Unplayed** | Reset episode to unwatched |
 | **Reset Progress** | Clear a partial watch without marking played |
 | **Pin** | Add the episode to [Library Pins](/library/shortcuts) |
-| **Change Image** | Select a new thumbnail (admin only) |
+| **Change Image** | Select a new thumbnail where the server allows image administration |
 
 ### Season Context Menu
 
@@ -53,7 +86,8 @@ Long-press (hold Select) on episodes and seasons for quick actions.
 |--------|-------------|
 | **Mark as Played** | Mark entire season as watched |
 | **Mark as Unplayed** | Reset all episodes in the season |
-| **Change Image** | Select a new poster (admin only) |
+| **Reset Progress** | Clear the season's supported episode resume positions |
+| **Change Image** | Select a new poster where the server allows image administration |
 
 Press **Menu** to close without taking action.
 
@@ -75,7 +109,9 @@ Once you begin an episode or mark it as watched, its details become visible.
 On Apple TV, select the eye button in the action pill to change protection for the current show.
 This per-show choice takes priority over the app-wide setting, so you can protect an otherwise episodic show or reveal a serialized show.
 
-For app-wide protection, go to **Settings > User Preferences > Appearance**, open the **Items** tab, then turn on **Hide Spoilers on Unstarted Episodes**.
+For app-wide protection, open **Settings > Account > Appearance**.
+On Apple TV, the control is in the **Items** category; iPhone and iPad show it in the Appearance list.
+Turn on **Hide Spoilers on Unstarted Episodes**.
 Its **Auto** scope protects serialized, hybrid, and unclassified shows while leaving episodic and anthology shows visible.
 **All** protects every show.
 
@@ -109,4 +145,6 @@ Especially useful for rewatching memorable scenes when you can't remember which 
 ## Theme Songs
 
 Theme music plays when viewing series details and fades out when you leave or start playback.
-Control volume, looping, and fade behavior in **Settings > User Preferences > Sounds**.
+On Apple TV, control volume, looping, and fade behavior in **Settings > Account > Sounds**.
+On iPhone and iPad, use **Settings > Account > Audio Preferences**.
+Theme songs require a server that supplies them; Neptune's current theme-song integration is Jellyfin-specific.

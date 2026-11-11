@@ -25,11 +25,14 @@ When a profile has more than one account and none of them signs in automatically
 Each card shows the account's picture and previews that person's theme behind it.
 Pick an account and the whole app follows: watch history, favorites, theme, layouts, home screen, everything.
 
-Accounts also appear as cards at the top of Settings, with a checkmark on the current one.
+The signed-in account appears as a banner at the top of Settings.
+Select it to open that account's preferences, servers, Seerr connection, and sign-in controls.
 
 ## Switching Accounts
 
-Select another account's card in Settings, or pick one from **Who's watching?**.
+Choose another account in Settings, or pick one from **Who's watching?**.
+One other account appears as its own row; with several, open **Accounts** to choose one.
+On Apple TV, you can also press Up from Compass's first row or use the account control in the expanded palette.
 
 **Saved session:** switches without re-entering credentials.
 
@@ -39,8 +42,8 @@ Select another account's card in Settings, or pick one from **Who's watching?**.
 
 ## Adding Accounts
 
-1. Select the **Add** card in the accounts row
-2. Sign in with username and password, or Quick Connect
+1. Select **Add Account** at the top of Settings
+2. Choose a server and use one of its available sign-in methods
 3. Optionally copy preferences from an existing account as a starting point
 
 The **Copy Preferences From** step is handy when setting up a family member who wants your layout without your watch history.
@@ -59,21 +62,25 @@ It's unavailable while the account has an Account PIN.
 Lock an account with an optional 4-digit **Account PIN**.
 Open the account's page in Settings and choose **Account PIN** to create, change, or remove one.
 
-Neptune asks for the PIN whenever someone opens or switches to that account on this Apple TV, including from **Who's watching?**, the account cards in Settings, and Top Shelf.
+Neptune asks for the PIN whenever someone opens or switches to that account on this Apple TV, including from **Who's watching?**, Settings, Compass, and Top Shelf.
 The PIN belongs to the account, so it applies on every tvOS profile that uses it.
 
 Forgot the PIN? Long-press the account in **Who's watching?** and choose **Forgot Account PIN**, then enter the account's password to set a new one.
 
-The Account PIN is separate from the **Admin PIN**, which only locks [Administration](/settings/administration).
+The Account PIN is separate from the **Admin PIN**, which guards server user management and the native [Neptune MDM console](/settings/administration#neptune-mdm).
 
 ## Account Pictures
 
 Each account shows the picture set on its server, or its first initial when there isn't one.
-Pictures appear in **Who's watching?**, the account cards, the account page, and the [top-right corner](/personalization/account-picture-and-clock).
+Pictures appear in **Who's watching?**, Settings, Compass, the account page, and the [top-right corner](/personalization/account-picture-and-clock) on Apple TV.
 
-To change yours, open your account's page in Settings, choose **Change Picture**, and scan the code with your phone.
+On Apple TV, open your account banner in Settings, choose **Change Picture**, and scan the code with your phone.
 It opens your profile page on the server, where you can upload a new picture.
 Neptune picks it up the next time it checks your account.
+
+On iPhone and iPad, **Change Picture** opens the photo picker instead.
+Choose **Remove Photo** to return to your initial.
+Picture changes appear where your server supports them.
 
 ## Per-Account Features
 
@@ -83,7 +90,7 @@ Neptune picks it up the next time it checks your account.
 | Favorites | Your favorited content |
 | Theme and appearance | Theme, mode, card styles, layouts |
 | Home screen | Section order, visibility, and limits |
-| Navigation bar | Tab order and visibility |
+| Navigation and Compass | Page visibility, saved rows or pages, and shortcuts |
 | Conductor | Language and track preferences |
 | Pins | Your pinned items and browse filters |
 
@@ -96,11 +103,8 @@ An account marked as a child account hides Discover and requests and limits cont
 
 ## Session Management
 
-Sessions are stored securely in the device Keychain:
-
-- Persist across restarts
-- No passwords stored locally
-- Can be revoked from the media server
+Session tokens and passwords used for reauthentication can be saved securely in the device Keychain.
+Sessions persist across restarts and can be revoked from the media server.
 
 **Sign out:** open your account in Settings and choose **Sign Out**.
 If that also deletes downloads from the device, the confirmation says how many.
@@ -122,13 +126,13 @@ Both ask you to confirm before anything is removed, and neither deletes backups 
 
 Neptune on iPhone and iPad keeps a list of accounts too.
 
-**Switch accounts:** tap your account card at the top of Settings and choose another account.
+**Switch accounts:** choose another account beneath the signed-in account banner in Settings, or open **Accounts** when several are saved.
 If something is playing, Neptune asks before it stops.
 
-**Your account page:** tap your account card, then tap your own account to open its page.
+**Your account page:** tap your signed-in account banner at the top of Settings.
 
-**Add an account:** tap your account card at the top of Settings and choose **Add Account**.
-Pick a server already on your device, or enter a new server address, then sign in with a password or Quick Connect.
+**Add an account:** choose **Add Account** beneath the account banner in Settings.
+Pick a server already on your device, or connect to another server, then use its available sign-in method.
 When it's added, you can switch to it right away or stay on your current account.
 
 **Automatically Sign In:** with more than one account, open your account's page and turn on **Automatically Sign In** to skip **Who's watching?** at launch.

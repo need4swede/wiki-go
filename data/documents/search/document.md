@@ -81,27 +81,29 @@ History is profile-specific and can be cleared from the Search screen.
 
 ## Find a Setting
 
-Settings has its own search, separate from media search:
-
-- On iPhone and iPad, open **Settings** and pull down from the very top to reveal **Search Settings**.
-- On Apple TV, select the active **Settings** tab again to open the Settings search keyboard.
+On iPhone and iPad, Settings has its own search, separate from media search.
+Open **Settings** and pull down from the very top to reveal **Search Settings**.
 
 You do not need to know Neptune's exact label.
 Every setting also carries localized, invisible aliases for the words people are likely to remember.
 For example, searching for `blur` finds **Hide Spoilers on Unstarted Episodes**, while `lip sync` finds the audio-delay control.
-These aliases affect matching only—they are not displayed, and they never reveal settings that are unavailable for the current device, account, or server.
+These aliases affect matching only.
+They are not displayed, and they never reveal settings that are unavailable for the current device, account, or server.
 
 ## Search Settings
 
-Open **Settings > User Preferences > Appearance > Layouts > Search**:
+On Apple TV, open **Settings > Account > Appearance > Layouts > Search**:
 
 | Setting | Description |
 |---------|-------------|
 | **Search Suggestions** | Show local-first suggestion chips while typing |
 | **Filter Tabs** | Show or hide the scope tabs above results |
 | **Include Seerr Results in Top Results** | Rank requestable titles alongside owned content |
-| **Grid Keyboard Layout** | Compact the Apple TV results grid beside the alphabetical keyboard |
 | **Auto-Focus Input** | Open with focus ready for search input |
+
+On Apple TV, the result layout adapts to the active keyboard automatically.
+
+On iPhone and iPad, **Settings > Search** shows the local search index's status and its resync action where supported.
 
 The **AI Search** master switch and language-model providers live in **Settings > Deep Learning**.
 See [AI Search](/search/prompt-search) and the top-level [Neptune AI](/neptune-ai) section.

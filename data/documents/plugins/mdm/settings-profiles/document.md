@@ -9,9 +9,9 @@ Without a named profile, Neptune uses your regular synchronized settings.
 
 Find them at:
 
-**Settings > User Preferences > Backup and Restore > Settings Profiles**
+**Settings > Account > Backup and Restore > Settings Profiles**
 
-If the active backend does not provide Backup and Restore, Settings Profiles appears directly in **User Preferences** and stays on that device.
+If the active backend does not provide Backup and Restore, Settings Profiles appears directly in your account's **Preferences** and stays on that device.
 
 A Jellyfin administrator using [Neptune MDM](/plugins/mdm) can create a live **Server Profile** once, then assign it globally by device type or only to selected users.
 Per-user profiles and assignments remain the more specific layer.
@@ -235,7 +235,7 @@ Any member with an explicit Lock is marked **Managed by Your Server** and cannot
 Unlocked settings remain customizable, including in a Required profile.
 
 The requirement controls which profile must be active on the matching device class.
-Separate member locks belong to the profile itself, so those selected members remain protected whenever that profile is active—even if it is optional and selected manually on another device type.
+Separate member locks belong to the profile itself, so those selected members remain protected whenever that profile is active, even if it is optional and selected manually on another device type.
 
 Each device type can have only one automatic profile.
 If you assign a device type to another profile, Neptune names the current and replacement profiles and asks for confirmation first.

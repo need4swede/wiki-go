@@ -56,9 +56,10 @@ See [Siri Remote Controls](/playback/player-controls/siri-remote) for progress-b
 
 On iPhone and iPad, tap the video to reveal the progress bar and controls.
 
-On Apple TV, swipe **down** to open the [Playback Menu](/playback/playback-menu).
-On iPhone and iPad, use the onscreen menu action.
-It contains audio, subtitles, video options, chapters, and stream info.
+On Apple TV, choose **Audio**, **Subtitles**, **Video**, **Chapters**, or **Info** from the action row to open that category on the right.
+A downward swipe while controls are hidden opens Audio.
+On iPhone and iPad, tap **Playback Menu** for the tabbed menu, or enable separate Audio and Subtitles shortcuts.
+See [Playback Menu](/playback/playback-menu) for track selection, picture options, chapters, and stream info.
 
 ## Leaving Neptune on iPhone or iPad
 

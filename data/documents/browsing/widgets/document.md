@@ -148,7 +148,8 @@ The original native Pin and the corresponding in-app Home or Discover surface ar
 
 ## Settings and Troubleshooting
 
-Open **Settings > User Preferences > Widgets** for placement guidance and the current Pin Widgets and Section Widgets access status.
+Touch and hold a widget and choose **Edit Widget** to change its Page, Section, or Pin.
+Use Neptune's Pro screen to review Pin Widgets and Section Widgets access.
 
 | Problem | What to Check |
 |---------|---------------|

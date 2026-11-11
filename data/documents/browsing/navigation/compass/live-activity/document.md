@@ -6,7 +6,8 @@ order: 30
 
 On iPhone, Neptune can run [Compass](/browsing/navigation/compass) as one standard Live Activity. iOS may present that activity in Dynamic Island, on the Lock Screen, or in another system-owned Live Activity surface.
 
-The activity and Neptune’s in-app Compass palette use the same ordered set of one to eight **Compass Shortcuts**.
+The activity shows the one to eight **Compass Shortcuts** on your first Compass page.
+Additional shortcut pages and live pages are available in Neptune's in-app palette.
 They do not use your [native Pins](/library/shortcuts), and they are separate from conventional [Home Screen and Lock Screen widgets](/browsing/widgets).
 
 ## Requirements
@@ -24,7 +25,7 @@ A shortcut that targets an independently gated destination, such as Downloads, s
 
 ## Turn It On
 
-1. Open **Settings > User Preferences > Live Activity**.
+1. Open **Settings > Account > Live Activity**.
 2. Turn on **Enabled**.
 3. Choose **Compass** as the content type.
 4. Leave Neptune after the status reports **Active** and let iOS place the activity.
@@ -37,15 +38,16 @@ If a request failed or iOS reached its activity limit, use **Retry Compass** aft
 
 ## Configure Compass Shortcuts
 
-Open **Settings > User Preferences > Compass > Compass Shortcuts**.
-The exact default order is:
+Open **Settings > Account > Compass** and choose your first page.
+A fresh setup starts with:
 
 1. Settings
 2. Home
 3. Library
 4. Search
 
-You can keep between one and eight shortcuts, drag them into a new order, and change each label and symbol.
+Keep between one and eight shortcuts on the first page, drag them into a new order, and change each label and symbol.
+Other pages can hold more shortcuts, Recently Viewed, or a Home Section; those pages stay in the in-app palette.
 A shortcut can:
 
 - open Settings, Home, Movies, Shows, Library, Collections, Discover, Downloads, or Search;
@@ -70,7 +72,7 @@ Reset restores the original four shortcuts.
 The in-app gesture works in portrait, landscape, and drill-down screens.
 It is suppressed during playback so it cannot interfere with player controls.
 
-You can also preview and open the palette from **Settings > User Preferences > Compass**, which provides a labelled alternative when an accessibility feature consumes multi-finger gestures.
+You can also preview and open the palette from **Settings > Account > Compass**, which provides a labelled alternative when an accessibility feature consumes multi-finger gestures.
 
 ## Activity Lifecycle
 
@@ -90,7 +92,7 @@ They cannot be enabled or disabled separately.
 Compass Shortcuts and the Live Activity enable/type preferences can travel with [Backup & Restore](/settings/backup).
 The active system session itself belongs to the individual iPhone.
 
-The Live Activity receives only the ordered shortcut identifiers, chosen labels and symbols, current availability, selected shortcut, and primitive theme colors.
+The Live Activity receives only the first page's ordered shortcut identifiers, chosen labels and symbols, current availability, selected shortcut, and primitive theme colors.
 It does not receive credentials, playback URLs, account or server identifiers, media records, or saved-search queries.
 
 Custom shortcut labels are system-visible by design.

@@ -4,7 +4,11 @@ order: 20
 
 # Player Controls
 
-Player controls differ by platform. Choose the guide for your device to learn how to reveal controls, navigate them, and customize the available actions.
+Playback controls are shaped to your device.
+Apple TV uses the Siri Remote and a row of actions beside the title.
+iPhone and iPad use touch controls, a timeline, and a configurable top row.
+
+Choose your device below.
 
 ## Platform Guides
 

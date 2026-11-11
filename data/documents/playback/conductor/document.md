@@ -6,7 +6,7 @@ order: 40
 
 Conductor picks the starting audio track, subtitle track, and version every time you press Play, so you spend less time correcting tracks at the start of a movie or episode.
 
-Set it up in **Settings > User Preferences > Conductor**.
+Set it up in **Settings > Account > Conductor**.
 A short onboarding walks you through the choices the first time.
 
 ## Modes
@@ -43,7 +43,7 @@ Conductor uses this list to judge every track decision that follows.
 Language Rules let you choose a subtitle language based on the audio language that is active.
 For example, a **Japanese audio → English subtitles** rule selects English subtitles whenever Conductor starts playback with Japanese audio.
 
-Open **Settings > User Preferences > Conductor > Language Rules** to add or remove rules.
+Open **Settings > Account > Conductor > Language Rules** to add or remove rules.
 Each side can match either:
 
 - **Any Variation**, which includes every regional or script variation of that language.

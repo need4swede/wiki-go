@@ -109,23 +109,9 @@ Track it from **My Requests**; administrators receive a persistent **Manage Requ
 
 See [Requests](/discover/requests) for season selection, status meanings, cancellation, quality preferences, and administration.
 
-## Customizing Discover
-
-Long-press the Discover tab and choose **Edit Discovery**.
-The editor includes every section above.
-
-| Action | How |
-|--------|-----|
-| Reorder a section | Select **Move**, then choose its position |
-| Hide or show a section | Toggle its visibility control |
-| Restore the original layout | Select **Restore Default** |
-
-Section order and visibility belong to the signed-in profile.
-The admin request banner is not a normal section and remains available whenever the account can manage requests.
-
 ## Language Preferences
 
-Open **Settings > Seerr > Seerr Preferences > Language Preferences** to filter Discover by original language.
+Open **Settings > Account > Seerr > Seerr Preferences > Language Preferences** to filter Discover by original language.
 Changing the preference refreshes all Discover rows, including Trending.
 
 This global preference is different from **World Stage**: the preference narrows the overall Discover feed, while World Stage is a deliberate browse into one language at a time.

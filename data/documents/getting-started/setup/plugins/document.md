@@ -33,7 +33,7 @@ One tap adds the repository, installs every currently published suite member, an
 | **Home Screen Sections** | Shows upcoming movies and TV shows from your Radarr and Sonarr calendars |
 
 Theme songs (music that plays on TV series pages) are a built-in Neptune feature and need no plugin.
-Control them in **Settings** under **Sounds**.
+Control them in **Settings > Account > Sounds** on Apple TV, or **Settings > Account > Audio Preferences** on iPhone and iPad.
 
 Intro skipping is also a native feature.
 Media segments (the markers for when an intro/outro occurs) are needed for Neptune to perform these actions - but the ability to skip an intro does not require a plugin in itself.

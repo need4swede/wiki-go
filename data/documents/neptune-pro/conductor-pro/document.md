@@ -29,7 +29,7 @@ Conductor builds memory at several levels so an exception can stay an exception 
 
 ## Managing the Profile
 
-Open **Settings > User Preferences > Conductor** and choose **Auto** to enable learning.
+Open **Settings > Account > Conductor** and choose **Auto** to enable learning.
 Neptune Pro's live Language Rule behavior does not require Auto.
 
 **View Profile Data** shows what Conductor has learned.

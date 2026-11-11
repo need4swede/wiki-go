@@ -55,7 +55,7 @@ If the plugin is detected on your server, onboarding adds a backup step:
 
 ### From Settings
 
-Go to **Settings > User Preferences > Backup and Restore**:
+Go to **Settings > Account > Backup and Restore**:
 
 | Action | Result |
 |--------|--------|

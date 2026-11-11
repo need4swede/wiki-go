@@ -26,7 +26,7 @@ Sync and remote-management support for future backends will depend on the extens
 ## Where to Manage It
 
 - **Jellyfin dashboard:** Open the Neptune MDM plugin page from the server dashboard.
-- **Neptune:** Open **Administration** and choose **Neptune MDM** from any Neptune client.
+- **Neptune:** Open **Settings > Neptune MDM** on a supported client.
 
 ## Availability
 

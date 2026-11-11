@@ -4,53 +4,104 @@ order: 90
 
 # Settings
 
-Access Settings via the gear icon at the left edge of the tab menu bar.
+On Apple TV, open Compass and select Settings.
+On iPhone and iPad, tap the Settings gear in the bottom navigation pill.
+
+In paths such as **Settings > Account > Appearance**, Account means the banner for your signed-in account.
+Open that banner to reach its preferences, servers, Seerr connection, and sign-in controls.
 
 ## In This Section
 
 | Page | Description |
 |------|-------------|
-| [Home](/settings/home) | Loading screen, Home sections, navigation bar, spotlight, libraries |
-| [Playback](/settings/playback) | Engine, controls, autoplay, audio, background continuation, advanced |
-| [Subtitle Style](/settings/subtitles) | Subtitle appearance |
-| [Plugins](/settings/plugins) | Plugin status and management |
+| [Home](/settings/home) | Home sections, navigation, Spotlight, libraries, and loading screens |
+| [Playback](/settings/playback) | Player, controls, autoplay, skipping, audio, and subtitles |
+| [Subtitle Style](/settings/subtitles) | Subtitle appearance under Playback |
+| [Plugins](/settings/plugins) | Compatible server extensions and plugin management |
 | [Deep Learning](/settings/deep-learning) | AI features and language model providers |
 | [Images](/settings/images) | Image cache and downloads |
-| [Metadata](/settings/metadata) | Metadata cache and the Pro control for optional TMDB enrichment |
-| [Backup & Restore](/settings/backup) | Sync preferences across devices |
+| [Metadata](/settings/metadata) | Metadata cache and optional TMDB enrichment |
+| [Backup & Restore](/settings/backup) | Sync account preferences across devices |
 | [Device Overrides](/settings/device-overrides) | Keep individual settings different on one device |
-| [Administration](/settings/administration) | User management and parental controls (admins) |
-| [Diagnostics](/settings/diagnostics) | App and server information, network testing, playback benchmarking, and support logs |
-| [iOS Widgets](/browsing/widgets) | Home Screen and Lock Screen Pages, Sections, and Pins |
-| [iPhone Live Activity](/browsing/navigation/compass/live-activity) | Compass in Dynamic Island and on the Lock Screen |
-| [iOS Playback Outside the App](/playback/outside-the-app) | Picture in Picture, background audio, and system controls |
+| [Administration](/settings/administration) | Server user management and parental controls |
+| [Diagnostics](/settings/diagnostics) | App information, connection tests, playback benchmarks, and support logs |
+| [Widgets](/browsing/widgets) | Configure each widget through the system Edit Widget sheet |
+| [Compass](/browsing/navigation/compass) | Saved shortcuts, rows or pages, and live content |
+| [iPhone Live Activity](/browsing/navigation/compass/live-activity) | The first Compass page in Dynamic Island and on the Lock Screen |
 
-## How Settings Is Organized
+## Accounts
 
-The Settings screen groups everything by scope:
+The signed-in account is the banner at the top.
+Select it to open its account page.
+Other accounts appear beside or below it; one appears on its own, while several open an **Accounts** list.
+Choose another account to switch, or use **Add Account** for another sign-in.
+See [Accounts & Profiles](/personalization/profiles).
 
-**Accounts** (**Profiles** on iPhone and iPad).
-Account cards (on Apple TV, select one to switch accounts), plus **User Preferences**: your personal appearance, [Conductor](/playback/conductor), subtitle style, sounds, and [Backup & Restore](/settings/backup).
-Backup & Restore contains both [Settings Profiles](/plugins/mdm/settings-profiles), for reusable synced configurations, and [Device Overrides](/settings/device-overrides), which keep one otherwise synchronized setting different on the current device.
-On iPhone, User Preferences also contains separate **Live Activity**, **Widgets**, and **Compass** destinations; iPad shows **Widgets** but not the iPhone-only Compass surfaces.
-Admins also get an **Administration** entry here.
+## Your Account Page
 
-**Neptune.**
-The [Neptune Pro](/neptune-pro) status and upgrade row, followed by app behavior: Home—including [Loading Screen](/neptune-pro/loading-screens) preferences—Playback, Plugins, Deep Learning, Images, Metadata.
-On iPhone and iPad, Playback also owns the independent Picture in Picture and Background Playback toggles.
+| Group | What It Contains |
+|-------|------------------|
+| **Preferences** | Appearance, Conductor and Compass where available, and backup or local customization |
+| **Servers** | Your account's server connection, its addresses, and supported server administration |
+| **Seerr** | Sign-in, requests, saved addresses, Seerr Preferences, and disconnect |
+| **Sign-In & Security** | Account PIN, automatic sign-in, account picture, and the administrator passcode where available |
+| **Sign Out** | Sign out of this account on the device |
 
-**Media Server.**
-Your backend connection: server info, **Change URL** for managing multiple addresses, and **Servers** for adding another server and switching between saved servers without signing in again.
-This section uses the active backend's name and exposes only the connection operations that backend supports.
+Apple TV's Preferences include **Sounds** for menu sounds and theme songs.
+iPhone and iPad have **Audio Preferences** and **Quality Preferences**; iPhone also has **Live Activity** and Compass.
+Subtitle appearance is under **Settings > Playback > Subtitles**.
 
-**Seerr.**
-Connection status, **Manage URLs**, **Seerr Preferences** (language filters and request quality), and disconnect.
+Where the backend supports Backup and Restore, that page contains Settings Profiles and Device Overrides.
+Without it, local Settings Profiles and Device Overrides remain available from the account's preferences, subject to their usual access rules.
 
-**About.**
-Version and build info, connected services, **Get Help** (QR codes for the Discord, website, and support email), **Diagnostics**, and legal.
+## App Settings
 
-At the bottom: **Resync Library** clears cached content and reloads everything from your server, and **Reset Neptune** erases app data.
-On Apple TV, Reset Neptune lets you reset just your tvOS profile or erase Neptune for every profile. See [Resetting Neptune on Apple TV](/personalization/profiles#resetting-neptune-on-apple-tv).
+The main Settings page also holds the app's settings:
+
+| Destination | What It Contains |
+|-------------|------------------|
+| **Home** | Libraries, navigation, Spotlight, sections, and loading screens |
+| **Playback** | Player behavior, controls, audio, subtitles, and autoplay |
+| **Downloads** | Offline storage and download management |
+| **Deep Learning** | AI Search and language model providers |
+| **Neptune MDM** | Native managed-settings administration, when authorized |
+| **Data** (Apple TV) | Metadata and Images |
+| **Language** | Neptune's display language |
+
+On iPhone and iPad, Images and Metadata are separate entries, alongside Search and supported Plugins.
+On Apple TV, Plugins lives on **Account > Servers > your server**, below Administration.
+Available destinations depend on the device, server capabilities, and your access.
+Neptune Pro, About, Get Help, Diagnostics, and reset actions keep their own places on the main page.
+
+## Using Settings on Apple TV
+
+Pages sit on glass panels over softly blurred artwork.
+Home, Playback, and Appearance use a category rail on the left and controls on the right.
+Resting on a category opens it; Select opens it immediately.
+Right enters its controls and Left returns to the rail.
+
+For an adjustable value, Select starts adjustment, Left/Right changes it, and Select or Back finishes.
+Press Up from the top to open Compass, then Down to return to where you were.
+
+Opening Settings through Compass remembers the page you came from.
+Back at the Settings root returns there; Back inside Settings first closes the current page or editor.
+
+## Servers and Seerr
+
+Open **Settings > Account > Servers > your server** to manage the active media connection.
+Where supported, the server page lists its home, Tailscale, and web addresses and provides server administration and plugin controls.
+Use Add Account to sign in to another server.
+See [Server Connection](/getting-started/setup/server-connection).
+
+Open **Settings > Account > Seerr** for that account's independent discovery and request connection.
+See [Seerr Setup](/getting-started/setup/seerr).
+
+## Resetting Neptune
+
+**Resync Library** clears cached content and reloads it from the server.
+**Reset Neptune** clears app data.
+On Apple TV, choose whether to reset this tvOS profile or erase Neptune for every profile.
+See [Resetting Neptune on Apple TV](/personalization/profiles#resetting-neptune-on-apple-tv).
 
 ## Per-Profile vs Per-Device
 
@@ -72,7 +123,7 @@ A push suppresses only the conflicting member of the active profile until the pr
 Persistent locks can target one user or a locked member of a live Server Profile.
 Matching controls are read-only and marked **Managed by Your Server**, including when ordinary Settings Sync is off.
 On Apple TV they remain focusable so Siri Remote navigation is not interrupted, but Select cannot change them.
-Managed selectors display their locked value immediately, so dependent options—such as Transcode-only playback settings—appear without the user first touching the selector.
+Managed selectors display their locked value immediately, so dependent options such as Transcode-only playback settings appear without the user first touching the selector.
 Removing the policy restores the user's personal setting or preserved Device Override underneath it.
 
 Device-wide items such as the image cache are shared locally.

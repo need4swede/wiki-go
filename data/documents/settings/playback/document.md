@@ -5,7 +5,7 @@ order: 20
 # Playback Settings
 
 Configure video playback behavior, controls, and audio.
-Apple TV organizes the screen into **Player**, **Controls**, **Autoplay**, **Audio**, and **Advanced** tabs. iPhone and iPad present their supported controls as sections and add **Background & Picture in Picture**.
+Apple TV organizes the screen into **Player**, **Controls**, **Autoplay**, **Skipping**, **Audio**, **Subtitles**, and **Advanced** categories in the left rail. iPhone and iPad present their supported controls as sections and add **Background & Picture in Picture**.
 
 ## Player
 
@@ -34,7 +34,7 @@ Choosing Transcode reveals:
 | **Target Bitrate** | 1 to 120 Mbps. The server keeps the stream within this cap |
 | **Always Transcode** | Transcode even files that fit under the cap |
 
-You can also change quality per-session from the [Playback Menu](/playback/playback-menu)'s Video tab.
+You can also change quality per-session from the [Playback Menu](/playback/playback-menu)'s Video category.
 
 ### Video Zoom
 
@@ -73,7 +73,7 @@ When playback ends, Neptune returns to the orientation used before the player op
 | **Skip Interval** | Move 5, 10, or 15 seconds with each skip action (default 10 seconds) |
 | **Hide Title in Controls** | Drop the title block for a cleaner look |
 | **Action Buttons** | Reorder or hide the buttons in the player controls (see [Player Controls](/playback/player-controls)) |
-| **Playback Menu** | Choose which tabs appear in the in-player menu, and their order |
+| **Playback Menu** | Reorder or hide the categories in the in-player menu |
 | **Back / Menu Button** | Always Exit, or Dismiss First |
 
 On iPhone and iPad, a single tap anywhere on the video toggles the controls.
@@ -81,10 +81,19 @@ When **Double Tap to Skip** is on, a rapid double tap on the left third skips ba
 The double tap does not also trigger the single-tap control action.
 See [Touch Controls](/playback/player-controls/touch#touch-gestures) for the complete gesture behavior.
 
-**Action Buttons** defaults to **Playback Menu, Rotate, Video Zoom** on iPhone and iPad.
-**Pin Timestamp** is available but hidden until you enable it.
-Playback Menu cannot be disabled, although it can be moved.
-Apple TV keeps its own action list and defaults, so device-specific controls do not cross into the wrong player.
+**Action Buttons** has separate layouts for Apple TV and iPhone/iPad:
+
+| Device | Default Buttons | Always Available |
+| --- | --- | --- |
+| **Apple TV** | Audio, Subtitles, Video, Chapters, Info, Pin | Audio and Subtitles can be moved but never hidden |
+| **iPhone / iPad** | Playback Menu, Rotate, Video Zoom | Playback Menu can be moved but never hidden |
+
+On Apple TV, Chapters appears when the video has chapters and permits seeking.
+Optional actions include Next Episode, Bitrate, Technical Info, Autoplay, and Play / Pause.
+On iPhone and iPad, Pin Timestamp, Audio, and Subtitles start hidden and can be enabled here.
+
+The **Playback Menu** editor controls category order and visibility separately from the action buttons.
+See [Siri Remote Controls](/playback/player-controls/siri-remote#action-buttons) and [Touch Controls](/playback/player-controls/touch#action-buttons) for the available actions.
 
 Action order and visibility sync as separate platform settings.
 Each can be kept on one device with a Device Override, saved in a Settings Profile, or managed and locked by a Neptune MDM administrator.

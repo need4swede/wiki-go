@@ -9,45 +9,40 @@ You can always see who's signed in and what time it is, without leaving what you
 
 ## Where It Shows
 
-The pill sits at the end of the navigation bar on every tab and in Settings, and on item detail pages.
-It never takes focus, so moving around the bar works exactly as before.
-
-Each time you open Neptune or come back to it, the pill starts as just your picture and slides open to show the time.
+The top-right pill shows your current page, the time, and your account picture while browsing, including in Settings and on item detail pages.
+Press **Play/Pause** to open [Compass](/browsing/navigation/compass) from that corner.
 
 ## Turning It On or Off
 
-Go to **Settings > Appearance > Layouts > Home**:
+Go to **Settings > Account > Appearance > Layouts > Home**:
 
 | Setting | What it does |
 | --- | --- |
 | **Show Account Picture** | Shows your account picture in the top-right corner |
 | **Show Clock** | Shows the time in the top-right corner |
 
-Turn off both and the corner stays empty.
+Turning off both hides the picture and clock, but keeps the current page and Compass cue.
 Both settings follow your account, so they sync with [Backup & Restore](/settings/backup).
 
 ## Time Format
 
 The clock uses your Apple TV's region and its **24-Hour Time** setting.
 
-## With the Navigation Bar
+## With Compass
 
-The pill works with each **Navigation Bar Scroll Behavior** option in **Settings > Home**:
-
-| Option | What happens |
-| --- | --- |
-| **Hide** | The navigation bar hides while you browse, and the pill stays put |
-| **Collapse** | The navigation bar shrinks into the pill, showing your current tab next to the time and your picture |
+The pill is the starting point for Compass.
+Press Play/Pause once for the compact row, then again for all your rows.
+Press Up from the first row to see your other accounts.
 
 The picture is the same one used everywhere else in Neptune.
 See [Account Pictures](/personalization/profiles#account-pictures) to change it.
 
 ## iPhone and iPad
 
-Neptune on iPhone and iPad shows your account picture in Settings, the account switcher, and **Who's watching?**.
+Neptune on iPhone and iPad shows your account picture in Settings, the Accounts list, and **Who's watching?**.
 There's no clock in the corner on iPhone or iPad.
 
-To change your picture, tap your account card at the top of Settings, tap your own account to open its page, and choose **Change Photo**, then pick a photo.
+To change your picture, tap your account banner at the top of Settings and choose **Change Picture**, then pick a photo.
 Neptune crops it to a square and saves it on your server.
 Choose **Remove Photo** to go back to your initial.
 

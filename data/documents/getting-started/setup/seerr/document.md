@@ -46,11 +46,15 @@ Neptune supports multiple ways to sign in to Seerr:
 - **Jellyfin account.**
   Available when Seerr is connected to Jellyfin.
   If your Jellyfin session can be reused, no password is needed.
+- **Emby account.**
+  Available when Seerr is configured for Emby.
+  Enter your credentials explicitly; Neptune does not reuse your Emby session.
 - **Plex account.**
   Sign in with a plex.tv link code.
 - **Local Seerr account.**
   Username and password created in Seerr itself.
 
+Only methods advertised by your Seerr server are offered.
 Your session is saved for future use, so you only need to sign in once.
 If it ever expires, Neptune re-authenticates automatically where it can.
 
@@ -68,4 +72,4 @@ This works for password and Quick Connect sign-in and does not require Settings 
 ## Skipping Setup
 
 Select **Skip for Now** if you don't have Seerr.
-You can configure it at any time via **Settings**, where you can also save multiple Seerr addresses and switch between them.
+You can configure it later under **Settings > Account > Seerr**, where supported controls also manage the saved Seerr addresses.

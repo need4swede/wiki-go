@@ -29,7 +29,6 @@ Sections on the Library landing page, in default order:
 | **Browse by** | Format, Genre, Network, Person, Tags, Specs, and Studio |
 | **Library Stats** | Counts for movies, shows, episodes, collections, in progress, favorites |
 
-Long-press the Library tab and select **Edit Library** to reorder or hide these sections.
 Long-press cards within Your Libraries or Browse by to rearrange them in place.
 
 ## Browse By
@@ -79,6 +78,6 @@ Random is a good way to settle a "what do we watch" argument.
 ## Navigation Tips
 
 - **Swipe left** from the grid to reach the sidebar, **swipe right** to return
-- **Jump to Top** returns focus to the menu bar from deep in the grid
+- On Apple TV, press Up from the topmost control to open Compass
 - **Refresh** re-syncs library data from your server
 - The grid lazy-loads, so even very large libraries scroll smoothly

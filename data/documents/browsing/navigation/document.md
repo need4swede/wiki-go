@@ -4,88 +4,103 @@ order: 10
 
 # Navigation
 
-Neptune uses a pill-shaped navigation bar.
-The same tabs exist on every device; this page describes the Apple TV controls, and on iPhone and iPad the equivalents are taps and touch-and-holds (see [Devices](/getting-started/devices)).
+On Apple TV, Compass is the main way to move between Neptune's pages.
+iPhone and iPad use the navigation pill at the bottom of the screen.
 
-## Navigation Bar
+## Pages
 
-| Tab | Description |
-|-----|-------------|
-| **Settings** (gear) | App settings and profiles |
+| Page | Description |
+|------|-------------|
+| **Search** | Find movies, shows, music, and people |
 | **Home** | Personalized content hub |
-| **Library** | Browse and filter your full collection |
-| **Discover** | Browse and request (appears when Seerr is connected) |
-| **Search** (magnifying glass) | Find content |
+| **Movies** | Home sections filtered to movies |
+| **Shows** | Home sections filtered to TV content |
+| **Library** | Browse and filter your collection |
+| **Discover** | Browse and request, when Seerr is connected |
+| **Music** | Apple TV's music-video experience |
+| **Settings** | Accounts, preferences, connections, and app settings |
 
-**Behavior:** Tabs select on focus.
-No need to press Select.
+Some pages depend on your server's content, permissions, and navigation preferences.
+Movies, Shows, and Music can be enabled in **Settings > Home > Navigation**.
 
-> There are more tabs available than what's enabled by default, including the dedicated **Movies**, **Shows**, and **Music** tabs.
-> Movies and Shows filter the shared Home experience by media type, while Music provides an artist-first music-video experience.
-> Turn them on in **Settings > Home > Navigation**.
+## Apple TV
 
-## Customizing Navigation
-
-Open **Settings > Home > Navigation** to customize its behavior:
-
-| Setting | Description |
-|---------|-------------|
-| **Customize Navigation Bar** | Reorder or hide tabs. Settings and Search stay at the edges |
-| **Movies Tab Label** | Movies, Films, or Cinema |
-| **Shows Tab Label** | Shows, TV, or Series |
-| **Navigation Bar Scroll Behavior** | Show, Hide, or Collapse the bar while you scroll |
-| **Exit App on Back Press** | What the Back button does from the top of a tab |
-
-Collapse mode shrinks the bar down to just the active tab while you browse, then restores it when you focus it again.
-
-## Remote Controls
+The top-right pill shows the current page, time, and account picture.
+Press **Play/Pause** to open Compass from that corner.
+Select a page or shortcut to go there.
+Moving focus over a shortcut lets you inspect it; Select opens it.
 
 | Action | Control |
 |--------|---------|
 | Move focus | Swipe or D-pad |
-| Select | Press Touch Surface |
-| Go back | Menu button |
-| Return to Home | Long-press Menu |
-| Open Compass | Play/Pause button |
+| Select | Press the touch surface or clickpad |
+| Go back | Menu / Back |
+| Open Compass | Press Play/Pause while browsing |
+| Open navigation from the top of a page | Press Up from its topmost control |
+| Expand Compass | Press Play/Pause again, or select **Show All** |
+| Send Logs | Hold Play/Pause for one second while browsing |
 
-## Compass
+Back closes an open picker or menu before leaving its page.
+At a page's root it opens Compass, subject to **Exit App on Back Press**.
+When you open navigation with Up, Down closes it and returns to the page.
 
-Compass provides quick navigation without returning to the tab bar:
+See [Compass](/browsing/navigation/compass) for rows, account switching, and shortcuts.
 
-| Device | How to Open It |
-|--------|----------------|
-| **Apple TV** | Press **Play/Pause** while browsing |
-| **iPhone** | Hold exactly two fingers for 0.6 seconds, open it from Settings, or use the optional Compass Live Activity |
-| **iPad** | Compass is not available; use the normal touch navigation |
+## iPhone and iPad
 
-The Apple TV surface is a floating tab pill. iPhone uses a configurable one-to-eight-shortcut palette and can project the same shortcuts into Dynamic Island and onto the Lock Screen.
-See [Compass](/browsing/navigation/compass) and [Compass Live Activity](/browsing/navigation/compass/live-activity).
+Tap an icon in the bottom navigation pill to switch pages.
+The Settings gear opens Settings.
+Home also gives you access to its Movies and Shows filters.
+Use the back control or swipe back to leave a detail page.
+
+On iPhone, an exact two-finger hold for about 0.6 seconds opens Compass while browsing.
+iPad uses the normal touch navigation and has no Compass or Compass Live Activity.
+
+## Customizing Navigation
+
+Open **Settings > Home > Navigation**:
+
+| Setting | Description |
+|---------|-------------|
+| **Customize Navigation Bar** | Choose page order, visibility, and the starting page |
+| **Movies Tab Label** | Movies, Films, or Cinema |
+| **Shows Tab Label** | Shows, TV, or Series |
+| **Always Start From Top** | Return to the top when changing pages |
+| **Exit App on Back Press** | Apple TV's Back behavior at a page root |
+
+Compass's saved rows and shortcuts have their own editor under **Settings > Account > Compass**.
+The Navigation row keeps the app's pages together; its shortcuts can be reordered but not removed.
+Use navigation visibility settings to hide an optional page.
 
 ## Library Picker
 
-On the Movies and Shows tabs, servers with more than one library of that type get a picker row.
-Selecting a library scopes the whole tab to it.
-Music combines music-video libraries into one artist-first view instead of using this picker.
+Movies and Shows offer a library picker when more than one matching library is available.
+Selecting a library scopes the page to it.
+On Apple TV, selecting Movies or Shows in Compass can also open a choice of **All** or a specific library.
+Music combines music-video libraries into one artist-first view.
 
-## Long-Press Menu
+## Screen Customization
 
-Long-press any primary tab to open a quick menu:
+For Home section order and visibility, open **Settings > Home > Sections > Customize Home Screen Layout**.
+See [Customizing Sections](/browsing/home-screen#customizing-sections).
 
-- **Edit Home Screens** on Home, Movies, Music, and Shows
-- **Edit Discovery** on Discover
-- **Edit Library** on Library
-
-Each opens the matching customization editor, where you can reorder and hide that screen's sections.
+On iPhone and iPad, hold Home in the navigation pill and slide to **Options**, then choose **Edit Layout**.
+Editing Compass changes shortcuts; editing a Home screen changes its content sections.
 
 ## Spotlight Navigation
 
-The spotlight carousel has its own focus zone:
+Spotlight has separate controls for playback and details.
 
-| Action | Control |
-|--------|---------|
-| Next item | Navigate Right |
-| Previous item | Navigate Left |
-| Open | Press Select |
+| Action | Apple TV | iPhone / iPad |
+|--------|----------|---------------|
+| Play or resume | Select **Play** or **Resume** | Tap **Play** or **Resume** |
+| Open details | Select the **Details** info button | Tap the **Details** info button |
+| Next item | Select **›**, or press Right from the last control | Swipe left |
+| Previous item | Press Left from the primary button | Swipe right |
+| Quick actions | Hold Select on **Details** | Tap **…** |
 
-When focused, navigation arrows appear on the left and right edges.
-The spotlight rotates on its own when you're not interacting.
+Items that can't be played directly use **View Details** as the primary button.
+On Apple TV, hold Select on that button for quick actions.
+
+Spotlight rotates automatically while you're browsing it.
+See [Spotlight](/browsing/home-screen/spotlight) for header behavior, inline cards, and content choices.

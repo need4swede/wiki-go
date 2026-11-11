@@ -7,6 +7,8 @@ order: 70
 Neptune keeps a local metadata cache so the app opens to a fully drawn home screen instead of spinners.
 With Neptune Pro, it also enriches your library with connected TMDB data your backend does not have.
 
+Open **Settings > Data > Metadata** on Apple TV, or **Settings > Metadata** on iPhone and iPad.
+
 ## Metadata Cache
 
 | Setting | Description |
@@ -29,7 +31,7 @@ Smart mode is the right choice for almost everyone: it pre-fetches what you're l
 - Upcoming seasons and air dates for shows you have
 - Home release dates that power [New Releases](/browsing/home-screen/new-releases) and the Spotlight
 
-Neptune Pro users can turn **TMDB Metadata** off in **Settings → Metadata**.
+Neptune Pro users can turn **TMDB Metadata** off on this page.
 The setting is on by default.
 
 When it is off, Neptune leaves the metadata supplied by your server unchanged.

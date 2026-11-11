@@ -29,7 +29,9 @@ The native console provides:
 - Schema-driven controls, native editors for structured settings, and Advanced JSON
 - A confirmation-protected wipe of all Neptune MDM data
 
-When you choose Server Defaults or a user, the editor follows Neptune's familiar Settings hierarchy—User Preferences, Neptune, Server, Seerr, and Backup & Sync—instead of presenting one long server form.
+When you choose Server Defaults or a user, the editor follows Neptune's current Settings hierarchy.
+Preferences, Servers, and Seerr belong to the account, with app behavior grouped separately.
+Apple TV uses category rails for pages such as Home, Playback, and Appearance.
 A reminder remains on nested pages so it is always clear whose remote settings you are changing.
 The editor modifies a server-managed draft; it does not sign you in as that user or change the administrator's local settings.
 
@@ -37,8 +39,8 @@ Only fields in Neptune's remote-management schema appear in this mirror.
 Local-only actions such as launching Compass, clearing learned state, or rebuilding caches are intentionally omitted.
 Other schema sections remain editable under **Additional Managed Settings**.
 
-Navigation Bar management includes Home, Movies, Shows, Music, Library, and Discover, and Music can be selected as the startup tab.
-Settings and Search stay pinned to the edges.
+Navigation management includes Home, Movies, Shows, Music, Library, and Discover, and Music can be selected as the starting page.
+Apple TV exposes available pages through Compass; iPhone and iPad use their touch navigation.
 
 The optional Admin PIN protects the menu from other people using the same device; it does not replace server authorization.
 Neptune checks the active account before every operation, and the plugin separately requires elevated server authorization.

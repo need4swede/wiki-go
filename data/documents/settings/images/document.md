@@ -5,6 +5,7 @@ order: 60
 # Images
 
 Manage how Neptune stores and preloads artwork for faster browsing.
+Open **Settings > Data > Images** on Apple TV, or **Settings > Images** on iPhone and iPad.
 
 ## Download All Images
 

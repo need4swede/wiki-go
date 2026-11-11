@@ -44,9 +44,20 @@ It automatically keeps narrower video such as 4:3 centered when expanding it wou
 
 See [Playback Settings](/settings/playback#video-zoom) for a comparison of all three modes.
 
-**Pin Timestamp** is also available and starts hidden.
+Three more buttons are available and start hidden:
 
-Enabling it captures the current playback position plus a local frame thumbnail, then syncs the Pin metadata with your other devices.
+| Button | What It Does |
+| --- | --- |
+| **Pin Timestamp** | Captures the current playback position plus a local frame thumbnail as a [timestamp pin](/library/shortcuts) |
+| **Audio** | Opens a quick audio track picker |
+| **Subtitles** | Opens a quick subtitle track picker, including Off |
+
+The Audio and Subtitles pickers appear beneath the action row.
+Tap a track to apply it and close the picker, or tap outside to close it without changing anything.
+The controls stay visible while a picker is open.
+
+The Subtitles icon fills while subtitles are on.
+Use the full [Playback Menu](/playback/playback-menu) for sound presets, subtitle style, timing, and other settings.
 
 You can reorder every action and hide any action except Playback Menu.
 
@@ -63,7 +74,7 @@ The choice lasts only for the current playback session, so it is useful when sys
 
 See [Playback Settings](/settings/playback) for the Auto and Landscape startup options.
 
-## Picutre-in-Picture Controls
+## Picture-in-Picture Controls
 
 With [Picture in Picture](/playback/outside-the-app#using-picture-in-picture) enabled, leaving Neptune during playback opens a system floating window automatically.
 

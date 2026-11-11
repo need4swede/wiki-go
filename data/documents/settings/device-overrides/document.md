@@ -27,7 +27,7 @@ The setting receives a **This device only** badge.
 Some controls cannot host a swipe or press-and-hold action, including sliders and reorder editors.
 You can manage every eligible setting from:
 
-**Settings > User Preferences > Backup and Restore > Device Overrides**
+**Settings > Account > Backup and Restore > Device Overrides**
 
 The Device Overrides screen groups settings by their normal Settings section.
 On iPhone and iPad, you can also search by setting name.
@@ -56,7 +56,7 @@ Other settings in the profile continue to apply.
 A profile can instead save **Replace Device Overrides** as part of its definition.
 When that profile becomes active, Neptune removes only the overrides for settings included in it, then uses its saved values.
 Unrelated overrides remain.
-A user-initiated selection—including switching to Auto—shows a confirmation with the number of affected overrides before anything is removed.
+A user-initiated selection, including switching to Auto, shows a confirmation with the number of affected overrides before anything is removed.
 A later background automatic activation follows the profile's saved choice without another prompt.
 
 ## Sync a Setting Again
@@ -94,7 +94,8 @@ Neptune MDM supports both one-time administrator changes and persistent locks.
 
 When a setting is marked **Lock for User**, the server value stays locked and wins over a Device Override.
 An explicitly locked member of the active Settings Profile does the same whether that profile is optional or Required.
-Neptune does not delete the Device Override in either case—it preserves it underneath and restores it when the lock is removed.
+Neptune does not delete the Device Override in either case.
+It preserves it underneath and restores it when the lock is removed.
 Requirement controls which profile stays active; it does not lock that profile's members.
 
 A Server Profile definition itself remains server-owned.

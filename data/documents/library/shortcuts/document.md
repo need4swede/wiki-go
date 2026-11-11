@@ -72,7 +72,7 @@ Open a timestamp Pin from the Library tab to choose one of three actions:
 
 Timestamp Pins remain visible with their saved time.
 If several moments belong to one movie or episode, Neptune collapses them into one card.
-Open that card to see the chronological moment chooser, where saved moments use wide frames—even when there is only one saved moment.
+Open that card to see the chronological moment chooser, where saved moments use wide frames, even when there is only one saved moment.
 The selected frame supplies the sheet's blurred backdrop.
 From the chooser you can **Play from [time]**, open the item, or remove only the selected moment.
 
@@ -139,5 +139,6 @@ Editing or removing the underlying Pin updates any widget that refers to it.
 ## Native Pins and Compass Shortcuts
 
 Native Pins bookmark media, people, and library browse contexts and appear in Neptune's content rows.
-The iPhone Compass uses a separate one-to-eight set of Compass Shortcuts, which can also appear in its [Live Activity](/browsing/navigation/compass/live-activity).
+Compass uses separate rows on Apple TV and pages on iPhone for saved shortcuts and live content.
+The iPhone [Live Activity](/browsing/navigation/compass/live-activity) shows the one to eight shortcuts on its first page.
 Compass Shortcuts do not replace Native Pins or a widget's independent Page, Section, or Pin selection.

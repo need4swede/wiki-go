@@ -6,7 +6,7 @@ order: 10
 
 One Neptune is Neptune's promise that changing media servers does not change the app around your media.
 
-Jellyfin, Emby, Plex, and future supported servers use the same Neptune Home, Movies, Shows, Library, Search, item-detail, player, navigation, onboarding, and Settings experience.
+Jellyfin, Emby, Plex, and Silo use the same Neptune Home, Movies, Shows, Library, Search, item-detail, player, navigation, onboarding, and Settings experience.
 Your available content can differ by server, and an individual server feature can be unavailable, but Neptune does not replace its normal pages with a generic or reduced provider interface.
 
 ## What can differ
@@ -62,8 +62,8 @@ A completed backend tour is not repeated every time that user returns.
 
 ## Future backends
 
-Plex will use these same pages when its runtime is ready.
-A logo, login flow, or generic catalog is not considered backend support by itself.
-Neptune only advertises operations backed by tested provider capabilities, while preserving one familiar application around them.
+New backends follow the same page and navigation system.
+An individual feature can be unavailable while the rest of Neptune works normally.
+Silo follows this approach while its integration is still in development.
 
 See [Supported Media Servers](/getting-started/backends) for the current backend and capability status.

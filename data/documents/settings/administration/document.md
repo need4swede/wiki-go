@@ -5,7 +5,8 @@ order: 90
 # Administration
 
 Server administration from the couch.
-With today's Jellyfin backend, admin accounts get an **Administration** entry under Accounts in Settings, covering the user-management basics that normally require the Jellyfin dashboard.
+For a supported server, open **Settings > Account > Servers > your server**, then choose **User Management** under Administration.
+With Jellyfin, this covers the user-management basics that normally require the Jellyfin dashboard.
 Administration is capability-specific, and future providers may offer a different set of controls.
 
 ## Admin PIN
@@ -13,12 +14,13 @@ Administration is capability-specific, and future providers may offer a differen
 Administration can be locked behind a 4-digit **Admin PIN**, so kids poking around Settings can't get into the admin panel.
 You'll be asked to set one up, or you can skip it.
 
-The Admin PIN only locks Administration.
+The Admin PIN guards server user management and the native Neptune MDM console.
 To lock the account itself on Apple TV, give it an [Account PIN](/personalization/profiles#account-pins).
 
 ## Neptune MDM
 
-Jellyfin administrator accounts get a **Neptune MDM** entry inside the same Administration menu on supported Neptune clients.
+On supported Neptune clients, open **Settings > Neptune MDM**.
+The native console requires Neptune Pro and a Jellyfin administrator account.
 The native route asks for the Admin PIN when one is set, then checks administrator authorization again in the app and on the server.
 
 From the native console, an administrator can:
@@ -58,7 +60,7 @@ This entry manages Neptune MDM only; Neptune Indexers remains separate.
 
 ## User Management
 
-Select any user on the server to manage their account:
+Open **Settings > Account > Servers > your server > User Management**, then select a user to manage their account:
 
 ### Account
 

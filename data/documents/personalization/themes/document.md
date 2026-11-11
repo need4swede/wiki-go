@@ -10,11 +10,11 @@ Customize Neptune's visual appearance.
 
 | Page | Description |
 | --- | --- |
-| [Built-in Themes](/personalization/themes/built-in) | Nine pre-designed themes |
+| [Built-in Themes](/personalization/themes/built-in) | Ten pre-designed themes |
 
 ## What Themes Control
 
-- Background colors and animations
+- Base background and surface colors
 - Text colors and opacity
 - Accent colors for buttons
 - Focus indicators and borders
@@ -27,21 +27,27 @@ Customize Neptune's visual appearance.
 
 **From Settings:**
 
-1. Go to **Settings > User Preferences > Appearance**
-2. Browse themes on the **Themes** tab
-3. Focus a theme to preview it live
-4. Select to apply
+1. Open your account in **Settings** and choose **Appearance** in its preferences.
+2. On Apple TV, open the **Themes** category. On iPhone and iPad, find the **Base Theme** section.
+3. Select a theme to apply it immediately. A checkmark identifies your selected theme.
 
 ## Theme Modes
 
-Theme Mode controls how Neptune blends your theme's colors with the content you're browsing.
-It sits at the top of the Themes tab.
+Theme Mode controls how Neptune uses your theme's colors alongside the artwork you're browsing.
+On Apple TV, it appears above Base Theme in the Themes category; on iPhone and iPad, it has its own section in Appearance.
 
 | Mode | Behavior |
 | --- | --- |
-| **Static** | Your theme's colors stay fixed regardless of what's on screen |
-| **Adaptive** | Accent colors adapt to focused posters and backdrops (the default) |
-| **Dynamic** | Full palette adapts to the focused content |
+| **Static** | Keeps the selected theme's colors fixed |
+| **Adaptive** | Keeps your base theme while adapting accent, focus, and progress colors to artwork (the default) |
 
-Adaptive has a sub-option to only adapt colors on item detail pages, keeping browsing stable.
-All modes work with every theme, built-in or custom.
+On Apple TV, Adaptive also offers an option to adapt colors only on item detail pages.
+Both modes work with built-in and custom themes where available.
+
+**Dynamic mode was retired in Neptune 1.5.** An older Dynamic selection now uses Adaptive automatically, including when restored from a backup or received through Settings Sync or managed settings.
+
+## Artwork Backgrounds on Apple TV
+
+Home rows, Settings, and other browsing pages share a softly blurred, dimmed wash of the current Home Spotlight artwork.
+Static and Adaptive control the theme colors alongside that artwork.
+When Spotlight is hidden, artwork is unavailable, or Reduce Transparency is enabled, Neptune uses the theme background with a soft accent glow.

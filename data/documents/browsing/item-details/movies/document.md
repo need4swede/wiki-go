@@ -10,10 +10,12 @@ Movie detail pages show everything about a film.
 
 - **Play button**: Start playback (shows "Resume" if in progress, with a progress bar)
 - **Version picker**: Appears when a movie has multiple versions
-- **Action pill**: Pin, trailer, watched, favorite, and more (see [Item Details](/browsing/item-details))
+- **Actions**: Pin, trailer, watched, favorite, and more (see [Item Details](/browsing/item-details))
 - **Metadata tiles**: Year, community rating, critic score, content rating, runtime
 
-The Detailed layout adds quality pills for resolution, codecs, and file size.
+On Apple TV, **Movie Pages > Customize** chooses the logo, poster, description, credits, and Ratings, Video, Audio, and Size details.
+On iPhone and iPad, the selected layout controls how that information is arranged.
+See [Item Detail Layouts](/personalization/item-detail-layouts).
 
 ## Media Badges
 
@@ -23,7 +25,7 @@ Color-coded badges show video and audio quality.
 
 | Badge | Color | Meaning |
 |-------|-------|---------|
-| 4K | Green | 2160p resolution |
+| 4K | Green | 4K resolution, including widescreen releases |
 | 1080p | White | Full HD |
 | 720p/SD | Dim | Lower resolution |
 | DV | Purple | Dolby Vision HDR |
@@ -48,7 +50,7 @@ For example, 4K + Dolby Vision shows a teal badge, and TrueHD + Atmos shows a cy
 |---------|-------------|
 | **Cast & Crew** | Actors, directors, and production team, with a See All grid grouped by role |
 | **Extras** | Trailers, behind-the-scenes, featurettes |
-| **Part of Collection** | The collection this movie belongs to |
+| **Collections** | Apple TV's inline collection poster and titles; **Part of Collection** on iPhone and iPad |
 | **More Like This** | Movies with similar themes |
 
 Select a person to open their [people page](/browsing/item-details/people) with their other work in your library.

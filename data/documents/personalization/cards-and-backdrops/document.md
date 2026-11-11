@@ -5,11 +5,12 @@ order: 40
 # Cards & Backdrops
 
 Fine-tune how much artwork Neptune shows and how content cards present themselves.
-Both live in **Settings > User Preferences > Appearance**.
+Both live in **Settings > Account > Appearance**.
 
 ## Backdrops
 
-The **Backdrops** tab controls the artwork behind everything:
+On Apple TV, open the **Backdrops** category in Appearance. On iPhone and iPad, use the Backdrops section.
+These controls set how artwork appears:
 
 | Setting | Description |
 |---------|-------------|
@@ -19,7 +20,7 @@ The **Backdrops** tab controls the artwork behind everything:
 On iPhone and iPad there is a third setting, **Framing**, because a widescreen backdrop and an upright screen are opposite shapes.
 It also unlocks placing an individual backdrop by hand.
 
-**Settings > User Preferences > Appearance > Backdrops > Framing**
+**Settings > Account > Appearance > Backdrops > Framing**
 
 | Mode | What you get |
 |------|--------------|
@@ -36,7 +37,7 @@ Apple TV is unaffected: a television is already the shape backdrops are made for
 ### Repositioning a Backdrop by Hand
 
 Automatic framing is a good guess, not a verdict.
-On any movie or show page, in all three detail layouts—Detailed, Immersive, and Minimal:
+On iPhone and iPad movie or show pages, in Detailed, Immersive, and Minimal:
 
 1. **Touch and hold the backdrop.** It lifts, the page stops scrolling, and the fade at the artwork's edges thins out so you can see where the picture actually ends.
 2. **Drag** to move the picture sideways or up and down, and **pinch** to change how much of it is shown.
@@ -62,7 +63,7 @@ A placement you made by hand is kept; use **Reset framing** if it no longer suit
 
 ## Cards
 
-The **Items** tab decides what each card looks like:
+Apple TV's **Items** category controls card images and labels:
 
 | Setting | Description |
 |---------|-------------|

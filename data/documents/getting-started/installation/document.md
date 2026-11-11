@@ -8,10 +8,10 @@ order: 10
 
 | Device | Minimum |
 |--------|---------|
-| **Apple TV** | Apple TV 4K, tvOS 18.5 or later |
+| **Apple TV** | Apple TV HD or Apple TV 4K (any generation), tvOS 26 or later |
 | **iPhone / iPad** | iOS or iPadOS 16 or later |
-| **Mac** | TBD |
-| **Media server** | A supported media server |
+| **Mac** | Not yet available |
+| **Media server** | A [supported media server](/getting-started/backends) |
 
 ## Apple TV
 
@@ -46,7 +46,7 @@ If you wish to upgrade to Neptune Pro, make sure you do so using an App Store re
 
 ## Mac
 
-TBD.
+Neptune for Mac is not yet available.
 
 ## Passengers & Pilots
 

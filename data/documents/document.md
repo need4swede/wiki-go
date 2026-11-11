@@ -5,7 +5,7 @@ Neptune's architecture and experience are backend-agnostic, designed to stay fam
 
 ## Supported Backends
 
-Neptune is designed for Jellyfin, Emby, Plex, and additional media-server backends.
+Neptune supports Jellyfin, Emby, and Plex, with Silo in development.
 See [Supported Media Servers](/getting-started/backends) for current availability.
 
 ## Quick Start
@@ -31,7 +31,7 @@ See [Supported Media Servers](/getting-started/backends) for current availabilit
 
 | Page | Description |
 |------|-------------|
-| [Navigation](/browsing/navigation) | Tab bar, Compass, remote controls |
+| [Navigation](/browsing/navigation) | Compass, page navigation, remote controls |
 | [Widgets](/browsing/widgets) | Per-widget Pages, dynamic Sections, and native Pins |
 | [Home Screen](/browsing/home-screen) | Hero spotlight, content rows, customization |
 | [Item Details](/browsing/item-details) | Movies, TV shows, extras, people |
@@ -89,8 +89,8 @@ See [Supported Media Servers](/getting-started/backends) for current availabilit
 |------|-------------|
 | [Accounts & Profiles](/personalization/profiles) | Multiple accounts, tvOS profiles, and Account PINs |
 | [Account Picture & Clock](/personalization/account-picture-and-clock) | Your picture and the time in the top-right corner on Apple TV |
-| [Themes](/personalization/themes) | Nine built-in themes |
-| [Item Detail Layouts](/personalization/item-detail-layouts) | Detailed, Immersive, or Minimal |
+| [Themes](/personalization/themes) | Ten built-in themes |
+| [Item Detail Layouts](/personalization/item-detail-layouts) | Movie and show customization, touch layouts |
 | [Cards & Backdrops](/personalization/cards-and-backdrops) | Card styles and artwork behavior |
 
 ### Settings
@@ -128,7 +128,7 @@ See [Supported Media Servers](/getting-started/backends) for current availabilit
 
 - **Trident Player**: Direct plays nearly everything (MKV, TrueHD, DTS-HD MA, ASS subtitles) with HDR10+, Dolby Vision, and on-the-fly conversion for compatible Blu-ray Profile 7 files
 - **Conductor**: Picks the right audio track, subtitles, and version automatically based on your preferences
-- **Hero Spotlight**: Full-bleed carousel showcasing what to watch next
+- **Spotlight**: An artwork header with Play and Details controls, configurable content types, and Automatic or Custom priority
 - **Search that understands**: Instant offline search, semantic theme matching, and local-first AI for hard queries
 - **Neptune AI**: Zero-setup Pro intelligence across Neptune, currently powering natural-language search, Episode Finder, and title and person insights
 - **Seerr Integration**: Browse, request, and approve content without leaving the couch
@@ -137,17 +137,17 @@ See [Supported Media Servers](/getting-started/backends) for current availabilit
 - **Compass Live Activity**: Reach one to eight configurable shortcuts from Dynamic Island, the iPhone Lock Screen, or Neptune's in-app palette
 - **Picture in Picture & Background Playback**: Keep video floating over other apps or continue audio with Lock Screen and Control Center controls
 - **Cloud Backup & Sync**: Preferences, preset definitions, and device-type assignments follow you across devices, with Device Overrides for settings that should stay different on one physical device
-- **Themes**: Nine built-in themes with Adaptive and Dynamic modes
+- **Themes**: Ten built-in themes with Static and Adaptive modes
 - **Family Ready**: Per-profile everything, child accounts, and PIN-protected admin tools
 
 ## Requirements
 
 | Device | Minimum |
 |--------|---------|
-| **Apple TV** | Apple TV 4K (2nd generation or later), tvOS 18.5+ |
-| **iPhone / iPad** | iOS or iPadOS 16+ |
-| **Mac** | TBD |
-| **Media server** | Jellyfin 10.10 or later (currently supported) |
+| **Apple TV** | Apple TV HD or Apple TV 4K (any generation), tvOS 26 or later |
+| **iPhone / iPad** | iOS or iPadOS 16 or later |
+| **Mac** | Not yet available |
+| **Media server** | A [supported media server](/getting-started/backends) |
 
 Optional, on any device:
 

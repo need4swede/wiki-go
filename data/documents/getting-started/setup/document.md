@@ -4,6 +4,9 @@ order: 20
 
 # Initial Setup
 
+Start by choosing your media server.
+See [Supported Media Servers](/getting-started/backends) for availability and differences.
+
 | Step | Description |
 |------|-------------|
 | [Server Connection](/getting-started/setup/server-connection) | Connect to a supported media server |
