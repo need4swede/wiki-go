@@ -16,6 +16,7 @@ Everything from pressing Play to choosing tracks and scrubbing.
 | [Pre-Rolls](/playback/pre-rolls) | Cinema bumpers and trailers before a movie, from your server or NeXroll |
 | [Conductor](/playback/conductor) | Track and version selection, with Pro live Language Rules and optional Auto learning |
 | [Picture in Picture & Background Playback](/playback/outside-the-app) | Continue video or audio outside the iPhone and iPad app |
+| [Links & Remote Control](/playback/links-and-remote-control) | Open, play, or control a title from a link, your server's Play On menu, or Home Assistant |
 | [Skip Intros](/playback/skip-intros) | Skip buttons for intros, recaps, credits, and previews, from your server and TheIntroDB |
 | [Up Next](/playback/up-next) | The next episode's screen at the end credits, with a countdown |
 
