@@ -81,9 +81,12 @@ Their Movie Pages and Show Pages options control what the hero shows.
 
 ## Display Size
 
-**Settings > Account > Appearance > Layouts > Display Size** offers Small, Medium, Large, and Extra Large on Apple TV.
+**Settings > Account > Appearance > Layouts > Display Size** offers Small, Medium, and Large on Apple TV.
 It changes card and text sizes on supported browsing surfaces, including Home, Library, and Search.
-Medium is the default.
+Medium is the default and shows six posters across a row.
+Small shows seven, and Large shows five.
+Earlier versions had Extra Large.
+It now uses Large.
 
 ## Cross-Platform Sync
 

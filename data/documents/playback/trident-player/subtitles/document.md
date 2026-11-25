@@ -33,7 +33,7 @@ Trident supports rendering ASS subtitles, so styling comes through intact:
 
 - **Fonts**: Custom typefaces if the file embeds them
 - **Colors**: Primary, secondary, outline, and shadow colors
-- **Positioning**: 9-point alignment grid plus absolute positioning
+- **Positioning**: 9-point alignment grid plus absolute positioning, including lines a file places at the top of the screen
 - **Effects**: Bold, italic, underline, strikethrough, borders, shadows
 
 ## Track Switching

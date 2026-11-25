@@ -11,13 +11,7 @@ Apple TV organizes the screen into **Player**, **Controls**, **Autoplay**, **Ski
 
 ### Engine
 
-Apple TV lets you choose the playback engine. iPhone and iPad use Trident for all playback, so they do not show an engine picker.
-
-| Engine | Description |
-|--------|-------------|
-| **Trident** | Neptune's custom player, designed for direct play (default) |
-| **AVPlayer** | Apple's native player. The server transcodes incompatible formats |
-
+Neptune plays everything in [Trident](/playback/trident-player), its own player, on Apple TV, iPhone, and iPad.
 See [Trident Player](/playback/trident-player) for what Trident supports.
 
 ### Playback Mode
@@ -34,7 +28,7 @@ Choosing Transcode reveals:
 | **Target Bitrate** | 1 to 120 Mbps. The server keeps the stream within this cap |
 | **Always Transcode** | Transcode even files that fit under the cap |
 
-You can also change quality per-session from the [Playback Menu](/playback/playback-menu)'s Video category.
+You can also change quality per-session from the [Playback Menu](/playback/playback-menu)'s Video category, where **Playback Speed** also lives.
 
 ### Video Zoom
 
@@ -70,11 +64,14 @@ When playback ends, Neptune returns to the orientation used before the player op
 | **Show Controls on Pause** | Surface controls whenever playback pauses (default on) |
 | **Controls Auto-Hide** | 3, 5, or 10 seconds |
 | **Double Tap to Skip** | On iPhone and iPad, rapidly double-tap the left or right side of the video to skip backward or forward (default on) |
+| **Touch to Fast Forward** | Touch and hold to scan the title without playing it: rest a finger on the Siri Remote's touch surface, or hold the left or right edge of the picture on iPhone and iPad (default on) |
+| **Touch Fast Forward Speeds** | Choose which of the four speeds, numbered 1 to 4, each touch steps through. 2 and 4 are on by default and at least one stays on. Appears when Touch to Fast Forward is on |
 | **Skip Interval** | Move 5, 10, or 15 seconds with each skip action (default 10 seconds) |
 | **Hide Title in Controls** | Drop the title block for a cleaner look |
 | **Action Buttons** | Reorder or hide the buttons in the player controls (see [Player Controls](/playback/player-controls)) |
 | **Playback Menu** | Reorder or hide the categories in the in-player menu |
 | **Back / Menu Button** | Always Exit, or Dismiss First |
+| **Allow Pausing When Locked** | Keep Play/Pause working while the Lock action button has locked the player (default on) |
 
 On iPhone and iPad, a single tap anywhere on the video toggles the controls.
 When **Double Tap to Skip** is on, a rapid double tap on the left third skips backward and one on the right third skips forward.
@@ -86,11 +83,12 @@ See [Touch Controls](/playback/player-controls/touch#touch-gestures) for the com
 | Device | Default Buttons | Always Available |
 | --- | --- | --- |
 | **Apple TV** | Audio, Subtitles, Video, Chapters, Info, Pin | Audio and Subtitles can be moved but never hidden |
-| **iPhone / iPad** | Playback Menu, Rotate, Video Zoom | Playback Menu can be moved but never hidden |
+| **iPhone / iPad** | Audio, Subtitles, Video, Chapters, Info, Rotate | Audio and Subtitles can be moved but never hidden |
 
 On Apple TV, Chapters appears when the video has chapters and permits seeking.
-Optional actions include Next Episode, Bitrate, Technical Info, Autoplay, and Play / Pause.
-On iPhone and iPad, Pin Timestamp, Audio, and Subtitles start hidden and can be enabled here.
+Optional actions include Next Episode, Bitrate, Technical Info, Autoplay, Play / Pause, and Lock.
+On iPhone and iPad, Pin Timestamp and Lock start hidden and can be enabled here.
+On iPhone and iPad, Video Zoom is under **Video > Zoom** in the [Playback Menu](/playback/playback-menu#video).
 
 The **Playback Menu** editor controls category order and visibility separately from the action buttons.
 See [Siri Remote Controls](/playback/player-controls/siri-remote#action-buttons) and [Touch Controls](/playback/player-controls/touch#action-buttons) for the available actions.
@@ -111,6 +109,12 @@ iPhone and iPad place their supported timeline options in the **Controls** secti
 Siri Remote behavior and the remaining Apple TV-only controls do not appear there.
 
 Other seeking options: **Scrub Sensitivity** (1 to 10; default 7), **Resume on Seek**, and **Seek Mode** (Locked, Limited, or Unlocked) with an on-screen demo of each mode.
+
+## Pre-Rolls
+
+Pre-Rolls play cinema bumpers and trailers before a movie.
+Turn them on under **Settings > Playback > Pre-Rolls**.
+See [Pre-Rolls](/playback/pre-rolls) for every setting and where the clips come from.
 
 ## Autoplay
 
@@ -133,7 +137,8 @@ The [Up Next](/playback/up-next) screen replaced the large countdown pill, and a
 | **Skip Button** | Show a Skip button during intros, recaps, credits, and previews (default on). See [Skip Intros](/playback/skip-intros) |
 | **From Your Server** | Use timestamps from your media server (default on) |
 | **From TheIntroDB** | Fill in missing timestamps from TheIntroDB, a third-party service. Asks before turning on (default off) |
-| **Auto Skip** | Skip intros and credits without pressing anything (default off) |
+| **Auto Skip** | Skip segments without pressing anything (default off). On iPhone and iPad it's called **Skip Automatically** |
+| **Intros**, **Recaps**, **Credits**, **Previews**, **Ads** | Choose which kinds Auto Skip skips. They appear while Auto Skip is on (default all on). A kind you turn off keeps its Skip button |
 
 ## Audio
 

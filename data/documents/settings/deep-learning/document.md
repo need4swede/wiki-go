@@ -31,8 +31,7 @@ When off, the sparkle features stay out of your way entirely.
 | **OpenRouter** | Cloud | One API key, many models |
 
 Each provider row takes a server URL where relevant, an API key, and a model, with a **Test Connection** button to verify before saving.
-
-Claude, OpenAI, and GLM are visible as planned providers but are not active yet.
+For Gemini, the test checks your key and model with Google.
 
 ## Model Priority
 

@@ -5,7 +5,7 @@ order: 60
 # Images
 
 Manage how Neptune stores and preloads artwork for faster browsing.
-Open **Settings > Data > Images** on Apple TV, or **Settings > Images** on iPhone and iPad.
+Open **Settings > Data > Images**.
 
 ## Download All Images
 
@@ -31,6 +31,13 @@ The cache size is broken down by image type (posters, backdrops, logos, thumbnai
 
 On by default.
 When an item's artwork fails to load or goes missing, Neptune quietly re-fetches it rather than leaving a blank card.
+
+## Replaced Artwork
+
+On Jellyfin, when an administrator replaces an image, Neptune shows the new picture everywhere without a restart.
+This covers a backdrop, poster, or logo changed with Edit Images or by Refresh Metadata, a person's portrait, and an account picture.
+Spotlight colors follow the new backdrop.
+A change made in Jellyfin's own dashboard appears the next time Neptune refreshes.
 
 ## System Behavior
 

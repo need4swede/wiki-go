@@ -5,7 +5,7 @@ order: 60
 # Discover
 
 Discover turns Neptune from a window into your existing library into a place to find what comes next.
-Browse what is trending, move through genres and decades, explore international media, build your own themed collections, and request a title without leaving the app.
+See this week's number one title, follow your requests, find out what is about to release, explore languages and decades, and request a title without leaving the app.
 
 Discover is powered by Seerr and appears after Seerr is connected.
 See [Seerr Setup](/getting-started/setup/seerr) if the tab is missing.
@@ -14,10 +14,11 @@ See [Seerr Setup](/getting-started/setup/seerr) if the tab is missing.
 
 | Page | Description |
 |------|-------------|
-| [Browsing Discover](/discover/browsing) | Genres, eras, studios, networks, languages, anime, and paginated grids |
-| [Release Calendar](/discover/release-calendar) | Upcoming movie and TV dates grouped chronologically |
+| [Browsing Discover](/discover/browsing) | Explore, genres, decades, studios, networks, languages, anime, and paginated grids |
+| [Coming Soon](/discover/coming-soon) | What is releasing this week and after, with requests |
 | [Themed Collections](/discover/themed-collections) | Build reusable discovery rows from any TMDB keyword |
 | [Requests](/discover/requests) | Request content, track progress, and manage approvals |
+| [Ask in Discover](/neptune-ai/discover-ask) | Describe what you're in the mood for and get new titles to request (Neptune Pro) |
 
 ## Discover, Library, and Search
 
@@ -33,28 +34,89 @@ A title you do not own opens the same Neptune detail experience with a **Request
 
 ## The Discover Screen
 
-Discover is composed of configurable rows in this default order:
+### Apple TV
 
-| Section | What It Surfaces | Where It Leads |
-|---------|------------------|----------------|
-| [Release Calendar](/discover/release-calendar) | Future movie releases and TV premieres | Chronological calendar |
-| [Browse by Era](/discover/browsing#browse-by-era) | Movies and shows grouped by decade | Movies/TV decade browse |
-| **Trending Now** | Titles attracting attention right now | Item details |
-| [Studios](/discover/browsing#studios-and-networks) | Major film studios | Studio movie browse |
-| **Upcoming Movies** | Movies approaching release | Item details |
-| [Networks](/discover/browsing#studios-and-networks) | Streaming services and TV networks | Network show browse |
-| **Upcoming TV** | New and returning television | Item details |
-| **Now Playing** | Movies currently in theaters | Item details |
-| **Airing This Week** | Shows with episodes airing this week | Item details |
-| [Anime](/discover/browsing#anime) | Popular anime movies and series | Movies/TV anime browse |
-| [World Stage](/discover/browsing#world-stage) | Media grouped by original language | Movies/TV language browse |
-| [Themed Collections](/discover/themed-collections) | User-selected concepts such as Heist or Time Travel | Movies/TV keyword browse |
-| [Movie Genres](/discover/browsing#genres) | Seerr's movie genre catalog | Genre movie browse |
-| **Popular Movies** | Popular films | Item details |
-| [TV Genres](/discover/browsing#genres) | Seerr's television genre catalog | Genre show browse |
-| **Popular TV Shows** | Popular series | Item details |
+Discover opens on this week's number one trending title, full screen.
+Its header shows **#1 in Trending this week**, the title's IMDb and Rotten Tomatoes ratings when available, its runtime and release year, and its seasons for a show.
+See [Ratings](/browsing/item-details/ratings).
 
-Rows with no results hide themselves rather than leaving empty shelves.
+The header's main button depends on the title:
+
+| Title | Button |
+|-------|--------|
+| In your library | **Open**, or **Play** when [Impatient Mode](/settings/home#impatient-mode) applies |
+| Not in your library | **Request** |
+| Already requested | **Requested**, which opens [Request & Track](/discover/requests#request--track) |
+
+Icons beside it open **Search**, which is [Ask](/neptune-ai/discover-ask), **Coming Soon**, **Explore**, and, for request managers, **Manage Requests**.
+
+Below the header, Discover's rows appear in this default order:
+
+| Row | What It Surfaces |
+|-----|------------------|
+| [On the Way](/discover/requests#on-the-way) | Your requests that haven't arrived, with their state and download progress |
+| **Top Chart: Movies** and **Top Chart: TV** | This week's ten most popular movies and shows, with ranks on the posters |
+| **For You: Movies** and **For You: TV** | Recommendations from what you finished lately |
+| **Highly Rated: Movies** and **Highly Rated: TV** | The best-rated movies and shows of the last year |
+| **Coming Soon** | Movies coming out in the next two months |
+| **New Episodes** | Your shows returning and new shows premiering this week |
+| **New Anime** | This season's most popular anime, from AniList. **See All** opens the anime page |
+| **Hidden Gems: Movies** and **Hidden Gems: TV** | Well-rated titles few people have found |
+| **Complete Your Collections** | Films missing from collections you own |
+
+Rows with too few titles hide themselves rather than leaving empty shelves.
+You can reorder or hide rows on Apple TV.
+
+### iPhone and iPad
+
+Discover opens on **Today**.
+It shows the date, an **Ask** field, and then, from top to bottom:
+
+| Section | What It Surfaces |
+|---------|------------------|
+| **Ask** | A field that opens [Ask in Discover](/neptune-ai/discover-ask). It is marked PRO without Neptune Pro |
+| **#1 This Week** | This week's top title, marked if you have it, with Request or Requested |
+| **From Your Shows** | The soonest new season or episode of a show you watch, with **Request Season N** |
+| **Complete the Set** | Posters for a collection you own, with a plus to request a missing part |
+| **Saved for Later** | Titles you saved in the Deck |
+| **On the Way** | Your requests that haven't arrived. **See All** opens Requests & Coming Soon |
+| **Top Chart: Movies** and **Top Chart: TV** | Ranked strips of this week's most popular titles |
+| **Rows** | For You, Highly Rated, Coming Soon, New Episodes, New Anime, and Hidden Gems |
+| **Explore** | Languages, decades, themes, genres, studios, and networks |
+| **Deck** | **Triage what's trending** |
+
+Each story shows only when it has something to say.
+The order of rows is fixed on iPhone and iPad.
+
+On a wide iPad window, stories sit in two columns.
+
+### What Each Row Means
+
+- **For You** uses the last few titles you finished.
+  Only the title's TMDB number goes to your Seerr server, to ask for recommendations.
+  Titles already in your library are left out.
+- **Hidden Gems** are titles critics and audiences rate highly that few people have found.
+  It leaves out anime, which has its own row, and titles you own.
+  It needs Neptune's ratings to have arrived.
+- **Complete Your Collections** looks at collections that include something you finished or added lately.
+  Films you own are marked **Owned**, and missing films appear as gray ghosts with **Request Part N**.
+- **Top Chart** cards carry a frosted rank number in the corner.
+
+### The Deck
+
+The **Deck** is a stack of cards for going through titles quickly.
+Choose a pile: **Trending**, **Coming Soon**, **Because You Watched**, or **Saved for Later** once you've saved something.
+Titles you own, requested, saved, or passed are left out.
+
+| Gesture | Result |
+|---------|--------|
+| **Swipe right** | Request the title. For a show, you choose seasons |
+| **Swipe up** | Save for later |
+| **Swipe left** | Pass |
+
+**Request**, **Save**, and **Pass** buttons do the same, and a tap opens the title.
+Saved titles stay on this device and are not synced.
+Passes last for the session only.
 
 ## Exploring a Row
 
@@ -62,11 +124,10 @@ There are two kinds of Discover rows:
 
 - **Title rows** contain posters.
   Select one to open its detail page.
-- **Browse rows** contain genre, decade, studio, network, language, anime, or keyword cards.
-  Select one to open a full result grid that loads more items as you scroll.
+- **Explore cards** contain genre, decade, studio, network, language, anime, or keyword choices.
+  Select one to open a page that loads more items as you scroll.
 
 Decade, language, anime, and themed-collection pages let you switch between Movies and TV Shows.
-Genre cards are already separated into Movie Genres and TV Genres; Studios browse movies, while Networks browse shows.
 
 See [Browsing Discover](/discover/browsing) for the complete behavior.
 
@@ -105,16 +166,17 @@ Movies usually submit immediately.
 TV shows let you choose seasons, while users with advanced Seerr permissions can also choose a quality profile.
 
 Your Seerr permissions determine whether a request is automatically approved or waits for an administrator.
-Track it from **My Requests**; administrators receive a persistent **Manage Requests** banner at the top of Discover and can approve or decline without leaving Neptune.
+Track it from **On the Way** or **My Requests**.
+Request managers can approve or decline without leaving Neptune, from the **Manage Requests** icon on Apple TV or the approval card on iPhone and iPad.
 
-See [Requests](/discover/requests) for season selection, status meanings, cancellation, quality preferences, and administration.
+See [Requests](/discover/requests) for season selection, status meanings, Request & Track, cancellation, quality preferences, and administration.
 
 ## Language Preferences
 
 Open **Settings > Account > Seerr > Seerr Preferences > Language Preferences** to filter Discover by original language.
-Changing the preference refreshes all Discover rows, including Trending.
+Changing the preference refreshes all Discover rows.
 
-This global preference is different from **World Stage**: the preference narrows the overall Discover feed, while World Stage is a deliberate browse into one language at a time.
+This global preference is different from **Around the World**: the preference narrows the overall Discover feed, while Around the World is a deliberate browse into one language at a time.
 
 ## Refresh and Failure Behavior
 
@@ -127,7 +189,9 @@ If Seerr is disconnected, the tab shows a connection screen instead of an empty 
 ## Access and Privacy
 
 Ordinary Discover browsing and Seerr requests are available without Neptune Pro.
+[Ask](/neptune-ai/discover-ask) is part of [Neptune AI](/neptune-pro/neptune-ai) and needs Neptune Pro.
 What you can request, approve, cancel, or manage is controlled by your Seerr account and server configuration.
 
 Discover queries go to your configured Seerr server.
 Neptune does not upload your media library to a separate discovery account; Seerr provides catalog, request, and availability information for the connected setup.
+For You sends only the TMDB number of a title you finished to your Seerr server, to ask for recommendations.

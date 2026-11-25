@@ -90,7 +90,6 @@ You get the small countdown pill in the corner instead of the Up Next screen:
 
 - When an episode has a scene in the credits and Neptune can't tell where it ends. See [Scenes in the Credits](#scenes-in-the-credits).
 - On iPhone held upright.
-- With AVPlayer selected as the player in **Settings > Playback > Player**.
 
 ## Related Settings
 

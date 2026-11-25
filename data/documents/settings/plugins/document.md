@@ -7,8 +7,8 @@ order: 40
 Check plugin status and manage compatible backend extensions from inside the app.
 The options below describe Jellyfin's Neptune Plugin Suite; future backends may expose different extension options.
 
-On Apple TV, open **Settings > Account > Servers > your server > Plugins**.
-On iPhone and iPad, open **Settings > Plugins**.
+Open **Settings > Account > Servers > your server > Plugins**.
+The Plugins row is below Administration.
 
 ## Neptune Plugin Suite
 
@@ -42,4 +42,4 @@ When detected, it appears here with an enable toggle.
 ## Where Other Plugin Options Went
 
 - **Intro Skipper** behavior (Skip button and Auto Skip) lives in **Settings > Playback > Skipping**. The plugin is optional: Neptune can also get timestamps from TheIntroDB. See [Skip Intros](/playback/skip-intros)
-- **Theme songs** are a built-in feature, controlled in **Settings > Account > Sounds** on Apple TV, or **Settings > Account > Audio Preferences** on iPhone and iPad (enable, volume, loop, fade)
+- **Theme songs** are a built-in feature, controlled in **Settings > Account > Preferences > Sounds** (enable, volume, loop, fade)

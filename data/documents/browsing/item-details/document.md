@@ -14,6 +14,8 @@ When you select content, Neptune displays detailed information and actions.
 | [TV Shows](/browsing/item-details/tv-shows) | Series, seasons, episodes, episode finder |
 | [Extras](/browsing/item-details/extras) | Special features, trailers, behind-the-scenes |
 | [People](/browsing/item-details/people) | Actor, director, and crew detail pages |
+| [Ratings](/browsing/item-details/ratings) | IMDb, Rotten Tomatoes, Metacritic, and Letterboxd scores |
+| [Deleting Media](/browsing/item-details/delete-media) | Removing a title and its files from your server |
 
 ## Layouts
 
@@ -29,7 +31,7 @@ Depending on your layout and customization, a detail page can show:
 
 - **Backdrop**: Full-screen background image
 - **Logo/Title**: Official logo or text
-- **Metadata**: Year, community and critic ratings, content rating, runtime
+- **Metadata**: Year, community and critic ratings, content rating, runtime. See [Ratings](/browsing/item-details/ratings) for IMDb, Rotten Tomatoes, Metacritic, and Letterboxd
 - **Overview**: Plot summary
 - **Play button**: Start or resume playback
 
@@ -46,7 +48,7 @@ Available actions vary by item type:
 
 | Action | What It Does |
 |--------|--------------|
-| **Pin** | Add the item to [Pins](/library/shortcuts) on the Library tab |
+| **Pin** | Add the item to your [Pins](/library/shortcuts) on Home |
 | **Trailer** | Play a trailer when available. Prefers local trailer files, otherwise opens YouTube (see [Extras](/browsing/item-details/extras)) |
 | **Mark Played** | Toggle played status |
 | **Add Favorite** | Toggle favorite status |
@@ -54,7 +56,7 @@ Available actions vary by item type:
 | **Spoilers** | (Series) Hide episode thumbnails and overviews until played |
 | **Find Episode** | (Series) Find an episode by describing what happens in it. Needs a language model |
 | **Request** | (Seerr) Request missing seasons or related content |
-| **Manage** | (Authorized administrators) Open the supported image, metadata, and deletion tools |
+| **Manage** | (Authorized accounts) Open the supported image, metadata, and deletion tools. See [Deleting Media](/browsing/item-details/delete-media) |
 | **Edit Images** | Change artwork where the server offers image administration |
 | **Refresh Metadata** | (Admins) Pull fresh metadata from the server |
 

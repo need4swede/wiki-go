@@ -5,7 +5,8 @@ order: 90
 # Settings
 
 On Apple TV, open Compass and select Settings.
-On iPhone and iPad, tap the Settings gear in the bottom navigation pill.
+On iPhone, open Compass and choose Settings.
+On iPad, tap the Settings gear in the bottom navigation pill.
 
 In paths such as **Settings > Account > Appearance**, Account means the banner for your signed-in account.
 Open that banner to reach its preferences, servers, Seerr connection, and sign-in controls.
@@ -47,8 +48,11 @@ See [Accounts & Profiles](/personalization/profiles).
 | **Sign-In & Security** | Account PIN, automatic sign-in, account picture, and the administrator passcode where available |
 | **Sign Out** | Sign out of this account on the device |
 
-Apple TV's Preferences include **Sounds** for menu sounds and theme songs.
-iPhone and iPad have **Audio Preferences** and **Quality Preferences**; iPhone also has **Live Activity** and Compass.
+Preferences are the same on every device, in this order: Appearance, Conductor, Activity, Sounds, Compass, and Backup.
+Quality is inside Conductor.
+Servers without Conductor keep a **Quality** row instead.
+Sounds holds theme songs, and menu sounds on Apple TV.
+iPhone also has **Live Activity**, after Compass.
 Subtitle appearance is under **Settings > Playback > Subtitles**.
 
 Where the backend supports Backup and Restore, that page contains Settings Profiles and Device Overrides.
@@ -65,13 +69,22 @@ The main Settings page also holds the app's settings:
 | **Downloads** | Offline storage and download management |
 | **Deep Learning** | AI Search and language model providers |
 | **Neptune MDM** | Native managed-settings administration, when authorized |
-| **Data** (Apple TV) | Metadata and Images |
+| **Data** | Metadata, Images, and Search |
 | **Language** | Neptune's display language |
 
-On iPhone and iPad, Images and Metadata are separate entries, alongside Search and supported Plugins.
-On Apple TV, Plugins lives on **Account > Servers > your server**, below Administration.
+On iPhone and iPad, these appear as a grid of tiles at the top of Settings, in the same order as Apple TV.
+Plugins lives on **Account > Servers > your server**, below Administration.
 Available destinations depend on the device, server capabilities, and your access.
-Neptune Pro, About, Get Help, Diagnostics, and reset actions keep their own places on the main page.
+Neptune Pro, About, Get Help, and reset actions keep their own places on the main page.
+Diagnostics is inside **About**, along with the app's version, What's New, support links, and legal pages.
+
+## Categories
+
+Home, Playback, Appearance, Developer Tools, and Diagnostics split their settings into categories.
+On Apple TV, the categories are a rail on the left.
+On iPhone and iPad, they are a strip of icons at the edge of the screen.
+The strip sits on the right in the Regular stance and on the left in Goofy.
+Tap an icon to switch categories, or touch and hold the strip to see every category's name.
 
 ## Using Settings on Apple TV
 

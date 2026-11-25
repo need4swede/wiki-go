@@ -46,6 +46,29 @@ The Menu button behavior is configurable:
 
 **Always Exit** leaves playback immediately, while **Dismiss First** hides the controls on the first press and exits on the second.
 
+## Touch to Fast Forward
+
+Rest a finger anywhere on the touch surface, without pressing, for about half a second to scan the title.
+The picture pauses and the controls come up.
+The timeline moves forward with a preview and the speed beside the time.
+Nothing is heard while it scans.
+
+| Action | Result |
+| --- | --- |
+| Lift your finger | Neptune waits a moment, then plays from where the scan reached |
+| Touch again before it plays | Carry on faster from the same place |
+| Click the right edge | Faster |
+| Click the left edge | Slower, then rewind |
+| Select or Play/Pause | Play from the current spot at once |
+| Menu | Cancel and return to where you started |
+
+The speeds are numbered 1 to 4, and they move through the title at 10, 30, 120, and 200 seconds per second.
+Each new touch steps to the next speed you picked in settings, 2 and 4 by default.
+A scan stops at either end of the title.
+
+Turn it off, or choose the speeds, in **Settings > Playback > Controls**.
+See [Playback Settings](/settings/playback#controls).
+
 ## Action Buttons
 
 On Apple TV, an action row sits beside the title when controls are visible.
@@ -68,7 +91,7 @@ Back closes expanded options before closing the menu and returning to the action
 The Subtitles icon fills while subtitles are on.
 It also shows progress while Neptune downloads a subtitle or checks its timing, then confirms the result.
 
-Five more buttons can be enabled in **Settings > Playback > Controls > Action Buttons**:
+Six more buttons can be enabled in **Settings > Playback > Controls > Action Buttons**:
 
 | Button | What It Does |
 | --- | --- |
@@ -77,6 +100,14 @@ Five more buttons can be enabled in **Settings > Playback > Controls > Action Bu
 | **Technical Info** | Shows codec and stream information over the video |
 | **Autoplay** | Toggles autoplay for the session |
 | **Play / Pause** | Pauses or resumes from the action row |
+| **Lock** | Locks the player so only Lock and Play/Pause remain |
+
+**Lock** locks the player for a child.
+Only Lock and Play/Pause stay, and the lock lasts through the next episodes until the player closes.
+Up Next still plays the next episode.
+To unlock, highlight and hold Select on Lock until its ring fills, then answer a question such as **What is seven times eight?**
+A wrong answer brings a new question, and three wrong answers in a row wait 30 seconds.
+**Allow Pausing When Locked** in **Settings > Playback > Controls** decides whether Play/Pause works while locked (default on).
 
 See [Playback Settings](/settings/playback#autoplay) for the autoplay behavior and related settings.
 

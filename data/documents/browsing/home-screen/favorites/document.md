@@ -13,7 +13,7 @@ Favorite anything from its detail page with the heart button.
 The row shows your favorited movies and series, sorted alphabetically.
 Individual episodes and seasons don't appear here even if favorited; the parent series represents them.
 
-The row ends with a **See All** card that opens the full favorites browse in the Library tab, where everything is included.
+The row ends with a **See All** card that opens the full favorites browse in the Library, where everything is included.
 
 ## Tab Visibility
 

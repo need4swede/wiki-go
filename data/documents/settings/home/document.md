@@ -64,7 +64,8 @@ The setting applies to playable cards throughout Home and its content tabs unles
 
 The limiter appears only after Impatient Mode is enabled.
 With it enabled, Continue Watching and Next Up cards start playback immediately and resume saved progress when one exists, while other cards keep their normal detail-first behavior.
-Spotlight's Play or Resume button always starts playback, and its Details button always opens the detail page.
+Choosing an item in Spotlight plays it too, with the same limit applied.
+Pulling the iPhone or iPad Spotlight down still opens the item's page.
 Use long presses to bring up additional options.
 
 ## Spotlight
@@ -73,13 +74,16 @@ Use long presses to bring up additional options.
 | --- | --- |
 | **Spotlight Content** | Show or hide content types and choose Automatic or Custom priority |
 | **Spotlight Limit** | Maximum items in the rotation, default 8. Apple TV offers 4, 6, 8, 10, or 12; iPhone and iPad offer 4, 8, or 12 |
-| **Immersive Spotlight** | Apple TV only. On fades between the full-screen header and the rows; Off lets the page scroll with the first row peeking below |
+| **Spotlight Header** | Default shows the logo and headline. Customize picks the parts that show over the artwork |
+| **Fullscreen** | Apple TV only. On fades between the full-screen header and the rows; Off lets the page scroll with the first row peeking below |
+| **Blur First Row** | Apple TV only. With Fullscreen off, keeps the peeking first row softly out of focus until you move down. On by default |
+| **Spotlight Screensaver** | Apple TV only. After a few idle items, the details fade away and the artwork keeps rotating. On by default |
 
 Custom priority gives types near the top more space in the rotation while keeping a mix of enabled types.
 At least one content type stays on.
 Music's Spotlight is separate from these content-type choices.
 
-See [Spotlight](/browsing/home-screen/spotlight) for controls, placement, content selection, and how Immersive Spotlight works.
+See [Spotlight](/browsing/home-screen/spotlight) for controls, placement, content selection, and how Fullscreen works.
 
 ## Sections
 
@@ -97,4 +101,5 @@ Row limits and behavior for the Home screen sections:
 | **New Release Threshold** | The [New Releases](/browsing/home-screen/new-releases) window, 7 to 90 days |
 
 On Apple TV, select **Customize Home Screen Layout** in this category to reorder or hide sections and add [Custom Sections](/browsing/home-screen/custom-sections).
-On iPhone and iPad, open Home's **Options** from the navigation pill, then choose **Edit Layout**.
+On iPhone and iPad, the same **Customize Home Screen Layout** row is in this category.
+On iPad you can also open Home's **Options** from the navigation pill, then choose **Edit Layout**.

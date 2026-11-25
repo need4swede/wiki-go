@@ -11,21 +11,19 @@ It appears on Home, Movies, and Shows, plus Music on Apple TV.
 ## What Each Item Shows
 
 - The show or movie logo, with a text title when no logo is available
-- A badge explaining why the item is featured
-- A line of facts, such as the content rating, genre, or season and episode
-- A short synopsis
-- Play or Resume, Details, and quick actions
-- Position dots, with a filling pill for the current item
+- A headline saying why the item is featured and when, such as **Season 17 arrived yesterday**
+- Optional details, such as the season and episode, length, end time, and rating
+- An **Open** button, where one is turned on (see [Spotlight Header](#spotlight-header))
 
-The Resume button includes a small progress track.
-For an unstarted episode protected by your spoiler settings, Spotlight uses the show's description instead of revealing the episode synopsis.
+An item you have started shows the time left in its headline, with a progress bar beside it on Apple TV.
+Open the item's page to read its synopsis.
 
 ## Spotlight Categories
 
-Each item carries a badge explaining why it's featured:
+Each item is featured for one of these reasons, and its headline follows it:
 
-| Badge | Criteria |
-|-------|----------|
+| Reason | Criteria |
+|--------|----------|
 | **Continue** | Movies or episodes you've started but haven't finished, plus Next Up items used to fill a short rotation |
 | **New Episode** | A recent episode from a continuing show you're caught up with, aired within the last week |
 | **New Season** | A season that premiered within the last two weeks in a show you've watched before |
@@ -54,31 +52,36 @@ The Spotlight Limit is a maximum; a smaller library may have fewer eligible item
 
 ### Apple TV
 
-The header has separate controls for playback and details:
+The whole header is one control.
 
 | Action | Control |
 |--------|---------|
-| Play or resume | Select **Play** or **Resume** |
-| Open details | Select the **Details** info button |
-| Open quick actions | Hold Select on **Details** |
-| Next item | Select **›**, or press Right from the last control |
-| Previous item | Press Left from **Play**, **Resume**, or **View Details** |
+| Open the item's page | Press Select |
+| Open quick actions | Hold Select |
+| Next item | Press Right, or swipe left on the touch surface |
+| Previous item | Press Left, or swipe right on the touch surface |
 | Browse the rows | Press Down |
+| Return to the Spotlight | Press Up from the first row |
 
 Items wrap around when you reach either end.
-Play always starts playback, and Details always opens the detail page, regardless of Impatient Mode.
+Select opens the item's page.
+With [Impatient Mode](/settings/home#impatient-mode) on, Select plays the item instead.
+If Impatient Mode is limited to Continue Watching and Next Up, only those items play at once.
 
-When an item opens with **View Details** instead of Play, that button opens its page.
-Hold Select on it for quick actions.
+Pressing Up quickly from the rows stops on the Spotlight.
+Another Up opens Compass.
 
 ### iPhone and iPad
 
 Swipe left or right across the artwork to change items.
-Tap **Play** or **Resume** to watch, the **Details** info button to open the page, or **…** for quick actions.
-Items that can't be played directly show **View Details** instead.
+Swiping past either end keeps going in the same direction, so the items loop.
+Tap **Open** to open the item's page, or touch and hold for quick actions.
+With Impatient Mode on, **Open** plays the item instead.
 
 With Spotlight at the top of Home, a longer pull down on the artwork opens details when you release.
 For an episode, this opens its show.
+This always opens the page, even with Impatient Mode on.
+When you go Back from an item you opened from the Spotlight, the page closes into the header it came from, and Home returns to the top.
 Home refreshes automatically; pull-to-refresh returns when Spotlight isn't the header.
 
 ### Auto-Rotation
@@ -88,17 +91,61 @@ The current item's position pill fills as its time runs.
 Rotation pauses during playback and while Neptune is in the background.
 On Apple TV, it also pauses while you browse the rows or open an item's page.
 
-## Immersive Spotlight
+### Screensaver
 
-On Apple TV, **Settings > Home > Spotlight > Immersive Spotlight** changes how the header gives way to the rows:
+On Apple TV, leave the Spotlight alone for four items and everything over the artwork fades away.
+The artwork keeps rotating as a gallery.
+Press any button to bring everything back.
+That press does nothing else.
+
+Turn this off with **Settings > Home > Spotlight > Spotlight Screensaver**.
+
+## Fullscreen
+
+On Apple TV, **Settings > Home > Spotlight > Fullscreen** changes how the header gives way to the rows:
 
 | Setting | Behavior |
 |---------|----------|
 | **On** | Spotlight fills the screen. Down fades into the rows; Up from the first row brings Spotlight back |
 | **Off** | The first row peeks in beneath the header, and the page scrolls between Spotlight and the rows |
 
-Immersive Spotlight is on by default.
+Fullscreen is on by default.
+Fullscreen was called Immersive Spotlight in earlier versions.
 iPhone and iPad use their touch header without this switch.
+
+In both layouts, moving between the Spotlight and the rows shifts focus like a camera.
+The artwork blurs as the rows come into focus, and the reverse on the way back.
+
+With Fullscreen off, **Blur First Row** keeps the row that peeks in below the header softly out of focus until you move down to it.
+It is on by default.
+Turn it off to keep that row sharp.
+
+## Spotlight Header
+
+**Settings > Home > Spotlight > Spotlight Header** chooses what shows over the artwork.
+It works on Apple TV, iPhone, and iPad.
+
+| Option | What it shows |
+|--------|---------------|
+| **Default** | The logo and the headline |
+| **Customize** | Only the parts you pick |
+
+Customize lets you turn each part on or off:
+
+- **Logo**
+- **Headline**
+- **Details**, with **Season & Episode**, **Length**, **Ends**, and **Rating** as separate columns
+- **Open** (Apple TV only)
+
+The artwork always shows.
+With everything off, you see only the picture.
+Apple TV has no **Open** button by default.
+Select still opens the item, and the header has no focus highlight.
+iPhone and iPad always show **Open**, because it is their way into the item.
+
+On Apple TV, Customize opens a full-screen preview, and **Save** keeps your changes.
+On iPhone and iPad, each switch applies at once.
+Opening an item from the Spotlight carries its logo onto the item's page, and Back carries it home again.
 
 ## Placement and Visibility
 
@@ -153,6 +200,9 @@ Each content tab builds its own Spotlight:
 |---------|-------------|
 | **Spotlight Content** | Choose content types and Automatic or Custom priority |
 | **Spotlight Limit** | Maximum items in the rotation, default 8. Apple TV offers 4, 6, 8, 10, or 12; iPhone and iPad offer 4, 8, or 12 |
-| **Immersive Spotlight** | Apple TV only. Choose the full-screen fade or the scrolling header |
+| **Spotlight Header** | Default, or Customize which parts show over the artwork |
+| **Fullscreen** | Apple TV only. Choose the full-screen fade or the scrolling header |
+| **Blur First Row** | Apple TV only. Keep the peeking first row out of focus when Fullscreen is off. On by default |
+| **Spotlight Screensaver** | Apple TV only. Fade the details at idle and let the artwork keep rotating. On by default |
 
 Spotlight choices follow your account when [Settings Sync](/plugins/mdm/settings-sync) is enabled.

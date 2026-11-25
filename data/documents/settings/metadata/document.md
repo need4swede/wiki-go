@@ -7,7 +7,7 @@ order: 70
 Neptune keeps a local metadata cache so the app opens to a fully drawn home screen instead of spinners.
 With Neptune Pro, it also enriches your library with connected TMDB data your backend does not have.
 
-Open **Settings > Data > Metadata** on Apple TV, or **Settings > Metadata** on iPhone and iPad.
+Open **Settings > Data > Metadata**.
 
 ## Metadata Cache
 

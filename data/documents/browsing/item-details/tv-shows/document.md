@@ -145,6 +145,9 @@ Especially useful for rewatching memorable scenes when you can't remember which 
 ## Theme Songs
 
 Theme music plays when viewing series details and fades out when you leave or start playback.
-On Apple TV, control volume, looping, and fade behavior in **Settings > Account > Sounds**.
-On iPhone and iPad, use **Settings > Account > Audio Preferences**.
-Theme songs require a server that supplies them; Neptune's current theme-song integration is Jellyfin-specific.
+On Apple TV, iPhone, and iPad, control volume, looping, and fade behavior in **Settings > Account > Preferences > Sounds**.
+Theme songs require a server that supplies them, and work on Jellyfin, Emby, Plex, and Silo.
+If a show or movie has several theme songs, such as a `theme-music` folder on the server, Neptune plays all of them one after another, fading each in and out.
+Loop restarts the whole list, and a song that can't be played is skipped.
+On Apple TV with Jellyfin, a collection's several theme songs play the same way.
+Plex provides one theme per show.

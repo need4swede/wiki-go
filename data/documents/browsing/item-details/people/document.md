@@ -9,7 +9,7 @@ View detailed information about actors, directors, writers, and other crew membe
 ## Accessing a Person's Page
 
 - Select any person in the **Cast & Crew** section of a movie or show
-- Browse **Person** in the Library tab's Browse by row, an A to Z grid of everyone across your libraries
+- Browse **People** from **Library > Browse**, a searchable directory of everyone across your libraries
 - Search for them by name, or find them in the **People** search scope
 
 ## What You'll See

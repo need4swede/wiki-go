@@ -14,7 +14,7 @@ There are no API keys, model names, endpoints, or local servers to manage.
 
 | Area | Features |
 |------|----------|
-| **Finding something** | [AI Search](/search/prompt-search) and [Episode Finder](/neptune-ai/episode-finder) |
+| **Finding something** | [AI Search](/search/prompt-search), [Episode Finder](/neptune-ai/episode-finder), and [Ask in Discover](/neptune-ai/discover-ask) |
 | **Understanding a title** | [Title Insights](/neptune-ai/title-insights) |
 | **Exploring a career** | [Person Insights](/neptune-ai/person-insights) |
 
@@ -24,6 +24,7 @@ There are no API keys, model names, endpoints, or local servers to manage.
 |---------|--------------|
 | [AI Search](/search/prompt-search) | Understands plot fragments, concepts, and recommendation-style queries |
 | [Episode Finder](/neptune-ai/episode-finder) | Describe an episode and Neptune AI finds it in your library |
+| [Ask in Discover](/neptune-ai/discover-ask) | Describe a mood and Neptune AI suggests new titles to request |
 | [Title Insights](/neptune-ai/title-insights) | Adds context, themes, trustworthy trivia, similar titles, and a “Why Watch” suggestion |
 | [Person Insights](/neptune-ai/person-insights) | Builds a concise career story, fun facts, signature roles, collaborators, and a library-aware recommendation |
 

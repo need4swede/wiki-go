@@ -25,6 +25,7 @@ Use these pages for playback behavior and settings that affect the controls:
 
 | Topic | Documentation |
 |-------|---------------|
+| Touch to Fast Forward and its speeds | [Playback Settings](/settings/playback#controls) |
 | Scrubbing, Seek Mode, and seek previews | [Playback Settings](/settings/playback#controls) |
 | Up Next at the end credits | [Up Next](/playback/up-next) |
 | Autoplay settings | [Playback Settings](/settings/playback#autoplay) |

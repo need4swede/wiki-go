@@ -57,7 +57,7 @@ See [Indexers](/plugins/indexers) for details.
 Published suite members update through Jellyfin's normal plugin update flow and share the same version number.
 
 That being said, the easiest way to update is through Neptune.
-Navigate to **Settings > Plugins > Neptune Plugin Suite** and update the suite from there whenever a new version is released.
+Navigate to **Settings > Account > Servers > your server > Plugins > Neptune Plugin Suite** and update the suite from there whenever a new version is released.
 
 ## Detection
 

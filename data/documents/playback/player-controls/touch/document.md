@@ -26,17 +26,42 @@ A brief icon confirms the skip direction.
 
 Repeated double taps continue from the last requested position, even while the video is still catching up to the previous seek.
 
+## Touch to Fast Forward
+
+Touch and hold the right edge of the picture to fast forward, or the left edge to rewind.
+The picture pauses and the controls come up while the timeline moves with a preview.
+Nothing is heard while it scans.
+
+Lift your finger and Neptune waits a moment, then plays from where the scan reached.
+Hold again before it plays to go faster from the same place, or hold the other edge to turn around.
+A scan stops at either end of the title.
+
+The speeds are numbered 1 to 4, and they move through the title at 10, 30, 120, and 200 seconds per second.
+Each new hold steps to the next speed you picked in settings, 2 and 4 by default.
+
+Turn it off, or choose the speeds, in **Settings > Playback > Controls**.
+See [Playback Settings](/settings/playback#controls).
+
 ## Action Buttons
 
 The touch player’s top row is configurable under **Settings > Playback > Controls > Action Buttons**.
+
+Audio, Subtitles, Video, Chapters, and Info sit together in one pill.
+Tap one to name it and open its [Playback Menu](/playback/playback-menu) category in a glass column at the side, so the picture stays visible.
+Rotate has its own button beside the pill.
 
 Its defaults are:
 
 | Button | What It Does |
 | --- | --- |
-| **Playback Menu** | Opens audio, subtitle, chapter, quality, and related session controls. It can be moved but never hidden |
+| **Audio** | Opens Audio in the Playback Menu. It can be moved but never hidden |
+| **Subtitles** | Opens Subtitles in the Playback Menu. It can be moved but never hidden |
+| **Video** | Opens Quality, Playback Speed, Zoom, and De-interlacing |
+| **Chapters** | Opens the chapter list |
+| **Info** | Opens stream information |
 | **Rotate** | Switches between portrait and one landscape direction |
-| **Video Zoom** | Cycles through Fit, Adaptive, and Fill. iPad cycles between Fit and Fill |
+
+Choose **Fit**, **Adaptive**, or **Fill** under **Video > Zoom** in the Playback Menu. iPad offers Fit and Fill.
 
 On iPhone, **Adaptive** can use more landscape screen space while keeping the visible picture clear of the Dynamic Island or camera area.
 
@@ -44,22 +69,29 @@ It automatically keeps narrower video such as 4:3 centered when expanding it wou
 
 See [Playback Settings](/settings/playback#video-zoom) for a comparison of all three modes.
 
-Three more buttons are available and start hidden:
+Two more buttons are available and start hidden:
 
 | Button | What It Does |
 | --- | --- |
 | **Pin Timestamp** | Captures the current playback position plus a local frame thumbnail as a [timestamp pin](/library/shortcuts) |
-| **Audio** | Opens a quick audio track picker |
-| **Subtitles** | Opens a quick subtitle track picker, including Off |
+| **Lock** | Locks the player so only Lock and Play/Pause remain |
 
-The Audio and Subtitles pickers appear beneath the action row.
-Tap a track to apply it and close the picker, or tap outside to close it without changing anything.
-The controls stay visible while a picker is open.
+**Lock** locks the player for a child.
+Only Lock and Play/Pause stay, and the lock lasts through the next episodes until the player closes.
+Up Next still plays the next episode.
+To unlock, touch and hold Lock until its ring fills, then answer a question such as **What is seven times eight?**
+A wrong answer brings a new question, and three wrong answers in a row wait 30 seconds.
+**Allow Pausing When Locked** in **Settings > Playback > Controls** decides whether Play/Pause works while locked (default on).
+While locked, going Home and opening Control Center take a second swipe; turn on Guided Access to keep the device in Neptune.
 
-The Subtitles icon fills while subtitles are on.
-Use the full [Playback Menu](/playback/playback-menu) for sound presets, subtitle style, timing, and other settings.
+Swipe across the open column, or tap another button in the pill, to switch categories.
+Tap outside the column to close it.
 
-You can reorder every action and hide any action except Playback Menu.
+You can reorder every action and hide any action except Audio and Subtitles.
+
+## Keyboard
+
+With a hardware keyboard connected, press the spacebar to play or pause.
 
 ## Orientation
 

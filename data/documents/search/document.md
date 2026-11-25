@@ -50,6 +50,13 @@ Top Results is not a simple concatenation.
 Exact titles and names lead, strong whole-word matches outrank loose prefixes, and owned content receives a small advantage in close calls.
 If **Include Seerr Results in Top Results** is off, requestable titles remain available in the Seerr scope without mixing into the main grid.
 
+## Ratings in Results
+
+Search results show ratings when Neptune has them.
+On Apple TV, a result's details show its IMDb rating.
+On iPhone and iPad, movie and show posters show their IMDb and Rotten Tomatoes scores underneath.
+See [Ratings](/browsing/item-details/ratings).
+
 ## Why a Result Matched
 
 Neptune will tell you why an item matched your search, for instances where the match isn't straightforward or obvious.
@@ -103,7 +110,7 @@ On Apple TV, open **Settings > Account > Appearance > Layouts > Search**:
 
 On Apple TV, the result layout adapts to the active keyboard automatically.
 
-On iPhone and iPad, **Settings > Search** shows the local search index's status and its resync action where supported.
+On iPhone and iPad, **Settings > Data > Search** shows the local search index's status and its resync action where supported.
 
 The **AI Search** master switch and language-model providers live in **Settings > Deep Learning**.
 See [AI Search](/search/prompt-search) and the top-level [Neptune AI](/neptune-ai) section.

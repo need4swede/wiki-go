@@ -6,13 +6,15 @@ order: 10
 
 Compass gets you to pages, libraries, searches, and media without backing out through every screen.
 Apple TV uses a compact pill and an expanded palette.
-iPhone uses a touch palette and an optional [Live Activity](/browsing/navigation/compass/live-activity).
-Compass is unavailable on iPad and during video playback.
+iPhone offers three styles: a Sidebar, a Pill, and a Dial.
+It also has an optional [Live Activity](/browsing/navigation/compass/live-activity).
+iPad keeps its own navigation pill and has no Compass.
+Compass is unavailable during video playback.
 
 ## Apple TV Compass
 
 Press **Play/Pause** while browsing.
-The top-right page pill opens into a row of shortcuts, with your current destination highlighted when it's in that row.
+The top-right pill names the page you're on and opens into a row of shortcuts, with your current destination highlighted when it's in that row.
 
 | Action | Control |
 |--------|---------|
@@ -73,8 +75,10 @@ A shortcut can open:
 - a media item's details; or
 - supported direct playback.
 
-The Apple TV **Navigation** row holds the app's pages together.
+The **Navigation** row is always the first row, on Apple TV and iPhone.
+It holds the app's pages together, including the page you're on.
 Its pages can be reordered and renamed, but can't be removed or moved to another row.
+Nothing can be placed above it.
 Optional pages still follow your navigation visibility settings and account access.
 You can add separate copies of page shortcuts to other rows.
 
@@ -122,13 +126,53 @@ Compass layout changes follow the account through Settings Sync when it's availa
 
 ## iPhone Compass
 
-Hold exactly two fingers for about 0.6 seconds anywhere in the signed-in app to open the palette.
-The gesture works in portrait, landscape, and detail pages.
-Choose a page in the palette to browse its shortcuts or live content.
+Choose how iPhone shows Compass in **Settings > Account > Compass > Style**.
+The three styles use the same pages, rows, and shortcuts, so switching only changes how you reach them.
+**Sidebar** is the default.
 
-**Settings > Account > Compass** includes a preview.
-The optional Live Activity uses the shortcuts on the **first page**; additional and live pages stay in Neptune's palette.
-See [Compass Live Activity](/browsing/navigation/compass/live-activity) for setup and system controls.
+| Style | How it works |
+|-------|--------------|
+| **Sidebar** | A small tab sits at the edge of the screen, just below the middle. Pull it out or tap it to see one list of your Navigation pages, then every Compass row, with titles shown as logos. The row's name appears above the list as you scroll through it |
+| **Pill** | A slim bar of page icons sits at the bottom of every page. Tap a page to go there. Swipe across the bar to step between pages, and swipe up for your other Compass rows. It starts expanded when Neptune opens, and collapses when you scroll or move to another page |
+| **Dial** | A round Compass button sits in the bottom corner. It opens a ring of your pages and a ring of choices for the page you pick, such as a library's titles |
+
+Your pages stay in the order you set under **Settings > Account > Compass**.
+Administrators can also set the style from the Neptune plugin.
+
+### Sidebar
+
+Swipe from the edge of the screen, or tap the tab, to open it.
+The tab stays where it is when you scroll.
+It works on every page, including the episode deck.
+Scroll the list to move through your rows, and tap a title to open it.
+
+### Pill
+
+The Pill shows Settings, Home, and Search, with two more pages from your Navigation row on either side of Home.
+The page you're on shows its name in an accent capsule.
+Hold a page that has choices, such as Home, Movies, or Shows, to pick a filter or library.
+
+### Dial
+
+The Dial's button appears on every page.
+On an item's page, it appears once you scroll past the Play row.
+Swipe back from the edge of a main page to open the dial, or tap the button.
+Drag around the ring to move through your pages, then tap one, or tap its preview to choose it.
+Hold a page to rearrange the row.
+Movies and Shows open their libraries on an outer ring.
+
+### The Map
+
+In every style, pinch the screen, or hold exactly two fingers down for about 0.6 seconds, to zoom out to the **Map**.
+The Map shows the page you're on and your levels of pages, rows, and accounts.
+Tap a level to go back to it.
+The two-finger hold works anywhere in the signed-in app, in portrait or landscape.
+
+### Interface Stance
+
+**Settings > Account > Appearance > Layouts > Stance** chooses **Regular** or **Goofy**.
+Goofy moves the Sidebar and the Dial's button to the left side of the screen.
+Back works the same way in both stances.
 
 ## Compass Shortcuts on iPhone
 
@@ -136,9 +180,13 @@ Manage shortcuts inside a page under **Settings > Account > Compass**.
 A fresh setup starts with Settings, Home, Library, and Search on its first page.
 Labels, symbols, and order can be changed.
 
+**Settings > Account > Compass** includes a preview.
+The optional Live Activity uses the shortcuts on the **first page**; additional and live pages stay in Neptune's palette.
+See [Compass Live Activity](/browsing/navigation/compass/live-activity) for setup and system controls.
+
 ## Video Playback
 
 Compass stays out of video playback.
 On Apple TV, Play/Pause controls the player.
-On iPhone, the two-finger Compass hold is suppressed.
+On iPhone, Compass and its gestures stand down.
 Exit the player before opening Compass.

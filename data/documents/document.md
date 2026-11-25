@@ -41,9 +41,11 @@ See [Supported Media Servers](/getting-started/backends) for current availabilit
 
 | Page | Description |
 |------|-------------|
-| [Library](/library) | Full library browsing with filters and stats |
+| [Library](/library) | The Shelf, Overview, Browse, and Surprise Me |
 | [Pins](/library/shortcuts) | Pin items, people, genres, and timestamps |
 | [Smart Tags](/library/smart-tags) | Browse by theme and mood |
+| [Set Pages](/library/set-pages) | Decade, genre, mood, and person pages |
+| [Studio and Network Pages](/library/studio-network-pages) | What you own and could request from one company |
 
 ### Search
 
@@ -62,14 +64,15 @@ See [Supported Media Servers](/getting-started/backends) for current availabilit
 | [Episode Finder](/neptune-ai/episode-finder) | Find an episode by describing what happens |
 | [Title Insights](/neptune-ai/title-insights) | Context, themes, trivia, and watch guidance |
 | [Person Insights](/neptune-ai/person-insights) | Career stories and library-aware recommendations |
+| [Ask in Discover](/neptune-ai/discover-ask) | Describe a mood and get new titles to request |
 
 ### Discover
 
 | Page | Description |
 |------|-------------|
-| [Discover](/discover) | Browse trending content (Seerr) |
-| [Browsing Discover](/discover/browsing) | Genres, eras, studios, networks, languages, anime |
-| [Release Calendar](/discover/release-calendar) | Upcoming movies and TV grouped by date |
+| [Discover](/discover) | Trending, requests, and new titles to find (Seerr) |
+| [Browsing Discover](/discover/browsing) | Explore genres, decades, studios, networks, languages, anime |
+| [Coming Soon](/discover/coming-soon) | New episodes, seasons, and releases this week and after |
 | [Themed Collections](/discover/themed-collections) | Custom keyword-driven discovery rows |
 | [Requests](/discover/requests) | Request, track, and approve content |
 

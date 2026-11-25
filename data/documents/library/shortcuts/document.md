@@ -4,7 +4,7 @@ order: 10
 
 # Pins
 
-Bookmark media, people, and library browse contexts, then reach them from categorized Library rows or the Pins row on Home.
+Bookmark media, people, and library browse contexts, then reach them from the Pins row on Home.
 Native Pins use the same ordered, account-scoped settings format across supported Neptune clients; Backup & Restore can synchronize that list between them.
 
 A second variant, **timestamp Pins**, captures a specific playback moment so you can return to it later.
@@ -61,7 +61,7 @@ If a live frame is not available, Neptune falls back to the corresponding trickp
 
 ### Resuming from One
 
-Open a timestamp Pin from the Library tab to choose one of three actions:
+Open a timestamp Pin from the Pins row on Home to choose one of three actions:
 
 - **Play from \[timestamp\].**
   Jumps to the exact moment.
@@ -90,7 +90,6 @@ Removing a timestamp from its card menu removes the displayed moment; if more mo
 | **Movies** | Movie Pins |
 | **Shows** | Series, season, and episode Pins |
 | **Music** | Music-video Pins when the Music surface is enabled |
-| **Library** | Pins grouped into ordered category rows |
 
 Selecting a media Pin opens its current detail destination, while Person Pins open the person's page.
 Genre, studio, network, and Smart Tag Pins reopen their current library results rather than storing an old result list.
@@ -102,21 +101,28 @@ Genre, studio, network, and Smart Tag Pins reopen their current library results 
 | Item poster | Movie, Series, Season, Collection, Music Video |
 | Landscape thumbnail | Episode, Timestamp Pin |
 
-The Pins section can be reordered or hidden through Library customization, and the Pins row through Home customization.
+The Pins row can be reordered or hidden through Home customization.
 
-## Edit Mode
+## Opening and Moving Pins on Home
 
-The Library Pins row provides an edit mode for reordering the shared Pins list.
-Long-press any card in the row to enter it; cards begin a gentle jiggle animation.
+On Apple TV, the Pins row on Home is where you open and arrange your Pins.
 
-| Action | How |
-| --- | --- |
-| Move within a row | Select a card, then navigate left or right to swap with its neighbors |
-| Move between rows | Select a card, then navigate up or down to swap category groups |
-| Remove | Press Select on a card to open its menu, then choose Unpin |
-| Exit edit mode | Press Menu/Back, or focus away from the row |
+| Action | What Happens |
+|--------|--------------|
+| **Select a single Pin** | A movie, show, episode, or one timestamp follows [Impatient Mode](/settings/home#impatient-mode): it plays right away when Impatient Mode applies, otherwise it opens the item. A person, genre, or other browse Pin opens its page |
+| **Select a card with several moments** | A picker offers **Play from** each moment and **Go to Item** |
+| **Hold Select on a card** | The same picker, or for a single Pin a menu with **Play** and **Go to Item**. Both add **Move** and **Delete** |
 
-Clients without a separate reorder screen still preserve the shared order while you add and remove Pins where they appear.
+**Delete** removes the whole card.
+For a card with several moments, Neptune first asks "Delete [name]?" and tells you how many pinned moments will be removed.
+The picker also keeps **Remove Pin** for a single moment.
+
+**Move** lifts the Pin out of the row.
+Swipe left or right to slide it, press Select to drop it where it is, or press Menu to put everything back.
+The hint at the bottom reads "Swipe to move, Click to drop, Menu to cancel".
+Only the Pins on the tab you're viewing are reordered, so Pins on other tabs keep their positions.
+
+On iPhone and iPad, touch and hold a Pin to open it or remove it.
 
 ## Sync Across Devices
 

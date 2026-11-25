@@ -9,6 +9,9 @@ The section pulls from your Radarr and Sonarr calendars (via the Home Screen Sec
 
 **Requirement:** Coming Soon only appears when Seerr is connected.
 
+Discover has its own Coming Soon page with a seven-day view.
+See [Discover](/discover) for that page.
+
 ## Where Items Come From
 
 **Primary: Home Screen Sections plugin.**

@@ -7,13 +7,13 @@ order: 30
 The in-player menu for everything about the current stream.
 
 On Apple TV, choose **Audio**, **Subtitles**, **Video**, **Chapters**, or **Info** from the action row.
-On iPhone and iPad, tap **Playback Menu**.
+On iPhone and iPad, tap **Audio**, **Subtitles**, **Video**, **Chapters**, or **Info** in the controls.
 
 | Category | What's Inside |
 |-----|---------------|
 | **Audio** | Track selection, sound presets, Night Mode, A/V sync |
 | **Subtitles** | Track selection, style, timing, position |
-| **Video** | Quality, zoom, de-interlacing |
+| **Video** | Quality, playback speed, zoom, de-interlacing |
 | **Chapters** | Jump to a chapter |
 | **Info** | Codec, bitrate, and stream details |
 
@@ -47,12 +47,12 @@ Closing the menu returns focus to the action for the category you were using.
 
 ## iPhone and iPad
 
-The Playback Menu uses tabs for Audio, Subtitles, Video, Chapters, and Info.
-Tap a tab to switch categories, then tap a track or setting to change it.
-Tap outside the menu to return to the video.
+The five categories sit together in one pill in the player controls.
+Tap one to open it in a glass column at the side of the screen, so the picture stays visible.
+Tap another category, or swipe across the column, to switch.
+Tap the close button or the picture to return to the video.
 
-You can also add separate Audio and Subtitles buttons for quick track changes.
-See [Touch Controls](/playback/player-controls/touch#action-buttons).
+Choose which buttons show, and in what order, in [Touch Controls](/playback/player-controls/touch#action-buttons).
 
 ## Customizing the Menu
 
@@ -60,8 +60,7 @@ Reorder or hide categories in **Settings > Playback > Controls > Playback Menu**
 This controls the menu's category order and visibility.
 
 The buttons beside the title have their own **Action Buttons** editor in the same settings section.
-On Apple TV, Audio and Subtitles cannot be hidden.
-On iPhone and iPad, Playback Menu cannot be hidden.
+Audio and Subtitles cannot be hidden on Apple TV, iPhone, or iPad.
 
 ## Audio
 
@@ -76,7 +75,8 @@ Set it to **On**, or **Auto** to engage on a schedule (10:00 PM to 7:00 AM by de
 **A/V Sync** opens a live adjuster so you can move audio earlier or later while watching, up to half a second in either direction.
 On Apple TV, each nudge is 10 ms. Up/right raises the value and down/left lowers it; the touch surface works too.
 Select or Back confirms the adjustment and returns to the menu.
-The setting persists for future playback.
+On iPhone and iPad, a slim slider opens at the side of the screen.
+The setting persists for future playback, on every device.
 
 On Apple TV, hold Select on a setting for reset options.
 
@@ -107,6 +107,17 @@ iPhone offers **Fit**, **Adaptive**, and **Fill**; iPad and Apple TV offer **Fit
 Adaptive uses extra landscape space when suitable while keeping the visible picture clear of the Dynamic Island or camera area.
 See [Playback Settings](/settings/playback#video-zoom) for a full comparison.
 
+**Playback Speed** offers 0.5×, 0.75×, Normal, 1.25×, 1.5×, 1.75×, and 2×.
+It applies at once without restarting the stream, and voices keep their pitch.
+The speed lasts for the current player session and carries to the next episode.
+It isn't saved to Settings, so each new player starts at Normal.
+Playback Speed works on every server, for streamed and downloaded videos.
+
+- Dolby Atmos only plays at Normal speed. At any other speed the track plays as surround sound with a short audio restart, and Atmos returns when you go back to Normal.
+- Watch Together always plays at Normal. The row says it isn't available during Watch Together.
+- Pre-rolls play at Normal. Your speed applies to the feature that follows.
+- A slow connection can rebuffer sooner at higher speeds.
+
 **De-interlacing** controls combing removal for interlaced sources like DVDs and TV broadcasts: **Auto** engages when frames are flagged interlaced, **On** forces it, **Off** never de-interlaces.
 Available on the Trident engine.
 
@@ -119,13 +130,14 @@ The list beneath it shows chapter numbers and start times.
 
 Selecting a chapter on Apple TV seeks straight there and closes the menu.
 
-On iPhone and iPad, chapters appear in a scrolling thumbnail list.
-Tap a chapter to seek there. The menu stays open so you can keep browsing.
+On iPhone and iPad, chapters appear in a scrolling thumbnail list with each chapter's name and start time along the bottom of its image.
+The chapter you're in is marked.
+Tap a thumbnail to seek there. The menu stays open so you can keep browsing.
 
 ## Info
 
 A live technical readout of the current stream: engine, container, video codec and dynamic range (down to the Dolby Vision profile), audio codec and channels, subtitle details, whether the server is direct playing or transcoding, buffer health, and file details.
-On Apple TV, Info starts with the essentials.
+On Apple TV, iPhone, and iPad, Info starts with the essentials.
 Select **More Info** for the full technical readout, including encoding details, track counts, chapters, and file metadata.
 Press Back to return to the essentials.
 

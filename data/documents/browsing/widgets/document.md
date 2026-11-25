@@ -70,7 +70,7 @@ A Section Widget shows current media from one of 16 supported Neptune sections:
 | Source | Section Choices |
 |--------|-----------------|
 | **Home** | Continue Watching, Next Up, Recently Added, Favorites, Collections, New Releases, Recommended |
-| **Discover** | Trending, Popular Movies, Popular Shows, Upcoming Movies, Upcoming Shows, Now Playing, Airing This Week, Anime Movies, Anime Shows |
+| **Discover** | Trending, Popular Movies, Popular Shows, Upcoming Movies, Upcoming Shows, Now Playing, Premiering This Week, Anime Movies, Anime Shows |
 
 Discover choices appear when Seerr is connected and available to the active profile.
 Home choices remain available without Seerr.
@@ -83,6 +83,11 @@ Neptune prepares up to five current items for each Section choice.
 WidgetKit moves to the next prepared item on five-minute wall-clock slots.
 Five minutes is the shortest spacing Apple recommends for conventional widget timeline entries.
 Reloading the timeline does not intentionally restart the Section at its first item.
+
+On iOS 17 and later, an unlocked Home Screen Section widget with at least two items has invisible tap zones at its left and right edges.
+Tap the left edge to go to the previous item and the right edge to go to the next one.
+Tapping the middle still opens the item shown.
+Lock Screen widgets and widgets on iOS 16 change items only on the timer.
 
 The five-minute schedule rotates the items Neptune has already published.
 It does not make the widget contact your server or fetch newly added media.

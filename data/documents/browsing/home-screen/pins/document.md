@@ -4,9 +4,9 @@ order: 40
 
 # Pins
 
-The Pins row provides quick access to the movies, shows, episodes, collections, people, genres, studios, networks, tags, and playback moments you've saved as [Library Pins](/library/shortcuts).
+The Pins row provides quick access to the movies, shows, episodes, collections, people, genres, studios, networks, tags, and playback moments you've saved as [Pins](/library/shortcuts).
 
-For pin types, creating and removing pins, timestamp pins, edit mode, syncing, and detailed actions, see [Library Pins](/library/shortcuts).
+For pin types, creating and removing pins, timestamp pins, moving, syncing, and detailed actions, see [Pins](/library/shortcuts).
 
 ## Tab Visibility
 
@@ -23,8 +23,12 @@ The Home tab shows every native Pin, while the Movies, Shows, and Music tabs sho
 ## Navigation
 
 Select a Pin to open its item, person, or current browse destination.
+A single movie, show, or episode Pin follows [Impatient Mode](/settings/home#impatient-mode), so it can play right away.
+A card holding several playback moments opens a picker.
 
-Pins are read-only on the content tabs.
-To reorder Pins or move their category rows, use the **Pins** section on the [Library](/library) tab and follow the [Library Pins edit guide](/library/shortcuts#edit-mode).
+Hold Select on a card (touch and hold on iPhone and iPad) for more options.
+On Apple TV, these include **Move**, which slides the Pin along the row, and **Delete**.
+Pins on the Movies, Shows, and Music tabs show only that tab's Pins, so Move reorders just those.
 
+See [Opening and Moving Pins on Home](/library/shortcuts#opening-and-moving-pins-on-home) for the controls.
 The shared order is preserved across devices.

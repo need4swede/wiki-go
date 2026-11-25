@@ -23,6 +23,35 @@ Open **Settings > Playback > Skipping**.
 The last three only appear while **Skip Button** is on.
 Turning off **Skip Button** turns off every source below.
 
+## Choose What Gets Skipped
+
+Turn on **Auto Skip** and five more switches appear below it, one for each kind of segment.
+
+| Switch | What It Skips |
+|--------|---------------|
+| **Intros** | The opening titles |
+| **Recaps** | The "previously on" part before an episode |
+| **Credits** | The end credits |
+| **Previews** | The "next time on" part after an episode |
+| **Ads** | Commercial breaks, on servers that mark them |
+
+All five start on, so Auto Skip skips everything it finds until you say otherwise.
+Turn one off and Neptune stops skipping that kind by itself.
+You still get the Skip button for it, so you can skip it when you want to.
+
+For example, turn off **Credits** if you like to sit through them or don't want to miss a scene after them.
+Leave **Intros** and **Recaps** on and those still skip without you touching anything.
+
+It doesn't matter where the timestamps come from.
+The switches work the same for your server's segments and for TheIntroDB, on Jellyfin, Emby, and Plex.
+
+Which kinds you actually see depends on what your server and TheIntroDB have for the title.
+TheIntroDB has intros, recaps, credits, and previews.
+Ads only come from a server that marks them.
+
+These choices follow your account to your other devices.
+Your media server's administrator can also set them for you.
+
 ## Where the Timestamps Come From
 
 Neptune looks in two places and combines what it finds.

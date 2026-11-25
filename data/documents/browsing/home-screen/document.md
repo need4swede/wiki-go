@@ -24,7 +24,8 @@ The home screen is made up of the following sections, listed in default order:
 | [Coming Soon](/browsing/home-screen/coming-soon) | Upcoming releases you've requested |
 | [Because You Watched](/browsing/home-screen/because-you-watched) | Similar titles based on movies you've watched (requires plugin) |
 
-The **Pins** row mirrors your [Library Pins](/library/shortcuts).
+The **Pins** row shows your [Pins](/library/shortcuts).
+On Apple TV, hold Select on a Pin to **Move** or **Delete** it.
 Pin an item from its detail page or with a long press or touch-and-hold and it shows up here.
 The same gesture on an existing Pin offers removal.
 
@@ -39,7 +40,8 @@ Long-press any content card to open the quick actions modal:
 ## Customizing Sections
 
 On Apple TV, open **Settings > Home > Sections > Customize Home Screen Layout**.
-On iPhone and iPad, hold the Home control in the navigation pill, slide to **Options**, then choose **Edit Layout**.
+On iPhone and iPad, open the same row under **Settings > Home > Sections**.
+On iPad you can also hold the Home control in the navigation pill, slide to **Options**, then choose **Edit Layout**.
 The editor shows every section as a labeled card:
 
 | Action | How |
@@ -96,3 +98,9 @@ The focused item's backdrop appears behind all content at the top of the screen.
 Content refreshes automatically while you browse.
 Each refresh updates only the rows whose content has changed, so the screen never jumps under you.
 Refresh pauses during playback and on non-content tabs, then resumes when you return.
+
+## Empty Home
+
+If your server has no content yet, Home says **No Content Available**.
+Movies and shows you add to your server will appear here.
+This message only appears after Home has finished loading successfully.

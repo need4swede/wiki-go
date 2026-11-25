@@ -47,8 +47,6 @@ Configure one in **Settings > Deep Learning**:
 | **Gemini** | Cloud | Bring your own API key |
 | **OpenRouter** | Cloud | One key, many models |
 
-Claude, OpenAI, and GLM appear in the provider roadmap but are not active providers yet.
-
 Add several providers and use **Set Model Priority** to control the fallback order.
 If your primary is unreachable, the next one takes over.
 The same providers power [Episode Finder](/neptune-ai/episode-finder), [Title Insights](/neptune-ai/title-insights), [Person Insights](/neptune-ai/person-insights), and other AI features.

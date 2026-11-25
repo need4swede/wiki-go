@@ -7,7 +7,7 @@ order: 20
 Browse your library by theme, setting, and mood instead of genre.
 Smart Tags are the same semantic tags that power [Semantic Search](/search/semantic-search), turned into a browsing surface.
 
-Open them from **Browse by > Tags** on the Library tab.
+Open them from **Browse by > Tags** on the Library page.
 
 ## Browsing Tags
 
@@ -20,7 +20,8 @@ Three gateways organize the catalog:
 | **Moods** | Feel-good, dark, suspenseful, slow burn |
 
 Select any tag to see everything in your library that matches.
-Tags can be added to [Library Pins](/library/shortcuts) for one-tap access later.
+A mood opens its own [mood page](/library/set-pages#genres-and-moods), the same one the **Moods** row on the Library page leads to.
+Tags can be added to [Pins](/library/shortcuts) for one-tap access later.
 
 ## Surprise Me
 

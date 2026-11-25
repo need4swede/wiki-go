@@ -14,7 +14,7 @@ Open the Home layout editor:
 | Platform | How |
 |----------|-----|
 | **tvOS** | Open **Settings > Home > Sections > Customize Home Screen Layout** |
-| **iOS / iPadOS** | Hold Home in the navigation pill, slide to **Options**, then choose **Edit Layout** |
+| **iOS / iPadOS** | Open **Settings > Home > Sections > Customize Home Screen Layout**. On iPad you can also hold Home in the navigation pill, slide to **Options**, then choose **Edit Layout** |
 
 From the editor, choose **Add Section**. The builder has four steps: Starting Point, Libraries & Media, Filters, and Preview & Save.
 

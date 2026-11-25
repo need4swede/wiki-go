@@ -63,7 +63,8 @@ Touch and hold a card for its available actions.
 ## Theme Songs
 
 On Apple TV with Jellyfin, a collection's theme music can play while its page is open.
-Control it in **Settings > Account > Sounds**.
+A collection with several theme songs plays all of them in order.
+Control it in **Settings > Account > Preferences > Sounds**.
 
 ## Collection Backdrops
 

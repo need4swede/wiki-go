@@ -5,7 +5,8 @@ order: 10
 # Navigation
 
 On Apple TV, Compass is the main way to move between Neptune's pages.
-iPhone and iPad use the navigation pill at the bottom of the screen.
+iPhone uses Compass in one of three styles.
+iPad uses a navigation pill at the bottom of the screen.
 
 ## Pages
 
@@ -42,19 +43,25 @@ Moving focus over a shortcut lets you inspect it; Select opens it.
 
 Back closes an open picker or menu before leaving its page.
 At a page's root it opens Compass, subject to **Exit App on Back Press**.
+Compass's Navigation row lists the page you're on, and the top-right pill shows its name.
 When you open navigation with Up, Down closes it and returns to the page.
 
 See [Compass](/browsing/navigation/compass) for rows, account switching, and shortcuts.
 
 ## iPhone and iPad
 
-Tap an icon in the bottom navigation pill to switch pages.
+On iPhone, Compass is how you move between pages.
+Choose a style in **Settings > Account > Compass > Style**: **Sidebar** (the default), **Pill**, or **Dial**.
+See [Compass](/browsing/navigation/compass#iphone-compass) for how each one works.
+An exact two-finger hold for about 0.6 seconds, or a pinch, opens the Compass Map while browsing.
+
+On iPad, tap an icon in the bottom navigation pill to switch pages.
 The Settings gear opens Settings.
 Home also gives you access to its Movies and Shows filters.
-Use the back control or swipe back to leave a detail page.
+iPad has no Compass or Compass Live Activity.
 
-On iPhone, an exact two-finger hold for about 0.6 seconds opens Compass while browsing.
-iPad uses the normal touch navigation and has no Compass or Compass Live Activity.
+Use the back control or swipe back to leave a detail page.
+**Settings > Account > Appearance > Layouts > Stance** can move reachability controls, including Compass on iPhone, to the left side for left-handed use.
 
 ## Customizing Navigation
 
@@ -84,23 +91,15 @@ Music combines music-video libraries into one artist-first view.
 For Home section order and visibility, open **Settings > Home > Sections > Customize Home Screen Layout**.
 See [Customizing Sections](/browsing/home-screen#customizing-sections).
 
-On iPhone and iPad, hold Home in the navigation pill and slide to **Options**, then choose **Edit Layout**.
+On iPad, hold Home in the navigation pill and slide to **Options**, then choose **Edit Layout**.
+On iPhone, use **Settings > Home > Sections > Customize Home Screen Layout**.
 Editing Compass changes shortcuts; editing a Home screen changes its content sections.
 
 ## Spotlight Navigation
 
-Spotlight has separate controls for playback and details.
-
-| Action | Apple TV | iPhone / iPad |
-|--------|----------|---------------|
-| Play or resume | Select **Play** or **Resume** | Tap **Play** or **Resume** |
-| Open details | Select the **Details** info button | Tap the **Details** info button |
-| Next item | Select **›**, or press Right from the last control | Swipe left |
-| Previous item | Press Left from the primary button | Swipe right |
-| Quick actions | Hold Select on **Details** | Tap **…** |
-
-Items that can't be played directly use **View Details** as the primary button.
-On Apple TV, hold Select on that button for quick actions.
+On Apple TV, Select opens the item's page and holding Select opens quick actions.
+Left and Right change items, and Down moves to the rows.
+On iPhone and iPad, swipe left or right to change items, tap **Open** to open the page, or touch and hold for quick actions.
 
 Spotlight rotates automatically while you're browsing it.
 See [Spotlight](/browsing/home-screen/spotlight) for header behavior, inline cards, and content choices.

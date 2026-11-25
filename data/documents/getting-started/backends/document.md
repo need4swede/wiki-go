@@ -54,7 +54,7 @@ Choose a Plex Home user when prompted, enter that user's Plex PIN if required, t
 Neptune gets the server's addresses from Plex.
 
 Plex supports movie and TV libraries, collections, search, and Neptune's player.
-Plex Music, Live TV/DVR, and Plex's cloud Discover and Watchlist are not offered.
+Plex Music, Live TV/DVR, and Plex's cloud Discover and Watchlist are not supported at this time.
 Server subscriptions and permissions still determine which server features are available.
 The Jellyfin Neptune Plugin Suite is unavailable on Plex.
 
