@@ -73,7 +73,7 @@ See [Playback Settings](/settings/playback#controls).
 
 On Apple TV, an action row sits beside the title when controls are visible.
 
-Six buttons show by default:
+Seven buttons show by default:
 
 | Button | What It Does |
 | --- | --- |
@@ -81,21 +81,21 @@ Six buttons show by default:
 | **Subtitles** | Opens subtitle tracks, Off, style, timing, and position |
 | **Video** | Opens quality, zoom, and de-interlacing |
 | **Chapters** | Opens the chapter list at your current chapter. Appears when chapters and seeking are available |
+| **Episodes** | Opens the show's episodes so you can play another one. Appears while an episode plays |
 | **Info** | Shows the current stream's technical details |
 | **Pin** | Captures the current moment as a [timestamp pin](/library/shortcuts): position plus a thumbnail of the frame. A pill confirms "Pinned at \[time\]" |
 
-Audio, Subtitles, Video, Chapters, and Info open the [Playback Menu](/playback/playback-menu) on the right side of the screen.
+Audio, Subtitles, Video, Chapters, Episodes, and Info open the [Playback Menu](/playback/playback-menu) on the right side of the screen.
 Left/right switches categories, up/down moves through the rows, and Select applies a choice.
 Back closes expanded options before closing the menu and returning to the action row.
 
 The Subtitles icon fills while subtitles are on.
 It also shows progress while Neptune downloads a subtitle or checks its timing, then confirms the result.
 
-Six more buttons can be enabled in **Settings > Playback > Controls > Action Buttons**:
+Five more buttons can be enabled in **Settings > Playback > Controls > Action Buttons**:
 
 | Button | What It Does |
 | --- | --- |
-| **Next Episode** | Skips to the next episode, or picks another during shuffle. Appears for episodes and is disabled when there's nothing next |
 | **Bitrate** | Opens the streaming quality picker |
 | **Technical Info** | Shows codec and stream information over the video |
 | **Autoplay** | Toggles autoplay for the session |

@@ -82,11 +82,12 @@ See [Touch Controls](/playback/player-controls/touch#touch-gestures) for the com
 
 | Device | Default Buttons | Always Available |
 | --- | --- | --- |
-| **Apple TV** | Audio, Subtitles, Video, Chapters, Info, Pin | Audio and Subtitles can be moved but never hidden |
-| **iPhone / iPad** | Audio, Subtitles, Video, Chapters, Info, Rotate | Audio and Subtitles can be moved but never hidden |
+| **Apple TV** | Audio, Subtitles, Video, Chapters, Episodes, Info, Pin | Audio and Subtitles can be moved but never hidden |
+| **iPhone / iPad** | Audio, Subtitles, Video, Chapters, Episodes, Info, Rotate | Audio and Subtitles can be moved but never hidden |
 
 On Apple TV, Chapters appears when the video has chapters and permits seeking.
-Optional actions include Next Episode, Bitrate, Technical Info, Autoplay, Play / Pause, and Lock.
+Episodes appears while an episode plays.
+Optional actions include Bitrate, Technical Info, Autoplay, Play / Pause, and Lock.
 On iPhone and iPad, Pin Timestamp and Lock start hidden and can be enabled here.
 On iPhone and iPad, Video Zoom is under **Video > Zoom** in the [Playback Menu](/playback/playback-menu#video).
 

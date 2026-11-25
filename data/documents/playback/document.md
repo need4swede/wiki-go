@@ -12,7 +12,7 @@ Everything from pressing Play to choosing tracks and scrubbing.
 |------|-------------|
 | [Trident Player](/playback/trident-player) | Neptune's direct-play engine, supported formats, HDR, audio, and subtitles |
 | [Player Controls](/playback/player-controls) | Transport bar, scrubbing, skip segments, Up Next |
-| [Playback Menu](/playback/playback-menu) | The in-player menu: audio, subtitles, video, playback speed, chapters, info |
+| [Playback Menu](/playback/playback-menu) | The in-player menu: audio, subtitles, video, playback speed, chapters, episodes, info |
 | [Pre-Rolls](/playback/pre-rolls) | Cinema bumpers and trailers before a movie, from your server or NeXroll |
 | [Conductor](/playback/conductor) | Track and version selection, with Pro live Language Rules and optional Auto learning |
 | [Picture in Picture & Background Playback](/playback/outside-the-app) | Continue video or audio outside the iPhone and iPad app |
@@ -56,10 +56,10 @@ See [Siri Remote Controls](/playback/player-controls/siri-remote) for progress-b
 
 On iPhone and iPad, tap the video to reveal the progress bar and controls.
 
-On Apple TV, choose **Audio**, **Subtitles**, **Video**, **Chapters**, or **Info** from the action row to open that category on the right.
+On Apple TV, choose **Audio**, **Subtitles**, **Video**, **Chapters**, **Episodes**, or **Info** from the action row to open that category on the right.
 A downward swipe while controls are hidden opens Audio.
-On iPhone and iPad, tap **Audio**, **Subtitles**, **Video**, **Chapters**, or **Info** in the controls to open that category in a column at the side.
-See [Playback Menu](/playback/playback-menu) for track selection, picture options, chapters, and stream info.
+On iPhone and iPad, tap **Audio**, **Subtitles**, **Video**, **Chapters**, **Episodes**, or **Info** in the controls to open that category in a column at the side.
+See [Playback Menu](/playback/playback-menu) for track selection, picture options, chapters, episodes, and stream info.
 
 ## When Playback Is Loading or Fails
 

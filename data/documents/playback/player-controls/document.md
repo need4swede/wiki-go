@@ -31,6 +31,6 @@ Use these pages for playback behavior and settings that affect the controls:
 | Autoplay settings | [Playback Settings](/settings/playback#autoplay) |
 | Skip buttons and where their timestamps come from | [Skip Intros](/playback/skip-intros) |
 | Screensaver and video caching | [Playback Settings](/settings/playback#advanced) |
-| Audio, subtitles, video, chapters, and stream info | [Playback Menu](/playback/playback-menu) |
+| Audio, subtitles, video, chapters, episodes, and stream info | [Playback Menu](/playback/playback-menu) |
 
 See [Playback](/playback) for the complete playback guide.

@@ -96,7 +96,7 @@ Press **Menu** to close without taking action.
 Can't decide what to watch?
 Press **Shuffle** in the action pill and Neptune plays a random episode.
 A skip prompt in the corner lets you re-roll to a different episode if you're not feeling it.
-The Next Episode button keeps things random while shuffle is active.
+In the player, **Episodes** opens on the episode that's playing while shuffle is active.
 At the end credits, the [Up Next](/playback/up-next) screen shows which episode is coming, and **Re-Shuffle** picks another.
 
 Shuffle is per-show, so series that should stay sequential keep their order.

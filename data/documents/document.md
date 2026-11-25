@@ -82,7 +82,7 @@ See [Supported Media Servers](/getting-started/backends) for current availabilit
 |------|-------------|
 | [Trident Player](/playback/trident-player) | Custom video engine |
 | [Player Controls](/playback/player-controls) | Scrubbing, skip segments, Up Next |
-| [Playback Menu](/playback/playback-menu) | In-player audio, subtitles, video, chapters, and info |
+| [Playback Menu](/playback/playback-menu) | In-player audio, subtitles, video, chapters, episodes, and info |
 | [Conductor](/playback/conductor) | Track and version selection, with optional Pro learning |
 | [Picture in Picture & Background Playback](/playback/outside-the-app) | Continue video or audio outside Neptune on iPhone and iPad |
 

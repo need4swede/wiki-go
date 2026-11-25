@@ -6,8 +6,8 @@ order: 30
 
 The in-player menu for everything about the current stream.
 
-On Apple TV, choose **Audio**, **Subtitles**, **Video**, **Chapters**, or **Info** from the action row.
-On iPhone and iPad, tap **Audio**, **Subtitles**, **Video**, **Chapters**, or **Info** in the controls.
+On Apple TV, choose **Audio**, **Subtitles**, **Video**, **Chapters**, **Episodes**, or **Info** from the action row.
+On iPhone and iPad, tap **Audio**, **Subtitles**, **Video**, **Chapters**, **Episodes**, or **Info** in the controls.
 
 | Category | What's Inside |
 |-----|---------------|
@@ -15,9 +15,11 @@ On iPhone and iPad, tap **Audio**, **Subtitles**, **Video**, **Chapters**, or **
 | **Subtitles** | Track selection, style, timing, position |
 | **Video** | Quality, playback speed, zoom, de-interlacing |
 | **Chapters** | Jump to a chapter |
+| **Episodes** | Play another episode of the show |
 | **Info** | Codec, bitrate, and stream details |
 
 Chapters appears when the item has chapters and permits seeking.
+Episodes appears while an episode is playing.
 Available options depend on your device and the current stream.
 
 ## Apple TV
@@ -47,7 +49,7 @@ Closing the menu returns focus to the action for the category you were using.
 
 ## iPhone and iPad
 
-The five categories sit together in one pill in the player controls.
+The categories sit together in one pill in the player controls.
 Tap one to open it in a glass column at the side of the screen, so the picture stays visible.
 Tap another category, or swipe across the column, to switch.
 Tap the close button or the picture to return to the video.
@@ -133,6 +135,27 @@ Selecting a chapter on Apple TV seeks straight there and closes the menu.
 On iPhone and iPad, chapters appear in a scrolling thumbnail list with each chapter's name and start time along the bottom of its image.
 The chapter you're in is marked.
 Tap a thumbnail to seek there. The menu stays open so you can keep browsing.
+
+## Episodes
+
+Pick another episode without leaving the player.
+The list shows the show's seasons in order, with Specials last.
+It opens on the next episode, with the episode you're watching just above it marked **Now Playing**.
+If you're at the end of a season, it opens on the next season's heading.
+During [shuffle](/browsing/item-details/tv-shows#shuffle-mode), it opens on the episode that's playing.
+
+Only the season you're watching starts expanded.
+Select another season's heading to show its episodes, and select it again to collapse it.
+Episodes without a file on the server are left out.
+When you're watching from downloads, only finished downloads are listed.
+
+On Apple TV, a large picture of the focused episode sits above the list with its number, title, and length.
+Each row shows the episode number and title, then **Now Playing**, a watched mark, or the runtime.
+On iPhone and iPad, episodes appear in a scrolling list of wide pictures with each title along the bottom, the current one outlined, and a progress bar for anything you've started.
+
+Selecting an episode closes the menu and plays it in the same player.
+Selecting the episode that's already playing just closes the menu.
+Episodes works the same on Jellyfin, Emby, Plex, and Silo.
 
 ## Info
 

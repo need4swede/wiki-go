@@ -46,7 +46,7 @@ See [Playback Settings](/settings/playback#controls).
 
 The touch player’s top row is configurable under **Settings > Playback > Controls > Action Buttons**.
 
-Audio, Subtitles, Video, Chapters, and Info sit together in one pill.
+Audio, Subtitles, Video, Chapters, Episodes, and Info sit together in one pill.
 Tap one to name it and open its [Playback Menu](/playback/playback-menu) category in a glass column at the side, so the picture stays visible.
 Rotate has its own button beside the pill.
 
@@ -58,6 +58,7 @@ Its defaults are:
 | **Subtitles** | Opens Subtitles in the Playback Menu. It can be moved but never hidden |
 | **Video** | Opens Quality, Playback Speed, Zoom, and De-interlacing |
 | **Chapters** | Opens the chapter list |
+| **Episodes** | Opens the show's episodes so you can play another one. Appears while an episode plays |
 | **Info** | Opens stream information |
 | **Rotate** | Switches between portrait and one landscape direction |
 
