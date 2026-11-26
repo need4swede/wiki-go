@@ -152,9 +152,9 @@ Volume and menu navigation commands are ignored too. Use your TV or receiver's v
 Who can control a device is decided by your server.
 On Jellyfin, that's the remote control permissions in each user's settings.
 
-## Active Devices (Neptune Pro)
+## Devices (Neptune Pro)
 
-**Settings > Account > Active Devices** shows the devices signed in to your server, who is using each one, and what it's playing.
+**Settings > Account > Devices** shows the devices signed in to your server, who is using each one, and what it's playing.
 It's available on Apple TV, iPhone, and iPad with Jellyfin and Emby.
 
 | You Are | You See |
@@ -164,6 +164,10 @@ It's available on Apple TV, iPhone, and iPad with Jellyfin and Emby.
 
 Select a device that's playing to **Pause** or **Resume** it, or to **Stop** it.
 On iPhone and iPad you can also swipe a device to the left for the same actions.
+
+**Continue Here** moves what that device is playing over to the one you're holding.
+It starts from the same spot, with the same version and tracks, then stops it on the other device.
+If something is already playing where you are, Neptune asks first.
 
 Each device shows one of these:
 
@@ -177,7 +181,8 @@ Each device shows one of these:
 The list refreshes every few seconds while the page is open.
 A device drops off about 16 minutes after it was last used, the same as your server's own dashboard.
 
-Active Devices requires Neptune Pro on the device you're controlling from.
+Controlling other devices requires Neptune Pro on the device you're controlling from.
+It's listed as **Device Control** in Neptune Pro.
 The devices you control don't need Pro.
 Links and remote control from your server stay free.
 
