@@ -55,8 +55,8 @@ You can name a title by a public catalogue number or by your server's own item I
 | Named By | Example | Notes |
 |----------|---------|-------|
 | **TMDB** | `tmdb=603` | Works on every server. The number is in the title's address on themoviedb.org |
-| **IMDb** | `imdb=tt0133093` | Jellyfin and Emby |
-| **TVDB** | `tvdb=81189` | Jellyfin and Emby |
+| **IMDb** | `imdb=tt0133093` | Works on every server |
+| **TVDB** | `tvdb=81189` | Works on every server |
 | **Server item ID** | `item=a982a31451450daeda02c89952e6d7cf` | The ID your server gives the item. `itemId=` works too |
 
 A catalogue number keeps working if you rebuild your library or move to another server.
@@ -69,8 +69,9 @@ For shows, add the type, and a season and episode when you want a specific one:
 | `neptune://open?tmdb=1396&type=series` | Opens the show's page |
 | `neptune://play?tmdb=1396&type=series` | Plays your next episode |
 | `neptune://play?tmdb=1396&season=2&episode=3` | Plays season 2, episode 3 |
+| `neptune://play?tmdb=1396&type=series&shuffle=1` | Plays the show shuffled |
 
-On Plex and Silo, a TMDB link needs Neptune's [search index](/search/local-index) to have finished syncing on that device.
+You can also pass `source`, `audio`, and `subtitle` (use `-1` for subtitles off) to pick a specific version and tracks on startup, and `items=` with several IDs to start a queue.
 
 ### Where Playback Starts
 
@@ -96,8 +97,8 @@ With nothing playing, they do nothing.
 | `neptune://control/stop` | Stops and leaves the player |
 | `neptune://control/seek?t=300` | Jumps to five minutes in |
 | `neptune://control/skip?by=-30` | Skips back 30 seconds. Use a positive number to skip ahead |
-| `neptune://control/next` | Plays the next episode. On iPhone and iPad this works once Up Next is showing |
-| `neptune://control/previous` | Plays the previous episode (Apple TV) |
+| `neptune://control/next` | Plays the next episode or queued title |
+| `neptune://control/previous` | Plays the previous episode or queued title |
 
 ## What Neptune Does With a Request
 
@@ -116,6 +117,9 @@ They act on the player right away.
 
 A link always opens the title for the account that's active when it arrives.
 A link never signs you in, and it can't open anything that account couldn't open on its own.
+Parental rating limits always apply to links, Beam, Beam Here, server Play commands, and Pins.
+By default, a link can still open a title in a library you hid with Library Visibility.
+To block links to hidden libraries, turn off **Settings > Home > Library > Allow Links to Hidden Libraries**.
 
 ## Titles You Don't Own
 
@@ -143,19 +147,27 @@ Once the system suspends the app, or you close it, it drops off the list.
 | **Open a title's page** | Without playing it |
 | **Pause, resume, and stop** | |
 | **Seek, rewind, and fast forward** | Rewind goes back 10 seconds and fast forward goes ahead 30 |
-| **Next and previous episode** | Previous is Apple TV only. On iPhone and iPad, next works once Up Next is showing |
+| **Next and previous item** | Works on Apple TV, iPhone, and iPad |
 | **Switch audio and subtitle tracks** | |
 
-Neptune doesn't keep a play queue, so **Play Next** and **Add to Queue** from the server are ignored.
-Volume and menu navigation commands are ignored too. Use your TV or receiver's volume.
+Volume and menu navigation commands are ignored. Use your TV or receiver's volume.
 
 Who can control a device is decided by your server.
 On Jellyfin, that's the remote control permissions in each user's settings.
 
-## Devices (Neptune Pro)
+## Beam & Devices (Neptune Pro)
+
+**Beam** sends a movie, show, season, episode, or collection to another device running Neptune (or another app that takes server commands).
+You'll find **Beam** on every title page and inside the playback menu's **Video** tab on Apple TV, iPhone, and iPad.
+
+- From a title page, Beam starts from your current progress on this account (or from the beginning if you haven't started it).
+  Shows and seasons pick your next episode, and collections send their titles in order.
+- From the playback menu, Beam sends the exact second, version, and audio and subtitle tracks you are watching.
+  Playback on this device stops only after the other device confirms it has started.
+- Beam and Beam Here carry a catalogue reference alongside the server item ID, so they also work when the two devices are signed in to different servers that both have the title.
 
 **Settings > Account > Devices** shows the devices signed in to your server, who is using each one, and what it's playing.
-It's available on Apple TV, iPhone, and iPad with Jellyfin and Emby.
+It's available on Apple TV, iPhone, and iPad with Jellyfin, Emby, and for Silo administrators.
 
 | You Are | You See |
 |---------|---------|
@@ -165,8 +177,8 @@ It's available on Apple TV, iPhone, and iPad with Jellyfin and Emby.
 Select a device that's playing to **Pause** or **Resume** it, or to **Stop** it.
 On iPhone and iPad you can also swipe a device to the left for the same actions.
 
-**Continue Here** moves what that device is playing over to the one you're holding.
-It starts from the same spot, with the same version and tracks, then stops it on the other device.
+**Beam Here** moves what another device is playing over to the one you're holding.
+It starts from the same spot, with the same version and tracks, then stops it on the other device once playback starts here.
 If something is already playing where you are, Neptune asks first.
 
 Each device shows one of these:
@@ -174,14 +186,16 @@ Each device shows one of these:
 | Status | Meaning |
 |--------|---------|
 | **Playing** or **Paused** | The device is playing something and you can control it |
+| **Not Reachable** | The device can't be reached right now (for example, the app isn't on screen or the Apple TV is asleep) |
 | **Can't Be Controlled** | The device is playing, but its app doesn't accept remote control |
 | **Idle** | The device is signed in and nothing is playing |
 | **This Device** | The one you're holding |
 
 The list refreshes every few seconds while the page is open.
-A device drops off about 16 minutes after it was last used, the same as your server's own dashboard.
+A device has to have Neptune open on screen to answer.
+An asleep Apple TV or a backgrounded app can't be reached, and an iPhone or iPad can't wake or launch Neptune on an Apple TV.
 
-Controlling other devices requires Neptune Pro on the device you're controlling from.
+Controlling other devices (Beam, Beam Here, and the Devices page) requires Neptune Pro on the device you're controlling from.
 It's listed as **Device Control** in Neptune Pro.
 The devices you control don't need Pro.
 Links and remote control from your server stay free.
@@ -229,10 +243,8 @@ Home Assistant's built-in Emby integration can pause, seek, and stop, but it can
 
 ## Current Limits
 
-- A play link starts one title. Extra titles in the same link are ignored, and so is shuffle.
-- Choosing a specific version works on iPhone and iPad. Apple TV plays the version it would normally pick.
-- Choosing the starting audio or subtitle track from a link isn't applied yet. Switch tracks after playback starts, or let [Conductor](/playback/conductor) pick them.
-- On Emby, remote control doesn't work yet while a video is playing on iPhone and iPad.
+- A device has to have Neptune open to answer a Beam or remote command. An asleep Apple TV or a suspended app can't be reached, and an iPhone or iPad can't launch Neptune on an Apple TV.
+- On Silo, only server administrators see active sessions on the Devices page, and Silo sessions support Pause, Resume, and Stop (not starting a new title through the server).
 - There is no setting to turn links or remote control off.
 
 ## Privacy
